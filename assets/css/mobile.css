@@ -1,0 +1,257 @@
+/* *** mobile.css ~ Holds the layout styling for the mobile site *** */
+
+body {
+  background-color: #fff;
+}
+
+header {
+  display: block;
+  margin: 1em;
+}
+
+header, 
+nav > section > div span, 
+#footer-row_3 span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+header img {
+  display: block;
+  float: left;
+}
+
+#header-right {
+  display: block;
+  float: left;
+  margin: 0 0 0 1em;
+}
+
+#mobile-search {
+  padding: 0.5em 0.5em 0.5em 1.75em;
+  background-image: url('/la/assets/img/sprites/main_nav.png');
+  background-position: -2100px -10px;
+  background-repeat: no-repeat;
+  font-size: 2.5em;
+  font-weight: 600;
+  border: 5px solid #b7b7b7;
+  color: #9c9c9c;
+}
+
+#header-links a {
+  display: inline-block;
+  font-size: 2em;
+}
+
+#header-links a, 
+nav > section > div > a {
+  background-color: #d8ccc3;
+  box-shadow: 2px 2px 1px #a2a2a2;
+  border: 5px solid #485081;
+}
+
+#header-links a, 
+nav > section > div span {
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px #a2a2a2;
+  color: #485081;
+}
+
+nav {
+  width: 59em;
+  margin: 1em;
+}
+
+nav > section {
+  margin-top: 3em;
+}
+
+nav > section > div {
+  width: 13.8em;
+  display: inline-block;
+  margin: 0 0.25em;
+  vertical-align: top;
+}
+
+nav > section > div > a {
+  margin: 0 auto;
+  display: block;
+  background-image: url('/la/assets/img/sprites/main_nav.png');
+  background-repeat: no-repeat;
+}
+
+#link-gpa a {
+  background-position-x: 32px;
+}
+
+#link-english a {
+  background-position-x: -105px;
+}
+
+#link-camps a {
+  background-position-x: -242px;
+}
+
+#link-lessons a {
+  background-position-x: -374px;
+}
+
+#link-awards a {
+  background-position-x: -503px;
+}
+
+#link-debate a {
+  background-position-x: -634px;
+}
+
+#link-events a {
+  background-position-x: -760px;
+}
+
+#link-announcements a {
+  background-position-x: -888px;
+}
+
+#link-apply_students a {
+  background-position-x: -1005px;
+}
+
+#link-faculty a {
+  background-position-x: -1130px;
+}
+
+#link-apply_faculty a {
+  background-position-x: -1272px;
+}
+
+#link-business a {
+  background-position-x: -1427px;
+}
+
+#link-about_us a {
+  background-position-x: -1563px;
+}
+
+#link-contact_us a {
+  background-position-x: -1685px;
+}
+
+#link-location a {
+  background-position-x: -1816px;
+}
+
+#link-media a {
+  background-position-x: -1951px;
+}
+
+nav > section > div span {
+  margin-top: 0.5em;
+  display: block;
+  font-size: 1.8em;
+}
+
+footer {
+  margin-top: 3.5em;
+  background-color: #e4dfdb;
+}
+
+footer > #footer-border {
+  height: 2.5em;
+  background-color: #d8ccc3;
+}
+
+#footer-row_1 a, 
+#footer-row_2 a {
+  width: 6.25em;
+  height: 6.25em;
+  margin: 2.5em 2.7em 0;
+  display: inline-block;
+  background-image: url('/la/assets/img/sprites/social_media.png');
+  background-repeat: no-repeat;
+}
+
+#link-facebook {
+  background-position-x: -100px;
+}
+
+#link-twitter {
+  background-position-x: -200px;
+}
+
+#link-you_tube {
+  background-position-x: -300px;
+}
+
+#link-kakao {
+  background-position-x: -400px;
+}
+
+#link-instagram {
+  background-position-x: -500px;
+}
+
+#link-wechat {
+  background-position-x: -600px;
+}
+
+#link-google {
+  background-position-x: -700px;
+}
+
+#link-line {
+  background-position-x: -800px;
+}
+
+#link-whatsapp {
+  background-position-x: -900px;
+}
+
+#footer-row_3 {
+  margin-top: 2.5em;
+  text-align: center;    
+}
+
+#footer-row_3 span {
+  height: 2em;
+  display: block;
+  font-size: 2em;
+  color: #7f7c7a;
+}
+
+@media screen and (min-width: 310px) and (max-width: 1000px) {
+  header {
+    width: 59em;
+    height: 11em;
+  }
+
+  #header-right, 
+  #header-search {
+    width: 42.75em;
+  }
+
+  #mobile-search {
+    width: 17em;
+  }
+
+  #header-links {
+    margin-top: 0.5em;
+  }
+
+  #header-links a {
+    width: 8.5em;
+    height: 0.25em;
+    padding: 0.8em;
+    line-height: 0.25em;
+  }
+
+  #link-login {
+    margin-right: 0.3em;
+  }
+
+  nav > section > div > a {
+    width: 9.5em;
+    height: 9.5em;
+  }
+}
