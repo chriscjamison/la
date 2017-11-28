@@ -46,7 +46,7 @@ header img {
 #header-links a, 
 nav > section > div > a {
   background-color: #d8ccc3;
-  box-shadow: 2px 2px 1px #a2a2a2;
+  box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
 }
 
