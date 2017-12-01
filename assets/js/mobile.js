@@ -53,7 +53,7 @@ function extractHtmlFromDesktopPage ()  {
     "    <!-- JavaScript script which handles general layout for 'index.htm'. -->\n" + 
     "    <script src=\"assets/js/mobile.js\"></script>\n" + 
     "  </head>\n" + 
-    "  <body>"
+    "  <body>" + 
     "<!--\n" +  
     "  START of header\n" +  
     "        Contains:\n" + 
@@ -63,39 +63,39 @@ function extractHtmlFromDesktopPage ()  {
     "            - Login\n" + 
     "            - Korean language mobile page\n" + 
     "-->\n" + 
-        <header>
-          <img src="assets/img/logo/logo.png" width="230" height="170" alt="Leaders Academy" />
-          <section id="header-right">
-            <div id="header-search">
-            <form>
-              <input type="search" width="25" maxwidth="75" value="Search" id="mobile-search">
-            </form>
-            </div>
-            <div id="header-links">
-              <a href="/login/" title="Login" id="link-login">Login</a>
-              <a href="/kr/" title="한국어" id="link-korean">한국어</a>
-            </div>
-          </section>
-        </header>
-
-    <!-- 
-      START of Content 
-        Contains:
-          + Neighborhood map
-          + List of:
-            - Address
-            - Phone Number
-            - Directions
-    -->
-        <article>
-
-        </article>
-    <!-- 
-      START of Footer 
-        Contains:
-          + Links to social media platforms
-          + Copyright information
-    -->
+    "    <header>\n" + 
+    "      <img src=\"assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy\" />\n" + 
+    "      <section id=\"header-right\">\n" + 
+    "        <div id=\"header-search\">\n" + 
+    "        <form>\n" + 
+    "          <input type=\"search\" width=\"25\" maxwidth=\"75\" value=\"Search\" id=\"mobile-search\">\n" + 
+    "        </form>\n" + 
+    "        </div>\n" + 
+    "        <div id=\"header-links\">\n" + 
+    "          <a href=\"/login/\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+    "          <a href=\"/kr/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+    "        </div>\n" + 
+    "      </section>\n" + 
+    "    </header>\n" + 
+    "\n" + 
+    "<!--\n" +  
+    "  START of Content\n" +  
+    "    Contains:\n" + 
+    "      + Neighborhood map\n" + 
+    "      + List of:\n" + 
+    "        - Address\n" + 
+    "        - Phone Number\n" + 
+    "        - Directions\n" + 
+    "-->\n" + 
+    "    <article>\n" + 
+    "      " + html_content + "\n" +  
+    "    </article>\n" + 
+    "<!--\n" +  
+    "  START of Footer\n" +  
+    "    Contains:\n" + 
+    "      + Links to social media platforms\n" + 
+    "      + Copyright information\n" + 
+    "-->\n" + 
         <footer>
           <section id="footer-border">
             <div></div>
