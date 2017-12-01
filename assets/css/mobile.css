@@ -50,6 +50,12 @@ nav > section > div > a {
   border: 5px solid #485081;
 }
 
+#header-links a:active,
+nav > section > div > a:active {
+  background-color: #485081;
+  border-color: #e76200;
+}
+
 #header-links a, 
 nav > section > div span {
   font-weight: 600;
@@ -57,6 +63,10 @@ nav > section > div span {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
   color: #485081;
+}
+
+#header-links a:active {
+  color: #fff;
 }
 
 nav {
@@ -86,6 +96,10 @@ nav > section > div > a {
   background-position-x: 32px;
 }
 
+#link-gpa a:active {
+  background-position-x: -2760px;
+}
+
 #link-english a {
   background-position-x: -105px;
 }
@@ -96,6 +110,10 @@ nav > section > div > a {
 
 #link-lessons a {
   background-position-x: -374px;
+}
+
+#link-lessons a:active {
+  background-position-x: -2899px;
 }
 
 #link-awards a {
@@ -127,23 +145,27 @@ nav > section > div > a {
 }
 
 #link-business a {
-  background-position-x: -1427px;
+  background-position-x: -1416px;
+}
+
+#link-business a:active {
+  background-position-x: -3041px;
 }
 
 #link-about_us a {
-  background-position-x: -1563px;
+  background-position-x: -1554px;
 }
 
 #link-contact_us a {
-  background-position-x: -1685px;
+  background-position-x: -1674px;
 }
 
 #link-location a {
-  background-position-x: -1816px;
+  background-position-x: -1808px;
 }
 
 #link-media a {
-  background-position-x: -1951px;
+  background-position-x: -1940px;
 }
 
 nav > section > div span {
