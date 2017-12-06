@@ -11,6 +11,9 @@ header {
 
 header, 
 nav > section > div span, 
+#nav-menu_links a,
+#nav-main_menu > section > div span, 
+#nav-section_menu a, 
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -38,35 +41,44 @@ header img {
   color: #9c9c9c;
 }
 
-#header-links a {
+#header-links a, 
+#nav-sub_menu a {
   display: inline-block;
   font-size: 2em;
 }
 
 #header-links a, 
-nav > section > div > a {
+nav > section > div > a, 
+#nav-sub_menu a, 
+#nav-main_menu > section > div > a {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
 }
 
 #header-links a:active,
-nav > section > div > a:active {
+nav > section > div > a:active, 
+#nav-sub_menu a:active, 
+#nav-main_menu > section > div > a:active {
   background-color: #485081;
   border-color: #e76200;
 }
 
+#header-links a:active, 
+#nav-menu-links a:active, 
+#nav-section_menu a:active {
+  color: #fff;
+}
+
 #header-links a, 
-nav > section > div span {
-  font-weight: 600;
+nav > section > div span, 
+#nav-menu_links a, 
+#nav-main_menu > section > div span, 
+#nav-section_menu a {
   text-align: center;
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
   color: #485081;
-}
-
-#header-links a:active {
-  color: #fff;
 }
 
 nav {
@@ -74,22 +86,40 @@ nav {
   margin: 1em;
 }
 
-nav > section {
+#nav-sub_menu {
+  width: 48em;
+}
+
+nav > section, 
+#nav-main_menu > section {
   margin-top: 3em;
 }
 
-nav > section > div {
+nav > section > div, 
+#nav-main_menu > section > div {
   width: 13.8em;
   display: inline-block;
   margin: 0 0.25em;
   vertical-align: top;
 }
 
-nav > section > div > a {
+nav > section > div > a, 
+#nav-main_menu > section > div > a {
   margin: 0 auto;
   display: block;
   background-image: url('/la/assets/img/sprites/main_nav.png');
   background-repeat: no-repeat;
+}
+
+#nav-main_menu, 
+#nav-section_menu {
+  width: 59em;
+  display: none;
+}
+
+#nav-menu_links {
+  width: 47em;
+  margin: 2.5em 1em 1em 12em;
 }
 
 #link-gpa a {
@@ -168,7 +198,8 @@ nav > section > div > a {
   background-position-x: -1940px;
 }
 
-nav > section > div span {
+nav > section > div span, 
+#nav-main_menu > section > div span {
   margin-top: 0.5em;
   display: block;
   font-size: 1.8em;
@@ -241,28 +272,7 @@ footer > #footer-border {
   font-size: 2em;
   color: #7f7c7a;
 }
-/* 
 
-table {
-  width: 100%;
-}
-
-td {
-  padding: 0.2em 0;
-  vertical-align: top;
-}
-
-.sj_title, 
-.sj_contents {
-  font-family: Arial, Hevetica, sans-serif;
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
-.sj_title {
-  font-weight: 600;
-}
- */
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
     width: 59em;
@@ -282,19 +292,37 @@ td {
     margin-top: 0.5em;
   }
 
-  #header-links a {
+  #header-links a,
+  #nav-menu_links a,  
+  #nav-section_menu a {
     width: 8.5em;
     height: 0.25em;
     padding: 0.8em;
     line-height: 0.25em;
   }
 
-  #link-login {
+  #nav-menu_links a {
+    width: 7em;
+  }
+
+  #nav-section_menu a {
+    width: 11em;
+    margin: 1em auto;
+    display: block;
+  }
+  
+  #link-login, 
+  #link-main_menu {
     margin-right: 0.3em;
   }
 
   nav > section > div > a {
     width: 9.5em;
     height: 9.5em;
+  }
+
+  #nav-main_menu > section > div > a {
+    width: 4.5em;
+    height: 4.5em;
   }
 }

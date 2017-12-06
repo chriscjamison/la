@@ -1,8 +1,10 @@
-jq(window).load(
+var jq = jQuery.noConflict();
+
+/* jq(window).load(
   function () {
     jq("body").css("opacity", 0);
   }
-);
+); */
 
 function extractHtmlFromDesktopPage ()  {
 
@@ -89,6 +91,9 @@ function setupFinalContent(html_content, webpage_index)  {
   // Add the HTML which makes up the logo, search, and login.
   renderLogoAndSearch();
 
+  // Add the HTML which makes up the navigation menus.
+  renderMenus(webpage_index);
+
   // Add the HTML which makes up the footer.
   renderFooter();
 
@@ -150,6 +155,14 @@ function renderBody() {
     "    <header>\n" + 
     "    </header>\n" + 
     "<!--\n" +  
+    "  START of Menu \n" +  
+    "        Contains links to:\n" + 
+    "        + Main Menu\n" + 
+    "        + Intrasectional menu\n" + 
+    "-->\n" +
+    "    <nav>\n" + 
+    "    </nav>\n" + 
+    "<!--\n" +  
     "  START of Content\n" +  
     "    Contains:\n" + 
     "      + Neighborhood map\n" + 
@@ -186,6 +199,95 @@ function renderLogoAndSearch() {
     "        </div>\n" + 
     "      </section>\n"
   );
+} // END of FUNCTION 'renderLogoAndSearch'
+
+function renderMenus(webpage_index) {
+  jq("nav").attr("id", "nav-sub_menu");
+
+  jq("nav").html(
+    "      <section id=\"nav-menu_links\">\n" + 
+    "        <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
+    "        <a href=\"javascript: displayMenu('1');\" title=\"Section Menu\" id=\"link-section_menu\">Section Menu</a>\n" + 
+    "      </section>\n" + 
+    "      <section id=\"nav-main_menu\">\n" + 
+    "        <section id=\"nav-row_1\">\n" + 
+    "          <div id=\"link-gpa\">\n" + 
+    "            <a href=\"#gpa\" title=\"GPA/Testing\"></a>\n" + 
+    "            <span>GPA/Testing</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-english\">\n" + 
+    "            <a href=\"#english\" title=\"English\"></a>\n" + 
+    "             <span>English</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-camps\">\n" + 
+    "            <a href=\"#camps\" title=\"Camps\"></a>\n" + 
+    "            <span>Camps</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-lessons\">\n" + 
+    "            <a href=\"#lessons\" title=\"Lessons\"></a>\n" + 
+    "            <span>Lessons</span>\n" + 
+    "          </div>\n" + 
+    "        </section>\n" + 
+    "        <section id=\"nav-row_2\">\n" + 
+    "          <div id=\"link-awards\">\n" + 
+    "            <a href=\"#awards\" title=\"Awards\"></a>\n" + 
+    "            <span>Awards</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-debate\">\n" + 
+    "            <a href=\"#debate\" title=\"Debate\"></a>\n" + 
+    "            <span>Debate</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-events\">\n" + 
+    "            <a href=\"#events\" title=\"Events\"></a>\n" + 
+    "            <span>Events</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-announcements\">\n" + 
+    "            <a href=\"#announcements\" title=\"link-announcements\"></a>\n" + 
+    "            <span>Announcements</span>\n" + 
+    "          </div>\n" + 
+    "        </section>\n" + 
+    "        <section id=\"nav-row_3\">\n" + 
+    "          <div id=\"link-apply_students\">\n" + 
+    "            <a href=\"#apply_students\" title=\"Apply (Students)\"></a>\n" + 
+    "            <span>Apply (Students)</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-faculty\">\n" + 
+    "            <a href=\"#faculty\" title=\"Faculty\"></a>\n" + 
+    "            <span>Faculty</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-apply_faculty\">\n" + 
+    "            <a href=\"#apply_faculty\" title=\"Apply (Faculty)\"></a>\n" + 
+    "            <span>Apply (Faculty)</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-business\">\n" + 
+    "            <a href=\"#business\" title=\"Business\"></a>\n" + 
+    "            <span>Business</span>\n" + 
+    "          </div>\n" + 
+    "        </section>\n" + 
+    "        <section id=\"nav-row_4\">\n" + 
+    "          <div id=\"link-about_us\">\n" + 
+    "            <a href=\"#about_us\" title=\"About Us\"></a>\n" + 
+    "            <span>About Us</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-contact_us\">\n" + 
+    "            <a href=\"#contact_us\" title=\"Contact Us\"></a>\n" + 
+    "            <span>Contact Us</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-location\">\n" + 
+    "            <a href=\"#location\" title=\"Location\"></a>\n" + 
+    "            <span>Location</span>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"link-media\">\n" + 
+    "            <a href=\"#media\" title=\"Media\"></a>\n" + 
+    "            <span>Media</span>\n" + 
+    "          </div>\n" + 
+    "        </section>\n" + 
+    "      </section>\n" + 
+    "      <section id=\"nav-section_menu\">\n" + 
+    "      </section>\n"
+  );
+
+  renderSectionMenu(webpage_index);
 } // END of FUNCTION 'renderLogoAndSearch'
 
 function renderFooter() {
@@ -231,6 +333,23 @@ function renderArticle(html_content, webpage_index) {
   
   jq("body").fadeIn();
 } // END of FUNCTION 'renderArticle'
+
+function renderSectionMenu(webpage_index) {
+
+  var menu_selector = new String();
+
+  menu_selector = "#nav-section_menu";
+
+  if (webpage_index < 5)  {
+    jq(menu_selector).html(
+      "        <a href=\"#\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
+      "        <a href=\"#\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
+      "        <a href=\"#\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
+      "        <a href=\"#\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
+      "        <a href=\"#\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
+    );
+  }
+}
 
 function formatCSS() {
     /*  ---- ---- ---- FUNCTION OUTLINE ---- ---- ---- ----
@@ -360,3 +479,109 @@ function formatCSS() {
     jq(subway_cell_selector).css(subway_cell_css);
 
 } // END of FUNCTION 'formatCSS'
+
+function displayMenu(section_value) {
+
+  // Initialize variable to hold the HTML selector of the <section> element 
+  // which holds the main menu.
+  var menu_selector = new String();
+
+  // Initialize variable to hold the value of the CSS property, 'display', 
+  // of the <section> element which holds the main menu.
+  var menu_css_value = new String();
+
+  // Initialize variables to hold CSS values which will be used to show/hide 
+  // the main menu.
+  var menu_visible_css = new Object();
+  var menu_not_visible_css = new Object();
+
+  // IF/ELSE statment which determines the value of the selector for the menu 
+  // under processing.
+  if (section_value === "main") {
+    menu_selector = "#nav-main_menu";
+  } else {
+    menu_selector = "#nav-section_menu";
+  } // END of IF statement
+
+  // Pass on the value of "block" to the CSS variable which will be used 
+  // to show the main menu.
+  menu_visible_css = {
+    display: "block"
+  };
+  
+  // Pass on the value of "none" to the CSS variable which will be used 
+  // to hide the main menu.
+  menu_not_visible_css = {
+    display: "none"
+  };
+
+  // Store the value of the CSS property, 'display' of the <section> element 
+  // which holds the main menu.
+  menu_css_value = jq(menu_selector).css("display");
+
+  jq(document).ready(
+    function () {
+      // IF/ELSE statement which displays the menu if it is currently hidden and 
+      // hides the menu if it is currently visible.
+      if (menu_css_value === "none")  {
+        jq(menu_selector).css(menu_visible_css);
+        jq(menu_selector).fadeIn(400);
+      } else {
+        jq(menu_selector).fadeOut(400);
+        jq(menu_selector).css(menu_not_visible_css);
+      } // END of 'if' STATEMENT
+    }
+  );
+} // END of FUNCTION 'displayMainMenu'
+
+function displaySectionMenu(section_value)  {
+
+  // Initialize variable to hold the selector for the <section> element 
+  // which will hold the Section Menu.
+  var menu_selector = new String();
+
+  // Initialize variable which will hold the value of the CSS property, 'display', 
+  // of the <section> element which will hold the Section Menu.
+  var menu_css_value = new String();
+
+  // Initialize variables which will hold CSS values which will be used 
+  // to show/hide the Section Menu.
+  var menu_visible_css = new Object();
+  var menu_not_visible_css = new Object();
+
+  // Pass on the selector of the <section> element which will hold the Section Menu.
+  menu_selector = "#nav-section_menu";
+
+  // Pass on the value of "block" to the CSS variable which will show the Section Menu.
+  menu_visible_css = {
+    display: "block"
+  };
+
+  // Pass on the value of "none" to the CSS variable which will hide the Section Menu.
+  menu_not_visible_css = {
+    display: "none"
+  };
+
+
+
+  // IF/ELSE statement which shows the menu if it is currently hidden or hides the menu 
+  // if it is not visible.
+  jq(document).ready(
+    function () {
+      if (menu_css_value === "none")  {
+        jq(menu_selector).css(menu_visible_css);
+        jq(menu_selector).fadeIn(400);
+      } else {
+        jq(menu_selector).fadeOut(400);
+        jq(menu_selector).css(menu_not_visible_css);
+      } // END of 'if' STATEMENT
+    }
+  );
+
+  // Switch statement which determines which set of links are displayed in the Section Menu.
+  /* switch (section_value)  {
+    case 1:
+
+    break; 
+  }*/
+} // END of FUNCTION 'displaySectionMenu'
