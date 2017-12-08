@@ -11,12 +11,17 @@ header {
 
 header, 
 nav > section > div span, 
-#nav-menu_links a,
 #nav-main_menu > section > div span, 
 #nav-section_menu a, 
+h2, 
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
+}
+
+h2 {
+  margin: 1em auto;
+  font-weight: 800;
 }
 
 header img {
@@ -72,7 +77,6 @@ nav > section > div > a:active,
 
 #header-links a, 
 nav > section > div span, 
-#nav-menu_links a, 
 #nav-main_menu > section > div span, 
 #nav-section_menu a {
   text-align: center;
@@ -115,11 +119,6 @@ nav > section > div > a,
 #nav-section_menu {
   width: 59em;
   display: none;
-}
-
-#nav-menu_links {
-  width: 47em;
-  margin: 2.5em 1em 1em 12em;
 }
 
 #link-gpa a {
@@ -273,6 +272,42 @@ footer > #footer-border {
   color: #7f7c7a;
 }
 
+table {
+  width: 100%;
+  margin-top: 2em;
+  border: 2px solid #cec2b4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+  border-bottom: 2px dashed #cec2b4;
+  padding: 0.5em;
+  font-size: 2em;
+}
+
+tr > td:nth-child(1)  {
+  width: 6.5em;
+  background-color: #d5ccb2;
+  vertical-align: top;
+  color: #573214;
+}
+
+tr > td:nth-child(2)  {
+  color: #4f4f4f;
+}
+
+article > table + table > tbody > tr:nth-child(2) > td:nth-child(2) {
+  font-size: 1em;
+}
+
+#article-header {
+  width: 100%;
+}
+
+
+
+
+
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
     width: 59em;
@@ -288,21 +323,17 @@ footer > #footer-border {
     width: 17em;
   }
 
-  #header-links {
+  #header-links, 
+  #header-links-level_2 {
     margin-top: 0.5em;
   }
 
-  #header-links a,
-  #nav-menu_links a,  
+  #header-links a,  
   #nav-section_menu a {
     width: 8.5em;
     height: 0.25em;
     padding: 0.8em;
     line-height: 0.25em;
-  }
-
-  #nav-menu_links a {
-    width: 7em;
   }
 
   #nav-section_menu a {

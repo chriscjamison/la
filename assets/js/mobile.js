@@ -27,6 +27,9 @@ function extractHtmlFromDesktopPage ()  {
       // which the browser loads.
       var urls_Array = new Array;
 
+      // Initialize array to hold the HTML extracted from the HTML of the desktop site.
+      var extracted_html = new Array;
+
       // Initialize number which matches the index within 'urls_Array' for a given 
       // webpage.
       webpage_index = new Number();
@@ -47,14 +50,55 @@ function extractHtmlFromDesktopPage ()  {
           if (url_string.indexOf(current_URL) > -1) {
             switch (index)  {
               case 0: 
-                var removed_HTML = new String();
-
-                // jq("table table:nth-child(2) > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(2) > td").html("");
-                // removed_HTML = jq("table tbody > tr > td.bg_tops > table.aleft > tbody > tr > td > table + table   > tbody > tr + tr > td > table > tbody > tr").detach();
                 
 
-                html_content = jq("table.aleft > tbody > tr > td > table + table > tbody > tr + tr > td").html();
+                // jq("table table:nth-child(2) > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(2) > td").html("");
+                // removed_HTwML = jq("table tbody > tr > td.bg_tops > table.aleft > tbody > tr > td > table + table   > tbody > tr + tr > td > table > tbody > tr").detach();
+                
+                // Pass on the HTML of the Section header and map.
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>Location</h2>\n" + 
+                                    "        </div\n" + 
+                                    "        <div id=\"map\"></div>\n" + 
+                                    "        <!-- Source library for Daum Maps -->\n" + 
+                                    "        <script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다.\"></script>\n" + 
+                                    "        <script>\n" + 
+                                    "          var container = document.getElementById('map')\n" + 
+                                    "          var options = {\n" + 
+                                    "            center: new daum.maps.LatLng(33.450701, 126.570667), \n" + 
+                                    "            level: 3\n" + 
+                                    "          };\n" + 
+                                    "          var map = new daum.maps.Map(container, options);\n" + 
+                                    "        </script>\n";
 
+                // Pass on the first row of contact information.
+                extracted_html[1] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(2) > td").html();
+                extracted_html[2] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(2) > td:nth-child(2)").html();
+
+                // Pass on the second row of contact information.
+                extracted_html[3] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td").html();
+                extracted_html[4] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
+
+                // Pass on the third row of contact information.
+                extracted_html[5] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td").html();
+                extracted_html[6] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
+                
+                // Pass on the first row of directions.
+                extracted_html[7] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(2) > td").html();
+                extracted_html[8] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(2) > td:nth-child(2)").html();
+
+                // Pass on the second row of directions.
+                extracted_html[9] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(4) > td").html();
+                extracted_html[10] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
+
+                // Pass on the third row of directions.
+                extracted_html[11] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(6) > td").html();
+                extracted_html[12] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(6) > td:nth-child(2)").html();
+
+                // Pass on the fourth row of directions.
+                extracted_html[13] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td").html();
+                extracted_html[14] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td:nth-child(2)").html();
+                
                 webpage_index = 0;
                 
               break;
@@ -69,7 +113,7 @@ function extractHtmlFromDesktopPage ()  {
 
       // Begin the process to display the content of the Desktop site within 
       // the Mobile template.
-      setupFinalContent(html_content, webpage_index);
+      setupFinalContent(extracted_html, webpage_index);
     }
   );
 } // END of FUNCTION 'extractHtmlFromDesktopPage'
@@ -194,8 +238,14 @@ function renderLogoAndSearch() {
     "        </form>\n" + 
     "        </div>\n" + 
     "        <div id=\"header-links\">\n" + 
-    "          <a href=\"/login/\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
-    "          <a href=\"/kr/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" +  
+    "          <div id=\"header-links-level_1\">\n" + 
+    "            <a href=\"/login/\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+    "            <a href=\"/kr/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+    "          </div>\n" + 
+    "          <div id=\"header-links-level_2\">\n" + 
+    "            <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
+    "            <a href=\"javascript: displayMenu('1');\" title=\"Section Menu\" id=\"link-section_menu\">Section Menu</a>\n" + 
+    "          </div>\n" +
     "        </div>\n" + 
     "      </section>\n"
   );
@@ -204,11 +254,7 @@ function renderLogoAndSearch() {
 function renderMenus(webpage_index) {
   jq("nav").attr("id", "nav-sub_menu");
 
-  jq("nav").html(
-    "      <section id=\"nav-menu_links\">\n" + 
-    "        <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
-    "        <a href=\"javascript: displayMenu('1');\" title=\"Section Menu\" id=\"link-section_menu\">Section Menu</a>\n" + 
-    "      </section>\n" + 
+  jq("nav").html( 
     "      <section id=\"nav-main_menu\">\n" + 
     "        <section id=\"nav-row_1\">\n" + 
     "          <div id=\"link-gpa\">\n" + 
@@ -290,6 +336,23 @@ function renderMenus(webpage_index) {
   renderSectionMenu(webpage_index);
 } // END of FUNCTION 'renderLogoAndSearch'
 
+function renderSectionMenu(webpage_index) {
+  
+    var menu_selector = new String();
+  
+    menu_selector = "#nav-section_menu";
+  
+    if (webpage_index < 5)  {
+      jq(menu_selector).html(
+        "        <a href=\"#\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
+        "        <a href=\"#\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
+        "        <a href=\"#\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
+        "        <a href=\"#\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
+        "        <a href=\"#\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
+      );
+    }
+  } // END of FUNCTION 'renderSectionMenu'
+
 function renderFooter() {
   jq("footer").html(
     "      <section id=\"footer-border\">\n" + 
@@ -315,41 +378,84 @@ function renderFooter() {
   );
 } // END of FUNCTION 'renderFooter'
 
-function renderArticle(html_content, webpage_index) {
-  jq("article").html(html_content);
-
+function renderArticle(extracted_html, webpage_index) {
   switch (webpage_index)  {
     case 0: 
-      jq("article > table:nth-child(1) > tbody > tr:nth-child(2) > td:nth-child(1)").html(
-        "<div>Location</div>\n" + 
-        "<a href=\"http://map.daum.net/?urlX=511366&urlY=1111406&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false&SHOWMARK=true\" target=\"_blank\">\n" + 
-        "  <span style=\"background:#000;position:absolute;width:557px;opacity:.7;filter:alpha(opacity=70);color:#fff;overflow:hidden;font:12px/1.5 Dotum, '����', sans-serif;text-decoration:none;padding:7px 0px 0px 10px; height: 24px;\">������ Ŭ���Ͻø� ��ġ������ Ȯ���Ͻ� �� �ֽ��ϴ�.</span><img width=\"565\" height=\"308\" src=\"http://map2.daum.net/map/mapservice?MX=511366&MY=1111406&SCALE=2.5&IW=565&IH=308&COORDSTM=WCONGNAMUL\" style=\"border:1px solid #ccc\">\n" + 
-        "</a>\n"
+      jq("article").html(
+        extracted_html[0] + "\n" + 
+
+        "        <table>\n" + 
+        "          <tbody>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[1] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[2] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[3] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[4] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[5] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[6] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "          </tbody>\n" + 
+        "        </table>\n" + 
+        "        <table>\n" + 
+        "          <tbody>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[7] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[8] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[9] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[10] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[11] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[12] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "            <tr>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[13] + "\n" + 
+        "              </td>\n" + 
+        "              <td>\n" + 
+        "                " + extracted_html[14] + "\n" + 
+        "              </td>\n" +
+        "            </tr>\n" + 
+        "          </tbody>\n" + 
+        "        </table>\n"
       );
     break;
   }
 
-  formatCSS();
+  // formatCSS();
   
   jq("body").fadeIn();
 } // END of FUNCTION 'renderArticle'
-
-function renderSectionMenu(webpage_index) {
-
-  var menu_selector = new String();
-
-  menu_selector = "#nav-section_menu";
-
-  if (webpage_index < 5)  {
-    jq(menu_selector).html(
-      "        <a href=\"#\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
-      "        <a href=\"#\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
-      "        <a href=\"#\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
-      "        <a href=\"#\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
-      "        <a href=\"#\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
-    );
-  }
-}
 
 function formatCSS() {
     /*  ---- ---- ---- FUNCTION OUTLINE ---- ---- ---- ----
@@ -452,7 +558,7 @@ function formatCSS() {
     // Pass on the HTML selectors to variables.
     table_selector = "table";
     td_selector = "td";
-    div_selector = "article > table > tbody > tr:nth-child(2) > td > div:nth-child(1)";
+    div_selector = "article > div";
     sj_title_sj_contents_selector = ".sj_title, .sj_contents";
     sj_title_selector = ".sj_title";
     sj_contents_selector = ".sj_contents";
@@ -466,8 +572,8 @@ function formatCSS() {
                             "article > table > tbody > tr:nth-child(4) > td > table > tbody > tr:nth-child(8) > td:nth-child(2)";
 
     // HTML will be formatted using the variables holding the CSS values
-    jq(table_selector).css(table_css);
-    jq(td_selector).css(td_css);
+    // jq(table_selector).css(table_css);
+    // jq(td_selector).css(td_css);
     jq(div_selector).css(div_css);
     jq(sj_title_sj_contents_selector).css(sj_title_sj_contents_css);
     jq(sj_title_selector).css(sj_title_css);
