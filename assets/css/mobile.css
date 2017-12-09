@@ -1,7 +1,9 @@
 /* *** mobile.css ~ Holds the layout styling for the mobile site *** */
 
 body {
+  margin: 0;
   background-color: #fff;
+  display: block !important;
 }
 
 header {
@@ -20,8 +22,10 @@ h2,
 }
 
 h2 {
-  margin: 1em auto;
-  font-weight: 800;
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 400;
 }
 
 header img {
@@ -272,6 +276,17 @@ footer > #footer-border {
   color: #7f7c7a;
 }
 
+/* SECTION: History - PAGE: History */
+#article-content {
+  width: 100%;
+}
+
+#article-content img {
+  margin: 0 auto;
+  display: block;
+}
+
+/* SECTION: Guide - PAGE: Location */
 table {
   width: 100%;
   margin-top: 2em;
@@ -282,7 +297,11 @@ table {
 td {
   border-bottom: 2px dashed #cec2b4;
   padding: 0.5em;
-  font-size: 2em;
+  font-size: 32px;
+}
+
+table > tbody > tr:last-of-type td {
+  border-bottom: none;
 }
 
 tr > td:nth-child(1)  {
@@ -296,22 +315,31 @@ tr > td:nth-child(2)  {
   color: #4f4f4f;
 }
 
-article > table + table > tbody > tr:nth-child(2) > td:nth-child(2) {
-  font-size: 1em;
+h4 {
+  margin: 0;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+article > table + table > tbody > tr:nth-child(2) > td:nth-child(2),
+article > table + table > tbody > tr:nth-child(3) > td:nth-child(2), 
+article > table + table > tbody > tr:nth-child(4) > td:nth-child(2) {
+  width: 75%;
+  height: auto;
+  min-height: 1px;
+  max-height: 999999px;
 }
 
 #article-header {
   width: 100%;
 }
 
-
-
-
-
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
     width: 59em;
-    height: 11em;
+    height: 16em;
   }
 
   #header-right, 

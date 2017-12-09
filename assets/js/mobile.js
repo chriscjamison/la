@@ -1,4 +1,4 @@
-var jq = jQuery.noConflict();
+﻿var jq = jQuery.noConflict();
 
 /* jq(window).load(
   function () {
@@ -6,7 +6,7 @@ var jq = jQuery.noConflict();
   }
 ); */
 
-function extractHtmlFromDesktopPage ()  {
+function extractHtmlFromDesktopPage()  {
 
   /*  ---- ---- ---- FUNCTION OUTLINE ---- ---- ---- ----
           Function extracts the text content from 
@@ -16,10 +16,6 @@ function extractHtmlFromDesktopPage ()  {
   
   jq(document).ready(
     function () {
-      // Initialize variable to hold content of page.
-      var html_content = new String();
-      var map_content = new String();
-
       // Initialize variable to hold URL string.
       var url_string = new String();
 
@@ -36,8 +32,12 @@ function extractHtmlFromDesktopPage ()  {
 
       // Pass on the URL's of the pages within the website.
       urls_Array = [
-        'contact_us.htm', 
-        'history.htm'
+        'history.htm', 
+        'faculty.htm', 
+        'rules.htm', 
+        'system.htm', 
+        'recruiting.htm', 
+        'location.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -46,29 +46,142 @@ function extractHtmlFromDesktopPage ()  {
       jq.each(urls_Array, 
         function (index, value) {
           var current_URL = value;
-          
+          // console.log("current_URL = " + current_URL);
+          // console.log("url_string.indexOf(" + current_URL + ") = " + url_string.indexOf(current_URL));
+          // console.log("index = " + index);
+          // console.log("webpage_index = " + webpage_index);
+
           if (url_string.indexOf(current_URL) > -1) {
             switch (index)  {
-              case 0: 
-                
+              // Runs if the loading page is for the 'History' section.
+              case 0:
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>인사말 (HISTORY)</h2>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div id=\"article-content\">\n" + 
+                                    "          <img src=\"http://chriscjamison.com/la/assets/img/content/about/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
+                                    "        </div>\n";
 
-                // jq("table table:nth-child(2) > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(2) > td").html("");
-                // removed_HTwML = jq("table tbody > tr > td.bg_tops > table.aleft > tbody > tr > td > table + table   > tbody > tr + tr > td > table > tbody > tr").detach();
-                
+                webpage_index = 0;
+
+                // console.log("webpage_index = " + webpage_index);
+
+                // Begin the process to display the content of the Desktop site within 
+                // the Mobile template.
+                setupFinalContent(extracted_html, webpage_index);
+              break;
+
+              case 5: 
                 // Pass on the HTML of the Section header and map.
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>Location</h2>\n" + 
-                                    "        </div\n" + 
-                                    "        <div id=\"map\"></div>\n" + 
+                                    "          <h2 lang=\"ko\">치안내 (LOCATION)</h2>\n" + 
+                                    "        </div>\n"+ 
+                                    "        <div id=\"map\" style=\"width:85%;height:500px;margin: 0 auto;\"></div>\n" + 
+
+                                    /* "        <div class=\"wrap_content\">\n" + 
+                                    "          <div class=\"wrap_map\">\n" + 
+                                    "          <div id=\"map\" style=\"width:100%;height:100%\"></div>\n" + 
+                                    "          <div class=\"wrap_button\">\n" + 
+                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_linkMap\" target=\"_blank\" onclick=\"moveDaumMap(this)\"><span class=\"screen_out\">지도 크게보기</span></a>\n" + 
+                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_resetMap\" onclick=\"resetDaumMap()\"><span class=\"screen_out\">지도 초기화</span></a>\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div class=\"wrap_roadview\">\n" + 
+                                    "          <div id=\"roadview\" style=\"width:100%;height:100%\"></div>\n" + 
+                                    "          <div class=\"wrap_button\">\n" + 
+                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_linkRoadview\" target=\"_blank\" onclick=\"moveDaumRoadview(this)\"><span class=\"screen_out\">로드뷰 크게보기</span></a>\n" + 
+                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_resetRoadview\" onclick=\"resetRoadview()\"><span class=\"screen_out\">로드뷰 크게보기</span></a>\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n"  +  */
                                     "        <!-- Source library for Daum Maps -->\n" + 
-                                    "        <script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다.\"></script>\n" + 
+                                    "        <script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=83636625893c769b461dd3298dd45bba\"></script>\n" + 
                                     "        <script>\n" + 
-                                    "          var container = document.getElementById('map')\n" + 
-                                    "          var options = {\n" + 
-                                    "            center: new daum.maps.LatLng(33.450701, 126.570667), \n" + 
+                                    "          var mapContainer = document.getElementById('map'), \n" + 
+                                    "          mapCenter = new daum.maps.LatLng(37.500521, 127.051424), \n" + 
+                                    "          mapOption = { \n" + 
+                                    "            center: mapCenter, \n" + 
                                     "            level: 3\n" + 
-                                    "          };\n" + 
-                                    "          var map = new daum.maps.Map(container, options);\n" + 
+                                    "          };\n" +
+                                    "\n" +  
+                                    "          var map = new daum.maps.Map(mapContainer, mapOption);\n" + 
+                                    "\n" + 
+                                    "          var markerPosition  = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
+                                    "\n" + 
+                                    "          var marker = new daum.maps.Marker({ \n" + 
+                                    "             position: markerPosition\n" + 
+                                    "          });\n" + 
+                                    "\n" + 
+                                    "          marker.setMap(map);\n" + 
+                                    "\n" + 
+                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">큰지도보기</a> <a href=\"http://map.daum.net/link/to/Hello World!,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">길찾기</a></div>', \n" + 
+                                    "            iwPosition = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
+                                    "\n" + 
+                                    "          var infowindow = new daum.maps.InfoWindow({ \n" + 
+                                    "            position : iwPosition, \n" + 
+                                    "            content : iwContent\n" + 
+                                    "          });\n" + 
+                                    "\n" + 
+                                    "          infowindow.open(map, marker);\n" + /*  + 
+                                    "              position: mapCenter, \n" + 
+                                    "              content: '스페이스 닷원'\n" + 
+                                    "          });\n" + 
+                                    "          mLabel.open(map, mMarker);\n" + 
+                                    "\n" + 
+                                    "          var rvContainer = document.getElementById('roadview');\n" + 
+                                    "          var rv = new daum.maps.Roadview(rvContainer);\n" + 
+                                    "          var rc = new daum.maps.RoadviewClient();\n" + 
+                                    "          var rvResetValue = {}\n" + 
+                                    "          rc.getNearestPanoId(mapCenter, 50, function(panoId) { \n" + 
+                                    "            rv.setPanoId(panoId, mapCenter);\n" + 
+                                    "            rvResetValue.panoId = panoId;\n" + 
+                                    "          });\n" + 
+                                    "\n" + 
+                                    "          daum.maps.event.addListener(rv, 'init', function() { \n" + 
+                                    "            var rMarker = new daum.maps.Marker({ \n" + 
+                                    "              position: mapCenter, \n" + 
+                                    "              map: rv\n" + 
+                                    "            });\n" + 
+                                    "\n" + 
+                                    "            var rLabel = new daum.maps.InfoWindow({ \n" + 
+                                    "                position: mapCenter, \n" + 
+                                    "                content: '스페이스 닷원'\n" + 
+                                    "            });\n" + 
+                                    "            rLabel.open(rv, rMarker);\n" + 
+                                    "\n" + 
+                                    "            var projection = rv.getProjection();\n" + 
+                                    "\n" + 
+                                    "            var viewpoint = projection.viewpointFromCoords(rMarker.getPosition(), rMarker.getAltitude());\n" + 
+                                    "                rv.setViewpoint(viewpoint);\n" + 
+                                    "\n" + 
+                                    "            rvResetValue.pan = viewpoint.pan;\n" + 
+                                    "            rvResetValue.tilt = viewpoint.tilt;\n" + 
+                                    "            rvResetValue.zoom = viewpoint.zoom;\n" + 
+                                    "          });\n" + 
+                                    "\n" + 
+                                    "          function moveDaumMap(self){ \n" + 
+                                    "            var center = map.getCenter(),  \n" + 
+                                    "            lat = center.getLat(), \n" + 
+                                    "            lng = center.getLng();\n" + 
+                                    "            self.href = 'http://map.daum.net/link/map/' + encodeURIComponent('스페이스 닷원') + ',' + lat + ',' + lng;\n" + 
+                                    "          }\n" + 
+                                    "\n" + 
+                                    "          function resetDaumMap(){ \n" + 
+                                    "            map.setCenter(mapCenter);\n" + 
+                                    "            map.setLevel(mapOption.level);\n" + 
+                                    "          }\n" + 
+                                    "\n" + 
+                                    "          function moveDaumRoadview(self){ \n" + 
+                                    "            var panoId = rv.getPanoId();\n" + 
+                                    "            var viewpoint = rv.getViewpoint();\n" + 
+                                    "            self.href = 'http://map.daum.net/?panoid='+panoId+'&pan='+viewpoint.pan+'&tilt='+viewpoint.tilt+'&zoom='+viewpoint.zoom;\n" + 
+                                    "          }\n" + 
+                                    "\n" + 
+                                    "          function resetRoadview(){ \n" + 
+                                    "            rv.setViewpoint({ \n" + 
+                                    "              pan: rvResetValue.pan, tilt: rvResetValue.tilt, zoom: rvResetValue.zoom\n" + 
+                                    "            });\n" + 
+                                    "            rv.setPanoId(rvResetValue.panoId);\n" + 
+                                    "          }\n" +  */
                                     "        </script>\n";
 
                 // Pass on the first row of contact information.
@@ -89,31 +202,94 @@ function extractHtmlFromDesktopPage ()  {
 
                 // Pass on the second row of directions.
                 extracted_html[9] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(4) > td").html();
-                extracted_html[10] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
+                extracted_html[10] = "        <h4>Seolleung Station exit two</h4>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>Step out of exit two and go straight for five minutes.</li>\n" + 
+                                     "          <li>At the second stoplight, you will see Leaders Academy across the street and slightly to the left.</li>\n" + 
+                                     "          <li>After you cross the street, walk 20 meters to Leaders Academy.</li>\n" + 
+                                     "          <li>Come to the fourth floor.</li>\n" + 
+                                     "        </ul>\n" + 
+                                     "        <h4>Hanti Station exit one</h4>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>Step out of exit one and go straight for five minutes until you see Baskin Robbins across the street and Seokwang Eye Glasses shop to your right.</li>\n" + 
+                                     "          <li>Do not cross the street.</li>\n" + 
+                                     "          <li>Go right.</li>\n" + 
+                                     "          <li>You will see Leaders Academy in the second building on your right.</li>\n" + 
+                                     "          <li>Come to the fourth floor.</li>\n" + 
+                                     "        </ul>\n";
 
                 // Pass on the third row of directions.
                 extracted_html[11] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(6) > td").html();
-                extracted_html[12] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(6) > td:nth-child(2)").html();
+                extracted_html[12] = "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
+                                     "        <strong>Dogok Sagori</strong>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>363</li>\n" + 
+                                     "        </ul>\n" + 
+                                     "        <strong>Dosung Cho Sagori</strong>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>472</li>\n" + 
+                                     "          <li>6211</li>\n" + 
+                                     "          <li>3420</li>\n" + 
+                                     "          <li>330</li>\n" + 
+                                     "          <li>3219</li>\n" + 
+                                     "          <li>4312</li>\n" + 
+                                     "          <li>4412</li>\n" + 
+                                     "          <li>9414</li>\n" + 
+                                     "          <li>8443</li>\n" +  
+                                     "        </ul>" + 
+                                     "        <strong>Daechi Dong Hanguk Hagwon</strong>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>363</li>\n" + 
+                                     "        </ul>\n" + 
+                                     "        <strong>Young dong Apt</strong>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>8443</li>\n" + 
+                                     "          <li>147</li>\n" + 
+                                     "          <li>472</li>\n" + 
+                                     "          <li>6411</li>\n" + 
+                                     "          <li>3420</li>\n" + 
+                                     "          <li>3219</li>\n" + 
+                                     "          <li>4312</li>\n" + 
+                                     "          <li>4412</li>\n" + 
+                                     "          <li>9414</li>\n" +  
+                                     "        </ul>\n";
 
                 // Pass on the fourth row of directions.
                 extracted_html[13] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td").html();
-                extracted_html[14] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td:nth-child(2)").html();
+                extracted_html[14] = "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
+                                     "        <ul>\n" + 
+                                     "          <li>Tell the taxi driver Dosung Elementary Intersection-Dosung Chogyo Sagori - 도성초교 사거리</li>\n" + 
+                                     "        </ul>\n";
+
+                webpage_index = 5;
+
+                // Begin the process to display the content of the Desktop site within 
+                // the Mobile template.
+                // setupFinalContent(extracted_html, webpage_index);
                 
-                webpage_index = 0;
-                
+                // console.log("webpage_index = " + webpage_index);
               break;
-              
             }
           }
         }
       );
+
+      extracted_html.forEach(
+        function (data, index) {
+          console.log("data[" + index + " = " + data);
+        }
+      );
+      // console.log("webpage_index = " + webpage_index);
+      setupFinalContent(extracted_html, webpage_index);
+
+      
               
       // Make the content of the Desktop site invisible to the visitor.
-      jq("body").fadeOut(10);
+      // jq("body").fadeOut(10);
 
-      // Begin the process to display the content of the Desktop site within 
-      // the Mobile template.
-      setupFinalContent(extracted_html, webpage_index);
+      
+
+      
     }
   );
 } // END of FUNCTION 'extractHtmlFromDesktopPage'
@@ -125,9 +301,9 @@ function setupFinalContent(html_content, webpage_index)  {
 
   // Add the basic framework of the HTML template.
   renderHTMLFrame();
-
+// console.log("webpage_index = " + webpage_index);
   // Add the HTML of the <head> HTML element.
-  renderHeader();
+  renderHeader(webpage_index);
   
   // Add the basic framework of the <body> HTML element.
   renderBody();
@@ -140,7 +316,7 @@ function setupFinalContent(html_content, webpage_index)  {
 
   // Add the HTML which makes up the footer.
   renderFooter();
-
+// console.log("webpage_index = " + webpage_index);
   // Add the HTML of the page which is loading.
   renderArticle(html_content, webpage_index);
 
@@ -148,7 +324,7 @@ function setupFinalContent(html_content, webpage_index)  {
 
 function renderHTMLFrame()  {
   jq("html").removeAttr();
-  jq("html").attr("lang", "ko");
+  // jq("html").attr("lang", "ko");
 
   jq("html").html( 
     "  <head>\n" +
@@ -158,13 +334,30 @@ function renderHTMLFrame()  {
   );
 } // END of FUNCTION 'renderHTMLFrame'
 
-function renderHeader() {
+function renderHeader(webpage_index) {
+
+  var title_html = new String();
+
+  title_html = "Leaders Academy - ";
+// console.log("webpage_index = " + webpage_index);
+  switch (webpage_index)  {
+    // Runs if the loading page is the History page.
+    case 0: 
+      title_html = title_html + "인사말(HISTORY)";
+    break;
+
+    // Runs if the loading page is the Location page.
+    case 5:
+      title_html = title_html + "치안내 (LOCATION)";
+    break;
+  } // END of SWITCH statement
+
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
-    "    <title>Leaders Academy - Contact Us</title>\n" + 
+    "    <title>" + title_html + "</title>\n" + 
     "\n" + 
     "    <!-- HTML Reference to display Korean characters -->\n" + 
-    "    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=euc-kr\">\n" + 
+    "    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n" + 
     "\n" + 
     "    <!-- *** CSS Stylesheet References *** -->\n" + 
     "\n" +
@@ -180,12 +373,27 @@ function renderHeader() {
     "    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n" + 
     "\n" +
     "    <!-- JavaScript script which handles general layout for 'index.htm'. -->\n" + 
-    "    <script src=\"/la/assets/js/mobile.js\"></script>\n"
+    "    <script src=\"/la/assets/js/mobile.js\"></script>\n"/*  + 
+    "\n" + 
+    "    <style>\n" + 
+    "      .screen_out {display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}\n" + 
+    "      .wrap_content {overflow:hidden;height:330px}\n" + 
+    "      .wrap_map {width:75%;height:500px;position:relative;margin:0 auto;}\n" + 
+    "      .wrap_roadview {width:50%;height:300px;float:left;position:relative;display:none;}\n" + 
+    "      .wrap_button {position:absolute;left:15px;top:12px;z-index:2}\n" + 
+    "      .btn_comm {float:left;display:block;width:70px;height:27px;background:url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/sample_button_control.png) no-repeat}\n" + 
+    "      .btn_linkMap {background-position:0 0;}\n" + 
+    "      .btn_resetMap {background-position:-69px 0;}\n" + 
+    "      .btn_linkRoadview {background-position:0 0;}\n" + 
+    "      .btn_resetRoadview {background-position:-69px 0;}\n" + 
+    "    </style>\n" */
   );
   
 } // END of FUNCTIION 'renderHeader'\
 
 function renderBody() {
+  // jq("body").attr("style", "display:block;");
+
   jq("body").html(
     "<!--\n" +  
     "  START of Header\n" +  
@@ -240,7 +448,7 @@ function renderLogoAndSearch() {
     "        <div id=\"header-links\">\n" + 
     "          <div id=\"header-links-level_1\">\n" + 
     "            <a href=\"/login/\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
-    "            <a href=\"/kr/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+    "            <a href=\"/ko/\" lang=\"ko\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
     "          </div>\n" + 
     "          <div id=\"header-links-level_2\">\n" + 
     "            <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
@@ -320,7 +528,7 @@ function renderMenus(webpage_index) {
     "            <span>Contact Us</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-location\">\n" + 
-    "            <a href=\"#location\" title=\"Location\"></a>\n" + 
+    "            <a href=\"/la/assets/html/guide/location.htm\" title=\"Location\"></a>\n" + 
     "            <span>Location</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-media\">\n" + 
@@ -332,6 +540,7 @@ function renderMenus(webpage_index) {
     "      <section id=\"nav-section_menu\">\n" + 
     "      </section>\n"
   );
+console.log("webpage_index = " + webpage_index);
 
   renderSectionMenu(webpage_index);
 } // END of FUNCTION 'renderLogoAndSearch'
@@ -341,14 +550,15 @@ function renderSectionMenu(webpage_index) {
     var menu_selector = new String();
   
     menu_selector = "#nav-section_menu";
-  
-    if (webpage_index < 5)  {
+console.log("webpage_index = " + webpage_index);
+    if (webpage_index < 6)  {
       jq(menu_selector).html(
-        "        <a href=\"#\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
-        "        <a href=\"#\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
-        "        <a href=\"#\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
-        "        <a href=\"#\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
-        "        <a href=\"#\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
+        "        <a href=\"history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
+        "        <a href=\"faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
+        "        <a href=\"rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
+        "        <a href=\"system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-history\">학원제도(SYSTEM)</a>\n" + 
+        "        <a href=\"recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
+        "        <a href=\"location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
       );
     }
   } // END of FUNCTION 'renderSectionMenu'
@@ -379,34 +589,44 @@ function renderFooter() {
 } // END of FUNCTION 'renderFooter'
 
 function renderArticle(extracted_html, webpage_index) {
+
+  var updated_html = new String();
+
+// console.log("webpage_index = " + webpage_index);
   switch (webpage_index)  {
-    case 0: 
+    // Runs if the loading page is the History page.
+    case 0:
+      jq("article").html(extracted_html[0]);
+    break;
+    
+    // Runs if the loading page is the Location page.
+    case 5: 
+    // console.log("5");
       jq("article").html(
         extracted_html[0] + "\n" + 
-
         "        <table>\n" + 
         "          <tbody>\n" + 
         "            <tr>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[1] + "\n" + 
         "              </td>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[2] + "\n" + 
         "              </td>\n" +
         "            </tr>\n" + 
         "            <tr>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[3] + "\n" + 
         "              </td>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[4] + "\n" + 
         "              </td>\n" +
         "            </tr>\n" + 
         "            <tr>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[5] + "\n" + 
         "              </td>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[6] + "\n" + 
         "              </td>\n" +
         "            </tr>\n" + 
@@ -442,13 +662,14 @@ function renderArticle(extracted_html, webpage_index) {
         "              <td>\n" + 
         "                " + extracted_html[13] + "\n" + 
         "              </td>\n" + 
-        "              <td>\n" + 
+        "              <td lang=\"ko\">\n" + 
         "                " + extracted_html[14] + "\n" + 
         "              </td>\n" +
         "            </tr>\n" + 
         "          </tbody>\n" + 
         "        </table>\n"
       );
+      
     break;
   }
 
