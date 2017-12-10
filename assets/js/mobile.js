@@ -43,7 +43,16 @@ function extractHtmlFromDesktopPage()  {
         'lee_hanyo.htm', 
         'park_sungryul.htm', 
         'abhisheka_dubey.htm', 
-        'kevin_han.htm'
+        'kevin_han.htm', 
+        'reece_randall.htm', 
+        'lee_eunhye.htm', 
+        'you_ge_heon.htm', 
+        'kim_gyumin.htm', 
+        'brian_moon.htm', 
+        'chan_keun_kim.htm', 
+        'joonpyo_sohn.htm', 
+        'matthew_own.htm', 
+        'roger_hatridge.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -808,6 +817,155 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 11;
               break;
+
+              // Runs if the loading page is the 'Faculty' page for Reece Randall.
+              case 12:
+                extracted_html[0] = "          <h4>Reece Randall</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE) &amp; 정규영어(ENGLISH)]</span>\n" + 
+                                    "          <span>관리자</span>\n";
+
+                extracted_html[1] = "            University of Cape Town\n" + 
+                                    "            <br/>\n" + 
+                                    "            2017 Teaching English as a Foreign Language (TEFL)\n" + 
+                                    "            <br/>\n" + 
+                                    "            Varsity College\n" + 
+                                    "            <br/>\n" + 
+                                    "            2014-2016 Independent Institute of Education B.Com. Financial Management\n";
+                                    "            <br/>\n" + 
+                                    "            GEMS World Academy, Dubai\n" + 
+                                    "            <br/>\n" + 
+                                    "            2011-2013 International Baccalaureate Diploma\n";
+                extracted_html[2] = "          <h6>경 력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>English Teacher | University of Cape Town - English Language Center | 2017</li>\n" + 
+                                    "            <li>Co-Founder & Tutor | GEMS World Academy - The Writing Center | 2011 – 2013</li>\n" + 
+                                    "            <li>Committee Chair | GEMS World Academy - Student Council | 2012 – 2013</li>\n" + 
+                                    "            <li>Top 3 National Speaker | Murdoch University Business Cup Challenge | 2012</li>\n" + 
+                                    "            <li>Student Leader & Volunteer Teacher | World Challenge China Expedition | 2012</li>\n" + 
+                                    "            <li>Top 3 Senior Debater | World Scholar's Cup | 2012</li>\n" + 
+                                    "            <li>Ambassador, Speaker & Fundraiser | Room to Read | 2012</li>\n" + 
+                                    "            <li>Award-Winning Delegate | Model United Nations | 2011 – 2012</li>\n" + 
+                                    "            <li>Member & Speaker | Toastmasters Society International | 2009 – 2010</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 12;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Lee Eunhye.
+              case 13:
+                extracted_html[0] = "          <h4>Lee Eunhye</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE) &amp; 모의유엔(MUN)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            KDI School of Public Policy and Management\n" + 
+                                    "            <br/>\n" + 
+                                    "            Candidate for Master of Public Policy\n" + 
+                                    "            <br/>\n" + 
+                                    "            College of International Studies, KyungHee University\n" + 
+                                    "            <br/>\n" + 
+                                    "            Bachelor of International Studies\n";
+                                    "            <br/>\n" + 
+                                    "            Study Abroad, University of California Davis\n" + 
+                                    "            <br/>\n" + 
+                                    "            Completion of a term\n";
+                                    "            <br/>\n" + 
+                                    "            Study Abroad, Johns Hopkins School of Advanced International Studies, Washington D.C.\n" + 
+                                    "            <br/>\n" + 
+                                    "            Completion of a course on &ldquo;American Foreign Policy&rdquo;\n";
+                extracted_html[2] = "          <h6>Model United Nations</h6>\n" +
+                                    "          <span>(Participating as a delegate)</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>1<sup>st</sup> prize best delegate award, Asian International Model United Nations, 2016</li>\n" + 
+                                    "            <li>1<sup>st</sup> prize best delegate award, Japan-China-Korea Model United Nations, 2016</li>\n" + 
+                                    "            <li>1<sup>st</sup> prize best delegate GCS President&rsquo;s award, Sustainable Development Goals Model UN, 2016</li>\n" + 
+                                    "            <li>Finalist, Model AU, 2014, UNA of the ROK President’s award, National Model UN, 2016</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <span>(Judging / Chairing)</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Adjudicator, Chosun-Ilbo Asia Youth Parliament, 2014</li>\n" + 
+                                    "            <li>Chair, Global Classrooms: Seoul, 2013</li>\n" + 
+                                    "            <li>Chair, Yeosu Expo Model United Nations, 2012</li>\n" + 
+                                    "            <li>Chair, Kyung Hee International Model United Nations, 2013-2014</li>\n" + 
+                                    "            <li>Secretary General, Copion Model United Nations, 2011</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <span>(Lecturing / Others)</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Lecturer, World Federation of United Nations Associations youth camp, 2013</li>\n" + 
+                                    "            <li>Lecturer, Kyung Hee International Model UN workshop, 2012-2014</li>\n" + 
+                                    "            <li>Invited participant, Model UN Workshop at UN headquarters in New York, 2014</li>\n" + 
+                                    "            <li>Invited participant, Korea-China-Japan Model UN Forum, 2016</li>\n" + 
+                                    "            <li>Secretariat and Chair trainer, KICMUN Education and Academic Resources, 2012-2014</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Parliamentary Debate</h6>\n" +
+                                    "          <span>(Judging)</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Breaking adjudicator, 16<sup>th</sup> KIDA National Championship, 2015</li>\n" + 
+                                    "            <li>Breaking adjudicator, 14<sup>th</sup> KIDA National Championship, 2014</li>\n" + 
+                                    "            <li>Breaking adjudicator, Global Korea Debate Championship, 2015</li>\n" + 
+                                    "            <li>Breaking adjudicator, Korean English Debating Championship, 2013</li>\n" + 
+                                    "            <li>Breaking adjudicator, Ytn-Hufs Debate Championship, 2015</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <span>(Lecturing / Coaching)</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Debate lecturer, World Federation of United Nations Association youth camp, 2013</li>\n" + 
+                                    "            <li>Debate lecturer, Debate for all Osan Summer Debate Camp, 2014</li>\n" + 
+                                    "            <li>Debate lecturer, Sema high school/Wonil middle school / Woonam middle school, 2014-2015</li>\n" + 
+                                    "            <li>Debate coach, P&E Academy Cheongdam campus, 2014-2016</li>\n" + 
+                                    "            <li>President, Kyung Hee university debate society, 2015</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <span>(Debating)</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Octo Finalist, Hong Kong Debate Open, 2014</li>\n" + 
+                                    "            <li>Efl Grand Finalist, North East Asian Open, 2012</li>\n" + 
+                                    "            <li>Semi Finalist, Sogang Invitation, 2013</li>\n" + 
+                                    "            <li>2<sup>nd</sup> prize Dong-A Ilbo CEO award, National Collegiate Competition, 2014</li>\n" + 
+                                    "            <li>3<sup>rd</sup> prize Seoul Nat’l Univ. Institute Chair’s award, Korea HR and Peace Debate tournament, 2015</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 13;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for You Ge Heon.
+              case 14:
+                extracted_html[0] = "          <h4>You Ge Heon</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            Yonsei University\n" + 
+                                    "            <br/>\n" + 
+                                    "            UIC Political Science & International Relations\n";
+
+                extracted_html[2] = "          <h6>심사위원 경력</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>2016년 YTN-한국외대 청소년 영어토론대회(초등부): 심사위원</li>\n" + 
+                                    "            <li>2016년 매일경제 영어토론대회 고등부 결승전 심사위원</li>\n" + 
+                                    "            <li>2016년 코넬-연세 고교대항전 결승전 심사위원</li>\n" + 
+                                    "            <li>2016년 제 8회 연세대학교 토론대회 심사위원장</li>\n" + 
+                                    "            <li>2016년 서강대학교 루키 토론대회 (SRT) 심사위원</li>\n" + 
+                                    "            <li>2015년 YTN-한국외대 청소년 영어토론대회(중등부): 심사위원</li>\n" + 
+                                    "            <li>2015년 YTN-한국외대 청소년 영어토론대회(고등부): 심사위원</li>\n" + 
+                                    "            <li>2015년 서강대학교 루키 토론대회(하반기) (SRT) 심사위원</li>\n" + 
+                                    "            <li>2016년 2016 제2회 오산시 전국학생 토론대회 부심사위원장 (DCA)</li>\n" + 
+                                    "            <li>GFN영어방송 광주광역시 전국 청소년 영어토론대회 부심사위원장 (DCA)</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>디베이트 경력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2015년 동북아시아 영어토론대회 (NEAO): 준준결승전 진출</li>\n" + 
+                                    "            <li>2015년 서강대학교 루키 토론대회(SRT) 준결승전 진출</li>\n" + 
+                                    "            <li>2016년 제18회 전국대학생 영어토론대회 (KNC): 준준결승전 진출</li>\n" + 
+                                    "            <li>2016년 제19회 전국대학생 영어토론대회 (KNC): 준준결승전 진출</li>\n" + 
+                                    "            <li>2016년 제 1회 한양대학교-연세대학교 영어 토론대회 결승 진출, 2등 스피커상</li>\n" + 
+                                    "            <li>2016년 전국 대학생 영어 토론 총연합 대회 (KIDA Open): Pre-Semi Finalist</li>\n" + 
+                                    "            <li>2016년 동북아시아 영어토론대회 (NEAO): 준준결승전 진출, 4등 스피커상</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>강의 경력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>전) 한국 디베이트 리그 강사</li>\n" + 
+                                    "            <li>전) 디베이트포올 열린교실 강사 (2016.7월-2016.12월18일)</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 14;
+              break;
             }
           }
         }
@@ -862,8 +1020,13 @@ function renderHTMLFrame()  {
 function renderHeader(webpage_index) {
 
   var title_html = new String();
+  var section_html = new String();
 
   title_html = "Leaders Academy - ";
+
+  if (webpage_index < 22) {
+    section_html = "강사소개 (FACULTY) - ";
+  }
   
   switch (webpage_index)  {
     // Runs if the loading page is the History page.
@@ -883,32 +1046,77 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the Faculty page for Park Sooyoung.
     case 6: 
-      title_html = title_html + "강사소개 (FACULTY) - Park Sooyoung";
+      title_html = title_html + section_html + "Park Sooyoung";
     break;
 
     // Runs if the loading page is the Faculty page for Kim Hyerin.
     case 7: 
-      title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
+      title_html = title_html + section_html + " Kim Hyerin";
     break;
 
     // Runs if the loading page is the Faculty page for Lee Hanyo.
     case 8: 
-      title_html = title_html + "강사소개 (FACULTY) - Lee Hanyo";
+      title_html = title_html + section_html + "Lee Hanyo";
     break;
     
     // Runs if the loading page is the Faculty page for Park Sungryul.
     case 9: 
-      title_html = title_html + "강사소개 (FACULTY) -  Park Sungryul";
+      title_html = title_html + section_html + "Park Sungryul";
     break;
 
     // Runs if the loading page is the Faculty page for Abhisheka Dubey.
     case 10: 
-      title_html = title_html + "강사소개 (FACULTY) -  Abhisheka Dubey";
+      title_html = title_html + section_html + "Abhisheka Dubey";
     break;
 
     // Runs if the loading page is the Faculty page for Abhisheka Dubey.
     case 11: 
-      title_html = title_html + "강사소개 (FACULTY) -  Kevin Han";
+      title_html = title_html + section_html + "Kevin Han";
+    break;
+
+    // Runs if the loading page is the Faculty page for Reece Randall.
+    case 12: 
+      title_html = title_html + section_html + "Reece Randall";
+    break;
+
+    // Runs if the loading page is the Faculty page for Lee Eunhye.
+    case 13: 
+      title_html = title_html + section_html + "Lee Eunhye";
+    break;
+
+    // Runs if the loading page is the Faculty page for You Ge Heon.
+    case 14: 
+      title_html = title_html + section_html + "You Ge Heon";
+    break;
+
+    // Runs if the loading page is the Faculty page for Kim Gyumin.
+    case 15: 
+      title_html = title_html + section_html + "Kim Gyumin";
+    break;
+
+    // Runs if the loading page is the Faculty page for Brian Moon.
+    case 16: 
+      title_html = title_html + section_html + "Brian Moon";
+    break;
+
+    // Runs if the loading page is the Faculty page for Chan Keun Kim.
+    case 17: 
+      title_html = title_html + section_html + "Chan Keun Kim";
+    break;
+
+    // Runs if the loading page is the Faculty page for Joonpyo Sohn.
+    case 18: 
+      title_html = title_html + section_html + "Joonpyo Sohn";
+    break;
+
+    // Runs if the loading page is the Faculty page for Matthew Owen.
+    case 19: 
+      title_html = title_html + section_html + "Matthew Owen";
+    break;
+
+    // Runs if the loading page is the Faculty page for Roger Hatridge.
+    case 20: 
+      title_html = title_html + section_html + "Roger Hatridge";
     break;
   } // END of SWITCH statement
 
