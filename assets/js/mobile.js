@@ -39,7 +39,8 @@ function extractHtmlFromDesktopPage()  {
         'recruiting.htm', 
         'location.htm', 
         'park_sooyoung.htm', 
-        'kim_hyerin.htm'
+        'kim_hyerin.htm', 
+        'lee_hanyo.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -595,6 +596,49 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 7;
               break;
+
+              // Runs if the loading page is the 'Faculty' page for Kim Hyerin.
+              case 8:
+              extracted_html[0] = "          <h4>Lee Hanyo</h4>\n" + 
+                                  "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                  "          <span>작성자</span>\n";
+
+              extracted_html[1] = "            Hankuk Academy of Foreign Studies 한국외국어대학교 부속 용인외국어고등학교\n" + 
+                                  "            <br/>\n" + 
+                                  "            Seoul National University 서울대학교\n";
+
+              extracted_html[2] = "          <ul>\n" + 
+                                  "            <li>2009 KYUMUN Outstanding Delegate | Delegate, ECOSOC</li>\n" + 
+                                  "            <li>2009 GMUN Best Delegate | Delegate, ECOSOC</li>\n" + 
+                                  "            <li>2009 KMCI 1st Speaker | Suspect, U.S. Marshalls II</li>\n" + 
+                                  "            <li>2009 MUNOS Outstanding Delegate | Delegate, SC</li>\n" + 
+                                  "            <li>2009 SEOMUN Delegate, HR Council</li>\n" + 
+                                  "            <li>2009 THIMUN - Singapore Delegate, ECOSOC</li>\n" + 
+                                  "            <li>2010 Dale Carnegie Presentation Conference 1st Place - Gyeonggi Governor Recognition</li>\n" +
+                                  "          </ul>\n" + 
+                                  "          <ul>\n" + 
+                                  "            <li>2012 11th KIDA National Championship Rookie Champion</li>\n" + 
+                                  "            <li>2013 12th KIDA National Championship Semi-Finalist</li>\n" + 
+                                  "            <li>2013 Sogang BP Open Grand-Finalist</li>\n" + 
+                                  "            <li>2013 Sogang IV Semi-Finalist | 2nd Best Speaker</li>\n" + 
+                                  "            <li>2014 13th KIDA National Championship Champion | G-F Best Speaker</li>\n" + 
+                                  "            <li>2016 18th KIDA National Championship Grand-Finalist | 6th Best Speaker</li>\n"
+                                  "          </ul>\n" + 
+                                  "          <ul>\n" + 
+                                  "            <li>2016 CUDS Open Invited Adjudicator</li>\n" + 
+                                  "            <li>2016 19th KIDA National Championship Deputy Chief Adjudicator</li>\n" + 
+                                  "          </ul>\n" + 
+                                  "          <ul>\n" + 
+                                  "            <li>2013 4th Gwangju Youth Debating Championship Breaking Adjudicator | 2nd Best Adjudicator</li>\n" + 
+                                  "            <li>2014 1st Cornell-Yonsei Debate Invitational Breaking Adjudicator | 2nd Best Adjudicator</li>\n" + 
+                                  "            <li>2016 2nd YTN-HUFS ES English Debating Championship Breaking Adjudicator</li>\n" +
+                                  "            <li>2016 7th YTN-HUFS MS English Debating Championship Breaking Adjudicator</li>\n" + 
+                                  "            <li>2016 8th YTN-HUFS HS English Debating Championship Breaking Adjudicator | 3rd Best Adjudicator</li>\n" + 
+                                  "            <li>2016 2nd MK Economy English Debate Tournament Breaking Adjudicator</li>\n" +
+                                  "          </ul>\n";
+
+              webpage_index = 8;
+            break;
             }
           }
         }
@@ -677,6 +721,11 @@ function renderHeader(webpage_index) {
     case 7: 
       title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
     break;
+
+    // Runs if the loading page is the Faculty page for Lee Hanyo.
+    case 8: 
+    title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
+  break;
   } // END of SWITCH statement
 
   jq("head").html(
