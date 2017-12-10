@@ -40,7 +40,9 @@ function extractHtmlFromDesktopPage()  {
         'location.htm', 
         'park_sooyoung.htm', 
         'kim_hyerin.htm', 
-        'lee_hanyo.htm'
+        'lee_hanyo.htm', 
+        'park_sungryul.htm', 
+        'abhisheka_dubey.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -75,7 +77,7 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n" + 
                                     "        <div id=\"article-content\">\n";
 
-                extracted_html[1] = "          <div class=\"article-faculty-row\" id=\article-faculty-row_1\">\n";
+                extracted_html[1] = "          <div class=\"article-faculty-row\" id=\"article-faculty-row_1\">\n";
 
                 extracted_html[2] = "            <div class=\"article-faculty-member\" id=\"faculty-member-park_sooyoung\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771667908700.JPG\" width=\"78\" height=\"107\" />\n" + 
@@ -106,7 +108,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[4] = "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_2\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_2\">\n";
                 
                 extracted_html[5] = "            <div class=\"article-faculty-member\" id=\"faculty-member-lee_hanyo\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771049407960.JPG\" width=\"78\" height=\"107\" />\n" + 
@@ -137,7 +139,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[7] = "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_3\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_3\">\n";
 
                 extracted_html[8] = "            <div class=\"article-faculty-member\" id=\"faculty-member-abhisheka_dubey\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771024769050.JPG\" width=\"78\" height=\"107\" />\n" + 
@@ -168,7 +170,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[10]= "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_4\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_4\">\n";
 
                 extracted_html[11]= "            <div class=\"article-faculty-member\" id=\"faculty-member-reece_randall\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150313760797340.JPG\" width=\"78\" height=\"107\" />\n" + 
@@ -199,7 +201,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[13]= "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_5\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_5\">\n";
 
                 extracted_html[14]= "            <div class=\"article-faculty-member\" id=\"faculty-member-you_ge_heon\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086687233400.jpg\" width=\"78\" height=\"107\" />\n" + 
@@ -230,7 +232,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[16]= "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_6\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_6\">\n";
 
                 extracted_html[17]= "            <div class=\"article-faculty-member\" id=\"faculty-member-brian_moon\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_147279951758880.bmp\" width=\"78\" height=\"107\" />\n" + 
@@ -261,7 +263,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[19]= "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_7\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_7\">\n";
 
                 extracted_html[20]= "            <div class=\"article-faculty-member\" id=\"faculty-member-joonpyo_sohn\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_146857124556520.jpg\" width=\"78\" height=\"107\" />\n" + 
@@ -292,7 +294,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </div>\n";
 
                 extracted_html[22]= "          </div>\n" + 
-                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_8\">\n";
+                                    "          <div class=\"article-faculty-row\" id=\"article-faculty-row_8\">\n";
 
                 extracted_html[23]= "            <div class=\"article-faculty-member\" id=\"faculty-member-joonpyo_sohn\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_140273568736030.PNG\" width=\"78\" height=\"107\" />\n" + 
@@ -527,10 +529,10 @@ function extractHtmlFromDesktopPage()  {
                                     "          <h6>[Debating]</h6>\n" + 
                                     "          <ul>\n" + 
                                     "            <li>2017 Worlds University Debate Championship Open Partial Double Octo-finalist</li>\n" + 
-                                    "            <li>2017 KIDA Open Grand Finalist / 2nd best speaker</li>\n" + 
-                                    "            <li>2016 Korea Women’s Debate Open Champion / 2nd Best Speaker</li>\n" + 
-                                    "            <li>2016 Northeast Asian Open Grand Finalist / 4th Best Speaker</li>\n" + 
-                                    "            <li>2016 Fall KIDA National Championship Grand Finalist / 3rd Best Speaker</li>\n" + 
+                                    "            <li>2017 KIDA Open Grand Finalist / 2<sup>nd</sup> best speaker</li>\n" + 
+                                    "            <li>2016 Korea Women’s Debate Open Champion / 2<sup>nd</sup> Best Speaker</li>\n" + 
+                                    "            <li>2016 Northeast Asian Open Grand Finalist / 4<sup>th</sup> Best Speaker</li>\n" + 
+                                    "            <li>2016 Fall KIDA National Championship Grand Finalist / 3<sup>rd</sup> Best Speaker</li>\n" + 
                                     "            <li>2016 Kyushu Cup Semifinalist</li>\n" + 
                                     "            <li>2015 Korea Debate Open Champion</li>\n" + 
                                     "            <li>2015 Australasians EFL Grand Finalist</li>\n" + 
@@ -550,9 +552,9 @@ function extractHtmlFromDesktopPage()  {
                                     "          </ul>\n" +  
                                     "          <h6>[MUN and Speaking]</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>5th Gwangju Youth English Debate Championship Breaking Adjudicator</li>\n" + 
-                                    "            <li>5th ESU Korea English Speaking Competition 4</li>\n" + 
-                                    "            <li>12th IYF English Speaking Competition 3</li>\n" + 
+                                    "            <li>5<sup>th</sup> Gwangju Youth English Debate Championship Breaking Adjudicator</li>\n" + 
+                                    "            <li>5<sup>th</sup> ESU Korea English Speaking Competition 4</li>\n" + 
+                                    "            <li>12<sup>th</sup> IYF English Speaking Competition 3</li>\n" + 
                                     "            <li>Model United Nations Climate Change Conference Korea Environment Corporation CEO Award</li>\n" + 
                                     "          </ul>\n";
                 webpage_index = 6;
@@ -599,46 +601,147 @@ function extractHtmlFromDesktopPage()  {
 
               // Runs if the loading page is the 'Faculty' page for Kim Hyerin.
               case 8:
-              extracted_html[0] = "          <h4>Lee Hanyo</h4>\n" + 
-                                  "          <span>[정규토론(DEBATE)]</span>\n" + 
-                                  "          <span>작성자</span>\n";
+                extracted_html[0] = "          <h4>Lee Hanyo</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
-              extracted_html[1] = "            Hankuk Academy of Foreign Studies 한국외국어대학교 부속 용인외국어고등학교\n" + 
-                                  "            <br/>\n" + 
-                                  "            Seoul National University 서울대학교\n";
+                extracted_html[1] = "            Hankuk Academy of Foreign Studies 한국외국어대학교 부속 용인외국어고등학교\n" + 
+                                    "            <br/>\n" + 
+                                    "            Seoul National University 서울대학교\n";
 
-              extracted_html[2] = "          <ul>\n" + 
-                                  "            <li>2009 KYUMUN Outstanding Delegate | Delegate, ECOSOC</li>\n" + 
-                                  "            <li>2009 GMUN Best Delegate | Delegate, ECOSOC</li>\n" + 
-                                  "            <li>2009 KMCI 1st Speaker | Suspect, U.S. Marshalls II</li>\n" + 
-                                  "            <li>2009 MUNOS Outstanding Delegate | Delegate, SC</li>\n" + 
-                                  "            <li>2009 SEOMUN Delegate, HR Council</li>\n" + 
-                                  "            <li>2009 THIMUN - Singapore Delegate, ECOSOC</li>\n" + 
-                                  "            <li>2010 Dale Carnegie Presentation Conference 1st Place - Gyeonggi Governor Recognition</li>\n" +
-                                  "          </ul>\n" + 
-                                  "          <ul>\n" + 
-                                  "            <li>2012 11th KIDA National Championship Rookie Champion</li>\n" + 
-                                  "            <li>2013 12th KIDA National Championship Semi-Finalist</li>\n" + 
-                                  "            <li>2013 Sogang BP Open Grand-Finalist</li>\n" + 
-                                  "            <li>2013 Sogang IV Semi-Finalist | 2nd Best Speaker</li>\n" + 
-                                  "            <li>2014 13th KIDA National Championship Champion | G-F Best Speaker</li>\n" + 
-                                  "            <li>2016 18th KIDA National Championship Grand-Finalist | 6th Best Speaker</li>\n"
-                                  "          </ul>\n" + 
-                                  "          <ul>\n" + 
-                                  "            <li>2016 CUDS Open Invited Adjudicator</li>\n" + 
-                                  "            <li>2016 19th KIDA National Championship Deputy Chief Adjudicator</li>\n" + 
-                                  "          </ul>\n" + 
-                                  "          <ul>\n" + 
-                                  "            <li>2013 4th Gwangju Youth Debating Championship Breaking Adjudicator | 2nd Best Adjudicator</li>\n" + 
-                                  "            <li>2014 1st Cornell-Yonsei Debate Invitational Breaking Adjudicator | 2nd Best Adjudicator</li>\n" + 
-                                  "            <li>2016 2nd YTN-HUFS ES English Debating Championship Breaking Adjudicator</li>\n" +
-                                  "            <li>2016 7th YTN-HUFS MS English Debating Championship Breaking Adjudicator</li>\n" + 
-                                  "            <li>2016 8th YTN-HUFS HS English Debating Championship Breaking Adjudicator | 3rd Best Adjudicator</li>\n" + 
-                                  "            <li>2016 2nd MK Economy English Debate Tournament Breaking Adjudicator</li>\n" +
-                                  "          </ul>\n";
+                extracted_html[2] = "          <ul>\n" + 
+                                    "            <li>2009 KYUMUN Outstanding Delegate | Delegate, ECOSOC</li>\n" + 
+                                    "            <li>2009 GMUN Best Delegate | Delegate, ECOSOC</li>\n" + 
+                                    "            <li>2009 KMCI 1<sup>st</sup> Speaker | Suspect, U.S. Marshalls II</li>\n" + 
+                                    "            <li>2009 MUNOS Outstanding Delegate | Delegate, SC</li>\n" + 
+                                    "            <li>2009 SEOMUN Delegate, HR Council</li>\n" + 
+                                    "            <li>2009 THIMUN - Singapore Delegate, ECOSOC</li>\n" + 
+                                    "            <li>2010 Dale Carnegie Presentation Conference 1st Place - Gyeonggi Governor Recognition</li>\n" +
+                                    "          </ul>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2012 11<sup>th</sup> KIDA National Championship Rookie Champion</li>\n" + 
+                                    "            <li>2013 12<sup>th</sup> KIDA National Championship Semi-Finalist</li>\n" + 
+                                    "            <li>2013 Sogang BP Open Grand-Finalist</li>\n" + 
+                                    "            <li>2013 Sogang IV Semi-Finalist | 2<sup>nd</sup> Best Speaker</li>\n" + 
+                                    "            <li>2014 13<sup>th</sup> KIDA National Championship Champion | G-F Best Speaker</li>\n" + 
+                                    "            <li>2016 18<sup>th</sup> KIDA National Championship Grand-Finalist | 6<sup>th</sup> Best Speaker</li>\n"
+                                    "          </ul>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2016 CUDS Open Invited Adjudicator</li>\n" + 
+                                    "            <li>2016 19<sup>th</sup> KIDA National Championship Deputy Chief Adjudicator</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2013 4<sup>th</sup> Gwangju Youth Debating Championship Breaking Adjudicator | 2<sup>nd</sup> Best Adjudicator</li>\n" + 
+                                    "            <li>2014 1<sup>st</sup> Cornell-Yonsei Debate Invitational Breaking Adjudicator | 2<sup>nd</sup> Best Adjudicator</li>\n" + 
+                                    "            <li>2016 2<sup>nd</sup> YTN-HUFS ES English Debating Championship Breaking Adjudicator</li>\n" +
+                                    "            <li>2016 7<sup>th</sup> YTN-HUFS MS English Debating Championship Breaking Adjudicator</li>\n" + 
+                                    "            <li>2016 8<sup>th</sup> YTN-HUFS HS English Debating Championship Breaking Adjudicator | 3<sup>rd</sup> Best Adjudicator</li>\n" + 
+                                    "            <li>2016 2<sup>nd</sup> MK Economy English Debate Tournament Breaking Adjudicator</li>\n" +
+                                    "          </ul>\n";
 
-              webpage_index = 8;
-            break;
+                webpage_index = 8;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Park Sungryul.
+              case 9:
+                extracted_html[0] = "          <h4>Park Sungryul</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>관리자</span>\n";
+
+                extracted_html[1] = "            In Seoul National University Law School\n" + 
+                                    "            <br/>\n" + 
+                                    "            Yonsei University\n" + 
+                                    "            <br/>\n" + 
+                                    "            B.A. Political Science and International Relations / Economics\n";
+
+                extracted_html[2] = "          <h6>Coaching</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Invited Lecturer, Japan Parliamentary Debate Union, 2016 Spring Seminar</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Competition</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Champion, 2013 4<sup>th</sup> Hong Kong Debate Open, 10<sup>th</sup> Best Speaker and Grand Finals Best Speaker</li>\n" + 
+                                    "            <li>Champion, 2015 Fall KNC, Best Speaker</li>\n" + 
+                                    "            <li>Champion, 2015 Korea Debate Open, Best Speaker</li>\n" + 
+                                    "            <li>ESL-Semifinalist, 2013 Worlds University Debate Championship</li>\n" + 
+                                    "            <li>Grand-Finalist, 2013 4<sup>th</sup></li>\n" + 
+                                    "            <li>Grand-Finalist, 2014 5<sup>th</sup> East Asian Intervarsity Invitational</li>\n" + 
+                                    "            <li>Grand-Finalist, 2013 Northeast Asian Open, 3<sup>rd</sup> Best Speaker</li>\n" + 
+                                    "            <li>Grand-Finalist, 2014 1<sup>st</sup> SNUDA IV, Best Speaker</li>\n" + 
+                                    "            <li>Grand-Finalist, 2015 2<sup>nd</sup> SNUDA IV, Best Speaker</li>\n" + 
+                                    "            <li>Grand-Finalist, 2017 KIDA Pro-Am</li>\n" + 
+                                    "            <li>Quarter-Finalist, 2013 Asian BP</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Adjudication</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Chief Adjudicator, 2014 1<sup>st</sup> Cornell-Yonsei High School Invitational</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2016 Kyushu Cup</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2016 YUU-HYDS Open</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2015 Gwangju-Youth English Debate Championships</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2015 Sogang Open</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2014 Korea Debate Open</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2014 Northeast Asian Open</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2014 5<sup>th</sup> Hong Kong Debate Open</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2014 China BP</li>\n" + 
+                                    "            <li>Deputy Chief Adjudicator, 2013 Winter KIDA National Championship</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 9;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Abhisheka Dubey.
+              case 10:
+                extracted_html[0] = "          <h4>Abhisheka Dubey</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            RSIS, Singapore\n" + 
+                                    "            <br/>\n" + 
+                                    "            M.Sc. International Political\n" + 
+                                    "            <br/>\n" + 
+                                    "            Economy\n";
+
+                extracted_html[2] = "          <h6>Coaching</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2016 Workshop by Debate Development Initiative, Singapore</li>\n" + 
+                                    "            <li>2014-2015 Show &amp; Tell Academy</li>\n" + 
+                                    "            <li>2015 WFUNA Youth Camp</li>\n" + 
+                                    "            <li>2014 5<sup>th</sup> Global Leadership Workshop by Debate for All</li>\n" + 
+                                    "            <li>2013-2014 Samyuk Middle School (Debate for All)</li>\n" +
+                                    "          </ul>\n" + 
+                                    "          <h6>Debate</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2015 Korea Debate Open, Grand Finalist &amp; 2<sup>nd</sup> Best Speaker</li>\n" + 
+                                    "            <li>2015 17<sup>th</sup> KIDA National Championship, Grand Finalist</li>\n" + 
+                                    "            <li>2015 Sogang IV, Quarter Finalist</li>\n" + 
+                                    "            <li>2015 7<sup>th</sup> World Water Forum: Asian Sanitations Solutions Debate, Invited Speaker</li>\n" + 
+                                    "            <li>2015 CUDS Open, Semi-finalist &amp; 7<sup>th</sup> Best Speaker</li>\n" + 
+                                    "            <li>2014 Northeast Asian Open, Semi-finalist &amp; 6<sup>th</sup> Best Speaker</li>\n" + 
+                                    "            <li>2014 China BP, Quarter-finalist &amp; 4<sup>th</sup> Best Speaker</li>\n" + 
+                                    "            <li>2014 SNUDA IV, Semi-finalist &amp; Best Speaker</li>\n" + 
+                                    "            <li>14<sup>th</sup> KIDA National Championship, Champion &amp; Best Speaker</li>\n" + 
+                                    "            <li>2013 Sogang BP, Grand Finalist</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Adjudication</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2016 Northeast Asian Open, Grand Finals Judge &amp; 4<sup>th</sup> Best Judge</li>\n" + 
+                                    "            <li>2016 Asian BP, Adjudication Core</li>\n" + 
+                                    "            <li>2016 Yale-NUS pre-ABP, Adjudication Core</li>\n" + 
+                                    "            <li>2016 China BP, Invited &amp; Grand Finals Judge</li>\n" + 
+                                    "            <li>2016 YTN-HUFS Elementary School Division, Third Best Adjudicator</li>\n" + 
+                                    "            <li>18<sup>th</sup> KIDA National Championship, Adjudication Core</li>\n" + 
+                                    "            <li>2016 Malaysia Debate Open, Adjudication Core</li>\n" + 
+                                    "            <li>2015 Northeast Asian Open, Adjudication Core</li>\n" + 
+                                    "            <li>2015 Singapore Debate Open, Invited &amp; Grand Finals Judge</li>\n" + 
+                                    "            <li>2015 Hong Kong Debate Open, Invited &amp; Grand Finals Judge</li>\n" + 
+                                    "            <li>2015 Asian BP, Invited &amp; Semi-finals Chair</li>\n" + 
+                                    "            <li>2015 Australasian Debating Championship, Invited &amp; EFL Grand Finals Judge</li>\n" + 
+                                    "            <li>2014 KIDA IV, Invited &amp; Grand Finals Judge</li>\n" + 
+                                    "            <li>2013 13<sup>th</sup> KIDA National Championship, Grand Finals Judge &amp; Fourth Best Adjudicator</li>\n" +
+                                    "          </ul>\n";
+
+                webpage_index = 10;
+              break;
             }
           }
         }
@@ -724,8 +827,18 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the Faculty page for Lee Hanyo.
     case 8: 
-    title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
-  break;
+      title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
+    break;
+    
+    // Runs if the loading page is the Faculty page for Park Sungryul.
+    case 9: 
+      title_html = title_html + "강사소개 (FACULTY) -  Park Sungryul";
+    break;
+
+    // Runs if the loading page is the Faculty page for Abhisheka Dubey.
+    case 9: 
+      title_html = title_html + "강사소개 (FACULTY) -  Abhisheka Dubey";
+    break;
   } // END of SWITCH statement
 
   jq("head").html(
@@ -914,7 +1027,7 @@ function renderSectionMenu(webpage_index) {
   
     menu_selector = "#nav-section_menu";
 // console.log("webpage_index = " + webpage_index);
-    if (webpage_index < 8)  {
+    if (webpage_index < 22)  {
       jq(menu_selector).html(
         "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 

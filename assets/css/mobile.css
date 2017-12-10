@@ -11,6 +11,10 @@ header {
   margin: 1em;
 }
 
+.header-index {
+  height: 11em !important;
+}
+
 header, 
 nav > section > div span, 
 #nav-main_menu > section > div span, 
@@ -59,11 +63,13 @@ header img {
 }
 
 .article-faculty-member-page a {
-  width: 3em !important;
-  height: 0.1em !important;
+  width: 281px !important;
+  height: 8px !important;
   margin: 1em auto 0 auto;
+  padding: 26px !important;
   display: block;
-  font-size: 2em;
+  font-size: 32px;
+  line-height: 10px !important;
 }
 
 #header-links a, 
@@ -91,6 +97,10 @@ nav > section > div > a:active,
   color: #fff;
 }
 
+.article-faculty-info ul li a:active {
+  color: #e76200;
+}
+
 #header-links a, 
 nav > section > div span, 
 #nav-main_menu > section > div span, 
@@ -106,18 +116,13 @@ nav > section > div span,
   color: #485081;
 }
 
-.article-faculty-info ul li a:active {
-  color: #e76200;
-}
-
-
 nav {
-  width: 100%;
-  margin: 1em;
+  width: 97%;
+  margin: 4em 1em 1em 1em;
 }
 
 #nav-sub_menu {
-  width: 59em;
+  width: 98.5%;
 }
 
 #nav-main_menu {
@@ -127,13 +132,28 @@ nav {
 nav > section > div, 
 #nav-main_menu > section > div {
   width: 13.7em;
-  display: inline-block;
-  margin: 0 0.25em;
-  vertical-align: top;
+  margin: 0 0.57em;
+  display: block;
+  float: left;
+}
+
+nav > section, 
+#nav-main_menu > section {
+  width: 100%;
+  height: 13.25em;
+  margin: 3em auto;
+}
+
+nav > #nav-row_1 {
+  margin-top: 0;
 }
 
 #nav-main_menu > section {
   margin-top: 3em;
+}
+
+#nav-main_menu a {
+  background-position-y: 2px;
 }
 
 nav > section > div > a, 
@@ -146,13 +166,14 @@ nav > section > div > a,
 
 #nav-main_menu, 
 #nav-section_menu {
-  width: 59em;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: none;
 }
 
 #link-gpa a {
-  background-position-x: 32px;
+  background-position-x: 30px;
 }
 
 #link-gpa a:active {
@@ -160,19 +181,19 @@ nav > section > div > a,
 }
 
 #link-english a {
-  background-position-x: -105px;
+  background-position-x: -102px;
 }
 
 #link-camps a {
-  background-position-x: -242px;
+  background-position-x: -241px;
 }
 
 #link-lessons a {
-  background-position-x: -374px;
+  background-position-x: -373px;
 }
 
 #link-lessons a:active {
-  background-position-x: -2899px;
+  background-position-x: -2898px;
 }
 
 #link-awards a {
@@ -196,11 +217,11 @@ nav > section > div > a,
 }
 
 #link-faculty a {
-  background-position-x: -1130px;
+  background-position-x: -1133px;
 }
 
 #link-apply_faculty a {
-  background-position-x: -1272px;
+  background-position-x: -1274px;
 }
 
 #link-business a {
@@ -326,8 +347,27 @@ footer > #footer-border {
 /* PAGE: Faculty */
 .article-faculty-row {
   width: 100%;
-  height: 21em;
   margin: 0 auto 2em auto;  
+}
+
+#article-faculty-row_1, 
+#article-faculty-row_5  {
+  height: 23em;
+}
+
+#article-faculty-row_2 {
+  height: 25em;
+}
+
+#article-faculty-row_3, 
+#article-faculty-row_4  {
+  height: 26em;
+}
+
+#article-faculty-row_6, 
+#article-faculty-row_7, 
+#article-faculty-row_8  {
+  height: 22em;
 }
 
 .article-faculty-member {
@@ -370,21 +410,21 @@ footer > #footer-border {
 }
 
 .article-faculty-member-page {
-  width: 95% !important;
+  width: 97% !important;
   padding: 1em;
 }
 
 .article-faculty-member-page h4 {
   margin-bottom: 0.25em;
+  font-size: 42px;
   text-align: center;
 }
-
 
 .article-faculty-member-page span, 
 .article-faculty-member-page h7, 
 .article-faculty-member-page h6, 
 .article-faculty-member-page p {
-  font-size: 15px;
+  font-size: 32px;
   text-align: center;
 }
 
@@ -420,7 +460,7 @@ footer > #footer-border {
 }
 
 .article-faculty-member-page ul li {
-  font-size: 15px;
+  font-size: 32px;
 }
 
 
@@ -463,7 +503,8 @@ li {
 
 article > table + table > tbody > tr:nth-child(2) > td:nth-child(2),
 article > table + table > tbody > tr:nth-child(3) > td:nth-child(2), 
-article > table + table > tbody > tr:nth-child(4) > td:nth-child(2) {
+article > table + table > tbody > tr:nth-child(4) > td:nth-child(2), 
+.article-faculty-member-page {
   width: 75%;
   height: auto;
   min-height: 1px;
@@ -520,7 +561,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2) {
   }
 
   #nav-main_menu > section > div > a {
-    width: 4.5em;
-    height: 4.5em;
+    width: 4.8em;
+    height: 4.8em;
   }
 }
