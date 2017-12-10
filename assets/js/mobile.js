@@ -71,6 +71,255 @@ function extractHtmlFromDesktopPage()  {
                 setupFinalContent(extracted_html, webpage_index);
               break;
 
+              // Runs if the loading page is the 'Faculty' page.
+              case 1: 
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>강사소개 (FACULTY)</h2>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div id=\"article-content\">\n";
+
+                extracted_html[1] = "          <div class=\"article-faculty-row\" id=\article-faculty-row_1\">\n";
+
+                extracted_html[2] = "            <div class=\"article-faculty-member\" id=\"faculty-member-park_sooyoung\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771667908700.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/park_sooyoung.htm\">Park Sooyoung</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Yonsei University Humanities, Arts and Social Science Justice and Civil Leadership President of...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" + 
+                                    "            </div>\n";
+
+                extracted_html[3] = "            <div class=\"article-faculty-member\" id=\"faculty-member-kim_hyerin\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771057387850.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/kim_hyerin.htm\">Kim Hyerin</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Ewha Womans University- Major in Bachelor of International Studies; concentration in Law and Diplo...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[4] = "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_2\">\n";
+                
+                extracted_html[5] = "            <div class=\"article-faculty-member\" id=\"faculty-member-lee_hanyo\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771049407960.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/lee_hanyo.htm\">Lee Hanho</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Hankuk Academy of Foreign Studies 한국외국어대학교 부속 용인외국어고등학교Seoul National Universit...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[6] = "            <div class=\"article-faculty-member\" id=\"faculty-member-park_sungryul\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771041038790.jpg\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/park_sungryul.htm\">Park Sungryul</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  	in Seoul National University Law School Yonsei University B.A. Political Science and Internatio...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[7] = "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_3\">\n";
+
+                extracted_html[8] = "            <div class=\"article-faculty-member\" id=\"faculty-member-abhisheka_dubey\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771024769050.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/abhisheka_dubey.htm\">Abhisheka Dubey</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  RSIS, Singapore M.Sc. International Political\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[9] = "            <div class=\"article-faculty-member\" id=\"faculty-member-kevin_han\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_144810310775620.jpeg\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/kevin_han.htm\">Kevin Han</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE) &amp; 모의유엔(MUN)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  	Education: Osnabruck University (Germany) - Business Management and Social Sciences Kyunghee Uni...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[10]= "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_4\">\n";
+
+                extracted_html[11]= "            <div class=\"article-faculty-member\" id=\"faculty-member-reece_randall\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150313760797340.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/reece_randall.htm\">Reece Randall</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE) &amp; 정규영어(ENGLISH)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Reece Randall University of Cape Town | 2017 Teaching English as a Foreign Language (TEFL) Vars...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[12]= "            <div class=\"article-faculty-member\" id=\"faculty-member-lee_eunhye\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086887973460.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/lee_eunhye.htm\">Lee Eunhye</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE) &amp; 모의유엔(MUN)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  	KDI School of Public Policy and Management Candidate for Master of Public Policy College of In...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[13]= "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_5\">\n";
+
+                extracted_html[14]= "            <div class=\"article-faculty-member\" id=\"faculty-member-you_ge_heon\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086687233400.jpg\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/you_ge_heon.htm\">You Ge Heon</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Yonsei University UIC Political Science &amp; International Relations[심사위원 경력]2016년...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[15]= "            <div class=\"article-faculty-member\" id=\"faculty-member-kim_gyumin\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086514026660.jpg\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/kim_gyumin.htm\">Kim Gyumin</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  	Yonsei University UIC International Studies&nbsp;&nbsp;&nbsp;- Korean Minjok Leadership Aca...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[16]= "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_6\">\n";
+
+                extracted_html[17]= "            <div class=\"article-faculty-member\" id=\"faculty-member-brian_moon\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_147279951758880.bmp\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/brian_moon.htm\">Brian Moon</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Hanyang University Division of International Studies Division of Chemical Engineer...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[18]= "            <div class=\"article-faculty-member\" id=\"faculty-member-chan_keun_kim\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_146857135048140.jpg\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/chan_keun_kim.htm\">Chan Keun Kim</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  	고려대학교 경영학과 1. Highschool Level 2010 NSDC Champion 2010 KHSDC Gran...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[19]= "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_7\">\n";
+
+                extracted_html[20]= "            <div class=\"article-faculty-member\" id=\"faculty-member-joonpyo_sohn\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_146857124556520.jpg\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/joonpyo_sohn.htm\">Joonpyo Sohn</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  Brown University A.B.: Economics &amp; Applied Math Daewon Foreign Language HS English-...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[21]= "            <div class=\"article-faculty-member\" id=\"faculty-member-matthew_owen\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_144490127135610.JPG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/matthew_owen.htm\">Matthew Owen</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규영어(ENGLISH)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  	경력 l Language Institutes &amp; Academies 2011-2015: S...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+                extracted_html[22]= "          </div>\n" + 
+                                    "          <div class=\"article-faculty-row\" id=\article-faculty-row_8\">\n";
+
+                extracted_html[23]= "            <div class=\"article-faculty-member\" id=\"faculty-member-joonpyo_sohn\">\n" + 
+                                    "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_140273568736030.PNG\" width=\"78\" height=\"107\" />\n" + 
+                                    "              <div class=\"article-faculty-info\">\n" + 
+                                    "                <ul>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/joonpyo_sohn.htm\">Roger Hatridge</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
+                                    "                </ul>\n" + 
+                                    "                <p>\n" + 
+                                    "                  2012 l   Professor at Sogang University; teaching &ldquo;Humanities Debate&rdquo;...\n" + 
+                                    "                </p>\n" + 
+                                    "              </div>\n" +
+                                    "            </div>\n";
+
+
+                extracted_html[24]= "          </div>\n" + 
+                                    "        </div>\n";
+
+                webpage_index = 1;
+
+
+              break;
+
               case 5: 
                 // Pass on the HTML of the Section header and map.
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
@@ -274,11 +523,11 @@ function extractHtmlFromDesktopPage()  {
         }
       );
 
-      extracted_html.forEach(
+      /* extracted_html.forEach(
         function (data, index) {
           console.log("data[" + index + " = " + data);
         }
-      );
+      ); */
       // console.log("webpage_index = " + webpage_index);
       setupFinalContent(extracted_html, webpage_index);
 
@@ -346,6 +595,11 @@ function renderHeader(webpage_index) {
       title_html = title_html + "인사말(HISTORY)";
     break;
 
+    // Runs if the loading page is the Faculty page.
+    case 1: 
+      title_html = title_html + "강사소개 (FACULTY)";
+    break;
+
     // Runs if the loading page is the Location page.
     case 5:
       title_html = title_html + "치안내 (LOCATION)";
@@ -373,20 +627,7 @@ function renderHeader(webpage_index) {
     "    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n" + 
     "\n" +
     "    <!-- JavaScript script which handles general layout for 'index.htm'. -->\n" + 
-    "    <script src=\"/la/assets/js/mobile.js\"></script>\n"/*  + 
-    "\n" + 
-    "    <style>\n" + 
-    "      .screen_out {display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}\n" + 
-    "      .wrap_content {overflow:hidden;height:330px}\n" + 
-    "      .wrap_map {width:75%;height:500px;position:relative;margin:0 auto;}\n" + 
-    "      .wrap_roadview {width:50%;height:300px;float:left;position:relative;display:none;}\n" + 
-    "      .wrap_button {position:absolute;left:15px;top:12px;z-index:2}\n" + 
-    "      .btn_comm {float:left;display:block;width:70px;height:27px;background:url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/sample_button_control.png) no-repeat}\n" + 
-    "      .btn_linkMap {background-position:0 0;}\n" + 
-    "      .btn_resetMap {background-position:-69px 0;}\n" + 
-    "      .btn_linkRoadview {background-position:0 0;}\n" + 
-    "      .btn_resetRoadview {background-position:-69px 0;}\n" + 
-    "    </style>\n" */
+    "    <script src=\"/la/assets/js/mobile.js\"></script>\n"
   );
   
 } // END of FUNCTIION 'renderHeader'\
@@ -506,11 +747,11 @@ function renderMenus(webpage_index) {
     "            <span>Apply (Students)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-faculty\">\n" + 
-    "            <a href=\"#faculty\" title=\"Faculty\"></a>\n" + 
+    "            <a href=\"/la/assets/html/guide/faculty.htm\" title=\"Faculty\"></a>\n" + 
     "            <span>Faculty</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-apply_faculty\">\n" + 
-    "            <a href=\"#apply_faculty\" title=\"Apply (Faculty)\"></a>\n" + 
+    "            <a href=\"/la/assets/html/guide/faculty.htm\" title=\"Apply (Faculty)\"></a>\n" + 
     "            <span>Apply (Faculty)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-business\">\n" + 
@@ -550,7 +791,7 @@ function renderSectionMenu(webpage_index) {
     var menu_selector = new String();
   
     menu_selector = "#nav-section_menu";
-console.log("webpage_index = " + webpage_index);
+// console.log("webpage_index = " + webpage_index);
     if (webpage_index < 6)  {
       jq(menu_selector).html(
         "        <a href=\"history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
@@ -597,6 +838,35 @@ function renderArticle(extracted_html, webpage_index) {
     // Runs if the loading page is the History page.
     case 0:
       jq("article").html(extracted_html[0]);
+    break;
+
+    // Runs if the loading page is the Faculty page.
+    case 1:
+      jq("article").html(extracted_html[0] + 
+                         extracted_html[1] + 
+                         extracted_html[2] + 
+                         extracted_html[3] + 
+                         extracted_html[4] + 
+                         extracted_html[5] + 
+                         extracted_html[6] + 
+                         extracted_html[7] + 
+                         extracted_html[8] + 
+                         extracted_html[9] + 
+                         extracted_html[10]+ 
+                         extracted_html[11]+ 
+                         extracted_html[12]+ 
+                         extracted_html[13]+ 
+                         extracted_html[14]+ 
+                         extracted_html[15]+ 
+                         extracted_html[16]+ 
+                         extracted_html[17]+ 
+                         extracted_html[18]+ 
+                         extracted_html[19]+ 
+                         extracted_html[20]+ 
+                         extracted_html[21]+ 
+                         extracted_html[22]+ 
+                         extracted_html[23]+ 
+                         extracted_html[24]);
     break;
     
     // Runs if the loading page is the Location page.
