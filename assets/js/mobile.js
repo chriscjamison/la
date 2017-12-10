@@ -42,7 +42,8 @@ function extractHtmlFromDesktopPage()  {
         'kim_hyerin.htm', 
         'lee_hanyo.htm', 
         'park_sungryul.htm', 
-        'abhisheka_dubey.htm'
+        'abhisheka_dubey.htm', 
+        'kevin_han.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -742,6 +743,71 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 10;
               break;
+
+              // Runs if the loading page is the 'Faculty' page for Kevin Han.
+              case 11:
+                extracted_html[0] = "          <h4>Kevin Han</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE) &amp; 모의유엔(MUN)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            Osnabruck University (Germany) - Business Management and Social Sciences\n" + 
+                                    "            <br/>\n" + 
+                                    "            Kyunghee University (Korea) - International Studies\n" + 
+                                    "            <br/>\n" + 
+                                    "            Myungji High School (Korea)\n" + 
+                                    "            <br/>\n" + 
+                                    "            Varndean Secondary School (United Kingdom)\n";
+
+                extracted_html[2] = "          <h6>Experience</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Leaders Academy (2011~) - Instructor</li>\n" + 
+                                    "            <li>Kyunghee International Model United Nations (2015) - Head Chair</li>\n" + 
+                                    "            <li>Chungshim International Academy (2012) - Instructor</li>\n" + 
+                                    "            <li>Global Classrooms MUN: Seoul (2012) - Head Chair</li>\n" + 
+                                    "            <li>Gwangju English Debate Competition (2011) - Adjudicator</li>\n" + 
+                                    "            <li>Hankuk Academy of Foreign Studies (2011) - Debate Instructor</li>\n" + 
+                                    "            <li>Kwonsun Highschool (2011) - Instructor</li>\n" + 
+                                    "            <li>UNESCO, Global Seminar (2011) - Instructor and Chair</li>\n" + 
+                                    "            <li>Kyunghee University Workshop (2011) - Instructor</li>\n" + 
+                                    "            <li>Global Classrooms MUN: Seoul (2011) - Chair</li>\n" + 
+                                    "            <li>HUFS Debate Competition (2011) - Instructor and Adjudicator</li>\n" +
+                                    "          </ul>\n" + 
+                                    "          <h6>Awards</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Kyunghee Summit G20 (2011) - First Place</li>\n" + 
+                                    "            <li>2015 17<sup>th</sup> KIDA National Championship, Grand Finalist</li>\n" + 
+                                    "            <li>Kyunghee International MUN (2011) - Best Delegate</li>\n" + 
+                                    "            <li>Global Classrooms MUN: New York (2010) - Honorable Mention</li>\n" + 
+                                    "            <li>Yonsei University MUN (2010) - Best Delegate</li>\n" + 
+                                    "            <li>Yonsei University MCOP (2009) - Best Delegate</li>\n" + 
+                                    "            <li>Global Classrooms MUN: Seoul (2009) - Best Delegate</li>\n" + 
+                                    "            <li>Yonsei University Leadership Debate (2009) - First Place</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Event Coaching</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Harvard University (HMUN)</li>\n" + 
+                                    "            <li>Yale University (YMUN)</li>\n" + 
+                                    "            <li>Global Classrooms (GCMUN)</li>\n" +
+                                    "            <li>Brown University (BMUN)</li>\n" + 
+                                    "            <li>YTN Debate Championship</li>\n" + 
+                                    "            <li>HUFS Debate Competition</li>\n" + 
+                                    "            <li>HAFS Debate Competition</li>\n" + 
+                                    "            <li>Seoul National University (SNUMUN)</li>\n" + 
+                                    "            <li>Korea University (KMUN)</li>\n" + 
+                                    "            <li>Yonsei University (YMUN)</li>\n" + 
+                                    "            <li>Seoul Summit (MUNOS)</li>\n" + 
+                                    "            <li>Beijing International (BEIMUN)</li>\n" + 
+                                    "            <li>The Hague International (THIMUN)</li>\n" + 
+                                    "            <li>YTN Conference of the Parties (MCOP)</li>\n" + 
+                                    "            <li>Yonsei University (MCOP)</li>\n" + 
+                                    "            <li>Global Education City (GECMUN)</li>\n" + 
+                                    "            <li>Asian Youth Parliament (AYP)</li>\n" + 
+                                    "            <li>World Scholar&#39s Cup (WSC)</li>\n" + 
+                                    "            <li>Global Leaders (GLISMUN), etc.</li>\n" +
+                                    "          </ul>\n";
+
+                webpage_index = 11;
+              break;
             }
           }
         }
@@ -827,7 +893,7 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the Faculty page for Lee Hanyo.
     case 8: 
-      title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
+      title_html = title_html + "강사소개 (FACULTY) - Lee Hanyo";
     break;
     
     // Runs if the loading page is the Faculty page for Park Sungryul.
@@ -836,8 +902,13 @@ function renderHeader(webpage_index) {
     break;
 
     // Runs if the loading page is the Faculty page for Abhisheka Dubey.
-    case 9: 
+    case 10: 
       title_html = title_html + "강사소개 (FACULTY) -  Abhisheka Dubey";
+    break;
+
+    // Runs if the loading page is the Faculty page for Abhisheka Dubey.
+    case 11: 
+      title_html = title_html + "강사소개 (FACULTY) -  Kevin Han";
     break;
   } // END of SWITCH statement
 
