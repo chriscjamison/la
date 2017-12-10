@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,27 +6,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
 <meta name="description" content="">
 <meta name="keywords" content="">
-<link rel="stylesheet" type="text/css" href="/css/common.css">
-<link rel="stylesheet" type="text/css" href="/css/jquery.ui.css">
-<link rel="stylesheet" type="text/css" href="/css/jquery.datepick.css">
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.ui.all.js"></script>
-<script type="text/javascript" src="/js/jquery.form.js"></script>
-<script type="text/javascript" src="/js/jquery.pager.js"></script>
-<script type="text/javascript" src="/js/jquery.datepick.js"></script>
-<script type="text/javascript" src="/js/validate.js"></script>
-<script type="text/javascript" src="/js/common.js"></script>
-<link href="/skin/skin020/css/style.css" rel="stylesheet" type="text/css">
-<script language="javascript" src="/skin/skin020/css/common.js"></script>
-<script type="text/javascript">
-<!--
-// 아래 스크립트는 절대 삭제하시면 안됩니다.
+<link rel="stylesheet" type="text/css" href="http://daechi.leadersacademy.com/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://daechi.leadersacademy.com/css/jquery.ui.css">
+<link rel="stylesheet" type="text/css" href="http://daechi.leadersacademy.com/css/jquery.datepick.css">
+<!-- Source library for jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://daechi.leadersacademy.com/js/validate.js"></script>
+<script type="text/javascript" src="http://daechi.leadersacademy.com/js/common.js"></script>
+<link href="http://daechi.leadersacademy.com/skin/skin020/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="http://daechi.leadersacademy.com/skin/skin020/css/common.js"></script>
 
--->
-</script>
+<!-- JavaScript script which handles general layout for 'index.htm'. -->
+<script src="/la/assets/js/mobile.js"></script>
 </head>
 
-<body  style="background:url('/skin/skin020/images/common/bg_sub.gif');" >
+<body style="opacity: 0;" onload="extractHtmlFromDesktopPage(); return true;">
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
@@ -210,7 +204,7 @@
 					<td height="30"><a href="/about/about1"><img src="/skin/skin020/about/images/smenu01.png" onMouseOver="this.src='/skin/skin020/about/images/smenu01s.png'" onMouseOut="this.src='/skin/skin020/about/images/smenu01.png'" alt=""></a></td>
 				</tr>
 				<tr>
-					<td height="30"><a href="/about/about6"><img src="/skin/skin020/about/images/smenu06.png" onMouseOver="this.src='/skin/skin020/about/images/smenu06s.png'" onMouseOut="this.src='/skin/skin020/about/images/smenu06.png'" alt=""></a></td>
+					<td height="30"><a href="/about/about6"><img src="/skin/skin020/about/images/smenu06s.png"  alt=""></a></td>
 				</tr>
 				<tr>
 					<td height="30"><a href="/about/about2"><img src="/skin/skin020/about/images/smenu02.png" onMouseOver="this.src='/skin/skin020/about/images/smenu02s.png'" onMouseOut="this.src='/skin/skin020/about/images/smenu02.png'" alt=""></a></td>
@@ -222,7 +216,7 @@
 					<td height="30"><a href="/about/about4"><img src="/skin/skin020/about/images/smenu04.png" onMouseOver="this.src='/skin/skin020/about/images/smenu04s.png'" onMouseOut="this.src='/skin/skin020/about/images/smenu04.png'" alt=""></a></td>
 				</tr>
 				<tr>
-					<td height="30"><a href="/about/about5"><img src="/skin/skin020/about/images/smenu05s.png"  alt=""></a></td>
+					<td height="30"><a href="/about/about5"><img src="/skin/skin020/about/images/smenu05.png" onMouseOver="this.src='/skin/skin020/about/images/smenu05s.png'" onMouseOut="this.src='/skin/skin020/about/images/smenu05.png'" alt=""></a></td>
 				</tr>
 			</table>
 		</td>
@@ -240,8 +234,8 @@
 								<td height="16" colspan="2"></td>
 							</tr>
 							<tr>
-								<td width="400" height="30"><img src="/skin/skin020/about/images/title1_5.png" alt="위치안내(LOCATION)"></td>
-								<td width="352" class="category"><img src="/skin/skin020/images/common/ico_home.png" > HOME >  학원안내  >  <strong>위치안내 (LOCATION)</strong></td>
+								<td width="400" height="30"><img src="/skin/skin020/about/images/title1_6.png" alt="강사소개 (Faculty)"></td>
+								<td width="352" class="category"><img src="/skin/skin020/images/common/ico_home.png" > HOME >  학원안내  >  <strong>강사소개 (Faculty)</strong></td>
 							</tr>
 							<tr>
 								<td height="8" colspan="2"></td>
@@ -266,114 +260,291 @@
 								<td style="background:url('/skin/skin020/images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
 <!-- Contents :Start -->
 						<table width="680" border="0" cellspacing="0" cellpadding="0">
-										<tr>
-											<td height="21"></td>
-										</tr>
+							<tr>
+								<td height="500" valign="top" align="left">
 
-										<tr>
-											<td align="center"><!--iframe src="http://dna.daum.net/include/tools/routemap/map_view.php?width=680&height=435&latitude=37.5005210901315&longitude=127.05142446819502&contents=LEADERS+ACADEMY&zoom=4" width="680" height="470" scrolling="no" frameborder="0"></iframe-->
-<!-- * Daum 지도 - 지도퍼가기 -->
-<!-- 1. 지도 노드 -->
-<div id="daumRoughmapContainer1456120725699" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+<!--게시판  모듈 시작-->
+<p id="module_bbs" class='gmodule'><script type="text/javascript" src="/js/check.js"></script>
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="/skin/_modules/blog/teacher/board.css">
+<script type="text/javascript" src="/js/validate.js"></script>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<!-- 게시글 제목출력 -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bbs_tbl_title">
+				<tr>
+					<td>
+<span class="bbs_small">[정규토론(DEBATE)]</span>						Park Sooyoung
+					</td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="100" height="28" align="center"  class="bbs_small_b">작성자</td>
+					<td width="21" align="center"><img src="/skin/_modules/blog/teacher/img/spot_gray.gif" width="1" height="10"></td>
+					<td class="bbs_small_gray">
+						관리자
+						<!-- 이메일 출력시 -->
+					</td>
 
+					<!-- 조회수 출력시 -->
+
+					<!-- 작성일 출력시 -->
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0" height="1"></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- 본문 출력 -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td style="word-wrap:break-word;word-break:break-all;padding:10px;">
+						<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style=&#39FONT-SIZE: 17pt; FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "Times New Roman"&#39><FONT size=3>Yonsei University<?xml:namespace prefix = "o" ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style=&#39FONT-SIZE: 17pt; FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "Times New Roman"&#39><FONT size=3>Humanities, Arts and Social Science<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><SPAN lang=EN-US style=&#39FONT-SIZE: 17pt; FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "Times New Roman"&#39><FONT size=3><STRONG>Justice and Civil Leadership<BR><BR></STRONG><o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>President of Yonsei Underwood Union (2016-2017)<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>[Debating]<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2017 Worlds University Debate Championship Open Partial Double Octo-finalist<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2017 KIDA Open Grand Finalist/2nd best speaker<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2016 Korea Women’s Debate Open Champion/ 2nd Best Speaker <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2016 Northeast Asian Open Grand Finalist/ 4th Best Speaker <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2016 Fall KIDA National Championship Grand Finalist/ 3rd Best Speaker<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2016 Kyushu Cup Semifinalist<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2015 Korea Debate Open Champion<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2015 Australasians EFL Grand Finalist <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2015 Fall KIDA National Championship Grand Finalist <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2015 SNUDA IV Grand Finalist <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>[Judging]<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2017 Australasians Deputy Chief Adjudicator <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2017 Spring KIDA National Championship Chief Adjudicator<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2017 CUDS Open Deputy Chief Adjudicator <o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2017 Cornell-Yonsei Invitational Chief Adjudicator<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>2015 YTN-HUFS Best Adjudicator<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>[MUN and Speaking]<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>5th Gwangju Youth English Debate Championship breaking adjudicator<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39><FONT size=2>5<SUP>th</SUP></FONT><FONT size=2> ESU Korea English Speaking Competition 4</FONT><SUP><FONT size=2>th</FONT></SUP><FONT size=2> place<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><FONT size=2><B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LETTER-SPACING: -0.1pt; LINE-HEIGHT: 107%; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: italic&#39>2013 Yonsei Model United Nations (YMUN) Best Delegate</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "맑은 고딕"; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: "맑은 고딕"&#39><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN></B><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "맑은 고딕"; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: "맑은 고딕"&#39><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal style="WORD-BREAK: keep-all; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; tab-stops: 147.5pt right 523.3pt" align=left><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style=&#39FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "맑은 고딕"; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: "맑은 고딕"&#39><FONT size=2>12<SUP>th</SUP></FONT><FONT size=2> IYF English Speaking Competition 3</FONT><SUP><FONT size=2>rd</FONT></SUP><FONT size=2> place<BR><BR><o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 8pt"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style=&#39FONT-SIZE: 10pt; FONT-FAMILY: "Cambria","serif"; LINE-HEIGHT: 107%; mso-bidi-font-family: "맑은 고딕"; mso-fareast-font-family: "맑은 고딕"; mso-ansi-language: EN-US; mso-fareast-language: KO; mso-bidi-language: AR-SA&#39>Model United Nations Climate Change Conference Korea Environment Corporation CEO Award</SPAN></B></o:p></FONT></SPAN></P><script>function popupView(img_view) {var x = x + 20 ;var y = y + 30 ;var htmlz = "<html><head><title>.......</title><style>body{margin:0;cursor:hand;}</style></head><body scroll=auto onload='width1=document.all.Timage.width;if(width1>1024)width1=1024;height1=document.all.Timage.height;if(height1>768)height1=768;top.window.resizeTo(width1+30,height1+54);' onclick='top.window.close();'><img src='"+img_view+"'  title='..... .....' name='Timage' id='Timage'></body></html>";imagez = window.open('', "image", "width="+ 100 +", height="+ 100 +", top=0,left=0,scrollbars=auto,resizable=1,toolbar=0,menubar=0,location=0,directories=0,status=1");imagez.document.open();imagez.document.write(htmlz);imagez.document.close();}</script>
+
+						<!-- 아이피 출력시 -->
+					</td>
+				</tr>
+			</table>
+
+			<!-- 첨부파일 출력 -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td style="padding-left:25px;" bgcolor="#F5F5F5" height="35">
+						<span class="bbs_small_b">첨부파일</span> : 1개
+						<div class="bbs_small">- <a href="/lib/board/download.php?p=i4ct5oDnXyDfn8%2BuGkebYujpI7aYzSgTtSaLhsuFUcscEemAj2AjbUV2%2BajlFoyV&bbs_seq=487">박수영 사진.JPG</a></div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0" height="1"></td>
+	</tr>
+	<!--추가입력항목이 있는경우-->
+	<tr>
+		<td>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" class="bbs_tbl_form">
+				<colgroup>
+					<col width="130px"/>
+					<col width=""/>
+				</colgroup>
+				<tbody>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+<br>
+
+<!-- 댓글 -->
+<!--// 댓글 -->
+
+<!-- 버튼 출력 -->
+<div class="bbs_button" style="float:left;">
+        <a href="?bbs_id=about6&page=1"><img src="/skin/_modules/blog/teacher/img/btn_list.gif" alt="목록" /></a>
+</div>
+<div class="bbs_button" style="text-align:right;">
+        <a href="?bbs_id=about6&bbs_seq=487&page=1&mode=confirm&act=modify"><img src="/skin/_modules/blog/teacher/img/btn_modify.gif" title="수정"></a>
+        <!-- 답변 권한이 있는 경우에만 답변 버튼 출력 -->
+        <!-- 삭제 권한이 있는 경우에만 삭제 버튼 출력 -->
+</div>
+
+
+<script type="text/javascript">
 <!--
-	2. 설치 스크립트
-	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+jq(document).ready(function() {
+	loadComment();
+});
 
-<!-- 3. 실행 스크립트 -->
-<script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1456120725699",
-		"key" : "8saf",
-		"mapWidth" : "680",
-		"mapHeight" : "400"
-	}).render();
-</script>										
-											
-											</td>
-										</tr>
-										<tr>
-											<td align="center" style="padding:10px 0 10px 0;">
-												<table width="680" border="0" cellspacing="0" cellpadding="0">
-													<tr>
-														<td colspan="2" height="2" bgcolor="#cec2b4"></td>
-													</tr>
-													<tr>
-														<td width="100" class="sj_title">ㆍ주소</td>
-														<td width="580" class="sj_contents">서울 강남구 대치동 908-1 재석빌딩 4층</td>
-													</tr>
-													<tr>
-														<td colspan="2"style="border-bottom:1px dashed #cec2b4;"></td>
-													</tr>
-													<tr>
-														<td class="sj_title">ㆍ전화번호</td>
-														<td class="sj_contents">02-562-9799 (대표전화)</td>
-													</tr>
-													<tr>
-														<td colspan="2"style="border-bottom:1px dashed #cec2b4;"></td>
-													</tr>
-													<tr>
-														<td class="sj_title">ㆍ근무시간</td>
-														<td class="sj_contents">오후 1:00 ~ 오후 10:00 (화~일)</td>
-													 </tr>
-													<tr>
-														<td colspan="2" height="2" bgcolor="#cec2b4"></td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										<tr>
-											<td align="center" style="padding:10px 0 40px 0;">
-												<table width="680" border="0" cellspacing="0" cellpadding="0">
-													<tr>
-														<td colspan="2" height="2" bgcolor="#cec2b4"></td>
-													</tr>
-													<tr>
-														<td width="100" class="sj_title">ㆍADDRESS</td>
-														<td width="580" class="sj_contents">3,4F Jaesuk B/D, Daeching-dong 908-1, Gangnam-gu, Seoul, Korea (135-280)</td>
-													</tr>
-													<tr>
-														<td colspan="2"style="border-bottom:1px dashed #cec2b4;"></td>
-													</tr>
-													<tr>
-														<td class="sj_title">ㆍSUBWAY</td>
-														<td class="sj_contents"><b>Seolleung Station exit two</b><br />
-Step out of exit two and go straight for five minutes.<br />
-At the second stoplight, you will see Leaders Academy across the street and slightly to the left. After you cross the street, walk 20 meters to Leaders Academy. Come to the fourth floor. <br />
-<b>Hanti Station exit one</b><br />
-Step out of exit one and go straight for five minutes until you see Baskin Robbins across the street and Seokwang Eye Glasses shop to your right. Do not cross the street. Go right. <br />
-You will see Leaders Academy in the second building on your right. Come to the fourth floor.<br />
-</td>
-													</tr>
-													<tr>
-														<td colspan="2"style="border-bottom:1px dashed #cec2b4;"></td>
-													</tr>
-													<tr>
-														<td class="sj_title">ㆍBUS</td>
-														<td class="sj_contents"><b>The nearest bus stops and bus numbers:</b><br />
-Dogok Sagori 363<br />
-Dosung Cho Sagori 472, 6211, 3420, 330, 3219, 4312, 4412, 9414, 8443<br />
-Daechi Dong Hanguk Hagwon 4428<br />
-Young dong Apt 8443, 147, 472, 6411, 3420, 3219, 4312, 4412, 9414<br />
-</td>
-													 </tr>
-													<tr>
-														<td colspan="2"style="border-bottom:1px dashed #cec2b4;"></td>
-													</tr>
-													<tr>
-														<td class="sj_title">ㆍTAXI</td>
-														<td class="sj_contents"><b>The nearest bus stops and bus numbers:</b><br />
-Tell the taxi driver “Dosung Elementary Intersection-Dosung Chogyo Sagori -도성초교 사거리</td>
-													 </tr>
-													<tr>
-														<td colspan="2" height="2" bgcolor="#cec2b4"></td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</table>
+//코멘트 리스트 로드
+function loadComment() {
+	jq('#comment_area').load('/lib/board/comment.php',{bbs_id:'about6',bbs_seq:'487'}, function(e) {
+		jq('#loading_container').remove();
+	});	
+}
+
+//코멘트 수정창 세팅
+function setModify(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+
+	jq('input[name=cname]').val(jq('#cname_val_'+seq).html());
+	jq('textarea[name=comment]').val(jq('#comment_val_'+seq).val());
+	jq('input[name=mode]').val('modify');
+	jq('input[name=cseq]').val(seq);
+
+	//폼출력
+	tpl_write.show();
+	tpl_delete.hide();
+	place.append(tpl_write);	
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 삭제창 세팅
+function setDelete(seq, cur) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+	if (cur==1) {
+		jq('#tpl_delete_input').hide();	
+		jq('input[name=delete_passwd]').removeAttr('blankText');
+	}
+	else {
+		jq('#tpl_delete_input').show();	
+		jq('input[name=delete_passwd]').attr('blankText','비밀번호를 입력하세요.');
+		jq('input[name=delete_passwd]').focus();
+	}
+
+	tpl_delete.show();
+	tpl_write.hide();
+	place.append(tpl_delete);		
+	jq('input[name=mode]').val('delete');
+	jq('input[name=cseq]').val(seq);
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 수정,삭제 취소
+function setCancel(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#area_write');
+	var btn = jq('#btn_cancel_'+seq);
+	place.append(tpl_write);
+	tpl_delete.hide();
+	tpl_write.show();
+	btn.hide();
+
+	//데이터 리셋
+	jq('#commentForm').resetForm();
+}
+
+
+//코멘트 저장(등록,수정)처리
+function exeSave() {
+	var frm = jq('#tpl_write [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크	
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'/lib/board/process.php',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+//코멘트삭제처리
+function exeDelete(seq) {
+	var frm = jq('#tpl_delete [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {
+			'delete_passwd':jq('input[name=delete_passwd]').val()
+		}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'/lib/board/process.php',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+
+//-->
+</script></p>
+<!--게시판  모듈 끝-->
+								
+								</td>
+							</tr>
+						</table>
 <!-- Contents :End -->
 								</td>
 							</tr>
@@ -490,7 +661,7 @@ wcs_do(_nasa);
 
 <script type="text/javascript">
 var _skin_ = "skin020";
-var _page_ = "skin020/about/about5.htm";
+var _page_ = "skin020/about/about6.htm";
 </script>
 
 <iframe style="display:none;width:0px;height:0px;" name="hiddenFrame" id="hiddenFrame"></iframe>

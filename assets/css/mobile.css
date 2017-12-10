@@ -17,6 +17,7 @@ nav > section > div span,
 #nav-section_menu a, 
 h2, 
 .article-faculty-member, 
+.article-faculty-member-page,  
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -57,10 +58,19 @@ header img {
   font-size: 2em;
 }
 
+.article-faculty-member-page a {
+  width: 3em !important;
+  height: 0.1em !important;
+  margin: 1em auto 0 auto;
+  display: block;
+  font-size: 2em;
+}
+
 #header-links a, 
 nav > section > div > a, 
 #nav-sub_menu a, 
-#nav-main_menu > section > div > a {
+#nav-main_menu > section > div > a, 
+.article-faculty-member-page a {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
@@ -69,7 +79,8 @@ nav > section > div > a,
 #header-links a:active,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active {
+#nav-main_menu > section > div > a:active, 
+.article-faculty-member-page a:active {
   background-color: #485081;
   border-color: #e76200;
 }
@@ -83,7 +94,8 @@ nav > section > div > a:active,
 #header-links a, 
 nav > section > div span, 
 #nav-main_menu > section > div span, 
-#nav-section_menu a {
+#nav-section_menu a, 
+.article-faculty-member-page a {
   text-align: center;
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
@@ -108,17 +120,20 @@ nav {
   width: 59em;
 }
 
-nav > section, 
-#nav-main_menu > section {
+#nav-main_menu {
   margin-top: 3em;
 }
 
 nav > section > div, 
 #nav-main_menu > section > div {
-  width: 13.8em;
+  width: 13.7em;
   display: inline-block;
   margin: 0 0.25em;
   vertical-align: top;
+}
+
+#nav-main_menu > section {
+  margin-top: 3em;
 }
 
 nav > section > div > a, 
@@ -354,6 +369,61 @@ footer > #footer-border {
   font-size: 25px;
 }
 
+.article-faculty-member-page {
+  width: 95% !important;
+  padding: 1em;
+}
+
+.article-faculty-member-page h4 {
+  margin-bottom: 0.25em;
+  text-align: center;
+}
+
+
+.article-faculty-member-page span, 
+.article-faculty-member-page h7, 
+.article-faculty-member-page h6, 
+.article-faculty-member-page p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.article-faculty-member-page span, 
+.article-faculty-member-page h7,
+.article-faculty-member-page p, 
+.article-faculty-member-page ul li {
+  font-weight: 400;
+}
+
+.article-faculty-member-page span {
+  width: 10em;
+  margin: 0 auto;
+  display: block;
+  font-size: 32px;
+}
+
+.article-faculty-member-page h7 {
+  margin: 1em auto;
+  display: block;
+}
+
+.article-faculty-member-page h6 {
+  margin: 1.5em 0;
+}
+
+.article-faculty-member-page h6:nth-child(1) {
+  margin-top: 1em;
+}
+
+.article-faculty-member-page ul {
+  padding-left: 55px;
+}
+
+.article-faculty-member-page ul li {
+  font-size: 15px;
+}
+
+
 /* PAGE: Location */
 table {
   width: 100%;
@@ -406,17 +476,17 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2) {
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
-    width: 59em;
+    width: 97%;
     height: 16em;
   }
 
   #header-right, 
   #header-search {
-    width: 42.75em;
+    width: 43.5em;
   }
 
   #mobile-search {
-    width: 17em;
+    width: 17.5em;
   }
 
   #header-links, 
@@ -425,8 +495,9 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2) {
   }
 
   #header-links a,  
-  #nav-section_menu a {
-    width: 8.5em;
+  #nav-section_menu a, 
+  .article-faculty-member-page a {
+    width: 8.79em;
     height: 0.25em;
     padding: 0.8em;
     line-height: 0.25em;
@@ -440,7 +511,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2) {
   
   #link-login, 
   #link-main_menu {
-    margin-right: 0.3em;
+    margin-right: 0.2em;
   }
 
   nav > section > div > a {

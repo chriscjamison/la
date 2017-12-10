@@ -37,7 +37,8 @@ function extractHtmlFromDesktopPage()  {
         'rules.htm', 
         'system.htm', 
         'recruiting.htm', 
-        'location.htm'
+        'location.htm', 
+        'park_sooyoung.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -63,12 +64,6 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n";
 
                 webpage_index = 0;
-
-                // console.log("webpage_index = " + webpage_index);
-
-                // Begin the process to display the content of the Desktop site within 
-                // the Mobile template.
-                setupFinalContent(extracted_html, webpage_index);
               break;
 
               // Runs if the loading page is the 'Faculty' page.
@@ -320,6 +315,7 @@ function extractHtmlFromDesktopPage()  {
 
               break;
 
+              // Runs if the page loading is the 'Location' page/
               case 5: 
                 // Pass on the HTML of the Section header and map.
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
@@ -511,34 +507,61 @@ function extractHtmlFromDesktopPage()  {
                                      "        </ul>\n";
 
                 webpage_index = 5;
+              break;
 
-                // Begin the process to display the content of the Desktop site within 
-                // the Mobile template.
-                // setupFinalContent(extracted_html, webpage_index);
-                
-                // console.log("webpage_index = " + webpage_index);
+              // Runs if the loading page is the 'Faculty' page for Park Sooyoung.
+              case 6:
+                extracted_html[0] = "          <h4>Park Sooyoung</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>관리자</span>\n";
+
+                extracted_html[1] = "            Yonsei University\n" + 
+                                    "            <br/>\n" + 
+                                    "            Humanities, Arts and Social Science\n" +
+                                    "            <br/>\n" + 
+                                    "            Justice and Civil Leadership\n";
+
+                extracted_html[2] = "          <h7>President of Yonsei Underwood Union (2016-2017)</h7>\n" + 
+                                    "          <h6>[Debating]</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2017 Worlds University Debate Championship Open Partial Double Octo-finalist</li>\n" + 
+                                    "            <li>2017 KIDA Open Grand Finalist / 2nd best speaker</li>\n" + 
+                                    "            <li>2016 Korea Women’s Debate Open Champion / 2nd Best Speaker</li>\n" + 
+                                    "            <li>2016 Northeast Asian Open Grand Finalist / 4th Best Speaker</li>\n" + 
+                                    "            <li>2016 Fall KIDA National Championship Grand Finalist / 3rd Best Speaker</li>\n" + 
+                                    "            <li>2016 Kyushu Cup Semifinalist</li>\n" + 
+                                    "            <li>2015 Korea Debate Open Champion</li>\n" + 
+                                    "            <li>2015 Australasians EFL Grand Finalist</li>\n" + 
+                                    "            <li>2015 Fall KIDA National Championship Grand Finalist</li>\n" + 
+                                    "            <li>2015 SNUDA IV Grand Finalist</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>[Judging]</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2017 Australasians Deputy Chief Adjudicator</li>\n" + 
+                                    "            <li>2017 Spring KIDA National Championship Chief Adjudicator</li>\n" + 
+                                    "            <li>2017 CUDS Open Deputy Chief Adjudicator</li>\n" + 
+                                    "            <li>2017 Cornell-Yonsei Invitational Chief Adjudicator</li>\n" + 
+                                    "            <li>2015 YTN-HUFS Best Adjudicator</li>\n" + 
+                                    "            <li>2015 Korea Debate Open Champion</li>\n" + 
+                                    "            <li>2015 Australasians EFL Grand Finalist</li>\n" + 
+                                    "            <li>2015 Fall KIDA National Championship Grand Finalist</li>\n" + 
+                                    "          </ul>\n" +  
+                                    "          <h6>[MUN and Speaking]</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>5th Gwangju Youth English Debate Championship Breaking Adjudicator</li>\n" + 
+                                    "            <li>5th ESU Korea English Speaking Competition 4</li>\n" + 
+                                    "            <li>12th IYF English Speaking Competition 3</li>\n" + 
+                                    "            <li>Model United Nations Climate Change Conference Korea Environment Corporation CEO Award</li>\n" + 
+                                    "          </ul>\n";
+                webpage_index = 6;
               break;
             }
           }
         }
       );
 
-      /* extracted_html.forEach(
-        function (data, index) {
-          console.log("data[" + index + " = " + data);
-        }
-      ); */
-      // console.log("webpage_index = " + webpage_index);
+      
       setupFinalContent(extracted_html, webpage_index);
-
-      
-              
-      // Make the content of the Desktop site invisible to the visitor.
-      // jq("body").fadeOut(10);
-
-      
-
-      
     }
   );
 } // END of FUNCTION 'extractHtmlFromDesktopPage'
@@ -603,6 +626,11 @@ function renderHeader(webpage_index) {
     // Runs if the loading page is the Location page.
     case 5:
       title_html = title_html + "치안내 (LOCATION)";
+    break;
+
+    // Runs if the loading page is the Faculty page.
+    case 6: 
+      title_html = title_html + "강사소개 (FACULTY) - Park Sooyoung";
     break;
   } // END of SWITCH statement
 
@@ -792,14 +820,14 @@ function renderSectionMenu(webpage_index) {
   
     menu_selector = "#nav-section_menu";
 // console.log("webpage_index = " + webpage_index);
-    if (webpage_index < 6)  {
+    if (webpage_index < 8)  {
       jq(menu_selector).html(
-        "        <a href=\"history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
-        "        <a href=\"faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
-        "        <a href=\"rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
-        "        <a href=\"system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-history\">학원제도(SYSTEM)</a>\n" + 
-        "        <a href=\"recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
-        "        <a href=\"location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
+        "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
+        "        <a href=\"/la/assets/html/guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
+        "        <a href=\"/la/assets/html/guide/rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
+        "        <a href=\"/la/assets/html/guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-history\">학원제도(SYSTEM)</a>\n" + 
+        "        <a href=\"/la/assets/html/guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
+        "        <a href=\"/la/assets/html/guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
       );
     }
   } // END of FUNCTION 'renderSectionMenu'
@@ -871,7 +899,6 @@ function renderArticle(extracted_html, webpage_index) {
     
     // Runs if the loading page is the Location page.
     case 5: 
-    // console.log("5");
       jq("article").html(
         extracted_html[0] + "\n" + 
         "        <table>\n" + 
@@ -940,6 +967,24 @@ function renderArticle(extracted_html, webpage_index) {
         "        </table>\n"
       );
       
+    break;
+
+    // Runs if the page loading is the Faculty page for Park Sooyoung.
+    case 6: 
+      jq("article").html(
+        "        <div id=\"article-header\">\n" + 
+        "          <h2>강사소개 (FACULTY)</h2>\n" + 
+        "        </div>\n" + 
+        "        <div class=\"article-faculty-member-page\" id=\"article-content\">\n" + 
+        extracted_html[0] + 
+        "          <p>\n" + 
+        extracted_html[1] + 
+        "          </p>\n" + 
+        extracted_html[2] + 
+        "          <a href=\"/la/assets/html/guide/faculty.htm\" title=\"목록\">목록</a>\n" + 
+        "        </div>\n"
+      );
+
     break;
   }
 
