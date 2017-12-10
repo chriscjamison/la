@@ -38,7 +38,8 @@ function extractHtmlFromDesktopPage()  {
         'system.htm', 
         'recruiting.htm', 
         'location.htm', 
-        'park_sooyoung.htm'
+        'park_sooyoung.htm', 
+        'kim_hyerin.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -555,6 +556,45 @@ function extractHtmlFromDesktopPage()  {
                                     "          </ul>\n";
                 webpage_index = 6;
               break;
+
+              // Runs if the loading page is the 'Faculty' page for Kim Hyerin.
+              case 7:
+                extracted_html[0] = "          <h4>Kim Hyerin</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            Ewha Womans University\n" + 
+                                    "            <br/>\n" + 
+                                    "            Major in Bachelor of International Studies\n" + 
+                                    "            <br/>\n" + 
+                                    "            Concentration in Law and Diplomacy &amp; Asian Studies\n" +
+                                    "            <br/>\n" + 
+                                    "            Minor in International Development Cooperation\n";
+
+                extracted_html[2] = "          <h7>EDiS (Ewha Debate Society)</h7>\n" + 
+                                    "          <h6>심사위원 경력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2014 YTN-한국외대 청소년 영어토론대회 (초등부) 심사위원</li>\n" + 
+                                    "            <li>2014 YTN-한국외대 청소년 영어토론대회 (중등부) 심사위원</li>\n" + 
+                                    "            <li>2015 이화여대 High-On 디베이트 캠프 결승전 심사위원</li>\n" + 
+                                    "            <li>2015 YTN-한국외대 청소년 영어토론대회 (초등부) 심사위원</li>\n" + 
+                                    "            <li>2015 YTN-한국외대 청소년 영어토론대회 (중등부) 심사위원</li>\n" + 
+                                    "            <li>2015 GFN 영어방송 광주광역시 전국 청소년 영어토론대회 2위 심사위원상 수상</li>\n" + 
+                                    "            <li>2015 한국 국제 토론대회 (KDO) 심사위원</li>\n" + 
+                                    "            <li>2016 코넬-연세 고교대항전 4위 심사위원상 수상</li>\n" + 
+                                    "            <li>2016 YTN-한국외대 청소년 영어토론대회 (중등부) 심사위원</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>디베이트 경력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2014 서강대학교 루키 토너먼트 (SRT) 준결승전 진출</li>\n" + 
+                                    "            <li>2014 제16회 전국대학생 영어토론대회 (KNC) 루키 준준결승전 진출</li>\n" + 
+                                    "            <li>2015 일본기독교대학 국제토론대회 (ICUT) 준준결승전 진출</li>\n" + 
+                                    "            <li>2015 한국 여성 토론대회 (KWDO) 결승전 진출</li>\n" + 
+                                    "            <li>2016 한국 여성 토론대회 (KWDO) 결승전 진출</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 7;
+              break;
             }
           }
         }
@@ -611,7 +651,7 @@ function renderHeader(webpage_index) {
   var title_html = new String();
 
   title_html = "Leaders Academy - ";
-// console.log("webpage_index = " + webpage_index);
+  
   switch (webpage_index)  {
     // Runs if the loading page is the History page.
     case 0: 
@@ -628,9 +668,14 @@ function renderHeader(webpage_index) {
       title_html = title_html + "치안내 (LOCATION)";
     break;
 
-    // Runs if the loading page is the Faculty page.
+    // Runs if the loading page is the Faculty page for Park Sooyoung.
     case 6: 
       title_html = title_html + "강사소개 (FACULTY) - Park Sooyoung";
+    break;
+
+    // Runs if the loading page is the Faculty page for Kim Hyerin.
+    case 7: 
+      title_html = title_html + "강사소개 (FACULTY) -  Kim Hyerin";
     break;
   } // END of SWITCH statement
 
@@ -968,26 +1013,23 @@ function renderArticle(extracted_html, webpage_index) {
       );
       
     break;
-
-    // Runs if the page loading is the Faculty page for Park Sooyoung.
-    case 6: 
-      jq("article").html(
-        "        <div id=\"article-header\">\n" + 
-        "          <h2>강사소개 (FACULTY)</h2>\n" + 
-        "        </div>\n" + 
-        "        <div class=\"article-faculty-member-page\" id=\"article-content\">\n" + 
-        extracted_html[0] + 
-        "          <p>\n" + 
-        extracted_html[1] + 
-        "          </p>\n" + 
-        extracted_html[2] + 
-        "          <a href=\"/la/assets/html/guide/faculty.htm\" title=\"목록\">목록</a>\n" + 
-        "        </div>\n"
-      );
-
-    break;
   }
 
+  if ((webpage_index > 5) && (webpage_index < 22))  {
+    jq("article").html(
+      "        <div id=\"article-header\">\n" + 
+      "          <h2>강사소개 (FACULTY)</h2>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"article-faculty-member-page\" id=\"article-content\">\n" + 
+      extracted_html[0] + 
+      "          <p>\n" + 
+      extracted_html[1] + 
+      "          </p>\n" + 
+      extracted_html[2] + 
+      "          <a href=\"/la/assets/html/guide/faculty.htm\" title=\"목록\">목록</a>\n" + 
+      "        </div>\n"
+    );
+  }
   // formatCSS();
   
   jq("body").fadeIn();
