@@ -32,12 +32,7 @@ function extractHtmlFromDesktopPage()  {
 
       // Pass on the URL's of the pages within the website.
       urls_Array = [
-        'history.htm', 
         'faculty.htm', 
-        'rules.htm', 
-        'system.htm', 
-        'recruiting.htm', 
-        'location.htm', 
         'park_sooyoung.htm', 
         'kim_hyerin.htm', 
         'lee_hanyo.htm', 
@@ -52,7 +47,13 @@ function extractHtmlFromDesktopPage()  {
         'chan_keun_kim.htm', 
         'joonpyo_sohn.htm', 
         'matthew_owen.htm', 
-        'roger_hatridge.htm'
+        'roger_hatridge.htm', 
+        'history.htm',
+        'rules.htm', 
+        'recruiting.htm', 
+        'location.htm', 
+        'debate.htm', 
+        'schedule_2017.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -61,27 +62,12 @@ function extractHtmlFromDesktopPage()  {
       jq.each(urls_Array, 
         function (index, value) {
           var current_URL = value;
-          // console.log("current_URL = " + current_URL);
-          // console.log("url_string.indexOf(" + current_URL + ") = " + url_string.indexOf(current_URL));
-          // console.log("index = " + index);
-          // console.log("webpage_index = " + webpage_index);
 
           if (url_string.indexOf(current_URL) > -1) {
             switch (index)  {
-              // Runs if the loading page is for the 'History' section.
-              case 0:
-                extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>인사말 (HISTORY)</h2>\n" + 
-                                    "        </div>\n" + 
-                                    "        <div id=\"article-content\">\n" + 
-                                    "          <img src=\"http://chriscjamison.com/la/assets/img/content/about/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
-                                    "        </div>\n";
-
-                webpage_index = 0;
-              break;
-
+              
               // Runs if the loading page is the 'Faculty' page.
-              case 1: 
+              case 0: 
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
                                     "          <h2>강사소개 (FACULTY)</h2>\n" + 
                                     "        </div>\n" + 
@@ -324,207 +310,13 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[24]= "          </div>\n" + 
                                     "        </div>\n";
 
-                webpage_index = 1;
+                webpage_index = 0;
 
 
-              break;
-
-              // Runs if the page loading is the 'Location' page/
-              case 5: 
-                // Pass on the HTML of the Section header and map.
-                extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2 lang=\"ko\">치안내 (LOCATION)</h2>\n" + 
-                                    "        </div>\n"+ 
-                                    "        <div id=\"map\" style=\"width:85%;height:500px;margin: 0 auto;\"></div>\n" + 
-
-                                    /* "        <div class=\"wrap_content\">\n" + 
-                                    "          <div class=\"wrap_map\">\n" + 
-                                    "          <div id=\"map\" style=\"width:100%;height:100%\"></div>\n" + 
-                                    "          <div class=\"wrap_button\">\n" + 
-                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_linkMap\" target=\"_blank\" onclick=\"moveDaumMap(this)\"><span class=\"screen_out\">지도 크게보기</span></a>\n" + 
-                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_resetMap\" onclick=\"resetDaumMap()\"><span class=\"screen_out\">지도 초기화</span></a>\n" + 
-                                    "          </div>\n" + 
-                                    "        </div>\n" + 
-                                    "        <div class=\"wrap_roadview\">\n" + 
-                                    "          <div id=\"roadview\" style=\"width:100%;height:100%\"></div>\n" + 
-                                    "          <div class=\"wrap_button\">\n" + 
-                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_linkRoadview\" target=\"_blank\" onclick=\"moveDaumRoadview(this)\"><span class=\"screen_out\">로드뷰 크게보기</span></a>\n" + 
-                                    "            <a href=\"javascript:;\" class=\"btn_comm btn_resetRoadview\" onclick=\"resetRoadview()\"><span class=\"screen_out\">로드뷰 크게보기</span></a>\n" + 
-                                    "          </div>\n" + 
-                                    "        </div>\n"  +  */
-                                    "        <!-- Source library for Daum Maps -->\n" + 
-                                    "        <script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=83636625893c769b461dd3298dd45bba\"></script>\n" + 
-                                    "        <script>\n" + 
-                                    "          var mapContainer = document.getElementById('map'), \n" + 
-                                    "          mapCenter = new daum.maps.LatLng(37.500521, 127.051424), \n" + 
-                                    "          mapOption = { \n" + 
-                                    "            center: mapCenter, \n" + 
-                                    "            level: 3\n" + 
-                                    "          };\n" +
-                                    "\n" +  
-                                    "          var map = new daum.maps.Map(mapContainer, mapOption);\n" + 
-                                    "\n" + 
-                                    "          var markerPosition  = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
-                                    "\n" + 
-                                    "          var marker = new daum.maps.Marker({ \n" + 
-                                    "             position: markerPosition\n" + 
-                                    "          });\n" + 
-                                    "\n" + 
-                                    "          marker.setMap(map);\n" + 
-                                    "\n" + 
-                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">큰지도보기</a> <a href=\"http://map.daum.net/link/to/Hello World!,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">길찾기</a></div>', \n" + 
-                                    "            iwPosition = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
-                                    "\n" + 
-                                    "          var infowindow = new daum.maps.InfoWindow({ \n" + 
-                                    "            position : iwPosition, \n" + 
-                                    "            content : iwContent\n" + 
-                                    "          });\n" + 
-                                    "\n" + 
-                                    "          infowindow.open(map, marker);\n" + /*  + 
-                                    "              position: mapCenter, \n" + 
-                                    "              content: '스페이스 닷원'\n" + 
-                                    "          });\n" + 
-                                    "          mLabel.open(map, mMarker);\n" + 
-                                    "\n" + 
-                                    "          var rvContainer = document.getElementById('roadview');\n" + 
-                                    "          var rv = new daum.maps.Roadview(rvContainer);\n" + 
-                                    "          var rc = new daum.maps.RoadviewClient();\n" + 
-                                    "          var rvResetValue = {}\n" + 
-                                    "          rc.getNearestPanoId(mapCenter, 50, function(panoId) { \n" + 
-                                    "            rv.setPanoId(panoId, mapCenter);\n" + 
-                                    "            rvResetValue.panoId = panoId;\n" + 
-                                    "          });\n" + 
-                                    "\n" + 
-                                    "          daum.maps.event.addListener(rv, 'init', function() { \n" + 
-                                    "            var rMarker = new daum.maps.Marker({ \n" + 
-                                    "              position: mapCenter, \n" + 
-                                    "              map: rv\n" + 
-                                    "            });\n" + 
-                                    "\n" + 
-                                    "            var rLabel = new daum.maps.InfoWindow({ \n" + 
-                                    "                position: mapCenter, \n" + 
-                                    "                content: '스페이스 닷원'\n" + 
-                                    "            });\n" + 
-                                    "            rLabel.open(rv, rMarker);\n" + 
-                                    "\n" + 
-                                    "            var projection = rv.getProjection();\n" + 
-                                    "\n" + 
-                                    "            var viewpoint = projection.viewpointFromCoords(rMarker.getPosition(), rMarker.getAltitude());\n" + 
-                                    "                rv.setViewpoint(viewpoint);\n" + 
-                                    "\n" + 
-                                    "            rvResetValue.pan = viewpoint.pan;\n" + 
-                                    "            rvResetValue.tilt = viewpoint.tilt;\n" + 
-                                    "            rvResetValue.zoom = viewpoint.zoom;\n" + 
-                                    "          });\n" + 
-                                    "\n" + 
-                                    "          function moveDaumMap(self){ \n" + 
-                                    "            var center = map.getCenter(),  \n" + 
-                                    "            lat = center.getLat(), \n" + 
-                                    "            lng = center.getLng();\n" + 
-                                    "            self.href = 'http://map.daum.net/link/map/' + encodeURIComponent('스페이스 닷원') + ',' + lat + ',' + lng;\n" + 
-                                    "          }\n" + 
-                                    "\n" + 
-                                    "          function resetDaumMap(){ \n" + 
-                                    "            map.setCenter(mapCenter);\n" + 
-                                    "            map.setLevel(mapOption.level);\n" + 
-                                    "          }\n" + 
-                                    "\n" + 
-                                    "          function moveDaumRoadview(self){ \n" + 
-                                    "            var panoId = rv.getPanoId();\n" + 
-                                    "            var viewpoint = rv.getViewpoint();\n" + 
-                                    "            self.href = 'http://map.daum.net/?panoid='+panoId+'&pan='+viewpoint.pan+'&tilt='+viewpoint.tilt+'&zoom='+viewpoint.zoom;\n" + 
-                                    "          }\n" + 
-                                    "\n" + 
-                                    "          function resetRoadview(){ \n" + 
-                                    "            rv.setViewpoint({ \n" + 
-                                    "              pan: rvResetValue.pan, tilt: rvResetValue.tilt, zoom: rvResetValue.zoom\n" + 
-                                    "            });\n" + 
-                                    "            rv.setPanoId(rvResetValue.panoId);\n" + 
-                                    "          }\n" +  */
-                                    "        </script>\n";
-
-                // Pass on the first row of contact information.
-                extracted_html[1] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(2) > td").html();
-                extracted_html[2] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(2) > td:nth-child(2)").html();
-
-                // Pass on the second row of contact information.
-                extracted_html[3] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td").html();
-                extracted_html[4] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
-
-                // Pass on the third row of contact information.
-                extracted_html[5] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td").html();
-                extracted_html[6] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
-                
-                // Pass on the first row of directions.
-                extracted_html[7] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(2) > td").html();
-                extracted_html[8] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(2) > td:nth-child(2)").html();
-
-                // Pass on the second row of directions.
-                extracted_html[9] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(4) > td").html();
-                extracted_html[10] = "        <h4>Seolleung Station exit two</h4>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>Step out of exit two and go straight for five minutes.</li>\n" + 
-                                     "          <li>At the second stoplight, you will see Leaders Academy across the street and slightly to the left.</li>\n" + 
-                                     "          <li>After you cross the street, walk 20 meters to Leaders Academy.</li>\n" + 
-                                     "          <li>Come to the fourth floor.</li>\n" + 
-                                     "        </ul>\n" + 
-                                     "        <h4>Hanti Station exit one</h4>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>Step out of exit one and go straight for five minutes until you see Baskin Robbins across the street and Seokwang Eye Glasses shop to your right.</li>\n" + 
-                                     "          <li>Do not cross the street.</li>\n" + 
-                                     "          <li>Go right.</li>\n" + 
-                                     "          <li>You will see Leaders Academy in the second building on your right.</li>\n" + 
-                                     "          <li>Come to the fourth floor.</li>\n" + 
-                                     "        </ul>\n";
-
-                // Pass on the third row of directions.
-                extracted_html[11] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(6) > td").html();
-                extracted_html[12] = "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
-                                     "        <strong>Dogok Sagori</strong>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>363</li>\n" + 
-                                     "        </ul>\n" + 
-                                     "        <strong>Dosung Cho Sagori</strong>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>472</li>\n" + 
-                                     "          <li>6211</li>\n" + 
-                                     "          <li>3420</li>\n" + 
-                                     "          <li>330</li>\n" + 
-                                     "          <li>3219</li>\n" + 
-                                     "          <li>4312</li>\n" + 
-                                     "          <li>4412</li>\n" + 
-                                     "          <li>9414</li>\n" + 
-                                     "          <li>8443</li>\n" +  
-                                     "        </ul>" + 
-                                     "        <strong>Daechi Dong Hanguk Hagwon</strong>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>363</li>\n" + 
-                                     "        </ul>\n" + 
-                                     "        <strong>Young dong Apt</strong>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>8443</li>\n" + 
-                                     "          <li>147</li>\n" + 
-                                     "          <li>472</li>\n" + 
-                                     "          <li>6411</li>\n" + 
-                                     "          <li>3420</li>\n" + 
-                                     "          <li>3219</li>\n" + 
-                                     "          <li>4312</li>\n" + 
-                                     "          <li>4412</li>\n" + 
-                                     "          <li>9414</li>\n" +  
-                                     "        </ul>\n";
-
-                // Pass on the fourth row of directions.
-                extracted_html[13] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td").html();
-                extracted_html[14] = "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
-                                     "        <ul>\n" + 
-                                     "          <li>Tell the taxi driver Dosung Elementary Intersection-Dosung Chogyo Sagori - 도성초교 사거리</li>\n" + 
-                                     "        </ul>\n";
-
-                webpage_index = 5;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Park Sooyoung.
-              case 6:
+              case 1:
                 extracted_html[0] = "          <h4>Park Sooyoung</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>관리자</span>\n";
@@ -567,11 +359,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>12<sup>th</sup> IYF English Speaking Competition 3</li>\n" + 
                                     "            <li>Model United Nations Climate Change Conference Korea Environment Corporation CEO Award</li>\n" + 
                                     "          </ul>\n";
-                webpage_index = 6;
+                webpage_index = 1;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Kim Hyerin.
-              case 7:
+              case 2:
                 extracted_html[0] = "          <h4>Kim Hyerin</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -606,11 +398,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>2016 한국 여성 토론대회 (KWDO) 결승전 진출</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 7;
+                webpage_index = 2;
               break;
 
-              // Runs if the loading page is the 'Faculty' page for Kim Hyerin.
-              case 8:
+              // Runs if the loading page is the 'Faculty' page for Lee Hanyo.
+              case 3:
                 extracted_html[0] = "          <h4>Lee Hanyo</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -649,11 +441,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>2016 2<sup>nd</sup> MK Economy English Debate Tournament Breaking Adjudicator</li>\n" +
                                     "          </ul>\n";
 
-                webpage_index = 8;
+                webpage_index = 3;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Park Sungryul.
-              case 9:
+              case 4:
                 extracted_html[0] = "          <h4>Park Sungryul</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>관리자</span>\n";
@@ -696,11 +488,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>Deputy Chief Adjudicator, 2013 Winter KIDA National Championship</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 9;
+                webpage_index = 4;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Abhisheka Dubey.
-              case 10:
+              case 5:
                 extracted_html[0] = "          <h4>Abhisheka Dubey</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -750,11 +542,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>2013 13<sup>th</sup> KIDA National Championship, Grand Finals Judge &amp; Fourth Best Adjudicator</li>\n" +
                                     "          </ul>\n";
 
-                webpage_index = 10;
+                webpage_index = 5;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Kevin Han.
-              case 11:
+              case 6:
                 extracted_html[0] = "          <h4>Kevin Han</h4>\n" + 
                                     "          <span>[정규토론(DEBATE) &amp; 모의유엔(MUN)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -815,11 +607,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>Global Leaders (GLISMUN), etc.</li>\n" +
                                     "          </ul>\n";
 
-                webpage_index = 11;
+                webpage_index = 6;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Reece Randall.
-              case 12:
+              case 7:
                 extracted_html[0] = "          <h4>Reece Randall</h4>\n" + 
                                     "          <span>[정규토론(DEBATE) &amp; 정규영어(ENGLISH)]</span>\n" + 
                                     "          <span>관리자</span>\n";
@@ -848,11 +640,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>Member & Speaker | Toastmasters Society International | 2009 – 2010</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 12;
+                webpage_index = 7;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Lee Eunhye.
-              case 13:
+              case 8:
                 extracted_html[0] = "          <h4>Lee Eunhye</h4>\n" + 
                                     "          <span>[정규토론(DEBATE) &amp; 모의유엔(MUN)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -922,11 +714,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>3<sup>rd</sup> prize Seoul Nat&rsquo;l Univ. Institute Chair&rsquo;s award, Korea HR and Peace Debate tournament, 2015</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 13;
+                webpage_index = 8;
               break;
 
               // Runs if the loading page is the 'Faculty' page for You Ge Heon.
-              case 14:
+              case 9:
                 extracted_html[0] = "          <h4>You Ge Heon</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -964,11 +756,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>전) 디베이트포올 열린교실 강사 (2016.7월-2016.12월18일)</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 14;
+                webpage_index = 9;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Kim Gyumin.
-              case 15:
+              case 10:
                 extracted_html[0] = "          <h4>Kim Gyumin</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -1012,11 +804,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>닥터정 E-Class, 외국인학교 특별반 강사</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 15;
+                webpage_index = 10;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Brian Moon.
-              case 16:
+              case 11:
                 extracted_html[0] = "          <h4>Brian Moon</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -1040,11 +832,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li> 2015 SNUDA IV</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 16;
+                webpage_index = 11;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Chan Keun Kim.
-              case 17:
+              case 12:
                 extracted_html[0] = "          <h4>Chan Keun Kim</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -1077,11 +869,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>2013 Spring KNC Grand Finalist / 4th Best Spea</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 17;
+                webpage_index = 12;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Joonpyo Sohn.
-              case 18:
+              case 13:
                 extracted_html[0] = "          <h4>Joonpyo Sohn</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -1121,11 +913,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>Speech and Debate Instructor at Daewon International Middle School 2012-2013</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 18;
+                webpage_index = 13;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Matthew Owen.
-              case 19:
+              case 14:
                 extracted_html[0] = "          <h4>Matthew Owen</h4>\n" + 
                                     "          <span>[정규영어(ENGLISH)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -1141,11 +933,11 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>Technical Recruitment Specialist 2006-2008</li>\n" + 
                                     "          </ul>\n";
 
-                webpage_index = 19;
+                webpage_index = 14;
               break;
 
               // Runs if the loading page is the 'Faculty' page for Roger Hatridge.
-              case 20:
+              case 15:
                 extracted_html[0] = "          <h4>Roger Hatridge</h4>\n" + 
                                     "          <span>[정규토론(DEBATE)]</span>\n" + 
                                     "          <span>작성자</span>\n";
@@ -1210,9 +1002,167 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>KHSDC III: coach of winning team</li>\n" + 
                                     "          </ul>\n";
 
+                webpage_index = 15;
+              break;
+              
+              // Runs if the loading page is for the 'History' section.
+              case 16:
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>인사말 (HISTORY)</h2>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div id=\"article-content\">\n" + 
+                                    "          <img src=\"http://chriscjamison.com/la/assets/img/content/about/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
+                                    "        </div>\n";
+
+                webpage_index = 16;
+              break;
+
+              // Runs if the page loading is the 'Location' page/
+              case 19: 
+                // Pass on the HTML of the Section header and map.
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2 lang=\"ko\">치안내 (LOCATION)</h2>\n" + 
+                                    "        </div>\n"+ 
+                                    "        <div id=\"map\" style=\"width:85%;height:500px;margin: 0 auto;\"></div>\n" + 
+                                    "\n" + 
+                                    "        <!-- Source library for Daum Maps -->\n" + 
+                                    "        <script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=83636625893c769b461dd3298dd45bba\"></script>\n" + 
+                                    "        <script>\n" + 
+                                    "          var mapContainer = document.getElementById('map'), \n" + 
+                                    "          mapCenter = new daum.maps.LatLng(37.500521, 127.051424), \n" + 
+                                    "          mapOption = { \n" + 
+                                    "            center: mapCenter, \n" + 
+                                    "            level: 3\n" + 
+                                    "          };\n" +
+                                    "\n" +  
+                                    "          var map = new daum.maps.Map(mapContainer, mapOption);\n" + 
+                                    "\n" + 
+                                    "          var markerPosition  = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
+                                    "\n" + 
+                                    "          var marker = new daum.maps.Marker({ \n" + 
+                                    "             position: markerPosition\n" + 
+                                    "          });\n" + 
+                                    "\n" + 
+                                    "          marker.setMap(map);\n" + 
+                                    "\n" + 
+                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">큰지도보기</a> <a href=\"http://map.daum.net/link/to/Hello World!,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">길찾기</a></div>', \n" + 
+                                    "            iwPosition = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
+                                    "\n" + 
+                                    "          var infowindow = new daum.maps.InfoWindow({ \n" + 
+                                    "            position : iwPosition, \n" + 
+                                    "            content : iwContent\n" + 
+                                    "          });\n" + 
+                                    "\n" + 
+                                    "          infowindow.open(map, marker);\n" +
+                                    "        </script>\n";
+
+                // Pass on the first row of contact information.
+                extracted_html[1] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(2) > td").html();
+                extracted_html[2] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(2) > td:nth-child(2)").html();
+
+                // Pass on the second row of contact information.
+                extracted_html[3] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td").html();
+                extracted_html[4] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
+
+                // Pass on the third row of contact information.
+                extracted_html[5] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td").html();
+                extracted_html[6] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(3) > td table > tbody > tr:nth-child(4) > td:nth-child(2)").html();
+                
+                // Pass on the first row of directions.
+                extracted_html[7] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(2) > td").html();
+                extracted_html[8] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(2) > td:nth-child(2)").html();
+
+                // Pass on the second row of directions.
+                extracted_html[9] = jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(4) > td").html();
+                extracted_html[10]= "        <h4>Seolleung Station exit two</h4>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>Step out of exit two and go straight for five minutes.</li>\n" + 
+                                    "          <li>At the second stoplight, you will see Leaders Academy across the street and slightly to the left.</li>\n" + 
+                                    "          <li>After you cross the street, walk 20 meters to Leaders Academy.</li>\n" + 
+                                    "          <li>Come to the fourth floor.</li>\n" + 
+                                    "        </ul>\n" + 
+                                    "        <h4>Hanti Station exit one</h4>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>Step out of exit one and go straight for five minutes until you see Baskin Robbins across the street and Seokwang Eye Glasses shop to your right.</li>\n" + 
+                                    "          <li>Do not cross the street.</li>\n" + 
+                                    "          <li>Go right.</li>\n" + 
+                                    "          <li>You will see Leaders Academy in the second building on your right.</li>\n" + 
+                                    "          <li>Come to the fourth floor.</li>\n" + 
+                                    "        </ul>\n";
+
+                // Pass on the third row of directions.
+                extracted_html[11]= jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(6) > td").html();
+                extracted_html[12]= "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
+                                    "        <strong>Dogok Sagori</strong>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>363</li>\n" + 
+                                    "        </ul>\n" + 
+                                    "        <strong>Dosung Cho Sagori</strong>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>472</li>\n" + 
+                                    "          <li>6211</li>\n" + 
+                                    "          <li>3420</li>\n" + 
+                                    "          <li>330</li>\n" + 
+                                    "          <li>3219</li>\n" + 
+                                    "          <li>4312</li>\n" + 
+                                    "          <li>4412</li>\n" + 
+                                    "          <li>9414</li>\n" + 
+                                    "          <li>8443</li>\n" +  
+                                    "        </ul>" + 
+                                    "        <strong>Daechi Dong Hanguk Hagwon</strong>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>363</li>\n" + 
+                                    "        </ul>\n" + 
+                                    "        <strong>Young dong Apt</strong>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>8443</li>\n" + 
+                                    "          <li>147</li>\n" + 
+                                    "          <li>472</li>\n" + 
+                                    "          <li>6411</li>\n" + 
+                                    "          <li>3420</li>\n" + 
+                                    "          <li>3219</li>\n" + 
+                                    "          <li>4312</li>\n" + 
+                                    "          <li>4412</li>\n" + 
+                                    "          <li>9414</li>\n" +  
+                                    "        </ul>\n";
+
+                // Pass on the fourth row of directions.
+                extracted_html[13]= jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td").html();
+                extracted_html[14]= "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
+                                    "        <ul>\n" + 
+                                    "          <li>Tell the taxi driver Dosung Elementary Intersection-Dosung Chogyo Sagori - 도성초교 사거리</li>\n" + 
+                                    "        </ul>\n";
+
+                webpage_index = 19;
+              break;
+
+              // Runs if the loading page is the 'Debate' page.
+              case 20:
+                extracted_html[0] = "        <div class=\"article-debate-links\" id=\"article-content\">\n" + 
+                                    "          <a href=\"schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\">2017년 정규토론 수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\">2016 정규토론수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"discussion_english.htm\" title=\"주중 영어토론반 일정안내\">주중 영어토론반 일정안내</a>\n" +
+                                    "          <a href=\"schedule_2018.htm\" title=\"2018 토론수업일정\">2018 토론수업일정</a>\n" +  
+                                    "          <a href=\"recuitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\">초등 저학년 토론반을 모집합니다.</a>\n" + 
+                                    "          <a href=\"discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\">정규토론 2015년 2분기 수업일정</a>\n" + 
+                                    "          <a href=\"debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\">정규토론 2014년 4분기 일정</a>\n" + 
+                                    "        </div>\n";  
+                                    
+
                 webpage_index = 20;
               break;
-            
+
+              // Runs if the loading page is the 'Debate' page.
+              case 21:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>Updated regular meeting<br/>class schedule for 2017</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/0_2017년%20정규%20일정표.jpg\" width=\"680\" height=\"837\" />\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 21;
+              break;
+          
             }
           }
         }
@@ -1270,99 +1220,117 @@ function renderHeader(webpage_index) {
 
   title_html = "Leaders Academy - ";
 
-  if (webpage_index < 22) {
+  if (webpage_index < 16) {
     section_html = "강사소개 (FACULTY) - ";
+  } else if (webpage_index > 20) {
+    section_html = "정규토론 (DEBATE) - ";
   }
   
   switch (webpage_index)  {
-    // Runs if the loading page is the History page.
-    case 0: 
-      title_html = title_html + "인사말(HISTORY)";
-    break;
-
+    
     // Runs if the loading page is the Faculty page.
-    case 1: 
+    case 0: 
       title_html = title_html + "강사소개 (FACULTY)";
     break;
 
-    // Runs if the loading page is the Location page.
-    case 5:
-      title_html = title_html + "치안내 (LOCATION)";
-    break;
-
     // Runs if the loading page is the Faculty page for Park Sooyoung.
-    case 6: 
+    case 1: 
       title_html = title_html + section_html + "Park Sooyoung";
     break;
 
     // Runs if the loading page is the Faculty page for Kim Hyerin.
-    case 7: 
+    case 2: 
       title_html = title_html + section_html + " Kim Hyerin";
     break;
 
     // Runs if the loading page is the Faculty page for Lee Hanyo.
-    case 8: 
+    case 3: 
       title_html = title_html + section_html + "Lee Hanyo";
     break;
     
     // Runs if the loading page is the Faculty page for Park Sungryul.
-    case 9: 
+    case 4: 
       title_html = title_html + section_html + "Park Sungryul";
     break;
 
     // Runs if the loading page is the Faculty page for Abhisheka Dubey.
-    case 10: 
+    case 5: 
       title_html = title_html + section_html + "Abhisheka Dubey";
     break;
 
     // Runs if the loading page is the Faculty page for Abhisheka Dubey.
-    case 11: 
+    case 6: 
       title_html = title_html + section_html + "Kevin Han";
     break;
 
     // Runs if the loading page is the Faculty page for Reece Randall.
-    case 12: 
+    case 7: 
       title_html = title_html + section_html + "Reece Randall";
     break;
 
     // Runs if the loading page is the Faculty page for Lee Eunhye.
-    case 13: 
+    case 8: 
       title_html = title_html + section_html + "Lee Eunhye";
     break;
 
     // Runs if the loading page is the Faculty page for You Ge Heon.
-    case 14: 
+    case 9: 
       title_html = title_html + section_html + "You Ge Heon";
     break;
 
     // Runs if the loading page is the Faculty page for Kim Gyumin.
-    case 15: 
+    case 10: 
       title_html = title_html + section_html + "Kim Gyumin";
     break;
 
     // Runs if the loading page is the Faculty page for Brian Moon.
-    case 16: 
+    case 11: 
       title_html = title_html + section_html + "Brian Moon";
     break;
 
     // Runs if the loading page is the Faculty page for Chan Keun Kim.
-    case 17: 
+    case 12: 
       title_html = title_html + section_html + "Chan Keun Kim";
     break;
 
     // Runs if the loading page is the Faculty page for Joonpyo Sohn.
-    case 18: 
+    case 13: 
       title_html = title_html + section_html + "Joonpyo Sohn";
     break;
 
     // Runs if the loading page is the Faculty page for Matthew Owen.
-    case 19: 
+    case 14: 
       title_html = title_html + section_html + "Matthew Owen";
     break;
 
     // Runs if the loading page is the Faculty page for Roger Hatridge.
-    case 20: 
+    case 15: 
       title_html = title_html + section_html + "Roger Hatridge";
+    break;
+
+    // Runs if the loading page is the History page.
+    case 16: 
+      title_html = title_html + "인사말(HISTORY)";
+    break;
+
+    // Runs if the loading page is the Location page.
+    case 19:
+      title_html = title_html + "치안내 (LOCATION)";
+    break;
+
+    // Runs if the loading page is the Location page.
+    case 20:
+      title_html = title_html + "정규토론 (DEBATE)";
+    break;
+
+    // Runs if the loading page is the Debate page for the 2017 schedule.
+    case 21: 
+      title_html = title_html + section_html + "Updated regular meeting class schedule for 2017";
+    break;
+
+    // Runs if the loading page is the Debate page for the 2016 schedule.
+    case 22: 
+      title_html = title_html + section_html + "2016 regular discussion class schedule update";
     break;
   } // END of SWITCH statement
 
@@ -1488,7 +1456,7 @@ function renderMenus(webpage_index) {
     "            <span>Awards</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-debate\">\n" + 
-    "            <a href=\"#debate\" title=\"Debate\"></a>\n" + 
+    "            <a href=\"/la/assets/html/debate/debate.htm\" title=\"Debate\"></a>\n" + 
     "            <span>Debate</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-events\">\n" + 
@@ -1510,7 +1478,7 @@ function renderMenus(webpage_index) {
     "            <span>Faculty</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-apply_faculty\">\n" + 
-    "            <a href=\"/la/assets/html/guide/faculty.htm\" title=\"Apply (Faculty)\"></a>\n" + 
+    "            <a href=\"#apply_faculty\" title=\"Apply (Faculty)\"></a>\n" + 
     "            <span>Apply (Faculty)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-business\">\n" + 
@@ -1550,7 +1518,7 @@ function renderSectionMenu(webpage_index) {
   
     menu_selector = "#nav-section_menu";
 
-    if (webpage_index < 22)  {
+    if (webpage_index <= 15)  {
       jq(menu_selector).html(
         "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
@@ -1558,6 +1526,15 @@ function renderSectionMenu(webpage_index) {
         "        <a href=\"/la/assets/html/guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-history\">학원제도(SYSTEM)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
+      );
+    } else if (webpage_index > 15) {
+      jq(menu_selector).html(
+        "        <a href=\"/la/assets/html/debate/schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-section_1-schedule_2017\">Schedule 2017</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-section_1-schedule_2016\">Schedule 2016</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-section_1-history\">Discussion (ENG)</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/recuitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-section_1-recruitment\">Recruitment</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-section_1-discussion_2015\">Discussion (2015)</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-section_1-debate_2014\">Debate (2014)</a>"
       );
     }
   } // END of FUNCTION 'renderSectionMenu'
@@ -1592,13 +1569,8 @@ function renderArticle(extracted_html, webpage_index) {
   var updated_html = new String();
 
   switch (webpage_index)  {
-    // Runs if the loading page is the History page.
+   // Runs if the loading page is the Faculty page.
     case 0:
-      jq("article").html(extracted_html[0]);
-    break;
-
-    // Runs if the loading page is the Faculty page.
-    case 1:
       jq("article").html(extracted_html[0] + 
                          extracted_html[1] + 
                          extracted_html[2] + 
@@ -1627,7 +1599,7 @@ function renderArticle(extracted_html, webpage_index) {
     break;
     
     // Runs if the loading page is the Location page.
-    case 5: 
+    case 19: 
       jq("article").html(
         extracted_html[0] + "\n" + 
         "        <table>\n" + 
@@ -1699,7 +1671,7 @@ function renderArticle(extracted_html, webpage_index) {
     break;
   }
 
-  if ((webpage_index > 5) && (webpage_index < 22))  {
+  if ((webpage_index > 0) && (webpage_index <= 15))  {
     jq("article").html(
       "        <div id=\"article-header\">\n" + 
       "          <h2>강사소개 (FACULTY)</h2>\n" + 
@@ -1713,7 +1685,17 @@ function renderArticle(extracted_html, webpage_index) {
       "          <a href=\"/la/assets/html/guide/faculty.htm\" title=\"목록\">목록</a>\n" + 
       "        </div>\n"
     );
-  }
+  } // END of if STATEMENT
+
+  if ((webpage_index > 15) && (webpage_index <= 26))  {
+    jq("article").html(
+      "        <div class=\"article-header-debate\" id=\"article-header\">\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01Top.png\" alt=\"정규토론(DEBATE)\" />\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01.png\" />\n" + 
+      "        </div>\n" + 
+      extracted_html[0] 
+    );
+  } // END of if STATEMENT
   // formatCSS();
   
   jq("body").fadeIn();
@@ -1874,13 +1856,15 @@ function displayMenu(section_value) {
   // Pass on the value of "block" to the CSS variable which will be used 
   // to show the main menu.
   menu_visible_css = {
-    display: "block"
+    display: "block", 
+    margin: "4em 1em 1em 1em"
   };
   
   // Pass on the value of "none" to the CSS variable which will be used 
   // to hide the main menu.
   menu_not_visible_css = {
-    display: "none"
+    display: "none", 
+    margin: "0"
   };
 
   // Store the value of the CSS property, 'display' of the <section> element 

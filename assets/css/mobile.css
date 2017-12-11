@@ -21,10 +21,28 @@ nav > section > div span,
 #nav-section_menu a, 
 h2, 
 .article-faculty-member, 
-.article-faculty-member-page,  
+.article-faculty-member-page, 
+.article-debate-links,
+.article-debate,   
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
+}
+
+td, 
+.article-faculty-member-page span, 
+.article-faculty-member-page h7, 
+.article-faculty-member-page h6, 
+.article-faculty-member-page p, 
+.article-faculty-member-page a, 
+.article-faculty-member-page ul li {
+  font-size: 32px;
+}
+
+.article-faculty-member ul li, 
+.article-faculty-member p, 
+.article-debate-links a {
+  font-size: 25px;
 }
 
 h2 {
@@ -68,7 +86,6 @@ header img {
   margin: 1em auto 0 auto;
   padding: 26px !important;
   display: block;
-  font-size: 32px;
   line-height: 10px !important;
 }
 
@@ -97,7 +114,8 @@ nav > section > div > a:active,
   color: #fff;
 }
 
-.article-faculty-info ul li a:active {
+.article-faculty-info ul li a:active, 
+.article-debate-links a:active {
   color: #e76200;
 }
 
@@ -112,7 +130,8 @@ nav > section > div span,
   color: #485081;
 }
 
-.article-faculty-info ul li a {
+.article-faculty-info ul li a, 
+.article-debate-links a {
   color: #485081;
 }
 
@@ -123,6 +142,7 @@ nav {
 
 #nav-sub_menu {
   width: 98.5%;
+  margin: 0;
 }
 
 #nav-main_menu {
@@ -334,6 +354,10 @@ footer > #footer-border {
   color: #7f7c7a;
 }
 
+article {
+  width: 100%;
+}
+
 /* PAGE: History */
 #article-content {
   width: 100%;
@@ -400,13 +424,11 @@ footer > #footer-border {
 
 .article-faculty-member ul li {
   margin: 0.25em !important;
-  font-size: 25px;
 }
 
 .article-faculty-member p {
   width: 90%;
   margin: 10px 10px 10px 35px;
-  font-size: 25px;
 }
 
 .article-faculty-member-page {
@@ -414,17 +436,21 @@ footer > #footer-border {
   padding: 1em;
 }
 
-.article-faculty-member-page h4 {
+.article-faculty-member-page h4, 
+.article-debate h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
   text-align: center;
+}
+
+.article-debate h4 {
+  margin: 1em 0;
 }
 
 .article-faculty-member-page span, 
 .article-faculty-member-page h7, 
 .article-faculty-member-page h6, 
 .article-faculty-member-page p {
-  font-size: 32px;
   text-align: center;
 }
 
@@ -439,7 +465,6 @@ footer > #footer-border {
   width: 10em;
   margin: 0 auto;
   display: block;
-  font-size: 32px;
 }
 
 .article-faculty-member-page h7 {
@@ -459,11 +484,6 @@ footer > #footer-border {
   padding-left: 55px;
 }
 
-.article-faculty-member-page ul li {
-  font-size: 32px;
-}
-
-
 /* PAGE: Location */
 table {
   width: 100%;
@@ -475,7 +495,6 @@ table {
 td {
   border-bottom: 2px dashed #cec2b4;
   padding: 0.5em;
-  font-size: 32px;
 }
 
 table > tbody > tr:last-of-type td {
@@ -513,6 +532,25 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 #article-header {
   width: 100%;
+}
+
+
+/* PAGE: Debate */
+
+.article-header-debate, 
+.article-debate-links {
+  width: 680px !important;
+  margin: 0 auto;
+}
+
+.article-debate-links a {
+  width: 17em;
+  margin: 1em auto;
+  display: block;
+}
+
+.article-debate-links a:nth-child(1) {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {
