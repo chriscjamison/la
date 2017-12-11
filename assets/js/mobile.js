@@ -51,7 +51,7 @@ function extractHtmlFromDesktopPage()  {
         'brian_moon.htm', 
         'chan_keun_kim.htm', 
         'joonpyo_sohn.htm', 
-        'matthew_own.htm', 
+        'matthew_owen.htm', 
         'roger_hatridge.htm'
       ];
 
@@ -306,16 +306,16 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[22]= "          </div>\n" + 
                                     "          <div class=\"article-faculty-row\" id=\"article-faculty-row_8\">\n";
 
-                extracted_html[23]= "            <div class=\"article-faculty-member\" id=\"faculty-member-joonpyo_sohn\">\n" + 
+                extracted_html[23]= "            <div class=\"article-faculty-member\" id=\"faculty-member-roger_hatridge\">\n" + 
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_140273568736030.PNG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/joonpyo_sohn.htm\">Roger Hatridge</a></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"/la/assets/html/guide/faculty/roger_hatridge.htm\">Roger Hatridge</a></li>\n" + 
                                     "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
                                     "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
-                                    "                  2012 l   Professor at Sogang University; teaching &ldquo;Humanities Debate&rdquo;...\n" + 
+                                    "                  2012 l Professor at Sogang University; teaching &ldquo;Humanities Debate&rdquo;...\n" + 
                                     "                </p>\n" + 
                                     "              </div>\n" +
                                     "            </div>\n";
@@ -540,7 +540,7 @@ function extractHtmlFromDesktopPage()  {
                                     "          <ul>\n" + 
                                     "            <li>2017 Worlds University Debate Championship Open Partial Double Octo-finalist</li>\n" + 
                                     "            <li>2017 KIDA Open Grand Finalist / 2<sup>nd</sup> best speaker</li>\n" + 
-                                    "            <li>2016 Korea Women’s Debate Open Champion / 2<sup>nd</sup> Best Speaker</li>\n" + 
+                                    "            <li>2016 Korea Women&rsquo;s Debate Open Champion / 2<sup>nd</sup> Best Speaker</li>\n" + 
                                     "            <li>2016 Northeast Asian Open Grand Finalist / 4<sup>th</sup> Best Speaker</li>\n" + 
                                     "            <li>2016 Fall KIDA National Championship Grand Finalist / 3<sup>rd</sup> Best Speaker</li>\n" + 
                                     "            <li>2016 Kyushu Cup Semifinalist</li>\n" + 
@@ -878,7 +878,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>1<sup>st</sup> prize best delegate award, Asian International Model United Nations, 2016</li>\n" + 
                                     "            <li>1<sup>st</sup> prize best delegate award, Japan-China-Korea Model United Nations, 2016</li>\n" + 
                                     "            <li>1<sup>st</sup> prize best delegate GCS President&rsquo;s award, Sustainable Development Goals Model UN, 2016</li>\n" + 
-                                    "            <li>Finalist, Model AU, 2014, UNA of the ROK President’s award, National Model UN, 2016</li>\n" + 
+                                    "            <li>Finalist, Model AU, 2014, UNA of the ROK President&rsquo;s award, National Model UN, 2016</li>\n" + 
                                     "          </ul>\n" + 
                                     "          <span>(Judging / Chairing)</span>\n" + 
                                     "          <ul>\n" + 
@@ -919,7 +919,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>Efl Grand Finalist, North East Asian Open, 2012</li>\n" + 
                                     "            <li>Semi Finalist, Sogang Invitation, 2013</li>\n" + 
                                     "            <li>2<sup>nd</sup> prize Dong-A Ilbo CEO award, National Collegiate Competition, 2014</li>\n" + 
-                                    "            <li>3<sup>rd</sup> prize Seoul Nat’l Univ. Institute Chair’s award, Korea HR and Peace Debate tournament, 2015</li>\n" + 
+                                    "            <li>3<sup>rd</sup> prize Seoul Nat&rsquo;l Univ. Institute Chair&rsquo;s award, Korea HR and Peace Debate tournament, 2015</li>\n" + 
                                     "          </ul>\n";
 
                 webpage_index = 13;
@@ -966,12 +966,258 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 14;
               break;
+
+              // Runs if the loading page is the 'Faculty' page for Kim Gyumin.
+              case 15:
+                extracted_html[0] = "          <h4>Kim Gyumin</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            Yonsei University\n" + 
+                                    "            <br/>\n" + 
+                                    "            UIC International Studies\n" + 
+                                    "            <br/>\n" + 
+                                    "            Korean Minjok Leadership Academy\n";
+
+                extracted_html[2] = "          <h6>심사위원 및 인턴 경력</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>2016-현재 KIDA National Championship 심사위원장</li>\n" + 
+                                    "            <li>2016 YTN-HUFS 청소년영어토론대회 부심사위원장</li>\n" + 
+                                    "            <li>2015 광주광역시 청소년영어토론대회 부심사위원장</li>\n" + 
+                                    "            <li>2016년 제 8회 연세대학교 토론대회 심사위원장</li>\n" + 
+                                    "            <li>2015 Global Korea Debate Championship 부심사위원장</li>\n" + 
+                                    "            <li>2013 KEDC 영어토론대회 최우수 심사위원 3위</li>\n" + 
+                                    "            <li>2012 필리핀 인트라무로스 국제 토론대회 최우수 심사위원</li>\n" + 
+                                    "            <li>2015년 서강대학교 루키 토론대회(하반기) (SRT) 심사위원</li>\n" + 
+                                    "            <li>2014 청와대 대통령비서실 대변인실 외신대변인턴</li>\n" + 
+                                    "            <li>2013 산업통상자원부 통상교섭실 FTA정책기획과 Research Associate인턴</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>디베이트 경력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2015. 11 한국디베이트오픈 영어토론대회 준우승, 3등 스피커</li>\n" + 
+                                    "            <li>2015. 08 호주-오세아니아 국제대학생영어토론대회 EFL부 우승</li>\n" + 
+                                    "            <li>2015. 08 서강대학교 영어토론대회 준결승</li>\n" + 
+                                    "            <li>2015. 08 서울대학교 영어토론대회 준결승</li>\n" + 
+                                    "            <li>2016년 제 1회 한양대학교-연세대학교 영어 토론대회 결승 진출, 2등 스피커상</li>\n" + 
+                                    "            <li>2014. 04 National Model United Nations-New York, Outstanding Delegation 최우등대표상</li>\n" + 
+                                    "            <li>Best Position Paper 최우수 국가 보고서</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>강의 경력</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>RealPREP, SAT Reading 강사</li>\n" + 
+                                    "            <li>Debate For All 글로벌리더의 자격/ 열린토론교실, 영어토론 강사</li>\n" + 
+                                    "            <li>세계유엔연맹 청소년캠프, 모의유엔 강사</li>\n" + 
+                                    "            <li>삼육중학교 방과후 교실, 영어토론 강사</li>\n" + 
+                                    "            <li>EnKo어학원, 특별반 강사</li>\n" + 
+                                    "            <li>닥터정 E-Class, 외국인학교 특별반 강사</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 15;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Brian Moon.
+              case 16:
+                extracted_html[0] = "          <h4>Brian Moon</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            Hanyang University\n" + 
+                                    "            <br/>\n" + 
+                                    "            Division of International Studies\n" + 
+                                    "            <br/>\n" + 
+                                    "            Division of Chemical Engineering\n" + 
+                                    "            <br/><br/>\n" + 
+                                    "            Georgia Institute of Technology\n" + 
+                                    "            <br/>\n" + 
+                                    "            Chemical & Biomedical Engineering\n" + 
+                                    "            <br/><br/>\n" + 
+                                    "            Parsippany High School\n" + 
+                                    "            <br/>\n" + 
+                                    "            Parsippany, New Jersey, USA\n";
+
+                extracted_html[2] = "          <h6>Debate</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li> 2015 SNUDA IV</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 16;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Chan Keun Kim.
+              case 17:
+                extracted_html[0] = "          <h4>Chan Keun Kim</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "\n";
+
+                extracted_html[2] = "          <h6>고려대학교 경영학과</h6>\n" +
+                                    "          <span>Highschool Level</span>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2010 NSDC Champion</li>\n" + 
+                                    "            <li>2010 KHSDC Grand Finalist</li>\n" + 
+                                    "            <li>2010 High-On Debate Grand Finalist</li>\n" + 
+                                    "            <li>2010 YTN Semi-Finalist</li>\n" + 
+                                    "            <li>2010 Asian Schools Debate Championship Octo-Finalist</li>\n" + 
+                                    "            <li>2010 European Schools Debate Championship Semi-Finalist</li>\n" + 
+                                    "            <li>2011 Korea University Debate Championship Champion / Best Speaker</li>\n" + 
+                                    "            <li>2011 Asian Schools Debate Championship Semi Finalist / Best Speaker</li>\n" + 
+                                    "            <li>2011 Korea Schools Debate Championship Semi Finalist / Best Speaker</li>\n" + 
+                                    "            <li>2011 World Schools Debate Championship Octo-Finalist / EFL Best Speaker</li>\n" + 
+                                    "            <li>2012 World Schools Debate Championship Octo-Finalist/EFL Best Speaker/13th Best Speaker Overall</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <span>I only mentioned the Best Speaker Awards for the competitions where I placed first</span>\n" + 
+                                    "          <h6>University Level</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>2012 Fall KNC Semi Finalist</li>\n" + 
+                                    "            <li>2012 NEAO Semi Finalist</li>\n" + 
+                                    "            <li>2013 IOC Quarter Finalist</li>\n" + 
+                                    "            <li>2015. 08 서울대학교 영어토론대회 준결승</li>\n" + 
+                                    "            <li>2016년 제 1회 한양대학교-연세대학교 영어 토론대회 결승 진출, 2등 스피커상</li>\n" + 
+                                    "            <li>2013 Spring KNC Grand Finalist / 4th Best Spea</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 17;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Joonpyo Sohn.
+              case 18:
+                extracted_html[0] = "          <h4>Joonpyo Sohn</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "            Brown University\n" + 
+                                    "            <br/>\n" + 
+                                    "            A.B.: Economics & Applied Math\n" + 
+                                    "            <br/><br/>\n" + 
+                                    "            Daewon Foreign Language HS\n" + 
+                                    "            <br/>\n" + 
+                                    "            English-Spanish Major\n";
+
+                extracted_html[2] = "          <h6>경력</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>Worlds Universities Debate Championship 2015, Open Octo-Finalist, ESL 5<sup>th</sup> Best Speaker</li>\n" + 
+                                    "            <li>North American Universities Debate Championship 2014, Semi-Finalist</li>\n" + 
+                                    "            <li>US Universities Debate Championship 2016, Octo-Finalist</li>\n" + 
+                                    "            <li>American Parliamentary Debate National Championship 2016, Octo-Finalist</li>\n" + 
+                                    "            <li>Seoul National University DA IV 2015, Champion, Top 10 speaker</li>\n" + 
+                                    "            <li>KIDA Pro-Ams 2015, Finalist, 2nd Best Speaker</li>\n" + 
+                                    "            <li>Harvard University Invitational 2014, Octo-Finalist</li>\n" + 
+                                    "            <li>Yale University Pro-Ams tournament 2016, Quarter-Finalist</li>\n" + 
+                                    "            <li>Sogang BP 2014, Champion, Best Speaker </li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Judging</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Austral-Asian Debating Championship 2015, Breaking judge (Open Quarters</li>\n" + 
+                                    "            <li>Korea National Championship 2015, Breaking judge (Finals), Best Adj award</li>\n" + 
+                                    "            <li>YTN-HUFS Jr. Debate Championship 2014, Deputy Chief Adjudicator</li>\n" + 
+                                    "            <li>Asian Schools Debate Championship 2014/2013, Breaking/subsidized judge</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>Coaching/Teaching</h6>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>Coach, Daewon Foreign Language HS Debate Team (Winners of 2014 YTN-HUFS Sr.)</li>\n" + 
+                                    "            <li>Vice President of Training, Brown Debating Union (2014-2016; 2<sup>nd</sup> College of the Year)</li>\n" + 
+                                    "            <li>Speech and Debate Instructor at Daewon FLHS 2012-2013</li>\n" + 
+                                    "            <li>Speech and Debate Instructor at Daewon International Middle School 2012-2013</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 18;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Matthew Owen.
+              case 19:
+                extracted_html[0] = "          <h4>Matthew Owen</h4>\n" + 
+                                    "          <span>[정규영어(ENGLISH)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "\n";
+
+                extracted_html[2] = "          <h6>경력</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>Language Institutes & Academies 2011-2015: Social Science & Debate<br/><br/>Course focused on public forum, N.F.L, debate of current events, world history, introduction to world politics & rhetoric essay and script writing</li>\n" + 
+                                    "            <li>Hankuk University of Foreign Studies 2009-2011: E.S.L & TOEFL Instructor<br/><br/>Developed semester courses including critical thinking, public speaking & confidence building activities / TOEFL to all grade levels</li>\n" + 
+                                    "            <li>Research Writer & Self-employed Immigration Consultant 2008-2009</li>\n" + 
+                                    "            <li>Law Society of Upper Canada 2009: Exam Proctor</li>\n" + 
+                                    "            <li>Technical Recruitment Specialist 2006-2008</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 19;
+              break;
+
+              // Runs if the loading page is the 'Faculty' page for Roger Hatridge.
+              case 20:
+                extracted_html[0] = "          <h4>Roger Hatridge</h4>\n" + 
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
+
+                extracted_html[1] = "";
+                extracted_html[2] = "          <h6>2012</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>Professor at Sogang University; teaching &ldquo;Humanities Debate&rdquo;</li>\n" + 
+                                    "            <li>World Schools Debating Championship 2012: Co-coached Korea&rsquo;s national team: <br/><br/>Korea was the only team that beat the champion team (Scotland) in the tournament, the team broke to octo-finals, all five speakers ranked in top 50, two in the top 20, best Korean speaker (12<sup>th</sup> in the world) was new record for Korea.</li>\n" + 
+                                    "            <li> At the 2012 WSDC, leadership roles included being chair of Complaints Committee. selected to be WSDC Complaints Officer for 2013 WSDC by convener of Turkish event, unanimously elected WSDC Vice President.</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>2011</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>Professor at Sogang University; taught &ldquo;Humanities Debate&rdquo;</li>\n" + 
+                                    "            <li>Coached several top speakers in a variety of speech competitions.</li>\n" + 
+                                    "            <li>Coached Korean students at National Forensics League (NFL) Tournament in Dallas, Texas: Parliamentary Debate round six (best yet).</li>\n" + 
+                                    "            <li>Coached successful teams at a variety of tournaments in Korea: KSDC, KHSDC, KEDC, NSDC, NSDC Jr, KUDC, KFLDT & ASDC.</li>\n" + 
+                                    "            <li>Coached majority of qualifiers for ESDC (EurOpen) 2011.</li>\n" + 
+                                    "            <li>HAFS Debate Tournament: Coached winning elementary team.</li>\n" + 
+                                    "            <li>Selected as Complaints Committee Chair for WSDC 2011.</li>\n" + 
+                                    "            <li>World Schools Debating Championship 2011: Solo Coached Korea&rsquo;s national team: 7-1 preliminary round record (best yet), the team broke sixth, won top ESL team, won top ESL speaker, won top EFL speaker, all speakers ranked in top 50 (best yet), and two speakers ranked in the top 20 (best yet).</li>\n" + 
+                                    "            <li>WSDC 2011 Leadership: elected WSDC executive secretary, oversaw rewriting of WSDC rules, re-elected to Complaints Committee.</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>2010</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>Coached Team Korea for International World Schools Debate Tournament in Slovenia. 2<sup>nd</sup> place team. 2<sup>nd</sup> place speaker.</li>\n" + 
+                                    "            <li>Coached two teams at 2010 EurOpen (formerly European Debate Championship), including semi-finalist & quarter-finalist.</li>\n" + 
+                                    "            <li>Selected as coach for European Open 2010.</li>\n" + 
+                                    "            <li>Middle School Public Debate Program: All top ten speakers, both finalist teams, and top rookie speaker.</li>\n" + 
+                                    "            <li>Coached Korean students at National Forensics League Tournament in Kansas City, Missouri: Impromptu  quarterfinalist.</li>\n" + 
+                                    "            <li>NSDC Jr.: Coached half quarter-finalists, semi-finalists, & finalists.</li>\n" + 
+                                    "            <li>World Schools Debating Championship 2010: Co-coached Korea&rsquo;s national team, 17<sup>th</sup> place, top EFL team.</li>\n" + 
+                                    "            <li>World Individuals 2010: Coached five Koreans in Lithuania: <br/><br/>Finalists: 2 debaters, 1 impromptu & 1 after-dinner speech.</li>\n" + 
+                                    "            <li>Trained Korean diplomats and led Korea&rsquo's first diplomatic debate tournament for Institute of Foreign Affairs and National Security.</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>2009</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>National Schools Debate Championship: Coached all finalists, top three speakers, and rookie winning team.</li>\n" + 
+                                    "            <li>Coached two teams at 2009 European Debate Championship, both teams in semifinals, coached 1st place team.</li>\n" + 
+                                    "            <li>Co-wrote the debate textbook High School Debate Primer.</li>\n" + 
+                                    "            <li>Wrote weekly debate column for Teen Times called How to Debate.</li>\n" + 
+                                    "            <li>World Individuals Qualifier for 2010: Coached grand champion</li>\n" + 
+                                    "            <li>Coached Korean students at National Junior Forensic League tournament in San Antonio, Texas USA: Advertising 2<sup>nd</sup> place</li>\n" + 
+                                    "            <li>Coached Korean team at National Forensic League tournament in Birmingham, Alabama USA: Prose Semi-finalist</li>\n" + 
+                                    "            <li>Freely coached Chung-Ang students for People Speak debates.</li>\n" + 
+                                    "            <li>Re-elected national coach for Korea&rsquo;s World Schools Debating Championship team (a second two-year term).</li>\n" + 
+                                    "            <li>World Individuals 2009: coached five Koreans that attended World Individuals in England; included a debate finalist and an after-dinner finalist; we had the highest individual ranking yet.</li>\n" + 
+                                    "            <li>World Schools Debating Championship 2009: Co-coached Korea&rsquo;s national team: team broke 8th (best yet) & 15th ranks (best yet) speaker, top EFL speaker, top ESL speaker, & top EFL team.</li>\n" + 
+                                    "            <li>Elected to WSDC Complaints Committee: first person from Korea voted into a WSDC committee since Korea hosted WSDC.</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>2008</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>World Schools Debating Championship 2008: Co-coached Korea&rsquo;s national team: octofinalists, and students performed well at the event.</li>\n" + 
+                                    "            <li>NSDC: Directed tournament in November 2008 that helped raise registration fee for WSDC Team Korea in 2009.</li>\n" + 
+                                    "            <li>World Individuals 2008: coached four Koreans in Germany, Korea&rsquo;s first finalist, 3 of 4 students ranked in the top 50 overall.</li>\n" + 
+                                    "            <li>Debate Columnist: Wrote That&rsquo;s Debatable for Korea Times.</li>\n" + 
+                                    "            <li> Coached at a free weekend debate camp at Gimhae (near Busan) with Ian Yovdoshuk and Darren Daley.</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <h6>2007</h6>\n" +
+                                    "          <ul>\n" + 
+                                    "            <li>First elected coach to WSDC Team Korea.</li>\n" + 
+                                    "            <li>KHSDC III: coach of winning team</li>\n" + 
+                                    "          </ul>\n";
+
+                webpage_index = 20;
+              break;
+            
             }
           }
         }
       );
 
-      
       setupFinalContent(extracted_html, webpage_index);
     }
   );
@@ -984,7 +1230,7 @@ function setupFinalContent(html_content, webpage_index)  {
 
   // Add the basic framework of the HTML template.
   renderHTMLFrame();
-// console.log("webpage_index = " + webpage_index);
+
   // Add the HTML of the <head> HTML element.
   renderHeader(webpage_index);
   
@@ -999,7 +1245,7 @@ function setupFinalContent(html_content, webpage_index)  {
 
   // Add the HTML which makes up the footer.
   renderFooter();
-// console.log("webpage_index = " + webpage_index);
+
   // Add the HTML of the page which is loading.
   renderArticle(html_content, webpage_index);
 
@@ -1147,7 +1393,6 @@ function renderHeader(webpage_index) {
 } // END of FUNCTIION 'renderHeader'\
 
 function renderBody() {
-  // jq("body").attr("style", "display:block;");
 
   jq("body").html(
     "<!--\n" +  
@@ -1295,7 +1540,6 @@ function renderMenus(webpage_index) {
     "      <section id=\"nav-section_menu\">\n" + 
     "      </section>\n"
   );
-console.log("webpage_index = " + webpage_index);
 
   renderSectionMenu(webpage_index);
 } // END of FUNCTION 'renderLogoAndSearch'
@@ -1305,7 +1549,7 @@ function renderSectionMenu(webpage_index) {
     var menu_selector = new String();
   
     menu_selector = "#nav-section_menu";
-// console.log("webpage_index = " + webpage_index);
+
     if (webpage_index < 22)  {
       jq(menu_selector).html(
         "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
@@ -1347,7 +1591,6 @@ function renderArticle(extracted_html, webpage_index) {
 
   var updated_html = new String();
 
-// console.log("webpage_index = " + webpage_index);
   switch (webpage_index)  {
     // Runs if the loading page is the History page.
     case 0:
