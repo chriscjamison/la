@@ -57,7 +57,8 @@ function extractHtmlFromDesktopPage()  {
         'schedule_2016.htm', 
         'discussion_english.htm', 
         'schedule_2018.htm', 
-        'recruitment.htm'
+        'recruitment.htm', 
+        'discussion_2015.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1199,7 +1200,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
-                                    "               <td rowspan=\"4\">\n" + 
+                                    "                <td rowspan=\"4\">\n" + 
                                     "                  초등토론\n" + 
                                     "                  <br/>\n" + 
                                     "                  (3,4/5,6)\n" + 
@@ -1428,6 +1429,172 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 25;
               break;
+
+              // Runs if the loading page is the 'Debate' page for regular discussions of 2015.
+              case 26:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>Regular discussions Q2 of 2015</h4>\n" + 
+                                    "          <h6>토론 정규수업 일정표</h6>\n" + 
+                                    "          <span>(팀수업별도 문의)</span>\n";
+
+                extracted_html[1] = "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  요일\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  시간\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  요일\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  시간\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초등오픈\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화수\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4PM ~ 7PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중등오픈\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화수\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" +
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초5학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중1학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4PM ~ 7PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  초6학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" +
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  중2학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4PM ~ 7PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                 토요일\n" +
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  최상위반 (LOGOS / KAIROS)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" +
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중3학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  고등오픈\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일\n" +
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Ethos Debate Lecture & Clinic (초등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4:30PM ~ 6PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Pathos Debate Lecture & Clinic (중등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 8:30PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 26;
+              break;
               
             }
           }	
@@ -1612,6 +1779,11 @@ function renderHeader(webpage_index) {
     // Runs if the loading page is the Debate page for recruitment.
     case 25: 
       title_html = title_html + section_html + "We raise recruitment class for elementary school lower grades";
+    break;
+   
+    // Runs if the loading page is the Debate page for the regular discussions of 2015.
+    case 26: 
+      title_html = title_html + section_html + "Regular discussions Q2 of 2015";
     break;
   } // END of SWITCH statement
 
@@ -1973,6 +2145,8 @@ function renderArticle(extracted_html, webpage_index) {
     
     if (webpage_index === 22) {
       updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];
+    } else if (webpage_index === 26) {
+      updated_html = extracted_html[0] + extracted_html[1];
     } else {
       updated_html = extracted_html[0];
     }

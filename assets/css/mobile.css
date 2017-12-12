@@ -594,7 +594,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 }
 
 th, 
-.article-debate table:nth-child(7) tr:nth-child(1) td {
+.article-debate table:nth-child(7) tr:nth-child(1) td { 
+  width: 5em;
   background-color: #d5ccb2;
   color: #573214;
 }
