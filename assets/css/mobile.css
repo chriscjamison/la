@@ -47,7 +47,8 @@ th,
 .article-debate h6, 
 .article-debate > span, 
 .article-debate p, 
-.article-debate ul li {
+.article-debate ul li, 
+.article-debate ol li {
   font-size: 25px;
 }
 
@@ -66,7 +67,8 @@ h2,
 .article-debate table + span, 
 .article-debate table td, 
 .article-debate p, 
-.article-debate ul li {
+.article-debate ul li, 
+.article-debate ol li {
   font-weight: 400;
 }
 
@@ -612,6 +614,10 @@ th,
 
 .article-debate ul {
   margin: 1em 1em 1em 4.5em;
+}
+
+.article-debate ol {
+  margin: 1em 1em 1em 5.5em;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {

@@ -56,7 +56,8 @@ function extractHtmlFromDesktopPage()  {
         'schedule_2017.htm', 
         'schedule_2016.htm', 
         'discussion_english.htm', 
-        'schedule_2018.htm'
+        'schedule_2018.htm', 
+        'recruitment.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1396,9 +1397,40 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 24;
               break;
+
+              // Runs if the loading page is the 'Debate' page for recruitment.
+              case 25:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>We raise recruitment class for elementary school lower grades</h4>\n" + 
+                                    "          <h6>수업일정</h6>\n" + 
+                                    "          <p>\n" + 
+                                    "            매주 화요일 6-9시\n" + 
+                                    "            <br/>\n" + 
+                                    "            매주 수요일 6-9시 \n" + 
+                                    "          </p>\n" + 
+                                    "          <h6>해당학년</h6>\n" + 
+                                    "          <ol>\n" +
+                                    "            <li>외국인학교 2,3학년</li>\n" + 
+                                    "            <li>한국학교, 3,4학년</li>\n" + 
+                                    "          </ol>\n" + 
+                                    "          <span>\n" + 
+                                    "            (2016년 5월 기준입니다) \n" + 
+                                    "          </span>\n" + 
+                                    "          <p>\n" + 
+                                    "            관심있는 학생들은 입학시험을\n" +  
+                                    "            <br/>\n" + 
+                                    "            예약해 주세요.\n" + 
+                                     "          </p>\n" + 
+                                    "          <p>\n" + 
+                                    "            감사합니다.\n" + 
+                                    "          </p>\n"
+                                    "        </div>\n";  
+
+                webpage_index = 25;
+              break;
               
             }
-          }
+          }	
         }
       );
 
@@ -1454,9 +1486,9 @@ function renderHeader(webpage_index) {
 
   title_html = "Leaders Academy - ";
 
-  if (webpage_index < 16) {
+  if (webpage_index <= 15) {
     section_html = "강사소개 (FACULTY) - ";
-  } else if (webpage_index > 20) {
+  } else if (webpage_index > 15) {
     section_html = "정규토론 (DEBATE) - ";
   }
   
@@ -1576,7 +1608,12 @@ function renderHeader(webpage_index) {
     case 24: 
       title_html = title_html + section_html + "2018 Lesson Schedule";
     break;
-  } // END of SWITCH statement 
+
+    // Runs if the loading page is the Debate page for recruitment.
+    case 25: 
+      title_html = title_html + section_html + "We raise recruitment class for elementary school lower grades";
+    break;
+  } // END of SWITCH statement
 
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
@@ -1777,7 +1814,7 @@ function renderSectionMenu(webpage_index) {
         "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-section_1-schedule_2016\">Schedule 2016</a>\n" + 
         "        <a href=\"/la/assets/html/debate/discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-section_1-history\">Discussion (ENG)</a>\n" + 
         "        <a href=\"/la/assets/html/debate/schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-schedule_2018\">Schedule 2018</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/recuitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-section_1-recruitment\">Recruitment</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-section_1-recruitment\">Recruitment</a>\n" + 
         "        <a href=\"/la/assets/html/debate/discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-section_1-discussion_2015\">Discussion (2015)</a>\n" + 
         "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-section_1-debate_2014\">Debate (2014)</a>"
       );
