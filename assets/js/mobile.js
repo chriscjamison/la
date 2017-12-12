@@ -58,7 +58,8 @@ function extractHtmlFromDesktopPage()  {
         'discussion_english.htm', 
         'schedule_2018.htm', 
         'recruitment.htm', 
-        'discussion_2015.htm'
+        'discussion_2015.htm', 
+        'debate_2014.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1148,7 +1149,7 @@ function extractHtmlFromDesktopPage()  {
                                     "          <a href=\"schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\">2016 정규토론수업 일정 업데이트</a>\n" + 
                                     "          <a href=\"discussion_english.htm\" title=\"주중 영어토론반 일정안내\">주중 영어토론반 일정안내</a>\n" +
                                     "          <a href=\"schedule_2018.htm\" title=\"2018 토론수업일정\">2018 토론수업일정</a>\n" +  
-                                    "          <a href=\"recuitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\">초등 저학년 토론반을 모집합니다.</a>\n" + 
+                                    "          <a href=\"recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\">초등 저학년 토론반을 모집합니다.</a>\n" + 
                                     "          <a href=\"discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\">정규토론 2015년 2분기 수업일정</a>\n" + 
                                     "          <a href=\"debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\">정규토론 2014년 4분기 일정</a>\n" + 
                                     "        </div>\n";  
@@ -1393,7 +1394,7 @@ function extractHtmlFromDesktopPage()  {
               case 24:
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>2018 Lesson Schedule</h4>\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20토론수업%20일정.png\"  width=\"714\" height=\"920\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20토론수업%20일정.png\" width=\"714\" height=\"920\" />\n" + 
                                     "        </div>\n";  
 
                 webpage_index = 24;
@@ -1595,6 +1596,19 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 26;
               break;
+
+              // Runs if the loading page is the 'Debate' page for the debate information of 2014.
+              case 27:
+              extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                  "          <h4>2018 Lesson Schedule</h4>\n" + 
+                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Debate%20Lv.jpg\" width=\"500\" height=\"300\" />\n" + 
+                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Themes.jpg\" width=\"500\" height=\"300\" />\n" + 
+                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/3_%ED%86%A0%EB%A1%A0%EC%A0%95%EA%B7%9C.jpg\" width=\"500\" height=\"200\">\n" + 
+                                  "          <a href=\"/la/assets/html/admissions/admissions.htm\" title=\"Admissions\">Admissions</a>\n" + 
+                                  "        </div>\n";  
+
+              webpage_index = 27;
+            break;
               
             }
           }	
@@ -1784,6 +1798,11 @@ function renderHeader(webpage_index) {
     // Runs if the loading page is the Debate page for the regular discussions of 2015.
     case 26: 
       title_html = title_html + section_html + "Regular discussions Q2 of 2015";
+    break;
+
+    // Runs if the loading page is the Debate page for the debate information for 2014.
+    case 27: 
+      title_html = title_html + section_html + "Regular debate Q4 2014";
     break;
   } // END of SWITCH statement
 
@@ -2141,7 +2160,7 @@ function renderArticle(extracted_html, webpage_index) {
     );
   } // END of if STATEMENT
 
-  if ((webpage_index > 15) && (webpage_index <= 26))  {
+  if ((webpage_index > 15) && (webpage_index <= 27))  {
     
     if (webpage_index === 22) {
       updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];

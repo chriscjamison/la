@@ -23,7 +23,8 @@ h2,
 .article-faculty-member, 
 .article-faculty-member-page, 
 .article-debate-links,
-.article-debate,   
+.article-debate, 
+.article-debate img:nth-child(4) + a,   
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -37,7 +38,8 @@ td,
 .article-faculty-member-page a, 
 .article-faculty-member-page ul li, 
 th, 
-.article-debate table:nth-child(7) tr:nth-child(1) td {
+.article-debate table:nth-child(7) tr:nth-child(1) td, 
+.article-debate img:nth-child(4) + a {
   font-size: 32px;
 }
 
@@ -87,7 +89,8 @@ nav > section > div span,
 .article-debate h4, 
 .article-debate h6,
 .article-debate > span, 
-.article-debate table + span  {
+.article-debate table + span, 
+.article-debate img:nth-child(4) + a  {
   text-align: center;
 }
 
@@ -137,7 +140,8 @@ header img {
 nav > section > div > a, 
 #nav-sub_menu a, 
 #nav-main_menu > section > div > a, 
-.article-faculty-member-page a {
+.article-faculty-member-page a, 
+.article-debate img:nth-child(4) + a {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
@@ -147,14 +151,16 @@ nav > section > div > a,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
 #nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active {
+.article-faculty-member-page a:active, 
+.article-debate img:nth-child(4) + a:active {
   background-color: #485081;
   border-color: #e76200;
 }
 
 #header-links a:active, 
 #nav-menu-links a:active, 
-#nav-section_menu a:active {
+#nav-section_menu a:active, 
+.article-debate img:nth-child(4) + a:active {
   color: #fff;
 }
 
@@ -167,7 +173,8 @@ nav > section > div > a:active,
 nav > section > div span, 
 #nav-main_menu > section > div span, 
 #nav-section_menu a, 
-.article-faculty-member-page a {
+.article-faculty-member-page a, 
+.article-debate img:nth-child(4) + a {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
   color: #485081;
@@ -621,6 +628,11 @@ th,
   margin: 1em 1em 1em 5.5em;
 }
 
+.article-debate img:nth-child(4) + a {
+  display: block;
+  margin-top: 2em !important;
+}
+
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
     width: 97%;
@@ -643,14 +655,16 @@ th,
 
   #header-links a,  
   #nav-section_menu a, 
-  .article-faculty-member-page a {
+  .article-faculty-member-page a, 
+  .article-debate img:nth-child(4) + a {
     width: 8.79em;
     height: 0.25em;
     padding: 0.8em;
     line-height: 0.25em;
   }
 
-  #nav-section_menu a {
+  #nav-section_menu a, 
+  .article-debate img:nth-child(4) + a {
     width: 11em;
     margin: 1em auto;
     display: block;
