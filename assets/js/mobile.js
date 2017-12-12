@@ -54,7 +54,8 @@ function extractHtmlFromDesktopPage()  {
         'location.htm', 
         'debate.htm', 
         'schedule_2017.htm', 
-        'schedule_2016.htm'
+        'schedule_2016.htm', 
+        'discussion_english.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1164,190 +1165,225 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 21;
               break;
 
-              // Runs if the loading page is the 'Debate' page for the 2017 schedule.
+              // Runs if the loading page is the 'Debate' page for the 2016 schedule.
               case 22:
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>2016 regular discussion<br/>class schedule update</h4>\n" + 
                                     "          <h6>Discussion class schedule<br/>(Talk 3 hours rekchyeo lecture 2.5 hours)</h6>\n" + 
                                     "          <span>2016 is the reference grade year</span>\n";
 
-                extracted_html[1] = "        <table>\n" + 
-                                    "          <thead>\n" + 
-                                    "            <tr>\n" + 
-                                    "              <th scope=\"col\">\n" +  
-                                    "                학년\n" + 
-                                    "              </th>\n" + 
-                                    "              <th scope=\"col\">\n" +  
-                                    "                토론수업일정\n" + 
-                                    "              </th>\n" + 
-                                    "              <th scope=\"col\">\n" +  
-                                    "                수업료\n" + 
-                                    "              </th>\n" + 
-                                    "              <th scope=\"col\">\n" +  
-                                    "                토론수업일정\n" + 
-                                    "              </th>\n" + 
-                                    "              <th scope=\"col\">\n" +  
-                                    "                수업료\n" + 
-                                    "              </th>\n" + 
-                                    "              <th scope=\"col\">\n" +  
-                                    "                학년\n" + 
-                                    "              </th>\n" + 
-                                    "            </tr>\n" + 
-                                    "          </thead>\n" + 
-                                    "          <tbody>\n" + 
-                                    "            <tr>\n" + 
-                                    "              <td rowspan=\"4\">\n" + 
-                                    "                초등토론\n" + 
-                                    "                <br/>\n" + 
-                                    "                (3,4/5,6)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                수요일, 4-7 (5,6)\n" + 
-                                    "                <br/>\n" + 
-                                    "                (2/3일개강, 접수중)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td rowspan=\"5\">\n" + 
-                                    "                4주만원\n" + 
-                                    "                <br/>\n" + 
-                                    "                5주45만원\n" + 
-                                    "              </td>\n" + 
-                                    "              <td rowspan=\"4\">\n" + 
-                                    "                중등토론(1,2)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                수요일, 7-10 (중1,2)\n" + 
-                                    "                <br/>\n" + 
-                                    "                (1/6일개강, 접수중)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td rowspan=\"5\">\n" + 
-                                    "                4주: 36만원\n" + 
-                                    "                <br/>\n" + 
-                                    "                5주45만원\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" + 
-                                    "            <tr>\n" + 
-                                    "              <td>\n" + 
-                                    "                목요일, 4-7 (초3,4)(1/7일 개강, 접수중)" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                수요일, 7-10 (중2,3)\n" + 
-                                    "                <br/>\n" + 
-                                    "                (1/6일개강, 접수중)\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" + 
-                                    "            <tr>\n" + 
-                                    "              <td>\n" + 
-                                    "                토요일, 12-3PM\n" + 
-                                    "                <br/>\n" + 
-                                    "                (초3,4/5,6)\n" + 
-                                    "                <br/>\n" + 
-                                    "                4-7 (초5,6)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                토요일,12-3 (중)" + 
-                                    "                <br/>\n" + 
-                                    "                4-7 (중1,2)\n" + 
-                                    "                <br/>\n" + 
-                                    "                7-10 (중2,3)\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" + 
-                                    "            <tr>\n" + 
-                                    "              <td>\n" + 
-                                    "                일요일, 1-4 (5,6)" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                일요일, 4-7 (2)" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" +
-                                    "            <tr>\n" +  
-                                    "              <td>\n" +
-                                    "                고등토론(중이상)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                일요일, 1-4 (1,3)" + 
-                                    "                <br/>\n" + 
-                                    "                4-7 (중3이상)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                중등토론(중3이상)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                일요일, 4-7 (중3)" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" + 
-                                    "          </tbody>\n" + 
-                                    "        </table>\n" + 
-                                    "        <span>\n" + 
-                                    "          *초등 렉쳐일정 <em>(2월부터 수강가능</em>: 매주 금요일 시 중등이상 렉쳐일정: 매주 금요일 7-9:30재(학생 Only)\n" + 
-                                    "        </span>\n";
+                extracted_html[1] = "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  토론수업일정\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  수업료\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  토론수업일정\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  수업료\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td rowspan=\"4\">\n" + 
+                                    "                  초등토론\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (3,4/5,6)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 4-7 (5,6)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (2/3일개강, 접수중)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"5\">\n" + 
+                                    "                  4주만원\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  5주45만원\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"4\">\n" + 
+                                    "                  중등토론(1,2)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 7-10 (중1,2)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (1/6일개강, 접수중)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"5\">\n" + 
+                                    "                  4주: 36만원\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  5주45만원\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  목요일, 4-7 (초3,4)(1/7일 개강, 접수중)" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 7-10 (중2,3)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (1/6일개강, 접수중)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일, 12-3PM\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (초3,4/5,6)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  4-7 (초5,6)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일,12-3 (중)" + 
+                                    "                  <br/>\n" + 
+                                    "                  4-7 (중1,2)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  7-10 (중2,3)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일, 1-4 (5,6)" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일, 4-7 (2)" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" +
+                                    "              <tr>\n" +  
+                                    "                <td>\n" +
+                                    "                  고등토론(중이상)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일, 1-4 (1,3)" + 
+                                    "                  <br/>\n" + 
+                                    "                  4-7 (중3이상)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중등토론(중3이상)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일, 4-7 (중3)" + 
+                                    "                </td>\n" + 
+                                    "             </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "          <span>\n" + 
+                                    "            *초등 렉쳐일정 <em>(2월부터 수강가능</em>: 매주 금요일 시 중등이상 렉쳐일정: 매주 금요일 7-9:30재(학생 Only)\n" + 
+                                    "          </span>\n";
 
-                extracted_html[2] = "        <h4>대회프렙 최상위반 (토론3시간렉쳐강의2.5시간)</h4>\n" + 
-                                    "        <table>\n" + 
-                                    "          <tbody>\n" + 
-                                    "            <tr>\n" + 
-                                    "              <td scope=\"col\" rowspan=\"4\">\n" + 
-                                    "                KAIROS\n" + 
-                                    "                <br/>\n" + 
-                                    "                (대회프렙최상위반)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td scope=\"col\">\n" + 
-                                    "                학년\n" + 
-                                    "              </td>\n" + 
-                                    "              <td scope=\"col\">\n" + 
-                                    "                토론수업일정\n" + 
-                                    "              </td>\n" + 
-                                    "              <td scope=\"col\">\n" + 
-                                    "                렉쳐일정\n" + 
-                                    "              </td>\n" + 
-                                    "              <td scope=\"col\">\n" + 
-                                    "                수업료\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>" +
-                                    "            <tr>\n" + 
-                                    "              <td>\n" + 
-                                    "                KAIROS-ED (초등)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                토요일, 12-3PM\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                금요일, 4:30-7PM\n" + 
-                                    "              </td>\n" + 
-                                    "              <td rowspan=\"3\">\n" + 
-                                    "                4주: 36만원\n" + 
-                                    "                <br/>\n" + 
-                                    "                5주 45만원\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" +
-                                    "            <tr>\n" +  
-                                    "              <td>\n" + 
-                                    "                KAIROS-PD (중등)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                토요일 4-7PM\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                금요일, 7-9:30PM\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" +
-                                    "            <tr>\n" +  
-                                    "              <td>\n" + 
-                                    "                KAIROS-LD (고등)\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                토요일 7-10PM\n" + 
-                                    "              </td>\n" + 
-                                    "              <td>\n" + 
-                                    "                금요일, 7-9:30PM\n" + 
-                                    "              </td>\n" + 
-                                    "            </tr>\n" + 
-                                    "          </tbody>\n" + 
-                                    "        </table>\n" + 
-                                    "        <span>\n" + 
-                                    "          *응시일정년에 번 상반기, 하반기진행 (1차:싸이트 온라인접수, 2차오디션:1차 합격자에 한함)\n" + 
-                                    "        </span>\n";
+                extracted_html[2] = "          <h4>대회프렙 최상위반 (토론3시간렉쳐강의2.5시간)</h4>\n" + 
+                                    "          <table>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td scope=\"col\" rowspan=\"4\">\n" + 
+                                    "                  KAIROS\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (대회프렙최상위반)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td scope=\"col\">\n" + 
+                                    "                  학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td scope=\"col\">\n" + 
+                                    "                  토론수업일정\n" + 
+                                    "                </td>\n" + 
+                                    "                <td scope=\"col\">\n" + 
+                                    "                  렉쳐일정\n" + 
+                                    "                </td>\n" + 
+                                    "                <td scope=\"col\">\n" + 
+                                    "                  수업료\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" +
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  KAIROS-ED (초등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일, 12-3PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  금요일, 4:30-7PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"3\">\n" + 
+                                    "                  4주: 36만원\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  5주 45만원\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" +
+                                    "              <tr>\n" +  
+                                    "                <td>\n" + 
+                                    "                  KAIROS-PD (중등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일 4-7PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  금요일, 7-9:30PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" +
+                                    "              <tr>\n" +  
+                                    "                <td>\n" + 
+                                    "                  KAIROS-LD (고등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일 7-10PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  금요일, 7-9:30PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "          <span>\n" + 
+                                    "            *응시일정년에 번 상반기, 하반기진행 (1차:싸이트 온라인접수, 2차오디션:1차 합격자에 한함)\n" + 
+                                    "          </span>\n" + 
+                                    "        </div>\n";
 
                 webpage_index = 22;
+              break;
+
+              // Runs if the loading page is the 'Debate' page for the weekly English discussion.
+              case 23:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>Weekly English Discussion Class Schedule</h4>\n" + 
+                                    "          <p>\n" + 
+                                    "            주중 가능한 토론수업일정안내 드리오니 확인하시고 \n" + 
+                                    "            <br/>\n" + 
+                                    "            많이 참여해 주시기 바랍니다.\n" + 
+                                    "          </p>\n" + 
+                                    "          <ul>\n" +
+                                    "            <li>초등 5학년반 - 매주 수요일 4-7시</li>\n" + 
+                                    "            <li>초등 6학년반 - 매주 </li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <ul>\n" +
+                                    "            <li>중등 1학년반 - 매주 수요일 7-10시</li>\n" + 
+                                    "            <li>중등 2학년반 - 매주 목요일 7-10시</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <p>\n" + 
+                                    "            => 주1회 3시간 정규영어토론을 수강하는 학생들은\n" +  
+                                    "            <br/>\n" + 
+                                    "            매주 금요일 4:30-7시(초등), 7:30-10시(중등)에 진행하는\n" + 
+                                    "            <br/>\n" + 
+                                    "            토론 렉쳐 & 클리닉을 추가 수강할 수 있습니다.\n" + 
+                                    "            <br/>\n" + 
+                                    "            (수업내용 -해당주 토픽강의1시간,개별스피치 클리닉으로구성,예약제)\n" + 
+                                    "          </p>\n" + 
+                                    "          <p>\n" + 
+                                    "            감사합니다. 02-562-9799\n" + 
+                                    "          </p>\n"
+                                    "        </div>\n";  
+
+                webpage_index = 23;
               break;
           
             }
@@ -1519,7 +1555,12 @@ function renderHeader(webpage_index) {
     case 22: 
       title_html = title_html + section_html + "2016 regular discussion class schedule update";
     break;
-  } // END of SWITCH statement
+
+    // Runs if the loading page is the Debate page for the weekly English discussion.
+    case 23: 
+    title_html = title_html + section_html + "Weekly English Discussion Class Schedule";
+  break;
+  } // END of SWITCH statement 
 
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
