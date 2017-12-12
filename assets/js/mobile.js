@@ -55,7 +55,8 @@ function extractHtmlFromDesktopPage()  {
         'debate.htm', 
         'schedule_2017.htm', 
         'schedule_2016.htm', 
-        'discussion_english.htm'
+        'discussion_english.htm', 
+        'schedule_2018.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1385,7 +1386,17 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 23;
               break;
-          
+
+              // Runs if the loading page is the 'Debate' page for the 2018 Lesson Schedule.
+              case 24:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>2018 Lesson Schedule</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20토론수업%20일정.png\"  width=\"714\" height=\"920\" />\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 24;
+              break;
+              
             }
           }
         }
@@ -1558,8 +1569,13 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the Debate page for the weekly English discussion.
     case 23: 
-    title_html = title_html + section_html + "Weekly English Discussion Class Schedule";
-  break;
+      title_html = title_html + section_html + "Weekly English Discussion Class Schedule";
+    break;
+
+    // Runs if the loading page is the Debate page for the 2018 Lesson Schedule.
+    case 24: 
+      title_html = title_html + section_html + "2018 Lesson Schedule";
+    break;
   } // END of SWITCH statement 
 
   jq("head").html(
@@ -1751,7 +1767,7 @@ function renderSectionMenu(webpage_index) {
         "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
-        "        <a href=\"/la/assets/html/guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-history\">학원제도(SYSTEM)</a>\n" + 
+        "        <a href=\"/la/assets/html/guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-system\">학원제도(SYSTEM)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
       );
@@ -1760,6 +1776,7 @@ function renderSectionMenu(webpage_index) {
         "        <a href=\"/la/assets/html/debate/schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-section_1-schedule_2017\">Schedule 2017</a>\n" + 
         "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-section_1-schedule_2016\">Schedule 2016</a>\n" + 
         "        <a href=\"/la/assets/html/debate/discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-section_1-history\">Discussion (ENG)</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-schedule_2018\">Schedule 2018</a>\n" + 
         "        <a href=\"/la/assets/html/debate/recuitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-section_1-recruitment\">Recruitment</a>\n" + 
         "        <a href=\"/la/assets/html/debate/discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-section_1-discussion_2015\">Discussion (2015)</a>\n" + 
         "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-section_1-debate_2014\">Debate (2014)</a>"
