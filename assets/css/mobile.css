@@ -35,21 +35,59 @@ td,
 .article-faculty-member-page h6, 
 .article-faculty-member-page p, 
 .article-faculty-member-page a, 
-.article-faculty-member-page ul li {
+.article-faculty-member-page ul li, 
+th, 
+.article-debate table:nth-child(7) tr:nth-child(1) td {
   font-size: 32px;
 }
 
 .article-faculty-member ul li, 
 .article-faculty-member p, 
-.article-debate-links a {
+.article-debate-links a, 
+.article-debate h6, 
+.article-debate > span {
   font-size: 25px;
+}
+
+.article-debate table + span {
+  font-size: 24px;
+}
+
+h2, 
+.article-faculty-member, 
+.article-faculty-member-page span, 
+.article-faculty-member-page h7,
+.article-faculty-member-page p, 
+.article-faculty-member-page ul li, 
+.article-debate h6, 
+.article-debate > span, 
+.article-debate table + span, 
+.article-debate table td {
+  font-weight: 400;
+}
+
+h2, 
+#header-links a, 
+nav > section > div span, 
+#nav-main_menu > section > div span, 
+#nav-section_menu a, 
+#footer-row_3, 
+.article-faculty-member-page a, 
+.article-faculty-member-page h4, 
+.article-faculty-member-page span, 
+.article-faculty-member-page h7, 
+.article-faculty-member-page h6, 
+.article-faculty-member-page p, 
+.article-debate h4, 
+.article-debate h6,
+.article-debate > span, 
+.article-debate table + span  {
+  text-align: center;
 }
 
 h2 {
   margin: 1em 0 0.5em 0;
-  text-align: center;
   font-size: 3em;
-  font-weight: 400;
 }
 
 header img {
@@ -124,7 +162,6 @@ nav > section > div span,
 #nav-main_menu > section > div span, 
 #nav-section_menu a, 
 .article-faculty-member-page a {
-  text-align: center;
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
   color: #485081;
@@ -343,8 +380,7 @@ footer > #footer-border {
 }
 
 #footer-row_3 {
-  margin-top: 2.5em;
-  text-align: center;    
+  margin-top: 2.5em;  
 }
 
 #footer-row_3 span {
@@ -401,7 +437,6 @@ article {
   float: left;
   border: 2px solid #cec2b4;
   border-radius: 15px;
-  font-weight: 400;
 }
 
 .article-faculty-member img {
@@ -440,25 +475,10 @@ article {
 .article-debate h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
-  text-align: center;
 }
 
 .article-debate h4 {
   margin: 1em 0;
-}
-
-.article-faculty-member-page span, 
-.article-faculty-member-page h7, 
-.article-faculty-member-page h6, 
-.article-faculty-member-page p {
-  text-align: center;
-}
-
-.article-faculty-member-page span, 
-.article-faculty-member-page h7,
-.article-faculty-member-page p, 
-.article-faculty-member-page ul li {
-  font-weight: 400;
 }
 
 .article-faculty-member-page span {
@@ -551,6 +571,35 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 .article-debate-links a:nth-child(1) {
   margin-top: 0;
+}
+
+.article-debate h6 {
+  margin: 0.75em 0;
+}
+
+.article-debate > span, 
+.article-debate table + span {
+  display: block;
+}
+
+.article-debate table {
+  width: 960px !important;
+  margin: 2em auto;
+}
+
+th, 
+.article-debate table:nth-child(7) tr:nth-child(1) td {
+  background-color: #d5ccb2;
+  color: #573214;
+}
+
+.article-debate table td, 
+.article-debate table:nth-child(7) tr:nth-child(1) td:nth-child(1) {
+  width: auto;
+  background-color: transparent;
+  border: 2px dashed #cec2b4;
+  vertical-align: middle;
+  color: #4f4f4f;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {
