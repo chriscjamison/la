@@ -1776,6 +1776,17 @@ function extractHtmlFromDesktopPage()  {
               webpage_index = 29;
             break;
 
+            // Runs if the loading page is the 'English' page for 2017 admissions.
+            case 30:
+              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                  "          <h4>2017년 원서강독 수업 일정 업데이트</h4>\n" + 
+                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/3_2017년%20정규%20일정표1.jpg\" width=\"674\"  height=\"836\"\n" + 
+                                  "        </div>\n";  
+                                  
+
+              webpage_index = 30;
+            break;
+
             }
           }	
         }
