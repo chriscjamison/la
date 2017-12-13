@@ -25,7 +25,8 @@ h2,
 .article-debate-links,
 .article-debate, 
 .article-debate img:nth-child(4) + a, 
-.article-english-links,  
+.article-english-links, 
+.article-english, 
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -74,7 +75,8 @@ h2,
 .article-debate p, 
 .article-debate ul li, 
 .article-debate ol li, 
-.article-english-links {
+.article-english-links, 
+.article-english table td  {
   font-weight: 400;
 }
 
@@ -94,7 +96,8 @@ nav > section > div span,
 .article-debate h6,
 .article-debate > span, 
 .article-debate table + span, 
-.article-debate img:nth-child(4) + a  {
+.article-debate img:nth-child(4) + a, 
+.article-english h4  {
   text-align: center;
 }
 
@@ -491,12 +494,14 @@ article {
 }
 
 .article-faculty-member-page h4, 
-.article-debate h4  {
+.article-debate h4, 
+.article-english h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
 }
 
-.article-debate h4 {
+.article-debate h4, 
+.article-english h4 {
   margin: 1em 0;
 }
 
@@ -563,7 +568,8 @@ article > table + table > tbody > tr:nth-child(2) > td:nth-child(2),
 article > table + table > tbody > tr:nth-child(3) > td:nth-child(2), 
 article > table + table > tbody > tr:nth-child(4) > td:nth-child(2), 
 .article-faculty-member-page, 
-.article-debate {
+.article-debate, 
+.article-english {
   width: 75%;
   height: auto;
   min-height: 1px;
@@ -578,7 +584,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 /* PAGE: Debate */
 
 .article-header-debate, 
-.article-debate-links {
+.article-debate-links, 
+.article-english-links {
   width: 680px !important;
   margin: 0 auto;
 }
@@ -600,11 +607,13 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 }
 
 .article-debate > span, 
-.article-debate table + span {
+.article-debate table + span, 
+.article-english > span {
   display: block;
 }
 
-.article-debate table {
+.article-debate table, 
+.article-english table {
   width: 960px !important;
   margin: 2em auto;
 }
@@ -617,7 +626,8 @@ th,
 }
 
 .article-debate table td, 
-.article-debate table:nth-child(7) tr:nth-child(1) td:nth-child(1) {
+.article-debate table:nth-child(7) tr:nth-child(1) td:nth-child(1), 
+.article-english table td {
   width: auto;
   background-color: transparent;
   border: 2px dashed #cec2b4;
@@ -640,6 +650,14 @@ th,
 .article-debate img:nth-child(4) + a {
   display: block;
   margin-top: 2em !important;
+}
+
+
+/* PAGE: English */ 
+
+.article-english table th, 
+.article-english table td {
+  padding: 0.25em;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {

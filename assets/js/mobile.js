@@ -1318,7 +1318,7 @@ function extractHtmlFromDesktopPage()  {
                                     "                <td scope=\"col\">\n" + 
                                     "                  수업료\n" + 
                                     "                </td>\n" + 
-                                    "              </tr>" +
+                                    "              </tr>\n" +
                                     "              <tr>\n" + 
                                     "               <td>\n" + 
                                     "                  KAIROS-ED (초등)\n" + 
@@ -1638,6 +1638,142 @@ function extractHtmlFromDesktopPage()  {
                                   
 
               webpage_index = 28;
+            break;
+
+            // Runs if the loading page is the 'English' page for the booklist of 2016.
+            case 29:
+              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                  "          <h4>2016년 원서강독 Booklist</h4>\n" + 
+                                  "          <table>\n" + 
+                                  "            <thead>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Month\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Reading Theme\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Junior\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Lexis\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Mythos\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Opsis\n" + 
+                                  "                </th>\n" + 
+                                  "              </tr>\n" + 
+                                  "            </thead>\n" + 
+                                  "            <tbody>\n" + 
+                                  "              <tr>\n" + 
+                                  "               <td>\n" + 
+                                  "                  March\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Historical\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Little House on the Prarie\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Roll of Thunder, Hear My Cry\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Chasing Lincoln's Killer\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Black Boy\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" +
+                                  "              <tr>\n" + 
+                                  "               <td>\n" + 
+                                  "                  April\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Fantasy\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Harry Potter and Sorceror's Stone\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Fablehaven\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Giver\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  City of Beasts\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "               <td>\n" + 
+                                  "                  May\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Classics\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Charlotte's Web\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Stuart Little\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  To Kill a Mockingbird\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Sun Also Rises\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "               <td>\n" + 
+                                  "                  June\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Adventure\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  James and the Giant Peach\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Westing Game\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Curious Incident of the Dog in the Nighttime\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Good Omens\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "               <td>\n" + 
+                                  "                  July\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Nonfiction\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  George's Secret Key to the Universe\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Notorious Benedict Arnold: A True Story of Adventure, Heroism & Treachery\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Bomb: The Race to Build - and Steal - the World's Most Dangerous Weapon\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Outliers\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "            </tbody>\n" + 
+                                  "          </table>\n" + 
+                                  "        </div>\n";
+                                  
+
+              webpage_index = 29;
             break;
 
             }
