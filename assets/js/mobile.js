@@ -1787,6 +1787,254 @@ function extractHtmlFromDesktopPage()  {
               webpage_index = 30;
             break;
 
+            // Runs if the loading page is the 'English' page for the booklist of 2016.
+            case 31:
+              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                  "          <h4>2016년 1,2분기 원서안내</h4>\n" + 
+                                  "          <h6>2016년 Book List</h6>\n" + 
+                                  "          <table>\n" + 
+                                  "            <thead>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  &nbsp;\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Month\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Reading Theme\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Lexis\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Book Title (도서명)\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Mythos\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Book Title (도서명)\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Opsis\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  Book Title (도서명)\n" + 
+                                  "                </th>\n" + 
+                                  "              </tr>\n" + 
+                                  "            </thead>\n" + 
+                                  "            <tbody>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  A1\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Jan\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Adolescent Development\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Harry Potter (Chamber of Secrets)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Lord of the Flies\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Adventures of Huckleberry Finn\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  A2\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Feb\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Science Fiction\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Wrinkle in Time\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Childhood's End\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Moon is a Harsh Mistress\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  A3\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Mar\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Historical\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Roll of Thunder, Hear My Cry\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Chasing Lincoln's Killer\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2A\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Black Boy\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  B1\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Apr\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Fantasy\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Fablehaven\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Giver\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  City of Beasts\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  B2\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  May\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Classics\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Stuart Little\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  To Kill a Mockingbird\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Sun Also Rises\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  B3\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Jun (6월)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Adventure\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4C\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Curious Incident of the Dog in the Nighttime\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6B\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  To Kill a Mockingbird\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2C\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Round House\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  C1\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Jul\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Nonfiction\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  4C\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  The Notorious Benedict Arnold: A True Story of Adventure, Heroism & Treachery\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  6C\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Bomb: The Race to Build - and Steal - the World's Most Dangerous Weapon\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MS2C\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  Outliers\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "            </tbody>\n" + 
+                                  "          </table>\n" + 
+                                  "        </div>\n";
+                                  
+              webpage_index = 31;
+            break;
+
             }
           }	
         }

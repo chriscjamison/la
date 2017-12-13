@@ -48,7 +48,8 @@ td,
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
 .article-debate img:nth-child(4) + a, 
-.article-english-links a {
+.article-english-links a, 
+.article-english h6 {
   font-size: 32px;
 }
 
@@ -60,6 +61,11 @@ th,
 
 .article-debate table + span {
   font-size: 24px;
+}
+
+.article-english > h4 + h6 + table th, 
+.article-english > h4 + h6 + table td {
+  font-size: 23px;
 }
 
 h2, 
@@ -76,7 +82,8 @@ h2,
 .article-debate ul li, 
 .article-debate ol li, 
 .article-english-links, 
-.article-english table td  {
+.article-english table td, 
+.article-english h6  {
   font-weight: 400;
 }
 
@@ -97,7 +104,8 @@ nav > section > div span,
 .article-debate > span, 
 .article-debate table + span, 
 .article-debate img:nth-child(4) + a, 
-.article-english h4  {
+.article-english h4, 
+.article-english h6  {
   text-align: center;
 }
 
@@ -602,7 +610,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   margin-top: 0;
 }
 
-.article-debate h6 {
+.article-debate h6, 
+.article-english h6 {
   margin: 0.75em 0;
 }
 
