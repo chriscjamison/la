@@ -1776,7 +1776,7 @@ function extractHtmlFromDesktopPage()  {
               webpage_index = 29;
             break;
 
-            // Runs if the loading page is the 'English' page for 2017 admissions.
+            // Runs if the loading page is the 'English' page for the schedule for 2017.
             case 30:
               extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
                                   "          <h4>2017년 원서강독 수업 일정 업데이트</h4>\n" + 
@@ -1787,7 +1787,7 @@ function extractHtmlFromDesktopPage()  {
               webpage_index = 30;
             break;
 
-            // Runs if the loading page is the 'English' page for the booklist of 2016.
+            // Runs if the loading page is the 'English' page for the 2016 application form.
             case 31:
               extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
                                   "          <h4>2016년 1,2분기 원서안내</h4>\n" + 
@@ -2035,6 +2035,79 @@ function extractHtmlFromDesktopPage()  {
               webpage_index = 31;
             break;
 
+             // Runs if the loading page is the 'English' page for the schedule for 2016.
+             case 32:
+              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                  "          <h4>2016년 원서강독수업 일정 업데이트</h4>\n" + 
+                                  "          <span>원서강독반 일정 (리딩 라이팅 주1회)<br/><strong>*2016년 2월3일 개강(접수중)</strong></span>\n" + 
+                                  "          <table>\n" + 
+                                  "            <thead>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  클래스명\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  수업내용\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  수업일정\n" + 
+                                  "                </th>\n" + 
+                                  "                <th scope=\"col\">\n" + 
+                                  "                  수업료\n" + 
+                                  "                </th>\n" + 
+                                  "              </tr>\n" + 
+                                  "            </thead>\n" + 
+                                  "            <tbody>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  LEXIS (렉서스초3,4)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  원서강독 (리딩&amp;라이팅)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  수요일, 4-6:30분 (Rick 강사)\n" + 
+                                  "                  <br/>\n" + 
+                                  "                  금요일, 4-6:30분 (Rick 강사)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td rowspan=\"3\">\n" + 
+                                  "                  4(주1회): 20만6천원\n" + 
+                                  "                  <br/>\n" + 
+                                  "                  5(주1회): 25만6천원\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  MYTHOS (미토스) 초5,6\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  원서강독 (리딩&amp;라이팅)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  수요일, 4-7시 (Matthew 강사)\n" + 
+                                  "                  <br/>\n" + 
+                                  "                  금요일, 4-7시 (Matthew 강사)\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "              <tr>\n" + 
+                                  "                <td>\n" + 
+                                  "                  OPSIS (옵시스) 중1,2\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  원서강독 (리딩&amp;라이팅)\n" + 
+                                  "                </td>\n" + 
+                                  "                <td>\n" + 
+                                  "                  수요일, 7-10시 (Matthew 강사)\n" + 
+                                  "                  <br/>\n" + 
+                                  "                  금요일, 7-10시 (Matthew 강사)\n" + 
+                                  "                </td>\n" + 
+                                  "              </tr>\n" + 
+                                  "            </tbody>\n" + 
+                                  "          </table>\n" + 
+                                  "        </div>\n";
+                                  
+              webpage_index = 32;
+            break;
             }
           }	
         }
