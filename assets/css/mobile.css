@@ -50,7 +50,8 @@ th,
 .article-debate img:nth-child(4) + a, 
 .article-english-links a, 
 .article-english h6, 
-.article-english > span {
+.article-english > span, 
+.article-english ul li {
   font-size: 32px;
 }
 
@@ -85,7 +86,8 @@ h2,
 .article-english-links, 
 .article-english table td, 
 .article-english h6, 
-.article-english > span  {
+.article-english > span, 
+.article-english ul li  {
   font-weight: 400;
 }
 
@@ -651,7 +653,8 @@ th,
   margin: 1em 1.5em;
 }
 
-.article-debate ul {
+.article-debate ul, 
+.article-english ul {
   margin: 1em 1em 1em 4.5em;
 }
 
@@ -670,6 +673,10 @@ th,
 .article-english table th, 
 .article-english table td {
   padding: 0.25em;
+}
+
+.article-english ul {
+  width: 80%;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {

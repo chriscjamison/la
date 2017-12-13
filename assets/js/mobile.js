@@ -1610,504 +1610,607 @@ function extractHtmlFromDesktopPage()  {
 
               // Runs if the loading page is the 'Debate' page for the debate information of 2014.
               case 27:
-              extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
-                                  "          <h4>2018 Lesson Schedule</h4>\n" + 
-                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Debate%20Lv.jpg\" width=\"500\" height=\"300\" />\n" + 
-                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Themes.jpg\" width=\"500\" height=\"300\" />\n" + 
-                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/3_%ED%86%A0%EB%A1%A0%EC%A0%95%EA%B7%9C.jpg\" width=\"500\" height=\"200\">\n" + 
-                                  "          <a href=\"/la/assets/html/admissions/admissions.htm\" title=\"Admissions\">Admissions</a>\n" + 
-                                  "        </div>\n";  
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>2018 Lesson Schedule</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Debate%20Lv.jpg\" width=\"500\" height=\"300\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Themes.jpg\" width=\"500\" height=\"300\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/3_%ED%86%A0%EB%A1%A0%EC%A0%95%EA%B7%9C.jpg\" width=\"500\" height=\"200\">\n" + 
+                                    "          <a href=\"/la/assets/html/admissions/admissions.htm\" title=\"Admissions\">Admissions</a>\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 27;
-            break;
+                webpage_index = 27;
+              break;
 
-            // Runs if the loading page is the 'English' page.
-            case 28:
-              extracted_html[0] = "        <div class=\"article-english-links\" id=\"article-content\">\n" + 
-                                  "          <a href=\"booklist_2016.htm\" title=\"2016년 원서강독 Booklist\">2016년 원서강독 Booklist</a>\n" + 
-                                  "          <a href=\"admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\">2017년 원서강독 수업 일정 업데이트</a>\n" + 
-                                  "          <a href=\"application_2016.htm\" title=\"2016년 1,2분기 원서안내\">2016년 1,2분기 원서안내</a>\n" +
-                                  "          <a href=\"schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\">2016년 원서강독수업 일정 업데이트</a>\n" +  
-                                  "          <a href=\"application_2018.htm\" title=\"2018 원서강독 수업일정\">2018 원서강독 수업일정</a>\n" + 
-                                  "          <a href=\"application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\">2016 원서강독 수업 일정 업데이트</a>\n" + 
-                                  "          <a href=\"talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\">2016 토론수업 일정 업데이트</a>\n" + 
-                                  "          <a href=\"schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\">주중 영어원서강독반 일정안내</a>\n" + 
-                                  "          <a href=\"english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\">고급영어 2015년 2분기 수업일정</a>\n" + 
-                                  "          <a href=\"schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\">정규영어 2014년 4분기 일정</a>\n" + 
-                                  "        </div>\n";  
-                                  
+              // Runs if the loading page is the 'English' page.
+              case 28:
+                extracted_html[0] = "        <div class=\"article-english-links\" id=\"article-content\">\n" + 
+                                    "          <a href=\"booklist_2016.htm\" title=\"2016년 원서강독 Booklist\">2016년 원서강독 Booklist</a>\n" + 
+                                    "          <a href=\"admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\">2017년 원서강독 수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"application_2016.htm\" title=\"2016년 1,2분기 원서안내\">2016년 1,2분기 원서안내</a>\n" +
+                                    "          <a href=\"schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\">2016년 원서강독수업 일정 업데이트</a>\n" +  
+                                    "          <a href=\"application_2018.htm\" title=\"2018 원서강독 수업일정\">2018 원서강독 수업일정</a>\n" + 
+                                    "          <a href=\"application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\">2016 원서강독 수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\">2016 토론수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\">주중 영어원서강독반 일정안내</a>\n" + 
+                                    "          <a href=\"english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\">고급영어 2015년 2분기 수업일정</a>\n" + 
+                                    "          <a href=\"schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\">정규영어 2014년 4분기 일정</a>\n" + 
+                                    "        </div>\n";  
+                                    
 
-              webpage_index = 28;
-            break;
+                webpage_index = 28;
+              break;
 
-            // Runs if the loading page is the 'English' page for the booklist of 2016.
-            case 29:
-              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                  "          <h4>2016년 원서강독 Booklist</h4>\n" + 
-                                  "          <table>\n" + 
-                                  "            <thead>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Month\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Reading Theme\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Junior\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Lexis\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Mythos\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Opsis\n" + 
-                                  "                </th>\n" + 
-                                  "              </tr>\n" + 
-                                  "            </thead>\n" + 
-                                  "            <tbody>\n" + 
-                                  "              <tr>\n" + 
-                                  "               <td>\n" + 
-                                  "                  March\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Historical\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Little House on the Prarie\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Roll of Thunder, Hear My Cry\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Chasing Lincoln's Killer\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Black Boy\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" +
-                                  "              <tr>\n" + 
-                                  "               <td>\n" + 
-                                  "                  April\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Fantasy\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Harry Potter and Sorceror's Stone\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Fablehaven\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Giver\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  City of Beasts\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "               <td>\n" + 
-                                  "                  May\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Classics\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Charlotte's Web\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Stuart Little\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  To Kill a Mockingbird\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Sun Also Rises\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "               <td>\n" + 
-                                  "                  June\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Adventure\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  James and the Giant Peach\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Westing Game\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Curious Incident of the Dog in the Nighttime\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Good Omens\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "               <td>\n" + 
-                                  "                  July\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Nonfiction\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  George's Secret Key to the Universe\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Notorious Benedict Arnold: A True Story of Adventure, Heroism & Treachery\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Bomb: The Race to Build - and Steal - the World's Most Dangerous Weapon\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Outliers\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "            </tbody>\n" + 
-                                  "          </table>\n" + 
-                                  "        </div>\n";
-                                  
+              // Runs if the loading page is the 'English' page for the booklist of 2016.
+              case 29:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>2016년 원서강독 Booklist</h4>\n" + 
+                                    "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Month\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Reading Theme\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Junior\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Lexis\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Mythos\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Opsis\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  March\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Historical\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Little House on the Prarie\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Roll of Thunder, Hear My Cry\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Chasing Lincoln's Killer\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Black Boy\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" +
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  April\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Fantasy\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Harry Potter and Sorceror's Stone\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Fablehaven\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Giver\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  City of Beasts\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  May\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Classics\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Charlotte's Web\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Stuart Little\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  To Kill a Mockingbird\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Sun Also Rises\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  June\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Adventure\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  James and the Giant Peach\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Westing Game\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Curious Incident of the Dog in the Nighttime\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Good Omens\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  July\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Nonfiction\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  George's Secret Key to the Universe\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Notorious Benedict Arnold: A True Story of Adventure, Heroism & Treachery\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Bomb: The Race to Build - and Steal - the World's Most Dangerous Weapon\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Outliers\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";
+                                    
 
-              webpage_index = 29;
-            break;
+                webpage_index = 29;
+              break;
 
-            // Runs if the loading page is the 'English' page for the schedule for 2017.
-            case 30:
-              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 원서강독 수업 일정 업데이트</h4>\n" + 
-                                  "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/3_2017년%20정규%20일정표1.jpg\" width=\"674\"  height=\"836\"\n" + 
-                                  "        </div>\n";  
-                                  
+              // Runs if the loading page is the 'English' page for the schedule for 2017.
+              case 30:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 원서강독 수업 일정 업데이트</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/3_2017년%20정규%20일정표1.jpg\" width=\"674\" height=\"836\" />\n" + 
+                                    "        </div>\n";  
+                                    
 
-              webpage_index = 30;
-            break;
+                webpage_index = 30;
+              break;
 
-            // Runs if the loading page is the 'English' page for the 2016 application form.
-            case 31:
-              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                  "          <h4>2016년 1,2분기 원서안내</h4>\n" + 
-                                  "          <h6>2016년 Book List</h6>\n" + 
-                                  "          <table>\n" + 
-                                  "            <thead>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  &nbsp;\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Month\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Reading Theme\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Lexis\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Book Title (도서명)\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Mythos\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Book Title (도서명)\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Opsis\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  Book Title (도서명)\n" + 
-                                  "                </th>\n" + 
-                                  "              </tr>\n" + 
-                                  "            </thead>\n" + 
-                                  "            <tbody>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  A1\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Jan\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Adolescent Development\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Harry Potter (Chamber of Secrets)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Lord of the Flies\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Adventures of Huckleberry Finn\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  A2\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Feb\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Science Fiction\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Wrinkle in Time\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Childhood's End\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Moon is a Harsh Mistress\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  A3\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Mar\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Historical\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Roll of Thunder, Hear My Cry\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Chasing Lincoln's Killer\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2A\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Black Boy\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  B1\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Apr\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Fantasy\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Fablehaven\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Giver\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  City of Beasts\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  B2\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  May\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Classics\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Stuart Little\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  To Kill a Mockingbird\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Sun Also Rises\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  B3\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Jun (6월)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Adventure\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4C\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Curious Incident of the Dog in the Nighttime\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6B\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  To Kill a Mockingbird\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2C\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Round House\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  C1\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Jul\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Nonfiction\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  4C\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  The Notorious Benedict Arnold: A True Story of Adventure, Heroism & Treachery\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  6C\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Bomb: The Race to Build - and Steal - the World's Most Dangerous Weapon\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MS2C\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  Outliers\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "            </tbody>\n" + 
-                                  "          </table>\n" + 
-                                  "        </div>\n";
-                                  
-              webpage_index = 31;
-            break;
+              // Runs if the loading page is the 'English' page for the 2016 application form.
+              case 31:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>2016년 1,2분기 원서안내</h4>\n" + 
+                                    "          <h6>2016년 Book List</h6>\n" + 
+                                    "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  &nbsp;\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Month\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Reading Theme\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Lexis\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Book Title (도서명)\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Mythos\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Book Title (도서명)\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Opsis\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  Book Title (도서명)\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  A1\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Jan\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Adolescent Development\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Harry Potter (Chamber of Secrets)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Lord of the Flies\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Adventures of Huckleberry Finn\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  A2\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Feb\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Science Fiction\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Wrinkle in Time\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Childhood's End\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Moon is a Harsh Mistress\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  A3\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Mar\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Historical\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Roll of Thunder, Hear My Cry\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Chasing Lincoln's Killer\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2A\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Black Boy\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  B1\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Apr\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Fantasy\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Fablehaven\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Giver\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  City of Beasts\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  B2\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  May\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Classics\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Stuart Little\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  To Kill a Mockingbird\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Sun Also Rises\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  B3\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Jun (6월)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Adventure\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4C\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Curious Incident of the Dog in the Nighttime\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6B\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  To Kill a Mockingbird\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2C\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Round House\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  C1\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Jul\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Nonfiction\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4C\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  The Notorious Benedict Arnold: A True Story of Adventure, Heroism & Treachery\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6C\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Bomb: The Race to Build - and Steal - the World's Most Dangerous Weapon\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS2C\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Outliers\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";
+                                    
+                webpage_index = 31;
+              break;
 
-             // Runs if the loading page is the 'English' page for the schedule for 2016.
-             case 32:
-              extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                  "          <h4>2016년 원서강독수업 일정 업데이트</h4>\n" + 
-                                  "          <span>원서강독반 일정 (리딩 라이팅 주1회)<br/><strong>*2016년 2월3일 개강(접수중)</strong></span>\n" + 
-                                  "          <table>\n" + 
-                                  "            <thead>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  클래스명\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  수업내용\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  수업일정\n" + 
-                                  "                </th>\n" + 
-                                  "                <th scope=\"col\">\n" + 
-                                  "                  수업료\n" + 
-                                  "                </th>\n" + 
-                                  "              </tr>\n" + 
-                                  "            </thead>\n" + 
-                                  "            <tbody>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  LEXIS (렉서스초3,4)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  원서강독 (리딩&amp;라이팅)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  수요일, 4-6:30분 (Rick 강사)\n" + 
-                                  "                  <br/>\n" + 
-                                  "                  금요일, 4-6:30분 (Rick 강사)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td rowspan=\"3\">\n" + 
-                                  "                  4(주1회): 20만6천원\n" + 
-                                  "                  <br/>\n" + 
-                                  "                  5(주1회): 25만6천원\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  MYTHOS (미토스) 초5,6\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  원서강독 (리딩&amp;라이팅)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  수요일, 4-7시 (Matthew 강사)\n" + 
-                                  "                  <br/>\n" + 
-                                  "                  금요일, 4-7시 (Matthew 강사)\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "              <tr>\n" + 
-                                  "                <td>\n" + 
-                                  "                  OPSIS (옵시스) 중1,2\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  원서강독 (리딩&amp;라이팅)\n" + 
-                                  "                </td>\n" + 
-                                  "                <td>\n" + 
-                                  "                  수요일, 7-10시 (Matthew 강사)\n" + 
-                                  "                  <br/>\n" + 
-                                  "                  금요일, 7-10시 (Matthew 강사)\n" + 
-                                  "                </td>\n" + 
-                                  "              </tr>\n" + 
-                                  "            </tbody>\n" + 
-                                  "          </table>\n" + 
-                                  "        </div>\n";
-                                  
-              webpage_index = 32;
-            break;
+              // Runs if the loading page is the 'English' page for the schedule for 2016.
+              case 32:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>2016년 원서강독수업 일정 업데이트</h4>\n" + 
+                                    "          <span>원서강독반 일정 (리딩 라이팅 주1회)<br/><strong>*2016년 2월3일 개강(접수중)</strong></span>\n" + 
+                                    "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  클래스명\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  수업내용\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  수업일정\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  수업료\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  LEXIS (렉서스초3,4)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  원서강독 (리딩&amp;라이팅)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 4-6:30분 (Rick 강사)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  금요일, 4-6:30분 (Rick 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"3\">\n" + 
+                                    "                  4(주1회): 20만6천원\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  5(주1회): 25만6천원\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MYTHOS (미토스) 초5,6\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  원서강독 (리딩&amp;라이팅)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  금요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  OPSIS (옵시스) 중1,2\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  원서강독 (리딩&amp;라이팅)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 7-10시 (Matthew 강사)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  금요일, 7-10시 (Matthew 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";
+                                    
+                webpage_index = 32;
+              break;
+
+              // Runs if the loading page is the 'English' page for the schedule for 2017.
+              case 33:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>2018 원서강독 수업일정</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20토론수업%20일정.png\" width=\"674\" height=\"868\" />\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 33;
+              break;
+
+              // Runs if the loading page is the 'English' page for the 2016 application.
+              case 34:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>2016 원서강독 수업 일정 업데이트</h4>\n" + 
+                                    "          <span>원서강독 수업 일정 안내합니다</span>\n" + 
+                                    "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  클래스명\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  수업내용\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  수업일정\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  수업료\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  JUNIOR 초2,3\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  리딩 &amp; 라이팅 &amp; 토론\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일 4-7 / 목요일 4-7시\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (Rick / Dillon 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"3\">\n" + 
+                                    "                  4(주1회): 20만6천원\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  5(주1회): 25만8천원\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  LEXIS 초3,4\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  원서강독 (리딩 &amp; 라이팅)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  금요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                 MYTHOS (미토스) 초5,6\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  원서강독 (리딩 &amp; 라이팅)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  금요일, 1-4시 (Matthew 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                 OPSIS 중등반\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  원서강독 (리딩 &amp; 라이팅)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일, 7-10시 (Matthew 강사)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  금요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "          <ul>\n" + 
+                                    "            <li>등록: 매월등록 또는 분기별 등록 (10%할인 적용)</li>\n" + 
+                                    "            <li>입학시험 일정: 매주 수(6-7:20PM), 토(2-3:20PM) / Reading, Essay & Impromptu Speech 부문 평가(하루 전 예약,무료)</li>\n" + 
+                                    "            <li>상담문의 02-562-9799, 문자예약 010-4773-9799</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "        </div>\n";
+                                    
+                webpage_index = 34;
+              break;
             }
           }	
         }
@@ -2558,10 +2661,10 @@ function renderSectionMenu(webpage_index) {
       );
     } else if ((webpage_index > 19) && webpage_index <= 27) {
       jq(menu_selector).html(
-        "        <a href=\"/la/assets/html/debate/schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule 2017</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule 2016</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
         "        <a href=\"/la/assets/html/debate/discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule 2018</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule (2018)</a>\n" + 
         "        <a href=\"/la/assets/html/debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
         "        <a href=\"/la/assets/html/debate/discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
         "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
