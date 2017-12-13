@@ -24,7 +24,8 @@ h2,
 .article-faculty-member-page, 
 .article-debate-links,
 .article-debate, 
-.article-debate img:nth-child(4) + a,   
+.article-debate img:nth-child(4) + a, 
+.article-english-links,  
 #footer-row_3 span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -42,10 +43,11 @@ td,
 .article-debate > span, 
 .article-debate p, 
 .article-debate ul li, 
-.article-debate ol li, 
+.article-debate ol li,
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
-.article-debate img:nth-child(4) + a {
+.article-debate img:nth-child(4) + a, 
+.article-english-links a {
   font-size: 32px;
 }
 
@@ -71,7 +73,8 @@ h2,
 .article-debate table td, 
 .article-debate p, 
 .article-debate ul li, 
-.article-debate ol li {
+.article-debate ol li, 
+.article-english-links {
   font-weight: 400;
 }
 
@@ -166,7 +169,8 @@ nav > section > div > a:active,
 }
 
 .article-faculty-info ul li a:active, 
-.article-debate-links a:active {
+.article-debate-links a:active, 
+.article-english-links a:active {
   color: #e76200;
 }
 
@@ -182,7 +186,8 @@ nav > section > div span,
 }
 
 .article-faculty-info ul li a, 
-.article-debate-links a {
+.article-debate-links a, 
+.article-english-links a {
   color: #485081;
 }
 
@@ -578,13 +583,15 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   margin: 0 auto;
 }
 
-.article-debate-links a {
+.article-debate-links a, 
+.article-english-links a {
   width: 17em;
   margin: 1em auto;
   display: block;
 }
 
-.article-debate-links a:nth-child(1) {
+.article-debate-links a:nth-child(1), 
+.article-english-links a:nth-child(1) {
   margin-top: 0;
 }
 

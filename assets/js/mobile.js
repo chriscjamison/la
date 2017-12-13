@@ -1999,7 +1999,7 @@ function renderMenus(webpage_index) {
     "            <span>GPA/Testing</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-english\">\n" + 
-    "            <a href=\"#english\" title=\"English\"></a>\n" + 
+    "            <a href=\"/la/assets/html/english/english.htm\" title=\"English\"></a>\n" + 
     "             <span>English</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-camps\">\n" + 
@@ -2296,8 +2296,8 @@ function renderArticle(extracted_html, webpage_index) {
     
     jq("article").html(
       "        <div class=\"article-header-debate\" id=\"article-header\">\n" + 
-      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01Top.png\" alt=\"정규토론(DEBATE)\" />\n" + 
-      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01.png\" />\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-02Top.png\" />\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-02.png\" />\n" + 
       "        </div>\n" + 
       updated_html 
     );
