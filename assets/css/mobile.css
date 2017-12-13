@@ -37,6 +37,12 @@ td,
 .article-faculty-member-page p, 
 .article-faculty-member-page a, 
 .article-faculty-member-page ul li, 
+.article-debate-links a, 
+.article-debate h6, 
+.article-debate > span, 
+.article-debate p, 
+.article-debate ul li, 
+.article-debate ol li, 
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
 .article-debate img:nth-child(4) + a {
@@ -44,13 +50,8 @@ th,
 }
 
 .article-faculty-member ul li, 
-.article-faculty-member p, 
-.article-debate-links a, 
-.article-debate h6, 
-.article-debate > span, 
-.article-debate p, 
-.article-debate ul li, 
-.article-debate ol li {
+.article-faculty-member p
+ {
   font-size: 25px;
 }
 
@@ -556,7 +557,8 @@ li {
 article > table + table > tbody > tr:nth-child(2) > td:nth-child(2),
 article > table + table > tbody > tr:nth-child(3) > td:nth-child(2), 
 article > table + table > tbody > tr:nth-child(4) > td:nth-child(2), 
-.article-faculty-member-page {
+.article-faculty-member-page, 
+.article-debate {
   width: 75%;
   height: auto;
   min-height: 1px;

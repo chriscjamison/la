@@ -59,7 +59,18 @@ function extractHtmlFromDesktopPage()  {
         'schedule_2018.htm', 
         'recruitment.htm', 
         'discussion_2015.htm', 
-        'debate_2014.htm'
+        'debate_2014.htm', 
+        'english.htm',  
+        'booklist_2016.htm', 
+        'admissions_2017.htm', 
+        'application_2016.htm', 
+        'schedule_2016.htm', 
+        'application_2018.htm', 
+        'application_2016_update.htm', 
+        'talk_2016.htm', 
+        'schedule_english.htm', 
+        'english_advanced.htm', 
+        'schedule_2014.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1609,7 +1620,26 @@ function extractHtmlFromDesktopPage()  {
 
               webpage_index = 27;
             break;
-              
+
+            // Runs if the loading page is the 'English' page.
+            case 28:
+              extracted_html[0] = "        <div class=\"article-english-links\" id=\"article-content\">\n" + 
+                                  "          <a href=\"booklist_2016.htm\" title=\"2016년 원서강독 Booklist\">2016년 원서강독 Booklist</a>\n" + 
+                                  "          <a href=\"admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\">2017년 원서강독 수업 일정 업데이트</a>\n" + 
+                                  "          <a href=\"application_2016.htm\" title=\"2016년 1,2분기 원서안내\">2016년 1,2분기 원서안내</a>\n" +
+                                  "          <a href=\"schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\">2016년 원서강독수업 일정 업데이트</a>\n" +  
+                                  "          <a href=\"application_2018.htm\" title=\"2018 원서강독 수업일정\">2018 원서강독 수업일정</a>\n" + 
+                                  "          <a href=\"application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\">2016 원서강독 수업 일정 업데이트</a>\n" + 
+                                  "          <a href=\"talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\">2016 토론수업 일정 업데이트</a>\n" + 
+                                  "          <a href=\"schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\">주중 영어원서강독반 일정안내</a>\n" + 
+                                  "          <a href=\"english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\">고급영어 2015년 2분기 수업일정</a>\n" + 
+                                  "          <a href=\"schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\">정규영어 2014년 4분기 일정</a>\n" + 
+                                  "        </div>\n";  
+                                  
+
+              webpage_index = 28;
+            break;
+
             }
           }	
         }
@@ -1669,8 +1699,10 @@ function renderHeader(webpage_index) {
 
   if (webpage_index <= 15) {
     section_html = "강사소개 (FACULTY) - ";
-  } else if (webpage_index > 15) {
+  } else if ((webpage_index > 19) && (webpage_index <= 27)) {
     section_html = "정규토론 (DEBATE) - ";
+  } else if (webpage_index > 27) {
+    section_html = "정규영어 (ENGLISH) - ";
   }
   
   switch (webpage_index)  {
@@ -1765,7 +1797,7 @@ function renderHeader(webpage_index) {
       title_html = title_html + "치안내 (LOCATION)";
     break;
 
-    // Runs if the loading page is the Location page.
+    // Runs if the loading page is the Debate page.
     case 20:
       title_html = title_html + "정규토론 (DEBATE)";
     break;
@@ -1804,6 +1836,63 @@ function renderHeader(webpage_index) {
     case 27: 
       title_html = title_html + section_html + "Regular debate Q4 2014";
     break;
+
+    // Runs if the loading page is the Englksh page.
+    case 28: 
+      title_html = title_html + "정규영어 (ENGLISH)";
+    break;
+
+    // Runs if the loading page is the English page for the booklist of 2016.
+    case 29: 
+      title_html = title_html + section_html + "2016년 원서강독 Booklist";
+    break;
+
+    // Runs if the loading page is the English page for the class schedule for 2017 admissions.
+    case 30: 
+      title_html = title_html + section_html + "2017년 원서강독 수업 일정 업데이트";
+    break;
+
+    // Runs if the loading page is the English page for the application form of 2016.
+    case 31: 
+      title_html = title_html + section_html + "2016년 1,2분기 원서안내";
+    break;
+
+    // Runs if the loading page is the English page for the class schedule for 2016.
+    case 32: 
+      title_html = title_html + section_html + "2016년 원서강독수업 일정 업데이트";
+    break;
+
+    // Runs if the loading page is the English page for the reading schedule for 2018 applications.
+    case 33: 
+      title_html = title_html + section_html + "2018 원서강독 수업일정";
+    break;
+
+    // Runs if the loading page is the English page for the updated class schedule of 2016.
+    case 34: 
+      title_html = title_html + section_html + "2016 원서강독 수업 일정 업데이트";
+    break;
+
+    // Runs if the loading page is the English page for the talk list of 2016.
+    case 35: 
+      title_html = title_html + section_html + "2016 토론수업 일정 업데이트";
+    break;
+
+    // Runs if the loading page is the English page for the class schedule for English classes.
+    case 36: 
+      title_html = title_html + section_html + "주중 영어원서강독반 일정안내";
+    break;
+
+    // Runs if the loading page is the English page for advanced English courses of 2015.
+    case 37: 
+      title_html = title_html + section_html + "고급영어 2015년 2분기 수업일정";
+    break;
+
+    // Runs if the loading page is the English page for the regular English schedule of 2014.
+    case 38: 
+      title_html = title_html + section_html + "정규영어 2014년 4분기 일정";
+    break;
+
+    
   } // END of SWITCH statement
 
   jq("head").html(
@@ -1999,18 +2088,34 @@ function renderSectionMenu(webpage_index) {
         "        <a href=\"/la/assets/html/guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
       );
-    } else if (webpage_index > 15) {
+    } else if ((webpage_index > 19) && webpage_index <= 27) {
       jq(menu_selector).html(
-        "        <a href=\"/la/assets/html/debate/schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-section_1-schedule_2017\">Schedule 2017</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-section_1-schedule_2016\">Schedule 2016</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-section_1-history\">Discussion (ENG)</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-schedule_2018\">Schedule 2018</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-section_1-recruitment\">Recruitment</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-section_1-discussion_2015\">Discussion (2015)</a>\n" + 
-        "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-section_1-debate_2014\">Debate (2014)</a>"
+        "        <a href=\"/la/assets/html/debate/schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule 2017</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule 2016</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule 2018</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
+        "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
       );
-    }
+    } else if ((webpage_index > 27) && webpage_index <= 38) {
+        jq(menu_selector).html(
+          "      <a href=\"/la/assets/html/english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
+          "      <a href=\"/la/assets/html/english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
+          "      <a href=\"/la/assets/html/english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
+          "      <a href=\"/la/assets/html/english/schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\" id=\"link-english-schedule_2016\">Schedule (2016)</a>\n" +  
+          "      <a href=\"/la/assets/html/english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
+          "      <a href=\"/la/assets/html/english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
+          "      <a href=\"/la/assets/html/english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
+          "      <a href=\"/la/assets/html/english/schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\" id=\"link-english-schedule_english\">Schedule (ENG)</a>\n" + 
+          "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
+          "      <a href=\"/la/assets/html/english/schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
+        );
+      }
   } // END of FUNCTION 'renderSectionMenu'
+
+  
+  
 
 function renderFooter() {
   jq("footer").html(
@@ -2163,6 +2268,25 @@ function renderArticle(extracted_html, webpage_index) {
   if ((webpage_index > 15) && (webpage_index <= 27))  {
     
     if (webpage_index === 22) {
+      updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];
+    } else if (webpage_index === 26) {
+      updated_html = extracted_html[0] + extracted_html[1];
+    } else {
+      updated_html = extracted_html[0];
+    }
+    
+    jq("article").html(
+      "        <div class=\"article-header-debate\" id=\"article-header\">\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01Top.png\" alt=\"정규토론(DEBATE)\" />\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01.png\" />\n" + 
+      "        </div>\n" + 
+      updated_html 
+    );
+  } // END of if STATEMENT
+
+  if ((webpage_index > 27) && (webpage_index <= 38))  {
+    
+    if (webpage_index === 26) {
       updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];
     } else if (webpage_index === 26) {
       updated_html = extracted_html[0] + extracted_html[1];
