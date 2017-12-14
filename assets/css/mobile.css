@@ -59,7 +59,8 @@ th,
 .article-english p, 
 .article-english img:nth-child(4) + a, 
 .article-announcements a, 
-.article-announcements span {
+.article-announcements span, 
+.article-announcements p {
   font-size: 32px;
 }
 
@@ -103,7 +104,8 @@ h2,
 .article-english ul li, 
 .article-english p, 
 .article-announcements a, 
-.article-announcements span {
+.article-announcements span, 
+.article-announcements p {
   font-weight: 400;
 }
 
@@ -612,7 +614,8 @@ article > table + table > tbody > tr:nth-child(3) > td:nth-child(2),
 article > table + table > tbody > tr:nth-child(4) > td:nth-child(2), 
 .article-faculty-member-page, 
 .article-debate, 
-.article-english {
+.article-english, 
+.article-announcements {
   width: 75%;
   height: auto;
   min-height: 1px;

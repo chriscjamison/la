@@ -92,7 +92,29 @@ function extractHtmlFromDesktopPage()  {
         'announcement_17.htm', 
         'announcement_18.htm', 
         'announcement_19.htm', 
-        'announcement_20.htm', // index = 60   
+        'announcement_20.htm', // index = 60
+        'awards.htm', 
+        'award_1.htm', 
+        'award_2.htm', 
+        'award_3.htm', 
+        'award_4.htm', // index = 65 
+        'award_5.htm', 
+        'award_6.htm', 
+        'award_7.htm', 
+        'award_8.htm', 
+        'award_9.htm', // index = 70
+        'award_10.htm', 
+        'award_11.htm', 
+        'award_12.htm', 
+        'award_13.htm', 
+        'award_14.htm', // index = 75
+        'award_15.htm', 
+        'award_16.htm', 
+        'award_17.htm', 
+        'award_18.htm', 
+        'award_19.htm', // index = 80
+        'award_20.htm', 
+
       ];
 
       // Pass on the URL string of the loading page.
@@ -104,7 +126,6 @@ function extractHtmlFromDesktopPage()  {
 
           if (url_string.indexOf(current_URL) > -1) {
             switch (index)  {
-              
               // Runs if the loading page is the 'Faculty' page.
               case 0: 
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
@@ -1455,7 +1476,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            관심있는 학생들은 입학시험을\n" +  
                                     "            <br/>\n" + 
                                     "            예약해 주세요.\n" + 
-                                     "          </p>\n" + 
+                                    "          </p>\n" + 
                                     "          <p>\n" + 
                                     "            감사합니다.\n" + 
                                     "          </p>\n"
@@ -2772,7 +2793,7 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 47;
               break; 
 
-              // Runs if the loading page is the 7th announcement in the Announcements section.
+              // Runs if the loading page is the 8th announcement in the Announcements section.
               case 48:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
                                     "          <h4>2017년 리더스 여름방학특강 설명회</h4>\n" + 
@@ -2793,11 +2814,203 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 49;
               break; 
+
+              // Runs if the loading page is the 10th announcement in the Announcements section.
+              case 50:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 여름방학 특강 일정표</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 50;
+              break; 
+
+              // Runs if the loading page is the 11th announcement in the Announcements section.
+              case 51:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 여름방학 특강 일정표</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 51;
+              break; 
+
+              // Runs if the loading page is the 12th announcement in the Announcements section.
+              case 52:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 정규수업 일정 업데이트</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 52;
+              break; 
+
+              // Runs if the loading page is the 13th announcement in the Announcements section.
+              case 53:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 여름방학 특강일정표</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 53;
+              break; 
+
+              // Runs if the loading page is the 14th announcement in the Announcements section.
+              case 54:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>청심모의유엔 대회 (CSIAMUN)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 54;
+              break; 
+
+              // Runs if the loading page is the 15th announcement in the Announcements section.
+              case 55:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 55;
+              break; 
+
+              // Runs if the loading page is the 16th announcement in the Announcements section.
+              case 56:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 56;
+              break; 
+
+              // Runs if the loading page is the 17th announcement in the Announcements section.
+              case 57:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 57;
+              break; 
+
+              // Runs if the loading page is the 18th announcement in the Announcements section.
+              case 58:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 국내 모의법정 대회준비</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 58;
+              break; 
+
+              // Runs if the loading page is the 19th announcement in the Announcements section.
+              case 59:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>< 12월, 1월 휴원 일정 공지 ></h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 59;
+              break;
+
+              // Runs if the loading page is the 20th announcement in the Announcements section.
+              case 60:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>*토론대회 파트너를 찾아라! -토론명문리더스*</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 60;
+              break;
+
+              // Runs if the loading page is the 'Awards' page.
+              case 61:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>수상실적</h4>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-1\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-2\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_2.htm\" title=\매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-3\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-4\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-5\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-6\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-7\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-8\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-9\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-10\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-11\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-12\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!! \">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-13\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-14\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_14.htm\" title=\NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-15\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-16\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-17\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-18\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-19\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-20\">\n" + 
+                                    "            <a href=\"/la/assets/html/awards/awards_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 61;
+              break;
+
             }
-          }	
+          }
         }
       );
-
+     
       setupFinalContent(extracted_html, webpage_index);
     }
   );
@@ -2856,8 +3069,10 @@ function renderHeader(webpage_index) {
     section_html = "정규토론 (DEBATE) - ";
   } else if ((webpage_index > 27) && (webpage_index <= 38)) {
     section_html = "정규영어 (ENGLISH) - ";
-  } else if (webpage_index > 38) {
+  } else if ((webpage_index > 38) && (webpage_index <= 80)) {
     section_html = "공지 사항 - ";
+  } else if (webpage_index > 80) {
+    section_html = "수상실적 - ";
   }
   
   switch (webpage_index)  {
@@ -3101,8 +3316,68 @@ function renderHeader(webpage_index) {
     case 49: 
       title_html = title_html + section_html + "2017년 리더스 봄학기 설명회";
     break;
+
+    // Runs if the loading page is the 10th announcement.
+    case 50: 
+      title_html = title_html + section_html + "분실물 찾아가세요~(보관기간:2017.9.21~12.21)";
+    break;
+
+    // Runs if the loading page is the 11th announcement.
+    case 51: 
+      title_html = title_html + section_html + "2017 여름방학 특강 일정표";
+    break;
+
+    // Runs if the loading page is the 12th announcement.
+    case 52: 
+      title_html = title_html + section_html + "2017년 정규수업 일정 업데이트";
+    break;
+
+    // Runs if the loading page is the 13th announcement.
+    case 53: 
+      title_html = title_html + section_html + "2017년 여름방학 특강일정표";
+    break;
+
+    // Runs if the loading page is the 14th announcement.
+    case 54: 
+      title_html = title_html + section_html + "청심모의유엔 대회 (CSIAMUN)";
+    break;
+
+    // Runs if the loading page is the 15th announcement.
+    case 55: 
+      title_html = title_html + section_html + "매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)";
+    break;
+
+    // Runs if the loading page is the 16th announcement.
+    case 56: 
+      title_html = title_html + section_html + "용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)";
+    break;
+
+    // Runs if the loading page is the 17th announcement.
+    case 57: 
+      title_html = title_html + section_html + "2017 NSDA겨울챔피언쉽, YUMN, GC수상결과";
+    break;
+
+    // Runs if the loading page is the 18th announcement.
+    case 58: 
+      title_html = title_html + section_html + "2017년 국내 모의법정 대회준비";
+    break;
+
+    // Runs if the loading page is the 19th announcement.
+    case 59: 
+      title_html = title_html + section_html + "< 12월, 1월 휴원 일정 공지 >";
+    break;
+
+    // Runs if the loading page is the 19th announcement.
+    case 60: 
+      title_html = title_html + section_html + "*토론대회 파트너를 찾아라! -토론명문리더스*";
+    break;
+
+    // Runs if the loading page is the Awards page
+    case 61: 
+      title_html = title_html + "수상실적";
+    break;
   } // END of SWITCH statement
-  
+
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
     "    <title>" + title_html + "</title>\n" + 
@@ -3221,7 +3496,7 @@ function renderMenus(webpage_index) {
     "        </section>\n" + 
     "        <section id=\"nav-row_2\">\n" + 
     "          <div id=\"link-awards\">\n" + 
-    "            <a href=\"#awards\" title=\"Awards\"></a>\n" + 
+    "            <a href=\"/la/html/awards/awards.htm\" title=\"Awards\"></a>\n" + 
     "            <span>Awards</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-debate\">\n" + 
@@ -3319,14 +3594,7 @@ function renderSectionMenu(webpage_index) {
           "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
           "      <a href=\"/la/assets/html/english/schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
         );
-      } else if ((webpage_index > 39) && webpage_index <= 60) {
-        jq(menu_selector).html(
-          "      <a href=\"/la/assets/html/announcements/announcements.htm\" title=\"Page 1\" id=\"link-announcements-page_1\">Page 1</a>\n" + 
-          "      <a href=\"/la/assets/html/announcements/announcements_2.htm\" title=\"Page 2\" id=\"link-announcements-page_2\">Page 1</a>\n" + 
-          "      <a href=\"/la/assets/html/announcements/announcements_3.htm\" title=\"Page 3\" id=\"link-announcements-page_3\">Page 3</a>\n" + 
-          "      <a href=\"/la/assets/html/announcements/announcements_4.htm\" title=\"Page 4\" id=\"link-announcements-page_4\">Page 4</a>\n"
-        );
-      }
+      } 
   } // END of FUNCTION 'renderSectionMenu'
 
   
