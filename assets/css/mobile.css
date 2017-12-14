@@ -29,7 +29,9 @@ h2,
 .article-english, 
 .article-english img:nth-child(4) + a,  
 #footer-row_3 span, 
-.article-login {
+.article-login, 
+.article-header-announcements, 
+.article-announcements {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -55,7 +57,9 @@ th,
 .article-english > span, 
 .article-english ul li, 
 .article-english p, 
-.article-english img:nth-child(4) + a {
+.article-english img:nth-child(4) + a, 
+.article-announcements a, 
+.article-announcements span {
   font-size: 32px;
 }
 
@@ -97,7 +101,9 @@ h2,
 .article-english h6, 
 .article-english > span, 
 .article-english ul li, 
-.article-english p  {
+.article-english p, 
+.article-announcements a, 
+.article-announcements span {
   font-weight: 400;
 }
 
@@ -122,7 +128,9 @@ nav > section > div span,
 .article-english h6, 
 .article-english > span, 
 .article-english img:nth-child(4) + a, 
-.article-login h4  {
+.article-login h4, 
+.article-header-announcements h4, 
+.article-announcements h4  {
   text-align: center;
 }
 
@@ -219,7 +227,8 @@ nav > section > div span,
 
 .article-faculty-info ul li a, 
 .article-debate-links a, 
-.article-english-links a {
+.article-english-links a, 
+.article-announcements a {
   color: #485081;
 }
 
@@ -525,14 +534,17 @@ article {
 .article-faculty-member-page h4, 
 .article-debate h4, 
 .article-english h4, 
-.article-login h4  {
+.article-login h4, 
+.article-header-announcements h4, 
+.article-announcements h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
 }
 
 .article-debate h4, 
 .article-english h4, 
-.article-login h4 {
+.article-login h4, 
+.article-header-announcements h4 {
   margin: 1em 0;
 }
 
@@ -629,8 +641,13 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   display: block;
 }
 
+.article-announcements a {
+  width: 23em;
+}
+
 .article-debate-links a:nth-child(1), 
-.article-english-links a:nth-child(1) {
+.article-english-links a:nth-child(1), 
+.article-announcements a:nth-child(1) {
   margin-top: 0;
 }
 
@@ -703,7 +720,6 @@ th,
 
 /* PAGE: Login */
 
-
 .article-header-login {
   width: 435px !important;
   margin: 0 auto;
@@ -739,6 +755,28 @@ th,
 
 #form-button {
   float: right;
+}
+
+
+/* PAGE: Announcements */
+
+.article-announcements {
+  width: 950px !important;
+  margin: 0 auto;
+}
+
+.article-announcements-listing {
+  margin: 2em 0;
+}
+
+.article-announcements a {
+  width: 765px;
+  display: inline-block;
+}
+
+.article-announcements span {
+  width: 185px;
+  display: inline-block;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {

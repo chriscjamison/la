@@ -72,7 +72,27 @@ function extractHtmlFromDesktopPage()  {
         'english_advanced.htm', 
         'schedule_2014.htm', 
         'login.htm', 
-        'news.htm', // index = 40 
+        'announcements.htm', // index = 40 
+        'announcement_1.htm', 
+        'announcement_2.htm', 
+        'announcement_3.htm', 
+        'announcement_4.htm', 
+        'announcement_5.htm', // index = 45 
+        'announcement_6.htm', 
+        'announcement_7.htm', 
+        'announcement_8.htm', 
+        'announcement_9.htm', 
+        'announcement_10.htm', // index = 50
+        'announcement_11.htm', 
+        'announcement_12.htm', 
+        'announcement_13.htm', 
+        'announcement_14.htm', 
+        'announcement_15.htm', // index = 55
+        'announcement_16.htm', 
+        'announcement_17.htm', 
+        'announcement_18.htm', 
+        'announcement_19.htm', 
+        'announcement_20.htm', // index = 60   
       ];
 
       // Pass on the URL string of the loading page.
@@ -2604,7 +2624,176 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 39;
               break;
-              }
+
+              // Runs if the loading page is the 'Announcements' page.
+              case 40:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>공지 사항</h4>\n" + 
+                                    "          <h4>Page 1</h4>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-1\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_1.htm\" title=\"학원친구 앱 사용법\">학원친구 앱 사용법</a><span> - 2017-11-21</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-2\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_2.htm\" title=\"2017-18 겨울방학 특강 안내\">2017-18 겨울방학 특강 안내</a><span> - 2017-10-26</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-3\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_3.htm\" title=\"2017년 리더스아카데미 4분기 설명회\">2017년 리더스아카데미 4분기 설명회</a><span> - 2017-09-21</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-4\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_4.htm\" title=\"2017년 가을학기 정규수업 일정표\">2017년 가을학기 정규수업 일정표</a><span> - 2017-08-24</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-5\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_5.htm\" title=\"2017년 카이로스(최상위반) 오디션\">2017년 카이로스(최상위반) 오디션</a><span> - 2017-08-24</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-6\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_6.htm\" title=\"2017년 가을학기 설명회\">2017년 가을학기 설명회</a><span> - 2017-08-24</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-7\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_7.htm\" title=\"2017년 상반기 수상실적\">2017년 상반기 수상실적</a><span> - 2017-08-24</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-8\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_8.htm\" title=\"2017년 리더스 여름방학특강 설명회\">2017년 리더스 여름방학특강 설명회</a><span> - 2017-03-25</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-9\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_9.htm\" title=\"2017년 리더스 봄학기 설명회 \">2017년 리더스 봄학기 설명회 </a><span> - 2017-02-09</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-10\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_10.htm\" title=\"분실물 찾아가세요~(보관기간:2017.9.21~12.21)\">분실물 찾아가세요~(보관기간:2017.9.21~12.21)</a><span> - 2017-09-21</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-11\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_11.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-12\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_12.htm\" title=\"2017년 정규수업 일정 업데이트\">2017년 정규수업 일정 업데이트</a><span> - 2017-05-26</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-13\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_13.htm\" title=\"2017년 여름방학 특강일정표\">2017년 여름방학 특강일정표</a><span> - 2017-05-26</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-14\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_14.htm\" title=\청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-15\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_15.htm\" title=\"매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)\">매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-16\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_16.htm\" title=\"용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)\">용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-17\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_17.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-18\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_18.htm\" title=\"2017년 국내 모의법정 대회준비\">2017년 국내 모의법정 대회준비</a><span> - 2016-12-26</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-19\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_19.htm\" title=\"< 12월, 1월 휴원 일정 공지 >\">< 12월, 1월 휴원 일정 공지 ></a><span> - 2016-11-29</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-20\">\n" + 
+                                    "            <a href=\"/la/assets/html/announcements/announcement_20.htm\" title=\"*토론대회 파트너를 찾아라! -토론명문리더스*\">*토론대회 파트너를 찾아라! -토론명문리더스*</a><span> - 2016-11-28</span>\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 40;
+              break;
+
+              // Runs if the loading page is the 1st announcement in the Announcements section.
+              case 41:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>학원친구 앱 사용법</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 41;
+              break;
+
+              // Runs if the loading page is the 2nd announcement in the Announcements section.
+              case 42:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017-18 겨울방학 특강 안내</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 42;
+              break;
+
+              // Runs if the loading page is the 3rd announcement in the Announcements section.
+              case 43:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 리더스아카데미 4분기 설명회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 43;
+              break;
+
+              // Runs if the loading page is the 4th announcement in the Announcements section.
+              case 44:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 가을학기 정규수업 일정표</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 44;
+              break;
+
+              // Runs if the loading page is the 5th announcement in the Announcements section.
+              case 45:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 카이로스(최상위반) 오디션</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 45;
+              break;
+
+              // Runs if the loading page is the 6th announcement in the Announcements section.
+              case 46:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 가을학기 설명회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 46;
+              break; 
+
+              // Runs if the loading page is the 7th announcement in the Announcements section.
+              case 47:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 상반기 수상실적</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 47;
+              break; 
+
+              // Runs if the loading page is the 7th announcement in the Announcements section.
+              case 48:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 리더스 여름방학특강 설명회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 48;
+              break; 
+
+              // Runs if the loading page is the 9th announcement in the Announcements section.
+              case 49:
+                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 리더스 봄학기 설명회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 49;
+              break; 
+            }
           }	
         }
       );
@@ -2665,8 +2854,10 @@ function renderHeader(webpage_index) {
     section_html = "강사소개 (FACULTY) - ";
   } else if ((webpage_index > 19) && (webpage_index <= 27)) {
     section_html = "정규토론 (DEBATE) - ";
-  } else if (webpage_index > 27) {
+  } else if ((webpage_index > 27) && (webpage_index <= 38)) {
     section_html = "정규영어 (ENGLISH) - ";
+  } else if (webpage_index > 38) {
+    section_html = "공지 사항 - ";
   }
   
   switch (webpage_index)  {
@@ -2861,14 +3052,57 @@ function renderHeader(webpage_index) {
       title_html = title_html + "로그인";
     break;
 
-    // Runs if the loading page is the News page
-    case 39: 
-      title_html = title_html + "학원소식";
+    // Runs if the loading page is the Announcements page
+    case 40: 
+      title_html = title_html + "공지 사항";
     break;
 
-    
-  } // END of SWITCH statement
+    // Runs if the loading page is the 1st announcement.
+    case 41: 
+      title_html = title_html + section_html + "학원친구 앱 사용법";
+    break;
 
+    // Runs if the loading page is the 2nd announcement.
+    case 42: 
+      title_html = title_html + section_html + "2017-18 겨울방학 특강 안내";
+    break;
+
+    // Runs if the loading page is the 3rd announcement.
+    case 43: 
+      title_html = title_html + section_html + "2017년 리더스아카데미 4분기 설명회";
+    break;
+
+    // Runs if the loading page is the 4th announcement.
+    case 44: 
+      title_html = title_html + section_html + "2017년 가을학기 정규수업 일정표";
+    break;
+    
+    // Runs if the loading page is the 5th announcement.
+    case 45: 
+      title_html = title_html + section_html + "2017년 카이로스(최상위반) 오디션";
+    break;
+
+    // Runs if the loading page is the 6th announcement.
+    case 46: 
+      title_html = title_html + section_html + "2017년 가을학기 설명회";
+    break;
+    
+    // Runs if the loading page is the 7th announcement.
+    case 47: 
+      title_html = title_html + section_html + "2017년 상반기 수상실적";
+    break;
+
+    // Runs if the loading page is the 8th announcement.
+    case 48: 
+      title_html = title_html + section_html + "2017년 리더스 여름방학특강 설명회";
+    break;
+
+    // Runs if the loading page is the 9th announcement.
+    case 49: 
+      title_html = title_html + section_html + "2017년 리더스 봄학기 설명회";
+    break;
+  } // END of SWITCH statement
+  
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
     "    <title>" + title_html + "</title>\n" + 
@@ -2999,7 +3233,7 @@ function renderMenus(webpage_index) {
     "            <span>Events</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-announcements\">\n" + 
-    "            <a href=\"#announcements\" title=\"link-announcements\"></a>\n" + 
+    "            <a href=\"/la/assets/html/announcements/announcements.htm\" title=\"link-announcements\"></a>\n" + 
     "            <span>Announcements</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
@@ -3084,6 +3318,13 @@ function renderSectionMenu(webpage_index) {
           "      <a href=\"/la/assets/html/english/schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\" id=\"link-english-schedule_english\">Schedule (ENG)</a>\n" + 
           "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
           "      <a href=\"/la/assets/html/english/schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
+        );
+      } else if ((webpage_index > 39) && webpage_index <= 60) {
+        jq(menu_selector).html(
+          "      <a href=\"/la/assets/html/announcements/announcements.htm\" title=\"Page 1\" id=\"link-announcements-page_1\">Page 1</a>\n" + 
+          "      <a href=\"/la/assets/html/announcements/announcements_2.htm\" title=\"Page 2\" id=\"link-announcements-page_2\">Page 1</a>\n" + 
+          "      <a href=\"/la/assets/html/announcements/announcements_3.htm\" title=\"Page 3\" id=\"link-announcements-page_3\">Page 3</a>\n" + 
+          "      <a href=\"/la/assets/html/announcements/announcements_4.htm\" title=\"Page 4\" id=\"link-announcements-page_4\">Page 4</a>\n"
         );
       }
   } // END of FUNCTION 'renderSectionMenu'
@@ -3274,10 +3515,27 @@ function renderArticle(extracted_html, webpage_index) {
       updated_html 
     );
   } // END of if STATEMENT
-console.log("webpage_index = " + webpage_index);
-  if (webpage_index === 39) {
+
+  if (webpage_index > 39) { 
     jq("article").html(extracted_html[0]);
   }
+
+ /*  if ((webpage_index > 39) && (webpage_index <= 69))  {
+    
+    /* if ((webpage_index === 28) || (webpage_index === 35)) {
+      updated_html = extracted_html[0] + extracted_html[1];
+    } else {
+      updated_html = extracted_html[0];
+    } 
+    
+    jq("article").html(
+      "        <div class=\"article-header-announcements\" id=\"article-header\">\n" + 
+      "          <h4>공지 사항</h4>\n" + 
+      "        </div>\n" + 
+      updated_html 
+    );
+  } // END of if STATEMENT */
+
   
   jq("body").fadeIn();
 } // END of FUNCTION 'renderArticle'
