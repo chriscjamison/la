@@ -3000,9 +3000,30 @@ function extractHtmlFromDesktopPage()  {
                                     "            <a href=\"/la/assets/html/awards/award_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
-                                    
 
                 webpage_index = 61;
+              break;
+              
+              // Runs if the loading page is the 1st award in the Award section.
+              case 62:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>청심모의유엔 대회 (CSIAMUN)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 62;
+              break;
+
+              // Runs if the loading page is the 1st award in the Award section.
+              case 63:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 63;
               break;
 
             }
@@ -3378,7 +3399,12 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 1st award.
     case 62: 
-      title_html = title_html + section_html + "*토론대회 파트너를 찾아라! -토론명문리더스*";
+      title_html = title_html + section_html + "청심모의유엔 대회 (CSIAMUN)";
+    break;
+
+    // Runs if the loading page is the 1st award.
+    case 63: 
+      title_html = title_html + section_html + "매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)";
     break;
   } // END of SWITCH statement
 
@@ -3586,19 +3612,27 @@ function renderSectionMenu(webpage_index) {
         "        <a href=\"/la/assets/html/debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
       );
     } else if ((webpage_index > 27) && webpage_index <= 38) {
-        jq(menu_selector).html(
-          "      <a href=\"/la/assets/html/english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
-          "      <a href=\"/la/assets/html/english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
-          "      <a href=\"/la/assets/html/english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
-          "      <a href=\"/la/assets/html/english/schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\" id=\"link-english-schedule_2016\">Schedule (2016)</a>\n" +  
-          "      <a href=\"/la/assets/html/english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
-          "      <a href=\"/la/assets/html/english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
-          "      <a href=\"/la/assets/html/english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
-          "      <a href=\"/la/assets/html/english/schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\" id=\"link-english-schedule_english\">Schedule (ENG)</a>\n" + 
-          "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
-          "      <a href=\"/la/assets/html/english/schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
-        );
-      } 
+      jq(menu_selector).html(
+        "      <a href=\"/la/assets/html/english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
+        "      <a href=\"/la/assets/html/english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
+        "      <a href=\"/la/assets/html/english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
+        "      <a href=\"/la/assets/html/english/schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\" id=\"link-english-schedule_2016\">Schedule (2016)</a>\n" +  
+        "      <a href=\"/la/assets/html/english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
+        "      <a href=\"/la/assets/html/english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
+        "      <a href=\"/la/assets/html/english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
+        "      <a href=\"/la/assets/html/english/schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\" id=\"link-english-schedule_english\">Schedule (ENG)</a>\n" + 
+        "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
+        "      <a href=\"/la/assets/html/english/schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
+      );
+    } else if ((webpage_index > 38) && webpage_index <= 60) {
+      jq(menu_selector).html(
+        "      <a href=\"/la/assets/html/announcements/announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
+      );
+    } else if ((webpage_index > 60) && webpage_index <= 81) {
+    jq(menu_selector).html(
+      "      <a href=\"/la/assets/html/awards/awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
+    );
+  } 
   } // END of FUNCTION 'renderSectionMenu'
 
   
