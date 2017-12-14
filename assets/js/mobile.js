@@ -32,45 +32,47 @@ function extractHtmlFromDesktopPage()  {
 
       // Pass on the URL's of the pages within the website.
       urls_Array = [
-        'faculty.htm', 
+        'faculty.htm', // index = 0
         'park_sooyoung.htm', 
         'kim_hyerin.htm', 
         'lee_hanyo.htm', 
         'park_sungryul.htm', 
-        'abhisheka_dubey.htm', 
+        'abhisheka_dubey.htm', // index = 5 
         'kevin_han.htm', 
         'reece_randall.htm', 
         'lee_eunhye.htm', 
         'you_ge_heon.htm', 
-        'kim_gyumin.htm', 
+        'kim_gyumin.htm', // index = 10 
         'brian_moon.htm', 
         'chan_keun_kim.htm', 
         'joonpyo_sohn.htm', 
         'matthew_owen.htm', 
-        'roger_hatridge.htm', 
+        'roger_hatridge.htm', // index = 15 
         'history.htm',
         'rules.htm', 
         'recruiting.htm', 
         'location.htm', 
-        'debate.htm', 
+        'debate.htm', // index = 20
         'schedule_2017.htm', 
         'schedule_2016.htm', 
         'discussion_english.htm', 
         'schedule_2018.htm', 
-        'recruitment.htm', 
+        'recruitment.htm', // index = 25
         'discussion_2015.htm', 
         'debate_2014.htm', 
         'english.htm',  
         'booklist_2016.htm', 
-        'admissions_2017.htm', 
+        'admissions_2017.htm', // index = 30 
         'application_2016.htm', 
         'schedule_2016.htm', 
         'application_2018.htm', 
         'application_2016_update.htm', 
-        'talk_2016.htm', 
+        'talk_2016.htm', // index = 35 
         'schedule_english.htm', 
         'english_advanced.htm', 
-        'schedule_2014.htm'
+        'schedule_2014.htm', 
+        'login.htm', 
+        'news.htm', // index = 40 
       ];
 
       // Pass on the URL string of the loading page.
@@ -2419,7 +2421,190 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 36;
               break;
-            }
+
+              // Runs if the loading page is the 'English' page for the Advanced English class.
+              case 37:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>고급영어 2015년 2분기 수업일정</h4>\n" + 
+                                    "          <h6>고급영어 (Writing 개인 &amp; 그룹수업가능)</h6>\n" + 
+                                    "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  클래스\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  내용\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  요일\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  시간\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  LEXIS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초3,4\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Reading & Writing / Lecture & Clinic\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화, 목\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4-6PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" +
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  MYTHOS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초5,6\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Reading & Writing / Lecture & Clinic\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화, 목\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  6-8PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  OPSIS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초1, 2n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Reading & Writing / Lecture & Clinic\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화, 목\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  8-10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  LEXIS &amp; MYTHOS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  학년별\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Reading & Writing / Lecture & Clinic\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  매주 토요일 주말반\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  12-3PM / 3:30-6:30PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  SPEECH CLASS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  ES\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Speech Clinic\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Friday\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  5-7PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "               <td>\n" + 
+                                    "                  SPEECH CLASS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  MS\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Speech Clinic\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Friday\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7-9PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";
+
+                webpage_index = 37;
+              break;
+
+              // Runs if the loading page is the 'English' page for the schedule for 2014.
+              case 38:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>정규영어 2014년 4분기 일정</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/2_Books.jpg\" width=\"500\" height=\"300\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Fourth%20Quarter%20English.jpg\" width=\"500\" height=\"300\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/%EC%98%81%EC%96%B4%EC%A0%95%EA%B7%9C%EC%88%98%EC%97%85.jpg\" width=\"500\" height=\"100\" />\n" + 
+                                    "          <a href=\"/la/assets/html/admissions/admissions.htm\" title=\"Admissions\">Admissions</a>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 38;
+              break;
+
+              // Runs if the loading page is the Login page.
+              case 39:
+                extracted_html[0] = "        <div class=\"article-login\" id=\"article-content\">\n" + 
+                                    "          <div class=\"article-header-login\" id=\"article-header\">\n" + 
+                                    "            <h4>로그인</h4>\n" + 
+                                    "            <div id=\"article-form-login\">\n" + 
+                                    "              <form id=\"loginForm\" name=\"loginForm\" method=\"post\" action=\"http://daechi.leadersacademy.com/lib/member/process.php\" onsubmit=\"return checkLoginForm(this);\">\n" + 
+                                    "                <input type=\"hidden\" name=\"cmd\" value=\"login\">\n" + 
+                                    "                <input type=\"hidden\" name=\"logintype\" value=\"member\">\n" + 
+                                    "                <input type=\"hidden\" name=\"aca_number\" value=\"73176\">\n" + 
+                                    "                <input type=\"hidden\" name=\"nexturl\" value=\"\">\n" + 
+                                    "                <input type=\"hidden\" name=\"domain\" value=\"daechi.leadersacademy.com\">\n" + 
+                                    "                <input type=\"hidden\" id=\"PHPSESSID\" name=\"PHPSESSID\" value=\"1dd57c3654430939e5da10ade0f2fc13\">\n" + 
+                                    "                <div class=\"form-row\" id=\"form-row-1\">\n" + 
+                                    "                  <img src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/login_id.gif\"><input type=\"text\" id=\"member_id\" name=\"member_id\" value=\"\" class=\"input_login\" tabindex=\"11\">\n" +
+                                    "                </div>\n" + 
+                                    "                <div class=\"form-row\" id=\"form-row-2\">\n" + 
+                                    "                  <img src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/login_pw.gif\"><input type=\"password\" id=\"member_passwd\" name=\"member_passwd\" class=\"input_login\" tabindex=\"12\">\n" +
+                                    "                </div>\n" + 
+                                    "                <div id=\"form-button\">\n" + 
+                                    "                  <input type=\"image\" src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/btn_login.gif\" tabindex=\"13\">\n" +
+                                    "                </div>\n" + 
+                                    "                <div class=\"form-row\" id=\"form-row-3\">\n" + 
+                                    "                  <input type=\"checkbox\" id=\"save_member_id\" name=\"save_member_id\" value=\"1\"><label for=\"save_member_id\">아이디 저장</label>\n" +
+                                    "                  <input type=\"checkbox\" name=\"ssl\" id=\"ssl\" value=\"ssl\" checked><label for=\"ssl\">보안접속</label>\n" + 
+                                    "                </div>\n" + 
+                                    "              </form>\n" + 
+                                    "            </div>\n" +  
+                                    "          </div>"
+                                    "        </div>\n";  
+
+                webpage_index = 39;
+              break;
+              }
           }	
         }
       );
@@ -2671,6 +2856,16 @@ function renderHeader(webpage_index) {
       title_html = title_html + section_html + "정규영어 2014년 4분기 일정";
     break;
 
+    // Runs if the loading page is the Login page
+    case 39: 
+      title_html = title_html + "로그인";
+    break;
+
+    // Runs if the loading page is the News page
+    case 39: 
+      title_html = title_html + "학원소식";
+    break;
+
     
   } // END of SWITCH statement
 
@@ -2755,7 +2950,7 @@ function renderLogoAndSearch() {
     "        </div>\n" + 
     "        <div id=\"header-links\">\n" + 
     "          <div id=\"header-links-level_1\">\n" + 
-    "            <a href=\"/login/\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+    "            <a href=\"/la/assets/html/login/login.htm\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
     "            <a href=\"/ko/\" lang=\"ko\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
     "          </div>\n" + 
     "          <div id=\"header-links-level_2\">\n" + 
@@ -3065,9 +3260,7 @@ function renderArticle(extracted_html, webpage_index) {
 
   if ((webpage_index > 27) && (webpage_index <= 38))  {
     
-    if (webpage_index === 26) {
-      updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];
-    } else if ((webpage_index === 28) || (webpage_index === 35)) {
+    if ((webpage_index === 28) || (webpage_index === 35)) {
       updated_html = extracted_html[0] + extracted_html[1];
     } else {
       updated_html = extracted_html[0];
@@ -3081,7 +3274,10 @@ function renderArticle(extracted_html, webpage_index) {
       updated_html 
     );
   } // END of if STATEMENT
-  // formatCSS();
+console.log("webpage_index = " + webpage_index);
+  if (webpage_index === 39) {
+    jq("article").html(extracted_html[0]);
+  }
   
   jq("body").fadeIn();
 } // END of FUNCTION 'renderArticle'

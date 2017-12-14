@@ -27,7 +27,9 @@ h2,
 .article-debate img:nth-child(4) + a, 
 .article-english-links, 
 .article-english, 
-#footer-row_3 span {
+.article-english img:nth-child(4) + a,  
+#footer-row_3 span, 
+.article-login {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -52,8 +54,13 @@ th,
 .article-english h6, 
 .article-english > span, 
 .article-english ul li, 
-.article-english p {
+.article-english p, 
+.article-english img:nth-child(4) + a {
   font-size: 32px;
+}
+
+.form-row input {
+  font-size: 28px;
 }
 
 .article-faculty-member ul li, 
@@ -62,7 +69,8 @@ th,
   font-size: 25px;
 }
 
-.article-debate table + span {
+.article-debate table + span, 
+.form-row label {
   font-size: 24px;
 }
 
@@ -112,7 +120,9 @@ nav > section > div span,
 .article-debate img:nth-child(4) + a, 
 .article-english h4, 
 .article-english h6, 
-.article-english > span  {
+.article-english > span, 
+.article-english img:nth-child(4) + a, 
+.article-login h4  {
   text-align: center;
 }
 
@@ -163,7 +173,8 @@ nav > section > div > a,
 #nav-sub_menu a, 
 #nav-main_menu > section > div > a, 
 .article-faculty-member-page a, 
-.article-debate img:nth-child(4) + a {
+.article-debate img:nth-child(4) + a, 
+.article-english img:nth-child(4) + a {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
@@ -174,7 +185,8 @@ nav > section > div > a:active,
 #nav-sub_menu a:active, 
 #nav-main_menu > section > div > a:active, 
 .article-faculty-member-page a:active, 
-.article-debate img:nth-child(4) + a:active {
+.article-debate img:nth-child(4) + a:active, 
+.article-english img:nth-child(4) + a:active {
   background-color: #485081;
   border-color: #e76200;
 }
@@ -182,7 +194,8 @@ nav > section > div > a:active,
 #header-links a:active, 
 #nav-menu-links a:active, 
 #nav-section_menu a:active, 
-.article-debate img:nth-child(4) + a:active {
+.article-debate img:nth-child(4) + a:active, 
+.article-english img:nth-child(4) + a:active {
   color: #fff;
 }
 
@@ -197,7 +210,8 @@ nav > section > div span,
 #nav-main_menu > section > div span, 
 #nav-section_menu a, 
 .article-faculty-member-page a, 
-.article-debate img:nth-child(4) + a {
+.article-debate img:nth-child(4) + a, 
+.article-english img:nth-child(4) + a {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
   color: #485081;
@@ -510,13 +524,15 @@ article {
 
 .article-faculty-member-page h4, 
 .article-debate h4, 
-.article-english h4  {
+.article-english h4, 
+.article-login h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
 }
 
 .article-debate h4, 
-.article-english h4 {
+.article-english h4, 
+.article-login h4 {
   margin: 1em 0;
 }
 
@@ -666,7 +682,8 @@ th,
   margin: 1em 1em 1em 5.5em;
 }
 
-.article-debate img:nth-child(4) + a {
+.article-debate img:nth-child(4) + a, 
+.article-english img:nth-child(4) + a {
   display: block;
   margin-top: 2em !important;
 }
@@ -681,6 +698,47 @@ th,
 
 .article-english ul {
   width: 80%;
+}
+
+
+/* PAGE: Login */
+
+
+.article-header-login {
+  width: 435px !important;
+  margin: 0 auto;
+}
+
+.form-row {
+  width: 450px;
+  height: 4em;
+  margin: 2em 0;
+}
+
+.form-row img {
+  margin-top: 1.5em !important;
+  float: left;
+}
+
+.form-row input {
+  width: 350px;
+  margin: 0 0.5em;
+  padding: 0.5em;
+}
+
+.form-row input[type="checkbox"] {
+  width: 15px;
+  margin: 10px 10px 0 0;
+  display: inline-block;
+}
+
+.form-row label {
+  margin: 0 35px 0 0;
+  display: inline-block;
+}
+
+#form-button {
+  float: right;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {
@@ -706,7 +764,8 @@ th,
   #header-links a,  
   #nav-section_menu a, 
   .article-faculty-member-page a, 
-  .article-debate img:nth-child(4) + a {
+  .article-debate img:nth-child(4) + a, 
+  .article-english img:nth-child(4) + a {
     width: 8.79em;
     height: 0.25em;
     padding: 0.8em;
@@ -714,7 +773,8 @@ th,
   }
 
   #nav-section_menu a, 
-  .article-debate img:nth-child(4) + a {
+  .article-debate img:nth-child(4) + a, 
+  .article-english img:nth-child(4) + a {
     width: 11em;
     margin: 1em auto;
     display: block;
