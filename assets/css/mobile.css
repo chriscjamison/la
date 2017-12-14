@@ -31,7 +31,8 @@ h2,
 #footer-row_3 span, 
 .article-login, 
 .article-header-announcements, 
-.article-announcements {
+.article-announcements, 
+.article-awards {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -60,7 +61,10 @@ th,
 .article-english img:nth-child(4) + a, 
 .article-announcements a, 
 .article-announcements span, 
-.article-announcements p {
+.article-announcements p, 
+.article-awards a, 
+.article-awards span, 
+.article-awards p {
   font-size: 32px;
 }
 
@@ -105,7 +109,10 @@ h2,
 .article-english p, 
 .article-announcements a, 
 .article-announcements span, 
-.article-announcements p {
+.article-announcements p, 
+.article-awards a, 
+.article-awards span, 
+.article-awards p {
   font-weight: 400;
 }
 
@@ -132,7 +139,8 @@ nav > section > div span,
 .article-english img:nth-child(4) + a, 
 .article-login h4, 
 .article-header-announcements h4, 
-.article-announcements h4  {
+.article-announcements h4, 
+.article-awards h4  {
   text-align: center;
 }
 
@@ -230,7 +238,8 @@ nav > section > div span,
 .article-faculty-info ul li a, 
 .article-debate-links a, 
 .article-english-links a, 
-.article-announcements a {
+.article-announcements a, 
+.article-awards a {
   color: #485081;
 }
 
@@ -538,7 +547,8 @@ article {
 .article-english h4, 
 .article-login h4, 
 .article-header-announcements h4, 
-.article-announcements h4  {
+.article-announcements h4, 
+.article-awards h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
 }
@@ -546,7 +556,8 @@ article {
 .article-debate h4, 
 .article-english h4, 
 .article-login h4, 
-.article-header-announcements h4 {
+.article-header-announcements h4, 
+.article-awards h4 {
   margin: 1em 0;
 }
 
@@ -602,7 +613,7 @@ tr > td:nth-child(2)  {
 }
 
 h4 {
-  margin: 0;
+  margin: 1em 0 0.25em 0;
 }
 
 li {
@@ -615,7 +626,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-faculty-member-page, 
 .article-debate, 
 .article-english, 
-.article-announcements {
+.article-announcements, 
+.article-awards {
   width: 75%;
   height: auto;
   min-height: 1px;
@@ -644,13 +656,14 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   display: block;
 }
 
-.article-announcements a {
+.article-announcements a, 
+.article-awards {
   width: 23em;
 }
 
 .article-debate-links a:nth-child(1), 
 .article-english-links a:nth-child(1), 
-.article-announcements a:nth-child(1) {
+.article-awards- a:nth-child(1) {
   margin-top: 0;
 }
 
@@ -763,23 +776,28 @@ th,
 
 /* PAGE: Announcements */
 
-.article-announcements {
+.article-announcements, 
+.article-awards {
   width: 950px !important;
   margin: 0 auto;
 }
 
-.article-announcements-listing {
+.article-announcements-listing, 
+.article-awards-listing {
   margin: 2em 0;
 }
 
-.article-announcements a {
+.article-announcements a, 
+.article-awards a {
   width: 765px;
   display: inline-block;
 }
 
-.article-announcements span {
+.article-announcements span, 
+.article-awards span {
   width: 185px;
   display: inline-block;
+  vertical-align: top;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {

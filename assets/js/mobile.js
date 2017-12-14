@@ -2650,7 +2650,6 @@ function extractHtmlFromDesktopPage()  {
               case 40:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
                                     "          <h4>공지 사항</h4>\n" + 
-                                    "          <h4>Page 1</h4>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-1\">\n" + 
                                     "            <a href=\"/la/assets/html/announcements/announcement_1.htm\" title=\"학원친구 앱 사용법\">학원친구 앱 사용법</a><span> - 2017-11-21</span>\n" + 
                                     "          </div>\n" + 
@@ -2941,64 +2940,64 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
                                     "          <h4>수상실적</h4>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-1\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-2\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_2.htm\" title=\매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_2.htm\" title=\매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-3\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-4\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-5\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-6\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-7\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-8\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-9\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-10\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-11\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-12\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!! \">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!! \">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-13\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-14\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_14.htm\" title=\NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_14.htm\" title=\NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-15\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-16\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-17\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-18\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-19\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-20\">\n" + 
-                                    "            <a href=\"/la/assets/html/awards/awards_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"/la/assets/html/awards/award_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
                                     
@@ -3376,6 +3375,11 @@ function renderHeader(webpage_index) {
     case 61: 
       title_html = title_html + "수상실적";
     break;
+
+    // Runs if the loading page is the 1st award.
+    case 62: 
+      title_html = title_html + section_html + "*토론대회 파트너를 찾아라! -토론명문리더스*";
+    break;
   } // END of SWITCH statement
 
   jq("head").html(
@@ -3496,7 +3500,7 @@ function renderMenus(webpage_index) {
     "        </section>\n" + 
     "        <section id=\"nav-row_2\">\n" + 
     "          <div id=\"link-awards\">\n" + 
-    "            <a href=\"/la/html/awards/awards.htm\" title=\"Awards\"></a>\n" + 
+    "            <a href=\"/la/assets/html/awards/awards.htm\" title=\"Awards\"></a>\n" + 
     "            <span>Awards</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-debate\">\n" + 
