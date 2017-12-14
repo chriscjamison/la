@@ -51,7 +51,8 @@ th,
 .article-english-links a, 
 .article-english h6, 
 .article-english > span, 
-.article-english ul li {
+.article-english ul li, 
+.article-english p {
   font-size: 32px;
 }
 
@@ -87,7 +88,8 @@ h2,
 .article-english table td, 
 .article-english h6, 
 .article-english > span, 
-.article-english ul li  {
+.article-english ul li, 
+.article-english p  {
   font-weight: 400;
 }
 
@@ -598,6 +600,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 .article-header-debate, 
 .article-debate-links, 
+.article-header-english, 
 .article-english-links {
   width: 680px !important;
   margin: 0 auto;
@@ -649,7 +652,8 @@ th,
   color: #4f4f4f;
 }
 
-.article-debate p {
+.article-debate p, 
+.article-english p {
   margin: 1em 1.5em;
 }
 

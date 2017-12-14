@@ -2124,18 +2124,187 @@ function extractHtmlFromDesktopPage()  {
               case 34:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
                                     "          <h4>2016 원서강독 수업 일정 업데이트</h4>\n" + 
-                                    "          <span>원서강독 수업 일정 안내합니다</span>\n" + 
+                                    "          <span>원서강독 수업 일정 안내합니다<br/><strong>* 2016년 학년기준입니다)</strong></span>\n" + 
                                     "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  요일\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  시간\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  요일\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" +  
+                                    "                  시간\n" + 
+                                    "                </th>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </thead>\n" + 
+                                    "            <tbody>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초등오픈\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화수\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4PM ~ 7PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중등오픈\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  화수\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" +
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  초5학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중1학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4PM ~ 7PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  초6학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" +
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  중2학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4PM ~ 7PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                 토요일\n" +
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  최상위반 (LOGOS / KAIROS)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" +
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  중3학년\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 10PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  고등오픈\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일\n" +
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  1PM ~ 4PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Ethos Debate Lecture & Clinic (초등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  4:30PM ~ 6PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Pathos Debate Lecture & Clinic (중등)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  7PM ~ 8:30PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";
+                                    
+                webpage_index = 34;
+              break;
+
+              // Runs if the loading page is the 'English' page for talk information of 2016.
+              case 35:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>2016 Talk Updated class schedule</h4>\n" + 
+                                    "          <h6>토론수업 일정(토론시간렉쳐강의시간)</h6>\n" + 
+                                    "          <span>(팀수업별도 문의)</span>\n";
+
+                extracted_html[1] = "          <table>\n" + 
+                                    "            <thead>\n" + 
+                                    "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  클래스명\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  수업내용\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  수업일정\n" + 
+                                    "                  학년\n" + 
+                                    "                </th>\n" + 
+                                    "                <th scope=\"col\">\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
                                     "                  수업료\n" + 
@@ -2144,72 +2313,111 @@ function extractHtmlFromDesktopPage()  {
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
-                                    "                <td>\n" + 
-                                    "                  JUNIOR 초2,3\n" + 
+                                    "                <td rowspan=\"4\">\n" + 
+                                    "                  초등토론\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  리딩 &amp; 라이팅 &amp; 토론\n" + 
-                                    "                </td>\n" + 
-                                    "                <td>\n" + 
-                                    "                  수요일 4-7 / 목요일 4-7시\n" + 
-                                    "                  <br/>\n" + 
-                                    "                  (Rick / Dillon 강사)\n" + 
+                                    "                  화요일 4-7PM(초3,4)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"3\">\n" + 
-                                    "                  4(주1회): 20만6천원\n" + 
+                                    "                  중등토론\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일 7-10PM\n" + 
+                                    "                </td>\n" + 
+                                    "                <td rowspan=\"5\">\n" + 
+                                    "                  4주: 36만원\n" + 
                                     "                  <br/>\n" + 
-                                    "                  5(주1회): 25만8천원\n" + 
+                                    "                  5주: 45만원\n" + 
+                                    "                </td>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  수요일 4-7PM(초5,6)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  목요일 7-10PM\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td rowspan=\"2\">\n" + 
+                                    "                 토요일 12-3PM(3,4/5,6)\n" + 
+                                    "                 <br/>\n" + 
+                                    "                 4-7PM(5,6)\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  토요일, 12-3PM(중)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  4-7PM(중1)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  7-10PM(중2,3)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  일요일 1-4PM(중3)\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  LEXIS 초3,4\n" + 
+                                    "                  고등토론\n" + 
+                                    "                 <br/>\n" + 
+                                    "                 (중3이상)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  원서강독 (리딩 &amp; 라이팅)\n" + 
-                                    "                </td>\n" + 
-                                    "                <td>\n" + 
-                                    "                  수요일, 4-7시 (Matthew 강사)\n" + 
-                                    "                  <br/>\n" + 
-                                    "                  금요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                  목요일 7-10PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                 MYTHOS (미토스) 초5,6\n" + 
+                                    "                 초등 Speech & Debate\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  원서강독 (리딩 &amp; 라이팅)\n" + 
-                                    "                </td>\n" + 
-                                    "                <td>\n" + 
-                                    "                  수요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                  화요일 4-7PM\n" + 
                                     "                  <br/>\n" + 
-                                    "                  금요일, 1-4시 (Matthew 강사)\n" + 
-                                    "                </td>\n" + 
-                                    "              </tr>\n" + 
-                                    "              <tr>\n" + 
-                                    "                <td>\n" + 
-                                    "                 OPSIS 중등반\n" + 
+                                    "                  일요일 1-4PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  원서강독 (리딩 &amp; 라이팅)\n" + 
+                                    "                  초등 Speech & Debate\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  수요일, 7-10시 (Matthew 강사)\n" + 
+                                    "                  맑은 고딕 7-10PM\n" + 
                                     "                  <br/>\n" + 
-                                    "                  금요일, 4-7시 (Matthew 강사)\n" + 
+                                    "                  일요일 4-7PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "            </tbody>\n" + 
                                     "          </table>\n" + 
+                                    "          <span>*초등 렉쳐일정매주: 금요일 4:30-7시</span>\n" + 
+                                    "          <span>*중등이상 렉쳐일정: 매주 금요일 7-9:30(재학생만 수강가능)</span>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>등록: 매월등록 또는 분기별 등록 (10%할인 적용)</li>\n" + 
-                                    "            <li>입학시험 일정: 매주 수(6-7:20PM), 토(2-3:20PM) / Reading, Essay & Impromptu Speech 부문 평가(하루 전 예약,무료)</li>\n" + 
-                                    "            <li>상담문의 02-562-9799, 문자예약 010-4773-9799</li>\n" + 
+                                    "            <li>등록: 매월등록 또는 분기별 등록 할인 적용 할인 적용(10%할인 적용)</li>\n" + 
+                                    "            <li>입학시험 일정: 매주 수(6-7:20PM), (2-3:20PM) / Reading, Essay & Impromptu Speech 부문 평가(하루 전 예약,무료)</li>\n" + 
+                                    "            <li>상담문의 02-562-9799, 010-4773-9799</li>\n" + 
                                     "          </ul>\n" + 
-                                    "        </div>\n";
-                                    
-                webpage_index = 34;
+                                    "        </div>\n";  
+
+                webpage_index = 35;
+              break;
+
+              // Runs if the loading page is the 'English' page for the schedule for English classes.
+              case 36:
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
+                                    "          <h4>주중 영어원서강독반 일정안내</h4>\n" + 
+                                    "          <h6>안녕하세요? 리더스대치 관리자입니다.</h6>\n" + 
+                                    "          <p>\n" + 
+                                    "            학생들이 비문학을 공부하는 영어토론수업외에 문학원서를 통해 고급 리딩, 라이팅 수준을\n" + 
+                                    "            <br/>\n" + 
+                                    "            향상시킬 수 있는 영어수업반을 안내드립니다.\n" + 
+                                    "          </p>\n" + 
+                                    "          <ul>\n" +
+                                    "            <li>*초등 6학년반 - 매주 수요일 7-10시 리딩 & 라이팅수업 (주1회3시간 4주기준 206000원)</li>\n" + 
+                                    "            <li>*중등 1학년반 - 매주 금요일 7-10시 리딩 & 라이팅수업 (주1회3시간 4주기준 206000원)</li>\n" + 
+                                    "          </ul>\n" + 
+                                    "          <p>\n" + 
+                                    "            초등 6학년반은 현재 2명만 추가등록받고 있습니다. 리더스입학시험을 본 학생들 중 우선신청을\n" +  
+                                    "            <br/>\n" + 
+                                    "            받고 있으니 연락주시기 바랍니다. 감사합니다. 02-562-9799\n" + 
+                                    "          </p>\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 36;
               break;
             }
           }	
@@ -2859,14 +3067,14 @@ function renderArticle(extracted_html, webpage_index) {
     
     if (webpage_index === 26) {
       updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];
-    } else if (webpage_index === 26) {
+    } else if ((webpage_index === 28) || (webpage_index === 35)) {
       updated_html = extracted_html[0] + extracted_html[1];
     } else {
       updated_html = extracted_html[0];
     }
     
     jq("article").html(
-      "        <div class=\"article-header-debate\" id=\"article-header\">\n" + 
+      "        <div class=\"article-header-english\" id=\"article-header\">\n" + 
       "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-02Top.png\" />\n" + 
       "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-02.png\" />\n" + 
       "        </div>\n" + 
