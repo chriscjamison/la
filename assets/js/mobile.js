@@ -2649,7 +2649,6 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Announcements' page.
               case 40:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>공지 사항</h4>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-1\">\n" + 
                                     "            <a href=\"/la/assets/html/announcements/announcement_1.htm\" title=\"학원친구 앱 사용법\">학원친구 앱 사용법</a><span> - 2017-11-21</span>\n" + 
                                     "          </div>\n" + 
@@ -4076,7 +4075,7 @@ function renderArticle(extracted_html, webpage_index) {
     );
   } // END of if STATEMENT
 
-  if ((webpage_index > 15) && (webpage_index <= 27))  {
+  if ((webpage_index > 19) && (webpage_index <= 27))  {
     
     if (webpage_index === 22) {
       updated_html = extracted_html[0] + extracted_html[1] + extracted_html[2];
@@ -4112,13 +4111,13 @@ function renderArticle(extracted_html, webpage_index) {
     );
   } // END of if STATEMENT
 
-  if (webpage_index > 39) { 
+  if (webpage_index === 39 || (webpage_index > 60) && (webpage_index <= 81)) { 
     jq("article").html(extracted_html[0]);
   }
 
- /*  if ((webpage_index > 39) && (webpage_index <= 69))  {
+  if ((webpage_index > 39) && (webpage_index <= 60))  {
     
-    /* if ((webpage_index === 28) || (webpage_index === 35)) {
+    if ((webpage_index === 28) || (webpage_index === 35)) {
       updated_html = extracted_html[0] + extracted_html[1];
     } else {
       updated_html = extracted_html[0];
@@ -4130,8 +4129,7 @@ function renderArticle(extracted_html, webpage_index) {
       "        </div>\n" + 
       updated_html 
     );
-  } // END of if STATEMENT */
-
+  } // END of if STATEMENT
   
   jq("body").fadeIn();
 } // END of FUNCTION 'renderArticle'

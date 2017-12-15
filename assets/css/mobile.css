@@ -800,6 +800,13 @@ th,
   vertical-align: top;
 }
 
+
+/* PAGE: Awards */
+
+.article-awards p {
+  line-height: 60px;
+}
+
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
     width: 97%;
