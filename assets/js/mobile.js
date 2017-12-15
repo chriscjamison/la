@@ -3015,7 +3015,7 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 62;
               break;
 
-              // Runs if the loading page is the 1st award in the Award section.
+              // Runs if the loading page is the 2nd award in the Award section.
               case 63:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
                                     "          <h4>매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</h4>\n" + 
@@ -3026,9 +3026,207 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 63;
               break;
 
-            }
-          }
+              // Runs if the loading page is the 3rd award in the Award section.
+              case 64:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 64;
+              break;
+
+              // Runs if the loading page is the 4th award in the Award section.
+              case 65:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>November 2015 Invitational 대회 우승!</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 65;
+              break;
+
+              // Runs if the loading page is the 5th award in the Award section.
+              case 66:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>2016년 상반기 수상을 축하합니다!!</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 66;
+              break;
+
+              // Runs if the loading page is the 6th award in the Award section.
+              case 67:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>2016 SUMMER 리더스를 빛낸 학생들 ~</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 67;
+              break;
+
+              // Runs if the loading page is the 7th award in the Award section.
+              case 68:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 68;
+              break;
+
+              // Runs if the loading page is the 8th award in the Award section.
+              case 69:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>IET 영어 독서 대회 수상</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 69;
+              break;
+              
+              // Runs if the loading page is the 9th award in the Award section.
+              case 70:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>SEOMUN 수상자</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 70;
+              break;
+
+              // Runs if the loading page is the 9th award in the Award section.
+              case 71:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>NSDA 2016 November Invitational 수상자</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 71;
+              break;
+
+              // Runs if the loading page is the 10th award in the Award section.
+              case 72:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>브라운 MUN 수상</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 72;
+              break;
+
+              // Runs if the loading page is the 11th award in the Award section.
+              case 73:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>2016 SUMMER 수상을 축하합니다!!</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 73;
+              break;
+
+              // Runs if the loading page is the 12th award in the Award section.
+              case 74:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다.</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 74;
+              break;
+
+              // Runs if the loading page is the 13th award in the Award section.
+              case 75:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>NSDA Korea 수상! (2016.4.9)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 75;
+              break;
+
+              // Runs if the loading page is the 14th award in the Award section.
+              case 76:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>제1회 한.중 리더스컵 토론대회 1등 축하합니다.</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 76;
+              break;
+
+              // Runs if the loading page is the 15th award in the Award section.
+              case 77:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>United Nations(반기문 UN Speech Contest)수상을 축하합니다.</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 77;
+              break;
+
+              // Runs if the loading page is the 16th award in the Award section.
+              case 78:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>브라운대학교 모의유엔 수상!! 축하합니다~</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 78;
+              break;	
+
+              // Runs if the loading page is the 17th award in the Award section.
+              case 79:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>UN 청소년환경총회(MUN) 수상 축하합니다.</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 79;
+              break;
+
+              // Runs if the loading page is the 18th award in the Award section.
+              case 80:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 80;
+              break;
+
+              // Runs if the loading page is the 19th award in the Award section.
+              case 81:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 81;
+              break;
+            }	
+          }	 
         }
+        
       );
      
       setupFinalContent(extracted_html, webpage_index);
@@ -3402,11 +3600,103 @@ function renderHeader(webpage_index) {
       title_html = title_html + section_html + "청심모의유엔 대회 (CSIAMUN)";
     break;
 
-    // Runs if the loading page is the 1st award.
+    // Runs if the loading page is the 2nd award.
     case 63: 
       title_html = title_html + section_html + "매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)";
     break;
-  } // END of SWITCH statement
+
+    // Runs if the loading page is the 3rd award.
+    case 64: 
+      title_html = title_html + section_html + "용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)";
+    break;
+
+    // Runs if the loading page is the 4th award.
+    case 65: 
+      title_html = title_html + section_html + "November 2015 Invitational 대회 우승!";
+    break;
+
+    // Runs if the loading page is the 5th award.
+    case 66: 
+      title_html = title_html + section_html + "2016년 상반기 수상을 축하합니다!!";
+    break;
+
+    // Runs if the loading page is the 6th award.
+    case 67: 
+      title_html = title_html + section_html + "2016 SUMMER 리더스를 빛낸 학생들 ~";
+    break;
+
+    // Runs if the loading page is the 7th award.
+    case 68: 
+      title_html = title_html + section_html + "2017 NSDA겨울챔피언쉽, YUMN, GC수상결과";
+    break;
+
+    // Runs if the loading page is the 8th award.
+    case 69: 
+      title_html = title_html + section_html + "IET 영어 독서 대회 수상";
+    break;
+
+    // Runs if the loading page is the 9th award.
+    case 70: 
+      title_html = title_html + section_html + "SEOMUN 수상자";
+    break;
+
+    // Runs if the loading page is the 10th award.
+    case 71: 
+      title_html = title_html + section_html + "NSDA 2016 November Invitational 수상자";
+    break;
+
+    // Runs if the loading page is the 11th award.
+    case 72: 
+      title_html = title_html + section_html + "브라운 MUN 수상";
+    break;
+
+    // Runs if the loading page is the 12th award.
+    case 73: 
+      title_html = title_html + section_html + "2016 SUMMER  수상을 축하합니다!!";
+    break;
+
+    // Runs if the loading page is the 13th award.
+    case 74: 
+      title_html = title_html + section_html + "[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다.";
+    break;
+
+    // Runs if the loading page is the 14th award.
+    case 75: 
+      title_html = title_html + section_html + "NSDA Korea 수상! (2016.4.9)";
+    break;
+
+    // Runs if the loading page is the 15th award.
+    case 76: 
+      title_html = title_html + section_html + "제1회 한.중 리더스컵 토론대회 1등 축하합니다.";
+    break;
+
+    // Runs if the loading page is the 16th award.
+    case 77: 
+      title_html = title_html + section_html + "United Nations(반기문 UN Speech Contest)수상을 축하합니다.";
+    break;
+
+    // Runs if the loading page is the 17th award.
+    case 78: 
+      title_html = title_html + section_html + "브라운대학교 모의유엔 수상!! 축하합니다~U";
+    break;
+
+    // Runs if the loading page is the 18th award.
+    case 79: 
+      title_html = title_html + section_html + "N 청소년환경총회(MUN) 수상 축하합니다.";
+    break;
+
+    // Runs if the loading page is the 19th award.
+    case 80: 
+      title_html = title_html + section_html + "2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)";
+    break;
+
+    // Runs if the loading page is the 20th award.
+    case 81: 
+      title_html = title_html + section_html + "제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~";
+    break;
+
+   
+  } // END of SWITCH statement	
 
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
