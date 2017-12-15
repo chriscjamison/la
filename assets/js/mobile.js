@@ -114,6 +114,8 @@ function extractHtmlFromDesktopPage()  {
         'award_18.htm', 
         'award_19.htm', // index = 80
         'award_20.htm', 
+        'apply_faculty.htm', 
+        'apply_students.htm'
 
       ];
 
@@ -3222,12 +3224,35 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 81;
               break;
+
+              // Runs if the loading page is 'Apply (Faculty).
+              case 82:
+                extracted_html[0] = "        <div class=\"article-apply_faculty\" id=\"article-content\">\n" + 
+                                    "          <h4>입학시험&특강 신청</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td form").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 82;
+              break;
+
+              // Runs if the loading page is 'Apply (Students).
+              case 83:
+                extracted_html[0] = "        <div class=\"article-apply_students\" id=\"article-content\">\n" + 
+                                    "          <h4>토론 최상위반 접수</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 83;
+              break;
+
             }	
           }	 
         }
         
       );
-     
+      
       setupFinalContent(extracted_html, webpage_index);
     }
   );
@@ -3694,7 +3719,17 @@ function renderHeader(webpage_index) {
       title_html = title_html + section_html + "제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~";
     break;
 
-   
+    // Runs if the loading page is Apply (Faculty).
+    case 82: 
+      title_html = title_html + "입학시험&특강 신청";
+    break;
+
+    // Runs if the loading page is Apply (Students).
+    case 83: 
+      title_html = title_html + "토론 최상위반 접수";
+    break;
+
+    
   } // END of SWITCH statement	
 
   jq("head").html(
@@ -3721,7 +3756,7 @@ function renderHeader(webpage_index) {
     "    <script src=\"/la/assets/js/mobile.js\"></script>\n"
   );
   
-} // END of FUNCTIION 'renderHeader'\
+} // END of FUNCTION 'renderHeader'\
 
 function renderBody() {
 
@@ -3833,7 +3868,7 @@ function renderMenus(webpage_index) {
     "        </section>\n" + 
     "        <section id=\"nav-row_3\">\n" + 
     "          <div id=\"link-apply_students\">\n" + 
-    "            <a href=\"#apply_students\" title=\"Apply (Students)\"></a>\n" + 
+    "            <a href=\"/la/assets/html/apply_students/apply_students.htm\" title=\"Apply (Students)\"></a>\n" + 
     "            <span>Apply (Students)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-faculty\">\n" + 
@@ -3841,7 +3876,7 @@ function renderMenus(webpage_index) {
     "            <span>Faculty</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-apply_faculty\">\n" + 
-    "            <a href=\"#apply_faculty\" title=\"Apply (Faculty)\"></a>\n" + 
+    "            <a href=\"/la/assets/html/apply_faculty/apply_faculty.htm\" title=\"Apply (Faculty)\"></a>\n" + 
     "            <span>Apply (Faculty)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-business\">\n" + 
@@ -4111,9 +4146,11 @@ function renderArticle(extracted_html, webpage_index) {
     );
   } // END of if STATEMENT
 
-  if (webpage_index === 39 || (webpage_index > 60) && (webpage_index <= 81)) { 
+  if (webpage_index === 39 || 
+      (webpage_index > 60) && (webpage_index <= 81) || 
+      webpage_index === 83) { 
     jq("article").html(extracted_html[0]);
-  }
+  } // END of if STATEMENT
 
   if ((webpage_index > 39) && (webpage_index <= 60))  {
     
@@ -4129,6 +4166,26 @@ function renderArticle(extracted_html, webpage_index) {
       "        </div>\n" + 
       updated_html 
     );
+  } // END of if STATEMENT
+
+  if (webpage_index === 82 || webpage_index === 83) { 
+    jq("article").html(extracted_html[0]);
+
+    jq("#button").empty();
+
+    if (webpage_index === 82) {
+      jq("#button").html(
+        "          <input type=\"submit\" id=\"form-apply_faculty-submit\" value=\"대다\">\n" + 
+        "          <input type=\"reset\" id=\"form-apply_faculty-reset\" value=\"명확한 형식\">\n"
+       );
+    } else  {
+      jq("#button").html(
+        "          <input type=\"submit\" id=\"form-apply_students-submit\" value=\"대다\">\n" + 
+        "          <input type=\"reset\" id=\"form-apply_students-reset\" value=\"명확한 형식\">\n"
+       );
+    }
+    
+    
   } // END of if STATEMENT
   
   jq("body").fadeIn();

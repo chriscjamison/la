@@ -32,7 +32,10 @@ h2,
 .article-login, 
 .article-header-announcements, 
 .article-announcements, 
-.article-awards {
+.article-awards, 
+.article-apply_faculty, 
+#button input, 
+.article-apply_students {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -64,7 +67,14 @@ th,
 .article-announcements p, 
 .article-awards a, 
 .article-awards span, 
-.article-awards p {
+.article-awards p, 
+.article-apply_faculty input[type="text"], 
+.article-apply_faculty select, 
+.article-apply_faculty textarea, 
+#button input, 
+.article-apply_students, 
+.article-apply_students .form_input_text, 
+.article-apply_students .form_comment {
   font-size: 32px;
 }
 
@@ -73,19 +83,25 @@ th,
 }
 
 .article-faculty-member ul li, 
-.article-faculty-member p
- {
+.article-faculty-member p {
   font-size: 25px;
 }
 
 .article-debate table + span, 
-.form-row label {
+.form-row label, 
+.article-apply_faculty .form_comment, 
+.article-apply_students .form_comment, 
+.article-apply_students textarea {
   font-size: 24px;
 }
 
 .article-english > h4 + h6 + table th, 
 .article-english > h4 + h6 + table td {
   font-size: 23px;
+}
+
+.article-apply_faculty textarea {
+  font-size: 15px;
 }
 
 h2, 
@@ -112,7 +128,8 @@ h2,
 .article-announcements p, 
 .article-awards a, 
 .article-awards span, 
-.article-awards p {
+.article-awards p, 
+.article-apply_students {
   font-weight: 400;
 }
 
@@ -140,7 +157,10 @@ nav > section > div span,
 .article-login h4, 
 .article-header-announcements h4, 
 .article-announcements h4, 
-.article-awards h4  {
+.article-awards h4, 
+.article-apply_faculty h4, 
+#button input, 
+.article-apply_students h4  {
   text-align: center;
 }
 
@@ -192,7 +212,8 @@ nav > section > div > a,
 #nav-main_menu > section > div > a, 
 .article-faculty-member-page a, 
 .article-debate img:nth-child(4) + a, 
-.article-english img:nth-child(4) + a {
+.article-english img:nth-child(4) + a, 
+#button input {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
@@ -204,7 +225,8 @@ nav > section > div > a:active,
 #nav-main_menu > section > div > a:active, 
 .article-faculty-member-page a:active, 
 .article-debate img:nth-child(4) + a:active, 
-.article-english img:nth-child(4) + a:active {
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
   background-color: #485081;
   border-color: #e76200;
 }
@@ -213,7 +235,8 @@ nav > section > div > a:active,
 #nav-menu-links a:active, 
 #nav-section_menu a:active, 
 .article-debate img:nth-child(4) + a:active, 
-.article-english img:nth-child(4) + a:active {
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
   color: #fff;
 }
 
@@ -229,7 +252,8 @@ nav > section > div span,
 #nav-section_menu a, 
 .article-faculty-member-page a, 
 .article-debate img:nth-child(4) + a, 
-.article-english img:nth-child(4) + a {
+.article-english img:nth-child(4) + a, 
+#button input {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
   color: #485081;
@@ -548,7 +572,9 @@ article {
 .article-login h4, 
 .article-header-announcements h4, 
 .article-announcements h4, 
-.article-awards h4  {
+.article-awards h4, 
+.article-apply_faculty h4, 
+.article-apply_students h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
 }
@@ -557,7 +583,9 @@ article {
 .article-english h4, 
 .article-login h4, 
 .article-header-announcements h4, 
-.article-awards h4 {
+.article-awards h4, 
+.article-apply_faculty h4, 
+.article-apply_students h4 {
   margin: 1em 0;
 }
 
@@ -627,7 +655,9 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-debate, 
 .article-english, 
 .article-announcements, 
-.article-awards {
+.article-awards, 
+.article-apply_faculty, 
+.article-apply_students {
   width: 75%;
   height: auto;
   min-height: 1px;
@@ -716,7 +746,8 @@ th,
 }
 
 .article-debate img:nth-child(4) + a, 
-.article-english img:nth-child(4) + a {
+.article-english img:nth-child(4) + a, 
+#button input {
   display: block;
   margin-top: 2em !important;
 }
@@ -752,7 +783,8 @@ th,
   float: left;
 }
 
-.form-row input {
+.form-row input, 
+.article-apply_faculty input {
   width: 350px;
   margin: 0 0.5em;
   padding: 0.5em;
@@ -807,6 +839,74 @@ th,
   line-height: 60px;
 }
 
+
+/* PAGE: Apply (Faculty) */
+
+input#fmname, 
+input#fmemail, 
+input#fmtitle {
+  width: 625px !important;
+}
+
+input#fmphone1, 
+input#fmphone2, 
+input#fmmobile1, 
+input#fmmobile2 {
+  width: 75px;
+}
+
+input#fmphone3, 
+input#fmmobile3 {
+  width: 282px;
+}
+
+input[name="testDate"] {
+  width: 165px !important;
+}
+
+.article-apply_faculty select {
+  margin-left: 0.5em;
+  padding: 0.5em;
+}
+
+.article-apply_faculty textarea {
+  width: 635px !important;
+  margin-left: 1em;
+  padding: 0.5em;
+}
+
+
+/* PAGE: Apply (Students) */
+
+.article-apply_students tr > td:nth-child(1)  {
+  width: 910px;
+  background-color: transparent;
+}
+
+.article-apply_students th, 
+.article-apply_students td {
+  padding: 0.25em !important;
+  font-size: 32px !important;
+}
+
+.article-apply_students table > tbody > tr:nth-child(3) > td:nth-child(2) {
+  display: none !important;
+}
+
+.article-apply_students .form_input_text {
+  width: 600px;
+  padding: 0.5em;
+}
+
+.article-apply_students .form_comment {
+  line-height: 36px;
+}
+
+.article-apply_students textarea {
+  width: 610px !important;
+  padding: 0.5em;
+}
+
 @media screen and (min-width: 310px) and (max-width: 1000px) {
   header {
     width: 97%;
@@ -831,7 +931,8 @@ th,
   #nav-section_menu a, 
   .article-faculty-member-page a, 
   .article-debate img:nth-child(4) + a, 
-  .article-english img:nth-child(4) + a {
+  .article-english img:nth-child(4) + a, 
+  #button input {
     width: 8.79em;
     height: 0.25em;
     padding: 0.8em;
@@ -840,7 +941,8 @@ th,
 
   #nav-section_menu a, 
   .article-debate img:nth-child(4) + a, 
-  .article-english img:nth-child(4) + a {
+  .article-english img:nth-child(4) + a, 
+  #button input {
     width: 11em;
     margin: 1em auto;
     display: block;
