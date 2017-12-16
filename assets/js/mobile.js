@@ -115,7 +115,23 @@ function extractHtmlFromDesktopPage()  {
         'award_19.htm', // index = 80
         'award_20.htm', 
         'apply_faculty.htm', 
-        'apply_students.htm'
+        'apply_students.htm', 
+        'media.htm', 
+        'item_1.htm', // index = 85
+        'item_2.htm', 
+        'item_3.htm', 
+        'item_4.htm', 
+        'item_5.htm', 
+        'item_6.htm', // index = 90
+        'item_7.htm', 
+        'item_8.htm', 
+        'item_9.htm', 
+        'item_10.htm', 
+        'item_11.htm', // index = 95
+        'item_12.htm', 
+        'item_13.htm', 
+        'item_14.htm', 
+        'item_15.htm' // index = 99
 
       ];
 
@@ -3225,7 +3241,7 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 81;
               break;
 
-              // Runs if the loading page is 'Apply (Faculty).
+              // Runs if the loading page is 'Apply (Faculty)'.
               case 82:
                 extracted_html[0] = "        <div class=\"article-apply_faculty\" id=\"article-content\">\n" + 
                                     "          <h4>입학시험&특강 신청</h4>\n" + 
@@ -3236,7 +3252,7 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 82;
               break;
 
-              // Runs if the loading page is 'Apply (Students).
+              // Runs if the loading page is 'Apply (Students)'.
               case 83:
                 extracted_html[0] = "        <div class=\"article-apply_students\" id=\"article-content\">\n" + 
                                     "          <h4>토론 최상위반 접수</h4>\n" + 
@@ -3247,7 +3263,260 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 83;
               break;
 
+              // Runs if the loading page is 'Media'.
+              case 84:
+                extracted_html[0] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[1] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) a").html();
+                
+                extracted_html[2] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[3] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) a").html();
+                
+                extracted_html[4] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(3) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[5] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(3) > table > tbody > tr:nth-child(2) a").html();
+                
+                extracted_html[6] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(4) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[7] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(4) > table > tbody > tr:nth-child(2) a").html();
+                
+                
+                extracted_html[8] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[9] = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[10]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(2) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[11]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(2) > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[12]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(3) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[13]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(3) > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[14]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(4) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[15]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(4) > table > tbody > tr:nth-child(2) a").html();
+
+                
+                extracted_html[16]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[17]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[18]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(2) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[19]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(2) > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[20]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(3) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[21]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(3) > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[22]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(4) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[23]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(4) > table > tbody > tr:nth-child(2) a").html();
+
+                
+                extracted_html[24]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[25]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[26]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(2) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[27]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td:nth-child(2) > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[28]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(3) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[29]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(3) > table > tbody > tr:nth-child(2) a").html();
+
+                extracted_html[30]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(4) > table > tbody > tr > td > table > tbody > tr > td").html();
+                extracted_html[31]= jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(4) > table > tbody > tr:nth-child(2) a").html();
+         
+                webpage_index = 84;
+              break;
+
+              // Runs if the loading page is the 1st item of Media.
+              case 85:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>대치 리더스</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 85;
+              break;
+
+              // Runs if the loading page is the 2nd item of Media.
+              case 86:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>젬마샘 디베이팅 모습</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 86;
+              break;
+
+              // Runs if the loading page is the 3rd item of Media.
+              case 87:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>유럽피안 파이널 모습~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 87;
+              break;
+
+              // Runs if the loading page is the 4th item of Media.
+              case 88:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>ESDC 쥬니어~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 88;
+              break;
+
+              // Runs if the loading page is the 5th item of Media.
+              case 89:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>토너먼트 현장에서~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 89;
+              break;
+
+              // Runs if the loading page is the 6th item of Media.
+              case 90:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Camp class</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 90;
+              break;
+
+              // Runs if the loading page is the 7th item of Media.
+              case 91:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>모의유엔 수업 (MUN)</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 91;
+              break;
+
+              // Runs if the loading page is the 8th item of Media.
+              case 92:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>회식~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 92;
+              break;
+
+              // Runs if the loading page is the 9th item of Media.
+              case 93:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Dekker 영어샘~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 93;
+              break;
+
+              // Runs if the loading page is the 10th item of Media.
+              case 94:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Joshua샘~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 94;
+              break;  
+
+              // Runs if the loading page is the 11th item of Media.
+              case 95:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Gemma 샘~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 95;
+              break;  
+
+              // Runs if the loading page is the 12th item of Media.
+              case 96:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Roger Hatridge 샘~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 96;
+              break;  
+
+              // Runs if the loading page is the 13th item of Media.
+              case 97:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Youth Forum 2012</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 97;
+              break;  
+
+              // Runs if the loading page is the 14th item of Media.
+              case 98:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>Joshua샘~</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 98;
+              break;  
+
+              // Runs if the loading page is the 15th item of Media.
+              case 99:
+                extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
+                                    "          <h4>대치 리더스</h4>\n" + 
+                                    "          <div class=\"media-item-holder\">\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td p").html() + "\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+                                    
+
+                webpage_index = 99;
+              break; 
+              
             }	
+
+            
           }	 
         }
         
@@ -3313,8 +3582,8 @@ function renderHeader(webpage_index) {
     section_html = "정규영어 (ENGLISH) - ";
   } else if ((webpage_index > 38) && (webpage_index <= 80)) {
     section_html = "공지 사항 - ";
-  } else if (webpage_index > 80) {
-    section_html = "수상실적 - ";
+  } else if ((webpage_index > 84) && (webpage_index <= 100)) {
+    section_html = "대치 리더스 - ";
   }
   
   switch (webpage_index)  {
@@ -3729,8 +3998,86 @@ function renderHeader(webpage_index) {
       title_html = title_html + "토론 최상위반 접수";
     break;
 
+    // Runs if the loading page is Media.
+    case 84: 
+      title_html = title_html + "포토갤러리";
+    break;
+
+    // Runs if the loading page is Item #1 of Media.
+    case 85: 
+      title_html = title_html + section_html + "대치 리더스";
+    break;
+
+    // Runs if the loading page is Item #2 of Media.
+    case 86: 
+      title_html = title_html + section_html + "젬마샘 디베이팅 모습";
+    break;
+
+    // Runs if the loading page is Item #3 of Media.
+    case 87: 
+      title_html = title_html + section_html + "유럽피안 파이널 모습~";
+    break;
+
+    // Runs if the loading page is Item #4 of Media.
+    case 88: 
+      title_html = title_html + section_html + "ESDC 쥬니어~";
+    break;
     
-  } // END of SWITCH statement	
+    // Runs if the loading page is Item #5 of Media.
+    case 89: 
+      title_html = title_html + section_html + "토너먼트 현장에서~";
+    break;
+    
+    // Runs if the loading page is Item #6 of Media.
+    case 90: 
+      title_html = title_html + section_html + "Camp class";
+    break;
+
+    // Runs if the loading page is Item #7 of Media.
+    case 91: 
+      title_html = title_html + section_html + "모의유엔 수업 (MUN)";
+    break;
+    
+    // Runs if the loading page is Item #8 of Media.
+    case 92: 
+      title_html = title_html + section_html + "회식~";
+    break;
+
+    // Runs if the loading page is Item #9 of Media.
+    case 93: 
+      title_html = title_html + section_html + "Dekker 영어샘~";
+    break;
+
+    // Runs if the loading page is Item #10 of Media.
+    case 94: 
+      title_html = title_html + section_html + "Joshua샘~";
+    break;
+
+    // Runs if the loading page is Item #11 of Media.
+    case 95: 
+      title_html = title_html + section_html + "Gemma 샘~";
+    break;
+
+    // Runs if the loading page is Item #12 of Media.
+    case 96: 
+      title_html = title_html + section_html + "Roger Hatridge 샘~";
+    break;
+
+    // Runs if the loading page is Item #13 of Media.
+    case 97: 
+      title_html = title_html + section_html + "Youth Forum 2012";
+    break;
+
+    // Runs if the loading page is Item #14 of Media.
+    case 98: 
+      title_html = title_html + section_html + "Joshua샘~";
+    break;
+
+    // Runs if the loading page is Item #15 of Media.
+    case 99: 
+      title_html = title_html + section_html + "대치 리더스";
+    break;
+  } // END of SWITCH statement	대치 리더스
 
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
@@ -3898,7 +4245,7 @@ function renderMenus(webpage_index) {
     "            <span>Location</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-media\">\n" + 
-    "            <a href=\"#media\" title=\"Media\"></a>\n" + 
+    "            <a href=\"/la/assets/html/media/media.htm\" title=\"Media\"></a>\n" + 
     "            <span>Media</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
@@ -3953,10 +4300,14 @@ function renderSectionMenu(webpage_index) {
         "      <a href=\"/la/assets/html/announcements/announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
       );
     } else if ((webpage_index > 60) && webpage_index <= 81) {
-    jq(menu_selector).html(
-      "      <a href=\"/la/assets/html/awards/awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
-    );
-  } 
+      jq(menu_selector).html(
+        "      <a href=\"/la/assets/html/awards/awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
+      );
+    } else if ((webpage_index > 84) && webpage_index <= 100) {
+      jq(menu_selector).html(
+        "      <a href=\"/la/assets/html/media/media.htm\" title=\"Page #1\" id=\"link-media-page_1\">Page #1</a>\n" 
+      );
+    } 
   } // END of FUNCTION 'renderSectionMenu'
 
   
@@ -3968,8 +4319,8 @@ function renderFooter() {
     "        <div></div>\n" + 
     "      </section>\n" + 
     "      <section id=\"footer-row_1\">\n" + 
-    "        <a href=\"https://naver.com\" title=\"Naver\" target=\"_blank\" id=\"link-naver\"></a>\n" + 
-    "        <a href=\"https://facebook.com\" title=\"Facebook\" target=\"_blank\" id=\"link-facebook\"></a>\n" + 
+    "        <a href=\"https://blog.naver.com/leadersacademtybd\" title=\"Naver\" target=\"_blank\" id=\"link-naver\"></a>\n" + 
+    "        <a href=\"https://www.facebook.com/JoinLeadersAcademy/\" title=\"Facebook\" target=\"_blank\" id=\"link-facebook\"></a>\n" + 
     "        <a href=\"https://twitter.com\" title=\"Twitter\" target=\"_blank\" id=\"link-twitter\"></a>\n" + 
     "        <a href=\"https://youtube.com\" title=\"YouTube\" target=\"_blank\" id=\"link-you_tube\"></a>\n" + 
     "        <a href=\"https://kakao.com\" title=\"Kakao\" target=\"_blank\" id=\"link-kakao\"></a>\n" + 
@@ -4146,9 +4497,10 @@ function renderArticle(extracted_html, webpage_index) {
     );
   } // END of if STATEMENT
 
-  if (webpage_index === 39 || 
-      (webpage_index > 60) && (webpage_index <= 81) || 
-      webpage_index === 83) { 
+  if ((webpage_index === 39) || 
+      ((webpage_index > 60) && (webpage_index <= 81)) || 
+      (webpage_index === 83) || 
+      ((webpage_index > 84) && (webpage_index <= 100))) { 
     jq("article").html(extracted_html[0]);
   } // END of if STATEMENT
 
@@ -4184,10 +4536,92 @@ function renderArticle(extracted_html, webpage_index) {
         "          <input type=\"reset\" id=\"form-apply_students-reset\" value=\"명확한 형식\">\n"
        );
     }
-    
-    
+       
   } // END of if STATEMENT
   
+  if (webpage_index === 84) {
+    jq("article").html(
+      "        <div class=\"article-media\" id=\"article-content\">\n" + 
+      "          <h4>포토갤러리</h4>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_1\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_1\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_1.htm\">" + extracted_html[0] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_1.htm\">" + extracted_html[1] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_2\">\n" + 
+      "             <a href=\"/la/assets/html/media/item_2.htm\">" + extracted_html[2] + "</a>\n" + 
+      "             <a href=\"/la/assets/html/media/item_2.htm\">" + extracted_html[3] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_2\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_3\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_3.htm\">" + extracted_html[4] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_3.htm\">" + extracted_html[5] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_4\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_4.htm\">" + extracted_html[6] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_4.htm\">" + extracted_html[7] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_3\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_5\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_5.htm\">" + extracted_html[8] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_5.htm\">" + extracted_html[9] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_6\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_6.htm\">" + extracted_html[10] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_6.htm\">" + extracted_html[11] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_4\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_7\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_7.htm\">" + extracted_html[12] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_7.htm\">" + extracted_html[13] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_8\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_8.htm\">" + extracted_html[14] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_8.htm\">" + extracted_html[15] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_5\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_9\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_9.htm\">" + extracted_html[16] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_9.htm\">" + extracted_html[17] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_10\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_10.htm\">" + extracted_html[18] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_10.htm\">" + extracted_html[19] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_6\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_11\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_11.htm\">" + extracted_html[20] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_11.htm\">" + extracted_html[21] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_12\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_12.htm\">" + extracted_html[22] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_12.htm\">" + extracted_html[23] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_7\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_13\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_13.htm\">" + extracted_html[24] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_13.htm\">" + extracted_html[25] + "</a>\n" + 
+      "            </div>\n" + 
+      "            <div class=\"media-item\" id=\"media-item_14\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_14.htm\">" + extracted_html[26] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_14.htm\">" + extracted_html[27] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "          <div class=\"article-media-row\" id=\"media-row_8\">\n" + 
+      "            <div class=\"media-item\" id=\"media-item_15\">\n" + 
+      "              <a href=\"/la/assets/html/media/item_15.htm\">" + extracted_html[28] + "</a>\n" + 
+      "              <a href=\"/la/assets/html/media/item_15.htm\">" + extracted_html[29] + "</a>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n"
+    );
+  }
   jq("body").fadeIn();
 } // END of FUNCTION 'renderArticle'
 

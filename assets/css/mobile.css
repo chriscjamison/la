@@ -35,7 +35,8 @@ h2,
 .article-awards, 
 .article-apply_faculty, 
 #button input, 
-.article-apply_students {
+.article-apply_students, 
+.article-media {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -74,7 +75,9 @@ th,
 #button input, 
 .article-apply_students, 
 .article-apply_students .form_input_text, 
-.article-apply_students .form_comment {
+.article-apply_students .form_comment, 
+.article-media a, 
+.media-item-holder {
   font-size: 32px;
 }
 
@@ -129,7 +132,8 @@ h2,
 .article-awards a, 
 .article-awards span, 
 .article-awards p, 
-.article-apply_students {
+.article-apply_students,
+.article-media a {
   font-weight: 400;
 }
 
@@ -160,7 +164,9 @@ nav > section > div span,
 .article-awards h4, 
 .article-apply_faculty h4, 
 #button input, 
-.article-apply_students h4  {
+.article-apply_students h4, 
+.article-media h4, 
+.media-item-holder  {
   text-align: center;
 }
 
@@ -263,7 +269,8 @@ nav > section > div span,
 .article-debate-links a, 
 .article-english-links a, 
 .article-announcements a, 
-.article-awards a {
+.article-awards a, 
+.article-media a {
   color: #485081;
 }
 
@@ -574,7 +581,8 @@ article {
 .article-announcements h4, 
 .article-awards h4, 
 .article-apply_faculty h4, 
-.article-apply_students h4  {
+.article-apply_students h4, 
+.article-media h4  {
   margin-bottom: 0.25em;
   font-size: 42px;
 }
@@ -585,7 +593,8 @@ article {
 .article-header-announcements h4, 
 .article-awards h4, 
 .article-apply_faculty h4, 
-.article-apply_students h4 {
+.article-apply_students h4, 
+.article-media h4 {
   margin: 1em 0;
 }
 
@@ -657,7 +666,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-announcements, 
 .article-awards, 
 .article-apply_faculty, 
-.article-apply_students {
+.article-apply_students, 
+.article-media {
   width: 75%;
   height: auto;
   min-height: 1px;
@@ -693,7 +703,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 .article-debate-links a:nth-child(1), 
 .article-english-links a:nth-child(1), 
-.article-awards- a:nth-child(1) {
+.article-awards-a:nth-child(1) {
   margin-top: 0;
 }
 
@@ -905,6 +915,43 @@ input[name="testDate"] {
 .article-apply_students textarea {
   width: 610px !important;
   padding: 0.5em;
+}
+
+
+/* PAGE: Media */
+
+.article-media-row {
+  width: 100%;
+}
+
+.article-media-row {
+  width: 100%;
+  margin: 0.5em;
+}
+
+.media-item {
+  width: 49%;
+  margin: 2em 0;
+  display: inline-block;
+}
+
+.media-item img {
+  width: 425px;
+  height: 425px;
+}
+
+.media-item img { 
+  border: 5px solid #485081;
+}
+
+.media-item a:nth-child(2) {
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+}
+
+.media-item a:nth-child(2):active { 
+  color: #e76200;
 }
 
 @media screen and (min-width: 310px) and (max-width: 1000px) {
