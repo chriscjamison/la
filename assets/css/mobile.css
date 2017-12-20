@@ -954,7 +954,8 @@ input[name="testDate"] {
   color: #e76200;
 }
 
-@media screen and (min-width: 310px) and (max-width: 1000px) {
+
+@media screen and (min-width: 310px) and (max-width: 360px) {
   header {
     width: 97%;
     height: 16em;
@@ -1010,3 +1011,50 @@ input[name="testDate"] {
     height: 4.8em;
   }
 }
+
+@media screen and (min-width: 370px) and (max-width: 380px) {
+  .header-index {
+    width: 345px;
+    height: 88px;
+  }
+
+  .header-index > a > img {
+    width: 110px;
+    height: 85px;
+  }
+
+  #header-right, 
+  #header-search, 
+  #header-links, 
+  #header-links-level_2 {
+    width: 220px;
+  }
+
+  #header-right {
+    margin: 0 0 0 13px;
+  }
+
+  #mobile-search {
+    width: 219px;
+    padding: 10px 0 11px 47px;
+    border: 3px solid #b7b7b7;
+    font-size: 16px;
+    background-position: -2100px -26px;
+  }
+
+  #header-links {
+    margin-top: 5px;
+  }
+
+  #header-links a {
+    width: 81px;
+    padding: 6px 10px;
+    box-shadow: 2px 2px 1px #a2a2a2;
+    border: 3px solid #485081;
+    font-size: 14px;
+    line-height: 14px;
+    text-shadow: 1px 1px 1px #a2a2a2;
+  }
+  
+}
+  
