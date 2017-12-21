@@ -82,7 +82,7 @@ th,
 }
 
 .form-row input {
-  font-size: 28px;
+  font-size: 16px;
 }
 
 .article-faculty-member ul li, 
@@ -95,7 +95,7 @@ th,
 .article-apply_faculty .form_comment, 
 .article-apply_students .form_comment, 
 .article-apply_students textarea {
-  font-size: 24px;
+  font-size: 12px;
 }
 
 .article-english > h4 + h6 + table th, 
@@ -584,7 +584,7 @@ article {
 .article-apply_students h4, 
 .article-media h4  {
   margin-bottom: 0.25em;
-  font-size: 42px;
+  font-size: 18px;
 }
 
 .article-debate h4, 
@@ -595,7 +595,7 @@ article {
 .article-apply_faculty h4, 
 .article-apply_students h4, 
 .article-media h4 {
-  margin: 1em 0;
+  margin: 25px 0;
 }
 
 .article-faculty-member-page span {
@@ -778,40 +778,48 @@ th,
 /* PAGE: Login */
 
 .article-header-login {
-  width: 435px !important;
+  width: 435px;
   margin: 0 auto;
+}
+
+.article-login {
+  height: 324px;
 }
 
 .form-row {
   width: 450px;
-  height: 4em;
-  margin: 2em 0;
+  height: 44px;
+  margin: 20px 0;
 }
 
 .form-row img {
-  margin-top: 1.5em !important;
+  margin-top: 15px;
   float: left;
 }
 
 .form-row input, 
 .article-apply_faculty input {
-  width: 350px;
-  margin: 0 0.5em;
-  padding: 0.5em;
+  margin: 0 0 0 10px;
+  padding: 10px;
 }
 
 .form-row input[type="checkbox"] {
   width: 15px;
-  margin: 10px 10px 0 0;
+  margin: 12px 10px 0 0;
   display: inline-block;
 }
 
 .form-row label {
-  margin: 0 35px 0 0;
+  margin: 0 20px 0 0;
   display: inline-block;
 }
 
+#form-row-3 {
+  margin-left: 48px;
+}
+
 #form-button {
+  margin-right: 8px;
   float: right;
 }
 
@@ -954,8 +962,8 @@ input[name="testDate"] {
   color: #e76200;
 }
 
-
-@media screen and (min-width: 310px) and (max-width: 360px) {
+/* 
+@media screen and (min-width: 380px) and (max-width: 420px) {
   header {
     width: 97%;
     height: 16em;
@@ -1010,15 +1018,34 @@ input[name="testDate"] {
     width: 4.8em;
     height: 4.8em;
   }
-}
+} */
 
-@media screen and (min-width: 370px) and (max-width: 380px) {
-  .header-index {
+@media screen and (min-width: 370px) and (max-width: 414px) {
+  
+  /* *** COMMONLY USED VALUES *** */
+  
+  header,
+  nav, 
+  #nav-sub_menu, 
+  #nav-sub_menu > section, 
+  article, 
+  #footer-row_1, 
+  #footer-row_2 {
     width: 345px;
+  } 
+
+  
+  /* *** HEADER *** */
+
+  header {
+    height: 120px;
+  }
+  
+  .header-index {
     height: 88px;
   }
 
-  .header-index > a > img {
+  header > a > img {
     width: 110px;
     height: 85px;
   }
@@ -1046,51 +1073,68 @@ input[name="testDate"] {
     margin-top: 5px;
   }
 
+  #header-links-level_2 {
+    margin-top: 5px;
+  }
+
   #header-links a, 
-  nav > section > div > a {
+  nav > section > div > a, 
+  #nav-main_menu > section > div > a {
     box-shadow: 2px 2px 1px #a2a2a2;
     border: 3px solid #485081;
   }
 
   #header-links a, 
-  nav > section > div > a {
+  nav > section > div > a, 
+  #nav-menu_menu > section > div > a {
     text-shadow: 1px 1px 1px #a2a2a2;
   }
 
   #header-links a {
     width: 81px;
     padding: 6px 10px;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 12px;
   }
 
-  nav {
-    width: 345px;
+
+  /* *** MAIN NAV *** */
+
+  nav, 
+  #nav-sub_menu {
     margin: 25px 15px 15px 15px;
   }
 
-  nav > section {
+  #nav-main_menu {
+    margin: 0;
+  }
+
+  nav > section, 
+  #nav-main_menu > section {
     height: 85px;
     margin: 25px auto;
   }
 
-  nav > section > div {
+  nav > section > div, 
+  #nav-main_menu >  section > div {
     width: 66px;
     height: 80px;
     margin: 0 10px;
   }
 
-  nav > section > div > a {
+  nav > section > div > a, 
+  #nav-main_menu > section > div > a {
     height: 60px;
     background-image: url('/la/assets/img/sprites/main_nav-med.png')
   }
 
-  nav > section > div span {
+  nav > section > div span, 
+  #nav-main_menu > section > div span {
     font-size: 11px;
   }
   
   #link-announcements span {
-    font-size: 9px;
+    font-size: 9px !important;
     line-height: 16px;
   }
 
@@ -1174,6 +1218,9 @@ input[name="testDate"] {
     background-position-x: -978px;
   }
 
+
+  /* *** FOOTER *** */
+
   footer {
     margin-top: 30px;
   }
@@ -1246,6 +1293,118 @@ input[name="testDate"] {
   #link-whatsapp {
     background-position-x: -450px;
   }
-  
+
+
+  /* *** ARTICLE *** */
+
+  article {
+    margin: 15px;
+  }
+
+
+  /* *** HEADERS AND OTHER TYPOGRAPHY *** */
+
+  h4 {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+
+
+  /* *** LOGIN PAGE *** */
+
+  #article-form-login, 
+  .form-row {
+    width: 315px;
+    margin: 0 15px;
+  }
+
+  .form-row {
+    margin: 20px 0;
+  }
+
+  .form-row img {
+    margin-top: 11px !important;
+  }
+
+  .form-row input {
+    width: 245px;
+  }
+
+  .form-row label {
+    margin: 0 20px 0 0;
+  }
+
+  #form-button {
+    margin-right: 0;
+  }
 }
   
+@media screen and (min-width: 380px) and (max-width: 420px) {
+
+  /* *** COMMONLY USED VALUES *** */
+
+  header, 
+  nav, 
+  article, 
+  #footer-row_1, 
+  #footer-row_2 {
+    width: 370px;
+  }
+
+  
+  /* *** HEADER *** */
+
+  #header-right, 
+  #header-search, 
+  #header-right, 
+  #header-links, 
+  #header-links-level_2 {
+    width: 240px;
+  }
+
+  #mobile-search {
+    width: 239px;
+  }
+
+  #header-right {
+    margin: 0 0 0 20px;
+  }
+
+  #header-links a {
+    width: 91px;
+  }
+
+
+  /* *** MAIN NAVIGATION *** */
+
+  nav > section > div {
+    margin: 0 13px;
+  }
+
+
+  /* *** FOOTER *** */
+
+  #footer-row_1 a, 
+  #footer-row_2 a {
+    margin: 0 12px 0 12px;
+  }
+  
+
+  /* *** LOGIN PAGE *** */
+
+  .article-header-login {
+    width: 370px !important;
+  }
+
+  .form-row {
+    width: 370px;
+  }
+
+  .form-row img {
+    margin-top: 11px !important;
+  }
+
+  .form-row input {
+    width: 262px;
+  }
+}

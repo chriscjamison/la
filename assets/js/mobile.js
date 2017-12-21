@@ -4151,7 +4151,9 @@ function renderBody() {
 
 function renderLogoAndSearch() {
   jq("header").html(
-    "      <img src=\"/la/assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy\" />\n" + 
+    "      <a href=\"/la/\" title=\"Leaders Academy - Home\">\n" + 
+    "        <img src=\"/la/assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy\" />\n" + 
+    "      </a>\n" + 
     "      <section id=\"header-right\">\n" + 
     "        <div id=\"header-search\">\n" + 
     "        <form>\n" + 
@@ -4295,7 +4297,11 @@ function renderSectionMenu(webpage_index) {
         "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
         "      <a href=\"/la/assets/html/english/schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
       );
-    } else if ((webpage_index > 38) && webpage_index <= 60) {
+    } else if (webpage_index === 39) {
+      jq(menu_selector).html(
+        "      <span>There is no menu for this section.</span>\n"
+      );
+    } else if ((webpage_index > 39) && webpage_index <= 60) {
       jq(menu_selector).html(
         "      <a href=\"/la/assets/html/announcements/announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
       );
@@ -4780,8 +4786,7 @@ function displayMenu(section_value) {
   // Pass on the value of "block" to the CSS variable which will be used 
   // to show the main menu.
   menu_visible_css = {
-    display: "block", 
-    margin: "4em 1em 1em 1em"
+    display: "block"
   };
   
   // Pass on the value of "none" to the CSS variable which will be used 
