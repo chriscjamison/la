@@ -12,7 +12,7 @@ header {
 }
 
 .header-index {
-  height: 11em !important;
+  height: 11em;
 }
 
 header, 
@@ -1046,14 +1046,205 @@ input[name="testDate"] {
     margin-top: 5px;
   }
 
+  #header-links a, 
+  nav > section > div > a {
+    box-shadow: 2px 2px 1px #a2a2a2;
+    border: 3px solid #485081;
+  }
+
+  #header-links a, 
+  nav > section > div > a {
+    text-shadow: 1px 1px 1px #a2a2a2;
+  }
+
   #header-links a {
     width: 81px;
     padding: 6px 10px;
-    box-shadow: 2px 2px 1px #a2a2a2;
-    border: 3px solid #485081;
     font-size: 14px;
     line-height: 14px;
-    text-shadow: 1px 1px 1px #a2a2a2;
+  }
+
+  nav {
+    width: 345px;
+    margin: 25px 15px 15px 15px;
+  }
+
+  nav > section {
+    height: 85px;
+    margin: 25px auto;
+  }
+
+  nav > section > div {
+    width: 66px;
+    height: 80px;
+    margin: 0 10px;
+  }
+
+  nav > section > div > a {
+    height: 60px;
+    background-image: url('/la/assets/img/sprites/main_nav-med.png')
+  }
+
+  nav > section > div span {
+    font-size: 11px;
+  }
+  
+  #link-announcements span {
+    font-size: 9px;
+    line-height: 16px;
+  }
+
+  #link-gpa a {
+    background-position-x: 8px;
+  }
+
+  #link-gpa a:active {
+    background-position-x: -1388px;
+  }
+
+  #link-english a {
+    background-position-x: -61px;
+  }
+
+  #link-camps a {
+    background-position-x: -130px;
+  }
+
+  #link-lessons a {
+    background-position-x: -195px;
+  }
+
+  #link-lessons a:active {
+    background-position-x: -1458px;
+  }
+
+  #link-awards a {
+    background-position-x: -260px;
+  }
+
+  #link-debate a {
+    background-position-x: -325px;
+  }
+
+  #link-events a {
+    background-position-x: -388px;
+  }
+
+  #link-announcements a {
+    background-position-x: -452px;
+  }
+  
+  #link-apply_students a {
+    background-position-x: -511px;
+  }
+
+  #link-awards a {
+    background-position-x: -260px;
+  }
+
+  #link-faculty a {
+    background-position-x: -575px;
+  }
+
+  #link-apply_faculty a {
+    background-position-x: -645px;
+  }
+
+  #link-business a {
+    background-position-x: -716px;
+  }
+
+  #link-business a:active {
+    background-position: -1529px;
+  }
+
+  #link-about_us a {
+    background-position-x: -786px;
+  }
+
+  #link-contact_us a {
+    background-position-x: -845px;
+  }
+
+  #link-location a {
+    background-position-x: -912px;
+  }
+
+  #link-media a {
+    background-position-x: -978px;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+
+  footer > #footer-border {
+    height: 25px;
+  }
+
+  #footer-row_1, 
+  #footer-row_2 {
+    width: 345px;
+    height: 50px;
+    margin: 25px 15px;
+    padding: 0;
+  }
+
+  #footer-row_1 {
+    margin-bottom: 0;
+  }
+
+  #footer-row_1 a, 
+  #footer-row_2 a {
+    width: 50px;
+    height: 50px;
+    margin: 0 9px 0 9px;
+    background-image: url('/la/assets/img/sprites/social_media-med.png');
+  }
+
+  #footer-row_3 {
+    margin-top: 0;
+  }
+
+  #footer-row_3 span {
+    height: 21px;
+    font-size: 14px;
+  }
+
+  #link-facebook {
+    background-position-x: -50px;
+  }
+  
+  #link-twitter {
+    background-position-x: -100px;
+  }
+  
+  #link-you_tube {
+    background-position-x: -150px;
+  }
+  
+  #link-kakao {
+    background-position-x: -200px;
+  }
+  
+  #link-instagram {
+    background-position-x: -250px;
+  }
+  
+  #link-wechat {
+    background-position-x: -300px;
+  }
+  
+  #link-google {
+    background-position-x: -350px;
+  }
+  
+  #link-line {
+    background-position-x: -400px;
+  }
+  
+  #link-whatsapp {
+    background-position-x: -450px;
   }
   
 }
