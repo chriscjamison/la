@@ -2346,7 +2346,7 @@ function extractHtmlFromDesktopPage()  {
 
               // Runs if the loading page is the 'English' page for talk information of 2016.
               case 35:
-                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
                                     "          <h4>2016 Talk Updated class schedule</h4>\n" + 
                                     "          <h6>토론수업 일정(토론시간렉쳐강의시간)</h6>\n" + 
                                     "          <span>(팀수업별도 문의)</span>\n";
@@ -4288,15 +4288,14 @@ function renderSectionMenu(webpage_index) {
         "      <a href=\"/la/assets/html/english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
         "      <a href=\"/la/assets/html/english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
         "      <a href=\"/la/assets/html/english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
-        "      <a href=\"/la/assets/html/english/english_schedule_2016.htm\" title=\"2016년 원서강독수업 일정 업데이트\" id=\"link-english-schedule_2016\">Schedule (2016)</a>\n" +  
         "      <a href=\"/la/assets/html/english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
         "      <a href=\"/la/assets/html/english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
         "      <a href=\"/la/assets/html/english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
-        "      <a href=\"/la/assets/html/english/schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\" id=\"link-english-schedule_english\">Schedule (ENG)</a>\n" + 
-        "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n" + 
-        "      <a href=\"/la/assets/html/english/english_schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\" id=\"link-english-schedule_2014\">Schedule (2014)</a>\n"
+        "      <a href=\"/la/assets/html/english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
       );
-    } else if (webpage_index === 39) {
+    } else if ((webpage_index === 39) || 
+               (webpage_index === 82 || 
+               (webpage_index === 83))) {
       jq(menu_selector).html(
         "      <span>There is no menu for this section.</span>\n"
       );
@@ -4509,8 +4508,6 @@ function renderArticle(extracted_html, webpage_index) {
       (webpage_index === 83) || 
       ((webpage_index > 84) && (webpage_index <= 100))) { 
     jq("article").html(extracted_html[0]);
-
-    console.log("webpage_index = " + webpage_index);
   } // END of if STATEMENT
 
   if ((webpage_index > 39) && (webpage_index <= 60))  {

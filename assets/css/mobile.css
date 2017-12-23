@@ -58,6 +58,7 @@ h2,
 .article-apply_faculty, 
 #button input, 
 .article-apply_students, 
+.article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1),  
 .article-media {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -72,22 +73,21 @@ h4 {
 #nav-section_menu span,   
 td, 
 p, 
+h6
 .form-row input, 
 .article-faculty-member-page span, 
 .article-faculty-member-page h7, 
-.article-faculty-member-page h6, 
 .article-faculty-member-page a, 
 .article-faculty-member-page ul li, 
 .article-debate-links a, 
-.article-debate h6, 
 .article-debate > span, 
 .article-debate ul li, 
 .article-debate ol li,
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
+.article-debate table + span, 
 .article-debate a, 
 .article-english-links a, 
-.article-english h6, 
 .article-english > span, 
 .article-english ul li, 
 .article-english img:nth-child(4) + a, 
@@ -99,8 +99,13 @@ th,
 .article-apply_faculty input[type="text"], 
 .article-apply_faculty select, 
 .article-apply_faculty textarea, 
-#button input, 
+.article-apply_faculty .form_comment, 
 .article-apply_students, 
+.article-apply_students th, 
+.article-apply_students td 
+.article-apply_students textarea, 
+.article-apply_students .form_comment,
+#button input, 
 .article-apply_students .form_input_text, 
 .article-apply_students .form_comment, 
 .article-media a, 
@@ -132,14 +137,6 @@ font {
 .article-apply_faculty textarea {
   font-size: 15px;
 }
-
-.article-debate table + span, 
-.article-apply_faculty .form_comment, 
-.article-apply_students .form_comment, 
-.article-apply_students textarea {
-  font-size: 12px;
-}
-
 
 h2, 
 p, 
@@ -258,7 +255,8 @@ header > a > img {
 }
 
 #header-links a, 
-#nav-section_menu a {
+#nav-section_menu a, 
+#button input {
   width: 297px;
   display: inline-block;
   padding: 15px;
@@ -715,7 +713,7 @@ table > tbody > tr:last-of-type td {
 
 tr > td:nth-child(1)  {
   width: 6.5em;
-  background-color: #d5ccb2;
+  background-color: transparent;
   vertical-align: top;
   color: #573214;
 }
@@ -791,7 +789,9 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 } */
 
 th, 
-.article-debate table:nth-child(7) tr:nth-child(1) td { 
+.article-debate table:nth-child(7) tr:nth-child(1) td, 
+#map + script + script + table > tbody > tr > td:nth-child(1), 
+#map + script + script + table + table > tbody > tr > td:nth-child(1) { 
   width: 5em;
   background-color: #d5ccb2;
   color: #573214;
@@ -868,10 +868,12 @@ th,
   width: 320px;
 }
 
-.form-row input, 
-.article-apply_faculty input {
+.article-apply_students .form_input_text, 
+.article-apply_students textarea, 
+.article-apply_faculty .form_input_text, 
+.article-apply_faculty textarea {
   margin: 0 0 0 10px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .form-row input[type="checkbox"] {
@@ -939,23 +941,23 @@ th,
 input#fmname, 
 input#fmemail, 
 input#fmtitle {
-  width: 625px !important;
+  width: 695px !important;
 }
 
 input#fmphone1, 
 input#fmphone2, 
 input#fmmobile1, 
 input#fmmobile2 {
-  width: 75px;
+  width: 105px;
 }
 
 input#fmphone3, 
 input#fmmobile3 {
-  width: 282px;
+  width: 340px;
 }
 
 input[name="testDate"] {
-  width: 165px !important;
+  width: 165px;
 }
 
 .article-apply_faculty select {
@@ -964,7 +966,7 @@ input[name="testDate"] {
 }
 
 .article-apply_faculty textarea {
-  width: 635px !important;
+  width: 710px !important;
   margin-left: 1em;
   padding: 0.5em;
 }
@@ -972,24 +974,22 @@ input[name="testDate"] {
 
 /* PAGE: Apply (Students) */
 
-.article-apply_students tr > td:nth-child(1)  {
+.article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1) {
   width: 910px;
-  background-color: transparent;
+  background-color: #d5ccb2;
 }
 
 .article-apply_students th, 
 .article-apply_students td {
-  padding: 0.25em !important;
-  font-size: 32px !important;
+  padding: 0.25em;
 }
 
-.article-apply_students table > tbody > tr:nth-child(3) > td:nth-child(2) {
-  display: none !important;
+.article-apply_students table:nth-child(2) > tbody > tr:nth-child(3) > td:nth-child(2) {
+  display: none;
 }
 
 .article-apply_students .form_input_text {
   width: 600px;
-  padding: 0.5em;
 }
 
 .article-apply_students .form_comment {
@@ -997,8 +997,7 @@ input[name="testDate"] {
 }
 
 .article-apply_students textarea {
-  width: 610px !important;
-  padding: 0.5em;
+  width: 600px !important;
 }
 
 
@@ -1101,6 +1100,10 @@ input[name="testDate"] {
   h4 {
     font-size: 18px;
   }
+
+  h2 {
+    font-size: 21px;
+  }
    
   #mobile-search {
     font-size: 16px;
@@ -1112,6 +1115,7 @@ input[name="testDate"] {
 
   #header-links a, 
   #nav-section_menu a,
+  #nav-section_menu span, 
   th, 
   td,
   p,  
@@ -1131,7 +1135,21 @@ input[name="testDate"] {
   .article-announcements ol, 
   .article-announcements ol li, 
   font, 
-  strong {
+  strong, 
+  .article-apply_students table, 
+  .article-apply_students th, 
+  .article-apply_students td,
+  .article-apply_students table .form_input_text, 
+  .article-apply_students table .form_comment, 
+  #button input, 
+  .article-apply_faculty table, 
+  .article-apply_faculty input[type="text"], 
+  .article-apply_faculty table .form_comment, 
+  .article-apply_faculty select, 
+  .article-english-links a, 
+  h6, 
+  .article-english span, 
+  .article-english ul li {
     font-size: 12px;
   }
 
@@ -1140,7 +1158,8 @@ input[name="testDate"] {
   }
 
   p, 
-  .article-awards p {
+  .article-awards p, 
+  .article-apply_students .form_comment {
     line-height: 14px;
   }
 
@@ -1191,7 +1210,8 @@ input[name="testDate"] {
   nav > section > div > a, 
   #nav-main_menu > section > div > a, 
   #nav-section_menu > a, 
-  .article-debate a {
+  .article-debate a, 
+  #button input {
     box-shadow: 2px 2px 1px #a2a2a2;
     border: 2px solid #485081;
   }
@@ -1200,13 +1220,15 @@ input[name="testDate"] {
   nav > section > div  span, 
   #nav-menu_menu > section > div span, 
   #nav-section_menu > a, 
-  .article-debate a {
+  .article-debate a, 
+  #button input {
     text-shadow: 1px 1px 1px #a2a2a2;
   }
 
   #header-links a, 
   #nav-section_menu a, 
-  .article-debate a {
+  .article-debate a, 
+  #button input {
     width: 83px;
     padding: 6px 10px;
     line-height: 14px;
@@ -1337,6 +1359,10 @@ input[name="testDate"] {
     margin-left: 0;
   }
 
+  #nav-section_menu #link-english-talk_2016, 
+  #nav-section_menu #link-english-english_advanced {
+    vertical-align: top;
+  }
 
   /* *** SECTION NAVIGATION *** */
 
@@ -1478,6 +1504,65 @@ input[name="testDate"] {
   #form-button {
     margin-right: 0;
   }
+
+
+  /* *** APPLY (STUDENTS) *** */
+
+  .article-apply_students .form_input_text, 
+  .article-apply_students textarea, 
+  .article-apply_faculty .form_input_text, 
+  .article-apply_faculty textarea { 
+    margin: 0;
+    padding: 8px;
+  }
+
+  
+  /* *** APPLY (FACULTY) *** */
+
+  .article-apply_faculty table th {
+    width: 75px;
+  }
+
+  .article-apply_faculty .form_input_text, 
+  input#fmname, 
+  input#fmemail, 
+  input#fmtitle {
+    width: 220px;
+  }
+
+  input#fmemail, 
+  input#fmtitle, 
+  .article-apply_faculty textarea {
+    width: 220px !important;
+  }
+
+  input#fmphone1, 
+  input#fmphone2, 
+  input#fmmobile1, 
+  input#fmmobile2 {
+    width: 35px;
+  }
+
+  input#fmphone3, 
+  input#fmmobile3 {
+    width: 94px;
+  }
+  .article-apply_faculty select {
+    margin-left: 0;
+  }
+
+
+  /* *** ENGLISH *** */
+
+  .article-header-english img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .article-english ul {
+    margin: 15px;
+  }
+  
 }
 
 @media screen and (min-width: 360px) and (max-width: 365px) { 
@@ -1491,7 +1576,14 @@ input[name="testDate"] {
   #footer-row_2, 
   .article-header-debate, 
   #article-header.article-header-debate img, 
-  .article-awards {
+  .article-awards, 
+  .article-apply_students table, 
+  .article-apply_students table > tbody > tr:nth-child(1) > td:nth-child(1), 
+  .article-apply_faculty table, 
+  #article-content.article-debate-links, 
+  .article-debate img, 
+  .article-announcements img, 
+  .article-header-english {
     width: 320px;
   }
 
@@ -1557,15 +1649,23 @@ input[name="testDate"] {
   #nav-section_menu #link-debate-recruitment, 
   #nav-section_menu #link-debate-debate_2014, 
   #nav-section_menu #link-awards-page_1, 
-  #nav-section_menu #link-announcements-page_1 {
+  #nav-section_menu #link-announcements-page_1, 
+  #nav-section_menu #link-english-talk_2016, 
+  #nav-section_menu #link-english-english_advanced {
     line-height: 28px;
   }
   
-
   /* *** LOGIN PAGE *** */
 
   #article-form-login, 
-  .form-row {
+  .form-row, 
+  #article-content.article-debate-links, 
+  .article-debate img, 
+  .article-announcements img, 
+  .article-header-english img, 
+  .article-english-links, 
+  .article-english img, 
+  .article-english ul {
     width: 290px;
   }
 
@@ -1597,12 +1697,6 @@ input[name="testDate"] {
   
   /* *** DEBATE *** */
 
-  #article-content.article-debate-links, 
-  .article-debate img, 
-  .article-announcements img {
-    width: 290px;
-  }
-
   .article-debate img[height="837"] {
     height: 356px;
   }
@@ -1633,6 +1727,10 @@ input[name="testDate"] {
 
 
   /* *** ANNOUNCEMENTS *** */
+
+  .article-announcements {
+    min-height: 172px;
+  }
 
   .article-announcements img[height="882"] {
     height: 418px;
@@ -1681,6 +1779,98 @@ input[name="testDate"] {
   .article-announcements img[height="734"] {
     height: 422px;
   }
+
+  .article-announcements img[height="1000"] {
+    height: 382px;
+  }
+
+  .article-announcements img[height="837"] {
+    height: 353px;
+  }
+
+  .article-announcements img[height="836"] {
+    height: 360px;
+  }
+
+  .article-announcements img[width="590"] {
+    height: 411px;
+  }
+
+
+  /* *** APPLY (STUDENTS) *** */
+
+  .article-apply_students .form_input_text {
+    width: 200px;
+  }
+  
+  .article-apply_students textarea {
+    width: 200px !important;
+  }
+
+
+  /* *** APPLY (FACULTY) *** */
+
+  .article-apply_faculty table th {
+    width: 75px;
+  }
+
+  .article-apply_faculty .form_input_text, 
+  input#fmname, 
+  input#fmemail, 
+  input#fmtitle {
+    width: 220px;
+  }
+
+  input#fmemail, 
+  input#fmtitle, 
+  .article-apply_faculty textarea {
+    width: 220px !important;
+  }
+
+  input#fmphone1, 
+  input#fmphone2, 
+  input#fmmobile1, 
+  input#fmmobile2 {
+    width: 35px;
+  }
+
+  input#fmphone3, 
+  input#fmmobile3 {
+    width: 94px;
+  }
+  
+
+  /* *** ENGLISH *** */
+
+  .article-english table th, 
+  .article-english table td {
+    font-size: 10px;
+  }
+
+  .article-english > h4 + h6 + table th, 
+  .article-english > h4 + h6 + table td {
+    font-size: 8px;
+  }
+
+  .article-english img[height="836"] {
+    height: 360px;
+  }
+
+  .article-english img[height="868"] {
+    height: 373px;
+  }
+
+  .article-english ul {
+    width: 265px;
+  }
+
+
+  /* *** FACULTY *** */
+
+  .article-faculty-member {
+    width: 135px;
+    margin: 5px 2px;
+  }
 }
 
 @media screen and (min-width: 370px) and (max-width: 375px) {
@@ -1696,7 +1886,10 @@ input[name="testDate"] {
   #footer-row_2, 
   #article-header.article-header-debate, 
   .article-header-debate img, 
-  .article-awards {
+  .article-awards.article-apply_students table, 
+  .article-apply_students table, 
+  .article-apply_students tr > td:nth-child(1), 
+  .article-header-english {
     width: 345px;
   } 
     
@@ -1725,7 +1918,9 @@ input[name="testDate"] {
 
   #nav-section_menu #link-debate-recruitment, 
   #nav-section_menu #link-debate-debate_2014, 
-  #nav-section_menu #link-announcements-page_1 {
+  #nav-section_menu #link-announcements-page_1, 
+  #nav-section_menu #link-english-talk_2016, 
+  #nav-section_menu #link-english-english_advanced {
     line-height: 28px;
   }
 
@@ -1737,7 +1932,11 @@ input[name="testDate"] {
 
   #article-content.article-debate-links, 
   .article-debate img, 
-  .article-announcements img {
+  .article-announcements img, 
+  .article-header-english img, 
+  .article-english-links, 
+  .article-english img, 
+  .article-english ul {
     width: 315px;
   }
 
@@ -1771,6 +1970,10 @@ input[name="testDate"] {
 
 
   /* *** ANNOUNCEMENTS *** */
+
+  .article-announcements {
+    min-height: 199px;
+  }
 
   .article-announcements img[height="882"] {
     height: 453px;
@@ -1815,6 +2018,58 @@ input[name="testDate"] {
   .article-announcements img[height="734"] {
     height: 458px;
   }
+
+  .article-announcements img[height="1000"] {
+    height: 414px;
+  }
+
+  .article-announcements img[height="837"] {
+    height: 383px;
+  }
+
+  .article-announcements img[height="836"] {
+    height: 391px;
+  }
+
+  .article-announcements img[width="590"] {
+    height: 446px;
+  }
+
+  
+  /* *** APPLY (STUDENTS) *** */
+
+  .article-apply_students .form_input_text {
+    width: 220px;
+  }
+
+  .article-apply_students textarea {
+    width: 220px !important;
+  }
+
+
+  /* *** ENGLISH *** */
+
+  .article-english table th, 
+  .article-english table td {
+    font-size: 11px;
+  }
+
+  .article-english > h4 + h6 + table th, 
+  .article-english > h4 + h6 + table td {
+    font-size: 8px;
+  }
+
+  .article-english img[height="836"] {
+    height: 391px;
+  }
+
+  .article-english img[height="868"] {
+    height: 406px;
+  }
+
+  .article-english ul {
+    width: 295px;
+  }
 }
 
 @media screen and (min-width: 380px) and (max-width: 414px) {
@@ -1832,7 +2087,10 @@ input[name="testDate"] {
   #footer-row_2, 
   .article-header-debate img, 
   .article-awards, 
-  .article-announcements {
+  .article-announcements, 
+  .article-apply_students table, 
+  .article-apply_students tr > td:nth-child(1), 
+  .article-header-english {
     width: 370px;
   }
 
@@ -1848,7 +2106,8 @@ input[name="testDate"] {
   #header-right, 
   #header-links, 
   #header-links-level_1, 
-  #header-links-level_2 {
+  #header-links-level_2, 
+  .article-apply_students .form_input_text {
     width: 240px;
   }
 
@@ -1894,6 +2153,19 @@ input[name="testDate"] {
     margin-left: 0;
   }
 
+  #nav-section_menu #link-english-application_2016_updated {
+    height: 28px;
+  }
+
+  
+  /* *** FOOTER *** */
+
+  #footer-row_1 a, 
+  #footer-row_2 a {
+    margin: 0 12px 0 12px;
+  }
+  
+  
   /* *** LOGIN PAGE *** */
 
   .article-header-login {
@@ -1921,7 +2193,10 @@ input[name="testDate"] {
 
   #article-content.article-debate-links, 
   .article-debate img, 
-  .article-announcements img {
+  .article-announcements img, 
+  .article-header-english img, 
+  .article-english-links, 
+  .article-english img {
     width: 335px;
   }
 
@@ -1955,6 +2230,10 @@ input[name="testDate"] {
 
 
   /* *** ANNOUCEMENTS *** */
+
+  .article-announcements {
+    min-height: 268px;
+  }
   
   .article-announcements img[height="882"] {
     height: 482px;
@@ -2004,11 +2283,70 @@ input[name="testDate"] {
     height: 441px;
   }
 
+  .article-announcements img[height="837"] {
+    height: 408px;
+  }
 
-  /* *** FOOTER *** */
+  .article-announcements img[height="836"] {
+    height: 416px;
+  }
 
-  #footer-row_1 a, 
-  #footer-row_2 a {
-    margin: 0 12px 0 12px;
+  .article-announcements img[width="590"] {
+    height: 475px;
+  }
+
+
+  /* *** APPLY (STUDENTS) *** */
+
+  .article-apply_students textarea {
+    width: 240px !important;
+  }
+
+
+  /* *** APPLY (FACULTY) *** */
+
+  .article-apply_faculty .form_input_text, 
+  input#fmname, 
+  input#fmemail, 
+  input#fmtitle {
+    width: 227px;
+  }
+
+  input#fmemail, 
+  input#fmtitle, 
+  .article-apply_faculty textarea {
+    width: 227px !important;
+  }
+
+  input#fmphone1, 
+  input#fmphone2, 
+  input#fmmobile1, 
+  input#fmmobile2 {
+    width: 35px;
+  }
+
+  input#fmphone3, 
+  input#fmmobile3 {
+    width: 101px;
+  }  
+
+
+  /* *** ENGLISH *** */
+
+  .article-english > h4 + h6 + table th, 
+  .article-english > h4 + h6 + table td {
+    font-size: 9px;
+  }
+
+  .article-english img[height="836"] {
+    height: 415px;
+  }
+
+  .article-english img[height="868"] {
+    height: 431px;
+  }
+
+  .article-english ul {
+    width: 315px;
   }
 }
