@@ -48,7 +48,7 @@ function extractHtmlFromDesktopPage()  {
         'joonpyo_sohn.htm', 
         'matthew_owen.htm', 
         'roger_hatridge.htm', // index = 15 
-        'history.htm',
+        'about_us.htm',
         'rules.htm', 
         'recruiting.htm', 
         'location.htm', 
@@ -1086,10 +1086,10 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is for the 'History' section.
               case 16:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>인사말 (HISTORY)</h2>\n" + 
+                                    "          <h2>회사 소개 (ABOUT US)</h2>\n" + 
                                     "        </div>\n" + 
-                                    "        <div id=\"article-content\">\n" + 
-                                    "          <img src=\"http://chriscjamison.com/la/assets/img/content/about/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
+                                    "        <div class=\"article-about_us\" id=\"article-content\">\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com//skin/skin020/about/images/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
                                     "        </div>\n";
 
                 webpage_index = 16;
@@ -3669,7 +3669,7 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the History page.
     case 16: 
-      title_html = title_html + "인사말(HISTORY)";
+      title_html = title_html + "회사 소개 (ABOUT US)";
     break;
 
     // Runs if the loading page is the Location page.
@@ -4220,7 +4220,7 @@ function renderMenus(webpage_index) {
     "            <span>Apply (Students)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-faculty\">\n" + 
-    "            <a href=\"/la/assets/html/guide/index_faculty.htm\" title=\"Faculty\"></a>\n" + 
+    "            <a href=\"/la/assets/html/faculty/index_faculty.htm\" title=\"Faculty\"></a>\n" + 
     "            <span>Faculty</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-apply_faculty\">\n" + 
@@ -4234,7 +4234,7 @@ function renderMenus(webpage_index) {
     "        </section>\n" + 
     "        <section id=\"nav-row_4\">\n" + 
     "          <div id=\"link-about_us\">\n" + 
-    "            <a href=\"#about_us\" title=\"About Us\"></a>\n" + 
+    "            <a href=\"/la/assets/html/guide/about_us.htm\" title=\"About Us\"></a>\n" + 
     "            <span>About Us</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-contact_us\">\n" + 
@@ -4462,7 +4462,7 @@ function renderArticle(extracted_html, webpage_index) {
       extracted_html[1] + 
       "          </p>\n" + 
       extracted_html[2] + 
-      "          <a href=\"/la/assets/html/guide/index_faculty.htm\" title=\"목록\">목록</a>\n" + 
+      "          <a href=\"/la/assets/html/faculty/index_faculty.htm\" title=\"목록\">목록</a>\n" + 
       "        </div>\n"
     );
   } // END of if STATEMENT
@@ -4505,7 +4505,8 @@ function renderArticle(extracted_html, webpage_index) {
 
   } // END of if STATEMENT
 
-  if ((webpage_index === 39) || 
+  if ((webpage_index === 16) || 
+      (webpage_index === 39) || 
       ((webpage_index > 60) && (webpage_index <= 81)) || 
       (webpage_index === 83) || 
       ((webpage_index > 84) && (webpage_index <= 100))) { 

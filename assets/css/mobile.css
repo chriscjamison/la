@@ -1035,6 +1035,18 @@ input[name="testDate"] {
   color: #e76200;
 }
 
+
+/* *** ABOUT US *** */
+
+.article-about_us {
+  height: 779px;
+}
+
+.article-about_us img {
+  margin: 0 auto;
+  display: block;
+}
+
 /* 
 @media screen and (min-width: 380px) and (max-width: 420px) {
   header {
@@ -1600,7 +1612,8 @@ input[name="testDate"] {
   #article-content.article-debate-links, 
   .article-debate img, 
   .article-announcements img, 
-  .article-header-english {
+  .article-header-english, 
+  .article-about_us {
     width: 320px;
   }
 
@@ -1683,7 +1696,8 @@ input[name="testDate"] {
   .article-english-links, 
   .article-english img, 
   .article-english ul, 
-  .article-faculty-member-page {
+  .article-faculty-member-page, 
+  .article-about_us img {
     width: 290px;
   }
 
@@ -1934,6 +1948,17 @@ input[name="testDate"] {
   .article-faculty-member-page ul {
     padding-left: 18px;
   }
+
+  
+  /* *** ABOUT US *** */
+
+  .article-about_us {
+    height: auto;
+  }
+
+  .article-about_us img {
+    height: 328px;
+  }
 }
 
 @media screen and (min-width: 370px) and (max-width: 375px) {
@@ -1952,7 +1977,8 @@ input[name="testDate"] {
   .article-awards.article-apply_students table, 
   .article-apply_students table, 
   .article-apply_students tr > td:nth-child(1), 
-  .article-header-english {
+  .article-header-english, 
+  .article-about_us {
     width: 345px;
   } 
     
@@ -2000,7 +2026,8 @@ input[name="testDate"] {
   .article-english-links, 
   .article-english img, 
   .article-english ul, 
-  .article-faculty-member-page {
+  .article-faculty-member-page, 
+  .article-about_us img {
     width: 315px;
   }
 
@@ -2183,6 +2210,17 @@ input[name="testDate"] {
   #article-faculty-row_8 { 
     height: 364px;
   }
+
+
+  /* *** ABOUT US *** */
+
+  .article-about_us {
+    height: auto;
+  }
+
+  .article-about_us img {
+    height: 356px;
+  }
 }
 
 @media screen and (min-width: 380px) and (max-width: 414px) {
@@ -2203,7 +2241,8 @@ input[name="testDate"] {
   .article-announcements, 
   .article-apply_students table, 
   .article-apply_students tr > td:nth-child(1), 
-  .article-header-english {
+  .article-header-english, 
+  .article-about_us {
     width: 370px;
   }
 
@@ -2315,7 +2354,8 @@ input[name="testDate"] {
   .article-header-english img, 
   .article-english-links, 
   .article-english img, 
-  .article-faculty-member-page {
+  .article-faculty-member-page,  
+  .article-about_us img {
     width: 335px;
   }
 
@@ -2522,5 +2562,16 @@ input[name="testDate"] {
 
   #article-faculty-row_8 {
     height: 364px;
+  }
+
+
+  /* *** ABOUT US *** */
+
+  .article-about_us {
+    height: auto;
+  }
+
+  .article-about_us img {
+    height: 378px;
   }
 }
