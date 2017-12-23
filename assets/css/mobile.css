@@ -276,7 +276,7 @@ header > a > img {
   line-height: 10px;
 }
 
-#header-links a, 
+/* #header-links a, 
 nav > section > div > a, 
 #nav-sub_menu a, 
 #nav-main_menu > section > div > a, 
@@ -287,9 +287,22 @@ nav > section > div > a,
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
   border: 5px solid #485081;
+} */
+
+#header-links a, 
+nav > section > div > a, 
+#nav-sub_menu a, 
+#nav-main_menu > section > div > a, 
+.article-faculty-member-page a, 
+.article-debate a, 
+.article-english img:nth-child(4) + a, 
+#button input {
+  background-color: #485081;
+  box-shadow: 4px 4px 1px #a2a2a2;
+  border: 5px solid #d8ccc3;
 }
 
-#header-links a:active,
+/* #header-links a:active,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
 #nav-main_menu > section > div > a:active, 
@@ -300,6 +313,19 @@ nav > section > div > a:active,
   background-color: #485081;
   border-color: #e76200;
 }
+ */
+
+#header-links a:active,
+nav > section > div > a:active, 
+#nav-sub_menu a:active, 
+#nav-main_menu > section > div > a:active, 
+.article-faculty-member-page a:active, 
+.article-debate a:active, 
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
+  background-color: #e76200;
+  border-color: #485081;
+}
 
 #header-links a:active, 
 #nav-menu-links a:active, 
@@ -309,6 +335,15 @@ nav > section > div > a:active,
 #button input:click {
   color: #fff;
 }
+/* 
+#header-links a:active, 
+#nav-menu-links a:active, 
+#nav-section_menu a:active, 
+.article-debate a:active, 
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
+  color: #485081;
+} */
 
 .article-faculty-info ul li a:active, 
 .article-debate-links a:active, 
@@ -318,7 +353,7 @@ nav > section > div > a:active,
 
 #header-links a, 
 nav > section > div span, 
-#nav-main_menu > section > div span, 
+#nav-main_menu > section > div span,
 #nav-section_menu a, 
 .article-faculty-member-page a, 
 .article-debate a, 
@@ -326,9 +361,11 @@ nav > section > div span,
 #button input {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
-  color: #485081;
+  color: #d8ccc3;
 }
 
+nav > section > div span, 
+#nav-main_menu > section > div span,
 .article-faculty-info ul li a, 
 .article-debate-links a, 
 .article-english-links a, 
@@ -498,6 +535,9 @@ nav > section > div span,
   margin: 15px 30px;
 }
 
+#nav-section_menu #link-english-talk_2016 {
+  vertical-align: top;
+}
 
 /* *** FOOTER *** */
 
@@ -1231,7 +1271,7 @@ input[name="testDate"] {
     margin-top: 5px;
   }
 
-  #header-links a, 
+  /* #header-links a, 
   nav > section > div > a, 
   #nav-main_menu > section > div > a, 
   #nav-section_menu > a, 
@@ -1241,9 +1281,21 @@ input[name="testDate"] {
     box-shadow: 2px 2px 1px #a2a2a2;
     border: 2px solid #485081;
   }
+ */
 
   #header-links a, 
-  nav > section > div  span, 
+  nav > section > div > a, 
+  #nav-main_menu > section > div > a, 
+  #nav-section_menu > a, 
+  .article-debate a, 
+  #button input, 
+  .article-faculty-member-page a {
+    box-shadow: 2px 2px 1px #a2a2a2;
+    border: 2px solid #d8ccc3;
+  }
+
+  #header-links a, 
+  nav > section > div span, 
   #nav-menu_menu > section > div span, 
   #nav-section_menu > a, 
   .article-debate a, 
@@ -1608,6 +1660,10 @@ input[name="testDate"] {
   .article-media h4 {
     margin: 15px 0;
   }
+
+  /* .media-item img {
+    border: 2px solid #485081;
+  } */
 
   .media-item img {
     border: 2px solid #485081;

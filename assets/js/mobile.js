@@ -49,7 +49,7 @@ function extractHtmlFromDesktopPage()  {
         'matthew_owen.htm', 
         'roger_hatridge.htm', // index = 15 
         'about_us.htm',
-        'contact_us.htm', 
+        'xxxxx.htm', 
         'recruiting.htm', 
         'location.htm', 
         'index_debate.htm', // index = 20
@@ -1093,19 +1093,6 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n";
 
                 webpage_index = 16;
-              break;
-
-              // Runs if the loading page is for the 'Contact Us' section.
-              case 17:
-                extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>연락처 (CONTACT US)</h2>\n" + 
-                                    "        </div>\n" + 
-                                    "        <div class=\"article-contact_us\" id=\"article-content\">\n" + 
-                                    "          <h4>Leaders Academy, Daechi</h4>\n" + 
-                                    "          <table>\n" + 
-                                    "        </div>\n";
-
-                webpage_index = 17;
               break;
 
               // Runs if the page loading is the 'Location' page/
@@ -3683,6 +3670,11 @@ function renderHeader(webpage_index) {
     // Runs if the loading page is the History page.
     case 16: 
       title_html = title_html + "회사 소개 (ABOUT US)";
+    break;
+
+    // Runs if the loading page is the Contact Us page.
+    case 17: 
+      title_html = title_html + "연락처 (CONTACT US)";
     break;
 
     // Runs if the loading page is the Location page.
