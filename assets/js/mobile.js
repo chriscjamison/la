@@ -4266,12 +4266,14 @@ function renderSectionMenu(webpage_index) {
 
     if (webpage_index <= 15)  {
       jq(menu_selector).html(
-        "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
+/*         "        <a href=\"/la/assets/html/guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-system\">학원제도(SYSTEM)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
         "        <a href=\"/la/assets/html/guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
+ */   
+        "      <span>There is no menu for this section.</span>\n"
       );
     } else if ((webpage_index > 19) && webpage_index <= 27) {
       jq(menu_selector).html(
@@ -4460,7 +4462,7 @@ function renderArticle(extracted_html, webpage_index) {
       extracted_html[1] + 
       "          </p>\n" + 
       extracted_html[2] + 
-      "          <a href=\"/la/assets/html/guide/faculty.htm\" title=\"목록\">목록</a>\n" + 
+      "          <a href=\"/la/assets/html/guide/index_faculty.htm\" title=\"목록\">목록</a>\n" + 
       "        </div>\n"
     );
   } // END of if STATEMENT
