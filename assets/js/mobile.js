@@ -49,7 +49,7 @@ function extractHtmlFromDesktopPage()  {
         'matthew_owen.htm', 
         'roger_hatridge.htm', // index = 15 
         'about_us.htm',
-        'rules.htm', 
+        'contact_us.htm', 
         'recruiting.htm', 
         'location.htm', 
         'index_debate.htm', // index = 20
@@ -1083,7 +1083,7 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 15;
               break;
               
-              // Runs if the loading page is for the 'History' section.
+              // Runs if the loading page is for the 'Contact Us' section.
               case 16:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
                                     "          <h2>회사 소개 (ABOUT US)</h2>\n" + 
@@ -1093,6 +1093,19 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n";
 
                 webpage_index = 16;
+              break;
+
+              // Runs if the loading page is for the 'Contact Us' section.
+              case 17:
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>연락처 (CONTACT US)</h2>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div class=\"article-contact_us\" id=\"article-content\">\n" + 
+                                    "          <h4>Leaders Academy, Daechi</h4>\n" + 
+                                    "          <table>\n" + 
+                                    "        </div>\n";
+
+                webpage_index = 17;
               break;
 
               // Runs if the page loading is the 'Location' page/
@@ -4238,7 +4251,7 @@ function renderMenus(webpage_index) {
     "            <span>About Us</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-contact_us\">\n" + 
-    "            <a href=\"#contact_us\" title=\"Contact Us\"></a>\n" + 
+    "            <a href=\"/la/assets/html/guide/contact_us.htm\" title=\"Contact Us\"></a>\n" + 
     "            <span>Contact Us</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-location\">\n" + 
@@ -4246,7 +4259,7 @@ function renderMenus(webpage_index) {
     "            <span>Location</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-media\">\n" + 
-    "            <a href=\"/la/assets/html/media/media.htm\" title=\"Media\"></a>\n" + 
+    "            <a href=\"/la/assets/html/media/index_media.htm\" title=\"Media\"></a>\n" + 
     "            <span>Media</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
@@ -4311,7 +4324,7 @@ function renderSectionMenu(webpage_index) {
       );
     } else if ((webpage_index > 84) && webpage_index <= 100) {
       jq(menu_selector).html(
-        "      <a href=\"/la/assets/html/media/media.htm\" title=\"Page #1\" id=\"link-media-page_1\">Page #1</a>\n" 
+        "      <a href=\"/la/assets/html/media/index_media.htm\" title=\"Page #1\" id=\"link-media-page_1\">Page #1</a>\n" 
       );
     } 
   } // END of FUNCTION 'renderSectionMenu'
