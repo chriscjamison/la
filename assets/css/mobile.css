@@ -1096,6 +1096,13 @@ input[name="testDate"] {
   display: block;
 }
 
+
+/* *** GPA/TESTING *** */
+
+.article-gpa {
+  min-height: 829px;
+}
+
 /* 
 @media screen and (min-width: 380px) and (max-width: 420px) {
   header {
@@ -2095,6 +2102,13 @@ input[name="testDate"] {
   .media-item-holder img {
     width: 290px;
     height: 290px;
+  }
+
+
+  /* *** GPA/TESTING *** */
+
+  .article-gpa {
+    min-height: auto;
   }
 }
 

@@ -131,7 +131,9 @@ function extractHtmlFromDesktopPage()  {
         'item_12.htm', 
         'item_13.htm', 
         'item_14.htm', 
-        'item_15.htm' // index = 99
+        'item_15.htm', 
+        'index_events.htm' // index = 100
+
 
       ];
 
@@ -1160,7 +1162,7 @@ function extractHtmlFromDesktopPage()  {
                 webpage_index = 18;
               break;
 
-              // Runs if the page loading is the 'Location' page/
+              // Runs if the page loading is the 'Location' page.
               case 19: 
                 // Pass on the HTML of the Section header and map.
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
@@ -3577,7 +3579,76 @@ function extractHtmlFromDesktopPage()  {
 
                 webpage_index = 99;
               break; 
-              
+
+              // Runs if the loading page is the 'Awards' page.
+              case 100:
+              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                  "          <h4>수상실적</h4>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-1\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-2\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_2.htm\" title=\매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-3\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-4\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-5\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-6\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-7\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-8\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-9\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-10\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-11\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-12\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!! \">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-13\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-14\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_14.htm\" title=\NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-15\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-16\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-17\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-18\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-19\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
+                                  "          </div>\n" + 
+                                  "          <div class=\"article-events-listing\" id=\"events-listing-20\">\n" + 
+                                  "            <a href=\"/la/assets/html/events/event_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                  "          </div>\n" + 
+                                  "        </div>\n";  
+
+              webpage_index = 100;
+            break;
+
             }	
 
             
@@ -4151,7 +4222,12 @@ function renderHeader(webpage_index) {
     case 99: 
       title_html = title_html + section_html + "대치 리더스";
     break;
-  } // END of SWITCH statement	대치 리더스
+
+    // Runs if the loading page is Events.
+    case 100: 
+      title_html = title_html + "이벤트";
+    break;
+  } // END of SWITCH statement
 
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
@@ -4384,9 +4460,13 @@ function renderSectionMenu(webpage_index) {
       jq(menu_selector).html(
         "      <a href=\"/la/assets/html/awards/index_awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
       );
-    } else if ((webpage_index > 84) && webpage_index <= 100) {
+    } else if ((webpage_index > 84) && webpage_index <= 99) {
       jq(menu_selector).html(
         "      <a href=\"/la/assets/html/media/index_media.htm\" title=\"Page #1\" id=\"link-media-page_1\">Page #1</a>\n" 
+      );
+    } else if ((webpage_index > 99) && webpage_index <= 119) {
+      jq(menu_selector).html(
+        "      <a href=\"/la/assets/html/events/index_events.htm\" title=\"Page #1\" id=\"link-events-page_1\">Page #1</a>\n" 
       );
     } 
   } // END of FUNCTION 'renderSectionMenu'
