@@ -3748,7 +3748,7 @@ function extractHtmlFromDesktopPage()  {
             // Runs if the loading page is the 15th award in the Events section.
             case 115:
               extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 하반기 매경 영어토론대회/h4>\n" + 
+                                  "          <h4>2017년 하반기 매경 영어토론대회</h4>\n" + 
                                   "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                   "        </div>\n";  
 
@@ -3758,7 +3758,7 @@ function extractHtmlFromDesktopPage()  {
             // Runs if the loading page is the 16th award in the Events section.
             case 116:
               extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017 MUN101/h4>\n" + 
+                                  "          <h4>2017 MUN101</h4>\n" + 
                                   "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                   "        </div>\n";  
                                   
@@ -3804,11 +3804,7 @@ function extractHtmlFromDesktopPage()  {
             
               webpage_index = 120;
             break;
-                      
-event
-
-
-            }	
+            }
 
             
           }	 
@@ -4928,7 +4924,7 @@ function renderArticle(extracted_html, webpage_index) {
       ((webpage_index > 60) && (webpage_index <= 81)) || 
       (webpage_index === 83) || 
       ((webpage_index > 84) && (webpage_index <= 99)) || 
-      ((webpage_index > 99) && (webpage_index <= 119))) { 
+      ((webpage_index > 99) && (webpage_index <= 120))) { 
     jq("article").html(extracted_html[0]);
   } // END of if STATEMENT
 
