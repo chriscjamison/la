@@ -49,8 +49,8 @@ function extractHtmlFromDesktopPage()  {
         'matthew_owen.htm', 
         'roger_hatridge.htm', // index = 15 
         'about_us.htm',
-        'xxxxx.htm', 
-        'recruiting.htm', 
+        'contact_us.htm', 
+        'gpa.htm', 
         'location.htm', 
         'index_debate.htm', // index = 20
         'debate_schedule_2017.htm', 
@@ -1089,10 +1089,75 @@ function extractHtmlFromDesktopPage()  {
                                     "          <h2>회사 소개 (ABOUT US)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-about_us\" id=\"article-content\">\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com//skin/skin020/about/images/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/about/images/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
                                     "        </div>\n";
 
                 webpage_index = 16;
+              break;
+
+              // Runs if the loading page is for the 'Contact Us' section.
+              case 17:
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>연락처 (CONTACT US)</h2>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div class=\"article-contact_us\" id=\"article-content\">\n" + 
+                                    "          <h4>Leaders Academy (Daechi)</h4>\n" + 
+                                    "          <table>\n" + 
+                                    "            <tbody>\n"  + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Phone Number\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  02-562-9799\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  School Address\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  3,4F Jaesuk B/D, Daeching-dong 908-1, Gangnam-gu, Seoul, Korea (135-280)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "          <h4>Leaders Academy (Bundang)</h4>\n" + 
+                                    "          <table>\n" + 
+                                    "            <tbody>\n"  + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  Phone Number\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  02-562-9799\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  School Address\n" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  605 Jel zone Tower1, Jeongja-dong 17-1, Bundang-gu, Seongnam-si, Gyeonggi-do\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "            </tbody>\n" + 
+                                    "          </table>\n" + 
+                                    "        </div>\n";
+
+                webpage_index = 17;
+              break;
+
+              // Runs if the loading page is for the 'GPA/Testing' section.
+              case 18:
+                extracted_html[0] = "        <div id=\"article-header\">\n" + 
+                                    "          <h2>테스트 (GPA/TESTING)</h2>\n" + 
+                                    "        </div>\n" + 
+                                    "        <div class=\"article-gpa\" id=\"article-content\">\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/about/images/cont01-03s.png\" alt=\"학원제도(SYSTEM)\">\n" + 
+                                    "        </div>\n";
+
+                webpage_index = 18;
               break;
 
               // Runs if the page loading is the 'Location' page/
@@ -3677,6 +3742,11 @@ function renderHeader(webpage_index) {
       title_html = title_html + "연락처 (CONTACT US)";
     break;
 
+    // Runs if the loading page is the GPA/Testing page.
+    case 18: 
+      title_html = title_html + "테스트 (GPA/TESTING)";
+    break;
+
     // Runs if the loading page is the Location page.
     case 19:
       title_html = title_html + "치안내 (LOCATION)";
@@ -4185,7 +4255,7 @@ function renderMenus(webpage_index) {
     "      <section id=\"nav-main_menu\">\n" + 
     "        <section id=\"nav-row_1\">\n" + 
     "          <div id=\"link-gpa\">\n" + 
-    "            <a href=\"#gpa\" title=\"GPA/Testing\"></a>\n" + 
+    "            <a href=\"/la/assets/html/guide/gpa.htm\" title=\"GPA/Testing\"></a>\n" + 
     "            <span>GPA/Testing</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-english\">\n" + 
@@ -4510,7 +4580,7 @@ function renderArticle(extracted_html, webpage_index) {
 
   } // END of if STATEMENT
 
-  if ((webpage_index === 16) || 
+  if (((webpage_index > 15) && (webpage_index <= 18)) || 
       (webpage_index === 39) || 
       ((webpage_index > 60) && (webpage_index <= 81)) || 
       (webpage_index === 83) || 

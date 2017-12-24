@@ -42,6 +42,7 @@ header,
 nav, 
 #main-sub_menu, 
 h2, 
+h4, 
 .article-faculty-member, 
 .article-faculty-member-page, 
 .article-debate-links,
@@ -64,7 +65,8 @@ h2,
   font-weight: 600;
 }
 
-h4 {
+h4, 
+h2 {
   font-size: 42px;
 }
 
@@ -168,6 +170,7 @@ p,
 }
 
 h2, 
+h4, 
 #header-links a, 
 nav > section > div span, 
 #nav-main_menu > section > div span, 
@@ -203,8 +206,7 @@ nav > section > div span,
 }
 
 h2 {
-  margin: 1em 0 0.5em 0;
-  font-size: 3em;
+  margin: 0;
 }
 
 h4 {
@@ -830,7 +832,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
 #map + script + script + table > tbody > tr > td:nth-child(1), 
-#map + script + script + table + table > tbody > tr > td:nth-child(1) { 
+#map + script + script + table + table > tbody > tr > td:nth-child(1), 
+.article-contact_us table > tbody > tr > td:nth-child(1) { 
   width: 5em;
   background-color: #d5ccb2;
   color: #573214;
@@ -838,7 +841,8 @@ th,
 
 .article-debate table td, 
 .article-debate table:nth-child(7) tr:nth-child(1) td:nth-child(1), 
-.article-english table td {
+.article-english table td, 
+.article-contact_us tr > td:nth-child(2) {
   width: auto;
   background-color: transparent;
   border: 2px dashed #cec2b4;
@@ -1678,6 +1682,17 @@ input[name="testDate"] {
     margin: 0 auto;
     min-height: auto;
   }
+
+
+  /* *** LOCATION *** */
+
+  .article-contact_us table {
+    margin-top: 15px;
+  }
+
+  .article-contact_us table:nth-child(2) {
+    margin: 15px 0 25px 0;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 365px) { 
@@ -1699,7 +1714,8 @@ input[name="testDate"] {
   .article-debate img, 
   .article-announcements img, 
   .article-header-english, 
-  .article-about_us {
+  .article-about_us, 
+  .article-gpa {
     width: 320px;
   }
 
@@ -1787,7 +1803,8 @@ input[name="testDate"] {
   .article-about_us img, 
   .article-media-row, 
   .media-item-holder, 
-  .media-item-holder img {
+  .media-item-holder img, 
+  .article-gpa img {
     width: 290px;
   }
 
@@ -2098,7 +2115,8 @@ input[name="testDate"] {
   .article-apply_students table, 
   .article-apply_students tr > td:nth-child(1), 
   .article-header-english, 
-  .article-about_us {
+  .article-about_us, 
+  .article-gpa {
     width: 345px;
   } 
     
@@ -2150,7 +2168,8 @@ input[name="testDate"] {
   .article-faculty-member-page, 
   .article-about_us img, 
   .article-media-row, 
-  .media-item-holder {
+  .media-item-holder, 
+  .article-gpa img {
     width: 315px;
   }
 
@@ -2389,7 +2408,8 @@ input[name="testDate"] {
   .article-header-english, 
   .article-about_us, 
   .article-media, 
-  .article-media-row {
+  .article-media-row, 
+  .article-gpa {
     width: 370px;
   }
 
@@ -2508,7 +2528,8 @@ input[name="testDate"] {
   .article-english img, 
   .article-faculty-member-page,  
   .article-about_us img, 
-  .article-media-holder {
+  .article-media-holder, 
+  .article-gpa img {
     width: 340px;
   }
 
