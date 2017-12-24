@@ -30,7 +30,8 @@ header,
 #nav-section_menu, 
 footer, 
 article, 
-.article-awards  {
+.article-awards, 
+.article-events  {
   width: 940px;
 }
 
@@ -60,7 +61,8 @@ h4,
 #button input, 
 .article-apply_students, 
 .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1),  
-.article-media {
+.article-media, 
+.article-events {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -111,7 +113,9 @@ th,
 .article-apply_students .form_input_text, 
 .article-apply_students .form_comment, 
 .article-media a, 
-.media-item-holder {
+.media-item-holder, 
+.article-events a, 
+.article-events span {
   font-size: 32px;
 }
 
@@ -165,7 +169,9 @@ p,
 .article-apply_students,
 .article-media a, 
 .article-announcements ol, 
-.article-announcements ol li {
+.article-announcements ol li, 
+.article-events a, 
+.article-events span {
   font-weight: 400;
 }
 
@@ -201,7 +207,8 @@ nav > section > div span,
 .article-apply_students h4, 
 .article-media h4, 
 .media-item a:nth-child(2), 
-.media-item-holder  {
+.media-item-holder, 
+.article-events h4  {
   text-align: center;
 }
 
@@ -373,7 +380,8 @@ nav > section > div span,
 .article-english-links a, 
 .article-announcements a, 
 .article-awards a, 
-.article-media a {
+.article-media a, 
+.article-events a {
   color: #485081;
 }
 
@@ -708,7 +716,7 @@ footer > #footer-border {
 .article-awards h4, 
 .article-apply_faculty h4, 
 .article-apply_students h4, 
-.article-media h4  {
+.article-media h4 {
   margin-bottom: 0.25em;
 }
 
@@ -763,10 +771,10 @@ tr > td:nth-child(2)  {
   color: #4f4f4f;
 }
 
-h4 {
+/* h4 {
   margin: 1em 0 0.25em 0;
 }
-
+ */
 li {
   margin: 0.5em 0;
 }
@@ -781,7 +789,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-awards, 
 .article-apply_faculty, 
 .article-apply_students, 
-.article-media {
+.article-media, 
+.article-events {
   /* width: 75%; */
   height: auto;
   min-height: 1px;
@@ -808,7 +817,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 .article-debate-links a:nth-child(1), 
 .article-english-links a:nth-child(1), 
-.article-awards-a:nth-child(1) {
+.article-awards-links a:nth-child(1), 
+.article-events-links a:nth-child(1) {
   margin-top: 0;
 }
 
@@ -950,18 +960,21 @@ th,
  */
 
 .article-announcements-listing, 
-.article-awards-listing {
+.article-awards-listing, 
+.article-events-listing {
   margin: 30px 0;
 }
 
 .article-announcements a, 
-.article-awards a {
+.article-awards a, 
+.article-events a {
   width: 725px;
   display: inline-block;
 }
 
 .article-announcements > div > span, 
-.article-awards > div > span {
+.article-awards > div > span, 
+.article-events > div > span {
   width: 185px;
   display: inline-block;
   vertical-align: top;
@@ -1103,6 +1116,13 @@ input[name="testDate"] {
   min-height: 829px;
 }
 
+
+/* *** EVENTS *** */
+
+.article-events {
+  min-height: 885px;
+}
+
 /* 
 @media screen and (min-width: 380px) and (max-width: 420px) {
   header {
@@ -1218,7 +1238,9 @@ input[name="testDate"] {
   .article-faculty-member-page ul li, 
   .article-faculty-member-page a, 
   .article-faculty-member-page span, 
-  .media-item a:nth-child(2) {
+  .media-item a:nth-child(2), 
+  .article-events a, 
+  .article-events span {
     font-size: 12px;
   }
 
@@ -1563,7 +1585,8 @@ input[name="testDate"] {
   /* *** AWARDS *** */
 
   .article-awards > div > span, 
-  .article-announcements > div > span {
+  .article-announcements > div > span, 
+  .article-events > div > span {
     width: 75px;
   }
   
@@ -1700,6 +1723,13 @@ input[name="testDate"] {
   .article-contact_us table:nth-child(2) {
     margin: 15px 0 25px 0;
   }
+
+
+  /* *** EVENTS *** */
+
+  .article-events {
+    min-height: 270px;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 365px) { 
@@ -1722,7 +1752,9 @@ input[name="testDate"] {
   .article-announcements img, 
   .article-header-english, 
   .article-about_us, 
-  .article-gpa {
+  .article-gpa, 
+  .article-events, 
+  .article-events img {
     width: 320px;
   }
 
@@ -1791,7 +1823,8 @@ input[name="testDate"] {
   #nav-section_menu #link-announcements-page_1, 
   #nav-section_menu #link-english-talk_2016, 
   #nav-section_menu #link-english-english_advanced, 
-  #nav-section_menu #link-media-page_1 {
+  #nav-section_menu #link-media-page_1, 
+  #nav-section_menu #link-events-page_1 {
     line-height: 28px;
   }
   
@@ -1862,12 +1895,14 @@ input[name="testDate"] {
   
   /* *** AWARDS *** */
 
-  .article-awards {
+  .article-awards, 
+  .article-events {
     min-height: 202px;
   }
   
   .article-awards a, 
-  .article-announcements a {
+  .article-announcements a, 
+  .article-events a {
     width: 245px;
   }
 
@@ -2110,6 +2145,117 @@ input[name="testDate"] {
   .article-gpa {
     min-height: auto;
   }
+
+
+  /* *** EVENTS *** */
+
+  .article-events img[height="579"] {
+    height: 291px;
+  }
+
+  .article-events img[height="723"] {
+    height: 373px;
+  }
+  
+  .article-events img[height="750"] {
+    height: 386px;
+  }
+
+  .article-events img[height="692"] {
+    height: 362px;
+  }
+
+  .article-events img[width="855"] {
+    height: 194px;
+  }
+
+  .article-events img[height="268"] {
+    height: 126px;
+  }
+
+  .article-events img[height="840"] {
+    height: 347px;
+  }
+
+  .article-events img[height="436"] {
+    height: 216px;
+  }
+
+  
+  
+  /* *** EVENTS *** */
+
+  .article-events img[height="579"] {
+    height: 341px;
+  }
+
+  .article-events img[height="723"] {
+    height: 437px;
+  }
+  
+  .article-events img[height="750"] {
+    height: 453px;
+  }
+
+  .article-events img[height="692"] {
+    height: 425px;
+  }
+
+  .article-events img[width="855"] {
+    height: 228px;
+  }
+
+  .article-events img[height="268"] {
+    height: 148px;
+  }
+
+  .article-events img[height="840"] {
+    height: 377px;
+  }
+
+  .article-events img[height="436"] {
+    height: 235px;
+  }
+
+  .article-events img[height="253"] {
+    height: 101px;
+  }
+
+  .article-events img[height="802"] {
+    height: 409px;
+  }
+
+  .article-events img[height="581"] {
+    height: 352px;
+  }
+
+  .article-events img[height="464"] {
+    height: 234px;
+  }
+  
+  .article-events img[height="625"] {
+    height: 390px;
+  }
+
+  .article-events img[height="308"] {
+    height: 109px;
+  }
+
+  .article-events img[height="544"] {
+    height: 222px;
+  }
+
+  .article-events img[height="580"] {
+    height: 218px;
+  }
+
+  .article-events img[height="763"] {
+    height: 315px;
+  }
+
+  .article-events img[height="596"] {
+    height: 257px;
+  }
 }
 
 @media screen and (min-width: 370px) and (max-width: 375px) {
@@ -2130,7 +2276,8 @@ input[name="testDate"] {
   .article-apply_students tr > td:nth-child(1), 
   .article-header-english, 
   .article-about_us, 
-  .article-gpa {
+  .article-gpa, 
+  .article-events {
     width: 345px;
   } 
     
@@ -2183,7 +2330,8 @@ input[name="testDate"] {
   .article-about_us img, 
   .article-media-row, 
   .media-item-holder, 
-  .article-gpa img {
+  .article-gpa img, 
+  .article-events img {
     width: 315px;
   }
 
@@ -2211,7 +2359,8 @@ input[name="testDate"] {
   }
 
   .article-awards a, 
-  .article-announcements a {
+  .article-announcements a, 
+  .article-events a {
     width: 260px;
   }
 
@@ -2399,6 +2548,117 @@ input[name="testDate"] {
     width: 315px;
     height: 315px;
   }
+
+
+  /* *** EVENTS *** */
+
+  .article-events img[height="579"] {
+    height: 316px;
+  }
+
+  .article-events img[height="723"] {
+    height: 405px;
+  }
+  
+  .article-events img[height="750"] {
+    height: 420px;
+  }
+
+  .article-events img[height="692"] {
+    height: 394px;
+  }
+
+  .article-events img[width="855"] {
+    height: 211px;
+  }
+
+  .article-events img[height="268"] {
+    height: 137px;
+  }
+  
+  .article-events img[height="840"] {
+    height: 377px;
+  }
+
+  .article-events img[height="436"] {
+    height: 235px;
+  }
+
+  
+  
+  /* *** EVENTS *** */
+
+  .article-events img[height="579"] {
+    height: 341px;
+  }
+
+  .article-events img[height="723"] {
+    height: 437px;
+  }
+  
+  .article-events img[height="750"] {
+    height: 453px;
+  }
+
+  .article-events img[height="692"] {
+    height: 425px;
+  }
+
+  .article-events img[width="855"] {
+    height: 228px;
+  }
+
+  .article-events img[height="268"] {
+    height: 148px;
+  }
+
+  .article-events img[height="840"] {
+    height: 377px;
+  }
+
+  .article-events img[height="436"] {
+    height: 235px;
+  }
+
+  .article-events img[height="253"] {
+    height: 109px;
+  }
+
+  .article-events img[height="802"] {
+    height: 445px;
+  }
+
+  .article-events img[height="581"] {
+    height: 382px;
+  }
+
+  .article-events img[height="464"] {
+    height: 255px;
+  }
+  
+  .article-events img[height="625"] {
+    height: 423px;
+  }
+
+  .article-events img[height="308"] {
+    height: 119px;
+  }
+
+  .article-events img[height="544"] {
+    height: 241px;
+  }
+
+  .article-events img[height="580"] {
+    height: 236px;
+  }
+
+  .article-events img[height="763"] {
+    height: 342px;
+  }
+
+  .article-events img[height="596"] {
+    height: 280px;
+  }
 }
 
 @media screen and (min-width: 380px) and (max-width: 414px) {
@@ -2423,7 +2683,8 @@ input[name="testDate"] {
   .article-about_us, 
   .article-media, 
   .article-media-row, 
-  .article-gpa {
+  .article-gpa, 
+  .article-events {
     width: 370px;
   }
 
@@ -2543,7 +2804,8 @@ input[name="testDate"] {
   .article-faculty-member-page,  
   .article-about_us img, 
   .article-media-holder, 
-  .article-gpa img {
+  .article-gpa img, 
+  .article-events img {
     width: 340px;
   }
 
@@ -2571,7 +2833,8 @@ input[name="testDate"] {
   }
 
   .article-awards a, 
-  .article-announcements a {
+  .article-announcements a, 
+  .article-events a {
     width: 288px;
   }
 
@@ -2789,4 +3052,78 @@ input[name="testDate"] {
     height: 340px;
   }
 
+  
+  /* *** EVENTS *** */
+
+  .article-events img[height="579"] {
+    height: 341px;
+  }
+
+  .article-events img[height="723"] {
+    height: 437px;
+  }
+  
+  .article-events img[height="750"] {
+    height: 453px;
+  }
+
+  .article-events img[height="692"] {
+    height: 425px;
+  }
+
+  .article-events img[width="855"] {
+    height: 228px;
+  }
+
+  .article-events img[height="268"] {
+    height: 148px;
+  }
+
+  .article-events img[height="840"] {
+    height: 377px;
+  }
+
+  .article-events img[height="436"] {
+    height: 235px;
+  }
+
+  .article-events img[height="253"] {
+    height: 118px;
+  }
+
+  .article-events img[height="802"] {
+    height: 480px;
+  }
+
+  .article-events img[height="581"] {
+    height: 412px;
+  }
+
+  .article-events img[height="464"] {
+    height: 275px;
+  }
+  
+  .article-events img[height="625"] {
+    height: 457px;
+  }
+
+  .article-events img[height="308"] {
+    height: 128px;
+  }
+
+  .article-events img[height="544"] {
+    height: 261px;
+  }
+
+  .article-events img[height="580"] {
+    height: 255px;
+  }
+
+  .article-events img[height="763"] {
+    height: 370px;
+  }
+
+  .article-events img[height="596"] {
+    height: 301px;
+  }
 }
