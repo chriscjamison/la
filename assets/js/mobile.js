@@ -152,10 +152,18 @@ function extractHtmlFromDesktopPage()  {
         'event_17.htm', 
         'event_18.htm', 
         'event_19.htm', 
-        'event_20.htm', // index = 120
-
-
-
+        'event_20.htm', // index = 120 
+        'index_camps.htm', 
+        'camp_1.htm', 
+        'camp_2.htm', 
+        'camp_3.htm', 
+        'camp_4.htm', // index = 125 
+        'camp_5.htm', 
+        'camp_6.htm', 
+        'camp_7.htm', 
+        'camp_8.htm', 
+        'camp_9.htm', // index = 130
+        'camp_10.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1176,7 +1184,7 @@ function extractHtmlFromDesktopPage()  {
                                     "          <h2>테스트 (GPA/TESTING)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-gpa\" id=\"article-content\">\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/about/images/cont01-03s.png\" alt=\"학원제도(SYSTEM)\">\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/admission/images/cont03-01.png\" alt=\"입학안내\">\n" + 
                                     "        </div>\n";
 
                 webpage_index = 18;
@@ -3538,275 +3546,415 @@ function extractHtmlFromDesktopPage()  {
               
               // Runs if the loading page is the 'Awards' page.
               case 100:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>이벤트</h4>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-1\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-2\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_2.htm\" title=\"Winter 2018 NSDA\">Winter 2018 NSDA</a><span> - 2017-11-23</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-3\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_3.htm\" title=\"15th ESU Korea Speaking Competition\">15th ESU Korea Speaking Competition</a><span> - 2017-11-15</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-4\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_4.htm\" title=\"2018 Peace MUN\">2018 Peace MUN</a><span> - 2017-10-24</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-5\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_5.htm\" title=\"CSIA MUN 2018\">CSIA MUN 2018</a><span> - 2017-10-12</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-6\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_6.htm\" title=\"Yale MUN 2018\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2017-09-15</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-7\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_7.htm\" title=\"KMUN 2018\">KMUN 2018</a><span> - 2017-09-14</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-8\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_8.htm\" title=\"GC Seoul 2018\">GC Seoul 2018</a><span> - 2017-09-06</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-9\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_9.htm\" title=\"2017(23회) 대한민국 학생 영어말하기 대회\">2017(23회) 대한민국 학생 영어말하기 대회</a><span> - 2017-08-13</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-10\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_10.htm\" title=\"2017 Model United Nations of Seoul YMCA\">2017 Model United Nations of Seoul YMCA</a><span> - 2017-06-14</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-11\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_11.htm\" title=\"2017년 제14회 ESU KOREA 영어말하기대회\">2017년 제14회 ESU KOREA 영어말하기대회</a><span> - 2017-06-13</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-12\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_12.htm\" title=\"2017년 9th HAFS MIMUN\">	2017년 9th HAFS MIMUN</a><span> - 2017-05-31</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-13\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_13.htm\" title=\"2017년, 7th HAFS Debate Championship\">2017년, 7th HAFS Debate Championship</a><span> - 2017-05-31</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-14\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_14.htm\" title=\"2017 NSDA Summer Championships\">2017 NSDA Summer Championships</a><span> - 2017-05-31</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-15\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_15.htm\" title=\"2017년 하반기 매경 영어토론대회\">2017년 하반기 매경 영어토론대회</a><span> - 2017-05-17</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-16\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_16.htm\" title=\"2017 MUN101\">2017 MUN101</a><span> - 2017-05-12</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-17\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_17.htm\" title=\"	2017년 하반기 Korea Mock Trial Association\">2017년 하반기 Korea Mock Trial Association</a><span> - 2017-05-07</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-18\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_18.htm\" title=\"2017년 하반기 YTN.HUFS 영어토론대회\">2017년 하반기 YTN.HUFS 영어토론대회</a><span> - 2017-04-29</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-19\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_19.htm\" title=\"2017(4th) Cornell-Yonsei Debate Invitational\">2017(4th) Cornell-Yonsei Debate Invitational</a><span> - 2017-04-29</span>\n" + 
-                                  "          </div>\n" + 
-                                  "          <div class=\"article-events-listing\" id=\"events-listing-20\">\n" + 
-                                  "            <a href=\"/la/assets/html/events/event_20.htm\" title=\"글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)\">글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</a><span> - 2017-04-13</span>\n" + 
-                                  "          </div>\n" + 
-                                  "        </div>\n";  
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>이벤트</h4>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-1\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-2\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_2.htm\" title=\"Winter 2018 NSDA\">Winter 2018 NSDA</a><span> - 2017-11-23</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-3\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_3.htm\" title=\"15th ESU Korea Speaking Competition\">15th ESU Korea Speaking Competition</a><span> - 2017-11-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-4\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_4.htm\" title=\"2018 Peace MUN\">2018 Peace MUN</a><span> - 2017-10-24</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-5\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_5.htm\" title=\"CSIA MUN 2018\">CSIA MUN 2018</a><span> - 2017-10-12</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-6\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_6.htm\" title=\"Yale MUN 2018\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2017-09-15</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-7\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_7.htm\" title=\"KMUN 2018\">KMUN 2018</a><span> - 2017-09-14</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-8\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_8.htm\" title=\"GC Seoul 2018\">GC Seoul 2018</a><span> - 2017-09-06</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-9\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_9.htm\" title=\"2017(23회) 대한민국 학생 영어말하기 대회\">2017(23회) 대한민국 학생 영어말하기 대회</a><span> - 2017-08-13</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-10\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_10.htm\" title=\"2017 Model United Nations of Seoul YMCA\">2017 Model United Nations of Seoul YMCA</a><span> - 2017-06-14</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-11\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_11.htm\" title=\"2017년 제14회 ESU KOREA 영어말하기대회\">2017년 제14회 ESU KOREA 영어말하기대회</a><span> - 2017-06-13</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-12\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_12.htm\" title=\"2017년 9th HAFS MIMUN\">	2017년 9th HAFS MIMUN</a><span> - 2017-05-31</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-13\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_13.htm\" title=\"2017년, 7th HAFS Debate Championship\">2017년, 7th HAFS Debate Championship</a><span> - 2017-05-31</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-14\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_14.htm\" title=\"2017 NSDA Summer Championships\">2017 NSDA Summer Championships</a><span> - 2017-05-31</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-15\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_15.htm\" title=\"2017년 하반기 매경 영어토론대회\">2017년 하반기 매경 영어토론대회</a><span> - 2017-05-17</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-16\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_16.htm\" title=\"2017 MUN101\">2017 MUN101</a><span> - 2017-05-12</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-17\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_17.htm\" title=\"	2017년 하반기 Korea Mock Trial Association\">2017년 하반기 Korea Mock Trial Association</a><span> - 2017-05-07</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-18\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_18.htm\" title=\"2017년 하반기 YTN.HUFS 영어토론대회\">2017년 하반기 YTN.HUFS 영어토론대회</a><span> - 2017-04-29</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-19\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_19.htm\" title=\"2017(4th) Cornell-Yonsei Debate Invitational\">2017(4th) Cornell-Yonsei Debate Invitational</a><span> - 2017-04-29</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-events-listing\" id=\"events-listing-20\">\n" + 
+                                    "            <a href=\"/la/assets/html/events/event_20.htm\" title=\"글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)\">글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</a><span> - 2017-04-13</span>\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 100;
-            break;
+                webpage_index = 100;
+              break;
 
-            // Runs if the loading page is the 1st award in the Events section.
-            case 101:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>제15회 ESU KOREA 영어말하기대회</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
+              // Runs if the loading page is the 1st event in the Events section.
+              case 101:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>제15회 ESU KOREA 영어말하기대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 101;
-            break;
+                webpage_index = 101;
+              break;
 
-            // Runs if the loading page is the 2nd award in the Events section.
-            case 102:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>Winter 2018 NSDA</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
+              // Runs if the loading page is the 2nd event in the Events section.
+              case 102:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>Winter 2018 NSDA</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 102;
-            break;
+                webpage_index = 102;
+              break;
 
-            // Runs if the loading page is the 3rd award in the Events section.
-            case 103:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>15th ESU Korea Speaking Competition</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
+              // Runs if the loading page is the 3rd event in the Events section.
+              case 103:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>15th ESU Korea Speaking Competition</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 103;
-            break;
+                webpage_index = 103;
+              break;
 
-            // Runs if the loading page is the 4th award in the Events section.
-            case 104:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2018 Peace MUN</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
+              // Runs if the loading page is the 4th event in the Events section.
+              case 104:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2018 Peace MUN</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 104;
-            break;
+                webpage_index = 104;
+              break;
 
-            // Runs if the loading page is the 5th award in the Events section.
-            case 105:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>CSIA MUN 2018</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 105;
-            break;
+              // Runs if the loading page is the 5th event in the Events section.
+              case 105:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>CSIA MUN 2018</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 105;
+              break;
 
-            // Runs if the loading page is the 6th award in the Events section.
-            case 106:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>Yale MUN 2018</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 106;
-            break;
+              // Runs if the loading page is the 6th event in the Events section.
+              case 106:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>Yale MUN 2018</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 106;
+              break;
 
-            // Runs if the loading page is the 7th award in the Events section.
-            case 107:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>KMUN 2018</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 107;
-            break;
+              // Runs if the loading page is the 7th event in the Events section.
+              case 107:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>KMUN 2018</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 107;
+              break;
 
-            // Runs if the loading page is the 8th award in the Events section.
-            case 108:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>GC Seoul 2018</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
+              // Runs if the loading page is the 8th event in the Events section.
+              case 108:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>GC Seoul 2018</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
 
-              webpage_index = 108;
-            break;
+                webpage_index = 108;
+              break;
+              
+              // Runs if the loading page is the 9th event in the Events section.
+              case 109:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017(23회) 대한민국 학생 영어말하기 대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 109;
+              break;
+
+              // Runs if the loading page is the 10th event in the Events section.
+              case 110:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 Model United Nations of Seoul YMCA</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 110;
+              break;
+
+              // Runs if the loading page is the 11th event in the Events section.
+              case 111:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 제14회 ESU KOREA 영어말하기대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 111;
+              break;
+
+              // Runs if the loading page is the 12th event in the Events section.
+              case 112:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 9th  HAFS MIMUN</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 112;
+              break;
+
+              // Runs if the loading page is the 13th event in the Events section.
+              case 113:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년, 7th HAFS Debate Championship</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 113;
+              break;
+
+              // Runs if the loading page is the 14th event in the Events section.
+              case 114:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 NSDA Summer Championships</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 114;
+              break;
+
+              // Runs if the loading page is the 15th event in the Events section.
+              case 115:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 하반기 매경 영어토론대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 115;
+              break;
+
+              // Runs if the loading page is the 16th event in the Events section.
+              case 116:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 MUN101</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 116;
+              break;
+
+              // Runs if the loading page is the 17th event in the Events section.
+              case 117:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 하반기 Korea Mock Trial Association</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 117;
+              break;	
+
+              // Runs if the loading page is the 18th event in the Events section.
+              case 118:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017년 하반기 YTN.HUFS 영어토론대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 118;
+              break;
+
+              // Runs if the loading page is the 19th event in the Events section.
+              case 119:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>2017(4th) Cornell-Yonsei Debate Invitational</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 119;
+              break;
+
+              // Runs if the loading page is the 20th event in the Events section.
+              case 120:
+                extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
+                                    "          <h4>글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";
+              
+                webpage_index = 120;
+              break;
+
+              // Runs if the loading page is the 'Camps' page.
+              case 121:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>이벤트</h4>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-1\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_1.htm\" title=\"2017-18 겨울방학 특강안내\">2017-18 겨울방학 특강안내</a><span> - 2017-10-26</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-2\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_2.htm\" title=\"2016-2017 리더스 겨울방학특강\">2016-2017 리더스 겨울방학특강</a><span> - 2016-12-30</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-3\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_3.htm\" title=\"2015 여름방학 특강안내\">2015 여름방학 특강안내</a><span> - 2015-11-21</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-4\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_4.htm\" title=\"2018 겨울방학 특강일정\">2018 겨울방학 특강일정</a><span> - 2017-11-21</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-5\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_5.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-6\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_6.htm\" title=\"2016 여름방학특강 안내\">2016 여름방학특강 안내</a><span> - 2016-05-01</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-7\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_7.htm\" title=\"2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)\">2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)</a><span> - 2015-12-21</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-8\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_8.htm\" title=\"2015년 여름방학특강 일정 [142]\">2015년 여름방학특강 일정 [142]</a><span> - 2015-06-01</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-9\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_9.htm\" title=\"2014년 겨울방학 특강안내 및 일정\">2014년 겨울방학 특강안내 및 일정</a><span> - 2014-11-26</span>\n" + 
+                                    "          </div>\n" + 
+                                    "          <div class=\"article-camps-listing\" id=\"camps-listing-10\">\n" + 
+                                    "            <a href=\"/la/assets/html/camps/camp_10.htm\" title=\"2014 겨울방학특강일정 안내 [1]\">2017 Model United Nations of Seoul YMCA</a><span> - 2014-11-09</span>\n" + 
+                                    "          </div>\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 121;
+              break;
+
+              // Runs if the loading page is the 1st camp in the Camps section.
+              case 122:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2017-18 겨울방학 특강안내</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 122;
+              break;
+
+              // Runs if the loading page is the 2nd camp in the Camps section.
+              case 123:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2016-2017 리더스 겨울방학특강</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 123;
+              break;
+
+              // Runs if the loading page is the 3rd camp in the Camps section.
+              case 124:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2015 여름방학 특강안내</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 124;
+              break;
+
+              // Runs if the loading page is the 4th camp in the Camps section.
+              case 125:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2018 겨울방학 특강일정</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 125;
+              break;
+
+              // Runs if the loading page is the 5th camp in the Camps section.
+              case 126:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2017 여름방학 특강 일정표</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 126;
+              break;
+
+              // Runs if the loading page is the 6th camp in the Camps section.
+              case 127:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2016 여름방학특강 안내</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 127;
+              break;
+
+              // Runs if the loading page is the 7th camp in the Camps section.
+              case 128:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 128;
+              break;
+
+              // Runs if the loading page is the 8th camp in the Camps section.
+              case 129:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2015년 여름방학특강 일정 [142]</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 129;
+              break;
+              
+              // Runs if the loading page is the 9th camp in the Camps section.
+              case 130:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2014년 겨울방학 특강안내 및 일정</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 130;
+              break;
+
+              // Runs if the loading page is the 10th camp in the Camps section.
+              case 131:
+                extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
+                                    "          <h4>2014 겨울방학특강일정 안내 [1]</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+
+                webpage_index = 131;
+              break;
             
-            // Runs if the loading page is the 9th award in the Events section.
-            case 109:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017(23회) 대한민국 학생 영어말하기 대회</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 109;
-            break;
 
-            // Runs if the loading page is the 10th award in the Events section.
-            case 110:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017 Model United Nations of Seoul YMCA</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
 
-              webpage_index = 110;
-            break;
-
-            // Runs if the loading page is the 11th award in the Events section.
-            case 111:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 제14회 ESU KOREA 영어말하기대회</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 111;
-            break;
-
-            // Runs if the loading page is the 12th award in the Events section.
-            case 112:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 9th  HAFS MIMUN</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 112;
-            break;
-
-            // Runs if the loading page is the 13th award in the Events section.
-            case 113:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년, 7th HAFS Debate Championship</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 113;
-            break;
-
-            // Runs if the loading page is the 14th award in the Events section.
-            case 114:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017 NSDA Summer Championships</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-
-              webpage_index = 114;
-            break;
-
-            // Runs if the loading page is the 15th award in the Events section.
-            case 115:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 하반기 매경 영어토론대회</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-
-              webpage_index = 115;
-            break;
-
-            // Runs if the loading page is the 16th award in the Events section.
-            case 116:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017 MUN101</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 116;
-            break;
-
-            // Runs if the loading page is the 17th award in the Events section.
-            case 117:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 하반기 Korea Mock Trial Association</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 117;
-            break;	
-
-            // Runs if the loading page is the 18th award in the Events section.
-            case 118:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017년 하반기 YTN.HUFS 영어토론대회</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 118;
-            break;
-
-            // Runs if the loading page is the 19th award in the Events section.
-            case 119:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>2017(4th) Cornell-Yonsei Debate Invitational</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";  
-                                  
-              webpage_index = 119;
-            break;
-
-            // Runs if the loading page is the 20th award in the Events section.
-            case 120:
-              extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                  "          <h4>글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</h4>\n" + 
-                                  "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                  "        </div>\n";
-            
-              webpage_index = 120;
-            break;
             }
-
-            
           }	 
         }
         
@@ -3865,17 +4013,19 @@ function renderHeader(webpage_index) {
   title_html = "Leaders Academy - ";
 
   if (webpage_index <= 15) {
-    section_html = "강사소개 (FACULTY) - ";
+    section_html = "강사소개 - ";
   } else if ((webpage_index > 19) && (webpage_index <= 27)) {
-    section_html = "정규토론 (DEBATE) - ";
+    section_html = "정규토론 - ";
   } else if ((webpage_index > 27) && (webpage_index <= 38)) {
-    section_html = "정규영어 (ENGLISH) - ";
+    section_html = "정규영어 - ";
   } else if ((webpage_index > 38) && (webpage_index <= 80)) {
     section_html = "공지 사항 - ";
   } else if ((webpage_index > 84) && (webpage_index <= 99)) {
     section_html = "대치 리더스 - ";
   } else if ((webpage_index > 99) && (webpage_index <= 120)) {
     section_html = "이벤트 - ";
+  } else if ((webpage_index > 120) && (webpage_index <= 131)) {
+    section_html = "캠프 - ";
   }
   
   
@@ -4485,8 +4635,64 @@ function renderHeader(webpage_index) {
     case 120: 
       title_html = title_html + section_html + "글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)";
     break;
+
+    // Runs if the loading page is Camps.
+    case 121: 
+      title_html = title_html + "캠프";
+    break;
+    
+    // Runs if the loading page is the 1st camp.
+    case 122: 
+      title_html = title_html + section_html + "2017-18 겨울방학 특강안내";
+    break;
+
+    // Runs if the loading page is the 2nd camp.
+    case 123: 
+      title_html = title_html + section_html + "2016-2017 리더스 겨울방학특강";
+    break;
+
+    // Runs if the loading page is the 3rd camp.
+    case 124:
+      title_html = title_html + section_html + "2015 여름방학 특강안내";
+    break;
+
+    // Runs if the loading page is the 4th camp.
+    case 125: 
+      title_html = title_html + section_html + "2018 겨울방학 특강일정";
+    break;
+
+    // Runs if the loading page is the 5th camp.
+    case 126: 
+      title_html = title_html + section_html + "2017 여름방학 특강 일정표";
+    break;
+
+    // Runs if the loading page is the 6th camp.
+    case 127: 
+      title_html = title_html + section_html + "2016 여름방학특강 안내";
+    break;
+
+    // Runs if the loading page is the 7th camp.
+    case 128: 
+      title_html = title_html + section_html + "2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)";
+    break;
+
+    // Runs if the loading page is the 8th camp.
+    case 129: 
+      title_html = title_html + section_html + "2015년 여름방학특강 일정 [142]";
+    break;
+
+    // Runs if the loading page is the 9th camp.
+    case 130: 
+      title_html = title_html + section_html + "2014년 겨울방학 특강안내 및 일정";
+    break;
+
+    // Runs if the loading page is the 10th camp.
+    case 131: 
+      title_html = title_html + section_html + "2014 겨울방학특강일정 안내 [1]";
+    break;
+
   
-  } // END of SWITCH statement
+  } // END of SWITCH statement 
 
   jq("head").html(
     "    <!-- *** Page Title *** -->\n" + 
@@ -4598,7 +4804,7 @@ function renderMenus(webpage_index) {
     "             <span>English</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-camps\">\n" + 
-    "            <a href=\"#camps\" title=\"Camps\"></a>\n" + 
+    "            <a href=\"/la/assets/html/camps/index_camps.htm\" title=\"Camps\"></a>\n" + 
     "            <span>Camps</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-lessons\">\n" + 
@@ -4727,7 +4933,12 @@ function renderSectionMenu(webpage_index) {
       jq(menu_selector).html(
         "      <a href=\"/la/assets/html/events/index_events.htm\" title=\"Page #1\" id=\"link-events-page_1\">Page #1</a>\n" 
       );
+    } else if ((webpage_index > 120) && webpage_index <= 131) {
+      jq(menu_selector).html(
+        "      <a href=\"/la/assets/html/camps/index_camps.htm\" title=\"Page #1\" id=\"link-camps-page_1\">Page #1</a>\n" 
+      );
     } 
+
   } // END of FUNCTION 'renderSectionMenu'
 
   
@@ -4924,7 +5135,8 @@ function renderArticle(extracted_html, webpage_index) {
       ((webpage_index > 60) && (webpage_index <= 81)) || 
       (webpage_index === 83) || 
       ((webpage_index > 84) && (webpage_index <= 99)) || 
-      ((webpage_index > 99) && (webpage_index <= 120))) { 
+      ((webpage_index > 99) && (webpage_index <= 120)) || 
+      ((webpage_index > 120) && (webpage_index <= 131))) { 
     jq("article").html(extracted_html[0]);
   } // END of if STATEMENT
 

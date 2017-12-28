@@ -37,7 +37,8 @@ header,
 footer, 
 article, 
 .article-awards, 
-.article-events  {
+.article-events, 
+.article-camps  {
   width: 940px;
 }
 
@@ -68,7 +69,8 @@ h4,
 .article-apply_students, 
 .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1),  
 .article-media, 
-.article-events {
+.article-events, 
+.article-camps {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: #fff;
@@ -122,7 +124,9 @@ th,
 .article-media a, 
 .media-item-holder, 
 .article-events a, 
-.article-events span {
+.article-events span, 
+.article-camps a, 
+.article-camps span {
   font-size: 32px;
 }
 
@@ -178,7 +182,9 @@ p,
 .article-announcements ol, 
 .article-announcements ol li, 
 .article-events a, 
-.article-events span {
+.article-events span, 
+.article-camps a, 
+.article-camps span {
   font-weight: 400;
 }
 
@@ -433,7 +439,8 @@ nav > section > div span,
 .article-announcements a, 
 .article-awards a, 
 .article-media a, 
-.article-events a {
+.article-events a, 
+.article-camps a {
   color: #e76200;
 }
 
@@ -854,7 +861,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-apply_students, 
 .article-media,
 .article-contact_us,  
-.article-events {
+.article-events, 
+.article-camps {
   /* width: 75%; */
   height: auto;
   min-height: 1px;
@@ -1025,20 +1033,23 @@ th,
 
 .article-announcements-listing, 
 .article-awards-listing, 
-.article-events-listing {
+.article-events-listing, 
+.article-camps-listing {
   margin: 30px 0;
 }
 
 .article-announcements a, 
 .article-awards a, 
-.article-events a {
+.article-events a, 
+.article-camps a {
   width: 725px;
   display: inline-block;
 }
 
 .article-announcements > div > span, 
 .article-awards > div > span, 
-.article-events > div > span {
+.article-events > div > span, 
+.article-camps > div > span {
   width: 185px;
   display: inline-block;
   vertical-align: top;
@@ -1315,7 +1326,9 @@ input[name="testDate"] {
   .article-faculty-member-page span, 
   .media-item a:nth-child(2), 
   .article-events a, 
-  .article-events span {
+  .article-events span, 
+  .article-camps a, 
+  .article-camps span {
     font-size: 12px;
   }
 
@@ -1666,7 +1679,8 @@ input[name="testDate"] {
 
   .article-awards > div > span, 
   .article-announcements > div > span, 
-  .article-events > div > span {
+  .article-events > div > span, 
+  .article-camps > div > span {
     width: 75px;
   }
   
@@ -1765,6 +1779,12 @@ input[name="testDate"] {
   }
 
 
+  /* *** GPA/TESTING *** */
+
+  .article-gpa {
+    min-height: auto;
+  }
+
   /* *** MEDIA *** */
 
   .article-media-row {
@@ -1834,7 +1854,8 @@ input[name="testDate"] {
   .article-about_us, 
   .article-gpa, 
   .article-events, 
-  .article-events img {
+  .article-events img, 
+  .article-camps {
     width: 320px;
   }
 
@@ -1924,7 +1945,8 @@ input[name="testDate"] {
   .article-media-row, 
   .media-item-holder, 
   .media-item-holder img, 
-  .article-gpa img {
+  .article-gpa img, 
+  .article-camps img {
     width: 290px;
   }
 
@@ -1976,13 +1998,15 @@ input[name="testDate"] {
   /* *** AWARDS *** */
 
   .article-awards, 
-  .article-events {
+  .article-events, 
+  .article-camps {
     min-height: 202px;
   }
   
   .article-awards a, 
   .article-announcements a, 
-  .article-events a {
+  .article-events a, 
+  .article-camps a {
     width: 245px;
   }
 
@@ -2226,10 +2250,14 @@ input[name="testDate"] {
     min-height: auto;
   }
 
+  .article-gpa img {
+    height: 175px;
+  }
+
 
   /* *** EVENTS *** */
 
-  .article-events img[height="579"] {
+ /*  .article-events img[height="579"] {
     height: 291px;
   }
 
@@ -2261,7 +2289,7 @@ input[name="testDate"] {
     height: 216px;
   }
 
-  
+   */
   
   /* *** EVENTS *** */
 
@@ -2392,6 +2420,35 @@ input[name="testDate"] {
   .article-events img[height="244"] {
     height: 108px;
   }
+
+
+  /* *** CAMPS *** */
+
+  .article-camps img[height="882"] {
+    height: 497px;
+  }
+  
+  .article-camps img[height="900"] {
+    height: 218px;
+  }
+
+  .article-camps img[height="815"] {
+    height: 313px;
+  }
+  
+  .article-camps img[height="945"] {
+    height: 436px;
+  }
+  
+  .article-camps img[height="1000"] {
+    height: 382px;
+  }
+  
+  .article-camps img[height="871"] {
+    height: 333px;
+  }
+
+
 }
 
 @media screen and (min-width: 370px) and (max-width: 375px) {
@@ -2413,7 +2470,8 @@ input[name="testDate"] {
   .article-header-english, 
   .article-about_us, 
   .article-gpa, 
-  .article-events {
+  .article-events, 
+  .article-camps {
     width: 345px;
   } 
     
@@ -2467,7 +2525,8 @@ input[name="testDate"] {
   .article-media-row, 
   .media-item-holder, 
   .article-gpa img, 
-  .article-events img {
+  .article-events img, 
+  .article-camps img {
     width: 315px;
   }
 
@@ -2496,7 +2555,8 @@ input[name="testDate"] {
 
   .article-awards a, 
   .article-announcements a, 
-  .article-events a {
+  .article-events a, 
+  .article-camps a {
     width: 260px;
   }
 
@@ -2686,42 +2746,17 @@ input[name="testDate"] {
   }
 
 
-  /* *** EVENTS *** */
+  /* *** GPA/TESTING *** */
 
-  .article-events img[height="579"] {
-    height: 316px;
+  .article-gpa {
+    min-height: 195px;
   }
 
-  .article-events img[height="723"] {
-    height: 405px;
+  .article-gpa img {
+    height: 195px;
   }
   
-  .article-events img[height="750"] {
-    height: 420px;
-  }
 
-  .article-events img[height="692"] {
-    height: 394px;
-  }
-
-  .article-events img[width="855"] {
-    height: 211px;
-  }
-
-  .article-events img[height="268"] {
-    height: 137px;
-  }
-  
-  .article-events img[height="840"] {
-    height: 377px;
-  }
-
-  .article-events img[height="436"] {
-    height: 235px;
-  }
-
-  
-  
   /* *** EVENTS *** */
 
   .article-events img[height="579"] {
@@ -2851,6 +2886,33 @@ input[name="testDate"] {
   .article-events img[height="244"] {
     height: 118px;
   }
+
+
+  /* *** CAMPS *** */
+
+  .article-camps img[height="882"] {
+    height: 454px;
+  }
+
+  .article-camps img[height="900"] {
+    height: 236px;
+  }
+  
+  .article-camps img[height="815"] {
+    height: 340px;
+  }
+  
+  .article-camps img[height="945"] {
+    height: 474px;
+  }
+  
+  .article-camps img[height="1000"] {
+    height: 414px;
+  }
+  
+  .article-camps img[height="871"] {
+    height: 362px;
+  }
 }
 
 @media screen and (min-width: 380px) and (max-width: 414px) {
@@ -2876,7 +2938,8 @@ input[name="testDate"] {
   .article-media, 
   .article-media-row, 
   .article-gpa, 
-  .article-events {
+  .article-events, 
+  .article-camps {
     width: 370px;
   }
 
@@ -2997,7 +3060,8 @@ input[name="testDate"] {
   .article-about_us img, 
   .article-media-holder, 
   .article-gpa img, 
-  .article-events img {
+  .article-events img, 
+  .article-camps img {
     width: 340px;
   }
 
@@ -3026,7 +3090,8 @@ input[name="testDate"] {
 
   .article-awards a, 
   .article-announcements a, 
-  .article-events a {
+  .article-events a, 
+  .article-camps a {
     width: 288px;
   }
 
@@ -3244,6 +3309,16 @@ input[name="testDate"] {
     height: 340px;
   }
 
+
+  /* *** GPA/TESTING *** */
+
+  .article-gpa {
+    min-height: 264px;
+  }
+
+  .article-gpa img {
+    height: 208px;
+  }
   
   /* *** EVENTS *** */
 
@@ -3369,5 +3444,32 @@ input[name="testDate"] {
 
   .article-events img[height="244"] {
     height: 116px;
+  }
+
+
+  /* *** CAMPS *** */
+
+  .article-camps img[height="882"] {
+    height: 490px;
+  }
+
+  .article-camps img[height="900"] {
+    height: 255px;
+  }
+  
+  .article-camps img[height="815"] {
+    height: 368px;
+  }
+  
+  .article-camps img[height="945"] {
+    height: 512px;
+  }
+  
+  .article-camps img[height="1000"] {
+    height: 447px;
+  }
+  
+  .article-camps img[height="871"] {
+    height: 391px;
   }
 }
