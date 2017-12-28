@@ -136,9 +136,10 @@ font {
   font-size: 28px;
 }
 
-
 .article-faculty-member ul li, 
-.article-faculty-member p {
+.article-faculty-member p, 
+.article-camps table tr > td, 
+.article-camps table tr > td > div {
   font-size: 25px;
 }
 
@@ -813,7 +814,9 @@ footer > #footer-border {
   padding-left: 55px;
 }
 
+
 /* PAGE: Location */
+
 table {
   width: 100%;
   margin-top: 2em;
@@ -915,7 +918,8 @@ th,
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
 #map + script + script + table > tbody > tr > td:nth-child(1), 
 #map + script + script + table + table > tbody > tr > td:nth-child(1), 
-.article-contact_us table > tbody > tr > td:nth-child(1) { 
+.article-contact_us table > tbody > tr > td:nth-child(1), 
+.article-camps table > tbody > tr:nth-child(1) > td { 
   width: 5em;
   background-color: #d5ccb2;
   color: #573214;
@@ -924,7 +928,8 @@ th,
 .article-debate table td, 
 .article-debate table:nth-child(7) tr:nth-child(1) td:nth-child(1), 
 .article-english table td, 
-.article-contact_us tr > td:nth-child(2) {
+.article-contact_us tr > td:nth-child(2), 
+.article-camps table > tbody > tr > td {
   width: auto;
   background-color: transparent;
   border: 2px dashed #cec2b4;
@@ -1198,7 +1203,8 @@ input[name="testDate"] {
 
 /* *** EVENTS *** */
 
-.article-events {
+.article-events, 
+.article-camps {
   min-height: 885px;
 }
 
@@ -1208,6 +1214,22 @@ input[name="testDate"] {
  .article-contact_us {
   min-height: 805px;
 }
+
+
+/* *** CAMPS *** */
+
+.article-camps img[height="900"] {
+  width: 680px;
+  height: 510px;
+}
+
+.article-camps table, 
+.article-camps table[width="500"] tr td, 
+.article-camps table[width="580"] tr td {
+  border: none !important;
+  background-color: transparent !important;
+}
+
 
 /* 
 @media screen and (min-width: 380px) and (max-width: 420px) {
@@ -1830,6 +1852,20 @@ input[name="testDate"] {
   .article-events {
     min-height: 270px;
   }
+
+
+  /* *** CAMPS *** */
+
+  .article-camps {
+    min-height: auto;
+  }
+
+  .article-camps img[height="53"] {
+    width: 121px;
+    height: 53px;
+  }
+
+   
 }
 
 @media screen and (min-width: 360px) and (max-width: 365px) { 
@@ -1855,7 +1891,8 @@ input[name="testDate"] {
   .article-gpa, 
   .article-events, 
   .article-events img, 
-  .article-camps {
+  .article-camps, 
+  .article-camps img {
     width: 320px;
   }
 
@@ -2448,7 +2485,25 @@ input[name="testDate"] {
     height: 333px;
   }
 
+  .article-camps img[height="300"] {
+    height: 174px;
+  }
 
+  .article-camps img[height="100"] {
+    height: 58px;
+  }
+
+  .article-camps img[height="150"] {
+    height: 87px;
+  }
+  
+  .article-camps table > tbody > tr > td {
+    font-size: 9px;
+  }
+
+  .article-camps img[height="679"] {
+    height: 340px;
+  }
 }
 
 @media screen and (min-width: 370px) and (max-width: 375px) {
@@ -2913,6 +2968,27 @@ input[name="testDate"] {
   .article-camps img[height="871"] {
     height: 362px;
   }
+
+  .article-camps img[height="300"] {
+    height: 189px;
+  }
+
+  .article-camps img[height="100"] {
+    height: 63px;
+  }
+
+  .article-camps img[height="150"] {
+    height: 95px;
+  }
+
+  .article-camps img[height="679"] {
+    height: 369px;
+  }
+
+  .article-camps table > tbody > tr > td {
+    font-size: 9px;
+  }
+
 }
 
 @media screen and (min-width: 380px) and (max-width: 414px) {
@@ -3471,5 +3547,25 @@ input[name="testDate"] {
   
   .article-camps img[height="871"] {
     height: 391px;
+  }
+
+  .article-camps img[height="300"] {
+    height: 204px;
+  }
+
+  .article-camps img[height="100"] {
+    height: 68px;
+  }
+
+  .article-camps img[height="150"] {
+    height: 102px;
+  }
+
+  .article-camps img[height="679"] {
+    height: 398px;
+  }
+  
+  .article-camps table > tbody > tr > td {
+    font-size: 10px;
   }
 }
