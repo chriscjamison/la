@@ -4771,8 +4771,19 @@ function renderLogoAndSearch() {
     "      </a>\n" + 
     "      <section id=\"header-right\">\n" + 
     "        <div id=\"header-search\">\n" + 
-    "        <form>\n" + 
-    "          <input type=\"search\" width=\"25\" maxwidth=\"75\" value=\"Search\" id=\"mobile-search\">\n" + 
+    "          <script>\n" + 
+    "           (function() { \n" + 
+    "             var cx = '006315930114800819546:bz06kk34ffi';\n" + 
+    "             var gcse = document.createElement('script');\n" + 
+    "             gcse.type = 'text/javascript';\n" + 
+    "             gcse.async = true;\n" + 
+    "             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
+    "             var s = document.getElementsByTagName('script')[0];\n" + 
+    "             s.parentNode.insertBefore(gcse, s);\n" + 
+    "           })();\n" + 
+    "         </script>\n" + 
+    "         <gcse:searchbox-only></gcse:search>\n" + 
+    // "          <input type=\"search\" width=\"25\" maxwidth=\"75\" value=\"Search\" id=\"mobile-search\">\n" + 
     "        </form>\n" + 
     "        </div>\n" + 
     "        <div id=\"header-links\">\n" + 
