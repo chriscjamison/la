@@ -1,0 +1,131 @@
+{ = inc('inc/popup_top.htm') } <!-- 팝업용 header -->
+<style>
+BODY {margin-left: 0px; margin-top:0px; font-size: 9pt; font-family: "Gulim, Tahoma"; color: #4f4f4f; line-height: 18px;}
+TD, TH, DIV { font-family: "Gulim, Tahoma";  font-size: 9pt;  color: #4f4f4f;  line-height: 18px;letter-spacing: 0;}
+table.aleft{ text-align:left;}
+.mem_input{background-color:#f4f4f4; border:1px solid #e3e3e3; font-size:12px;}
+.pop_title{background:#fdc741; border-bottom:1px solid #dea822; height:60px; padding-left:10px;}
+.terms_box{ background:#f9f9f9; border:1px solid #dedede; padding:10px;}
+</style>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="pop_title"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="90%"><img src="images/tit_join.png"></td>
+        <td width="10%" align="center"><a href="javascript:window.close();"><img src="images/btn_close.gif" border="0"></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="1" bgcolor="#dea822"></td>
+  </tr>
+  <tr>
+    <td align="center" style="padding:20px 0;"><table width="98%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding:15px 0;"><img src="images/ict_memjoin01.gif"></td>
+      </tr>
+       <tr>
+        <td class="terms_box"> <div id="member_agreement" style="width:568px;height:200px;overflow:auto;border:solid 1px #e0e0e0;text-align:left;">{ agreementform }</div></td>
+      </tr>
+       <tr>
+        <td style="padding:15px 0;"><img src="images/ict_memjoin02.gif"></td>
+      </tr>
+      <tr>
+        <td class="terms_box"><div id="member_agreement" style="width:568px;height:200px;overflow:auto;border:solid 1px #e0e0e0;text-align:left;">{ policyform }</div></td>
+      </tr>
+       <tr>
+        <td align="center" style="padding:15px 0;"></td>
+      </tr>
+       <tr>
+        <td align="center"><input type="radio" name="agree_ok" id="agree_ok01" value="1" checked="checked" /> <strong>예, 동의합니다.</strong>
+          <input type="radio" name="agree_ok" id="agree_ok02" value="0" />
+          <strong>          아니오, 동의하지 않습니다.</strong></td>
+      </tr>
+       <tr>
+        <td align="center"  style="padding-top:15px;"><img src="images/btn_confirm.gif" border="0"  style="cursor:pointer;" onclick="OnAgreeCheck();"><img src="images/btn_cancel.gif" hspace="5" border="0" style="cursor:pointer;" onclick="window.close();" ></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#fdc741"></td>
+  </tr>
+</table>
+
+
+
+
+
+<!--table width="618" border="0" cellspacing="0" cellpadding="0">
+ 
+  <tr>
+    <td style="padding:15px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+    <td height="29"><img src="images/member_title.gif" width="116" height="15" /></td>
+       </tr>
+       <tr>
+    <td height="2" bgcolor="#8a1839"></td>
+      </tr>
+       <tr>
+    <td height="10"></td>
+       </tr>  
+        <tr>
+          <td><img src="images/member_step1_titlegif.gif" width="80" height="14" /></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="0" cellpadding="10" cellspacing="1" bgcolor="#dedede">
+              <tr>
+                <td bgcolor="#f9f9f9"><img src="images/member_step1_text1.gif" width="46" height="12" /><br />
+                  <br />
+                  <div id="member_agreement" style="width:568px;height:200px;overflow:auto;border:solid 1px #e0e0e0;">{ agreementform }</div></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="0" cellpadding="10" cellspacing="1" bgcolor="#dedede">
+              <tr>
+                <td bgcolor="#f9f9f9"><img src="images/member_step1_text2.gif" width="85" height="12" /><br />
+                  <br />
+                  <div id="member_agreement" style="width:568px;height:200px;overflow:auto;border:solid 1px #e0e0e0;">{ policyform }</div></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="30" align="center"><span class="style4">&gt; 웹사이트 이용약관 및 개인정보취급방침에 동의합니다.</span></td>
+        </tr>
+        <tr>
+          <td height="30" align="center"><input type="radio" name="agree_ok" id="agree_ok01" value="1" checked="checked" />
+            <span class="style4">예, 동의합니다.</span>
+            <input type="radio" name="agree_ok" id="agree_ok02" value="0" />
+            <span class="style4">아니오, 동의하지 않습니다.</span></td>
+        </tr>
+        <tr>
+          <td height="50" align="center"><img src="../mypage/images/btn_confirm.gif" border="0" style="cursor:pointer;" onclick="OnAgreeCheck();" /> <img src="../mypage/images/btn_cancel.gif" border="0" style="cursor:pointer;" onclick="window.close();" /></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#eaeaea" align="right" style="padding-right:10px;"><a href="javascript:window.close();"><img src="../images/common/btn_close.gif" border="0"/></a></td>
+  </tr>
+</table-->
+
+<script type="text/javascript">
+<!--
+function OnAgreeCheck()
+{
+	if (jq('#agree_ok01').attr("checked")) {
+		top.location.href = "/frame?fr=memjoin2";
+	} else {
+		alert("웹사이트 이용약관 및 개인정보 취급방침에 동의하셔야 회원가입이 가능합니다.");
+		return false;
+	}
+}
+//-->
+</script>
+</body>
+</html>
