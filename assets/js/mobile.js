@@ -32,9 +32,9 @@ function extractHtmlFromDesktopPage()  {
 
       // Pass on the URL's of the pages within the website.
       urls_Array = [
-        'index_faculty.htm', // index = 0
-        'park_sooyoung.htm', 
-        'kim_hyerin.htm', 
+        'http://daechi.leadersacademy.com/about/about6', // index = 0
+        'http://daechi.leadersacademy.com/about/about6?mode=view&bbs_id=about6&bbs_seq=487&page=1', 
+        'http://daechi.leadersacademy.com/about/about6?mode=view&bbs_id=about6&bbs_seq=486&page=1', 
         'lee_hanyo.htm', 
         'park_sungryul.htm', 
         'abhisheka_dubey.htm', // index = 5 
