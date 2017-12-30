@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>대치 리더스아카데미</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="http://daechi.leadersacademy.com/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://daechi.leadersacademy.com/css/jquery.ui.css">
+<link rel="stylesheet" type="text/css" href="http://daechi.leadersacademy.com/css/jquery.datepick.css">
+<!-- Source library for jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://daechi.leadersacademy.com/js/validate.js"></script>
+<script type="text/javascript" src="http://daechi.leadersacademy.com/js/common.js"></script>
+<link href="http://daechi.leadersacademy.com/skin/skin020/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="http://daechi.leadersacademy.com/skin/skin020/css/common.js"></script>
+
+<!-- JavaScript script which handles general layout for 'index.htm'. -->
+<script src="/la/assets/js/mobile.js"></script>
+</head>
+
+<body style="opacity: 0;" onload="extractHtmlFromDesktopPage(); return true;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><table width="960" border="0" cellspacing="0" cellpadding="0">
+    <tr height="77">
+        <td width="250" align="left"><a href="/"><img src="/skin/skin020/topmenu/toplogo.png" border="0" alt="로고" ></a></td>
+        <td width="710" valign="top">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr height="20">
+                    <td width="100%" align="right" style="padding-top:5px">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                        <!-- GNB -->
+                            <tr>
+                                <td><a href="/"><img src="/skin/skin020/topmenu/topMn_home.png" alt="home" border="0"></a></td>
+                                <td><a href="/member/login"><img src="/skin/skin020/topmenu/topMn_login.png" alt="login" border="0"> </a></td>
+                                <td><a href="javascript:winscroll('/frame?fr=memjoin','member_info_window','635','700');"><img src="/skin/skin020/topmenu/topMn_join.png" alt="join" border="0"></a></td>
+								<td><a href="/etc/sitemap"><img src="/skin/skin020/topmenu/topMn_sitemap.png" border="0" alt="사이트맵" /></a></td>	
+                            </tr>
+                        <!--// GNB -->
+                        </table>            
+                    </td>    
+                </tr>        
+
+                <tr height="52">
+                    <td valign="bottom">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <colgroup>
+                                <col width="142px">
+                                <col width="1px">
+                                <col width="141px">
+                                <col width="1px">
+                                <col width="141px">
+                                <col width="1px">
+                                <col width="141px">
+                                <col width="1px">
+                                <col width="141px">
+                            </colgroup>
+							<tr>
+								<td align="center"><a  href="/about/about1" onmouseover="setMenu(1);"><img src="/skin/skin020/topmenu/t_menu01.png" border="0" alt="ABOUT LEADERS" onMouseOver='src="/skin/skin020/topmenu/t_menu01s.png"' onMouseOut='src="/skin/skin020/topmenu/t_menu01.png"'/></a></td>
+								<td><img src="/skin/skin020/topmenu/snb_slice.png" border="0" alt="구분라인" /></td>
+								<td align="center"><a  href="/program/program1" onmouseover="setMenu(2);"><img src="/skin/skin020/topmenu/t_menu02.png" border="0" alt="PROGRAM" onMouseOver='src="/skin/skin020/topmenu/t_menu02s.png"' onMouseOut='src="/skin/skin020/topmenu/t_menu02.png"'/></a></td>
+								<td><img src="/skin/skin020/topmenu/snb_slice.png" border="0" alt="구분라인" /></td>
+								<td align="center"><a  href="/admission/admission1" onmouseover="setMenu(3);"><img src="/skin/skin020/topmenu/t_menu03.png" border="0" alt="ADMISSION" onMouseOver='src="/skin/skin020/topmenu/t_menu03s.png"' onMouseOut='src="/skin/skin020/topmenu/t_menu03.png"'/></a></td>
+								<td><img src="/skin/skin020/topmenu/snb_slice.png" border="0" alt="구분라인" /></td>
+								<td align="center"><a  href="/mypage/index" onmouseover="setMenu(4);"><img src="/skin/skin020/topmenu/t_menu04.png" border="0" alt="MY PAGE" onMouseOver='src="/skin/skin020/topmenu/t_menu04s.png"' onMouseOut='src="/skin/skin020/topmenu/t_menu04.png"'/></a></td>
+								<td><img src="/skin/skin020/topmenu/snb_slice.png" border="0" alt="구분라인" /></td>
+								<td align="center"><a  href="/community/community1" onmouseover="setMenu(5);"><img src="/skin/skin020/topmenu/t_menu05.png" border="0" alt="COMMUNITY" onMouseOver='src="/skin/skin020/topmenu/t_menu05s.png"' onMouseOut='src="/skin/skin020/topmenu/t_menu05.png"'/></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr>
+					<td style="position:relative;" align="left">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="position:absolute;z-index:10000;">
+							<tr>
+								<td>
+									<!-- 01.ABOUT LEADERS 서브 -->
+									<span class="menu_sub sub_1"><!--
+										--><img src="/skin/skin020/topmenu/smL.png"><!--
+										--><a href="/about/about1"><img src="/skin/skin020/topmenu/sm01-01.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png" style="width:11px;height:31px"><!--
+										--><a href="/about/about6" ><img src="/skin/skin020/topmenu/sm01-06.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png" style="width:11px;height:31px"><!--
+										--><a href="/about/about2" ><img src="/skin/skin020/topmenu/sm01-02.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png" style="width:11px;height:31px"><!--
+										 --><a href="/about/about3" ><img src="/skin/skin020/topmenu/sm01-03.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png" style="width:11px;height:31px"><!--
+										 --><a href="/about/about4" ><img src="/skin/skin020/topmenu/sm01-04.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png" style="width:11px;height:31px"><!--
+										 --><a href="/about/about5" ><img src="/skin/skin020/topmenu/sm01-05.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smR.png">
+									</span>
+									<!--// 01.ABOUT LEADERS 서브 -->
+
+									<!-- 02.PROGRAM 서브 -->
+									<span class="menu_sub sub_2"><!--
+										--><img src="/skin/skin020/topmenu/smL.png"><!--
+										--><a href="/program/program1"><img src="/skin/skin020/topmenu/sm02-01.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><a href="/program/program2" ><img src="/skin/skin020/topmenu/sm02-02.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><a href="/program/program3" ><img src="/skin/skin020/topmenu/sm02-03.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										 --><a href="/program/program4" ><img src="/skin/skin020/topmenu/sm02-05.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smR.png">
+									</span>
+									<!--// 02.PROGRAM 서브 -->
+
+									<!-- 03.ADMISSION 서브 -->
+									<span class="menu_sub sub_3"><!--
+										--><img src="/skin/skin020/topmenu/smL.png"><!--
+										--><a href="/admission/admission1"><img src="/skin/skin020/topmenu/sm03-01.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><!--a href="/admission/admission2"><img src="/skin/skin020/topmenu/sm03-02.png" /></a--><!--
+										--><!--img src="/skin/skin020/topmenu/smBar.png"--><!--
+										--><a href="/admission/admission3" ><img src="/skin/skin020/topmenu/sm03-03.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><a href="/admission/admission4" ><img src="/skin/skin020/topmenu/sm03-04.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smR.png">
+									</span>
+									<!--// 03.ADMISSION 서브 -->
+
+									<!-- 04.MY PAGE 서브 -->
+									<span class="menu_sub sub_4"><!--
+										--><img src="/skin/skin020/topmenu/smL.png"><!--
+										--><a href="/mypage/index"><img src="/skin/skin020/topmenu/sm04-01.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><a href="/mypage/attendance" ><img src="/skin/skin020/topmenu/sm04-02.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><!--a href="/mypage/grade_day" ><img src="/skin/skin020/topmenu/sm04-03.png" /></a--><!--
+										--><!--img src="/skin/skin020/topmenu/smBar.png"--><!--
+										 --><a href="/mypage/faq" ><img src="/skin/skin020/topmenu/sm04-04.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smR.png">
+									</span>
+									<!--// 04.MY PAGE 서브 -->
+
+									<!-- 05.COMMUNITY 서브 -->
+									<span class="menu_sub sub_5"><!--
+										--><img src="/skin/skin020/topmenu/smL.png"><!--
+										--><a href="/community/community1"><img src="/skin/skin020/topmenu/sm05-01.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><a href="/community/community2" ><img src="/skin/skin020/topmenu/sm05-02.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										--><a href="/community/community3" ><img src="/skin/skin020/topmenu/sm05-03.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smBar.png"><!--
+										 --><a href="/community/community4" ><img src="/skin/skin020/topmenu/sm05-04.png" /></a><!--
+										--><img src="/skin/skin020/topmenu/smR.png">
+									</span>
+									<!--// 05.COMMUNITY 서브 -->
+
+
+									<!-- 커뮤니티 서브 -->
+									<!--span class="menu_sub sub_6">
+										<a href="/commu/edunews"><img src="/skin/skin020/topmenu/sm06-01.png" /></a>
+										<a href="/commu/notice" ><img src="/skin/skin020/topmenu/sm06-02.png" /></a>
+										<a href="/commu/board" ><img src="/skin/skin020/topmenu/sm06-03.png" /></a>
+										<a href="/commu/gallery" ><img src="/skin/skin020/topmenu/sm06-04.png" /></a>
+									</span-->
+									<!--// 커뮤니티 서브 -->
+
+									<!-- 마이페이지 서브 -->
+									<!--span class="menu_sub sub_7">
+										<a href="/mypage/index" ><img src="/skin/skin020/topmenu/sm07-01.png" /></a>
+										<a href="/mypage/attendance"><img src="/skin/skin020/topmenu/sm07-02.png" /></a>
+										<a href="/mypage/grade_day"><img src="/skin/skin020/topmenu/sm07-03.png" /></a>
+									</span-->
+									<!--// 마이페이지 서브 -->
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					
+<table width="187" border="0" cellspacing="0" cellpadding="0" style="padding-right:21px">
+	<tr>
+		<td><img src="/skin/skin020/program/images/left_title.png"></td>
+	</tr>
+	<tr>
+		<td style="background:url('/skin/skin020/images/common/smenuBg.png') repeat-y;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="30"><a href="/program/program1"><img src="/skin/skin020/program/images/smenu01.png" onMouseOver="this.src='/skin/skin020/program/images/smenu01s.png'" onMouseOut="this.src='/skin/skin020/program/images/smenu01.png'" alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/program/program2"><img src="/skin/skin020/program/images/smenu02.png" onMouseOver="this.src='/skin/skin020/program/images/smenu02s.png'" onMouseOut="this.src='/skin/skin020/program/images/smenu02.png'" alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/program/program3"><img src="/skin/skin020/program/images/smenu03s.png"  alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/program/program4"><img src="/skin/skin020/program/images/smenu05.png" onMouseOver="this.src='/skin/skin020/program/images/smenu05s.png'" onMouseOut="this.src='/skin/skin020/program/images/smenu05.png'" alt=""></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="/skin/skin020/images/common/smenuBottom.png"></td>
+	</tr>
+</table>
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="/skin/skin020/program/images/title2_3.png" alt="특강(INTENSIVE)"></td>
+								<td width="352" class="category"><img src="/skin/skin020/images/common/ico_home.png" > HOME >  프로그램  >  <strong>특강 (INTENSIVE)</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="/skin/skin020/images/sub_main2.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="/skin/skin020/images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('/skin/skin020/images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+<!-- Contents :Start -->
+						<table width="680" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><img src="/skin/skin020/program/images/cont02-03Top.png" alt="특강(INTENSIVE)"></td>
+							</tr>
+							<tr>
+								<td valign="top" height="500"  align="left">
+<!--게시판  모듈 시작-->
+<p id="module_bbs" class='gmodule'><script type="text/javascript" src="/js/check.js"></script>
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="/skin/_modules/board/default/board.css">
+<script type="text/javascript" src="/js/validate.js"></script>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<!-- 게시글 제목출력 -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bbs_tbl_title">
+				<tr>
+					<td>
+						2018 겨울방학 특강일정
+					</td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="100" height="28" align="center"  class="bbs_small_b">작성자</td>
+					<td width="21" align="center"><img src="/skin/_modules/board/default/img/spot_gray.gif" width="1" height="10"></td>
+					<td class="bbs_small_gray">
+						관리자
+						<!-- 이메일 출력시 -->
+ (<a href="mailto:simkyounghee@gmail.com">simkyounghee@gmail.com</a>)					</td>
+
+					<!-- 조회수 출력시 -->
+					<td width="100" align="center"  class="bbs_small_b">조회수</td>
+					<td width="21" align="center"><img src="/skin/_modules/board/default/img/spot_gray.gif" width="1" height="10"></td>
+					<td width="100" class="bbs_small_gray">14</td>
+
+					<!-- 작성일 출력시 -->
+					<td width="100" align="center" class="bbs_small_b">작성일</td>
+					<td width="21" align="center"><img src="/skin/_modules/board/default/img/spot_gray.gif" width="1" height="10"></td>
+					<td width="120" class="bbs_small_gray">2017-11-21 16:40:12</td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0" height="1"></td>
+	</tr>
+	<style>
+	.nodrag{
+		-ms-user-select: none; 
+		-moz-user-select: -moz-none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;	
+	}
+	</style>
+	<tr>
+		<td>
+			<!-- 본문 출력 -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td style="word-wrap:break-word;word-break:break-all;padding:10px;" class="nodrag">
+						<IMG src="http://daechi.leadersacademy.com/data/editor/1711/2018%20겨울방학%20특강일정2.jpg" OnClick="popupView(this.src)" style="cursor:hand;" width=628 align=absMiddle height=945><BR><script>function popupView(img_view) {var x = x + 20 ;var y = y + 30 ;var htmlz = "<html><head><title>.......</title><style>body{margin:0;cursor:hand;}</style></head><body scroll=auto onload='width1=document.all.Timage.width;if(width1>1024)width1=1024;height1=document.all.Timage.height;if(height1>768)height1=768;top.window.resizeTo(width1+30,height1+54);' onclick='top.window.close();'><img src='"+img_view+"'  title='..... .....' name='Timage' id='Timage'></body></html>";imagez = window.open('', "image", "width="+ 100 +", height="+ 100 +", top=0,left=0,scrollbars=auto,resizable=1,toolbar=0,menubar=0,location=0,directories=0,status=1");imagez.document.open();imagez.document.write(htmlz);imagez.document.close();}</script>
+
+						<!-- 아이피 출력시 -->
+					</td>
+				</tr>
+			</table>
+
+			<!-- 첨부파일 출력 -->
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0" height="1"></td>
+	</tr>
+	<!--추가입력항목이 있는경우-->
+	<tr>
+		<td>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" class="bbs_tbl_form">
+				<colgroup>
+					<col width="130px"/>
+					<col width=""/>
+				</colgroup>
+				<tbody>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+<br>
+
+<!-- 댓글 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_comment">
+	<tr>
+		<td style="padding:10px">
+		<a onClick="setCommentDisplay()" style="cursor:pointer"><img src="/skin/img/icon_open.gif" class="img" id='img_comment'> 댓글 <span class="count">0</span></a>
+		</td>
+	</tr>
+	<tr>
+		<td><div id="comment_area" class="comment_area" style="display:none"><!-- 코멘트 리스트 -->
+
+	<!--// 코멘트 리스트 -->
+
+	<!-- 코멘트 작성창 위치 -->
+	
+	<div id="area_write"></div>
+	<!--// 코멘트 작성창 위치 -->
+
+	<!-- 코멘트 작성권한이 있는 경우에만 출력 -->
+	<!-- 코멘트 작성 템플릿 -->
+	<div id="tpl_write">
+		<form name="commentForm" id="commentForm" action="/lib/board/process.php">	
+		<input type="hidden" name="cmd" value="comment"/>
+		<input type="hidden" name="mode" value="write"/>
+		<input type="hidden" name="bbs_id" value="intensive9799"/>
+		<input type="hidden" name="bbs_seq" value="498"/>
+		<input type="hidden" name="cseq">
+		<table width="100%" border="0" cellspacing="5" cellpadding="0" align="center" class="form">
+			<!-- 회원이 아닌경우 이름과 비밀번호 입력폼 출력 -->
+			<tr>
+				<td colspan="2">
+					<b>이름</b> <input type="text" name="cname" class="input" style="width:70px" blankText="이름을 입력하세요.">
+					<b>비밀번호</b> <input type="password" name="cpasswd"  class="input" style="width:70px" blankText="비밀번호를 입력하세요.">
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" style="padding-right:15px"><textarea name="comment" style="height:35px;width:100%" blankText="내용을 입력하세요."></textarea></td>
+				<td width="80"><img src="/skin/img/reply.gif" align="absmiddle" onclick="exeComment('save','');" class="hand"></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+	<!--// 코멘트 템플릿 -->
+
+
+	<!-- 코멘트 삭제 확인 레이어 -->
+	<div id="tpl_delete" style="display:none;" style="font-size:12px;">
+		<div class="line"></div>
+		<div style="padding:10px;">			
+			정말 삭제하시겠습니까?&nnbsp;<img src="/skin/img/pw_ok.gif" title="확인" onclick="exeComment('delete','');" class="hand" align="absmiddle">
+			<div id="tpl_delete_input" style="padding-top:5px">비밀번호&nbsp;<input type="password" name="delete_passwd" class="m_input" blankText="비밀번호를 입력하세요."></div>
+		</div>		
+	</div>
+	<!--// 코멘트 삭제 확인 레이어 -->
+	
+
+<script type="text/javascript">
+var _NOW_SEQ;
+function setComment(mode,seq,cur) {
+	if (mode == 'delete') {
+		setDelete(seq,cur);
+	}
+	else if (mode == 'modify') {
+		setModify(seq);
+	}
+	else if (mode == 'cancel') {
+		setCancel(seq);
+	}
+}
+
+function exeComment(mode,seq) {
+	if (mode == 'save') {
+		exeSave();
+	}
+	else if (mode == 'delete') {
+		exeDelete(seq);
+	}
+}
+
+function setCommentDisplay() {
+	if (jq('.comment_area').css('display') == 'none') {
+		jq('.comment_area').show();
+		jq('#img_comment').attr('src','/skin/img/icon_close.gif')		
+	}
+	else {
+		jq('.comment_area').hide();
+		jq('#img_comment').attr('src','/skin/img/icon_open.gif')
+	}
+}
+</script></div></td>
+	</tr>
+</table>
+<!--// 댓글 -->
+
+<!-- 버튼 출력 -->
+<div class="bbs_button" style="float:left;">
+        <a href="?bbs_id=intensive9799&page=1"><img src="/skin/_modules/board/default/img/btn_list.gif" alt="목록" /></a>
+</div>
+<div class="bbs_button" style="text-align:right;">
+        <a href="?bbs_id=intensive9799&bbs_seq=498&page=1&mode=confirm&act=modify"><img src="/skin/_modules/board/default/img/btn_modify.gif" title="수정"></a>
+        <!-- 답변 권한이 있는 경우에만 답변 버튼 출력 -->
+        <!-- 삭제 권한이 있는 경우에만 삭제 버튼 출력 -->
+		
+</div>
+
+
+<script type="text/javascript">
+<!--
+jq(document).ready(function() {
+	loadComment();
+});
+
+//코멘트 리스트 로드
+function loadComment() {
+	jq('#comment_area').load('/lib/board/comment.php',{bbs_id:'intensive9799',bbs_seq:'498'}, function(e) {
+		jq('#loading_container').remove();
+	});	
+}
+
+//코멘트 수정창 세팅
+function setModify(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+
+	jq('input[name=cname]').val(jq('#cname_val_'+seq).html());
+	jq('textarea[name=comment]').val(jq('#comment_val_'+seq).val());
+	jq('input[name=mode]').val('modify');
+	jq('input[name=cseq]').val(seq);
+
+	//폼출력
+	tpl_write.show();
+	tpl_delete.hide();
+	place.append(tpl_write);	
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 삭제창 세팅
+function setDelete(seq, cur) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+	if (cur==1) {
+		jq('#tpl_delete_input').hide();	
+		jq('input[name=delete_passwd]').removeAttr('blankText');
+	}
+	else {
+		jq('#tpl_delete_input').show();	
+		jq('input[name=delete_passwd]').attr('blankText','비밀번호를 입력하세요.');
+		jq('input[name=delete_passwd]').focus();
+	}
+
+	tpl_delete.show();
+	tpl_write.hide();
+	place.append(tpl_delete);		
+	jq('input[name=mode]').val('delete');
+	jq('input[name=cseq]').val(seq);
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 수정,삭제 취소
+function setCancel(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#area_write');
+	var btn = jq('#btn_cancel_'+seq);
+	place.append(tpl_write);
+	tpl_delete.hide();
+	tpl_write.show();
+	btn.hide();
+
+	//데이터 리셋
+	jq('#commentForm').resetForm();
+}
+
+
+//코멘트 저장(등록,수정)처리
+function exeSave() {
+	var frm = jq('#tpl_write [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크	
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'/lib/board/process.php',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+//코멘트삭제처리
+function exeDelete(seq) {
+	var frm = jq('#tpl_delete [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {
+			'delete_passwd':jq('input[name=delete_passwd]').val()
+		}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'/lib/board/process.php',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+
+//-->
+</script></p>
+<!--게시판  모듈 끝-->
+								</td>
+							</tr>
+							<!--tr>
+								<td id="topTitle">&nbsp;&nbsp;2013년 겨울방학 특강 안내</td>
+							</tr-->
+<!--start:신입생 디베이트 캠프 세션 1 & 2 -->
+							<!--tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 신입생 디베이트 캠프 세션 1 & 2 </b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt">
+								★ <b>Session 1</b> : 12/30 ~ 1/10  (월~금. 1/1제외) <br />
+								★ <b>Session 2</b> : 1/13  ~ 1/24  (월~금) 
+								<td>
+							</tr>
+
+							<tr>
+								<td align="left" style="padding:10px 0  0 50px; line-height:16pt">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro02">
+										<colgroup>
+											<col width="10%">
+											<col width="90%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>시&nbsp;&nbsp;&nbsp;&nbsp;간</th>
+												<td>9:00-4:00 (중식 12:00-1:00)</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>비&nbsp;&nbsp;&nbsp;&nbsp;용</th>
+												<td>120만원</td>
+											</tr>
+										</tbody>
+									</table>								
+								<td>
+							</tr>
+
+							<tr>
+								<td style="padding:10px 32px 5px 50px">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro01">
+										<colgroup>
+											<col width="7%">
+											<col width="7%">
+											<col width="43%">
+											<col width="43%">
+										</colgroup>
+										
+										<tbody>
+											<tr>
+												<th colspan="2">대상</th>
+												<td><b>초등 5,6학년</b></td>
+												<td><b>중등 1,2학년</b></td>
+											</tr>
+											<tr>
+												<th rowspan="2">내용</th>
+												<th>오전</th>
+												<td>초등: 정치 /사회 관련 주제<br />(주3회 토론, 주2회 Civics)</td>
+												<td>중등: 경제관련 주제<br />(주3회 토론, 주2회 Freakonomics)</td>
+											</tr>
+											<tr>
+												<th>오후</th>
+												<td>실전대비</td>
+												<td>실전대비</td>
+											</tr>
+											<tr>
+												<th colspan="2">교재</th>
+												<td>리더스 교재 및 Civics</td>
+												<td>리더스 교재 및 Freakonomics</td>
+											</tr>
+											<tr>
+												<th colspan="2">Extra</th>
+												<td colspan="2">MUN (G20), Speech, Model Congress 외</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:right;padding-right:40px;font-size:8pt;font-weight:bold;color:#e76200">* 오전수업만 등록도 가능</td>
+							</tr-->
+<!--end:신입생 디베이트 캠프 세션 1 & 2 -->
+
+<!--start:실전대회준비 특강 세션 1 & 2  -->
+							<!--tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 실전대회준비 특강 세션 1 & 2 </b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt">
+								★ <b>Session 1 (초4,5,6 & 중1,2)</b> : 12/30 ~ 1/10  (월~금. 1/1제외) <br />
+								★ <b>Session 2 (예비중1, 예비고1)</b> : 1/13  ~ 1/24  (월~금)
+								<td>
+							</tr>
+
+							<tr>
+								<td align="left" style="padding:10px 0  0 50px; line-height:16pt">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro02">
+										<colgroup>
+											<col width="10%">
+											<col width="90%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>시&nbsp;&nbsp;&nbsp;&nbsp;간</th>
+												<td>1:00-4:00</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>비&nbsp;&nbsp;&nbsp;&nbsp;용</th>
+												<td>60만원</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>수업내용</th>
+												<td>Debate, MUN, Speech 실전대회 토픽 마스터</td>
+											</tr>
+
+										</tbody>
+									</table>								
+								<td>
+							</tr>
+
+							<tr>
+								<td align="left" style="padding:15px 0  0 45px; line-height:18pt">
+								ㆍ각 토론 강국의 전문 디베이트 원어민 강사 지도<br />
+								ㆍ정규토론수업을 통한 비문학 분야 지식 습득 <br />
+								ㆍ체계적인 관리 및 피드백을 통한 개별 능력 향상 <br />
+								ㆍMUN (모의유엔), Speech, Mock Trial (모의법정) 등 Special Unit 진행<br />
+								<td>
+							</tr-->
+
+<!--end:실전대회준비 특강 세션 1 & 2  -->
+
+						</table>
+
+
+
+<!--
+						<table width="680" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="/skin/skin020/program/images/cont02-03Top.png" alt="기타강좌(Plus 강좌)"></td>
+							</tr>
+							<tr>
+								<td id="topTitle">&nbsp;GLOBAL DEBATE CAMP 특강</td>
+							</tr>
+							<tr>
+								<td align="left" style="padding-left:38px"><b>국내외 영어토론 전문으로 명성있는 리더스아카데미의 <span id="txtRed">글로벌 스피치</span> & <span id="txtRed">디베이트 캠프</span>!!!</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 기간</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt">
+								<b>Session A</b> : 3주 과정 (7.1 ~ 7.19)<br />
+								<b>Session B</b> : 3주 과정 (7.29 ~ 8.16)
+								<td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> Session A & B 내용</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt">
+								ㆍForensic의 모든 형태를 배움 (Debate, Speaking, Impromptu, Interpretation)<br />
+								ㆍ국내, 국제대회 다연승 코치 직접지도<br />
+								ㆍ국내, 국제대회 관련 토픽으로 수업진행<br />
+								ㆍ개인 디베이트 코칭, Current Issue 수업 병행 진행
+								<td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 등록안내</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro02">
+										<colgroup>
+											<col width="10%">
+											<col width="90%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>대&nbsp;&nbsp;&nbsp;&nbsp;상</th>
+												<td>국내 외국인학교, 유학생-현재 5th & 6th, 한국학교-초5, 초6</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>시&nbsp;&nbsp;&nbsp;&nbsp;간</th>
+												<td>월, 수, 금  1:00 - 3:30 pm (3주)</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>등록기간</th>
+												<td>세션A (6.1~6.15) 세션B (7.1~7.15)</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>정&nbsp;&nbsp;&nbsp;&nbsp;원</th>
+												<td>10명(클래스당)</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>접&nbsp;&nbsp;&nbsp;&nbsp;수</th>
+												<td>테스트 후 점수에 따라 등록 결정</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th>수강료</th>
+												<td>교재비 포함 550,000원</td>
+											</tr>
+										</tbody>
+									</table>								
+								<td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:10px 0  0 45px; line-height:16pt;font-weight:bold">
+								ㆍ계좌번호 : 하나은행 853-910007-61704 예금주: ㈜글로벌리더스카운슬<br />
+								ㆍ문의전화 : 02) 562-9799(대표)
+								<td>
+							</tr>
+
+							<tr>
+								<td height="70"></td>
+							</tr>
+							<tr>
+								<td id="topTitle">&nbsp;LEADERS-IAN 프로그램 특강</td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:0 38px"><b>체계적인 강의 커리큘럼으로 저명한 <span id="txtBlue">이안어학원</span>과 국내외 영어토론 전문으로 명망 있는
+								<span id="txtBlue">리더스아카데미</span>의 연계된 프로그램으로 <span id="txtRed">input</span>(읽기, 듣기)과 <span id="txtRed">output</span>(쓰기, 말하기)의
+								균형 있는 영어학습을 통해 실력 향상을 극대화 한다.</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 프로그램 특강</b></td>
+							</tr>
+
+							<tr>
+								<td style="padding:0 32px 10px 38px">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro01">
+										<colgroup>
+											<col width="19%">
+											<col width="27%">
+											<col width="27%">
+											<col width="27%">
+										</colgroup>
+										
+										<tbody>
+											<tr height="40">
+												<th>&nbsp;</th>
+												<th colspan="2">이안어학원</th>
+												<th>리더스 아카데미</th>
+											</tr>
+											<tr>
+												<th>과목</th>
+												<th>Literature & Reading Skills<br />[월/수]</th>
+												<th>Writing<br />[금]</th>
+												<th>Debate & Mock Trial<br />[화/목]</th>
+											</tr>
+											<tr>
+												<th>강사</th>
+												<th>이안 Senior 강사<br />Alex Lewis</th>
+												<th>이안 삼성원장<br />Won Lee</th>
+												<th>리더스 수석코치<br />Roger Hatridge & Andrew Hume</th>
+											</tr>
+											<tr height="240">
+												<th>구성</th>
+												<td colspan="3"><img src="/skin/skin020/program/images/cont02-03-2-3.png"></td>
+											</tr>
+											<tr>
+												<th>수업편성</th>
+												<td colspan="3">주 5일[월~금 매일 3시간]<br />10:00 AM ~ 1:00 PM<br />16명 내외 [Debate class-최대인원 8명]</td>
+											</tr>
+											<tr>
+												<th>개강일정</th>
+												<td colspan="3" style="line-height:13pt">Session 1 개강: 6/17[월] ~ 7/5[금] 3주<br />Session 2 개강: 7/8[월] ~ 7/26[금] 3주<br />Session 3 개강: 7/29[월] ~ 8/17[금] 3주<br /><img src="/skin/skin020/program/images/cont02-03-2-4.png"></td>
+											</tr>
+											<tr>
+												<th>대상</th>
+												<td colspan="3">국내중학생 [1~2학년] / 국제중학생 [7~8학년] / 보딩스쿨재학생(Returnee)</td>
+											</tr>
+											<tr>
+												<th>수강료</th>
+												<td colspan="3">Two Sessions 6주: 170만원 / One Session 3주: 85만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td style="color:#db1a00;padding:4px 0;">★ <b>대강안내</b>: 개강 Session 1, 첫 주[화/목], 셋째 주[금]는 대강으로 진행되오니, 참고 바랍니다.</td>
+							</tr>
+
+							<tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 수강 접수 및 등록</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro02">
+										<colgroup>
+											<col width="25%">
+											<col width="75%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th id="left">접수</th>
+												<td>2013년 5월 7일 (화)부터 가능하며, <span id="line">선착순 마감으로</span> 진행됩니다.</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th id="left">수강생등록 및 강의진행</th>
+												<td><span id="txtBlue">이안[대치]어학원</span>과 <span id="txtBlue">리더스 아카데미</span>에서 <span id="txtRed">각각 진행</span> 됩니다.</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th id="left">신입생</th>
+												<td id="line">리더스 아카데미에서 진행하는 신입생과정 후 배치 가능</td>
+											</tr>
+											<tr>
+												<td colspan="2" height="1"></td>
+											</tr>
+											<tr>
+												<th id="left">재원생</th>
+												<td><span id="line">현재 수강하고 있는 레벨에 근거 배치</span> 됩니다.<br /><span id="txtBlue">(단, 레벨 및 수강 대상 충족 시 수강 가능)</span></td>
+											</tr>
+										</tbody>
+									</table>								
+								<td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:10px 0  0 45px; line-height:16pt;font-weight:bold">
+								ㆍ전화문의 및 방문접수 : 이안어학원: 568-4517 ,  리더스아카데미: 562-9799<td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:40px 0  0 32px"><img src="/skin/skin020/images/common/bullet0.png" align="absmiddle"><b> 수강 환불 규정 (IAN / 리더스 Special Summer Program)</b></td>
+							</tr>
+							<tr>
+								<td align="left" style="padding:5px 0  0 50px; line-height:16pt;font-weight:bold">
+								ㆍ6주 수강 등록 후, <span id="txtRed">환불규정은 3주 기준</span>으로 적용됩니다.<br />
+									단, 다음 session에 대한 수강취소를 원하는 경우, 개강일 <span id="BlueLine">최소 1주전까지</span> 의사를 밝혀 주셔야 합니다.<br />
+								<span id="smallTxt">[교육청 수강료 환불 기준-학원의 설립, 운영 및 과외교습에 관한 법률시행령 제 18조에 근거함]</span>
+								<td>
+							</tr>
+
+
+							<tr>
+								<td style="padding:30px 32px 3px 38px">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%">
+										<tr>
+											<td width="300"><b>이안어학원[3주 기준]</b></td>
+											<td width="10"></td>
+											<td width="300"><b>리더스아카데미[3주 기준]</b></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:0 32px 50px 38px">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%">
+										<tr>
+											<td width="300">
+												<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro01">
+													<colgroup>
+														<col width="30%">
+														<col width="70%">
+													</colgroup>
+
+													<tbody>
+														<tr>
+															<th colspan="2" style="height:30px;border-bottom:1px solid #8c94d7;font-weight:bold">9회수업&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 425,000</th>
+														</tr>
+														<tr>
+															<td>1회 수업 후</td>
+															<td>284,000</td>
+														</tr>
+														<tr>
+															<td>2회 수업 후</td>
+															<td>284,000</td>
+														</tr>
+														<tr>
+															<td>3회 수업 후</td>
+															<td>284,000</td>
+														</tr>
+														<tr>
+															<td>4회 수업 후</td>
+															<td>212,000</td>
+														</tr>
+														<tr>
+															<td bgcolor="#eeeeee">5회 수업 후</td>
+															<td bgcolor="#eeeeee">환불 없음</td>
+														</tr>
+													</tbody>
+												</table>											
+											</td>
+											<td width="10"></td>
+											<td width="300">
+												<table cellpadding="0" cellspacing="0" border="0" width="100%" class="pro01">
+													<colgroup>
+														<col width="30%">
+														<col width="70%">
+													</colgroup>
+
+													<tbody>
+														<tr>
+															<th colspan="2" style="height:30px;border-bottom:1px solid #8c94d7;font-weight:bold">6회수업&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 425,000</th>
+														</tr>
+														<tr>
+															<td>1회 수업 후</td>
+															<td>284,000</td>
+														</tr>
+														<tr>
+															<td>2회 수업 후</td>
+															<td>284,000</td>
+														</tr>
+														<tr>
+															<td>3회 수업 후</td>
+															<td>202,000</td>
+														</tr>
+														<tr>
+															<td bgcolor="#eeeeee">4회 수업 후</td>
+															<td bgcolor="#eeeeee">환불 없음</td>
+														</tr>
+														<tr>
+															<td bgcolor="#eeeeee">5회 수업 후</td>
+															<td bgcolor="#eeeeee">환불 없음</td>
+														</tr>
+													</tbody>
+												</table>											
+											
+											</td>
+										</tr>
+									</table>
+
+
+
+
+
+								</td>
+							</tr>
+						</table>
+-->
+<!-- Contents :End -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="/skin/skin020/images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding:5px 0 5px 0;background-color:#d8ccc3;" align="center">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" width="971">
+				<tr>
+					<td align="right">
+						<select onchange="window.open(this.value);" name="select" style="width:440px;padding:3px;background:#fffbf9;border:1px solid #beb0a5">
+							<option selected>********** 각 대회 링크 **********</option>
+							<optgroup label = "Debate 국내대회">
+								<option value="http://www.koreansdc.com/" >NSDC Jr.</b>&nbsp;&nbsp;&nbsp;- National Schools Debating Championship Jr.</option>
+								<option value="http://www.koreansdc.com/" ><b>NSDC Jr.</b>&nbsp;&nbsp;&nbsp;- National Schools Debating Championship Sr.</option>
+								<option value="http://www.minjok.hs.kr/" ><b>KMLA</b>&nbsp;&nbsp;&nbsp;- 민족사관고등학교 영어토론대회</option>
+							</optgroup>
+							<optgroup label = "Debate 국제대회">
+								<option value="#" ><b>WSDC</b>&nbsp;&nbsp;&nbsp;- World Schools Debating Championships</option>
+								<option value="http://www.nationalforensicleague.org/" ><b>NFL</b>&nbsp;&nbsp;&nbsp;- National Forensic League</option>
+								<option value="http://www.esdc2012.org/" ><b>ESDC</b>&nbsp;&nbsp;&nbsp;- Eurasean Schools Debating Championship(2012년도 웹사이트)</option>
+								<option value="http://idebate.org/events/2013-idea-global-youth-forum/" ><b>Youth Forum (IDEA)</b>&nbsp;&nbsp;&nbsp;(2013년도 웹사이트)</option>
+							</optgroup>
+							<optgroup label = "MUN/Mock Trial">
+								<option value="http://edu.chosun.com/leadkorea/program/program.jsp?lkp_code=100002" ><b>AYP 모의국회</b>&nbsp;&nbsp;&nbsp;- Asian Youth Parliamentary 모의 국회</option>
+								<option value="http://www.facebook.com/pages/World-Youth-Model-Congress-WYMC/217522604944174" ><b>WYMC 모의국회</b>&nbsp;&nbsp;&nbsp;- World Youth Model Congress</option>
+								<option value="http://summit.ktet.org/" ><b>G20 YMS</b>&nbsp;&nbsp;&nbsp;- G20 Youth Model Summit</option>
+								<option value="http://www.unausa.org/global-classrooms-model-un" ><b>GC MUN</b>&nbsp;&nbsp;&nbsp;- Global Classroom Model UN</option>
+								<option value="http://edu.chosun.com/leadkorea/program/program.jsp?lkp_code=100005" ><b>MUNOS</b>&nbsp;&nbsp;&nbsp;- Model United Nations of Seoul</option>
+								<option value="http://cafe.naver.com/kmta2009/" ><b>KMTA</b>&nbsp;&nbsp;&nbsp;- Korea Mock Trial</option>
+							</optgroup>
+							<optgroup label = "Speech">
+								<option value="#" ><b>GLEC</b>&nbsp;&nbsp;&nbsp;- Global Leadership English Challenge</option>
+								<option value="http://www.esukorea.org/" ><b>ESU</b>&nbsp;&nbsp;&nbsp;- The English Speaking Union Korea Public Speaking Competition</option>
+							</optgroup>
+						</select>		
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+		
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#e1dbd7">
+	<!--tr>
+		<td height="1" bgcolor="#d3d3d3"></td>
+	</tr-->
+	<tr>
+		<td height="15"></td>
+	</tr>
+	<tr>
+		<td align="center">
+			<table width="971" border="0" cellspacing="0" cellpadding="0">
+				<tr height="71">
+					<td width="201" align="left"><img src="/skin/skin020/images/common/toplogo_bottom.png" border="0" alt="로고"></td>
+					<td width="34" align="left"><img src="/skin/skin020/images/common/bottom_bar.png"></td>
+					<td width="736" align="left">
+						<table width="736" border="0" cellspacing="0" cellpadding="0">
+							<tr height="20" valign="top">
+								<td><a href="/about/about1"><img src="/skin/skin020/images/common/bt01.png" alt="학원소개"></a><a href="/member/agreement"><img src="/skin/skin020/images/common/bt02.png" alt="이용약관"></a><a href="/member/privacy"><img src="/skin/skin020/images/common/bt03.png" alt="개인정보취급방침"></a><a href="/member/noemail"><img src="/skin/skin020/images/common/bt04.png" alt="이메일무단수집거부"></a><a href="/about/about5"><img src="/skin/skin020/images/common/bt05.png" alt="찾아오시는길"></a><a href="/etc/sitemap"><img src="/skin/skin020/images/common/bt06.png" alt="사이트맵"></a><span style="padding-left:150px;"></span><!--a href="http://yozm.daum.net" target="_blank"--><img src="/skin/skin020/images/common/icon_yozum.png" alt="요즘 아이콘"></a><span style="padding-left:10px;"></span><a href="https://twitter.com/LeadersHonors" target="_blank"><img src="/skin/skin020/images/common/icon_twitter.png" alt="트위터 아이콘"></a><span style="padding-left:10px;"></span><a href="http://www.facebook.com/joinleadersacademy" target="_blank"><img src="/skin/skin020/images/common/icon_faceBook.png" alt="페이스북 아이콘"></a><!--a href="http://me2day.net" target="_blank"--><span style="padding-left:10px;"></span><img src="/skin/skin020/images/common/icon_me2.png" alt="미투데이 아이콘"></a></td>
+							</tr>
+							<tr>
+								<td><img src="/skin/skin020/images/common/bottom_address20161229.png"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="15"></td>
+	</tr>
+	<!--tr>
+		<td height="1" bgcolor="#d3d3d3"></td>
+	</tr-->
+
+
+</table>
+
+<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> 
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"> </script> 
+<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_1ff5b9e76ac3";
+if (!_nasa) var _nasa={};
+wcs.inflow();
+wcs_do(_nasa);
+</script></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+
+
+<!-- 하단 공통 footer 생성영역 -->
+
+<script type="text/javascript">
+var _skin_ = "skin020";
+var _page_ = "skin020/program/program3.htm";
+</script>
+
+<iframe style="display:none;width:0px;height:0px;" name="hiddenFrame" id="hiddenFrame"></iframe>
+<div id="err_msg" style="display:none;"></div>  <!--각종처리를 위한 히든 템플릿변수입니다. 삭제하시면 절대! 안됩니다.-->
+  <!--업데이트를 위한 히든 템플릿변수입니다. 삭제하시면 절대! 안됩니다.-->
+
+<map name="footer_map" id="footer_map">
+  <area shape="rect" coords="62,42,200,80" href="/" />
+  <area shape="rect" coords="258,9,300,29" href="/about/message" />
+  <area shape="rect" coords="323,9,400,28" href="/member/privacy" />
+  <area shape="rect" coords="424,10,463,30" href="/member/agreement" />
+  <area shape="rect" coords="484,8,570,28" href="/member/noemail" />
+  <area shape="rect" coords="659,8,717,29" href="/about/map01" />
+  <area shape="rect" coords="595,8,637,27" href="/etc/sitemap" />
+</map>
+
+<map name="footer_map2" id="footer_map2">
+  <area shape="rect" coords="40,43,178,81" href="/" />
+  <area shape="rect" coords="214,7,256,27" href="/about/message" />
+  <area shape="rect" coords="281,8,358,27" href="/member/privacy" />
+  <area shape="rect" coords="378,8,417,28" href="/member/agreement" />
+  <area shape="rect" coords="440,8,526,28" href="/member/noemail" />
+  <area shape="rect" coords="610,8,668,29" href="/about/map01" />
+  <area shape="rect" coords="546,8,588,27" href="/etc/sitemap" />
+</map>
+
+</body>
+</html>

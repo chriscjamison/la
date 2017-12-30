@@ -6,6 +6,8 @@
   }
 ); */
 
+base_path = "/skin/skin020/mobile/";
+
 function extractHtmlFromDesktopPage()  {
 
   /*  ---- ---- ---- FUNCTION OUTLINE ---- ---- ---- ----
@@ -32,9 +34,9 @@ function extractHtmlFromDesktopPage()  {
 
       // Pass on the URL's of the pages within the website.
       urls_Array = [
-        'http://daechi.leadersacademy.com/about/about6', // index = 0
-        'http://daechi.leadersacademy.com/about/about6?mode=view&bbs_id=about6&bbs_seq=487&page=1', 
-        'http://daechi.leadersacademy.com/about/about6?mode=view&bbs_id=about6&bbs_seq=486&page=1', 
+        'index_faculty.htm', // index = 0
+        'park_sooyoung.htm', 
+        'kim_hyerin.htm', 
         'lee_hanyo.htm', 
         'park_sungryul.htm', 
         'abhisheka_dubey.htm', // index = 5 
@@ -2757,64 +2759,64 @@ function extractHtmlFromDesktopPage()  {
               case 40:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-1\">\n" + 
-                                    "            <a href=\"announcements/announcement_1.htm\" title=\"학원친구 앱 사용법\">학원친구 앱 사용법</a><span> - 2017-11-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_1.htm\" title=\"학원친구 앱 사용법\">학원친구 앱 사용법</a><span> - 2017-11-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-2\">\n" + 
-                                    "            <a href=\"announcements/announcement_2.htm\" title=\"2017-18 겨울방학 특강 안내\">2017-18 겨울방학 특강 안내</a><span> - 2017-10-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_2.htm\" title=\"2017-18 겨울방학 특강 안내\">2017-18 겨울방학 특강 안내</a><span> - 2017-10-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-3\">\n" + 
-                                    "            <a href=\"announcements/announcement_3.htm\" title=\"2017년 리더스아카데미 4분기 설명회\">2017년 리더스아카데미 4분기 설명회</a><span> - 2017-09-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_3.htm\" title=\"2017년 리더스아카데미 4분기 설명회\">2017년 리더스아카데미 4분기 설명회</a><span> - 2017-09-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-4\">\n" + 
-                                    "            <a href=\"announcements/announcement_4.htm\" title=\"2017년 가을학기 정규수업 일정표\">2017년 가을학기 정규수업 일정표</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_4.htm\" title=\"2017년 가을학기 정규수업 일정표\">2017년 가을학기 정규수업 일정표</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-5\">\n" + 
-                                    "            <a href=\"announcements/announcement_5.htm\" title=\"2017년 카이로스(최상위반) 오디션\">2017년 카이로스(최상위반) 오디션</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_5.htm\" title=\"2017년 카이로스(최상위반) 오디션\">2017년 카이로스(최상위반) 오디션</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-6\">\n" + 
-                                    "            <a href=\"announcements/announcement_6.htm\" title=\"2017년 가을학기 설명회\">2017년 가을학기 설명회</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_6.htm\" title=\"2017년 가을학기 설명회\">2017년 가을학기 설명회</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-7\">\n" + 
-                                    "            <a href=\"announcements/announcement_7.htm\" title=\"2017년 상반기 수상실적\">2017년 상반기 수상실적</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_7.htm\" title=\"2017년 상반기 수상실적\">2017년 상반기 수상실적</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-8\">\n" + 
-                                    "            <a href=\"announcements/announcement_8.htm\" title=\"2017년 리더스 여름방학특강 설명회\">2017년 리더스 여름방학특강 설명회</a><span> - 2017-03-25</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_8.htm\" title=\"2017년 리더스 여름방학특강 설명회\">2017년 리더스 여름방학특강 설명회</a><span> - 2017-03-25</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-9\">\n" + 
-                                    "            <a href=\"announcements/announcement_9.htm\" title=\"2017년 리더스 봄학기 설명회\">2017년 리더스 봄학기 설명회 </a><span> - 2017-02-09</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_9.htm\" title=\"2017년 리더스 봄학기 설명회\">2017년 리더스 봄학기 설명회 </a><span> - 2017-02-09</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-10\">\n" + 
-                                    "            <a href=\"announcements/announcement_10.htm\" title=\"분실물 찾아가세요~(보관기간:2017.9.21~12.21)\">분실물 찾아가세요~(보관기간:2017.9.21~12.21)</a><span> - 2017-09-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_10.htm\" title=\"분실물 찾아가세요~(보관기간:2017.9.21~12.21)\">분실물 찾아가세요~(보관기간:2017.9.21~12.21)</a><span> - 2017-09-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-11\">\n" + 
-                                    "            <a href=\"announcements/announcement_11.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_11.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-12\">\n" + 
-                                    "            <a href=\"announcements/announcement_12.htm\" title=\"2017년 정규수업 일정 업데이트\">2017년 정규수업 일정 업데이트</a><span> - 2017-05-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_12.htm\" title=\"2017년 정규수업 일정 업데이트\">2017년 정규수업 일정 업데이트</a><span> - 2017-05-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-13\">\n" + 
-                                    "            <a href=\"announcements/announcement_13.htm\" title=\"2017년 여름방학 특강일정표\">2017년 여름방학 특강일정표</a><span> - 2017-05-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_13.htm\" title=\"2017년 여름방학 특강일정표\">2017년 여름방학 특강일정표</a><span> - 2017-05-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-14\">\n" + 
-                                    "            <a href=\"announcements/announcement_14.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_14.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-15\">\n" + 
-                                    "            <a href=\"announcements/announcement_15.htm\" title=\"매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)\">매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_15.htm\" title=\"매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)\">매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-16\">\n" + 
-                                    "            <a href=\"announcements/announcement_16.htm\" title=\"용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)\">용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_16.htm\" title=\"용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)\">용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-17\">\n" + 
-                                    "            <a href=\"announcements/announcement_17.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_17.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-18\">\n" + 
-                                    "            <a href=\"announcements/announcement_18.htm\" title=\"2017년 국내 모의법정 대회준비\">2017년 국내 모의법정 대회준비</a><span> - 2016-12-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_18.htm\" title=\"2017년 국내 모의법정 대회준비\">2017년 국내 모의법정 대회준비</a><span> - 2016-12-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-19\">\n" + 
-                                    "            <a href=\"announcements/announcement_19.htm\" title=\"< 12월, 1월 휴원 일정 공지 >\">< 12월, 1월 휴원 일정 공지 ></a><span> - 2016-11-29</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_19.htm\" title=\"< 12월, 1월 휴원 일정 공지 >\">< 12월, 1월 휴원 일정 공지 ></a><span> - 2016-11-29</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-20\">\n" + 
-                                    "            <a href=\"announcements/announcement_20.htm\" title=\"*토론대회 파트너를 찾아라! -토론명문리더스*\">*토론대회 파트너를 찾아라! -토론명문리더스*</a><span> - 2016-11-28</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_20.htm\" title=\"*토론대회 파트너를 찾아라! -토론명문리더스*\">*토론대회 파트너를 찾아라! -토론명문리더스*</a><span> - 2016-11-28</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
                                     
@@ -3026,64 +3028,64 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
                                     "          <h4>수상실적</h4>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-1\">\n" + 
-                                    "            <a href=\"awards/award_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-2\">\n" + 
-                                    "            <a href=\"awards/award_2.htm\" title=\"매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_2.htm\" title=\"매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-3\">\n" + 
-                                    "            <a href=\"awards/award_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-4\">\n" + 
-                                    "            <a href=\"awards/award_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-5\">\n" + 
-                                    "            <a href=\"awards/award_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-6\">\n" + 
-                                    "            <a href=\"awards/award_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-7\">\n" + 
-                                    "            <a href=\"awards/award_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-8\">\n" + 
-                                    "            <a href=\"awards/award_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-9\">\n" + 
-                                    "            <a href=\"awards/award_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-10\">\n" + 
-                                    "            <a href=\"awards/award_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-11\">\n" + 
-                                    "            <a href=\"awards/award_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-12\">\n" + 
-                                    "            <a href=\"awards/award_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!!\">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!!\">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-13\">\n" + 
-                                    "            <a href=\"awards/award_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-14\">\n" + 
-                                    "            <a href=\"awards/award_14.htm\" title=\"NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_14.htm\" title=\"NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-15\">\n" + 
-                                    "            <a href=\"awards/award_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-16\">\n" + 
-                                    "            <a href=\"awards/award_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-17\">\n" + 
-                                    "            <a href=\"awards/award_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-18\">\n" + 
-                                    "            <a href=\"awards/award_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-19\">\n" + 
-                                    "            <a href=\"awards/award_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-20\">\n" + 
-                                    "            <a href=\"awards/award_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
 
@@ -3551,64 +3553,64 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
                                     "          <h4>이벤트</h4>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-1\">\n" + 
-                                    "            <a href=\"events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-2\">\n" + 
-                                    "            <a href=\"events/event_2.htm\" title=\"Winter 2018 NSDA\">Winter 2018 NSDA</a><span> - 2017-11-23</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_2.htm\" title=\"Winter 2018 NSDA\">Winter 2018 NSDA</a><span> - 2017-11-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-3\">\n" + 
-                                    "            <a href=\"events/event_3.htm\" title=\"15th ESU Korea Speaking Competition\">15th ESU Korea Speaking Competition</a><span> - 2017-11-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_3.htm\" title=\"15th ESU Korea Speaking Competition\">15th ESU Korea Speaking Competition</a><span> - 2017-11-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-4\">\n" + 
-                                    "            <a href=\"events/event_4.htm\" title=\"2018 Peace MUN\">2018 Peace MUN</a><span> - 2017-10-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_4.htm\" title=\"2018 Peace MUN\">2018 Peace MUN</a><span> - 2017-10-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-5\">\n" + 
-                                    "            <a href=\"events/event_5.htm\" title=\"CSIA MUN 2018\">CSIA MUN 2018</a><span> - 2017-10-12</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_5.htm\" title=\"CSIA MUN 2018\">CSIA MUN 2018</a><span> - 2017-10-12</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-6\">\n" + 
-                                    "            <a href=\"events/event_6.htm\" title=\"Yale MUN 2018\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2017-09-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_6.htm\" title=\"Yale MUN 2018\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2017-09-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-7\">\n" + 
-                                    "            <a href=\"events/event_7.htm\" title=\"KMUN 2018\">KMUN 2018</a><span> - 2017-09-14</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_7.htm\" title=\"KMUN 2018\">KMUN 2018</a><span> - 2017-09-14</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-8\">\n" + 
-                                    "            <a href=\"events/event_8.htm\" title=\"GC Seoul 2018\">GC Seoul 2018</a><span> - 2017-09-06</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_8.htm\" title=\"GC Seoul 2018\">GC Seoul 2018</a><span> - 2017-09-06</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-9\">\n" + 
-                                    "            <a href=\"events/event_9.htm\" title=\"2017(23회) 대한민국 학생 영어말하기 대회\">2017(23회) 대한민국 학생 영어말하기 대회</a><span> - 2017-08-13</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_9.htm\" title=\"2017(23회) 대한민국 학생 영어말하기 대회\">2017(23회) 대한민국 학생 영어말하기 대회</a><span> - 2017-08-13</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-10\">\n" + 
-                                    "            <a href=\"events/event_10.htm\" title=\"2017 Model United Nations of Seoul YMCA\">2017 Model United Nations of Seoul YMCA</a><span> - 2017-06-14</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_10.htm\" title=\"2017 Model United Nations of Seoul YMCA\">2017 Model United Nations of Seoul YMCA</a><span> - 2017-06-14</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-11\">\n" + 
-                                    "            <a href=\"events/event_11.htm\" title=\"2017년 제14회 ESU KOREA 영어말하기대회\">2017년 제14회 ESU KOREA 영어말하기대회</a><span> - 2017-06-13</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_11.htm\" title=\"2017년 제14회 ESU KOREA 영어말하기대회\">2017년 제14회 ESU KOREA 영어말하기대회</a><span> - 2017-06-13</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-12\">\n" + 
-                                    "            <a href=\"events/event_12.htm\" title=\"2017년 9th HAFS MIMUN\">	2017년 9th HAFS MIMUN</a><span> - 2017-05-31</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_12.htm\" title=\"2017년 9th HAFS MIMUN\">	2017년 9th HAFS MIMUN</a><span> - 2017-05-31</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-13\">\n" + 
-                                    "            <a href=\"events/event_13.htm\" title=\"2017년, 7th HAFS Debate Championship\">2017년, 7th HAFS Debate Championship</a><span> - 2017-05-31</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_13.htm\" title=\"2017년, 7th HAFS Debate Championship\">2017년, 7th HAFS Debate Championship</a><span> - 2017-05-31</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-14\">\n" + 
-                                    "            <a href=\"events/event_14.htm\" title=\"2017 NSDA Summer Championships\">2017 NSDA Summer Championships</a><span> - 2017-05-31</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_14.htm\" title=\"2017 NSDA Summer Championships\">2017 NSDA Summer Championships</a><span> - 2017-05-31</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-15\">\n" + 
-                                    "            <a href=\"events/event_15.htm\" title=\"2017년 하반기 매경 영어토론대회\">2017년 하반기 매경 영어토론대회</a><span> - 2017-05-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_15.htm\" title=\"2017년 하반기 매경 영어토론대회\">2017년 하반기 매경 영어토론대회</a><span> - 2017-05-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-16\">\n" + 
-                                    "            <a href=\"events/event_16.htm\" title=\"2017 MUN101\">2017 MUN101</a><span> - 2017-05-12</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_16.htm\" title=\"2017 MUN101\">2017 MUN101</a><span> - 2017-05-12</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-17\">\n" + 
-                                    "            <a href=\"events/event_17.htm\" title=\"	2017년 하반기 Korea Mock Trial Association\">2017년 하반기 Korea Mock Trial Association</a><span> - 2017-05-07</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_17.htm\" title=\"	2017년 하반기 Korea Mock Trial Association\">2017년 하반기 Korea Mock Trial Association</a><span> - 2017-05-07</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-18\">\n" + 
-                                    "            <a href=\"events/event_18.htm\" title=\"2017년 하반기 YTN.HUFS 영어토론대회\">2017년 하반기 YTN.HUFS 영어토론대회</a><span> - 2017-04-29</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_18.htm\" title=\"2017년 하반기 YTN.HUFS 영어토론대회\">2017년 하반기 YTN.HUFS 영어토론대회</a><span> - 2017-04-29</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-19\">\n" + 
-                                    "            <a href=\"events/event_19.htm\" title=\"2017(4th) Cornell-Yonsei Debate Invitational\">2017(4th) Cornell-Yonsei Debate Invitational</a><span> - 2017-04-29</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_19.htm\" title=\"2017(4th) Cornell-Yonsei Debate Invitational\">2017(4th) Cornell-Yonsei Debate Invitational</a><span> - 2017-04-29</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-20\">\n" + 
-                                    "            <a href=\"events/event_20.htm\" title=\"글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)\">글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</a><span> - 2017-04-13</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_20.htm\" title=\"글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)\">글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</a><span> - 2017-04-13</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
 
@@ -3820,34 +3822,34 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
                                     "          <h4>이벤트</h4>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-1\">\n" + 
-                                    "            <a href=\"camps/camp_1.htm\" title=\"2017-18 겨울방학 특강안내\">2017-18 겨울방학 특강안내</a><span> - 2017-10-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_1.htm\" title=\"2017-18 겨울방학 특강안내\">2017-18 겨울방학 특강안내</a><span> - 2017-10-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-2\">\n" + 
-                                    "            <a href=\"camps/camp_2.htm\" title=\"2016-2017 리더스 겨울방학특강\">2016-2017 리더스 겨울방학특강</a><span> - 2016-12-30</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_2.htm\" title=\"2016-2017 리더스 겨울방학특강\">2016-2017 리더스 겨울방학특강</a><span> - 2016-12-30</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-3\">\n" + 
-                                    "            <a href=\"camps/camp_3.htm\" title=\"2015 여름방학 특강안내\">2015 여름방학 특강안내</a><span> - 2015-11-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_3.htm\" title=\"2015 여름방학 특강안내\">2015 여름방학 특강안내</a><span> - 2015-11-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-4\">\n" + 
-                                    "            <a href=\"camps/camp_4.htm\" title=\"2018 겨울방학 특강일정\">2018 겨울방학 특강일정</a><span> - 2017-11-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_4.htm\" title=\"2018 겨울방학 특강일정\">2018 겨울방학 특강일정</a><span> - 2017-11-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-5\">\n" + 
-                                    "            <a href=\"camps/camp_5.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_5.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-6\">\n" + 
-                                    "            <a href=\"camps/camp_6.htm\" title=\"2016 여름방학특강 안내\">2016 여름방학특강 안내</a><span> - 2016-05-01</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_6.htm\" title=\"2016 여름방학특강 안내\">2016 여름방학특강 안내</a><span> - 2016-05-01</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-7\">\n" + 
-                                    "            <a href=\"camps/camp_7.htm\" title=\"2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)\">2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)</a><span> - 2015-12-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_7.htm\" title=\"2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)\">2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)</a><span> - 2015-12-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-8\">\n" + 
-                                    "            <a href=\"camps/camp_8.htm\" title=\"2015년 여름방학특강 일정 [142]\">2015년 여름방학특강 일정 [142]</a><span> - 2015-06-01</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_8.htm\" title=\"2015년 여름방학특강 일정 [142]\">2015년 여름방학특강 일정 [142]</a><span> - 2015-06-01</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-9\">\n" + 
-                                    "            <a href=\"camps/camp_9.htm\" title=\"2014년 겨울방학 특강안내 및 일정\">2014년 겨울방학 특강안내 및 일정</a><span> - 2014-11-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_9.htm\" title=\"2014년 겨울방학 특강안내 및 일정\">2014년 겨울방학 특강안내 및 일정</a><span> - 2014-11-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-10\">\n" + 
-                                    "            <a href=\"camps/camp_10.htm\" title=\"2014 겨울방학특강일정 안내 [1]\">2017 Model United Nations of Seoul YMCA</a><span> - 2014-11-09</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_10.htm\" title=\"2014 겨울방학특강일정 안내 [1]\">2017 Model United Nations of Seoul YMCA</a><span> - 2014-11-09</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
 
@@ -4742,10 +4744,10 @@ function renderHeader(webpage_index) {
     "    <!-- *** CSS Stylesheet References *** -->\n" + 
     "\n" +
     "    <!-- Stylesheet which contains general layout CSS rules for 'index.htm'. -->\n" + 
-    "    <link rel=\"stylesheet\" href=\"/la/assets/css/mobile.css\">\n" + 
+    "    <link rel=\"stylesheet\" href=\"" + base_path + "assets/css/mobile.css\">\n" + 
     /* 
     "    <!-- Stylesheet which contains CSS rules specifically for the English language version. -->\n" + 
-    "    <link rel=\"stylesheet\" href=\"/la/assets/css/en.css\">\n" +  */
+    "    <link rel=\"stylesheet\" href=\"" + base_path + "assets/css/en.css\">\n" +  */
     "\n" +
     "    <!-- *** JavaScript file references *** -->\n" + 
     "\n" +
@@ -4753,7 +4755,7 @@ function renderHeader(webpage_index) {
     "    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n" + 
     "\n" +
     "    <!-- JavaScript script which handles general layout for 'index.htm'. -->\n" + 
-    "    <script src=\"/la/assets/js/mobile.js\"></script>\n"
+    "    <script src=\"" + base_path + "assets/js/mobile.js\"></script>\n"
   );
   
 } // END of FUNCTION 'renderHeader'\
@@ -4804,8 +4806,8 @@ function renderBody() {
 
 function renderLogoAndSearch() {
   jq("header").html(
-    "      <a href=\"/la/\" title=\"Leaders Academy - Home\">\n" + 
-    "        <img src=\"/la/assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy\" />\n" + 
+    "      <a href=\"/skin/skin020/mobile/\" title=\"Leaders Academy - Home\">\n" + 
+    "        <img src=\"/skin/skin020/mobile/assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy\" />\n" + 
     "      </a>\n" + 
     "      <section id=\"header-right\">\n" + 
     "        <div id=\"header-search\">\n" + 
@@ -4845,73 +4847,73 @@ function renderMenus(webpage_index) {
     "      <section id=\"nav-main_menu\">\n" + 
     "        <section id=\"nav-row_1\">\n" + 
     "          <div id=\"link-gpa\">\n" + 
-    "            <a href=\"gpa/gpa.htm\" title=\"GPA/Testing\"></a>\n" + 
+    "            <a href=\"" + base_path + "gpa/gpa.htm\" title=\"GPA/Testing\"></a>\n" + 
     "            <span>GPA/Testing</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-english\">\n" + 
-    "            <a href=\"english/index_english.htm\" title=\"English\"></a>\n" + 
+    "            <a href=\"" + base_path + "english/index_english.htm\" title=\"English\"></a>\n" + 
     "             <span>English</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-camps\">\n" + 
-    "            <a href=\"camps/index_camps.htm\" title=\"Camps\"></a>\n" + 
+    "            <a href=\"" + base_path + "" + base_path + "camps/index_camps.htm\" title=\"Camps\"></a>\n" + 
     "            <span>Camps</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-lessons\">\n" + 
-    "            <a href=\"lessons/lessons.htm\" title=\"Lessons\"></a>\n" + 
+    "            <a href=\"" + base_path + "lessons/lessons.htm\" title=\"Lessons\"></a>\n" + 
     "            <span>Lessons</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
     "        <section id=\"nav-row_2\">\n" + 
     "          <div id=\"link-awards\">\n" + 
-    "            <a href=\"awards/index_awards.htm\" title=\"Awards\"></a>\n" + 
+    "            <a href=\"" + base_path + "awards/index_awards.htm\" title=\"Awards\"></a>\n" + 
     "            <span>Awards</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-debate\">\n" + 
-    "            <a href=\"debate/index_debate.htm\" title=\"Debate\"></a>\n" + 
+    "            <a href=\"" + base_path + "debate/index_debate.htm\" title=\"Debate\"></a>\n" + 
     "            <span>Debate</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-events\">\n" + 
-    "            <a href=\"events/index_events.htm\" title=\"Events\"></a>\n" + 
+    "            <a href=\"" + base_path + "events/index_events.htm\" title=\"Events\"></a>\n" + 
     "            <span>Events</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-announcements\">\n" + 
-    "            <a href=\"announcements/index_announcements.htm\" title=\"link-announcements\"></a>\n" + 
+    "            <a href=\"" + base_path + "announcements/index_announcements.htm\" title=\"link-announcements\"></a>\n" + 
     "            <span>Announcements</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
     "        <section id=\"nav-row_3\">\n" + 
     "          <div id=\"link-apply_students\">\n" + 
-    "            <a href=\"apply_students/apply_students.htm\" title=\"Apply (Students)\"></a>\n" + 
+    "            <a href=\"" + base_path + "apply_students/apply_students.htm\" title=\"Apply (Students)\"></a>\n" + 
     "            <span>Apply (Students)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-faculty\">\n" + 
-    "            <a href=\"faculty/index_faculty.htm\" title=\"Faculty\"></a>\n" + 
+    "            <a href=\"" + base_path + "faculty/index_faculty.htm\" title=\"Faculty\"></a>\n" + 
     "            <span>Faculty</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-apply_faculty\">\n" + 
-    "            <a href=\"apply_faculty/apply_faculty.htm\" title=\"Apply (Faculty)\"></a>\n" + 
+    "            <a href=\"" + base_path + "apply_faculty/apply_faculty.htm\" title=\"Apply (Faculty)\"></a>\n" + 
     "            <span>Apply (Faculty)</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-business\">\n" + 
-    "            <a href=\"business/business.htm\" title=\"Business\"></a>\n" + 
+    "            <a href=\"" + base_path + "business/business.htm\" title=\"Business\"></a>\n" + 
     "            <span>Business</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
     "        <section id=\"nav-row_4\">\n" + 
     "          <div id=\"link-about_us\">\n" + 
-    "            <a href=\"about_us/about_us.htm\" title=\"About Us\"></a>\n" + 
+    "            <a href=\"" + base_path + "about_us/about_us.htm\" title=\"About Us\"></a>\n" + 
     "            <span>About Us</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-contact_us\">\n" + 
-    "            <a href=\"contact_us/contact_us.htm\" title=\"Contact Us\"></a>\n" + 
+    "            <a href=\"" + base_path + "contact_us/contact_us.htm\" title=\"Contact Us\"></a>\n" + 
     "            <span>Contact Us</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-location\">\n" + 
-    "            <a href=\"location/location.htm\" title=\"Location\"></a>\n" + 
+    "            <a href=\"" + base_path + "location/location.htm\" title=\"Location\"></a>\n" + 
     "            <span>Location</span>\n" + 
     "          </div>\n" + 
     "          <div id=\"link-media\">\n" + 
-    "            <a href=\"media/index_media.htm\" title=\"Media\"></a>\n" + 
+    "            <a href=\"" + base_path + "media/index_media.htm\" title=\"Media\"></a>\n" + 
     "            <span>Media</span>\n" + 
     "          </div>\n" + 
     "        </section>\n" + 
@@ -4942,23 +4944,23 @@ function renderSectionMenu(webpage_index) {
       );
     } else if ((webpage_index > 19) && webpage_index <= 27) {
       jq(menu_selector).html(
-        "        <a href=\"debate/debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
-        "        <a href=\"debate/debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
-        "        <a href=\"debate/debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
-        "        <a href=\"debate/debate_schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule (2018)</a>\n" + 
-        "        <a href=\"debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
-        "        <a href=\"debate/debate_discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
-        "        <a href=\"debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
+        "        <a href=\"" + base_path + "debate/debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule (2018)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
       );
     } else if ((webpage_index > 27) && webpage_index <= 38) {
       jq(menu_selector).html(
-        "      <a href=\"english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
-        "      <a href=\"english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
-        "      <a href=\"english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
-        "      <a href=\"english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
-        "      <a href=\"english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
-        "      <a href=\"english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
-        "      <a href=\"english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
+        "      <a href=\"" + base_path + "debate/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
+        "      <a href=\"" + base_path + "debate/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
       );
     } else if ((webpage_index === 39) || 
                (webpage_index === 82) || 
@@ -4970,23 +4972,23 @@ function renderSectionMenu(webpage_index) {
       );
     } else if ((webpage_index > 39) && webpage_index <= 60) {
       jq(menu_selector).html(
-        "      <a href=\"announcements/index_announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
+        "      <a href=\"" + base_path + "announcements/index_announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
       );
     } else if ((webpage_index > 60) && webpage_index <= 81) {
       jq(menu_selector).html(
-        "      <a href=\"awards/index_awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
+        "      <a href=\"" + base_path + "awards/index_awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
       );
     } else if ((webpage_index > 84) && webpage_index <= 99) {
       jq(menu_selector).html(
-        "      <a href=\"media/index_media.htm\" title=\"Page #1\" id=\"link-media-page_1\">Page #1</a>\n" 
+        "      <a href=\"" + base_path + "media/index_media.htm\" title=\"Page #1\" id=\"link-media-page_1\">Page #1</a>\n" 
       );
     } else if ((webpage_index > 99) && webpage_index <= 120) {
       jq(menu_selector).html(
-        "      <a href=\"events/index_events.htm\" title=\"Page #1\" id=\"link-events-page_1\">Page #1</a>\n" 
+        "      <a href=\"" + base_path + "events/index_events.htm\" title=\"Page #1\" id=\"link-events-page_1\">Page #1</a>\n" 
       );
     } else if ((webpage_index > 120) && webpage_index <= 131) {
       jq(menu_selector).html(
-        "      <a href=\"camps/index_camps.htm\" title=\"Page #1\" id=\"link-camps-page_1\">Page #1</a>\n" 
+        "      <a href=\"" + base_path + "camps/index_camps.htm\" title=\"Page #1\" id=\"link-camps-page_1\">Page #1</a>\n" 
       );
     } 
 
@@ -5230,78 +5232,78 @@ function renderArticle(extracted_html, webpage_index) {
       "          <h4>포토갤러리</h4>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_1\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_1\">\n" + 
-      "              <a href=\"media/item_1.htm\">" + extracted_html[0] + "</a>\n" + 
-      "              <a href=\"media/item_1.htm\">" + extracted_html[1] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_1.htm\">" + extracted_html[0] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_1.htm\">" + extracted_html[1] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_2\">\n" + 
-      "             <a href=\"media/item_2.htm\">" + extracted_html[2] + "</a>\n" + 
-      "             <a href=\"media/item_2.htm\">" + extracted_html[3] + "</a>\n" + 
+      "             <a href=\"" + base_path + "media/item_2.htm\">" + extracted_html[2] + "</a>\n" + 
+      "             <a href=\"" + base_path + "media/item_2.htm\">" + extracted_html[3] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_2\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_3\">\n" + 
-      "              <a href=\"media/item_3.htm\">" + extracted_html[4] + "</a>\n" + 
-      "              <a href=\"media/item_3.htm\">" + extracted_html[5] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_3.htm\">" + extracted_html[4] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_3.htm\">" + extracted_html[5] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_4\">\n" + 
-      "              <a href=\"media/item_4.htm\">" + extracted_html[6] + "</a>\n" + 
-      "              <a href=\"media/item_4.htm\">" + extracted_html[7] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_4.htm\">" + extracted_html[6] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_4.htm\">" + extracted_html[7] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_3\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_5\">\n" + 
-      "              <a href=\"media/item_5.htm\">" + extracted_html[8] + "</a>\n" + 
-      "              <a href=\"media/item_5.htm\">" + extracted_html[9] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_5.htm\">" + extracted_html[8] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_5.htm\">" + extracted_html[9] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_6\">\n" + 
-      "              <a href=\"media/item_6.htm\">" + extracted_html[10] + "</a>\n" + 
-      "              <a href=\"media/item_6.htm\">" + extracted_html[11] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_6.htm\">" + extracted_html[10] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_6.htm\">" + extracted_html[11] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_4\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_7\">\n" + 
-      "              <a href=\"media/item_7.htm\">" + extracted_html[12] + "</a>\n" + 
-      "              <a href=\"media/item_7.htm\">" + extracted_html[13] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_7.htm\">" + extracted_html[12] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_7.htm\">" + extracted_html[13] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_8\">\n" + 
-      "              <a href=\"media/item_8.htm\">" + extracted_html[14] + "</a>\n" + 
-      "              <a href=\"media/item_8.htm\">" + extracted_html[15] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_8.htm\">" + extracted_html[14] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_8.htm\">" + extracted_html[15] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_5\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_9\">\n" + 
-      "              <a href=\"media/item_9.htm\">" + extracted_html[16] + "</a>\n" + 
-      "              <a href=\"media/item_9.htm\">" + extracted_html[17] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_9.htm\">" + extracted_html[16] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_9.htm\">" + extracted_html[17] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_10\">\n" + 
-      "              <a href=\"media/item_10.htm\">" + extracted_html[18] + "</a>\n" + 
-      "              <a href=\"media/item_10.htm\">" + extracted_html[19] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_10.htm\">" + extracted_html[18] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_10.htm\">" + extracted_html[19] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_6\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_11\">\n" + 
-      "              <a href=\"media/item_11.htm\">" + extracted_html[20] + "</a>\n" + 
-      "              <a href=\"media/item_11.htm\">" + extracted_html[21] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_11.htm\">" + extracted_html[20] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_11.htm\">" + extracted_html[21] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_12\">\n" + 
-      "              <a href=\"media/item_12.htm\">" + extracted_html[22] + "</a>\n" + 
-      "              <a href=\"media/item_12.htm\">" + extracted_html[23] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_12.htm\">" + extracted_html[22] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_12.htm\">" + extracted_html[23] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_7\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_13\">\n" + 
-      "              <a href=\"media/item_13.htm\">" + extracted_html[24] + "</a>\n" + 
-      "              <a href=\"media/item_13.htm\">" + extracted_html[25] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_13.htm\">" + extracted_html[24] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_13.htm\">" + extracted_html[25] + "</a>\n" + 
       "            </div>\n" + 
       "            <div class=\"media-item\" id=\"media-item_14\">\n" + 
-      "              <a href=\"media/item_14.htm\">" + extracted_html[26] + "</a>\n" + 
-      "              <a href=\"media/item_14.htm\">" + extracted_html[27] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_14.htm\">" + extracted_html[26] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_14.htm\">" + extracted_html[27] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_8\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_15\">\n" + 
-      "              <a href=\"media/item_15.htm\">" + extracted_html[28] + "</a>\n" + 
-      "              <a href=\"media/item_15.htm\">" + extracted_html[29] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_15.htm\">" + extracted_html[28] + "</a>\n" + 
+      "              <a href=\"" + base_path + "media/item_15.htm\">" + extracted_html[29] + "</a>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
       "        </div>\n"
