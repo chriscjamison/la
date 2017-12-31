@@ -1,0 +1,242 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					<!--{ = inc('inc/left_mypage.htm') }-->
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="images/title3.png" alt="학원생활"></td>
+								<td width="352" class="category"><img src="../images/common/ico_home.png" > HOME &gt; MYPAGE &gt; 학원생활 &gt; <strong>메일서비스</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="../images/sub_main.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="../images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('../images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+ <!-- S : Contents -->
+								<table width="680" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                             <td style="padding-bottom:10px;" align="left"><img src="images/title2_st23.png" /></td>
+                          </tr>
+						  <tr>
+                            <td background="images/tab_bg.gif" align="left">
+                              <a href="/mypage/mailservice"><img src="images/tab_mail_m1.png" border="0" /></a><a href="/mypage/mailservice_send"><img src="images/tab_mail_m2_on.png" hspace="1" border="0"/></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="20"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <!-- S : Contents -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <thead>
+                                <tr>
+                                  <td height="2" colspan="6" bgcolor="#bda979"></td>
+                                </tr>
+                                <tr>
+                                  <td width="1%" align="center" bgcolor="#dbd3ba"><input type="checkbox" id="chkall" title="전체선택"></td>
+                                  <td width="10%" align="center" bgcolor="#dbd3ba" class="style13"><strong>번호</strong></td>
+                                  <td width="40%" align="center" bgcolor="#dbd3ba" class="style13"><strong>제목</strong></td>
+                                  <td width="20%" height="28" align="center" bgcolor="#dbd3ba" class="style13"><strong>받는사람</strong></td>
+                                  <td width="15%" align="center" bgcolor="#dbd3ba" class="style13"><strong>날짜</strong></td>
+                                  <td width="10%" align="center" bgcolor="#dbd3ba" class="style13"><strong>확인</strong></td>
+                                </tr>
+                                 <tr>
+                                  <td height="1" colspan="6" bgcolor="#bda979"></td>
+                                </tr>
+                                </thead>
+                                <tbody id="mypage_mailservice_send"></tbody>
+                                <tr>
+                                  <td height="40" colspan="6" align="center">
+                                    <div id="pager"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="6" align="right">
+                                    <img src="images/btn_delete.png" id="btn_chkdel"  class="hand" />
+                                    <a href="javascript:winscroll('/frame?fr=mailwrite','mailwrite','468','400')"><img src="images/btn_sendmail.png"  /></a>
+                                  </td>
+                                </tr>
+                              </table>
+
+                              <!-- E : Contents -->
+                            </td>
+                          </tr>
+                        </table></td>
+			  </tr>
+			</table>
+		<!-- E : Contents -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="../images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><!--{ = inc('inc/bottom.htm') }--></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+<input type="hidden" id="page" />
+<input type="hidden" id="pagetotal" />
+<input type="hidden" id="pagecount" />
+
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_mailsend_list(1);
+	set_pager(1);
+
+	jq('#btn_chkdel').click(function() {
+		delete_mail();
+	});
+	jq('#chkall').click(function() {
+		checkAll(this, '.checked');
+	});
+});
+
+// 상담현황 List GET
+function get_mailsend_list(page)
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_service.php",
+		data: 'type=mailservice_send&page=' + page,
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vhtml = "";
+			jq('#pagetotal').val(parseInt(response.total));
+			if (jq.isArray(response.rc)) {
+				jq(response.rc).each(function(el, data) {
+					vhtml += "<tr align=\"center\">"
+						   + "<td height=\"28\"><input type=\"checkbox\" id=\"chk[]\" name=\"chk[]\" class=\"checked\" value=\"" + data.series + "\"/></td>"
+						   + "<td>" + data.seq + "</td>"
+						   + "<td align=\"left\"><a href=\"javascript:winscroll('/mypage/mailservice_sendview?seq=" + data.series + "','id','468','400')\">" + data.subject + "</a></td>"
+						   + "<td>" + data.rname + "</td>"
+						   + "<td>" + data.rdate+ "</td>"
+						   + "<td>" + data.rstatus+ "</td>"
+						   + "</tr>"
+						   + "<tr><td height=\"1\" colspan=\"6\" bgcolor=\"#cac0a9\"></td></tr>";
+				});
+			} else {
+				vhtml += "<tr><td height=\"28\" colspan=\"6\" align=\"center\">등록된 글이 없습니다.</td></tr>"
+					   + "<tr><td height=\"1\" colspan=\"6\" bgcolor=\"#cac0a9\"></td></tr>";
+			}
+
+			jq("#mypage_mailservice_send").html(vhtml);
+			set_pager(page, response.total);
+		}
+	});
+}
+
+function delete_mail()
+{
+	var t_check = jq('input:checkbox[name=chk[]]:checked').map(function() {
+		return this.value;
+	}).get().join(',');
+
+	if (!t_check.length) {
+		alert('게시물을 선택해주세요.');
+		return false;
+	}
+
+	if (confirm("정말 삭제하시겠습니까? 삭제 후 복구할 수 없습니다.")) {
+		jq.ajax({
+			type: 'POST',
+			url: "/lib/segero/mypage_service.php",
+			data: 'type=maildelete&t_check=' + t_check,
+			dataType: 'json',
+			error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+			success: function(response) {
+				//jq("#debug_area").html(response.url);
+				switch(response.result) {
+				case "success":
+					alert("삭제하였습니다.");
+					get_mailsend_list(1);
+					break;
+				case "error":
+					alert("통신 중 오류입니다. 관리자에게 문의하세요.");
+					return false;
+					break;
+				case "fail":
+					alert("메일 삭제 실패. 다시 시도하세요.");
+					return false;
+					break;
+				case "nocheck":
+				default:
+					alert("삭제하려는 메일을 선택하세요.");
+					return false;
+					break;
+				}
+			}
+		});
+	} else {
+		return;
+	}
+}
+
+function set_pager(page, total)
+{
+	var pagecount = getPageCount(total, 10);
+	jq('#pagecount').val(pagecount);
+	jq("#pager").pager({ pagenumber: page, pagecount: pagecount, buttonClickCallback: get_mailsend_list });
+}
+</script>
+
+{ # footer }
