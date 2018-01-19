@@ -3977,7 +3977,7 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n" + 
                                     "        <div class=\"article-business\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Lorem ipsum dolle 앉아 amet, consipetur adipiscing elit. Aenean gravida turpis 앉아서 odio tincidunt, 앉아서 앉아서 tellus convallis. Maecenas 전신 담화로 된 집.\n" + 
+                                    "            Leaders Academy와의 비즈니스 관계에서 얻을 수있는 잠재적 이익에 대해 문의 하시려면 귀하와 상담하게되어 기쁩니다. 02-562-9799로 전화를 걸어 대치 캠퍼스 직원과 통화하거나 02-562-9799로 전화를 걸어 분당 캠퍼스 담당자에게 문의하십시오.\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 
