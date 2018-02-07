@@ -1,11 +1,5 @@
 ﻿var jq = jQuery.noConflict();
 
-/* jq(window).load(
-  function () {
-    jq("body").css("opacity", 0);
-  }
-); */
-
 base_path = "/skin/skin020/mobile/";
 
 function extractHtmlFromDesktopPage()  {
@@ -172,7 +166,8 @@ function extractHtmlFromDesktopPage()  {
         'announcement_22.htm', // index = 135
         'announcement_23.htm', 
         'announcement_24.htm', 
-        'announcement_25.htm'
+        'announcement_25.htm', 
+        'award_21.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -3047,6 +3042,9 @@ function extractHtmlFromDesktopPage()  {
               case 61:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
                                     "          <h4>수상실적</h4>\n" + 
+                                    "          <div class=\"article-awards-listing\" id=\"awards-listing-21\">\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_21.htm\" title=\"수상을 축하합니다!(2017년 12월~2018년 2월 대회)\">수상을 축하합니다!(2017년 12월~2018년 2월 대회)</a><span> - 2018-01-30</span>\n" + 
+                                    "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-1\">\n" + 
                                     "            <a href=\"" + base_path + "awards/award_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
@@ -4053,6 +4051,17 @@ function extractHtmlFromDesktopPage()  {
                                     
                 webpage_index = 138;
               break;
+
+              // Runs if the loading page is the 21st award in the Award section.
+              case 139:
+                extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
+                                    "          <h4>수상을 축하합니다!(2017년 12월~2018년 2월 대회)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 139;
+              break;
+            
             }
           }	 
         }
@@ -4119,7 +4128,8 @@ function renderHeader(webpage_index) {
   } else if ((webpage_index > 40 && webpage_index <= 60) || 
              (webpage_index > 133 && webpage_index <= 138)) {
     section_html = "공지 사항 (ANNOUNCEMENTS) - ";
-  } else if (webpage_index > 61 && webpage_index <= 81) {
+  } else if ((webpage_index > 61 && webpage_index <= 81) || 
+              webpage_index === 139) {
     section_html = "공지 사항 (AWARDS) - ";
   } else if (webpage_index > 84 && webpage_index <= 99) {
     section_html = "대치 리더스 (MEDIA) - ";
@@ -4826,6 +4836,11 @@ function renderHeader(webpage_index) {
     case 138: 
       title_html = title_html + section_html + "2018년 구정연휴 휴강 및 휴원안내";
     break;
+
+    // Runs if the loading page is the 21st award.
+    case 139: 
+      title_html = title_html + section_html + "수상을 축하합니다!(2017년 12월~2018년 2월 대회)";
+    break;
     
   
   } // END of SWITCH statement 
@@ -5076,9 +5091,6 @@ function renderSectionMenu(webpage_index) {
 
   } // END of FUNCTION 'renderSectionMenu'
 
-  
-  
-
 function renderFooter() {
   jq("footer").html(
     "      <section id=\"footer-border\">\n" + 
@@ -5099,7 +5111,7 @@ function renderFooter() {
     "        <a href=\"https://whatsapp.com\" title=\"WhatsApp\" target=\"_blank\" id=\"link-whatsapp\"></a>\n" + 
     "      </section>\n" + 
     "      <section id=\"footer-row_3\">\n" + 
-    "        <span>Leaders Academy &copy; 2017</span>\n" + 
+    "        <span>Leaders Academy &copy; 2018</span>\n" + 
     "      </section>\n"
   );
 } // END of FUNCTION 'renderFooter'
@@ -5265,15 +5277,13 @@ function renderArticle(extracted_html, webpage_index) {
 
   } // END of if STATEMENT
 
-  if (((webpage_index > 15) && (webpage_index <= 18)) || 
+  if ((webpage_index > 15 && webpage_index <= 18) || 
       (webpage_index === 39) || 
-      ((webpage_index > 60) && (webpage_index <= 81)) || 
+      (webpage_index > 60 && webpage_index <= 81) || 
       (webpage_index === 83) || 
-      ((webpage_index > 84) && (webpage_index <= 99)) || 
-      ((webpage_index > 99) && (webpage_index <= 120)) || 
-      ((webpage_index > 120) && (webpage_index <= 131)) || 
-      (webpage_index === 132) || 
-      (webpage_index === 133)) { 
+      (webpage_index > 84 && webpage_index <= 99) || 
+      (webpage_index > 99 && webpage_index <= 120) || 
+      (webpage_index > 120 && webpage_index <= 139)) { 
     jq("article").html(extracted_html[0]);
   } // END of if STATEMENT
 
