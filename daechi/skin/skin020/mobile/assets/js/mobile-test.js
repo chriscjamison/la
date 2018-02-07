@@ -167,7 +167,12 @@ function extractHtmlFromDesktopPage()  {
         'announcement_23.htm', 
         'announcement_24.htm', 
         'announcement_25.htm', 
-        'award_21.htm'
+        'award_21.htm', 
+        'iet_english_reading.htm', // index = 140
+        'ieec_english_writing.htm', 
+        'foreign_debate_2018.htm', 
+        'foreign.htm', 
+        'english_speech_contest.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -1316,6 +1321,11 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Debate' page.
               case 20:
                 extracted_html[0] = "        <div class=\"article-debate-links\" id=\"article-content\">\n" + 
+                                    "          <a href=\"iet_english_reading.htm\" title=\"IET 영어독서대회\">IET 영어독서대회</a>\n" + 
+                                    "          <a href=\"ieec_english_writing.htm\" title=\"IEEC 국제영어논술대회\">IEEC 국제영어논술대회</a>\n" + 
+                                    "          <a href=\"foreign_debate_2018.htm\" title=\"2018대원외고토론대회\">2018대원외고토론대회</a>\n" +
+                                    "          <a href=\"foreign.htm\" title=\"외대부고 모의법정대회\">외대부고 모의법정대회</a>\n" +  
+                                    "          <a href=\"english_speech_contest.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a>\n" + 
                                     "          <a href=\"debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\">2017년 정규토론 수업 일정 업데이트</a>\n" + 
                                     "          <a href=\"debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\">2016 정규토론수업 일정 업데이트</a>\n" + 
                                     "          <a href=\"debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\">주중 영어토론반 일정안내</a>\n" +
@@ -4061,6 +4071,56 @@ function extractHtmlFromDesktopPage()  {
                                     
                 webpage_index = 139;
               break;
+
+              // Runs if the loading page is the IET English Reading Competition page in the Debate section.
+              case 140:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>IET 영어독서대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 135;
+              break; 
+
+              // Runs if the loading page is the IEEC International English Writing Contest page in the Debate section.
+              case 141:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>IEEC 국제영어논술대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 141;
+              break;
+
+              // Runs if the loading page is the 2018 Crew Foreign Language Debate Competition page in the Debate section.
+              case 142:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>2018대원외고토론대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 142;
+              break;
+
+              // Runs if the loading page is the Foreign court statute page in the Debate section.
+              case 143:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>외대부고 모의법정대회</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 143;
+              break;
+
+              // Runs if the loading page is the 15th ESU KOREA English Speech Contest page in the Debate section.
+              case 144:
+                extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
+                                    "          <h4>제15회 ESU KOREA 영어말하기대회)</h4>\n" + 
+                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
+                                    "        </div>\n";  
+                                    
+                webpage_index = 144;
+              break;
             
             }
           }	 
@@ -4121,7 +4181,8 @@ function renderHeader(webpage_index) {
 
   if (webpage_index <= 15) {
     section_html = "강사소개 (FACULTY) - ";
-  } else if (webpage_index > 19 && webpage_index <= 27) {
+  } else if ((webpage_index > 19 && webpage_index <= 27) || 
+             (webpage_index > 138 && webpage_index <= 144)) {
     section_html = "정규토론 (DEBATE) - ";
   } else if (webpage_index > 27 && webpage_index <= 38) {
     section_html = "정규영어 (ENGLISH) - ";
@@ -4282,7 +4343,7 @@ function renderHeader(webpage_index) {
       title_html = title_html + section_html + "Regular debate Q4 2014";
     break;
 
-    // Runs if the loading page is the Englksh page.
+    // Runs if the loading page is the English page.
     case 28: 
       title_html = title_html + "정규영어 (ENGLISH)";
     break;
@@ -4841,6 +4902,31 @@ function renderHeader(webpage_index) {
     case 139: 
       title_html = title_html + section_html + "수상을 축하합니다!(2017년 12월~2018년 2월 대회)";
     break;
+
+    // Runs if the loading page is the Debate page for the IET English Reading Competition	.
+    case 140: 
+      title_html = title_html + section_html + "IET 영어독서대회";
+    break;
+
+    // Runs if the loading page is the Debate page for the IEEC International English Writing Contest.
+    case 141: 
+      title_html = title_html + section_html + "IEEC 국제영어논술대회";
+    break;
+
+    // Runs if the loading page is the Debate page for the 2018 Crew Foreign Language Debate Competition.
+    case 142: 
+      title_html = title_html + section_html + "2018대원외고토론대회";
+    break;
+   
+    // Runs if the loading page is the Debate page for the Foreign court statute.
+    case 143: 
+      title_html = title_html + section_html + "외대부고 모의법정대회";
+    break;
+
+    // Runs if the loading page is the Debate page for the 15th ESU KOREA English Speech Contest.
+    case 144: 
+      title_html = title_html + section_html + "제15회 ESU KOREA 영어말하기대회";
+    break;
     
   
   } // END of SWITCH statement 
@@ -5283,7 +5369,7 @@ function renderArticle(extracted_html, webpage_index) {
       (webpage_index === 83) || 
       (webpage_index > 84 && webpage_index <= 99) || 
       (webpage_index > 99 && webpage_index <= 120) || 
-      (webpage_index > 120 && webpage_index <= 139)) { 
+      (webpage_index > 120 && webpage_index <= 144)) { 
     jq("article").html(extracted_html[0]);
   } // END of if STATEMENT
 
