@@ -4112,19 +4112,20 @@ function renderHeader(webpage_index) {
 
   if (webpage_index <= 15) {
     section_html = "강사소개 (FACULTY) - ";
-  } else if ((webpage_index > 19) && (webpage_index <= 27)) {
+  } else if (webpage_index > 19 && webpage_index <= 27) {
     section_html = "정규토론 (DEBATE) - ";
-  } else if ((webpage_index > 27) && (webpage_index <= 38)) {
+  } else if (webpage_index > 27 && webpage_index <= 38) {
     section_html = "정규영어 (ENGLISH) - ";
-  } else if ((webpage_index > 40) && (webpage_index <= 60)) {
+  } else if ((webpage_index > 40 && webpage_index <= 60) || 
+             (webpage_index > 133 && webpage_index <= 138)) {
     section_html = "공지 사항 (ANNOUNCEMENTS) - ";
-  } else if ((webpage_index > 61) && (webpage_index <= 81)) {
+  } else if (webpage_index > 61 && webpage_index <= 81) {
     section_html = "공지 사항 (AWARDS) - ";
-  } else if ((webpage_index > 84) && (webpage_index <= 99)) {
+  } else if (webpage_index > 84 && webpage_index <= 99) {
     section_html = "대치 리더스 (MEDIA) - ";
-  } else if ((webpage_index > 99) && (webpage_index <= 120)) {
+  } else if (webpage_index > 99 && webpage_index <= 120) {
     section_html = "이벤트 (EVENTS) - ";
-  } else if ((webpage_index > 120) && (webpage_index <= 131)) {
+  } else if (webpage_index > 120 && webpage_index <= 131) {
     section_html = "캠프 (CAMPS) - ";
   }
   
@@ -4803,27 +4804,27 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 21st announcement.
     case 134: 
-      title_html = title_html + section_html + "용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)";
+      title_html = title_html + section_html + "*2018 봄학기 설명회*";
     break;
 
-    // Runs if the loading page is the 17th announcement.
-    case 57: 
-      title_html = title_html + section_html + "2017 NSDA겨울챔피언쉽, YUMN, GC수상결과";
+    // Runs if the loading page is the 22nd announcement.
+    case 135: 
+      title_html = title_html + section_html + "수상을 축하합니다!(2017년 12월~2018년 2월 대회)";
     break;
 
-    // Runs if the loading page is the 18th announcement.
-    case 58: 
-      title_html = title_html + section_html + "2017년 국내 모의법정 대회준비";
+    // Runs if the loading page is the 23rd announcement.
+    case 136: 
+      title_html = title_html + section_html + "신규전화 및 방문상담시간 공지드립니다.";
     break;
 
-    // Runs if the loading page is the 19th announcement.
-    case 59: 
-      title_html = title_html + section_html + "< 12월, 1월 휴원 일정 공지 >";
+    // Runs if the loading page is the 24th announcement.
+    case 137: 
+      title_html = title_html + section_html + "리더스 주말 원서강독수업 개설안내";
     break;
 
-    // Runs if the loading page is the 20th announcement.
-    case 60: 
-      title_html = title_html + section_html + "*토론대회 파트너를 찾아라! -토론명문리더스*";
+    // Runs if the loading page is the 25th announcement.
+    case 138: 
+      title_html = title_html + section_html + "2018년 구정연휴 휴강 및 휴원안내";
     break;
     
   
@@ -4840,9 +4841,6 @@ function renderHeader(webpage_index) {
     "\n" +
     "    <!-- Stylesheet which contains general layout CSS rules for 'index.htm'. -->\n" + 
     "    <link rel=\"stylesheet\" href=\"" + base_path + "assets/css/mobile.css\">\n" + 
-    /* 
-    "    <!-- Stylesheet which contains CSS rules specifically for the English language version. -->\n" + 
-    "    <link rel=\"stylesheet\" href=\"" + base_path + "assets/css/en.css\">\n" +  */
     "\n" +
     "    <!-- *** JavaScript file references *** -->\n" + 
     "\n" +
@@ -4853,7 +4851,7 @@ function renderHeader(webpage_index) {
     "    <script src=\"" + base_path + "assets/js/mobile.js\"></script>\n"
   );
   
-} // END of FUNCTION 'renderHeader'\
+} // END of FUNCTION 'renderHeader'
 
 function renderBody() {
 
@@ -5025,18 +5023,7 @@ function renderSectionMenu(webpage_index) {
   
     menu_selector = "#nav-section_menu";
 
-    if (webpage_index <= 15)  {
-      jq(menu_selector).html(
-/*         "        <a href=\"guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
-        "        <a href=\"guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
-        "        <a href=\"guide/rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
-        "        <a href=\"guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-system\">학원제도(SYSTEM)</a>\n" + 
-        "        <a href=\"guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
-        "        <a href=\"guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
- */   
-        "      <span>There is no menu for this section.</span>\n"
-      );
-    } else if ((webpage_index > 19) && webpage_index <= 27) {
+    if ((webpage_index > 19) && webpage_index <= 27) {
       jq(menu_selector).html(
         "        <a href=\"" + base_path + "debate/debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
@@ -5064,7 +5051,8 @@ function renderSectionMenu(webpage_index) {
       jq(menu_selector).html(
         "      <span>There is no menu for this section.</span>\n"
       );
-    } else if ((webpage_index > 39) && webpage_index <= 60) {
+    } else if ((webpage_index > 39 && webpage_index <= 60) || 
+               (webpage_index > 133 && webpage_index <= 138)) {
       jq(menu_selector).html(
         "      <a href=\"" + base_path + "announcements/index_announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
       );
