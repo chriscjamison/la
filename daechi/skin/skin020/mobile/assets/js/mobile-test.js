@@ -5124,8 +5124,14 @@ function renderSectionMenu(webpage_index) {
   
     menu_selector = "#nav-section_menu";
 
-    if ((webpage_index > 19) && webpage_index <= 27) {
+    if ((webpage_index > 19 && webpage_index <= 27) || 
+        (webpage_index > 138 && webpage_index <= 144)) {
       jq(menu_selector).html(
+        "        <a href=\"" + base_path + "debate/iet_english_reading.htm\" title=\"IET 영어독서대회\" id=\"link-debate-iet_english_reading\">IET 영어독서대회</a>\n" + 
+        "        <a href=\"" + base_path + "debate/ieec_english_writing.htm\" title=\"IEEC 국제영어논술대회\"id=\"link-debate-ieec_english_writing\">IEEC 국제영어논술대회</a>\n" + 
+        "        <a href=\"" + base_path + "debate/foreign_debate_2018.htm\" title=\"2018대원외고토론대회\"id=\"link-debate-foreign_debate_2018\">2018대원외고토론대회</a>\n" +
+        "        <a href=\"" + base_path + "debate/foreign.htm\" title=\"외대부고 모의법정대회\"id=\"link-debate-foreign\">외대부고 모의법정대회</a>\n" +  
+        "        <a href=\"" + base_path + "debate/english_speech_contest.htm\" title=\"제15회 ESU KOREA 영어말하기대회\"id=\"link-debate-english_speech_contest\">제15회 ESU KOREA 영어말하기대회</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
