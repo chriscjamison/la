@@ -4896,13 +4896,13 @@ function renderSectionMenu(webpage_index) {
       );
     } else if ((webpage_index > 27) && webpage_index <= 38) {
       jq(menu_selector).html(
-        "      <a href=\"" + base_path + "debate/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
-        "      <a href=\"" + base_path + "debate/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
+        "      <a href=\"" + base_path + "english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
+        "      <a href=\"" + base_path + "english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
+        "      <a href=\"" + base_path + "english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
+        "      <a href=\"" + base_path + "english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
       );
     } else if ((webpage_index === 39) || 
                (webpage_index === 82) || 

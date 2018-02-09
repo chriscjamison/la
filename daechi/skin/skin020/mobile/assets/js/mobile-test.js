@@ -4079,7 +4079,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
-                webpage_index = 135;
+                webpage_index = 140;
               break; 
 
               // Runs if the loading page is the IEEC International English Writing Contest page in the Debate section.
@@ -5125,30 +5125,30 @@ function renderSectionMenu(webpage_index) {
     menu_selector = "#nav-section_menu";
 
     if ((webpage_index > 19 && webpage_index <= 27) || 
-        (webpage_index > 138 && webpage_index <= 144)) {
+        (webpage_index > 139 && webpage_index <= 144)) {
       jq(menu_selector).html(
         "        <a href=\"" + base_path + "debate/iet_english_reading.htm\" title=\"IET 영어독서대회\" id=\"link-debate-iet_english_reading\">IET 영어독서대회</a>\n" + 
-        "        <a href=\"" + base_path + "debate/ieec_english_writing.htm\" title=\"IEEC 국제영어논술대회\"id=\"link-debate-ieec_english_writing\">IEEC 국제영어논술대회</a>\n" + 
-        "        <a href=\"" + base_path + "debate/foreign_debate_2018.htm\" title=\"2018대원외고토론대회\"id=\"link-debate-foreign_debate_2018\">2018대원외고토론대회</a>\n" +
-        "        <a href=\"" + base_path + "debate/foreign.htm\" title=\"외대부고 모의법정대회\"id=\"link-debate-foreign\">외대부고 모의법정대회</a>\n" +  
-        "        <a href=\"" + base_path + "debate/english_speech_contest.htm\" title=\"제15회 ESU KOREA 영어말하기대회\"id=\"link-debate-english_speech_contest\">제15회 ESU KOREA 영어말하기대회</a>\n" + 
+        "        <a href=\"" + base_path + "debate/ieec_english_writing.htm\" title=\"IEEC 국제영어논술대회\" class=\"link-multiple_line\" id=\"link-debate-ieec_english_writing\">IEEC 국제영어논술대회</a>\n" + 
+        "        <a href=\"" + base_path + "debate/foreign_debate_2018.htm\" title=\"2018대원외고토론대회\" class=\"link-multiple_line\" id=\"link-debate-foreign_debate_2018\">2018대원외고토론대회</a>\n" +
+        "        <a href=\"" + base_path + "debate/foreign.htm\" title=\"외대부고 모의법정대회\" class=\"link-multiple_line\" id=\"link-debate-foreign\">외대부고 모의법정대회</a>\n" +  
+        "        <a href=\"" + base_path + "debate/english_speech_contest.htm\" title=\"제15회 ESU KOREA 영어말하기대회\" class=\"link-multiple_line\" id=\"link-debate-english_speech_contest\">제15회 ESU KOREA 영어말하기대회</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
-        "        <a href=\"" + base_path + "debate/debate_schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule (2018)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-debate-schedule_2018\">Schedule (2018)</a>\n" + 
         "        <a href=\"" + base_path + "debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
         "        <a href=\"" + base_path + "debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
       );
     } else if ((webpage_index > 27) && webpage_index <= 38) {
       jq(menu_selector).html(
-        "      <a href=\"" + base_path + "debate/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
-        "      <a href=\"" + base_path + "debate/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
+        "      <a href=\"" + base_path + "english/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "english/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
+        "      <a href=\"" + base_path + "english/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
+        "      <a href=\"" + base_path + "english/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
+        "      <a href=\"" + base_path + "english/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "english/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "english/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
       );
     } else if ((webpage_index === 39) || 
                (webpage_index === 82) || 
@@ -5163,7 +5163,8 @@ function renderSectionMenu(webpage_index) {
       jq(menu_selector).html(
         "      <a href=\"" + base_path + "announcements/index_announcements.htm\" title=\"Page #1\" id=\"link-announcements-page_1\">Page #1</a>\n"
       );
-    } else if ((webpage_index > 60) && webpage_index <= 81) {
+    } else if ((webpage_index > 60 && webpage_index <= 81) || 
+               (webpage_index === 139)) {
       jq(menu_selector).html(
         "      <a href=\"" + base_path + "awards/index_awards.htm\" title=\"Page #1\" id=\"link-awards-page_1\">Page #1</a>\n" 
       );
