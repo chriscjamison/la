@@ -1,0 +1,280 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+/*	font-family: 'Nanum Brush Script', serif; */
+
+.container {
+	width:100%;
+	margin:0 auto;
+	padding:0;
+	background:#f4f4f4;
+
+}
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+/*      width: 960px;*/
+	  height:400px;
+      margin: 0 auto;
+
+  }
+
+.carousel-control1 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 15%;
+	height:400px;
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	/*text-shadow: 0 1px 2px rgba(0, 0, 0, .6);*/
+	vertical-align:middle;
+	padding-top:180px;
+}
+.carousel-control1.left {
+	color: #fff;
+	background-repeat: repeat-x;
+}
+.carousel-control1.right {
+	color: #fff;
+	height:400px;
+	right: 0;
+	left: auto;
+	background-repeat: repeat-x;
+}
+
+.carousel-control1:hover,
+.carousel-control1:focus {
+	color: #ff7e00;
+	text-decoration: none;
+	outline: 0;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.carousel-indicators .active {
+  width: 26px;
+  height: 13px;
+  margin: 0;
+  background-color: #fff;
+}
+
+
+.carousel-caption {
+	font-family:'맑은 고딕';
+	position: absolute;
+	bottom: 100px;
+	z-index: 10;
+	text-align: center;
+	/*  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);*/
+}
+.carousel-caption h3 {
+	color: #4a5084;
+	text-shadow:none;
+	letter-spacing:-3pt;
+	font-weight:bold;
+	font-size:50pt;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+.carousel-caption p {
+	color:#3e3e3e;
+	text-shadow:none;
+	font-size:20pt;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+.carousel-caption a {
+	font-family:'맑은 고딕';
+
+	color:#303030;
+	text-shadow:none;
+	font-size:12pt;
+	letter-spacing:-1pt;
+	margin-top:10px;
+
+	border:1px solid #aaa;
+	border-radius:3px;
+	display:inline-block;
+	width:150px;
+	height:40px;
+	line-height:24pt;
+	text-decoration:none;
+
+}
+.carousel-caption a:hover {
+	background-color:#e76200;
+	color:#ffffff;
+	border:none;
+	text-decoration:none;
+	padding-top:1px;
+}
+/* 비주얼 텍스트 */
+#cut1_mainText{color:#fff;}
+#cut1_subText{color:#eaeaea;font-weight:bold;}
+#cut1_view{color:#fff; background:rgba(255, 255, 255, .3); border:1px solid #f4f4f4;font-weight:bold}
+#cut1_view:hover{ background-color:#e76200;border:none;font-weight:bold}
+
+#cut2_mainText{color:#fff;}
+#cut2_subText{color:#eaeaea;font-weight:bold}
+#cut2_view{color:#fff; background:rgba(255, 255, 255, .5); border:1px solid #fff;font-weight:bold}
+#cut2_view:hover{ background-color:#e76200;border:none;font-weight:bold}
+
+#cut3_mainText{color:#ff7200;}
+#cut3_subText{color:#283673;font-weight:bold}
+#cut3_view{color:#fff; background:rgba(255, 255, 255, .5); border:1px solid #fff;font-weight:bold}
+#cut3_view:hover{ background-color:#e76200;border:none}
+
+#cut4_mainText{color:#52a3ff;font-size:45pt}
+#cut4_subText{color:#ffffff;font-weight:bold}
+#cut4_view{color:#fff; background:rgba(255, 255, 255, .5); border:1px solid #fff;font-weight:bold}
+#cut4_view:hover{ background-color:#e76200;border:none}
+
+#cut5_mainText{color:#fff;}
+#cut5_subText{color:#eaeaea;font-weight:bold;}
+#cut5_view{color:#fff; background:#0c4091; border:1px solid #0c4091;font-weight:bold}
+#cut5_view:hover{ background-color:#d32f2f;border:none;font-weight:bold}
+
+#cut6_view{color:#fff; background:#d32f2f; border:1px solid #d32f2f;font-weight:bold}
+#cut6_view:hover{ background-color:#00b9b2;border:none;font-weight:bold}
+
+  .mainViewLeft{
+	position: absolute; left:50%; width:100px; margin-left:-350px; height:400px; z-index:90;text-align:center;
+  }
+
+    .mainViewRight{
+	position: absolute; left:50%; width:100px; margin-left:250px; height:400px; z-index:90;text-align:center;
+  }
+
+/*  .mainViewLeft span:nth-child(1){ border-radius:100px;background:rgba(255, 255, 255, .1);padding:20px;	text-shadow:none;}
+  .mainViewRight span:nth-child(1){ border-radius:100px;background:rgba(255, 255, 255, .1);padding:20px;text-shadow:none;}
+*/
+</style>
+</head>
+
+
+
+<div class="container">
+	<div class="mainViewLeft">
+		<a class="left carousel-control1" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+	</div>
+	<div class="mainViewRight">
+		<a class="right carousel-control1" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			
+			<div class="item active">
+				<img src="main/images/main_vi004.png" width="100%" alt=""/>
+				<div class="carousel-caption">
+				<h3 id="cut1_mainText">Forensics</h3>
+				<p id="cut1_subText">Debate, Speech, MUN, Mock Trial</p>
+				<a href="program/program1" id="cut1_view">자세히 보기</a>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="main/images/main_vi001.png" width="100%" alt=""/>
+				<div class="carousel-caption">
+				<h3 id="cut2_mainText">Honors English</h3>
+				<p id="cut2_subText">Reading & Writing</p>
+				<a href="program/program1" id="cut2_view">자세히 보기</a>
+				</div>
+			</div>
+				
+			<!--div class="item">
+				<img src="main/images/main_vi003.png" width="100%" alt=""/>
+				<div class="carousel-caption">
+				<h3 id="cut3_mainText">Tournament</h3>
+				<p id="cut3_subText">각종 경시 준비</p>
+				<a href="program/program1" id="cut3_view">자세히 보기</a>
+
+				</div>
+			</div-->
+
+			<div class="item" style="background:url('main/images/main_vi006bg.png') no-repeat;background-size: 100% 100%">
+				<img src="main/images/main_vi006-20170215.png" alt=""/>
+				<div class="carousel-caption">
+				<!--h3 id="cut3_mainText">Tournament</h3>
+				<p id="cut3_subText">각종 경시 준비</p-->
+				<a href="community/community2" id="cut6_view">자세히 보기</a>
+
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="main/images/main_vi002.png" width="100%" alt=""/>
+				<div class="carousel-caption">
+				<h3 id="cut4_mainText">내 실력진단</h3>
+				<p id="cut4_subText">TOEFL, SAT</p>
+				<a href="program/program1" id="cut4_view">자세히 보기</a>
+				</div>
+			</div>
+
+			<!--div class="item" style="background:url('main/images/main_vi005bg.png') no-repeat;background-size: 100% 100%">
+				<img src="main/images/main_vi005.png" alt=""/>
+				<div class="carousel-caption"-->
+				<!--img src="main/images/main_vi005.png" width="100%" alt=""/-->
+				<!--h3 id="cut1_mainText">Forensics</h3>
+				<p id="cut1_subText">Debate, Speech, MUN, Mock Trial</p-->
+				<!--a href="about/about6" id="cut5_view">자세히 보기</a>
+				</div>
+			</div-->
+			
+			<div class="item">
+				<img src="main/images/main_vi003.png" width="100%" alt=""/>
+				<div class="carousel-caption">
+				<h3 id="cut3_mainText">Tournament</h3>
+				<p id="cut3_subText">각종 경시 준비</p>
+				<a href="program/program1" id="cut3_view">자세히 보기</a>
+
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- Left and right controls -->
+		
+	</div>
+</div>
+

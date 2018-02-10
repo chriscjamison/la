@@ -1,0 +1,22 @@
+<?
+$fileName = $_GET[filename];
+
+$downloadPath = $_SERVER["DOCUMENT_ROOT"]."/skin/skin020/mypage/" . $fileName;
+//$downloadPath = "/www/leadersacademy_com/home/skin/skin020/mypage/" . $fileName;
+
+$fileTmp = strstr($fileName, '__');
+$fn = substr($fileTmp, 2);
+
+header("Content-Type: file/unknown");
+header("Content-Disposition: attachment; filename=". $fileName);
+header("Content-Length: ".filesize("$downloadPath"));
+header("Content-Transfer-Encoding: binary ");
+header("Pragma: no-cache");
+header("Expires: 0");
+flush();
+
+if ($fp = fopen("$downloadPath", "r")){
+ print fread($fp, filesize("$downloadPath"));
+}
+fclose($fp);
+?>

@@ -1,0 +1,168 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					<!--{ = inc('inc/left_mypage.htm') }-->
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="images/title3.png" alt="학원생활"></td>
+								<td width="352" class="category"><img src="../images/common/ico_home.png" > HOME &gt; MYPAGE &gt; 학원생활 &gt; <strong>출입현황</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="../images/sub_main.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="../images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('../images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+ <!-- S : Contents -->
+			<table width="680" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td style="padding-bottom:20px;" align="left"><img src="images/title2_st2.png" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <!-- S : Contents -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <thead>
+                                <tr>
+                                  <td height="2" colspan="4" bgcolor="#bda979"></td>
+                                </tr>
+                                <tr>
+                                  <td width="10%" align="center" bgcolor="#dbd3ba" class="style5">번호</td>
+                                  <td width="30%" align="center" bgcolor="#dbd3ba" class="style5"><strong>출입일자</strong></td>
+                                  <td width="30%" align="center" bgcolor="#dbd3ba" class="style5"><strong>도착시간</strong></td>
+                                  <td width="30%" height="28" align="center" bgcolor="#dbd3ba" class="style5"><strong>출발시간</strong></td>
+                                </tr>
+                                <tr>
+                                  <td height="1" colspan="4" align="center" bgcolor="#bda979"></td>
+                                </tr>
+                                </thead>
+                                <tbody id="mypage_access"></tbody>
+                                <tr>
+                                  <td height="40" colspan="4" align="center">
+                                    <div id="pager"></div>
+                                  </td>
+                                </tr>
+                              </table>
+							</td>
+						</tr>
+					</table>
+		<!-- E : Contents -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="../images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><!--{ = inc('inc/bottom.htm') }--></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+<input type="hidden" id="page" />
+<input type="hidden" id="pagetotal" />
+<input type="hidden" id="pagecount" />
+
+<script type="text/javascript">
+jq(document).ready(function(){
+	get_access_list(1);
+	set_pager(1);
+});
+
+// 출입현황 List GET
+function get_access_list(page)
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_academy.php",
+		data: 'type=access&page=' + page,
+		dataType: 'json',
+		error: function(XMLHttpRequest, textStatus, errorThrown){
+			alert("통신 중 에러가 발생했습니다.");
+		},
+		success: function(response){
+			var vhtml = "";
+			jq('#pagetotal').val(parseInt(response.total));
+			if (response.total != null) {
+				jq(response.rc).each(function(el, data){
+					vhtml += "<tr align=\"center\">" +
+					"<td height=\"28\">" + data.seq + "</td>" +
+					"<td>" + data.rdate + "</td>" +
+					"<td>" + data.rtime + "</td>" +
+					"<td>" + data.stime + "</td>" +
+					"</tr>" +
+					"<tr><td height=\"1\" colspan=\"4\" bgcolor=\"#cac0a9\"></td></tr>";
+				});
+			}
+			else {
+				vhtml += "<tr><td height=\"28\" colspan=\"4\" align=\"center\">등록된 글이 없습니다.</td></tr>" +
+				"<tr><td height=\"1\" colspan=\"4\" bgcolor=\"#cac0a9\"></td></tr>";
+			}
+
+			jq("#mypage_access").html(vhtml);
+			set_pager(page, response.total);
+		}
+	});
+}
+
+function set_pager(page, total)
+{
+	var pagecount = getPageCount(total, 10);
+	jq('#pagecount').val(pagecount);
+	jq("#pager").pager({pagenumber: page, pagecount: pagecount, buttonClickCallback: get_access_list});
+}
+</script>
+
+{ # footer }

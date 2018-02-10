@@ -1,0 +1,34 @@
+<?
+$urlArray = explode("/",$_SERVER["PHP_SELF"]);
+$selfURL = $urlArray[count($urlArray)-1];
+if (!$selfURL) {
+	$selfURL = "community1";
+}
+?>
+
+<table width="187" border="0" cellspacing="0" cellpadding="0" style="padding-right:21px">
+	<tr>
+		<td><img src="../community/images/left_title.png"></td>
+	</tr>
+	<tr>
+		<td style="background:url('../images/common/smenuBg.png') repeat-y;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="30"><a href="/community/community1"><img src="../community/images/smenu01<?if($selfURL=='community1'){echo 's';}?>.png" <?if($selfURL!='community1'){?>onMouseOver="this.src='../community/images/smenu01s.png'" onMouseOut="this.src='../community/images/smenu01.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/community/community2"><img src="../community/images/smenu02<?if($selfURL=='community2'){echo 's';}?>.png" <?if($selfURL!='community2'){?>onMouseOver="this.src='../community/images/smenu02s.png'" onMouseOut="this.src='../community/images/smenu02.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/community/community3"><img src="../community/images/smenu03<?if($selfURL=='community3'){echo 's';}?>.png" <?if($selfURL!='community3'){?>onMouseOver="this.src='../community/images/smenu03s.png'" onMouseOut="this.src='../community/images/smenu03.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/community/community4"><img src="../community/images/smenu04<?if($selfURL=='community4'){echo 's';}?>.png" <?if($selfURL!='community4'){?>onMouseOver="this.src='../community/images/smenu04s.png'" onMouseOut="this.src='../community/images/smenu04.png'"<?}?> alt=""></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="../images/common/smenuBottom.png"></td>
+	</tr>
+</table>

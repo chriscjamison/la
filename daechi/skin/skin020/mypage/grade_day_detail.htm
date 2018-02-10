@@ -1,0 +1,157 @@
+{ = inc('inc/popup_top.htm') } <!-- 팝업용 header -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+      <td style="background:#c33434; border-bottom:1px solid #c33434; height:60px; padding-left:10px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="90%"><img src="images/title3_popt1.png"/></td>
+        <td width="10%" align="center"><a href="javascript:window.close();"><img src="images/btn_close.gif" border="0"></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="445" valign="top" style="padding:15px;" align="center">
+      <table width="98%" border="0" cellspacing="0" cellpadding="0">
+
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#dedede">
+              <tr>
+                <td width="20%" height="35" align="center" bgcolor="#f7f7f7"><strong>반명</strong></td>
+                <td width="30%" height="35" bgcolor="#FFFFFF" class="pl10"><span id="grade_classname"></span></td>
+                <td width="20%" height="35" align="center" bgcolor="#f7f7f7"><strong>이름</strong></td>
+                <td width="30%" height="35" bgcolor="#FFFFFF" class="pl10"><span id="grade_name"></span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#dedede">
+              <thead>
+                <tr align="center">
+                  <td width="20%" bgcolor="#f7f7f7"><strong>과목</strong></td>
+                  <td width="20%" bgcolor="#f7f7f7"><strong>점수</strong></td>
+                  <td width="20%" bgcolor="#f7f7f7"><strong>반평균</strong></td>
+                  <td width="20%" bgcolor="#f7f7f7"><strong>전체평균</strong></td>
+                  <td width="20%" bgcolor="#f7f7f7"><strong>반석차</strong></td>
+                </tr>
+              </thead>
+              <tbody id="grade_daily_info"></tbody>
+            </table>
+          </td>
+        </tr>
+        <tr><td height="10"></td></tr>
+        <tr>
+          <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#dedede">
+            <tr>
+              <td width="20%" align="center" bgcolor="#f7f7f7"><strong>의견</strong></td>
+              <td width="80%" bgcolor="#FFFFFF" class="pl10"><span id="grade_opinion"></span></td>
+            </tr>
+			<tr id="grade_HomeNotify_table">
+			  <td width="20%" align="center" bgcolor="#f7f7f7" class="style2"><strong>가정통신문</strong></td>
+			  <td width="80%" bgcolor="#FFFFFF" class="style2"><span id="grade_HomeNotify"></span></td>
+			</tr>
+          </table></td>
+        </tr>
+        <tr><td height="10"></td></tr>
+		<tr>
+			<td align="center"><div id="grade_graph"></div></td>
+		</tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#c33434">
+    </td>
+  </tr>
+</table>
+<script type="text/javascript" src="/js/FusionCharts.js"></script>
+<script type="text/javascript">
+var chart1 = new FusionCharts("/lib/chart/MSColumn2D.swf", "CapacityChart", "100%", "200", "0", "1");
+jq(document).ready(function() {
+	get_grade_detail();
+});
+
+// 출입현황 List GET
+// 출입현황 List GET
+function get_grade_detail()
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_grade.php",
+		data: 'type=dailydetail&seq={_GET.seq}',
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vhtml = "";
+			var vopinion = "";
+			var tepinion = "";
+			jq('#grade_title').text(response.info.rtitle);
+			jq('#grade_classname').text(response.info.classname);
+			jq('#grade_name').text(response.info.rname);
+			//jq('#grade_opinion').html('<strong>' + response.opinion.subject + ': </strong> ' + response.opinion.opinion);
+			if (jq.isArray(response.opi)) {
+				jq(response.opi).each(function(el2, data2) {
+					vopinion += "<strong>" + data2.subject + " : </strong>"
+							  + data2.opinion + "<br>";
+					 tepinion = data2.teacher;
+				});
+			}
+			jq('#grade_opinion').html(vopinion);
+			if (tepinion){
+				jq('#grade_opinion').html(vopinion + tepinion);
+			}
+			jq('#grade_HomeNotify').html(": " + response.HomeNotify);
+
+			var xmlData = "<chart palette='2'  shownames='1' showvalues='1' decimals='0'><categories>";
+			var xmlData2 = "<dataset seriesName='점수' fontColor='#AFD8F8' showValues='1'>";
+			var xmlData3 = "<dataset seriesName='반평균' fontColor='#F6BD0F' showValues='1'>";
+			var xmlData4 = "<dataset seriesName='전체평균' fontColor='#8BBA00' showValues='1'>";
+			if (jq.isArray(response.rc)) {
+				jq(response.rc).each(function(el, data) {
+					if (data.fullpoint){
+						var dayrpont = data.rpoint + " / " + data.fullpoint;
+					}else{
+						var dayrpont = data.rpoint;
+					}
+
+					var classgrade = data.classgrade;
+					if (classgrade==null)	{
+						classgrade = "";
+					}
+					vhtml += "<tr align=\"center\">"
+						   + "<td height=\"28\" bgcolor=\"#FFFFFF\">" + data.subject + "</td>"
+						   + "<td bgcolor=\"#FFFFFF\">" + dayrpont + "</td>"
+						   + "<td bgcolor=\"#FFFFFF\">" + data.classavg + "</td>"
+						   + "<td bgcolor=\"#FFFFFF\">" + data.allavg + "</td>"
+						   + "<td bgcolor=\"#FFFFFF\">" + classgrade + "</td>"
+						   + "</tr>";
+					xmlData += "<category label='" + data.subject + "' />";
+					xmlData2 += "<set value=\""+ data.rpoint +"\" />";
+					xmlData3 += "<set value=\""+ data.classavg +"\" />";
+					xmlData4 += "<set value=\""+ data.allavg +"\" />";
+				});
+			}
+
+			jq("#grade_daily_info").html(vhtml);
+			xmlData += "</categories>";
+			xmlData2 += "</dataset>";
+			xmlData3 += "</dataset>";
+			xmlData4 += "</dataset>";
+			chartData = xmlData + xmlData2 + xmlData3 + xmlData4 + "<styles>"
+					+ "<application><apply toObject='DATALABELS' styles='LabelFont' /><apply toObject='CAPTION' styles='CaptionFont' /></application></styles>"
+					+ "</chart>";
+
+			chart1.setTransparent();
+			chart1.setDataXML(chartData);
+			chart1.render("grade_graph");
+		}
+	});
+}
+</script>
+</body>
+</html>

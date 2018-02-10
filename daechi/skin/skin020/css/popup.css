@@ -1,0 +1,189 @@
+/* CSS Document */
+
+@charset "euc-kr";
+SELECT {background-color : #ffffff;}
+
+BODY {margin-left: 0px;
+	margin-top:   0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-family: "Gulim";
+	color: 555555;
+	line-height: 18px;
+	letter-spacing:0px;
+}
+TD, TH, DIV {
+	font-family: "Gulim";
+	font-size: 12px;
+/*	color: 555555;*/
+	line-height: 16px;
+	letter-spacing:0px;
+}
+.bo {
+	font-family: "Gulim";
+	font-size: 12px;
+	font-weight: bold;
+	color: 555555;
+}
+INPUT, TEXTAREA {
+	font-family: "Gulim";
+	font-size: 12px;
+	color: 818181;
+	border:1px solid #cccccc;
+}
+
+img {border:none;}
+.borderAll {border:1px solid #cccccc;}
+
+/* 포커스(점선) 없애는 소스 */
+a,area { blr:expression(this.onFocus=this.blur()) }
+:focus { -moz-outline-style: none; }
+
+
+/* selbox */
+.selbox {color:818181; font-family:"Gulim"; font-size:12px;}
+.Free_selbox { font-family: "Gulim";font-size: 12px;color: 555555; }
+
+.Free_form { border:1 solid #e7e7e7; background-color:#ffffff; height:19px; }
+.search_box { border:1 solid #e7e7e7; background-color:#ffffff; height:20px; width:170px;}
+
+
+/* LINK */	
+A:link {color:#818181;text-decoration:none}
+A:visited {color:#818181;text-decoration:none}
+A:active {color:#818181;}
+A:hover {color:#818181;text-decoration:none}
+
+
+/* PAGE VIEW */
+.pageView:link {color: #818181;font-family: "Gulim";font-size: 12px;}
+.pageView:visited {color: #818181;font-family: "Gulim";font-size: 12px;}
+.pageView:active {color: #818181;font-family: "Gulim";font-size: 12px;}
+.pageView:hover {color: #818181;font-family: "Gulim";font-size: 12px;}
+
+
+.board-line01 {border-bottom:1px solid #e8e8e5; height:28px; }
+.board-line02 {border-bottom:2px solid #f69c4d; height:29px; }
+.board-line03 {border-bottom:2px solid #f69c4d; padding-bottom:10px; padding-top:10px;}
+.board-line04 {border-bottom:1px solid #e8e8e5; height:28px; padding-left:10px; }
+.board-line05 {border-bottom:2px solid #f69c4d; padding-left:10px; padding-top:7px}
+.board-line06 {border-bottom:1px solid #f69c4d; height:29px; }
+.board-line07 {border-bottom:1px solid #e8e8e5; height:28px; padding-right:10px }
+.board-line08 {border-bottom:1px solid #f69c4d; height:29px; padding-right:10px }
+/* ----------------------------- 공통 --------------------------------- */
+
+/* Font */
+.b {font-weight:bold;}
+
+.Orange11pxBold {color:f96810; font-size:12px; font-family:"Gulim"; font-weight:bold;}
+.Orange11px {color:f96810; font-size:12px; font-family:"Gulim"; }
+.boardtype {color:a5a5a5; font-size:12px; font-family:"Gulim";}
+.boardTitle {color:ffffff; font-size:12px; font-family:"Gulim"; font-weight:bold;}
+
+.fcolWhite{color:#ffffff;}
+.fcolBlue {color:#002aff;}
+.fcolRed {color:#ff0000;}
+
+/*공통폰트스타일-사이즈*/
+
+.fontsiz8 {	font-size: 8pt;}
+.fontsiz9 { font-size: 9pt;}
+.fontsiz10 { font-size: 10pt;}
+.fontsiz12 { font-size: 12pt;}
+.fontsiz13 { font-size: 13pt;}
+.fontsiz14 { font-size: 14pt;}
+
+
+
+/* Padding */
+.pl5{padding-left:5px;}
+.pl10 {padding-left:10px;}
+.pl15 {padding-left:15px;}
+
+.pt5 {padding-top:5px;}
+.pt10 {padding-top:10px;}
+.pt15 {padding-top:15px;}
+
+.pr5 {padding-right:5px;}
+.pr10 {padding-right:10px;}
+.pr15 {padding-right:15px;}
+
+.pb5 {padding-bottom:5px;}
+.pb10 {padding-bottom:10px;}
+.pb15 {padding-bottom:15px;}
+
+/* margin */
+.ml5{margin-left:5px;}
+.ml10 {margin-left:10px;}
+.ml15 {margin-left:15px;}
+
+.mt5 {margin-top:5px;}
+.mt10 {margin-top:10px;}
+.mt15 {margin-top:15px;}
+
+.mr5 {margin-right:5px;}
+.mr10 {margin-right:10px;}
+.mr15 {margin-right:15px;}
+
+.mb5 {margin-bottom:5px;}
+.mb10 {margin-bottom:10px;}
+.mb15 {margin-bottom:15px;}
+
+
+/* ----------------------------- Main --------------------------------- */
+
+.mainSch table th {font-size:8pt; font-family:tahoma; background-color:#e7e7e7; font-weight:normal;}
+.mainSch table th .sunday { color:#8c4444;}
+.mainSch table td {font-size:8pt; font-family:tahoma; text-align:right;}
+.mainSch table td .on{font-size:8pt; font-family:tahoma; color:#ffffff; background-color:#ff7b00;}
+.mainSch table td .sunday{font-size:8pt; font-family:tahoma; color:#8c4444;}
+.mainSch table td .rsunday{font-size:8pt; font-family:tahoma; color:#c69595;}
+.mainSch table td .rday{font-size:8pt; font-family:tahoma; color:#8c8c8c;}
+
+
+/* Notice */
+.notice:link {color: #4d4d4d;font-family: "돋움";font-size: 11px;}
+.notice:visited {color: #4d4d4d;font-family: "돋움";font-size: 11px;}
+.notice:active {color: #4d4d4d;font-family: "돋움";font-size: 11px;}
+.notice:hover {color: #4d4d4d;font-family: "돋움";font-size: 11px;}
+
+/* Notice Date*/
+.date{color:#e6711a; font-family:sans-serif; font-size:9px;}
+
+
+/* Login Form */
+.login_form_id { width:133px; height:20px; border:1 solid #e7e7e7; background-color:#f7f7f7; background-image:url(../Front/images/main/log_id.gif);}
+.login_form_pw { width:133px; height:20px; border:1 solid #e7e7e7; background-color:#f7f7f7; background-image:url(../Front/images/main/log_pw.gif);}
+
+
+/* ----------------------------- Sub --------------------------------- */
+
+/*--------------start 메인::근무상담안내 팝업-----------------------*/
+.mTime {
+	border-top:2px solid #8c94d7;
+	border-bottom:2px solid #8c94d7;
+	border-collapse:collapse;
+	margin: 5px 0;
+}
+
+.mTime th {
+	padding : 6px;
+	text-align:center;
+	vertical-align:middle;
+	height:3px;
+	border:1px solid #a7accf;
+	background:#dde1fd;
+	font-size:9pt;
+	letter-spacing:-1pt;
+}
+
+.mTime td {
+	padding: 10px;
+	vertical-align:top;
+	border:1px solid #b4b4b4;
+	line-height:16pt;
+	font-size:9pt;
+}
+
+/*--------------end 메인::근무상담안내 팝업-----------------------*/
