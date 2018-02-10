@@ -3991,7 +3991,7 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n" + 
                                     "        <div class=\"article-lessons\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Leaders Academy는 개인 교습을 제공합니다. 저희 서비스에 대해 더 자세히 알고 싶으시면 전화 나 02-562-9799\n" + 
+                                    "            Leaders Academy에서는 1:1 수업 혹은 팀수업이 가능합니다. 필요하신 경우  02-562-9799 로 상담 부탁드립니다. 감사합니다.\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 
@@ -4005,7 +4005,7 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n" + 
                                     "        <div class=\"article-business\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Leaders Academy와의 비즈니스 관계에서 얻을 수있는 잠재적 이익에 대해 문의 하시려면 귀하와 상담하게되어 기쁩니다. 02-562-9799로 전화를 걸어 대치 캠퍼스 직원과 통화하거나 031-609-9799 9로 전화를 걸어 분당 캠퍼스 담당자에게 문의하십시오.\n" + 
+                                    "            Leaders Academy는 저희와 교육 철학 및 미래 비전이 같으신 분들과 함께하고자 합니다. 사업 제휴 혹은 가맹 문의 등은 <a href=\"mailto:simkyounghee@gmail.com\">simkyounghee@gmail.com</a> 으로 연락 부탁드립니다. 감사합니다.\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 

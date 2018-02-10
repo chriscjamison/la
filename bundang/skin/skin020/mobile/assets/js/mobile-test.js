@@ -1164,7 +1164,7 @@ function extractHtmlFromDesktopPage()  {
                                     "                  Phone Number\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  02-562-9799\n" + 
+                                    "                  031-609-9799\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
@@ -1495,7 +1495,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            (수업내용 -해당주 토픽강의1시간,개별스피치 클리닉으로구성,예약제)\n" + 
                                     "          </p>\n" + 
                                     "          <p>\n" + 
-                                    "            감사합니다. 02-562-9799\n" + 
+                                    "            감사합니다. 031-609-9799\n" + 
                                     "          </p>\n"
                                     "        </div>\n";  
 
@@ -2485,7 +2485,7 @@ function extractHtmlFromDesktopPage()  {
                                     "          <ul>\n" + 
                                     "            <li>등록: 매월등록 또는 분기별 등록 할인 적용 할인 적용(10%할인 적용)</li>\n" + 
                                     "            <li>입학시험 일정: 매주 수(6-7:20PM), (2-3:20PM) / Reading, Essay & Impromptu Speech 부문 평가(하루 전 예약,무료)</li>\n" + 
-                                    "            <li>상담문의 02-562-9799, 010-4773-9799</li>\n" + 
+                                    "            <li>상담문의 031-609-9799, 010-4773-9799</li>\n" + 
                                     "          </ul>\n" + 
                                     "        </div>\n";  
 
@@ -2509,7 +2509,7 @@ function extractHtmlFromDesktopPage()  {
                                     "          <p>\n" + 
                                     "            초등 6학년반은 현재 2명만 추가등록받고 있습니다. 리더스입학시험을 본 학생들 중 우선신청을\n" +  
                                     "            <br/>\n" + 
-                                    "            받고 있으니 연락주시기 바랍니다. 감사합니다. 02-562-9799\n" + 
+                                    "            받고 있으니 연락주시기 바랍니다. 감사합니다. 031-609-9799\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";  
 
@@ -3906,7 +3906,7 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n" + 
                                     "        <div class=\"article-lessons\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Leaders Academy는 개인 교습을 제공합니다. 저희 서비스에 대해 더 자세히 알고 싶으시면 전화 나 02-562-9799\n" + 
+                                    "            Leaders Academy에서는 1:1 수업 혹은 팀수업이 가능합니다. 필요하신 경우  031-609-9799 로 상담 부탁드립니다. 감사합니다.\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 
@@ -3920,7 +3920,7 @@ function extractHtmlFromDesktopPage()  {
                                     "        </div>\n" + 
                                     "        <div class=\"article-business\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Lorem ipsum dolle 앉아 amet, consipetur adipiscing elit. Aenean gravida turpis 앉아서 odio tincidunt, 앉아서 앉아서 tellus convallis. Maecenas 전신 담화로 된 집.\n" + 
+                                    "            Leaders Academy는 저희와 교육 철학 및 미래 비전이 같으신 분들과 함께하고자 합니다. 사업 제휴 혹은 가맹 문의 등은 <a href=\"simkyounghee@gmail.com\">simkyounghee@gmail.com</a> 으로 연락 부탁드립니다. 감사합니다.\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 

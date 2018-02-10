@@ -341,7 +341,6 @@ input#gsc-i-id1 {
 }
 
 table.gsc-search-box td {
-  /* width: 100% !important; */
   margin-top: 14px;
   padding: 0;
 }
@@ -399,32 +398,6 @@ nav > section > div > a,
   border: 5px solid #e76200;
 }
 
-/* #header-links a, 
-nav > section > div > a, 
-#nav-sub_menu a, 
-#nav-main_menu > section > div > a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  background-color: #d8ccc3;
-  box-shadow: 4px 4px 1px #a2a2a2;
-  border: 5px solid #485081;
-} */
-
-/* #header-links a, 
-nav > section > div > a, 
-#nav-sub_menu a, 
-#nav-main_menu > section > div > a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  background-color: #485081;
-  box-shadow: 4px 4px 1px #a2a2a2;
-  border: 5px solid #d8ccc3;
-} */
-
 #header-links a:active,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
@@ -437,68 +410,11 @@ nav > section > div > a:active,
   border-color: #fff;
 }
 
-
-/* #header-links a:active,
-nav > section > div > a:active, 
-#nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  background-color: #e76200;
-  border-color: #485081;
-}
- */
-
-/*  #header-links a:active,
-nav > section > div > a:active, 
-#nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  background-color: #485081;
-  border-color: #e76200;
-} */
-
-/* #header-links a:active, 
-#nav-menu-links a:active, 
-#nav-section_menu a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  color: #fff;
-} */
-/* 
-#header-links a:active, 
-#nav-menu-links a:active, 
-#nav-section_menu a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  color: #485081;
-} */
-
 .article-faculty-info ul li a:active, 
 .article-debate-links a:active, 
 .article-english-links a:active {
   color: #fff;
 }
-
-/* #header-links a, 
-nav > section > div span, 
-#nav-main_menu > section > div span,
-#nav-section_menu a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  text-decoration: none;
-  text-shadow: 2px 2px 1px #a2a2a2;
-  color: #d8ccc3;
-} */
 
 #header-links a, 
 nav > section > div span, 
@@ -513,8 +429,6 @@ nav > section > div span,
   color: #485081;
 }
 
-/* nav > section > div span, 
-#nav-main_menu > section > div span, */
 .article-faculty-info ul li a, 
 .article-debate-links a, 
 .article-english-links a, 
@@ -522,7 +436,8 @@ nav > section > div span,
 .article-awards a, 
 .article-media a, 
 .article-events a, 
-.article-camps a {
+.article-camps a, 
+.article-business p a {
   color: #e76200;
 }
 
@@ -1301,7 +1216,7 @@ input[name="testDate"] {
  .article-contact_us, 
  .article-lessons, 
  .article-business {
-  min-height: 805px;
+  min-height: 797px;
 }
 
 

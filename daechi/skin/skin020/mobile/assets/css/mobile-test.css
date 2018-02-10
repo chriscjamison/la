@@ -441,7 +441,8 @@ nav > section > div span,
 .article-awards a, 
 .article-media a, 
 .article-events a, 
-.article-camps a {
+.article-camps a, 
+.article-business p a {
   color: #e76200;
 }
 
@@ -1197,7 +1198,7 @@ input[name="testDate"] {
  .article-contact_us, 
  .article-lessons, 
  .article-business {
-  min-height: 805px;
+  min-height: 797px;
 }
 
 
