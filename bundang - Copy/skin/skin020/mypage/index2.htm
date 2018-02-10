@@ -1,0 +1,326 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="966" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴-->
+        </td>
+    </tr>
+    <tr>
+        <td height="15">
+            <img src="../images/common/visual_sub.gif" width="966" height="179" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="8">
+                    </td>
+                    <td width="180" valign="top">
+                        <!-- S:LEFT AREA-->
+                        <table width="197" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="197">
+                                    <!-- S: LEFT MENU --><!--{ = inc('inc/left_mypage.htm') }--><!-- E: LEFT MENU -->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- E:LEFT AREA-->
+                    </td>
+                    <td width="12">
+                    </td>
+                    <td valign="top">
+                        <!-- S:CENTER AREA-->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <table width="749" height="750" border="0" cellspacing="0" cellpadding="0" background="../images/common/contents_bg.gif" style="background-repeat:no-repeat">
+                                        <td width="41" rowspan="5">
+                                            &nbsp;
+                                        </td>
+                                        <td width="666" rowspan="5" valign="top">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="35">
+                                                </td>
+                                            </tr>
+                                            <td height="35">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="images/title4.gif" />
+                                                        </td>
+                                                        <td align="right">
+                                                            <span class="style2">HOME &gt; MYPAGE</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10" colspan="2">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="1" bgcolor="d2d5d8" colspan="2">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <!-- S : Contents -->
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="450">
+                                                                <table width="100%" border="0" cellpadding="10" cellspacing="1" bgcolor="e3e3e3">
+                                                                    <tr>
+                                                                        <td bgcolor="f9f9f9">
+                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                <tr>
+                                                                                    <td height="25">
+                                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <img src="images/mymain_title1.gif" width="67" height="15" />
+                                                                                                </td>
+                                                                                                <td align="right">
+                                                                                                    <a href="javascript:winscroll('/frame?fr=meminfo','member_info','635','700')"><img src="../images/common/btn_modify.gif" border="0" /></a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="e3e3e3">
+                                                                                            <tr>
+                                                                                                <td width="30%" align="center" bgcolor="f1f1f1" class="style13">
+                                                                                                    <span class="style19">아이디</span>
+                                                                                                </td>
+                                                                                                <td width="30%" align="center" bgcolor="f1f1f1" class="style13">
+                                                                                                    <span class="style19">이름</span>
+                                                                                                </td>
+                                                                                                <td align="center" bgcolor="f1f1f1" class="style13">
+                                                                                                    <span class="style19">이메일</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                                                    {member_id}
+                                                                                                </td>
+                                                                                                <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                                                    {member_name}
+                                                                                                </td>
+                                                                                                <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                                                    {member_email}
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td height="25" align="left">
+                                                                                        <span class="style17">기본정보 수정을 원하시면, 상단의 [수정]버튼을 누르세요.</span>
+                                                                                        <br/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td width="9">
+                                                            </td>
+                                                            <td width="275">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td height="30" colspan="3">
+                                                                        <img src="images/mymain_title2.gif" width="67" height="15" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="400" style="padding-right:20px;">
+                                                                        <!-- 공지사항 최근게시물 --><!--{ = m_recent('notice',4,'/commu/notice',20,0,1,'default')}-->
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!--img src="images/banner.gif" width="275" height="127" /-->
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="14">
+                                                                            <img src="images/mymain_bar_l.gif" width="14" height="43" />
+                                                                        </td>
+                                                                        <td width="33%" background="images/mymain_bar_bg.gif" class="style13">
+                                                                            <strong>{nowdate}</strong>
+                                                                        </td>
+                                                                        <td width="33%" align="center" background="images/mymain_bar_bg.gif" class="style13">
+                                                                            <strong>학원생활 요약</strong>
+                                                                        </td>
+                                                                        <td width="33%" background="images/mymain_bar_bg.gif">
+                                                                            &nbsp;
+                                                                        </td>
+                                                                        <td width="15">
+                                                                            <img src="images/mymain_bar_r.gif" width="15" height="43" />
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="e3e3e3">
+                                                                    <tr>
+                                                                        <td width="25%" align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">출결현황</span>
+                                                                        </td>
+                                                                        <td width="25%" align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">출입현황</span>
+                                                                        </td>
+                                                                        <td width="25%" align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">상담현황</span>
+                                                                        </td>
+                                                                        <td width="25%" align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">보강현황</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="attend_info"></span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="inout_info"></span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="counsel_info"></span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="supple_info"></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">읽지않은메일</span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">미납/납입내역</span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">총보너스</span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="f1f1f1" class="style15">
+                                                                            <span class="style20">과제물</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="mail_info"></span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="onlinetest_info"></span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="bonus_info"></span> 점
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="homework_info"></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <!--tr>
+                                                            <td colspan="3">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td height="30">
+                                                                            <img src="images/mymain_title2.gif" width="67" height="15" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td width="400" style="padding-right:20px;">
+                                                                        <!-- 공지사항 최근게시물 --><!--{ = m_recent('notice',4,'/commu/notice',30,0,1,'default')}-->
+                                                                      </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td></td>
+                                                            <td valign="bottom">
+                                                                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="e3e3e3">
+                                                                    <tr>
+                                                                        <td width="33%" height="40" align="center" bgcolor="f9f9f9">
+                                                                            <a href="/mypage/tuition"><img src="images/mymain_ban1.gif" width="85" height="17" border="0" /></a>
+                                                                        </td>
+                                                                        <td width="33%" align="center" bgcolor="f9f9f9">
+                                                                            <a href="#"><img src="images/mymain_ban2.gif" width="85" height="17" border="0" /></a>
+                                                                        </td>
+                                                                        <td width="33%" align="center" bgcolor="f9f9f9">
+                                                                            <a href="#"><img src="images/mymain_ban3.gif" width="85" height="17" border="0"/></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="40" align="center" bgcolor="f9f9f9">
+                                                                            <a href="#"><img src="images/mymain_ban4.gif" width="85" height="17" border="0"/></a>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="f9f9f9">
+                                                                            <a href="#"><img src="images/mymain_ban5.gif" width="85" height="17" border="0"/></a>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="f9f9f9">
+                                                                            <a href="#"><img src="images/mymain_ban6.gif" width="85" height="17" border="0"/></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr-->
+                                                    </table><!-- E : Contents -->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                        <td width="43" rowspan="5">
+                                            &nbsp;
+                                        </td>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- E:CENTER AREA-->
+    <tr>
+        <td height="20">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!----S: FOOTER ----->
+            <!--{ = inc('inc/bottom.htm') }-->
+            <!----E: FOOTER ----->
+        </td>
+    </tr>
+</table>
+{ # footer }

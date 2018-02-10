@@ -1,0 +1,34 @@
+<?
+$urlArray = explode("/",$_SERVER["PHP_SELF"]);
+$selfURL = $urlArray[count($urlArray)-1];
+if (!$selfURL) {
+	$selfURL = "program1";
+}
+?>
+
+<table width="187" border="0" cellspacing="0" cellpadding="0" style="padding-right:21px">
+	<tr>
+		<td><img src="../program/images/left_title.png"></td>
+	</tr>
+	<tr>
+		<td style="background:url('../images/common/smenuBg.png') repeat-y;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="30"><a href="/program/program1"><img src="../program/images/smenu01<?if($selfURL=='program1'){echo 's';}?>.png" <?if($selfURL!='program1'){?>onMouseOver="this.src='../program/images/smenu01s.png'" onMouseOut="this.src='../program/images/smenu01.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/program/program2"><img src="../program/images/smenu02<?if($selfURL=='program2'){echo 's';}?>.png" <?if($selfURL!='program2'){?>onMouseOver="this.src='../program/images/smenu02s.png'" onMouseOut="this.src='../program/images/smenu02.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/program/program3"><img src="../program/images/smenu03<?if($selfURL=='program3'){echo 's';}?>.png" <?if($selfURL!='program3'){?>onMouseOver="this.src='../program/images/smenu03s.png'" onMouseOut="this.src='../program/images/smenu03.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/program/program4"><img src="../program/images/smenu05<?if($selfURL=='program4'){echo 's';}?>.png" <?if($selfURL!='program4'){?>onMouseOver="this.src='../program/images/smenu05s.png'" onMouseOut="this.src='../program/images/smenu05.png'"<?}?> alt=""></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="../images/common/smenuBottom.png"></td>
+	</tr>
+</table>

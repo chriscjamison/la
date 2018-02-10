@@ -1,0 +1,57 @@
+<?
+$urlArray = explode("/",$_SERVER["PHP_SELF"]);
+$selfURL = $urlArray[count($urlArray)-1];
+if (!$selfURL) {
+	$selfURL = "news1";
+}
+?>
+
+<table width="187" border="0" cellspacing="0" cellpadding="0" style="padding-right:21px">
+	<tr>
+		<td><img src="../member/images/left_title.png"></td>
+	</tr>
+	<tr>
+		<td style="background:url('../images/common/smenuBg.png') repeat-y;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="30" id="IDSearchTD"><a href="javascript:PopUpWin('/frame?fr=findid','find_member_id','383','280','ID');"><img src="../member/images/smenu01.png" onMouseOver="this.src='../member/images/smenu01s.png'" onMouseOut="this.src='../member/images/smenu01.png'" alt="아이디찾기"></a></td>
+				</tr>
+				<tr>
+					<td height="30" id="PWDSearchTD"><a href="javascript:PopUpWin('/frame?fr=findpass','find_member_passwd','383','280','PWD');"><img src="../member/images/smenu02.png" onMouseOver="this.src='../member/images/smenu02s.png'" onMouseOut="this.src='../member/images/smenu02.png'" alt="비밀번호찾기"></a></td>
+				</tr>
+				<tr>
+					<td height="30" id="agreementTD"><a href="/member/agreement"><img src="../member/images/smenu03<?if($selfURL=='agreement'){echo 's';}?>.png" <?if($selfURL!='agreement'){?>onMouseOver="this.src='../member/images/smenu03s.png'"  onMouseOut="this.src='../member/images/smenu03.png'"<?}?> alt="이용약관"></a></td>
+				</tr>
+				<tr>
+					<td height="30" id="privacyTD"><a href="/member/privacy"><img src="../member/images/smenu04<?if($selfURL=='privacy'){echo 's';}?>.png"  <?if($selfURL!='privacy'){?>onMouseOver="this.src='../member/images/smenu04s.png'"  onMouseOut="this.src='../member/images/smenu04.png'"<?}?> alt="개인정보취급방침"></a></td>
+				</tr>
+				<tr>
+					<td height="30" id="noemailTD"><a href="/member/noemail"><img src="../member/images/smenu05<?if($selfURL=='noemail'){echo 's';}?>.png"  <?if($selfURL!='noemail'){?>onMouseOver="this.src='../member/images/smenu05s.png'" onMouseOut="this.src='../member/images/smenu05.png'"<?}?> alt="이메일무단수집거부"></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="../images/common/smenuBottom.png"></td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+<!--
+function PopUpWin(src,winID,width,height,state){
+	win(src,winID,width,height);
+	if (state=="ID"){
+		jq("#IDSearchTD").html("<a href=\"javascript:PopUpWin('/frame?fr=findid','find_member_id','383','280','ID');\"><img src=\"../member/images/smenu01s.png\" alt=\"아이디찾기\"></a>");
+		jq("#PWDSearchTD").html("<a href=\"javascript:PopUpWin('/frame?fr=findpass','find_member_passwd','383','280','PWD');\"><img src=\"../member/images/smenu02.png\" onMouseOver=\"this.src='../member/images/smenu02s.png'\" onMouseOut=\"this.src='../member/images/smenu02.png'\" alt=\"비밀번호찾기\"></a>");
+	}else{
+		jq("#IDSearchTD").html("<a href=\"javascript:PopUpWin('/frame?fr=findid','find_member_id','383','280','ID');\"><img src=\"../member/images/smenu01.png\" onMouseOver=\"this.src='../member/images/smenu01s.png'\" onMouseOut=\"this.src='../member/images/smenu01.png'\" alt=\"아이디찾기\"></a>");
+		jq("#PWDSearchTD").html("<a href=\"javascript:PopUpWin('/frame?fr=findpass','find_member_passwd','383','280','PWD');\"><img src=\"../member/images/smenu02s.png\"></a>");
+	}
+	
+	jq("#agreementTD").html("<a href='/member/agreement'><img src='../member/images/smenu03.png' onMouseOver=this.src='../member/images/smenu03s.png'  onMouseOut=this.src='../member/images/smenu03.png' alt='이용약관'></a>");
+	jq("privacyTD").html("<a href=\"/member/privacy\"><img src=\"../member/images/smenu04.png\" onMouseOver=\"this.src='../member/images/smenu04s.png'\"  onMouseOut=\"this.src='../member/images/smenu04.png'\" alt=\"개인정보취급방침\"></a>");
+	jq("noemailTD").html("<a href=\"/member/noemail\"><img src=\"../member/images/smenu05.png\" onMouseOver=\"this.src='../member/images/smenu05s.png'\" onMouseOut=\"this.src='../member/images/smenu05.png'\" alt=\"이메일무단수집거부\"></a>");
+
+}
+//-->
+</script>

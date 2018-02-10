@@ -1,0 +1,167 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" background="../images/common/bg_sub.gif" valign="top"><!--TopMenu-->
+		<table width="1024" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="center" class="topmenu"><!--S:상단메뉴-->
+		  <!--{ = inc('inc/top.htm') }-->
+		  <!--E:상단메뉴--></td>
+		  </tr>
+		</table>
+    <!--TopMenu-->
+    <!--Contents-->
+	<table width="1024" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="250" valign="top" style="padding-left:15px;"> <!-- S:LEFT AREA-->
+            <!--{ = inc('inc/left_mypage.htm') }-->
+            <!-- E:LEFT AREA--></td>
+        <td width="759" valign="top" style="padding-bottom:40px;">
+		<!--소타이틀-->
+			<table width="735" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td width="414" height="35" valign="top"><img src="images/title3.png" alt="학원생활"></td>
+				<td width="321" class="category">ㆍHOME &gt; MYPAGE &gt; 학원생활 &gt; <strong>일자별 성적조회</strong></td>
+			  </tr>
+			  <tr>
+				<td height="2" colspan="2" background="../images/common/bg_titline.gif"></td>
+			  </tr>
+			</table>
+		<!--소타이틀-->
+        <!--내용시작-->
+			<table width="735" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                           <td style="padding-bottom:20px;"><img src="images/title2_st18.gif" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <!-- S : Contents -->
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<thead>
+										<tr>
+											<td height="2" colspan="2" bgcolor="#fd3a84"></td>
+										</tr>
+										  <tr height="28">
+											<td width="40%" align="center" bgcolor="#f7f3f5"><strong>반명</strong></td>
+											<td width="60%" align="center" bgcolor="#f7f3f5"><strong>교재명</strong></td>
+										  </tr>
+										</thead>
+										<tbody id="ClassBookTable"></tbody>
+											<!--tr>
+												<td colspan="2">
+													<table cellpadding="0" cellspacing="0" border="0" width="100%">
+														<tr>
+															<td rowspan="5" width="40%" height="28" align="center" >종합 중등2반</td>
+															<td width="60%" height="28" align="center" >수학평가</td>
+														</tr>
+														<tr>
+															<td width="60%" height="1" bgcolor="#aeaeae"></td>
+														</tr>
+														<tr>
+															<td width="60%" height="28" align="center" >과학평가</td>
+														</tr>
+														<tr>
+															<td width="60%" height="1" bgcolor="#aeaeae"></td>
+														</tr>
+														<tr>
+															<td width="60%" height="28" align="center" >문학평가</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" width="100%" height="1" bgcolor="#aeaeae"></td>
+											</tr>
+											<tr>
+												<td width="40%" height="28" align="center" >단과 중등1반</td>
+												<td width="60%" height="28" align="center" >영어평가</td>
+											</tr>
+											<tr>
+												<td colspan="2" width="100%" height="1" bgcolor="#aeaeae"></td>
+											</tr-->
+									</table>
+
+									<!-- E : Contents -->
+                            </td>
+                          </tr>
+                        </table></td>
+			  </tr>
+			</table>
+		<!--내용끝-->
+		</td>
+	</tr>
+</table>    
+<!--Contents-->
+
+ <!----S: FOOTER ----->
+      <!--{ = inc('inc/bottom.htm') }-->
+      <!----E: FOOTER ----->
+   </td>
+  </tr>
+</table>
+
+  </td>
+  </tr>
+</table>
+<input type="hidden" id="page" />
+<input type="hidden" id="pagetotal" />
+<input type="hidden" id="pagecount" />
+
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_bonus_rank_list();
+});
+
+// 반별교제 List GET
+function get_bonus_rank_list()
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_service.php",
+		data: 'type=classbook',
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(data) {
+			var vhtml = "";
+			var ClassNameTmp;
+			var RowsNum;
+			if (data.ClassBookTot > 1){
+				for(i=0;i<data.ClassBookTot;i++){
+					if (ClassNameTmp != data.classname[i]){
+						if (RowsNum){
+							vhtml += "</td></tr>";
+						}
+						RowsNum = 1;
+						vhtml += "<tr>";
+						vhtml += "	<td style=\"width:40%;text-align:center;border-bottom:1px solid #aeaeae;\">" + data.classname[i] + "</td><td>";
+						vhtml += "	<table style=\"width:100%;height:28px;border-bottom:1px solid #aeaeae;\"><tr><td style='padding-left:10px'>" + data.bookname[i] + "</td></tr></table>";
+					}else{
+						RowsNum = RowsNum + 1;
+						vhtml += "	<table style=\"width:100%;height:28px;border-bottom:1px solid #aeaeae;\"><tr><td style='padding-left:10px'>" + data.bookname[i] + "</td></tr></table>";
+					}
+					ClassNameTmp = data.classname[i];
+				}
+			}else if (data.ClassBookTot == 0){
+				vhtml += "<tr>"
+						+ "<td colspan=\"2\" style=\"width:40%;height:28px;text-align:center;border-bottom:1px solid #aeaeae;\">등록된 글이 없습니다.</td>"
+						+ "</tr>"
+			}else{
+				vhtml += "<tr>"
+						+ "	<td style=\"width:40%;height:28px;text-align:center;border-bottom:1px solid #aeaeae;\">" + data.classname + "</td>"
+						+ "	<td style=\"width:40%;height:28px;text-align:center;border-bottom:1px solid #aeaeae;\">" + data.bookname + "</td>"
+						+ "</tr>"
+			}
+			jq("#ClassBookTable").html(vhtml);
+		}
+	});
+}
+
+</script>
+
+{ # footer }

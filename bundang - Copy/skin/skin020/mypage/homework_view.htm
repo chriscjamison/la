@@ -1,0 +1,97 @@
+{ = inc('inc/popup_top.htm') } <!-- 팝업용 header -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+      <td style="background:#c33434; border-bottom:1px solid #c33434; height:60px; padding-left:10px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="90%"><img src="images/title2_st7-2.png"/></td>
+        <td width="10%" align="center"><a href="javascript:window.close();"><img src="images/btn_close.gif" border="0"></a></td>
+      </tr>
+    </table></td>
+  </tr>
+    <tr>
+        <td style="padding:15px;" align="center">
+            <table width="98%" border="0" cellspacing="0" cellpadding="0" height="303" >
+               
+                
+                <tr>
+                    <td valign="top">
+                        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#dedede">
+                            <tr>
+                                <td width="20%" align="center" bgcolor="#f7f7f7">
+                                    <span class="style7">제출기한</span>
+                                </td>
+                                <td width="80%" bgcolor="#FFFFFF" class="pl10 style8 style9 style11" style="padding:10px;" align="left"><span id="homework_date"></span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#f7f7f7">
+                                    <span class="style7">평가</span>
+                                </td>
+                                <td bgcolor="#FFFFFF" class="pl10 style8 style9 style11" style="padding:10px;" align="left"><span id="homework_opinion"></span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#f7f7f7">
+                                    <span class="style7">첨부파일</span>
+                                </td>
+                                <td bgcolor="#FFFFFF" class="pl10 style8 style9 style11"  style="padding:10px;" align="left"><span id="homework_file"></span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#f7f7f7">
+                                    <span class="style7">세부내용</span>
+                                </td>
+                                <td bgcolor="#FFFFFF" class="pl10 style8 style9 style11"  style="padding:10px;" align="left">
+                                    <div id="homework_contents"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="5" bgcolor="#c33434">
+        </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_homework_detail();
+});
+// 출입현황 List GET
+function get_homework_detail()
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_academy.php",
+		data: 'type=homework_detail&seq={_GET.seq}',
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(data) {
+			var files;
+			files = "";
+			jq('#homework_seq').text(data.series);
+			jq('#homework_date').text(data.rdate);
+			jq('#homework_opinion').text(data.opinion);
+
+
+			if(jq.isArray(data.nfilename)){
+				for(i=0;i < data.nfilename.length;i++){
+					files = files  + "<a href=\"" + data.nfilelink[i] + "\" target=\"_blank\">" + data.nfilename[i] + "</a> <br>";
+				}
+			}else{
+				if (data.filename != null) {
+					files = "<a href=\"" + data.filelink + "\" target=\"_blank\">" + data.filename + "</a>";
+				} else {
+					files = "-";
+				}
+			}
+			jq('#homework_file').html(files);
+			jq('#homework_contents').html(data.contents);
+		}
+	});
+}
+</script>
+</body>
+</html>

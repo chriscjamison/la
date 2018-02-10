@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>{cfg.hometitle}</title>
+</head>
+<script type="text/javascript">
+var locationValue = self.location.href;
+if(locationValue.indexOf("?")==-1){
+	opener.location.reload();
+	self.close();
+}
+
+function OpenerReload(){
+	opener.location.reload();
+}
+
+window.onunload = function(){
+	OpenerReload();
+}
+</script>
+<frameset rows="0%,100%">
+  <frame name="null" src="about:blank;" frameborder="0" scrolling="no">
+  <frame name="document" id="document1" src="{docurl}&domain={_cfg.site.domain}" frameborder="0" scrolling="auto">
+</frameset>
+</html>

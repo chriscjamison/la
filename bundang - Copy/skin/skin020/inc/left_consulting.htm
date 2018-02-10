@@ -1,0 +1,31 @@
+<?
+$urlArray = explode("/",$_SERVER["PHP_SELF"]);
+$selfURL = $urlArray[count($urlArray)-1];
+if (!$selfURL) {
+	$selfURL = "consulting";
+}
+?>
+
+<table width="187" border="0" cellspacing="0" cellpadding="0" style="padding-right:21px">
+	<tr>
+		<td><img src="../consulting/images/left_title.png"></td>
+	</tr>
+	<tr>
+		<td style="background:url('../images/common/smenuBg.png') repeat-y;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="30"><a href="/consulting/consulting1"><img src="../consulting/images/smenu01<?if($selfURL=='consulting1'){echo 's';}?>.png" <?if($selfURL!='consulting1'){?>onMouseOver="this.src='../consulting/images/smenu01s.png'" onMouseOut="this.src='../consulting/images/smenu01.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/consulting/consulting2"><img src="../consulting/images/smenu02<?if($selfURL=='consulting2'){echo 's';}?>.png" <?if($selfURL!='consulting2'){?>onMouseOver="this.src='../consulting/images/smenu02s.png'" onMouseOut="this.src='../consulting/images/smenu02.png'"<?}?> alt=""></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="/consulting/consulting3"><img src="../consulting/images/smenu03<?if($selfURL=='consulting3'){echo 's';}?>.png" <?if($selfURL!='consulting3'){?>onMouseOver="this.src='../consulting/images/smenu03s.png'" onMouseOut="this.src='../consulting/images/smenu03.png'"<?}?> alt=""></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="../images/common/smenuBottom.png"></td>
+	</tr>
+</table>

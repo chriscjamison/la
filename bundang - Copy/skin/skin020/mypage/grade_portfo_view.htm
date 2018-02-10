@@ -1,0 +1,162 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" background="../images/common/bg_sub.gif" valign="top"><!--TopMenu-->
+		<table width="1024" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="center" class="topmenu"><!--S:상단메뉴-->
+		  <!--{ = inc('inc/top.htm') }-->
+		  <!--E:상단메뉴--></td>
+		  </tr>
+		</table>
+    <!--TopMenu-->
+    <!--Contents-->
+	<table width="1024" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="250" valign="top" style="padding-left:15px;"> <!-- S:LEFT AREA-->
+            <!--{ = inc('inc/left_mypage.htm') }-->
+            <!-- E:LEFT AREA--></td>
+        <td width="759" valign="top" style="padding-bottom:40px;">
+		<!--소타이틀-->
+			<table width="735" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td width="414" height="35" valign="top"><img src="images/title3.gif" /></td>
+				<td width="321" align="right" class="category">ㆍHOME &gt; MYPAGE &gt; 성적조회 &gt; <strong>포트폴리오</strong></td>
+			  </tr>
+			  <tr>
+				<td height="2" colspan="2" background="../images/common/bg_titline.gif"></td>
+			  </tr>
+			</table>
+		<!--소타이틀-->
+        <!--내용시작-->
+			<table width="735" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                           <td style="padding-bottom:20px;"><img src="images/title2_st27.gif" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                             <!-- S : Contents -->
+<input type="hidden" name="tnum" id="tnum" value="<?=$_GET[tnum]?>">
+<input type="hidden" name="tnum" id="num" value="<?=$_GET[num]?>">
+<input type="hidden" name="page" id="page" value="">
+					  <!-- S : Contents -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td height="20" align="right"></td>
+                          </tr>
+                          <tr>
+                            <td>
+								<table border="0" cellspacing="0" cellpadding="0">
+									<thead id="daily_test_subject"></thead>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody id="daily_test_list"></tbody>
+								</table>
+							</td>
+                          </tr>
+						  <tr height="10">
+							<td></td>
+						  </tr>
+						  <tr>
+							<td align="center"><a href="grade_portfo?tnum=<?=$_GET[tnum]?>"><img src="/skin/_modules/seboard/default/img/btn_list.gif" border="0"></td>
+						  </tr>
+                        </table>
+
+                      <!-- E : Contents -->
+                            </td>
+                          </tr>
+                        </table></td>
+			  </tr>
+			</table>
+		<!--내용끝-->
+		</td>
+	</tr>
+</table>    
+<!--Contents-->
+
+ <!----S: FOOTER ----->
+      <!--{ = inc('inc/bottom.htm') }-->
+      <!----E: FOOTER ----->
+   </td>
+  </tr>
+</table>
+
+  </td>
+  </tr>
+</table>
+<script type="text/javascript">
+jq(document).ready(function() {
+	jq('.picdate').datepick({showOn: 'focus', buttonImageOnly: false, duration:'fast', buttonImage: '/skin/img/calendar.gif',showMonthAfterYear: true});
+	get_grade_test_list();
+	jq('#nowdate').text('{nowdate}');
+});
+
+// 상담현황 List GET
+function get_grade_test_list()
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_grade.php",
+		data: 'type=portfoDetail&num=' + jq('#num').val() + '&tnum=' + jq('#tnum').val() + '&page=' + jq('#page').val(),
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var tnum;
+			tnum = jq('#tnum').val();
+			var vhead = "";
+			var cName = "";
+			var vhtml = "";
+//			var cols = jq.isArray(response.sb) ? response.sb.length + 1 : 1;
+			var total = response.total;
+			var TabTotal = response.TabTotal;
+			var ColTotal = response.ColTotal;
+				ColTotal = Number(ColTotal) + 1;
+			if (jq.isArray(response.tc)){
+				vhead = "<tr height=\"28\">";
+				jq(response.tc).each(function(el, data) {
+					if (!tnum){
+						tnum = data.Tnum;
+					}
+
+
+					var nowBg;
+					if (data.Tnum==tnum)	{
+						nowBg = "style='background:#F6F6F6;border-left:2px solid #639cdd;border-top:2px solid #639cdd;border-right:2px solid #639cdd;padding-left:10px;padding-right:10px;'"
+					}else{
+						nowBg = "style='background:#FFFFFF;padding-left:10px;padding-right:10px;'"
+					}
+
+
+					vhead += "<td align=\"center\" "+nowBg+"><strong style=\"color:#000000\">" + data.TabName + "</strong></td>";
+				});
+				vhead += "</tr>";
+			}
+			cName  = "<tr><td height=\"2\" colspan=\"" + ColTotal + "\" bgcolor=\"#639cdd\"></td></tr>";
+			jq("#daily_test_subject").html(vhead);
+
+			
+			if (jq.isArray(response.rc)) {
+				jq(response.rc).each(function(el, data) {
+					cName += "<tr height=\"32\">";
+					cName += "	 <td  width=\"120\" align=\"center\" bgcolor=\"#F6F6F6\" style=\"border-bottom:1px solid #c9c9c9;\"><strong>" + data.CName + "</strong></td>";
+					cName += "	 <td align=\"left\" bgcolor=\"#FFFFFF\" style=\"border-bottom:1px solid #c9c9c9;padding-left:10px;\"><strong>" + data.Content + "</strong></td>";
+					cName += "</tr>";	
+				});
+			}
+
+			jq("#daily_test_list").html(cName);
+		}
+	});
+}
+</script>
+{ # footer }
