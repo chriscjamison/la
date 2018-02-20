@@ -1,4 +1,4 @@
-/* index.js ~ Renders the mobile landing page after the desktop landing page has loaded. */
+﻿/* index.js ~ Renders the mobile landing page after the desktop landing page has loaded. */
 
 $(document).ready(
   function () {
@@ -23,8 +23,6 @@ function buildTemplateHTML () {
 
   // Store the HTML references within 'template'.
   template_html = {
-    doctype: "<!DOCTYPE html>", 
-    html: "<html></html>", 
     head: "<head></head>", 
     body: "<body></body>", 
     header: "<header></header>", 
@@ -66,34 +64,26 @@ function buildHeaderHTML () {
 
 } // END of FUNCTION 'buildHeaderHTML'
 
-function buildNavigationHTML () {
+function storeNavigationMetadata () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - NONE
+   * @params - 
+   *   'semantic_html' - Object - Contains semantic HTML which holds the links to the 
+   *                              Landing Page.
+   *   'nav_data' ------ Object - Contains the metadata for the various sections.
    * 
    * PURPOSE OF FUNCTION 
-   *   Returns the HTML which makes up the Main Navigation of the Landing Page.
+   *   Returns the metadata such as the HTML attributes, "id", "title", & "href" 
+   *   which makes up the Main Navigation of the Landing Page.
    *   
-   * FUNCTIONS WHICH USE 'buildNavigationHTML'
+   * FUNCTIONS WHICH USE 'storeNavigationMetadata'
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
-
-  // Initialize Object which contains semantic HTML which contains the links to the Landing 
-  // Pages for each section.
-  var semantic_html = {};
 
   // Initialize Object which contains the metadata for the various sections.
   var nav_data = {};
   
   // Initialize String which contains the basic filepath to the landing pages for each section.
   var base_path;
-
-  // Store the HTML references within 'semantic_html'.
-  semantic_html = {
-    section: "<section></section>", 
-    div: "<div></div>", 
-    href: "<a></a>", 
-    span: "<span></span>"
-  };
 
   // Store the HTML attributes, "id", "title", & "href" for the various sections within 'nav_data'.
   nav_data = {
@@ -179,4 +169,46 @@ function buildNavigationHTML () {
     }
   }
 
+  // Send the metadata out for processing by another function.
+  return nav_data;
+
 } // END of FUNCTION 'buildNavigationHTML'
+
+function renderLandingPage () {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Using the jQuery Method, '.html()', the HTML of the desktop landing page is swapped 
+   *   out for a mobile-friendly HTML template.
+   *   
+   * FUNCTIONS WHICH USE 'renderLandingPage'
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // Initialize String which holds the selector for the HTML tag, <html>.
+  var html_selector;
+  
+  // Initialize Object which contains the jQuery object for the HTML tag, "html".
+  var html_element = {};
+
+  html_selector = "html";
+  html_element = $(html_selector);
+
+  // Initialize variable which holds the Object which contains the HTML used for the 'frame' 
+  // of the mobile-friendly template.
+  var html_data;
+
+  // Initialize String which contains the raw HTML used for the 'frame' of the mobile-friendly 
+  // template.
+  var html_html;
+
+  // Pull the HTML for the 'frame' by calling the Function, 'buildTemplateHTML'.
+  html_data = buildTemplateHTML();
+
+  // Extract the HTML from the Object variable.
+  html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.footer + html_data.section;
+
+  $(html_element).html(html_html);
+  
+} // END of FUNCTION 'renderLandingPage'
