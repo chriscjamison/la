@@ -2,7 +2,7 @@
 
 $(document).ready(
   function () {
-    renderLandingPage();
+    renderContent();
   }
 );
 
@@ -17,7 +17,7 @@ function buildTemplateHTML () {
    *   the <DOCTYPE>, <html>, <head> tags along with others.
    *   
    * FUNCTIONS WHICH USE 'buildTemplateHTML'
-   *   + renderLandingPage
+   *   + renderContent
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -62,7 +62,7 @@ function buildHeadHTML () {
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
     stylesheet: "<link rel=\"stylesheet\" href=\"/la/assets/css/mobile-test.css\">", 
     jquery: "<script src=\"/la/assets/js/jquery/jquery-3.2.1.slim.js\"></script>", 
-    javascript: "<script src=\"/la/assets/js/index.js\"></script>"
+    javascript: "<script src=\"/la/assets/js/content.js\"></script>"
   };
 
   // Send the HTML out to be processed by another function
@@ -83,7 +83,7 @@ function renderTopHeaderHTML (base_path) {
    *   <header> tag of the Landing Page.
    *   
    * FUNCTIONS WHICH USE 'buildHeadHTML'
-   *   + renderLandingPage
+   *   + renderContent
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -128,7 +128,7 @@ function renderTopHeaderHTML (base_path) {
 
 
 
-function storeNavigationMetadata () {
+function storeMainNavigationMetadata () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -136,7 +136,7 @@ function storeNavigationMetadata () {
    *   Returns the metadata such as the HTML attributes, "id", "title", & "href" 
    *   which makes up the Main Navigation of the Landing Page.
    *   
-   * FUNCTIONS WHICH USE 'storeNavigationMetadata'
+   * FUNCTIONS WHICH USE 'storeMainNavigationMetadata'
    *   + renderNavigationHTML
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
@@ -251,7 +251,8 @@ function storeNavigationMetadata () {
   // Send the metadata out for processing by another function.
   return nav_data;
 
-} // END of FUNCTION 'buildNavigationHTML'
+} // END of FUNCTION 'storeMainNavigationMetadata'
+
 
 
 
@@ -351,8 +352,8 @@ function renderFrameHTML () {
    *   site. The function also adds the HTML within the browser by inserting the HTML 
    *   into the <html> tag.
    *   
-   * FUNCTIONS WHICH USE 'renderLandingPage'
-   *   + renderLandingPage
+   * FUNCTIONS WHICH USE 'renderFrameHTML'
+   *   + renderContent
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -393,8 +394,8 @@ function renderHeadHTML ()  {
    *   Assembles the HTML references used within the <head> tag. Also inserts the HTML 
    *   within the browser into the HTML tag <head>
    *   
-   * FUNCTIONS WHICH USE 'renderLandingPage'
-   *   + renderLandingPage
+   * FUNCTIONS WHICH USE 'renderHeadHTML'
+   *   + renderContent
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -426,7 +427,7 @@ function renderHeadHTML ()  {
 
 } // END of FUNCTION 'renderHeadHTML'
 
-function renderNavigationHTML (base_path)  {
+function renderMainNavigationHTML (base_path)  {
     /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
@@ -436,8 +437,8 @@ function renderNavigationHTML (base_path)  {
    *   Assembles the links and HTML elements used within the <nav> tag. Also inserts the HTML 
    *   within the browser into the HTML tag <nav>
    *   
-   * FUNCTIONS WHICH USE 'renderLandingPage'
-   *   + renderLandingPage
+   * FUNCTIONS WHICH USE 'renderMainNavigationHTML'
+   *   + renderContent
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -458,10 +459,13 @@ function renderNavigationHTML (base_path)  {
   // Initialize String which contains the raw HTML used contained within the <nav> tag.
   var nav_html;
 
-  // Pull the HTML contained within the <nav> tag by calling the Function, 'storeNavigationMetadata'.
-  nav_data = storeNavigationMetadata();
+  // Pull the HTML contained within the <nav> tag by calling the Function, 'storeMainNavigationMetadata'.
+  nav_data = storeMainNavigationMetadata();
 
   nav_html = "";
+
+  // Add the <section> tag which contains the main navigation HTML references
+  nav_html = "<section id=\"nav-main_menu\">\n";
 
   // Extract the HTML from the Object variable.
   $.each(nav_data, 
@@ -481,11 +485,89 @@ function renderNavigationHTML (base_path)  {
     } 
   );
 
+  // Close the <section> tag which contains the main navigation HTML references
+  nav_html = nav_html + "</section>\n";
+
   // Insert the HTML within the <nav> tag within the browser.
   $(nav_element).html(nav_html);
-}
+
+} // END of FUNCTION renderMainNavigationHTML
 
 
+function renderSectionNavigationHTML (base_path) {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
+   *                         <a> tags.
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Assembles the links and HTML elements used to allow for navigation among the Debate 
+   *   section.
+   *   
+   * FUNCTIONS WHICH USE 'renderDebateSectionHTML'
+   *   + renderContent
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // Initialize String which acts as the selector for page numbers referencing the number 
+  // of pages of links for a given section.
+  var pages_selector;
+
+  // Initialize Object which contains the jQuery object referencing the selector,
+  // '.page-number'.
+  var pages_elements = {};
+
+  pages_selector = ".page-number";
+  pages_elements = $(pages_selector);
+
+  if ($(pages_elements) !== undefined)  {
+    // Initialize Number which contains the number of pages which contains links leading to 
+    // content.
+    //
+    // 'num_of_pages' will equal the number of links within the Section navigation.
+    var num_of_pages;
+
+    num_of_pages = $(pages_elements).length;
+
+    // Initialize Number which contains a loop incrementer.
+    var inc;
+
+    var inc_string;
+
+    var section_path;
+
+    section_path = window.location.pathname;
+
+    var section_search_string;
+
+    var section_search_index_num;
+
+    section_search_string = "/";
+
+    section_search_index_num = section_path.lastIndexOf(section_search_string);
+
+    section_path = section_path.slice(0, section_search_index_num);
+    
+    section_path = section_path + "/page_";
+
+    // Initialize String which contains the HTML links which make up the Section navigation.
+    var nav_html;
+    for (inc = 0; inc < num_of_pages; inc++)  {
+      inc_string = (inc + 1).toString();
+
+      nav_html = nav_html + "<a href=\"" + base_path + section_path + inc_string + ".htm\" title=\"Page " + inc_string + "\" id=\"link-section_nav" + inc_string + "\"> Page #" + inc_string + "</a>\n";
+    }
+
+    var section_menu_selector;
+    var section_menu_element;
+
+    section_menu_selector = "#nav-section_menu";
+    section_menu_element = $(section_menu_selector);
+
+    $(section_menu_element).html(nav_html);
+  }
+  
+} // END of FUNCTION renderDebateSectionHTML
 
 function renderFooterHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
@@ -496,7 +578,7 @@ function renderFooterHTML () {
    *   Landing Page.
    *   
    * FUNCTIONS WHICH USE 'renderFooterHTML'
-   *   + renderLandingPage
+   *   + renderContent
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -551,7 +633,7 @@ function renderFooterHTML () {
 } // END of FUNCTION 'renderTopHeaderHTML'
 
 
-function renderLandingPage () {
+function renderContent () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -559,7 +641,7 @@ function renderLandingPage () {
    *   Using the jQuery Method, '.html()', the HTML of the desktop landing page is swapped 
    *   out for a mobile-friendly HTML template.
    *   
-   * FUNCTIONS WHICH USE 'renderLandingPage'
+   * FUNCTIONS WHICH USE 'renderContent'
    *   + document.ready()
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
@@ -579,4 +661,4 @@ function renderLandingPage () {
   
   
 
-} // END of FUNCTION 'renderLandingPage'
+} // END of FUNCTION 'renderContent'
