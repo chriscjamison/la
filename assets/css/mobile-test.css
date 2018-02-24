@@ -274,7 +274,7 @@ header > a > img {
 
 #mobile-search {
   padding: 0.5em 0.5em 0.5em 1.75em;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
+  background-image: url('/la/assets/img/sprites/main_nav.png');
   background-position: -2100px -10px;
   background-repeat: no-repeat;
   font-size: 2.5em;
@@ -593,7 +593,7 @@ nav > section > div > a,
   height: 155px;
   margin: 0 0 0 27px;
   display: block;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
+  background-image: url('/la/assets/img/sprites/main_nav.png');
   background-repeat: no-repeat;
 }
 
@@ -729,7 +729,7 @@ footer > #footer-border {
   margin: 0 4.4% 0 4.4%;
   display: block;
   float: left;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media.png');
+  background-image: url('/la/assets/img/sprites/social_media.png');
   background-repeat: no-repeat;
 }
 
@@ -1569,7 +1569,7 @@ input[name="testDate"] {
   nav > section > div > a, 
   #nav-main_menu > section > div > a {
     height: 60px;
-    background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav-med.png')
+    background-image: url('/la/assets/img/sprites/main_nav-med.png')
   }
 
   nav > section > div span, 
@@ -1710,7 +1710,7 @@ input[name="testDate"] {
     width: 50px;
     height: 50px;
     margin: 0 9px 0 9px;
-    background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media-med.png');
+    background-image: url('/la/assets/img/sprites/social_media-med.png');
   }
 
   #footer-row_3 {
