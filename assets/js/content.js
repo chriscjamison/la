@@ -291,6 +291,86 @@ function storeFooterMetadata () {
 
 
 
+function isIndexPage ()  {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Returns the location that the string, 'index', is located within the file name 
+   *   of the HTML loaded from the desktop version of the webpage
+   *   
+   * FUNCTIONS WHICH USE 'isIndexPage'
+   *   + renderArticleHTML
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  var file_name;
+
+  file_name = window.location.href;
+
+  var file_name_search_string;
+
+  var file_name_search_index_num;
+
+  file_name_search_string = "/";
+
+  file_name_search_index_num = file_name.lastIndexOf(file_name_search_string);
+
+  file_name = file_name.slice(file_name_search_index_num);
+
+  file_name_search_string = "index";
+
+  file_name_search_index_num = file_name.indexOf(file_name_search_string);
+console.log("file_name_search_index_num = " + file_name_search_index_num)
+
+  return file_name_search_index_num;
+}
+
+
+
+function storeArticleMetadata () {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Returns the HTML contents extracted from the desktop page for use within the 
+   *   mobile-friendly template.
+   *   
+   * FUNCTIONS WHICH USE 'storeArticleMetadata'
+   *   + renderArticleHTML
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+  
+  // Initialize Object which holds HTML which references the title and content of the 
+  // desktop page that loaded.
+  var article_data = {};
+  
+  // Initialize Number which holds the index number of the location within the file name 
+  // that 'index' appears. 
+  var index_search_index_num;
+  
+  // The location within the file name that the string, 'index' appears is passed on.
+  index_search_index_num = isIndexPage();
+
+  // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
+  // within the file name. 
+  // 
+  // If the string, 'index' is not found in the file name, the content of the page is 
+  // passed on to the Object, 'article_data'.
+  if (index_search_index_num > -1)  {
+  } else {
+    article_data = {
+      title: jq("table:nth-child(2) > tr > td > table:nth-child(2) > tr:nth-child(2) > td > table > tr > td > table > tr > td").html(), 
+      contents: jq("table:nth-child(2) > tr > td > table:nth-child(2) > tr:nth-child(2) > td > table > tr:nth-child(4) > td > table > tr > td").html() 
+    }
+  }
+
+  return article_data;
+
+} // END of FUNCTION 'storeArticleMetaData'
+
+
+
 function renderFrameHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
@@ -681,6 +761,57 @@ function renderFooterHTML () {
 
 
 
+function renderArticleHTML ()  {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Returns the HTML which is contained within the <article> tag of the content.
+   *   
+   * FUNCTIONS WHICH USE 'buildArticleHTML'
+   *   + renderArticleHTML
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  var article_data;
+
+  article_data = storeArticleMetadata(file_name_search_index_num);
+
+  // Initializes String which contains the selector of the <article> tag.
+  var article_selector;
+
+  // Initializes Object which contains the jQuery Object for the <article> tag.
+  var article_element = {};
+
+  article_selector = "article";
+  article_element = jq(article_selector);
+
+  // Initialize Number which contains the location of the string, 'index', within the 
+  // file name.
+  var index_search_index_num;
+
+  index_search_index_num = isIndexPage();
+
+  // Initialize String which contains the HTML which renders the content of the page.
+  var article_html;
+
+  if (index_search_index_num > -1)  {
+
+  } else {
+    article_html = "<h4>" + article_data.title + "</h4>\n" + 
+                   "<div>\n" + 
+                   "  " + article_data.contents + "\n" + 
+                   "</div>\n";
+  }
+
+  jq(article_element).html(article_html);
+
+  
+
+} // END of FUNCTION 'buildArticleHTML'
+
+
+
 function renderContent () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
@@ -706,6 +837,8 @@ function renderContent () {
   renderMainNavigationHTML(base_path);
 
   renderSectionNavigationHTML(base_path);
+
+  renderArticleHTML();
   
   renderFooterHTML();
 } // END of FUNCTION 'renderContent'
