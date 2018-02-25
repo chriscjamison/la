@@ -1,6 +1,11 @@
-﻿/* index.js ~ Renders the mobile landing page after the desktop landing page has loaded. */
+﻿/* content.js ~ Renders mobile-friendly HTML of the content pages. This file also handles *
+ *              animations and other types of HTML DOM manipulation based upon            *
+ *              commands issued by a user.                                                *
+ * *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ** */
+var jq = jQuery.noConflict();
 
-$(document).ready(
+
+jq(document).ready(
   function () {
     renderContent();
   }
@@ -69,62 +74,6 @@ function buildHeadHTML () {
   return head_html;
 
 } // END of FUNCTION 'buildHeadHTML'
-
-
-
-function renderTopHeaderHTML (base_path) {
-  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - 
-   *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
-   *                         <a> tags.
-   * 
-   * PURPOSE OF FUNCTION 
-   *   Returns the HTML for the logo, links, and search field which is contained within the 
-   *   <header> tag of the Landing Page.
-   *   
-   * FUNCTIONS WHICH USE 'buildHeadHTML'
-   *   + renderContent
-   * 
-    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
-
-  // Initializes String which contains the HTML which displays the logo, Login & Language 
-  // links, and Search field.
-  var header_html;
-
-  header_html = "<a href=\"" + base_path + "\" title=\"Leaders Academy - Home\">\n" + 
-                "  <img src=\"" + base_path + "assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy - Home\" />\n" + 
-                "</a>\n" + 
-                "<section id=\"header-right\">\n" + 
-                "  <div id=\"header-search\">\n" + 
-                "    <script>\n" + 
-                "      (function() {\n" + 
-                "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
-                "        var gcse = document.createElement('script');\n" + 
-                "        gcse.type = 'text/javascript';\n" + 
-                "        gcse.async = true;\n" + 
-                "        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
-                "        var s = document.getElementsByTagName('script')[0];\n" + 
-                "        s.parentNode.insertBefore(gcse, s);\n" + 
-                "      })();\n" + 
-                "    </script>\n" + 
-                "    <gcse:searchbox-only></gcse:search>\n" + 
-                "  </div>\n" + 
-                "  <div id=\"header-links\">\n" + 
-                "    <a href=\"" + base_path + "login/login.htm\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
-                "    <a href=\"" + base_path + "ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
-                "  </div>\n" + 
-                "</section>\n";
-
-  var header_selector;
-  var header_element = {};
-
-  header_selector = "header";
-  header_element = $(header_selector);
-
-  $(header_element).html(header_html);
-
-  $(header_element).attr("class", "header-index");
-} // END of FUNCTION 'renderTopHeaderHTML'
 
 
 
@@ -255,7 +204,6 @@ function storeMainNavigationMetadata () {
 
 
 
-
 function storeFooterMetadata () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
@@ -339,7 +287,7 @@ function storeFooterMetadata () {
   // Send the HTML out to be processed by another function
   return footer_data;
 
-} // END of FUNCTION 'buildFooterHTML'
+} // END of FUNCTION 'storeFooterMetadata'
 
 
 
@@ -365,7 +313,7 @@ function renderFrameHTML () {
    var html_element = {};
  
    html_selector = "html";
-   html_element = $(html_selector);
+   html_element = jq(html_selector);
  
    // Initialize variable which holds the Object which contains the HTML used for the 'frame' 
    // of the mobile-friendly template.
@@ -382,9 +330,11 @@ function renderFrameHTML () {
    html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.footer + html_data.section;
  
    // Insert the HTML within the current <html> tag within the browser.
-   $(html_element).html(html_html);
+   jq(html_element).html(html_html);
 
 } // END of FUNCTION 'renderFrame'
+
+
 
 function renderHeadHTML ()  {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
@@ -407,7 +357,7 @@ function renderHeadHTML ()  {
   var head_element = {};
 
   head_selector = "head";
-  head_element = $(head_selector);
+  head_element = jq(head_selector);
 
   // Initialize variable which holds the Object which contains the HTML references contained 
   // within the <head> tag.
@@ -423,13 +373,76 @@ function renderHeadHTML ()  {
   head_html = head_data.title + head_data.meta_http + head_data.stylesheet + head_data.jquery + head_data.javascript;
 
   // Insert the HTML within the <head> tag within the browser.
-  $(head_element).html(head_html);
+  jq(head_element).html(head_html);
 
 } // END of FUNCTION 'renderHeadHTML'
 
+
+
+function renderTopHeaderHTML (base_path) {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - 
+   *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
+   *                         <a> tags.
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Returns the HTML for the logo, links, and search field which is contained within the 
+   *   <header> tag of the Landing Page.
+   *   
+   * FUNCTIONS WHICH USE 'buildHeadHTML'
+   *   + renderContent
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // Initializes String which contains the HTML which displays the logo, Login & Language 
+  // links, and Search field.
+  var header_html;
+
+  header_html = "<a href=\"" + base_path + "\" title=\"Leaders Academy - Home\">\n" + 
+                "  <img src=\"" + base_path + "assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy - Home\" />\n" + 
+                "</a>\n" + 
+                "<section id=\"header-right\">\n" + 
+                "  <div id=\"header-search\">\n" + 
+                "    <script>\n" + 
+                "      (function() {\n" + 
+                "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
+                "        var gcse = document.createElement('script');\n" + 
+                "        gcse.type = 'text/javascript';\n" + 
+                "        gcse.async = true;\n" + 
+                "        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
+                "        var s = document.getElementsByTagName('script')[0];\n" + 
+                "        s.parentNode.insertBefore(gcse, s);\n" + 
+                "      })();\n" + 
+                "    </script>\n" + 
+                "    <gcse:searchbox-only></gcse:search>\n" + 
+                "  </div>\n" + 
+                "  <div id=\"header-links\">\n" + 
+                "    <div id=\"header-links-level_1\">\n" + 
+                "      <a href=\"" + base_path + "login/login.htm\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+                "      <a href=\"" + base_path + "ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+                "    </div>\n" + 
+                "    <div id=\"header-links-level_2\">\n" + 
+                "      <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
+                "      <a href=\"javascript: displayMenu('section');\" title=\"Section Menu\" id=\"link-section_menu\">Section Menu</a>\n" + 
+                "    </div>\n" +
+                "  </div>\n" + 
+                "</section>\n";
+
+  var header_selector;
+  var header_element = {};
+
+  header_selector = "header";
+  header_element = jq(header_selector);
+
+  jq(header_element).html(header_html);
+
+} // END of FUNCTION 'renderTopHeaderHTML'
+
+
+
 function renderMainNavigationHTML (base_path)  {
     /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - NONE
+   * @params - 
    *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
    *                         <a> tags.
    * 
@@ -450,7 +463,7 @@ function renderMainNavigationHTML (base_path)  {
   var nav_element = {};
 
   nav_selector = "nav";
-  nav_element = $(nav_selector);
+  nav_element = jq(nav_selector);
 
   // Initialize variable which holds the Object which contains the HTML references contained 
   // within the <nav> tag.
@@ -468,11 +481,11 @@ function renderMainNavigationHTML (base_path)  {
   nav_html = "<section id=\"nav-main_menu\">\n";
 
   // Extract the HTML from the Object variable.
-  $.each(nav_data, 
+  jq.each(nav_data, 
     function (row_index, rows) {
       nav_html = nav_html + "<section id=\"nav-row_" + rows.row_number + "\">\n";
       
-      $.each(rows.link_data,
+      jq.each(rows.link_data,
         function (link_index, link_metadata) {
           nav_html = nav_html + "<div id=\"link-" + link_metadata.id + "\">\n";
           nav_html = nav_html + "  <a href=" + base_path + link_metadata.href + "\" title=\"" + link_metadata.title + "\"></a>\n"; 
@@ -486,17 +499,23 @@ function renderMainNavigationHTML (base_path)  {
   );
 
   // Close the <section> tag which contains the main navigation HTML references
-  nav_html = nav_html + "</section>\n";
+  nav_html = nav_html + "</section>\n" + 
+                        "<section id=\"nav-section_menu\">\n" + 
+                        "</section>\n";
 
   // Insert the HTML within the <nav> tag within the browser.
-  $(nav_element).html(nav_html);
+  jq(nav_element).html(nav_html);
+
+  // Add the "id" attribute, 'nav-sub_menu' to the <nav> tag.
+  jq(nav_element).attr("id", "nav-sub_menu");
 
 } // END of FUNCTION renderMainNavigationHTML
 
 
+
 function renderSectionNavigationHTML (base_path) {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - NONE
+   * @params - 
    *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
    *                         <a> tags.
    * 
@@ -518,56 +537,84 @@ function renderSectionNavigationHTML (base_path) {
   var pages_elements = {};
 
   pages_selector = ".page-number";
-  pages_elements = $(pages_selector);
+  pages_elements = jq(pages_selector);
 
-  if ($(pages_elements) !== undefined)  {
+  if (jq(pages_elements).length >= 1)  {
     // Initialize Number which contains the number of pages which contains links leading to 
     // content.
     //
     // 'num_of_pages' will equal the number of links within the Section navigation.
     var num_of_pages;
 
-    num_of_pages = $(pages_elements).length;
+    num_of_pages = jq(pages_elements).length;
 
     // Initialize Number which contains a loop incrementer.
     var inc;
 
+    // Initialize String which contains the value of 1 plus the value of the loop incrementer 
+    // converted into a String.
+    // 
+    // The variable is used in an HTML tag to uniquely identify the link under processing 
+    // by the loop.
     var inc_string;
 
+    // Initialize String which contains the pathname, sans filename, to a unique page of links.
     var section_path;
 
+    // The value of 'window.location.pathname' is passed to 'section_path'.
     section_path = window.location.pathname;
 
+    // Initialize String which contains the "/" character which will seperate the pathname 
+    // from the filename.
     var section_search_string;
 
+    // Initialize Number which contains the index number within 'section_path' that the final 
+    // '/' character within the pathname is locted.
     var section_search_index_num;
 
     section_search_string = "/";
 
+    // Search 'section_path' for the location within the string that the last "/" character 
+    // appears.
     section_search_index_num = section_path.lastIndexOf(section_search_string);
 
+    // Extract the path from the old pathname which included the filename.
     section_path = section_path.slice(0, section_search_index_num);
     
+    // Add a new filename, without the suffix, to 'section_path' which serves as the 
+    // unique location for links to content within the Section.
     section_path = section_path + "/page_";
 
     // Initialize String which contains the HTML links which make up the Section navigation.
     var nav_html;
+
+    // Generate the links which make up the Section navigation.
     for (inc = 0; inc < num_of_pages; inc++)  {
       inc_string = (inc + 1).toString();
 
       nav_html = nav_html + "<a href=\"" + base_path + section_path + inc_string + ".htm\" title=\"Page " + inc_string + "\" id=\"link-section_nav" + inc_string + "\"> Page #" + inc_string + "</a>\n";
     }
-
-    var section_menu_selector;
-    var section_menu_element;
-
-    section_menu_selector = "#nav-section_menu";
-    section_menu_element = $(section_menu_selector);
-
-    $(section_menu_element).html(nav_html);
+  } else {
+    nav_html = "<span>There is no menu for this section.</span>\n";
   }
   
+  // Initialize String which holds the selector identifying the <section> tag that contains 
+  // the Section navigation.
+  var section_menu_selector;
+  
+  // Initialize Object which contains the jQuery object for the <section> tag using the 
+  // selector, "#nav-section_menu".
+  var section_menu_element;
+
+  section_menu_selector = "#nav-section_menu";
+  section_menu_element = jq(section_menu_selector);
+
+  // Add the HTML for the Section navigation into the mobile-friendly template.
+  jq(section_menu_element).html(nav_html);
+
 } // END of FUNCTION renderDebateSectionHTML
+
+
 
 function renderFooterHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
@@ -589,7 +636,7 @@ function renderFooterHTML () {
   var footer_element = {};
 
   footer_selector = "footer";
-  footer_element = $(footer_selector);
+  footer_element = jq(footer_selector);
 
   // Initialize variable which holds the Object which contains the HTML references contained 
   // within the <footer> tag.
@@ -608,11 +655,11 @@ function renderFooterHTML () {
                 "  </section>\n";
   
   // Extract the HTML from the Object variable.
-  $.each(footer_data, 
+  jq.each(footer_data, 
     function (row_index, rows) {
       footer_html = footer_html + "<section id=\"footer-row_" + rows.row_number + "\">\n";
 
-      $.each(rows.link_data,
+      jq.each(rows.link_data,
         function (link_index, link_metadata) {
           footer_html = footer_html + "<a href=\"" + link_metadata.href + "\" title=\"" + link_metadata.title + "\" target=\"_blank\" id=\"link-" + link_metadata.id + "\"></a>\n";
         }
@@ -628,9 +675,10 @@ function renderFooterHTML () {
                               "</section>\n";
 
   // Insert the HTML within the <footer> tag within the browser.
-  $(footer_element).html(footer_html);
+  jq(footer_element).html(footer_html);
 
 } // END of FUNCTION 'renderTopHeaderHTML'
+
 
 
 function renderContent () {
@@ -649,16 +697,89 @@ function renderContent () {
   base_path = "/la/";
 
   // Add mobile-friendly HTML into the browser.
-   renderFrameHTML();
+  renderFrameHTML();
 
   renderHeadHTML();
 
   renderTopHeaderHTML(base_path);
 
-  renderNavigationHTML(base_path);
+  renderMainNavigationHTML(base_path);
+
+  renderSectionNavigationHTML(base_path);
   
   renderFooterHTML();
-  
-  
-
 } // END of FUNCTION 'renderContent'
+
+
+
+function displayMenu(section_value) {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - 
+   *   'section_value' - String - String which describes the type of menu the user 
+   *                              wishes to display, the Main Sub menu or the Section menu.
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Displays either the Main Sub menu or the Section menu within the mobile-friendly 
+   *   template.
+   *   
+   * FUNCTIONS WHICH USE 'renderDebateSectionHTML'
+   *   + User activated
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // Initialize variable to hold the HTML selector of the <section> element 
+  // which holds the main menu.
+  var menu_selector
+
+  var menu_element = {};
+
+  // Initialize variable to hold the value of the CSS property, 'display', 
+  // of the <section> element which holds the main menu.
+  var menu_css_value;
+
+  // Initialize variables to hold CSS values which will be used to show/hide 
+  // the main menu.
+  var menu_visible_css = {};
+  var menu_not_visible_css = {};
+
+  // IF/ELSE statment which determines the value of the selector for the menu 
+  // under processing.
+  if (section_value === "main") {
+    menu_selector = "#nav-main_menu";
+  } else if (section_value === "section") {
+    menu_selector = "#nav-section_menu";
+  } // END of IF statement
+
+  menu_element = jq(menu_selector);
+
+  // Pass on the value of "block" to the CSS variable which will be used 
+  // to show the main menu.
+  menu_visible_css = {
+    display: "block"
+  };
+  
+  // Pass on the value of "none" to the CSS variable which will be used 
+  // to hide the main menu.
+  menu_not_visible_css = {
+    display: "none", 
+    margin: "0"
+  };
+
+  // Store the value of the CSS property, 'display' of the <section> element 
+  // which holds the main menu.
+  menu_css_value = jq(menu_selector).css("display");
+
+/*   jq(document).ready(
+    function () { */
+      // IF/ELSE statement which displays the menu if it is currently hidden and 
+      // hides the menu if it is currently visible.
+      if (menu_css_value === "none")  {
+        jq(menu_element).css(menu_visible_css);
+        // jq(menu_element).fadeTo(400, 1);
+      } else {
+        // jq(menu_element).fadeTo(400, 0);
+        jq(menu_element).css(menu_not_visible_css);
+      } // END of 'if' STATEMENT
+ /*    }
+  ); */
+} // END of FUNCTION 'displayMainMenu'
