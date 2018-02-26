@@ -4,14 +4,19 @@
  * *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ** */
 var jq = jQuery.noConflict();
 
-
+/* 
 jq(document).ready(
+  function () {
+    setTimeout(renderContent, 2000);
+  }
+);
+ */
+
+jq(window).on("load", 
   function () {
     renderContent();
   }
 );
-
-
 
 function buildTemplateHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
@@ -35,6 +40,7 @@ function buildTemplateHTML () {
     body: "<body></body>", 
     header: "<header></header>", 
     nav: "<nav></nav>", 
+    article: "<article></article>", 
     footer: "<footer></footer>", 
     section: "<section></section>"
   };
@@ -321,7 +327,6 @@ function isIndexPage ()  {
   file_name_search_string = "index";
 
   file_name_search_index_num = file_name.indexOf(file_name_search_string);
-console.log("file_name_search_index_num = " + file_name_search_index_num)
 
   return file_name_search_index_num;
 }
@@ -341,6 +346,7 @@ function storeArticleMetadata () {
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
   
+
   // Initialize Object which holds HTML which references the title and content of the 
   // desktop page that loaded.
   var article_data = {};
@@ -352,22 +358,94 @@ function storeArticleMetadata () {
   // The location within the file name that the string, 'index' appears is passed on.
   index_search_index_num = isIndexPage();
 
+  // Initializes String which contains the character, "/", which is used to find the Section 
+  // of content the webpage holds.
+  var section_search_string;
+
+  // Initializes Array which contains the index values of the last two occurances of 
+  // the character, "/", within the path name.
+  var section_index_num_Array = [];
+
+  // Initiaizes String which contains the pathname of the current URL.
+  var path_name;
+  
+  section_search_string = "/";
+
+  path_name = window.location.pathname;
+
+  // The location of the last character within the path name, "/", 
+  // is passed onto the first value within, "section_index_num_Array".
+  // 
+  // The location of the character, "/", which preceeds the location stored in the first 
+  // value within, "section_index_num_Array" is stored in the second value of the array.
+  section_index_num_Array[0] = path_name.lastIndexOf(section_search_string);
+  section_index_num_Array[1] = path_name.lastIndexOf(section_search_string, (section_index_num_Array[0] - 1));
+
+  // Initializes String which contains the Section name of the content the webpage displays.
+  var section_value;
+
+  section_value = path_name.slice((section_index_num_Array[1] + 1), section_index_num_Array[0]);
+
+
   // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
   // within the file name. 
   // 
   // If the string, 'index' is not found in the file name, the content of the page is 
   // passed on to the Object, 'article_data'.
   if (index_search_index_num > -1)  {
+    // Initializes String which contains the selector for the <a> tags within the webpage's 
+    // content.
+    var links_selector;
+    
+     // Initializes Object which holds the jQuery object for <a> tags using the selector, 
+    // ".bbs_link".
+    var links_elements = {};
+
+    links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
+    links_elements = jq(links_selector);
+
+    var links_html;
+
+    links_html = ""
+
+    // Initializes String which is used within an EACH loop to identify the unique link under processing.
+    var link_selector;
+
+    // Initializes Object which is used with an EACH loop which contains link metadata.
+    var link_element;
+
+    jq.each(links_elements, 
+      function (link_index, links)  {
+        link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + (link_index + 1).toString() + ") th > a";
+        link_element = jq(link_selector);
+console.log("jq(\"link_element\").attr(\"href\") = " + jq(link_element).attr("href"));
+
+/*         links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + (link_index + 1) + "\">\n" + 
+                                  "  <a href=\"" + base_path + "events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
+        "          </div>\n" +  */
+        
+      })
+
+    switch (section_value)  {
+      case "announcements":
+        article_data.title = "Announcements";
+      break;
+    }
+
+
+
   } else {
     article_data = {
-      title: jq("table:nth-child(2) > tr > td > table:nth-child(2) > tr:nth-child(2) > td > table > tr > td > table > tr > td").html(), 
-      contents: jq("table:nth-child(2) > tr > td > table:nth-child(2) > tr:nth-child(2) > td > table > tr:nth-child(4) > td > table > tr > td").html() 
+      title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td").html(), 
+      contents: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html()
     }
   }
 
+  article_data.section_value = section_value;
+  
   return article_data;
 
-} // END of FUNCTION 'storeArticleMetaData'
+} // END of FUNCTION 'storeArticleMetadata'
 
 
 
@@ -407,7 +485,7 @@ function renderFrameHTML () {
    html_data = buildTemplateHTML();
  
    // Extract the HTML from the Object variable.
-   html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.footer + html_data.section;
+   html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.article + html_data.footer + html_data.section;
  
    // Insert the HTML within the current <html> tag within the browser.
    jq(html_element).html(html_html);
@@ -568,7 +646,7 @@ function renderMainNavigationHTML (base_path)  {
       jq.each(rows.link_data,
         function (link_index, link_metadata) {
           nav_html = nav_html + "<div id=\"link-" + link_metadata.id + "\">\n";
-          nav_html = nav_html + "  <a href=" + base_path + link_metadata.href + "\" title=\"" + link_metadata.title + "\"></a>\n"; 
+          nav_html = nav_html + "  <a href=\"" + base_path + link_metadata.href + "\" title=\"" + link_metadata.title + "\"></a>\n"; 
           nav_html = nav_html + "  <span>" + link_metadata.title + "</span>\n";
           nav_html = nav_html + "</div>\n";
         }
@@ -761,7 +839,7 @@ function renderFooterHTML () {
 
 
 
-function renderArticleHTML ()  {
+function renderArticleHTML (article_data)  {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -773,10 +851,6 @@ function renderArticleHTML ()  {
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
-  var article_data;
-
-  article_data = storeArticleMetadata(file_name_search_index_num);
-
   // Initializes String which contains the selector of the <article> tag.
   var article_selector;
 
@@ -786,27 +860,17 @@ function renderArticleHTML ()  {
   article_selector = "article";
   article_element = jq(article_selector);
 
-  // Initialize Number which contains the location of the string, 'index', within the 
-  // file name.
-  var index_search_index_num;
-
-  index_search_index_num = isIndexPage();
-
   // Initialize String which contains the HTML which renders the content of the page.
   var article_html;
 
-  if (index_search_index_num > -1)  {
-
-  } else {
-    article_html = "<h4>" + article_data.title + "</h4>\n" + 
-                   "<div>\n" + 
-                   "  " + article_data.contents + "\n" + 
-                   "</div>\n";
-  }
+  article_html = "<div class=\"article-header-" + article_data.section_value + "\" id=\"article-header\">\n" + 
+                 "  <h2>" + article_data.title + "</h2>\n" + 
+                 "</div>\n" + 
+                 "<div class=\"article-" + article_data.section_value + "\" id=\"article-content\">\n" + 
+                 "  " + article_data.contents + "\n" + 
+                 "</div>\n";
 
   jq(article_element).html(article_html);
-
-  
 
 } // END of FUNCTION 'buildArticleHTML'
 
@@ -825,7 +889,14 @@ function renderContent () {
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
-  base_path = "/la/";
+  var base_path = "/la/";
+  
+  // Initialize Object which contains the HTML which renders the content within the desktop 
+  // page.
+  var article_data = {};
+
+  // Extract content from desktop version of webpage.
+  article_data = storeArticleMetadata();
 
   // Add mobile-friendly HTML into the browser.
   renderFrameHTML();
@@ -838,9 +909,10 @@ function renderContent () {
 
   renderSectionNavigationHTML(base_path);
 
-  renderArticleHTML();
+  renderArticleHTML(article_data);
   
   renderFooterHTML();
+
 } // END of FUNCTION 'renderContent'
 
 
