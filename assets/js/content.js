@@ -414,26 +414,40 @@ function storeArticleMetadata () {
     // Initializes Object which is used with an EACH loop which contains link metadata.
     var link_element;
 
+    var link_id;
+    var link_href;
+    var link_text;
+
+    var date_selector;
+    var date_element;
+    var date_text;
+
     jq.each(links_elements, 
       function (link_index, links)  {
-        link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + (link_index + 1).toString() + ") th > a";
+        link_id = (link_index + 1).toString();
+
+        link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
         link_element = jq(link_selector);
-console.log("jq(\"link_element\").attr(\"href\") = " + jq(link_element).attr("href"));
 
-/*         links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + (link_index + 1) + "\">\n" + 
-                                  "  <a href=\"" + base_path + "events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
-        "          </div>\n" +  */
+        link_href = jq(link_element).attr("href");
+        link_text = jq(link_element).text();
+         links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + link_id + "\">\n" + 
+                                  "  <a href=\"" + link_href + "\" title=\"" + link_text + "\">" + link_text + "</a>\n";
+
+        date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+        date_element = jq(date_selector);
         
-      })
+        date_text = jq(date_element).text();
+        
+        links_html = links_html + "  <span> - " + date_text + "</span>\n" + 
+                                  "</div>\n";
+      }
+    );
 
-    switch (section_value)  {
-      case "announcements":
-        article_data.title = "Announcements";
-      break;
+    article_data = {
+      title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html(), 
+      contents: links_html
     }
-
-
-
   } else {
     article_data = {
       title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td").html(), 
