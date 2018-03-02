@@ -1,18 +1,18 @@
-$(document).ready(function(){	
+﻿jq(document).ready(function(){	
 	//왼쪽메뉴
-	$('.depth_2').hide();
-	$('.depth_1 li').hover(function(){		
-		$(this).children('.depth_2').show();
+	jq('.depth_2').hide();
+	jq('.depth_1 li').hover(function(){		
+		jq(this).children('.depth_2').show();
 	},function(){
-		$(this).children('.depth_2').hide();
+		jq(this).children('.depth_2').hide();
 	});
 	startVisual();		
-	$('.visualUL li:eq(0)').addClass('on');
-	$('.visualUL li span.pic:eq(0)').fadeIn();
-	$('.visualUL li:eq(0)').addClass('v_1');
-	$('.visualUL li:eq(1)').addClass('v_2');
-	$('.visualUL li:eq(2)').addClass('v_3');
-	$('.visualUL li:eq(3)').addClass('v_4');
+	jq('.visualUL li:eq(0)').addClass('on');
+	jq('.visualUL li span.pic:eq(0)').fadeIn();
+	jq('.visualUL li:eq(0)').addClass('v_1');
+	jq('.visualUL li:eq(1)').addClass('v_2');
+	jq('.visualUL li:eq(2)').addClass('v_3');
+	jq('.visualUL li:eq(3)').addClass('v_4');
 });
 
 function start(st,e,int){
@@ -34,14 +34,14 @@ function start(st,e,int){
 		},int)
 	}
 function newslide(e){
-	$('.visualUL li.on .pic').fadeOut();
-	$('.visualUL li.on').removeClass('on');
+	jq('.visualUL li.on .pic').fadeOut();
+	jq('.visualUL li.on').removeClass('on');
 	
-	$('.navi:eq('+e+')').parent().addClass('on')
-	$('.navi:eq('+e+')').next().fadeIn();
-	$('.navi:eq('+e+')').parent().parent().parent().parent().attr('id','bg'+e)
+	jq('.navi:eq('+e+')').parent().addClass('on')
+	jq('.navi:eq('+e+')').next().fadeIn();
+	jq('.navi:eq('+e+')').parent().parent().parent().parent().attr('id','bg'+e)
 	intnum = e;
-	//$('body').prepend(intnum);
+	//jq('body').prepend(intnum);
 }
 
 function startVisual() {
@@ -61,7 +61,7 @@ function MenuLoad(a) {
 
 	for(var i=1; i <= 20; i++){
 
-		var obj_lnb = $('#lnb-'+a+' > a > img');
+		var obj_lnb = jq('#lnb-'+a+' > a > img');
 
 		if (i == a){
 
@@ -77,25 +77,25 @@ function MenuLoad(a) {
 
 }
 
-$(document).ready(function(){
+jq(document).ready(function(){
 
 	var old_imgsrc,new_imgsrc
 
-	$('#lnb > li > a').hover(function(){
+	jq('#lnb > li > a').hover(function(){
 
-		old_imgsrc = $(this).children('img').attr('src');
+		old_imgsrc = jq(this).children('img').attr('src');
 
 		new_imgsrc = old_imgsrc.replace(".gif","_on.gif");
 
-		if($(this).attr('class') == "on"){}else {
+		if(jq(this).attr('class') == "on"){}else {
 
-			$(this).children('img').attr('src',new_imgsrc);
+			jq(this).children('img').attr('src',new_imgsrc);
 
 		}
 
 	},function(){
 
-		$(this).children('img').attr('src',old_imgsrc);
+		jq(this).children('img').attr('src',old_imgsrc);
 
 	})
 

@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  height:300px;
+  height: 300px;
   display: block;
   margin: 1em;
 }
@@ -134,8 +134,7 @@ input.gsc-input {
 
 nav > section > div span, 
 #nav-main_menu > section > div span, 
-font, 
-#nav-section_menu #link-debate-english_speech_contest {
+font {
   font-size: 28px;
 }
 
@@ -342,6 +341,7 @@ input#gsc-i-id1 {
 }
 
 table.gsc-search-box td {
+  /* width: 100% !important; */
   margin-top: 14px;
   padding: 0;
 }
@@ -373,10 +373,6 @@ input.gsc-search-button:focus {
   line-height: 44px;
 }
 
-#nav-section_menu a {
-  line-height: 85px;
-}
-
 #link-login, 
 #link-main_menu {
   margin-right: 15px;
@@ -403,6 +399,32 @@ nav > section > div > a,
   border: 5px solid #e76200;
 }
 
+/* #header-links a, 
+nav > section > div > a, 
+#nav-sub_menu a, 
+#nav-main_menu > section > div > a, 
+.article-faculty-member-page a, 
+.article-debate a, 
+.article-english img:nth-child(4) + a, 
+#button input {
+  background-color: #d8ccc3;
+  box-shadow: 4px 4px 1px #a2a2a2;
+  border: 5px solid #485081;
+} */
+
+/* #header-links a, 
+nav > section > div > a, 
+#nav-sub_menu a, 
+#nav-main_menu > section > div > a, 
+.article-faculty-member-page a, 
+.article-debate a, 
+.article-english img:nth-child(4) + a, 
+#button input {
+  background-color: #485081;
+  box-shadow: 4px 4px 1px #a2a2a2;
+  border: 5px solid #d8ccc3;
+} */
+
 #header-links a:active,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
@@ -415,11 +437,68 @@ nav > section > div > a:active,
   border-color: #fff;
 }
 
+
+/* #header-links a:active,
+nav > section > div > a:active, 
+#nav-sub_menu a:active, 
+#nav-main_menu > section > div > a:active, 
+.article-faculty-member-page a:active, 
+.article-debate a:active, 
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
+  background-color: #e76200;
+  border-color: #485081;
+}
+ */
+
+/*  #header-links a:active,
+nav > section > div > a:active, 
+#nav-sub_menu a:active, 
+#nav-main_menu > section > div > a:active, 
+.article-faculty-member-page a:active, 
+.article-debate a:active, 
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
+  background-color: #485081;
+  border-color: #e76200;
+} */
+
+/* #header-links a:active, 
+#nav-menu-links a:active, 
+#nav-section_menu a:active, 
+.article-debate a:active, 
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
+  color: #fff;
+} */
+/* 
+#header-links a:active, 
+#nav-menu-links a:active, 
+#nav-section_menu a:active, 
+.article-debate a:active, 
+.article-english img:nth-child(4) + a:active, 
+#button input:click {
+  color: #485081;
+} */
+
 .article-faculty-info ul li a:active, 
 .article-debate-links a:active, 
 .article-english-links a:active {
   color: #fff;
 }
+
+/* #header-links a, 
+nav > section > div span, 
+#nav-main_menu > section > div span,
+#nav-section_menu a, 
+.article-faculty-member-page a, 
+.article-debate a, 
+.article-english img:nth-child(4) + a, 
+#button input {
+  text-decoration: none;
+  text-shadow: 2px 2px 1px #a2a2a2;
+  color: #d8ccc3;
+} */
 
 #header-links a, 
 nav > section > div span, 
@@ -434,6 +513,8 @@ nav > section > div span,
   color: #485081;
 }
 
+/* nav > section > div span, 
+#nav-main_menu > section > div span, */
 .article-faculty-info ul li a, 
 .article-debate-links a, 
 .article-english-links a, 
@@ -611,23 +692,13 @@ nav > section > div span,
   margin-left: 0 !important;
 }
 
-
-/* *** SECTION MENU *** */
-
 #nav-section_menu a {
-  height: 85px;
   margin: 15px 30px;
-  vertical-align: top;
 }
 
 #nav-section_menu #link-english-talk_2016 {
   vertical-align: top;
 }
-
-.link-multiple_line {
-  line-height: 44px !important;
-}
-
 
 /* *** FOOTER *** */
 
@@ -790,7 +861,22 @@ footer > #footer-border {
   margin: 15px;
 }
 
-.article-faculty-member-page span {
+/* .article-faculty-member-page h4, 
+.article-debate h4, 
+.article-english h4, 
+.article-login h4, 
+.article-header-announcements h4, 
+.article-announcements h4, 
+.article-awards h4, 
+.article-apply_faculty h4, 
+.article-apply_students h4, 
+.article-media h4 {
+  margin-bottom: 0.25em;
+}
+
+ */
+ 
+ .article-faculty-member-page span {
   width: 10em;
   margin: 0 auto;
   display: block;
@@ -843,6 +929,10 @@ tr > td:nth-child(2)  {
   color: #4f4f4f;
 }
 
+/* h4 {
+  margin: 1em 0 0.25em 0;
+}
+ */
 li {
   margin: 0.5em 0;
 }
@@ -863,6 +953,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-camps, 
 .article-lessons, 
 .article-business {
+  /* width: 75%; */
   height: auto;
   min-height: 1px;
   max-height: 999999px;
@@ -870,10 +961,6 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 
 /* PAGE: Debate */
-
-.article-debate {
-  min-height: 803px;
-}
 
 .article-header-debate, 
 .article-debate-links, 
@@ -890,6 +977,13 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   display: block;
 }
 
+/* .article-debate-links a:nth-child(1), 
+.article-english-links a:nth-child(1), 
+.article-awards-links a:nth-child(1), 
+.article-events-links a:nth-child(1) {
+  margin-top: 0;
+}
+ */
 .article-debate h6, 
 .article-english h6 {
   margin: 0.75em 0;
@@ -900,6 +994,12 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-english > span {
   display: block;
 }
+
+/* .article-debate table, 
+.article-english table {
+  width: 960px;
+  margin: 2em auto;
+} */
 
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
@@ -1147,6 +1247,10 @@ input[name="testDate"] {
   height: 425px;
 }
 
+/* .media-item img { 
+  border: 5px solid #485081;
+} */
+
 .media-item img { 
   border: 5px solid #fff;
 }
@@ -1385,10 +1489,22 @@ input[name="testDate"] {
     margin-top: 5px;
   }
 
+  /* #header-links a, 
+  nav > section > div > a, 
+  #nav-main_menu > section > div > a, 
+  #nav-section_menu > a, 
+  .article-debate a, 
+  #button input, 
+  .article-faculty-member-page a {
+    box-shadow: 2px 2px 1px #a2a2a2;
+    border: 2px solid #485081;
+  }
+ */
+
   #header-links a, 
   nav > section > div > a, 
   #nav-main_menu > section > div > a, 
-  #nav-section_menu a, 
+  #nav-section_menu > a, 
   .article-debate a, 
   #button input, 
   .article-faculty-member-page a {
@@ -1399,7 +1515,7 @@ input[name="testDate"] {
   #header-links a, 
   nav > section > div span, 
   #nav-menu_menu > section > div span, 
-  #nav-section_menu a, 
+  #nav-section_menu > a, 
   .article-debate a, 
   #button input, 
   .article-faculty-member-page a {
@@ -1565,14 +1681,6 @@ input[name="testDate"] {
 
   #link-debate-recruitment {
     vertical-align: top;
-  }
-
-  #nav-section_menu #link-debate-english_speech_contest {
-    font-size: 8px;
-  }
-
-  .link-multiple_line {
-    line-height: 14px !important;
   }
 
   /* *** FOOTER *** */
@@ -1926,8 +2034,8 @@ input[name="testDate"] {
   }
 
   #nav-section_menu {
-    width: 260px;
-    margin: 30px !important;
+    width: 265px;
+    margin: 30px;
   }
 
   #nav-section_menu #link-debate-recruitment, 
@@ -1995,13 +2103,6 @@ input[name="testDate"] {
   
   /* *** DEBATE *** */
 
-  .article-debate, 
-  .article-awards, 
-  .article-events, 
-  .article-camps {
-    min-height: 202px;
-  }
-  
   .article-debate img[height="837"] {
     height: 356px;
   }
@@ -2022,37 +2123,15 @@ input[name="testDate"] {
 		height: 419px;
 	}
 
-  .article-debate img[height="364"] {
-    height: 125px;
-  }
-
-  .article-debate img[height="391"] {
-    height: 204px;
-  }
-
-  .article-debate img[height="691"] {
-    height: 364px;
-  }
-
-  .article-debate img[height="579"] {
-    height: 291px;
-  }
-
-  .article-debate img[height="723"] {
-    height: 373px;
-  }
-
-  .article-debate img[height="750"] {
-    height: 386px;
-  }
-
-  .article-debate img[height="692"] {
-    height: 363px;
-  }
-
   
   /* *** AWARDS *** */
 
+  .article-awards, 
+  .article-events, 
+  .article-camps {
+    min-height: 202px;
+  }
+  
   .article-awards a, 
   .article-announcements a, 
   .article-events a, 
@@ -2542,6 +2621,15 @@ input[name="testDate"] {
 
   /* *** SECTION NAVIGATION *** */
 
+ /*  #nav-section_menu #link-debate-recruitment, 
+  #nav-section_menu #link-debate-debate_2014, 
+  #nav-section_menu #link-announcements-page_1, 
+  #nav-section_menu #link-english-talk_2016, 
+  #nav-section_menu #link-english-english_advanced, 
+  #nav-section_menu #link-media-page_1 {
+    line-height: 28px;
+  } */
+
   #nav-section_menu #link-awards-page_1 {
     line-height: 30px;
   }
@@ -2568,11 +2656,6 @@ input[name="testDate"] {
     width: 315px;
   }
 
-  .article-debate, 
-  .article-announcements {
-    min-height: 199px;
-  }
-  
   .article-debate img[height="837"] {
     height: 387px;
   }
@@ -2587,38 +2670,6 @@ input[name="testDate"] {
 
   .article-debate img[height="200"] {
     height: 126px;
-  }
-
-  .article-debate img[height="364"] {
-    height: 136px;
-  }
-
-  .article-debate img[height="391"] {
-    height: 221px;
-  }
-
-  .article-debate img[height="691"] {
-    height: 396px;
-  }
-
-  .article-debate img[height="809"] {
-    height: 455px;
-  }
-
-  .article-debate img[height="579"] {
-    height: 316px;
-  }
-
-  .article-debate img[height="723"] {
-    height: 405px;
-  }
-
-  .article-debate img[height="750"] {
-    height: 405px;
-  }
-
-  .article-debate img[height="692"] {
-    height: 394px;
   }
 
 
@@ -2656,6 +2707,10 @@ input[name="testDate"] {
 
 
   /* *** ANNOUNCEMENTS *** */
+
+  .article-announcements {
+    min-height: 199px;
+  }
 
   .article-announcements img[height="882"] {
     height: 453px;
@@ -3123,7 +3178,7 @@ input[name="testDate"] {
     width: 110px;
     height: 15px;
     margin: 10px 13px;
-    line-height: 32px;
+    line-height: 14px;
   }
 
   .article-faculty-member-page a { 
@@ -3137,23 +3192,6 @@ input[name="testDate"] {
   #nav-section_menu #link-english-application_2016_updated {
     height: 28px;
   }
-
-
-  /* *** SECTION NAVIGATION *** */
-
-  
-  #nav-section_menu a {
-    height: 35px;
-  }
-
-  .link-multiple_line {
-    line-height: 18px !important;
-  }
-
-  #nav-section_menu #link-debate-english_speech_contest {
-    font-size: 12px;
-  }
-
 
   
   /* *** FOOTER *** */
@@ -3204,13 +3242,6 @@ input[name="testDate"] {
     width: 340px;
   }
 
-  .article-debate, 
-  .article-gpa, 
-  .article-lessons, 
-  .article-business {
-    min-height: 264px;
-  } 
-
   .article-debate img[height="837"] {
     height: 412px;
   }
@@ -3225,38 +3256,6 @@ input[name="testDate"] {
 
   .article-debate > h4 img[height="200"] {
     height: 134px;
-  }
-
-  .article-debate img[height="364"] {
-    height: 147px;
-  }
-
-  .article-debate img[height="391"] {
-    height: 239px;
-  }
-
-  .article-debate img[height="691"] {
-    height: 427px;
-  }
-
-  .article-debate img[height="809"] {
-    height: 466px;
-  }
-
-  .article-debate img[height="579"] {
-    height: 341px;
-  }
-
-  .article-debate img[height="723"] {
-    height: 437px;
-  }
-
-  .article-debate img[height="750"] {
-    height: 453px;
-  }
-
-  .article-debate img[height="692"] {
-    height: 425px;
   }
 
 
@@ -3490,6 +3489,10 @@ input[name="testDate"] {
 
   /* *** GPA/TESTING *** */
 
+  .article-gpa {
+    min-height: 264px;
+  }
+
   .article-gpa img {
     height: 208px;
   }
@@ -3665,5 +3668,13 @@ input[name="testDate"] {
   
   .article-camps table > tbody > tr > td {
     font-size: 10px;
+  }
+
+
+  /* *** LESSONS *** */
+
+  .article-lessons, 
+  .article-business {
+    min-height: 264px;
   }
 }
