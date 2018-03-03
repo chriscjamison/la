@@ -50,7 +50,7 @@ h4,
 .article-debate-links,
 .article-debate, 
 .article-debate a, 
-.article-english-links, 
+.article-english-listing, 
 .article-english, 
 .article-english img:nth-child(4) + a,  
 #footer-row_3 span, 
@@ -96,8 +96,8 @@ th,
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
 .article-debate table + span, 
 .article-debate a, 
-.article-english-links a, 
-.article-english > span, 
+.article-english-listing a, 
+.article-english-listing span, 
 .article-english ul li, 
 .article-english img:nth-child(4) + a, 
 .article-announcements a, 
@@ -170,10 +170,10 @@ p,
 .article-debate table td, 
 .article-debate ul li, 
 .article-debate ol li, 
-.article-english-links, 
+.article-english-listing, 
 .article-english table td, 
 .article-english h6, 
-.article-english > span, 
+.article-english-listing span, 
 .article-english ul li, 
 .article-announcements a, 
 .article-announcements span, 
@@ -214,7 +214,6 @@ nav > section > div span,
 .article-debate a, 
 .article-english h4, 
 .article-english h6, 
-.article-english > span, 
 .article-english img:nth-child(4) + a, 
 .article-login h4, 
 .article-header-announcements h4, 
@@ -483,7 +482,7 @@ nav > section > div > a:active,
 
 .article-faculty-info ul li a:active, 
 .article-debate-links a:active, 
-.article-english-links a:active {
+.article-english-listing a:active {
   color: #fff;
 }
 
@@ -517,7 +516,7 @@ nav > section > div span,
 #nav-main_menu > section > div span, */
 .article-faculty-info ul li a, 
 .article-debate-links a, 
-.article-english-links a, 
+.article-english-listing a, 
 .article-announcements a, 
 .article-awards a, 
 .article-media a, 
@@ -965,20 +964,20 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-header-debate, 
 .article-debate-links, 
 .article-header-english, 
-.article-english-links {
-  width: 680px;
+.article-english-listing {
+  width: 735px;
   margin: 0 auto;
 }
 
 .article-debate-links a, 
-.article-english-links a {
+.article-english-listing a {
   width: 17em;
   margin: 1em auto;
-  display: block;
+  display: inline-block;
 }
 
 /* .article-debate-links a:nth-child(1), 
-.article-english-links a:nth-child(1), 
+.article-english-listing a:nth-child(1), 
 .article-awards-links a:nth-child(1), 
 .article-events-links a:nth-child(1) {
   margin-top: 0;
@@ -991,8 +990,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 
 .article-debate > span, 
 .article-debate table + span, 
-.article-english > span {
-  display: block;
+.article-english-listing span {
+  display: inline-block;
 }
 
 /* .article-debate table, 
@@ -1369,9 +1368,9 @@ input[name="testDate"] {
   .article-apply_faculty input[type="text"], 
   .article-apply_faculty table .form_comment, 
   .article-apply_faculty select, 
-  .article-english-links a, 
+  .article-english-listing a, 
   h6, 
-  .article-english span, 
+  .article-english-listing span, 
   .article-english ul li, 
   .article-faculty-member ul li, 
   .article-faculty-member p, 
@@ -2058,7 +2057,7 @@ input[name="testDate"] {
   .article-debate img, 
   .article-announcements img, 
   .article-header-english img, 
-  .article-english-links, 
+  .article-english-listing, 
   .article-english img, 
   .article-english ul, 
   .article-faculty-member-page, 
@@ -2643,7 +2642,7 @@ input[name="testDate"] {
   .form-row, 
   .article-announcements img, 
   .article-header-english img, 
-  .article-english-links, 
+  .article-english-listing, 
   .article-english img, 
   .article-english ul, 
   .article-faculty-member-page, 
@@ -3231,7 +3230,7 @@ input[name="testDate"] {
   .article-debate img, 
   .article-announcements img, 
   .article-header-english img, 
-  .article-english-links, 
+  .article-english-listing, 
   .article-english img, 
   .article-faculty-member-page,  
   .article-about_us img, 

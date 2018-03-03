@@ -52,7 +52,7 @@ h4,
 .article-debate a, 
 .article-english-links, 
 .article-english, 
-.article-english img:nth-child(4) + a,  
+.article-english a,  
 #footer-row_3 span, 
 .article-login, 
 .article-header-announcements, 
@@ -99,7 +99,7 @@ th,
 .article-english-links a, 
 .article-english > span, 
 .article-english ul li, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 .article-announcements a, 
 .article-announcements span, 
 .article-awards a, 
@@ -215,7 +215,7 @@ nav > section > div span,
 .article-english h4, 
 .article-english h6, 
 .article-english > span, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 .article-login h4, 
 .article-header-announcements h4, 
 .article-announcements h4, 
@@ -392,7 +392,7 @@ nav > section > div > a,
 #nav-main_menu > section > div > a, 
 .article-faculty-member-page a, 
 .article-debate a, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 #button input {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #2c314e;
@@ -405,7 +405,7 @@ nav > section > div > a,
 #nav-main_menu > section > div > a, 
 .article-faculty-member-page a, 
 .article-debate a, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 #button input {
   background-color: #d8ccc3;
   box-shadow: 4px 4px 1px #a2a2a2;
@@ -418,7 +418,7 @@ nav > section > div > a,
 #nav-main_menu > section > div > a, 
 .article-faculty-member-page a, 
 .article-debate a, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 #button input {
   background-color: #485081;
   box-shadow: 4px 4px 1px #a2a2a2;
@@ -431,7 +431,7 @@ nav > section > div > a:active,
 #nav-main_menu > section > div > a:active, 
 .article-faculty-member-page a:active, 
 .article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
+.article-english a:active, 
 #button input:click {
   background-color: #e76200;
   border-color: #fff;
@@ -444,7 +444,7 @@ nav > section > div > a:active,
 #nav-main_menu > section > div > a:active, 
 .article-faculty-member-page a:active, 
 .article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
+.article-english a:active, 
 #button input:click {
   background-color: #e76200;
   border-color: #485081;
@@ -457,7 +457,7 @@ nav > section > div > a:active,
 #nav-main_menu > section > div > a:active, 
 .article-faculty-member-page a:active, 
 .article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
+.article-english a:active, 
 #button input:click {
   background-color: #485081;
   border-color: #e76200;
@@ -467,7 +467,7 @@ nav > section > div > a:active,
 #nav-menu-links a:active, 
 #nav-section_menu a:active, 
 .article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
+.article-english a:active, 
 #button input:click {
   color: #fff;
 } */
@@ -476,7 +476,7 @@ nav > section > div > a:active,
 #nav-menu-links a:active, 
 #nav-section_menu a:active, 
 .article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
+.article-english a:active, 
 #button input:click {
   color: #485081;
 } */
@@ -493,7 +493,7 @@ nav > section > div span,
 #nav-section_menu a, 
 .article-faculty-member-page a, 
 .article-debate a, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 #button input {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
@@ -506,7 +506,7 @@ nav > section > div span,
 #nav-section_menu a, 
 .article-faculty-member-page a, 
 .article-debate a, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 #button input {
   text-decoration: none;
   text-shadow: 2px 2px 1px #a2a2a2;
@@ -1039,7 +1039,7 @@ th,
 }
 
 .article-debate a, 
-.article-english img:nth-child(4) + a, 
+.article-english a, 
 #button input {
   display: block;
   margin: 30px auto;

@@ -8,21 +8,21 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-112766766-3');
 </script>
 <title>{_cfg.logo.hometitle}</title>
 <meta http-equiv="Content-Type" content="text/html; charset={ _cfg.encoding }">
 <meta name="description" content="{ _cfg.site.description }">
 <meta name="keywords" content="{ _cfg.site.keyword }">
+
+
 <!--{ _cfg.common.headtag }-->
 <link href="css/style.css" rel="stylesheet" type="text/css">
-
+<script language="javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script language="javascript" src="css/common.js"></script>
 
-<script language="javascript" src="/skin/skin020/mobile/assets/js/jquery/jquery-3.2.1.slim.js"></script>
 <script language="javascript" src="/skin/skin020/mobile/assets/js/index.js"></script>
-<script language="javascript" src="/skin/skin020/mobile/assets/js/content.js"></script>
+<script language="javascript" src="/skin/skin020/mobile/assets/js/content.js?v=1"></script>
 <script language="javascript">
 
 // 아래 스크립트는 절대 삭제하시면 안됩니다.
@@ -31,38 +31,18 @@
 </script>
 <script>
   // <!-- 
-    var isMobile = {
-      Android: function() {
-          return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function() {
-          return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function() {
-          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function() {
-          return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function() {
-          return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function() {
-          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-    };
+    var window_width = jq(window).width();
 
-    if (isMobile.any()) {
+    if (window_width <= 980) {
       if (window.location.pathname === "/")  {
         window.stop();
 
         renderLandingPage();
       } else {
-
         jq(window).on("load", 
           function () {
             renderContent();
-          }
+          } 
         );
       }
     } 

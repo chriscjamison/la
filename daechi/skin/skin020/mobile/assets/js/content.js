@@ -371,6 +371,24 @@ function storeContentArticleMetadata () {
 
   section_value = path_name.slice((section_index_num + 1));
 
+  // Initializes Boolean which is set to true if the landing page for the section 
+  // includes links to various pieces of content within that section.
+  var run_index = new Boolean;
+
+  // Sets the section value to match the title of the section which the path name 
+  // refers to.
+  switch (section_value)  {
+    case "admission1":
+      section_value = "gpa";
+      run_index = false;
+    break;
+
+    case "program2":
+      section_value = "english";
+      run_index = true;
+    break;
+  } // END of SWITCH statement
+
 // console.log("section_value = " + section_value);
 
   // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
@@ -378,18 +396,20 @@ function storeContentArticleMetadata () {
   // 
   // If the string, 'index' is not found in the file name, the content of the page is 
   // passed on to the Object, 'article_data'.
-  if (index_search_index_num === -1)  {
+  if (index_search_index_num === -1 && 
+      run_index === true)  {
+
     // Initializes String which contains the selector for the <a> tags within the webpage's 
     // content.
     var links_selector;
-console.log("index");
+// console.log("index");
      // Initializes Object which holds the jQuery object for <a> tags using the selector, 
     // ".bbs_link".
     var links_elements = {};
 
-    links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
+    links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
     links_elements = jq(links_selector);
-
+// console.log("jq(\"table\") = " + jq("table").html());
     var links_html;
 
     links_html = ""
@@ -411,8 +431,8 @@ console.log("index");
     jq.each(links_elements, 
       function (link_index, links)  {
         link_id = (link_index + 1).toString();
-
-        link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+// console.log("link_id = " + link_id);
+        link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
         link_element = jq(link_selector);
 
         link_href = jq(link_element).attr("href");
@@ -420,7 +440,7 @@ console.log("index");
          links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + link_id + "\">\n" + 
                                   "  <a href=\"" + link_href + "\" title=\"" + link_text + "\">" + link_text + "</a>\n";
 
-        date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+        date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
         date_element = jq(date_selector);
         
         date_text = jq(date_element).text();
@@ -429,10 +449,10 @@ console.log("index");
                                   "</div>\n";
       }
     );
-
+// console.log("links_html = " + links_html);
     article_data = {
       title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html(), 
-      contents: links_html
+      contents: links_html, 
     }
   } else {
 // console.log("not_index");
