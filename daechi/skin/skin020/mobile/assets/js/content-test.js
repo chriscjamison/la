@@ -58,7 +58,7 @@ function buildContentHeadHTML () {
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
     stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
-    jquery: "<script src=\"/skin/skin020/mobile/assets/js/jquery/jquery-3.2.1.slim.js\"></script>", 
+    jquery: "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
     javascript: "<script src=\"/skin/skin020/mobile/assets/js/content.js\"></script>"
   };
 
@@ -107,7 +107,7 @@ function storeContentMainNavigationMetadata () {
         english_data : {
           id: "english", 
           title: "English", 
-          href: "/program/program2"
+          href: "program/program2"
         }, 
         camps_data : {
           id: "camps", 
@@ -132,7 +132,7 @@ function storeContentMainNavigationMetadata () {
         debate_data : { 
           id: "debate", 
           title: "Debate", 
-          href: "/program/program1"
+          href: "program/program1"
         }, 
         events_data : { 
           id: "events", 
@@ -192,7 +192,7 @@ function storeContentMainNavigationMetadata () {
         media_data : { 
           id: "media", 
           title: "Media", 
-          href: "/community/community4"
+          href: "community/community4"
         }
       }
     }
@@ -492,7 +492,7 @@ function renderContentFrameHTML () {
    var html_html;
  
    // Pull the HTML for the 'frame' by calling the Function, 'buildTemplateHTML'.
-   html_data = buildTemplateHTML();
+   html_data = buildContentTemplateHTML();
  
    // Extract the HTML from the Object variable.
    html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.article + html_data.footer + html_data.section;
@@ -535,7 +535,7 @@ function renderContentHeadHTML ()  {
   var head_html;
 
   // Pull the HTML contained within the <head> tag by calling the Function, 'buildHeadHTML'.
-  head_data = buildHeadHTML();
+  head_data = buildContentHeadHTML();
 
   // Extract the HTML from the Object variable.
   head_html = head_data.title + head_data.meta_http + head_data.stylesheet + head_data.jquery + head_data.javascript;

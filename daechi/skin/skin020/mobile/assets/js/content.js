@@ -58,7 +58,7 @@ function buildContentHeadHTML () {
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
     stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
-    jquery: "<script src=\"/skin/skin020/mobile/assets/js/jquery/jquery-3.2.1.slim.js\"></script>", 
+    jquery: "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
     javascript: "<script src=\"/skin/skin020/mobile/assets/js/content.js\"></script>"
   };
 
@@ -107,7 +107,7 @@ function storeContentMainNavigationMetadata () {
         english_data : {
           id: "english", 
           title: "English", 
-          href: "/program/program2"
+          href: "program/program2"
         }, 
         camps_data : {
           id: "camps", 
@@ -117,7 +117,7 @@ function storeContentMainNavigationMetadata () {
         lessons_data : { 
           id: "lessons", 
           title: "Lessons", 
-          href: "mobile/lessons/index_lessons.htm"
+          href: "skin/skin020/mobile/lessons/index_lessons.htm"
         }
       }
     }, 
@@ -132,7 +132,7 @@ function storeContentMainNavigationMetadata () {
         debate_data : { 
           id: "debate", 
           title: "Debate", 
-          href: "/program/program1"
+          href: "program/program1"
         }, 
         events_data : { 
           id: "events", 
@@ -182,17 +182,17 @@ function storeContentMainNavigationMetadata () {
         contact_us_data : { 
           id: "contact_us", 
           title: "Contact Us", 
-          href: "skin/skin020/mobilecontact_us/index_contact_us.htm"
+          href: "skin/skin020/mobile/contact_us/index_contact_us.htm"
         }, 
         location_data : { 
           id: "location", 
           title: "Location", 
-          href: "skin/skin020/mobilelocation/index_location.htm"
+          href: "skin/skin020/mobile/location/index_location.htm"
         }, 
         media_data : { 
           id: "media", 
           title: "Media", 
-          href: "/community/community4"
+          href: "community/community4"
         }
       }
     }
@@ -292,16 +292,16 @@ function storeContentFooterMetadata () {
 
 
 
-function isIndexPage ()  {
+function isNotIndexPage ()  {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
    * PURPOSE OF FUNCTION 
-   *   Returns the location that the string, 'index', is located within the file name 
+   *   Returns the location that the string, '?', is located within the file name 
    *   of the HTML loaded from the desktop version of the webpage
    *   
-   * FUNCTIONS WHICH USE 'isIndexPage'
-   *   + renderArticleHTML
+   * FUNCTIONS WHICH USE 'isNotIndexPage'
+   *   + storeContentArticleMetadata
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -313,13 +313,7 @@ function isIndexPage ()  {
 
   var file_name_search_index_num;
 
-  file_name_search_string = "/";
-
-  file_name_search_index_num = file_name.lastIndexOf(file_name_search_string);
-
-  file_name = file_name.slice(file_name_search_index_num);
-
-  file_name_search_string = "index";
+  file_name_search_string = "?";
 
   file_name_search_index_num = file_name.indexOf(file_name_search_string);
 
@@ -351,15 +345,15 @@ function storeContentArticleMetadata () {
   var index_search_index_num;
   
   // The location within the file name that the string, 'index' appears is passed on.
-  index_search_index_num = isIndexPage();
+  index_search_index_num = isNotIndexPage();
 
   // Initializes String which contains the character, "/", which is used to find the Section 
   // of content the webpage holds.
   var section_search_string;
 
-  // Initializes Array which contains the index values of the last two occurances of 
+  // Initializes Number which contains the index of the last two occurance of 
   // the character, "/", within the path name.
-  var section_index_num_Array = [];
+  var section_index_num;
 
   // Initiaizes String which contains the pathname of the current URL.
   var path_name;
@@ -369,30 +363,26 @@ function storeContentArticleMetadata () {
   path_name = window.location.pathname;
 
   // The location of the last character within the path name, "/", 
-  // is passed onto the first value within, "section_index_num_Array".
-  // 
-  // The location of the character, "/", which preceeds the location stored in the first 
-  // value within, "section_index_num_Array" is stored in the second value of the array.
-  section_index_num_Array[0] = path_name.lastIndexOf(section_search_string);
-  section_index_num_Array[1] = path_name.lastIndexOf(section_search_string, (section_index_num_Array[0] - 1));
-
+  // is passed onto the first value within, "section_index_num".
+  section_index_num = path_name.lastIndexOf(section_search_string);
+  
   // Initializes String which contains the Section name of the content the webpage displays.
   var section_value;
 
-  section_value = path_name.slice((section_index_num_Array[1] + 1), section_index_num_Array[0]);
+  section_value = path_name.slice((section_index_num + 1));
 
-console.log(jq("table").html());
+// console.log("section_value = " + section_value);
 
   // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
   // within the file name. 
   // 
   // If the string, 'index' is not found in the file name, the content of the page is 
   // passed on to the Object, 'article_data'.
-  if (index_search_index_num > -1)  {
+  if (index_search_index_num === -1)  {
     // Initializes String which contains the selector for the <a> tags within the webpage's 
     // content.
     var links_selector;
-    
+console.log("index");
      // Initializes Object which holds the jQuery object for <a> tags using the selector, 
     // ".bbs_link".
     var links_elements = {};
@@ -445,9 +435,10 @@ console.log(jq("table").html());
       contents: links_html
     }
   } else {
+// console.log("not_index");
     article_data = {
-      title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td").html(), 
-      contents: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html()
+      title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html(), 
+      contents: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html()
     }
   }
 
@@ -492,7 +483,7 @@ function renderContentFrameHTML () {
    var html_html;
  
    // Pull the HTML for the 'frame' by calling the Function, 'buildTemplateHTML'.
-   html_data = buildTemplateHTML();
+   html_data = buildContentTemplateHTML();
  
    // Extract the HTML from the Object variable.
    html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.article + html_data.footer + html_data.section;
@@ -535,7 +526,7 @@ function renderContentHeadHTML ()  {
   var head_html;
 
   // Pull the HTML contained within the <head> tag by calling the Function, 'buildHeadHTML'.
-  head_data = buildHeadHTML();
+  head_data = buildContentHeadHTML();
 
   // Extract the HTML from the Object variable.
   head_html = head_data.title + head_data.meta_http + head_data.stylesheet + head_data.jquery + head_data.javascript;

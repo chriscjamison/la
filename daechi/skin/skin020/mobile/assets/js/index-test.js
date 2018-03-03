@@ -56,7 +56,7 @@ function buildHeadHTML () {
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
     stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
-    jquery: "<script src=\"/skin/skin020/mobile/assets/js/jquery/jquery-3.2.1.slim.js\"></script>", 
+    jquery: "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
     javascript: "<script src=\"/skin/skin020/mobile/assets/js/index.js\"></script>"
   };
 

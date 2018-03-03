@@ -1215,24 +1215,29 @@ function extractHtmlFromDesktopPage()  {
                                     "        <script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=83636625893c769b461dd3298dd45bba\"></script>\n" + 
                                     "        <script>\n" + 
                                     "          var mapContainer = document.getElementById('map'), \n" + 
-                                    "          mapCenter = new daum.maps.LatLng(37.370567, 127.107485), \n" + 
+                                    "          mapCenter = new daum.maps.LatLng(37.3680458, 127.1062733), \n" + 
                                     "          mapOption = { \n" + 
                                     "            center: mapCenter, \n" + 
-                                    "            level: 3\n" + 
+                                    "            level: 2\n" + 
                                     "          };\n" +
                                     "\n" +  
                                     "          var map = new daum.maps.Map(mapContainer, mapOption);\n" + 
                                     "\n" + 
-                                    "          var markerPosition  = new daum.maps.LatLng(37.370567, 127.107485);\n" + 
+                                    "          var icon = new daum.maps.MarkerImage(\n" + 
+                                    "                         'http://i1.daumcdn.net/dmaps/apis/n_local_blit_04.png',\n" + 
+                                    "                          new daum.maps.Size(31, 35));" + 
+                                    "\n" + 
+                                    "          var markerPosition  = new daum.maps.LatLng(37.3680458, 127.1062733);\n" + 
                                     "\n" + 
                                     "          var marker = new daum.maps.Marker({ \n" + 
-                                    "             position: markerPosition\n" + 
+                                    "                             position: markerPosition, \n" + 
+                                    "                             image: icon\n" + 
                                     "          });\n" + 
                                     "\n" + 
                                     "          marker.setMap(map);\n" + 
                                     "\n" + 
-                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">큰지도보기</a> <a href=\"http://map.daum.net/link/to/Hello World!,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">길찾기</a></div>', \n" + 
-                                    "            iwPosition = new daum.maps.LatLng(37.370567, 127.107485);\n" + 
+                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.3680458,127.1062733\" style=\"color:blue\" target=\"_blank\">큰지도보기</a> <a href=\"http://map.daum.net/link/to/Leaders Academy,37.3680458,127.1062733\" style=\"color:blue\" target=\"_blank\">길찾기</a></div>', \n" + 
+                                    "              iwPosition = new daum.maps.LatLng(37.3680458, 127.1062733);\n" + 
                                     "\n" + 
                                     "          var infowindow = new daum.maps.InfoWindow({ \n" + 
                                     "            position : iwPosition, \n" + 

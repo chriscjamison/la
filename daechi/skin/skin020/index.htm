@@ -1,44 +1,16 @@
 { # header }
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="/js/popup.js"></script>
-<!-- JavaScript script which handles general layout for 'index.htm'. -->
 <script type="text/javascript">
-//<!--
+<!--
 var gHome = "{ghome}";
-
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-  };
-
-  if (!isMobile.any()) {
-    function popup(){
-        //ÆË¾÷ ½ºÅ©¸³Æ® :: »èÁ¦ÇÏ½Ã¸é ÆË¾÷ÀÌ ¶ßÁö ¾Ê½À´Ï´Ù.
-        <!--{ @ m_popup() }-->
-        gPopup({.seq},{.player},{.pclose},{.pwidth},{.pheight},{.ptop},{.pleft});
-        <!--{ / }-->
-    };
-    window.onload = popup;
-       
-  } 
-
+function popup(){
+  //ÆË¾÷ ½ºÅ©¸³Æ® :: »èÁ¦ÇÏ½Ã¸é ÆË¾÷ÀÌ ¶ßÁö ¾Ê½À´Ï´Ù.
+  <!--{ @ m_popup() }-->
+  gPopup({.seq},{.player},{.pclose},{.pwidth},{.pheight},{.ptop},{.pleft});
+  <!--{ / }-->
+};
+window.onload = popup;
 //-->
 </script>
 
