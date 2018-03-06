@@ -1,0 +1,181 @@
+<p id="module_board" rel="{bbs_id}">
+
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="board.css">
+
+<!-- contents -->
+<form id="bbsSearchForm">
+<input type="hidden" name="bbs_id" value="{bbs_id}"/>
+<input type="hidden" name="page" id="page" value="{page}"/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<!--분류 사용시 분류출력-->
+			<!--{ ? bbs.bbs_category }-->
+				분류 : <select id="mcategory" name="mcategory" onchange="OnChangeCategory(this);">
+					<option value="">분류선택</option>
+					<!--{ @ category }-->
+					<option value="{.cate_name}" { ? .cate_name==_GET.mcategory }selected{ / }>{.cate_name}</option>
+					<!--{ / }-->
+				</select>
+				&nbsp;&nbsp;&nbsp;
+			<!--{ / }-->
+
+			<!-- 총 게시물 수 -->
+			총 게시물 <strong>{total}</strong>개
+		</td>
+		<td align="right">
+			<!-- 검색 시작 -->
+			<div id="searcher">
+			<select id="skey" name="skey" class="select">
+				<option value="mname" { ? _GET.skey=="mname" }selected{ / }>작성자</option>
+				<option value="title" { ? _GET.skey=="title" || !_GET.skey }selected{ / }>제목</option>
+				<option value="contents" { ? _GET.skey=="contents" }selected{ / }>내용</option>
+			</select>
+			<input type="text" id="skeyword" name="skeyword" value="{_GET.skeyword}" class="input">
+			<input type="image" src="img/btn_search.gif" title="검색" align="absmiddle">
+			</div>
+			<!-- 검색 끝 -->
+		</td>
+	</tr>
+</table>
+</form>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bbs_tbl_title">
+				<colgroup>
+					<col width="70px"/>
+					<!--{ ? bbs.bbs_category }--><col width="100px"/><!--{ / }-->
+					<col width=""/>
+					<col width="80px"/>
+					<!--{ ? bbs.date_view }--><col width="80px"/><!--{ / }-->
+					<!--{ ? bbs.hit_view }--><col width="50px"/><!--{ / }-->
+				</colgroup>
+				<tr align="center" bgcolor="#FFFFFF">
+					<th>번호</th>
+					<!--{ ? bbs.bbs_category }--><th>분류</th><!--{ / }-->
+					<th>제목</th>
+					<th>작성자</th>
+					<!--{ ? bbs.date_view }--><th>등록일</th><!--{ / }-->
+					<!--{ ? bbs.hit_view }--><th>조회</th><!--{ / }-->
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bbs_tbl_list">
+				<colgroup>
+					<col width="70px"/>
+					<!--{ ? bbs.bbs_category }--><col width="100px"/><!--{ / }-->
+					<col width=""/>
+					<col width="80px"/>
+					<!--{ ? bbs.date_view }--><col width="80px"/><!--{ / }-->
+					<!--{ ? bbs.hit_view }--><col width="50px"/><!--{ / }-->
+				</colgroup>
+				<tbody>
+				<!-- 게시물 출력 루프 -->
+				<!--{ @ bbslist }-->	
+				<tr>
+					<td>{.idx}</td>
+					<!--{ ? bbs.bbs_category }--><td align="center" class="bbs_small">{.mcategory}</td><!--{ / }-->
+					<th>{.title}
+						<!-- 댓글이 있는경우 표시 -->
+						<!--{ ? .comment }--><span class="bbs_small">[{.comment}]</span><!--{ / }-->
+						<!-- 아이콘 표시 -->
+						{.icon_secret} {.icon_new} {.icon_hit}
+					</th>
+					<td align="center" class="bbs_small">{.mname}</td>
+					<!--{ ? bbs.date_view }--><td align="center" class="bbs_small">{=substr(.regdate,0,10)}</td><!--{ / }-->
+					<!--{ ? bbs.hit_view }--><td align="center" class="bbs_small_gray">{.hit}</td><!--{ / }-->
+				</tr>
+				<!--{ / }-->
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- 페이징 -->
+<div id="pager_{bbs_id}" class="pager"></div>
+
+<!-- 버튼 시작 -->
+<!-- 버튼(쓰기권한이 있을때만 출력) -->
+<!--{ ? bbspriv.write }-->
+<div style="margin-top:5px;text-align:right;"><a href="{link.write}"><img src="img/btn_write.gif" title="쓰기"></a></div>
+<!--{ / }-->
+
+<!-- 비밀번호 입력 레이어 -->
+<div id="secret_container" class="secret_container">
+<div style="padding:0 0 4px 0;text-align:right;"><img src="img/close.gif" onclick="secret_close();" class="hand"></div>
+<form id="secretForm" name="secretForm" method="post" action="{link.process}" onsubmit="return false">
+<input type="hidden" name="cmd" value="secret">
+<input type="hidden" name="mode" value="confirm">
+<input type="hidden" id="bbs_id" name="bbs_id" value="{bbs_id}">
+<input type="hidden" id="bbs_seq" name="bbs_seq">
+<input type="hidden" name="page" value="<?=$page?>">
+	비밀번호&nbsp;<input type="password" id="mpasswd" name="mpasswd" class="input_month" label="비밀번호">
+	<div align=center class=small style="padding-top:10px">
+	<img src="img/btn_s_confirm.gif" title="확인" onclick="secret_confirm();" class="hand">
+	<img src="img/btn_s_cancel.gif" title="닫기" onclick="secret_close();" class="hand">
+	</div>
+</form>
+</div>
+
+<script type="text/javascript" charset="euc-kr">
+<!--
+jq(document).ready(function() {
+	jq("#pager_{bbs_id}").pager({ pagenumber:{page}, pagecount:{totalpage}, buttonClickCallback: OnPageClick });
+});
+
+// 페이징 콜백함수
+function OnPageClick(page)
+{
+	location.href = "{link.page}" + page;
+}
+	
+// 비밀글 클릭시 비밀번호 확인 다이얼로그
+// 마우스 클릭지점에서 레이어를 생성하여 비밀번호 입력창을 띄운다.
+function OnSecretConfirm(obj,seq)
+{
+	var offset = jq(obj).offset();
+	jq("#secret_container").css('left', offset.left);
+	jq("#secret_container").css('top', offset.top + 21);
+	jq("#secret_container").show();
+	jq("#secretForm > :input[name='bbs_seq']").val(seq);
+	jq("#mpasswd").val('');
+	jq("#mpasswd").focus();
+}
+
+function secret_close()
+{
+	jq("#secret_container").hide();
+}
+
+function secret_confirm()
+{
+	jq('#secretForm').ajaxSubmit({
+		dataType : 'json',
+		type:'POST',
+		success : function(data) {
+			if (data.msg=="true") {
+				jq('#secretForm').attr("action",  "{link.view}");
+				document.all.secretForm.mode.value = "view";
+				document.all.mpasswd.value = "";
+				jq('#secretForm').submit();
+			} else {
+				alert(data.msg);
+				return false;
+			}
+		}
+	});
+}
+
+function OnChangeCategory(obj)
+{
+	bbsSearchForm.submit();
+}
+//-->
+</script>
+</p>

@@ -58,7 +58,7 @@ function buildContentHeadHTML () {
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
     stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
-    jquery: "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
+    jquery: "<script src=\"https://code.jquery.com/jquery-migrate-1.4.1.min.js\"></script>\n<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
     javascript: "<script src=\"/skin/skin020/mobile/assets/js/content.js\"></script>"
   };
 
@@ -387,9 +387,44 @@ function storeContentArticleMetadata () {
       section_value = "english";
       run_index = true;
     break;
+
+    case "program3":
+      section_value = "camps";
+      run_index = true;
+    break;
+
+    case "community2":
+      section_value = "awards";
+      run_index = true;
+    break;
+
+    case "program1":
+      section_value = "debate";
+      run_index = true;
+    break;
+
+    case "community3":
+      section_value = "events";
+      run_index = true;
+    break;
+
+    case "community1":
+      section_value = "announcements";
+      run_index = true;
+    break;
+
+    case "admission4":
+      section_value = "apply_students";
+      run_index = false;
+    break;
+
+    case "about6":
+      section_value = "faculty";
+      run_index = true;
+    break;
   } // END of SWITCH statement
 
-// console.log("section_value = " + section_value);
+console.log("section_value = " + section_value);
 
   // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
   // within the file name. 
@@ -407,9 +442,20 @@ function storeContentArticleMetadata () {
     // ".bbs_link".
     var links_elements = {};
 
-    links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
+    if (section_value === "english")  {
+      links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
+    } else if (section_value === "camps") {
+      links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
+    } else if (section_value === "debate")  {
+      links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr"; 
+    } else if (section_value === "awards" || section_value === "events" || section_value === "announcements")  {
+      links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
+    } else if (section_value === "faculty") {
+      links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > form > table > tbody > tr";
+    }
+    
     links_elements = jq(links_selector);
-// console.log("jq(\"table\") = " + jq("table").html());
+console.log("jq(\"links_elements\").length = " + jq(links_elements).length);
     var links_html;
 
     links_html = ""
@@ -428,37 +474,108 @@ function storeContentArticleMetadata () {
     var date_element;
     var date_text;
 
-    jq.each(links_elements, 
-      function (link_index, links)  {
-        link_id = (link_index + 1).toString();
-// console.log("link_id = " + link_id);
-        link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
-        link_element = jq(link_selector);
+    var page_title;
+    var page_contents;
 
-        link_href = jq(link_element).attr("href");
-        link_text = jq(link_element).text();
-         links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + link_id + "\">\n" + 
-                                  "  <a href=\"" + link_href + "\" title=\"" + link_text + "\">" + link_text + "</a>\n";
+    if (section_value === "faculty")  {
+      jq.each(links_elements, 
+        function (link_index, links) {
+          link_id = (link_index + 1).toString();
+          
+          links_html = "<div class=\"article-faculty-row\" id=\"article-faculty-row_" + link_id + "\">\n";
 
-        date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
-        date_element = jq(date_selector);
-        
-        date_text = jq(date_element).text();
-        
-        links_html = links_html + "  <span> - " + date_text + "</span>\n" + 
-                                  "</div>\n";
+          links_html = links_html + "  <div class=\"article-faculty-member\" id=\"faculty-member-" + link_id + "\">\n" +
+          jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > form > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr > td").html() + 
+          
+        }
+      );
+    } else {
+      jq.each(links_elements, 
+        function (link_index, links)  {
+          link_id = (link_index + 1).toString();
+
+          if (section_value === "english")  {
+            link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+            date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+            page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
+          } else if (section_value === "camps") {
+            link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+            date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+            page_title = "(캠프) CAMPS";
+          } else if (section_value === "awards") {
+            link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+            date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+            page_title = "(수상실적) AWARDS";
+          } else if (section_value === "debate")  {
+            link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+            date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+            page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
+          } else if (section_value === "events") {
+            link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+            date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+            page_title = "(토론대회) EVENTS";
+          } else if (section_value === "announcements") {
+            link_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") th > a";
+            date_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(4)";
+            page_title = "(학원소식) ANNOUNCEMENTS";
+          }
+  
+  
+  
+  // console.log("page_title = " + page_title);
+          
+          link_element = jq(link_selector);
+  
+          link_href = jq(link_element).attr("href");
+          link_text = jq(link_element).text();
+          links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + link_id + "\">\n" + 
+                                    "  <a href=\"" + link_href + "\" title=\"" + link_text + "\">" + link_text + "</a>\n";
+  
+          
+          date_element = jq(date_selector);
+          
+          date_text = jq(date_element).text();
+          
+          links_html = links_html + "  <span> - " + date_text + "</span>\n" + 
+                                    "</div>\n";
+        }
+      );
+  // console.log("page_title = " + page_title);
+      article_data = {
+        title: page_title, 
+        contents: links_html, 
       }
-    );
-// console.log("links_html = " + links_html);
-    article_data = {
-      title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html(), 
-      contents: links_html, 
     }
   } else {
+    if (section_value === "english") {
+      page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html()
+    } else if (section_value === "camps") {
+      page_title = "(캠프) CAMPS";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
+    } else if (section_value === "awards") {
+      page_title = "(수상실적) AWARDS";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
+    } else if (section_value === "debate")  {
+      page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html()
+    } else if (section_value === "events") {
+      page_title = "(토론대회) EVENTS";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
+    } else if (section_value === "announcements") {
+      page_title = "(학원소식) ANNOUNCEMENTS";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
+    } else if (section_value === "apply_students")  {
+      page_title = "(토론 최상위반 접수) APPLY STUDENTS";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html();
+    } else if (section_value === "faculty") {
+      page_title = "(강사소개) FACULTY";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html();
+    }
 // console.log("not_index");
     article_data = {
-      title: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html(), 
-      contents: jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html()
+      title: page_title, 
+      contents: page_contents
     }
   }
 
@@ -934,6 +1051,20 @@ function renderContent () {
   renderContentArticleHTML(article_data);
   
   renderContentFooterHTML();
+
+  var html_content;
+
+  jq.ajaxSetup(
+    {
+      beforeSend: function(xhr) {
+          xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0");
+      }
+    }
+  );
+
+  // jq("article").load("http://daechi.leadersacademy.com/program/program2");
+
+// console.log("html_content");
 
 } // END of FUNCTION 'renderContent'
 

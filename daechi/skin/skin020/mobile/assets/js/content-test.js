@@ -924,6 +924,16 @@ function renderContent () {
   
   renderContentFooterHTML();
 
+  jq.ajax(
+    {
+      url: "/program/program2"
+    }
+  ).done(
+    function (data) {
+      console.log(data);
+    }
+  );
+
 } // END of FUNCTION 'renderContent'
 
 

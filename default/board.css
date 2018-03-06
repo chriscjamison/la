@@ -1,0 +1,77 @@
+/*
+* Create : 2009-09-18
+* Author : najo (lmk@gabia.com)
+* Comment: 게시판 기본 stylesheet
+*/
+@charset "euc-kr";
+
+html {background: none transparent scroll repeat 0% 0%;margin: 0px; vertical-align: baseline;outline: 0;}
+
+/* 검색창 */
+.board_search {padding:5px;table-layout:fixed;border-bottom:solid 1px #8E8E8E;background-color:#F1F2F3;}
+.board_search .input{width:100%;height:25px;}
+.board_search .input_td {padding-right:10px;}
+
+/* 헤더 */
+.board_header {background-color:#F1F2F3;border-bottom:solid 1px #8F8F8F;height:40px;}
+.board_header .bold {font-weight:bold;vertical-align:middle;padding-left:10px;}
+.board_header .light {font-size:12px;padding-left:10px;}
+.board_header .light a {font-size:12px;padding-left:10px;text-decoration:none;color:#666666}
+
+/* 리스트 */
+.board_list {}
+.board_list .line {border-bottom:solid 1px #E4E4E4;padding:15px 10px;}
+.board_list a{color:#172155;font-weight:bold;text-decoration:none;}
+.board_list .content {font-size:12px;padding-top:2px;}
+.board_list .photo {background-color:#EAECED;border:solid 1px #BEBEBE;text-align:left;width:53px;} /* 갤러리 게시판 포토 테두리 */
+
+/* 비밀글 비밀번호 입력창 */
+.board_secret {position:absolute;border:2px solid #B2B2B2;padding:6px;background:#fff;display:none;}
+
+/* 보기 */
+.board_view {}
+.board_view .title {font-weight:bold;padding:10px;}
+.board_view .content {padding:10px;}
+
+/* 쓰기 */
+.board_write {padding:0px 5px;table-layout:fixed;margin-top:10px;}
+.board_write .label {width:80px; text-align:left}
+.board_write .field {text-align:left;padding-right:10px;} 
+
+/* 코멘트 */
+.board_comment {border-top:solid 1px #EAEAEA;background-color:#F1F2F3}
+.board_comment .count {color:#00A4E3;font-weight:bold;} /*댓글수*/
+.board_comment .form {background-color:#FFFFFF;padding:5px;} /*작성폼*/
+.board_comment .list {padding:10px;border-top:solid 1px #EAEAEA;} /*댓글리스트*/
+.board_comment .writer {font-weight:bold;}
+.board_comment .date {font-size:12px;font-weight:normal}
+.board_comment .content {padding:5px 10px;}
+
+/* 첨부파일 */
+.board_attachfile {border-top:solid 1px #EAEAEA;background-color:#F1F2F3} 
+.board_attachfile .count {color:#00A4E3;font-weight:bold;} /*첨부파일수*/
+.board_attachfile  a {color:#666666;text-decoration:none;}
+.board_attachfile .file {padding:3px 10px;}
+
+/* 하단 버튼 */
+.board_tools {border-top:solid 1px #EAEAEA;padding:10px;}
+.board_tools td {text-align:center;}
+
+/* 페이징 */
+.board_paging{padding:10px;}
+.board_pager {vertical-align:bottom;}
+.board_pager p.pages {display:block;border:none;font-family:"Verdana","Tahoma","Dotum";font-size:11px;margin:0px;padding:0PX;text-align:center !important;}
+.board_pager p.pages span {list-style:none;text-decoration:none;margin:0 3px 0 3px;padding:0px 5px 0px 5px;cursor:pointer;font:normal 11px Dotum;}
+.board_pager p.pages span.pgNext {width:15px;vertical-align:middle;}
+.board_pager p.pages span.pgEmpty {cursor:default;}
+.board_pager p.pages span.pgCurrent {padding:0px 5px 0px 5px;font-weight:700;}
+
+/* 비밀번호 확인 페이지 */
+.board_confirm {text-align:center;padding-top:20px}
+.board_confirm .message {text-align:center;padding-top:20px;}
+
+/*에러 메시지 출력 페이지 */
+.board_error {text-align:center;padding:20px 0px;}
+
+/* 공통 */
+.img {border:none;}

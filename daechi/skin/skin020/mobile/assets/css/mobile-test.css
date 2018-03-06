@@ -991,6 +991,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-debate > span, 
 .article-debate table + span, 
 .article-english-listing span {
+  width: 185px;
   display: inline-block;
 }
 
