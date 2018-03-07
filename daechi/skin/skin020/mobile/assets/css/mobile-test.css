@@ -45,7 +45,8 @@ nav,
 #main-sub_menu, 
 h2, 
 h4, 
-.article-faculty-member, 
+.article-faculty-member .content, 
+.article-faculty-member .title,  
 .article-faculty-member-page, 
 .article-debate-links,
 .article-debate, 
@@ -84,7 +85,9 @@ td,
 p, 
 h6, 
 .form-row input, 
-.article-faculty-member-page span, 
+.article-faculty-member .content, 
+.article-faculty-member .title, 
+.article-faculty-member-page, 
 .article-faculty-member-page h7, 
 .article-faculty-member-page a, 
 .article-faculty-member-page ul li, 
@@ -96,27 +99,20 @@ th,
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
 .article-debate table + span, 
 .article-debate a, 
+.article-debate span, 
+.article-debate div, 
+.article-debate font, 
+.article-english, 
 .article-english-listing a, 
 .article-english-listing span, 
 .article-english ul li, 
 .article-english img:nth-child(4) + a, 
 .article-announcements a, 
 .article-announcements span, 
+.article-announcements div, 
 .article-awards a, 
 .article-awards span, 
 .article-awards ol, 
-.article-apply_faculty input[type="text"], 
-.article-apply_faculty select, 
-.article-apply_faculty textarea, 
-.article-apply_faculty .form_comment, 
-.article-apply_students, 
-.article-apply_students th, 
-.article-apply_students td 
-.article-apply_students textarea, 
-.article-apply_students .form_comment,
-#button input, 
-.article-apply_students .form_input_text, 
-.article-apply_students .form_comment, 
 .article-media a, 
 .media-item-holder, 
 .article-events a, 
@@ -128,8 +124,32 @@ th,
   font-size: 32px;
 }
 
+.article-faculty-member-page span, 
+.article-apply_faculty input[type="text"], 
+.article-apply_faculty select, 
+.article-apply_faculty textarea, 
+.article-apply_faculty .form_comment, 
+.form_tbl_form tbody th, 
+.article-apply_students, 
+.article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1), 
+.article-apply_students th, 
+.article-apply_students td 
+.article-apply_students textarea, 
+.article-apply_students .form_comment,
+#button input, 
+.article-apply_students .form_input_text, 
+.article-apply_students .form_comment,
 input.gsc-input {
   font-size: 32px !important;
+}
+
+.article-apply_students .form_comment, 
+.form_tbl_form tbody th {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.form_tbl_form tbody th {
+  color: #4f4f4f !important;
 }
 
 nav > section > div span, 
@@ -160,12 +180,14 @@ font {
 
 h2, 
 p, 
-.article-faculty-member, 
+.article-faculty-member .content, 
+.article-faculty-member .title,  
 .article-faculty-member-page span, 
 .article-faculty-member-page h7,
 .article-faculty-member-page ul li, 
 .article-debate h6, 
-.article-debate > span, 
+.article-debate a, 
+.article-debate span, 
 .article-debate table + span, 
 .article-debate table td, 
 .article-debate ul li, 
@@ -199,19 +221,12 @@ h4,
 nav > section > div span, 
 #nav-main_menu > section > div span, 
 #nav-section_menu a, 
-#footer-row_3, 
+#footer-row_3,
 #nav-section_menu, 
-.article-faculty-member-page a, 
-.article-faculty-member-page h4, 
-.article-faculty-member-page span, 
-.article-faculty-member-page h7, 
-.article-faculty-member-page h6, 
-.article-faculty-member-page p, 
+.article-gpa, 
 .article-debate h4, 
 .article-debate h6,
-.article-debate > span, 
 .article-debate table + span, 
-.article-debate a, 
 .article-english h4, 
 .article-english h6, 
 .article-english img:nth-child(4) + a, 
@@ -223,10 +238,21 @@ nav > section > div span,
 #button input, 
 .article-apply_students h4, 
 .article-media h4, 
+.location_tx11, 
 .media-item a:nth-child(2), 
 .media-item-holder, 
 .article-events h4  {
   text-align: center;
+}
+
+.article-faculty-member-page, 
+.article-faculty-member-page a, 
+.article-faculty-member-page h4, 
+.article-faculty-member-page span, 
+.article-faculty-member-page h7, 
+.article-faculty-member-page h6, 
+.article-faculty-member-page p {
+  text-align: left;
 }
 
 h2 {
@@ -390,7 +416,6 @@ nav > section > div > a,
 #nav-sub_menu a, 
 #nav-main_menu > section > div > a, 
 .article-faculty-member-page a, 
-.article-debate a, 
 .article-english img:nth-child(4) + a, 
 #button input {
   background-color: #d8ccc3;
@@ -504,7 +529,6 @@ nav > section > div span,
 #nav-main_menu > section > div span,
 #nav-section_menu a, 
 .article-faculty-member-page a, 
-.article-debate a, 
 .article-english img:nth-child(4) + a, 
 #button input {
   text-decoration: none;
@@ -514,11 +538,12 @@ nav > section > div span,
 
 /* nav > section > div span, 
 #nav-main_menu > section > div span, */
+.article-faculty-member .title a, 
 .article-faculty-info ul li a, 
-.article-debate-links a, 
 .article-english-listing a, 
 .article-announcements a, 
 .article-awards a, 
+.article-debate a, 
 .article-media a, 
 .article-events a, 
 .article-camps a {
@@ -779,44 +804,16 @@ footer > #footer-border {
   color: #7f7c7a;
 }
 
-
-/* PAGE: History */
-/* #article-content {
-  width: 100%;
-}
- */
 #article-content img {
   margin: 0 auto;
-  display: block;
 }
 
 /* PAGE: Faculty */
+
 .article-faculty-row {
   width: 100%;
+  height: 185px;
   margin: 0 auto 2em auto;  
-}
-
-#article-faculty-row_1  {
-  height: 335px;
-}
-
-#article-faculty-row_2 {
-  height: 346px;
-}
-
-#article-faculty-row_3, 
-#article-faculty-row_4  {
-  height: 368px;
-}
-
-#article-faculty-row_5 {
-  height: 343px;
-}
-
-#article-faculty-row_6, 
-#article-faculty-row_7, 
-#article-faculty-row_8  {
-  height: 310px;
 }
 
 .article-faculty-member {
@@ -831,9 +828,20 @@ footer > #footer-border {
 .article-faculty-member img {
   width: 7em;
   height: 10em;
-  /* margin: 0 2.25em !important; */
-  display: block !important;
   float: left !important;
+}
+
+.article-faculty-member .title {
+  margin: 0 0 10px 125px;
+  display: block;
+
+}
+.article-faculty-member .content {
+  margin: 10px 0 0 125px;  
+}
+
+.title + img {
+  display: none !important;
 }
 
 .article-faculty-info {
@@ -860,23 +868,7 @@ footer > #footer-border {
   margin: 15px;
 }
 
-/* .article-faculty-member-page h4, 
-.article-debate h4, 
-.article-english h4, 
-.article-login h4, 
-.article-header-announcements h4, 
-.article-announcements h4, 
-.article-awards h4, 
-.article-apply_faculty h4, 
-.article-apply_students h4, 
-.article-media h4 {
-  margin-bottom: 0.25em;
-}
-
- */
- 
  .article-faculty-member-page span {
-  width: 10em;
   margin: 0 auto;
   display: block;
 }
@@ -965,13 +957,13 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-debate-links, 
 .article-header-english, 
 .article-english-listing {
-  width: 735px;
+  width: 740px;
   margin: 0 auto;
 }
 
 .article-debate-links a, 
 .article-english-listing a {
-  width: 17em;
+  width: 545px;
   margin: 1em auto;
   display: inline-block;
 }
@@ -988,7 +980,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   margin: 0.75em 0;
 }
 
-.article-debate > span, 
+.article-debate span, 
 .article-debate table + span, 
 .article-english-listing span {
   width: 185px;
@@ -1006,8 +998,9 @@ th,
 #map + script + script + table > tbody > tr > td:nth-child(1), 
 #map + script + script + table + table > tbody > tr > td:nth-child(1), 
 .article-contact_us table > tbody > tr > td:nth-child(1), 
-.article-camps table > tbody > tr:nth-child(1) > td { 
-  width: 5em;
+.article-camps table > tbody > tr:nth-child(1) > td, 
+.table-location > tbody > tr > td.sj_title { 
+  width: 200px;
   background-color: #d5ccb2;
   color: #573214;
 }
@@ -1045,6 +1038,10 @@ th,
   margin: 30px auto;
 }
 
+.article-debate div, 
+.article-debate font {
+  color: #fff !important;
+}
 
 /* PAGE: English */ 
 
@@ -1055,6 +1052,11 @@ th,
 
 .article-english ul {
   width: 80%;
+}
+
+.article-english img {
+  display: block;
+  text-align: center;
 }
 
 
@@ -1119,8 +1121,10 @@ th,
 
 /* PAGE: Announcements */
 
-.article-announcements {
-  min-height: 886px;
+.article-announcements, 
+.article-awards, 
+.article-about_us {
+  min-height: 815px;
 }
 
 .article-announcements-listing, 
@@ -1132,13 +1136,14 @@ th,
 
 .article-announcements a, 
 .article-awards a, 
-.article-events a, 
+.article-events a,
+.article-debate a,  
 .article-camps a {
   width: 725px;
   display: inline-block;
 }
 
-.article-announcements > div > span, 
+.article-announcements > div > span,
 .article-awards > div > span, 
 .article-events > div > span, 
 .article-camps > div > span {
@@ -1154,9 +1159,6 @@ th,
   line-height: 60px;
 }
 
-.article-awards {
-  min-height: 956px;
-}
 
 
 /* PAGE: Apply (Faculty) */
@@ -1199,7 +1201,8 @@ input[name="testDate"] {
 
 .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1) {
   width: 910px;
-  background-color: #d5ccb2;
+  background-color: #d5ccb2 !important;
+  color: #4f4f4f !important;
 }
 
 .article-apply_students th, 
@@ -1207,7 +1210,7 @@ input[name="testDate"] {
   padding: 0.25em;
 }
 
-.article-apply_students table:nth-child(2) > tbody > tr:nth-child(3) > td:nth-child(2) {
+.article-apply_students table > tbody > tr:nth-child(3) > td:nth-child(2) {
   display: none;
 }
 
@@ -1232,7 +1235,7 @@ input[name="testDate"] {
 
 .article-media-row {
   width: 100%;
-  margin: 0.5em;
+  margin: 50px 25px;
 }
 
 .media-item {
@@ -1245,13 +1248,6 @@ input[name="testDate"] {
 .media-item img {
   width: 425px;
   height: 425px;
-}
-
-/* .media-item img { 
-  border: 5px solid #485081;
-} */
-
-.media-item img { 
   border: 5px solid #fff;
 }
 
@@ -1264,16 +1260,22 @@ input[name="testDate"] {
   color: #e76200;
 }
 
+.media-item .location_tx11 {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.media-item > img + span + img {
+  display: none;
+}
+
 .media-item-holder {
   min-height: 805px;
 }
 
 
 /* *** ABOUT US *** */
-
-.article-about_us {
-  height: 779px;
-}
 
 .article-about_us img {
   margin: 0 auto;
@@ -1350,6 +1352,8 @@ input[name="testDate"] {
   .article-debate ol, 
   .article-debate ol li, 
   .article-debate a, 
+  .article-debate div, 
+  .article-debate font, 
   .article-awards a, 
   .article-awards span, 
   .article-awards ol, 
@@ -1357,6 +1361,7 @@ input[name="testDate"] {
   .article-announcements span, 
   .article-announcements ol, 
   .article-announcements ol li, 
+  .article-announcements div, 
   font, 
   strong, 
   .article-apply_students table, 
@@ -1369,6 +1374,7 @@ input[name="testDate"] {
   .article-apply_faculty input[type="text"], 
   .article-apply_faculty table .form_comment, 
   .article-apply_faculty select, 
+  .article-english, 
   .article-english-listing a, 
   h6, 
   .article-english-listing span, 
@@ -2133,6 +2139,7 @@ input[name="testDate"] {
   }
   
   .article-awards a, 
+  .article-debate a, 
   .article-announcements a, 
   .article-events a, 
   .article-camps a {
@@ -2699,6 +2706,7 @@ input[name="testDate"] {
   }
 
   .article-awards a, 
+  .article-debate a, 
   .article-announcements a, 
   .article-events a, 
   .article-camps a {
@@ -3266,6 +3274,7 @@ input[name="testDate"] {
   }
 
   .article-awards a, 
+  .article-debate a, 
   .article-announcements a, 
   .article-events a, 
   .article-camps a {
@@ -3427,7 +3436,7 @@ input[name="testDate"] {
   }
 
   #article-faculty-row_1 {
-    height: 391px;
+    height: 235px;
   }
 
   #article-faculty-row_3 {

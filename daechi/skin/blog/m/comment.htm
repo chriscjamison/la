@@ -1,0 +1,117 @@
+
+	<!-- 코멘트 리스트 -->
+	<!--{ @ comments }-->			
+	<table width="100%" cellpadding=0 cellspacing=0 border=0>
+		<tr id="list_{.seq}" >
+			<td>
+				<table width="100%" cellpadding=0 cellspacing=0 class="list">
+					<tr>
+						<td>
+							<span id="cname_val_{.seq}" class="writer">{.cname}</span>  <span class="date">| {.regdate}</span></span> <!--{ ? bbs.ip_view && .ip }--> ({.ip}) <!--{ / }-->
+						</td>
+					</tr>
+					<tr>
+						<td class="content">
+							{=nl2br(.contents)}			
+							<textarea  id="comment_val_{.seq}" style="display:none">{.contents}</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="./img/bt_cancel_s.gif" align="absmiddle" title="취소" id="btn_cancel_{.seq}" style="display:none" onclick="setComment('cancel','{.seq}');" class="hand">
+							<!--{ ? .current || !.mid }-->
+							<img src="./img/bt_edit_s.gif" align="absmiddle" title="수정" id="btn_edit_{.seq}" onclick="setComment('modify','{.seq}');" class="hand">
+							<img src="./img/bt_del_s.gif" align="absmiddle" title="삭제" id="btn_del_{.seq}" onclick="setComment('delete','{.seq}','{.current}');" class="hand">
+							<!--{ / }-->						
+						</td>
+					</tr>					
+				</table>	
+			</td>
+		</tr>
+	</table>
+	<div id="write_{.seq}"></div>
+	
+	<!--{ / }-->
+
+	<!--// 코멘트 리스트 -->
+
+	<!-- 코멘트 작성창 위치 -->
+	
+	<div id="area_write"></div>
+	<!--// 코멘트 작성창 위치 -->
+
+	<!-- 코멘트 작성 템플릿 -->
+	<div id="tpl_write">		
+		<form name="commentForm" id="commentForm" action="{link.process}">	
+		<input type="hidden" name="cmd" value="comment"/>
+		<input type="hidden" name="mode" value="write"/>
+		<input type="hidden" name="bbs_id" value="{bbs_id}"/>
+		<input type="hidden" name="bbs_seq" value="{seq}"/>
+		<input type="hidden" name="cseq">
+		<table width="100%" border="0" cellspacing="5" cellpadding="0" align="center" class="form">
+			<!-- 회원이 아닌경우 이름과 비밀번호 입력폼 출력 -->
+			<!--{ ? !_ismember && !_isadmin }-->
+			<tr>
+				<td colspan="2">
+					<b>이름</b> <input type="text" name="cname" class="input" style="width:70px" blankText="이름을 입력하세요.">
+					<b>비밀번호</b> <input type="password" name="cpasswd"  class="input" style="width:70px" blankText="비밀번호를 입력하세요.">
+				</td>
+			</tr>
+			<!--{ / }-->
+			<tr>
+				<td width="100%" style="padding-right:5px"><textarea name="comment" style="height:35px;width:100%" blankText="내용을 입력하세요."></textarea></td>
+				<td width="80"><img src="./img/reply.gif" align="absmiddle" onclick="exeComment('save','');" class="hand"></td>
+			</tr>
+		</table>	
+		</form>
+	</div>
+	<!--// 코멘트 템플릿 -->
+
+
+	<!-- 코멘트 삭제 확인 레이어 -->
+	<div id="tpl_delete" style="display:none;" style="font-size:12px;">
+		<div class="line"></div>
+		<div style="padding:10px;">			
+			정말 삭제하시겠습니까?&nbsp;<img src="./img/pw_ok.gif" title="확인" onclick="exeComment('delete','');" class="hand" align="absmiddle">
+			<div id="tpl_delete_input" style="padding-top:5px">비밀번호&nbsp;<input type="password" name="delete_passwd" class="m_input" blankText="비밀번호를 입력하세요."></div>
+		</div>		
+	</div>
+	<!--// 코멘트 삭제 확인 레이어 -->
+	
+
+<script type="text/javascript">
+var _NOW_SEQ;
+function setComment(mode,seq,cur) {
+	if (mode == 'delete') {
+		setDelete(seq,cur);
+	}
+	else if (mode == 'modify') {
+		setModify(seq);
+	}
+	else if (mode == 'cancel') {
+		setCancel(seq);
+	}
+}
+
+function exeComment(mode,seq) {
+	if (mode == 'save') {
+		exeSave();
+	}
+	else if (mode == 'delete') {
+		exeDelete(seq);
+	}
+}
+
+function setCommentDisplay() {
+	if (jq('.comment_area').css('display') == 'none') {
+		jq('.comment_area').show();
+		jq('#img_comment').attr('src','./img/icon_close.gif')		
+	}
+	else {
+		jq('.comment_area').hide();
+		jq('#img_comment').attr('src','./img/icon_open.gif')
+	}
+}
+
+</script>
+

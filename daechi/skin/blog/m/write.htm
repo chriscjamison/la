@@ -1,0 +1,182 @@
+<!-- 헤더 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_header">
+	<tr>
+		<td class="bold">내용을 입력하세요.</td>
+	</tr>
+</table>
+<!--// 헤더 -->
+	
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="board.css">
+<script type="text/javascript" src="/js/validate.js"></script>
+<form name="form1" id="form1" method="post" action="{link.process}" enctype="multipart/form-data" onsubmit="return checkForm(this)">
+<input type="hidden" name="cmd" value="{cmd}">
+<input type="hidden" name="bbs_id" value="{bbs_id}">
+<input type="hidden" name="bbs_seq" id="bbs_seq" value="{bbs_seq}">
+<input type="hidden" name="page" id="page" value="{page}">
+<input type="hidden" name="upload" id="upload" value="{upload}">
+<input type="hidden" name="upload_cnt" id="upload_cnt" value="{bbs.bbs_upload_count}">
+<input type="hidden" id="upload_seq" name="upload_seq" value="">
+<input type="hidden" name="rand" value="{rand_id}">
+<input type="hidden" id="nexturl" name="nexturl" value="{link.path}">
+<input type="hidden" id="PHPSESSID" name="PHPSESSID" value="{_COOKIE.PHPSESSID}">
+	
+<!-- 글쓰기 폼 -->
+<table width="100%" cellpadding=0 cellspacing=5 class="board_write" >
+	
+	<!--{ ? bbs.bbs_category }-->
+	<tr>
+		<td class="label">분류</td>
+		<td class="field">
+			<select id="mcategory" name="mcategory">
+				<option value="">분류를 선택하세요.</option>
+				<!--{ @ category }-->
+				<option value="{.cate_name}" {.chk_category}>{.cate_name}</option>
+				<!--{ / }-->
+			</select>
+		</td>
+	</tr>
+	<!--{ / }-->
+	
+	<tr>
+		<td class="label">이름</td>
+		<td class="field">
+			<input type="text" id="mname" name="mname" value="{mname}" style="width:100%">
+		</td>
+	</tr>
+	
+	<!--{ ? !_ismember && !_isadmin }-->
+	<tr>
+		<td class="label">비밀번호</td>
+		<td class="field">
+			<!--{ ? ispasswd }-->
+			<input type="password" name="mpasswd" style="width:100%">
+			<!--{ : }-->
+			**********<input type="hidden" name="mpasswd" value="{mpasswd}">
+			<!--{ / }-->
+		</td>
+	</tr>
+	<!--{ / }-->
+	
+	<!-- 이메일을 입력받을 경우 -->
+	<!--{ ? bbs.bbs_email }-->
+	<tr>
+		<td class="label">이메일</td>
+		<td class="field">
+			<input type="text" id="memail" name="memail" value="{memail}" style="width:100%">
+		</td>
+	</tr>
+	<!--{ / }-->
+	
+	<!-- 비밀글 사용할 경우 출력 -->
+	<!--{ ? bbs.bbs_secret }-->
+	<tr>
+		<td class="label">비밀글</td>
+		<td class="field">
+			<input type="checkbox" id="secret" name="secret" value="1" {chk_secret} style="border:none"> <label for="secret">비밀글</label>
+		</td>
+	</tr>
+	<!--{ / }-->
+	
+	<!-- 댓글 사용할 경우 출력 -->
+	<!--{ ? bbs.bbs_comment }-->
+	<tr>
+		<td class="label">댓글허용</td>
+		<td class="field">
+			<input type="checkbox" id="allow_comment" name="allow_comment" value="1" {chk_allow_comment} style="border:none"> <label for="allow_comment">댓글허용</label>
+		</td>
+	</tr>
+	<!--{ / }-->	
+	
+	<!-- HTML 사용할 경우 출력 -->
+	<!--{ ? bbs.bbs_html }-->
+	<tr>
+		<td class="label">HTML사용</td>
+		<td class="field">
+			<input type="checkbox" id="html" name="html" value="1" {chk_html} style="border:none"> <label for="html">HTML사용</label>
+		</td>
+	</tr>
+	<!--{ / }-->	
+	
+	<!-- 제목 -->
+	<tr>
+		<td class="label">제목</td>
+		<td class="field">
+			<input type="text" id="title" name="title" value="{title}" >
+			<!--{ ? _isadmin }-->
+			<input type="checkbox" id="notice" name="notice" value="1" {chk_notice} style="border:none"> <label for="notice">공지</label>
+			<!--{ / }-->
+		</td>
+	</tr>
+	
+	<!-- 내용 -->
+	<tr>
+		<td class="label">내용</td>
+		<td class="field">
+			<textarea name="contents" id="contents" style="width:100%;height:150px;margin-top:5px" path="board/{bbs_id}">{contents} {ori_contents}</textarea>
+		</td>
+	</tr>
+	
+	<!-- 추가항목을 루프로 출력 -->
+	<!--{ @ addform }-->
+	<tr>
+		<td class="label">{.colname} {.reqicon}</div>
+		{.addition} <span class="comment">{.coldesc}</span>
+		</td>
+	</tr>	
+	<!--{ / }-->
+</table>
+<!--// 글쓰기 폼 -->
+
+<!-- 버튼 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_tools">
+	<tr>
+		<td>
+			<input type="image"  src="img/bt_confirm.gif" class="img">
+			<img src="./img/bt_cancel.gif" onclick="history.back();" class="hand">
+		</td>
+	</tr>
+</table>
+<!--// 버튼 -->
+</form>
+
+<script type="text/javascript" src="/js/editor/gs_editor.js"></script>
+<script type="text/javascript" src="/js/jquery.upload.js"></script>
+<script type="text/javascript">
+<!--
+jq(document).ready(function() {
+	var f = document.forms['theForm'];
+});
+
+function OnDeleteUpload()
+{
+	var cnt = parseInt(jq('#upload').val()) - 1;
+	jq('#upload').val(cnt);
+}
+
+function checkForm(f)
+{
+	var v = new validator(f);
+	<!--{ ? bbs.bbs_category }-->
+	v.add("mcategory", {label:"분류",required:true});
+	<!--{ / }-->
+	v.add("mname", {label:"이름",required:true});
+	v.add("mpasswd", {label:"비밀번호",required:true});
+	v.add("memail", {label:"이메일",option:"email",delim:"@"});
+	v.add("title", {label:"제목",required:true});
+	v.add("contents", {label:"내용",required:true});
+	
+	//추가항목 입력값출력
+	<!--{ @ addform }-->
+	v.add("{.colid}", {label:"{.colname}",required:{.colreq}});
+	<!--{ / }-->
+
+	var result = v.validate();
+	if (!result) {
+		alert(v.getErrorMessage());
+		v.getErrorElement().focus();
+		return false;
+	}
+}
+//-->
+</script>

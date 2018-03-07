@@ -1,0 +1,256 @@
+<link rel="stylesheet" type="text/css" href="board.css">
+<script type="text/javascript" src="/js/validate.js"></script>
+
+<!-- 헤더 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_header ">
+	<tr>
+		<td class="light">
+			<!--{ ? mcategory }--><span class="category">[{mcategory}]</span><!--{ / }-->
+			{mname} | 
+			<!-- 이메일 출력시 -->
+			<!--{ ? bbs.email_view }-->
+			<a href="mailto:{memail}">{=trim(memail)}</a> | 
+			<!--{ / }-->
+			{=date("Y/m/d H:i",strtotime(regdate))}
+		</td>
+	</tr>
+</table>
+<!--// 헤더 -->
+
+<!-- 내용 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_view">
+	<tr>
+		<td class="title">{title}</td>
+	</tr>
+	<tr>
+		<td class="content">{=contents}</td>
+	</tr>
+</table>
+<!--// 내용 -->
+
+
+<!-- 첨부파일 -->
+<!--{ ? upload }-->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_attachfile">
+	<tr>
+		<td style="padding:10px"><a onClick="setPsdDisplay()" class="hand"><img src="./img/icon_open.gif" class="img" id='img_psd'> 첨부파일 <span class="count">{upload}</span></a></td>
+	</tr>	
+	<tr id="attach_area" style="display:none">
+		<td>
+			<!--{ @ upfiles }-->
+			<div class="file"><a href="{link.download}?p={.flink}">{.fname}</a></div>
+			<!--{ / }-->	
+		</td>
+	</tr>
+</table>
+<!--{ / }-->
+<!--// 첨부파일 -->
+
+	
+<!-- 댓글 -->
+<!--{ ? bbs.bbs_comment && allow_comment }-->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_comment">
+	<tr>
+		<td style="padding:10px">
+			<a onClick="setCommentDisplay()" style="cursor:pointer"><img src="./img/icon_open.gif" class="img" id='img_comment'> 댓글 <span class="count">{comment}</span>				
+		</td>
+	</tr>
+	<tr>
+		<td><div id="comment_area" class="comment_area" style="display:none">{#tpl_comment}</div></td>
+	</tr>
+</table>
+<!--{ / }-->
+<!--// 댓글 -->
+
+<!-- 버튼 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_tools">
+	<tr>
+		<td>
+			<a href='{link.list}' ><img src="./img/bt_list.gif" class="img" alt="목록"></a>
+			<!--{ ? bbspriv.write }-->
+			<a href='{link.modify}'><img src="./img/bt_modify.gif" class="img" alt="수정"></a>
+			<a href='{link.delete}'><img src="./img/bt_del.gif" class="img" alt="삭제"></a>
+			<!--{ / }-->
+			
+			<!--{ ? bbspriv.reply }-->
+			<a href='{link.reply}'><img src="./img/bt_reply.gif" class="img" alt="답변"></a>
+			<!--{ / }-->
+		</td>
+	</tr>
+</table>
+<!--// 버튼 -->
+	
+
+<script type="text/javascript">
+<!--
+jq(document).ready(function() {
+	<!--{ ? bbs.bbs_comment && allow_comment }-->
+	//loadComment();
+	<!--{ / }-->
+});
+
+//코멘트 리스트 로드
+function loadComment() {
+	jq('#comment_area').load('{link.comment}',{bbs_id:'{bbs_id}',bbs_seq:'{bbs_seq}'}, function(e) {
+		jq('#loading_container').remove();
+		
+	});	
+}
+
+//코멘트 수정창 세팅
+function setModify(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+
+	jq('input[name=cname]').val(jq('#cname_val_'+seq).html());
+	jq('textarea[name=comment]').val(jq('#comment_val_'+seq).val());
+	jq('input[name=mode]').val('modify');
+	jq('input[name=cseq]').val(seq);
+	
+	//폼출력
+	tpl_write.show();
+	tpl_delete.hide();
+	place.append(tpl_write);	
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 삭제창 세팅
+function setDelete(seq, cur) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+	if (cur==1) {
+		jq('#tpl_delete_input').hide();	
+		jq('input[name=delete_passwd]').removeAttr('blankText');
+	}
+	else {
+		jq('#tpl_delete_input').show();	
+		jq('input[name=delete_passwd]').attr('blankText','비밀번호를 입력하세요.');
+		jq('input[name=delete_passwd]').focus();
+	}
+
+	tpl_delete.show();
+	tpl_write.hide();
+	place.append(tpl_delete);		
+	jq('input[name=mode]').val('delete');
+	jq('input[name=cseq]').val(seq);
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 수정,삭제 취소
+function setCancel(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#area_write');
+	var btn = jq('#btn_cancel_'+seq);
+	place.append(tpl_write);
+	jq('input[name=mode]').val('write');
+	tpl_delete.hide();
+	tpl_write.show();
+	btn.hide();
+
+	//데이터 리셋
+	jq('#commentForm').resetForm();
+}
+
+
+//코멘트 저장(등록,수정)처리
+function exeSave() {
+	var frm = jq('#tpl_write [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크	
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'{link.process}',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {				
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+//코멘트삭제처리
+function exeDelete(seq) {
+	var frm = jq('#tpl_delete [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {
+			'delete_passwd':jq('input[name=delete_passwd]').val()
+		}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'{link.process}',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+// 첨부파일 열기/닫기
+function setPsdDisplay() {
+	if (jq('#attach_area').css('display') == 'none') {
+		jq('#attach_area').show();
+		jq('#img_psd').attr('src','./img/icon_close.gif')		
+	}
+	else {
+		jq('#attach_area').hide();
+		jq('#img_psd').attr('src','./img/icon_open.gif')
+	}
+}
+
+
+//-->
+</script>

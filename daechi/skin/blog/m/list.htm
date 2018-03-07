@@ -1,0 +1,168 @@
+<p id="module_board" rel="{bbs_id}">
+<link rel="stylesheet" type="text/css" href="board.css">
+
+<form id="bbsSearchForm">
+<input type="hidden" name="bbs_id" value="{bbs_id}"/>
+<input type="hidden" name="page" id="page" value="{page}"/>
+
+<!-- 검색창 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_search">
+	<tr>
+		<td class="input_td"><input type="text" id="skeyword" name="skeyword" value="{_GET.skeyword}" class="input"></td>
+		<td width=50 align="right"><input type="image" src="img/search.gif" title="검색" align="absmiddle" class="img"></td>
+	</tr>
+	<!--{ ? bbs.bbs_category }-->
+	<tr>
+		<td colspan=2>
+			<select id="mcategory" name="mcategory" onchange="OnChangeCategory(this);">
+				<option value="">분류선택</option>
+				<!--{ @ category }-->
+				<option value="{.cate_name}" { ? .cate_name==_GET.mcategory }selected{ / }>{.cate_name}</option>
+				<!--{ / }-->
+			</select>
+		</td>
+	</tr>
+	<!--{ / }-->
+</table>
+<!--// 검색창 -->
+
+<!-- 글목록 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_list">
+	<!--{ @ bbslist }-->
+	<tr>
+		<td  class="line">
+			<table width="100%" cellpadding=0 cellspacing=0>
+				<tr>
+					<td  class="photo"><img src="../../{.files[0].fpath}" width="53" height="53" onerror=this.src="./img/noimg.gif"></td>
+					<td style="padding-left:10px;">						
+						<span class="title">{.title}</span> <!--{ ? bbs.bbs_comment && .allow_comment}--><span class="comment">[{.comment}]</span><!--{ / }--> {.icon_secret} {.icon_new} {.icon_hit}
+						<div class="content">{=cutstr(strip_tags(.contents),30)}</div>
+					</td>
+				</tr>
+			</table>
+			
+			
+		</td>
+	</tr>
+	<!--{/}-->		
+</table>
+<!--// 글목록 -->
+
+
+<!-- 페이징 -->
+<div class="board_paging">
+	<div id="pager_{bbs_id}" class="board_pager"></div>
+</div>	
+<!--// 페이징 -->
+
+
+<!-- 버튼(쓰기권한이 있을때만 출력) -->
+<!--{ ? bbspriv.write }-->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_tools">
+	<tr>
+		<td><a href="{link.write}"><img src="./img/bt_write.gif" alt="쓰기" align="absmiddle" ></a></td>
+	</tr>
+</table>
+<!--{ / }-->
+<!--// 버튼 -->
+
+
+</form>
+</p>
+
+
+<!-- 비밀번호 입력 레이어 -->
+<div id="secret_container" class="board_secret">
+<div style="padding:0 0 4px 0;text-align:right;"><img src="img/btn_s_close.gif" onclick="secret_close();" class="hand"></div>
+<form id="secretForm" name="secretForm" method="post" action="{link.process}" onsubmit="return false">
+<input type="hidden" name="cmd" value="secret">
+<input type="hidden" name="mode" value="confirm">
+<input type="hidden" id="bbs_id" name="bbs_id" value="{bbs_id}">
+<input type="hidden" id="bbs_seq" name="bbs_seq">
+<input type="hidden" name="page" value="<?=$page?>">
+<input type="hidden" name="bbs_view" value="{link.viewpage}">
+	비밀번호&nbsp;<input type="password" id="mpasswd" name="mpasswd" class="input_month" label="비밀번호">
+	<div align=center class=small style="padding-top:10px">
+	<img src="img/btn_s_confirm.gif" title="확인" onclick="secret_confirm();" class="hand">
+	<img src="img/btn_s_cancel.gif" title="닫기" onclick="secret_close();" class="hand">
+	</div>
+</form>
+</div>
+
+
+<script type="text/javascript" charset="euc-kr">
+<!--
+jq(document).ready(function() {
+	jq("#pager_{bbs_id}").pager({ pagenumber:{page}, pagecount:{totalpage}, buttonClickCallback: OnPageClick });
+});
+
+// 페이징 콜백함수
+function OnPageClick(page)
+{
+	location.href = "{link.page}" + page;
+}
+	
+// 비밀글 클릭시 비밀번호 확인 다이얼로그
+// 마우스 클릭지점에서 레이어를 생성하여 비밀번호 입력창을 띄운다.
+function OnSecretConfirm(obj,seq)
+{
+	var offset = jq(obj).offset();
+	jq("#secret_container").css('left', offset.left);
+	jq("#secret_container").css('top', offset.top + 21);
+	jq("#secret_container").show();
+	jq("#secretForm > :input[name='bbs_seq']").val(seq);
+	jq("#mpasswd").val('');
+	jq("#mpasswd").focus();
+}
+
+function secret_close()
+{
+	jq("#secret_container").hide();
+}
+
+function secret_confirm()
+{
+	<!--{ ? c._AGENT_ == "O" }-->
+	var frameTag = '<iframe id="board_process_frame" name="board_process_frame" src="about:blank" width="0" height="0" frameborder="0"></iframe>';
+	jq('#board_process_frame').remove();
+	jq('body').append(frameTag);
+	jq('#secretForm').attr('action','{link.process}');
+	jq('#secretForm').attr('target','board_process_frame');
+	jq('#secretForm').submit();
+	<!--{ : }-->
+	jq('#secretForm').ajaxSubmit({
+		dataType : 'json',
+		success : function(data) {
+			if (data.result=="success") {
+				jq('#secretForm').attr("action", "{link.view}");
+				jq('#secret_container input[name=mode]').val("view");
+				jq('#secretForm').submit();
+			} else {
+				alert(data.msg);
+				return false;
+			}
+		}
+	});
+	<!--{ / }-->
+}
+
+function secret_confirm_result(rst)
+{
+	if (rst != "ok") {
+		alert("비밀번호가 맞지 않습니다.");
+		return false;
+	}
+	else {
+		jq('#secret_container input[name=mode]').val("view");
+		jq('#secretForm').attr('action','{link.view}');
+		jq('#secretForm').attr('target','_self');
+		jq('#secretForm').submit();
+	}
+}
+
+function OnChangeCategory(obj)
+{
+	jq('#bbsSearchForm').submit();
+}
+//-->
+</script>

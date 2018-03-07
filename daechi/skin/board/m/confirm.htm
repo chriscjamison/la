@@ -1,0 +1,82 @@
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="board.css">
+<?
+$nexturlArray = explode("?",$_SERVER['REQUEST_URI']);
+$nexturl = $nexturlArray[0];
+?>
+<script type="text/javascript" src="/js/validate.js"></script>
+<form name="confirmForm" id="confirmForm" method="post" action="{link.process}" onsubmit="return checkForm(this)">
+<input type="hidden" name="cmd" value="confirm">
+<input type="hidden" name="mode" value="{mode}">
+<input type="hidden" id="bbs_id" name="bbs_id" value="{bbs_id}">
+<input type="hidden" id="bbs_seq" name="bbs_seq" value="{bbs_seq}">
+<input type="hidden" id="page" name="page" value="{page}">
+<input type="hidden" id="nexturl" name="nexturl" value="<?=$nexturl?>">
+<p class="t10">
+<table width="500" cellpadding="0" cellspacing="0" border="0" class="bbs_tbl_title" align="center">
+  <tr>
+    <th style="padding:25px;">
+      <table cellpadding="0" cellspacing="0" border="0" align="center">
+        <tbody>
+        <tr>
+          <td align="center">
+            <!--{ ? mode=="delete" }-->
+            정말 삭제하시겠습니까?
+            <!--{ / }-->
+            <br>
+            <!--{ ? !_iscurrent }-->
+            비밀번호를 입력하세요 <input type="password" id="mpasswd" name="mpasswd" class="bbs_input">
+            <!--{ / }-->
+          </td>
+        </tr>
+        </body>
+      </table>
+      
+      <div id="button">
+        <input type="image" src="img/btn_ok.gif" alt="확인">
+        <img src="img/btn_cancel.gif" alt="취소" onclick="history.back();" class="hand"></a>
+      </div>
+    </th>
+  </tr>
+</table>
+</p>
+</form>
+<script type="text/javascript">
+<!--
+jq(document).ready(function() {
+  var f = document.forms['bbsForm'];
+});
+
+function checkForm(f)
+{
+  var v = new validator(f);
+  v.add("mpasswd", {label:"비밀번호",required:true});
+
+  var result = v.validate();
+  if (!result) {
+    alert(v.getErrorMessage());
+    v.getErrorElement().focus();
+    return false;
+  }
+
+  jq('#confirmForm').ajaxSubmit({
+    dataType : 'post',
+    success : function(data) {
+      if (data=="true") {
+        <!--{ ? mode=="modify" }-->
+        jq('#confirmForm').attr("action", "{link.write}");
+        <!--{ : }-->
+        jq('#confirmForm').attr("action", "{link.process}");
+        jq('#confirmForm > input[name=cmd]').val("delete");
+        <!--{ / }-->
+        jq('#confirmForm').submit();
+      } else {
+        alert(data);
+        return false;
+      }
+    }
+  });
+  return false;
+}
+//-->
+</script>
