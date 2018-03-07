@@ -40,21 +40,15 @@
 
         renderLandingPage();
       } else {
-// console.log("1");
-
-        function loading () {
-          jq("table").css("opacity", "0");
+        jq("table").css("display", "none");
         
-          jq("body").css("backgroundColor", "#485081");
+        var loading_html;
 
-          var loading_html;
+        loading_html = "<img src=\"/skin/skin020/mobile/assets/img/logo/loading.gif\" width=\"400\" height=\"400\" style=\"margin: 0 auto; display: block;\" />\n";
 
-          loading_html = "<img src=\"/skin/skin020/mobile/assets/img/logo/loading.gif\" width=\"400\" height=\"400\" style=\"margin: 50% auto; display: block;\" />\n";
+        jq("body").css("backgroundColor", "#485081");
 
-          jq("body").prepend(loading_html);
-        }
-
-        setTimeout(loading, 10);
+        jq("body").prepend(loading_html);
         
         jq(window).on("load", 
           function () {
