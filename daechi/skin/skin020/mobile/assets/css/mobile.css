@@ -88,7 +88,6 @@ h6,
 .article-faculty-member .content, 
 .article-faculty-member .title, 
 .article-faculty-member-page, 
-.article-faculty-member-page span, 
 .article-faculty-member-page h7, 
 .article-faculty-member-page a, 
 .article-faculty-member-page ul li, 
@@ -124,6 +123,7 @@ th,
   font-size: 32px;
 }
 
+.article-faculty-member-page span, 
 .article-apply_faculty input[type="text"], 
 .article-apply_faculty select, 
 .article-apply_faculty textarea, 
@@ -239,6 +239,16 @@ nav > section > div span,
 .media-item-holder, 
 .article-events h4  {
   text-align: center;
+}
+
+.article-faculty-member-page, 
+.article-faculty-member-page a, 
+.article-faculty-member-page h4, 
+.article-faculty-member-page span, 
+.article-faculty-member-page h7, 
+.article-faculty-member-page h6, 
+.article-faculty-member-page p {
+  text-align: left;
 }
 
 h2 {
@@ -855,7 +865,6 @@ footer > #footer-border {
 }
 
  .article-faculty-member-page span {
-  width: 10em;
   margin: 0 auto;
   display: block;
 }
