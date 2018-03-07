@@ -422,6 +422,11 @@ function storeContentArticleMetadata () {
       section_value = "faculty";
       run_index = true;
     break;
+
+    case "admission3":
+      section_value = "apply_faculty";
+      run_index = false;
+    break;
   } // END of SWITCH statement
 
 // console.log("section_value = " + section_value);
@@ -570,29 +575,32 @@ console.log("page_title = " + page_title);
       page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html()
     } else if (section_value === "camps") {
-      page_title = "(캠프) CAMPS";
+      page_title = "캠프 (CAMPS)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
     } else if (section_value === "awards") {
-      page_title = "(수상실적) AWARDS";
+      page_title = "수상실적 (AWARDS)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
     } else if (section_value === "debate")  {
       page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html()
     } else if (section_value === "events") {
-      page_title = "(토론대회) EVENTS";
+      page_title = "토론대회 (EVENTS)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
     } else if (section_value === "announcements") {
-      page_title = "(학원소식) ANNOUNCEMENTS";
+      page_title = "학원소식 (ANNOUNCEMENTS)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
     } else if (section_value === "apply_students")  {
-      page_title = "(토론 최상위반 접수) APPLY STUDENTS";
+      page_title = "토론 최상위반 접수 (APPLY STUDENTS)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html();
     } else if (section_value === "faculty") {
-      page_title = "(강사소개) FACULTY";
+      page_title = "강사소개 (FACULTY)";
       page_contents = "<h4>" + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td").html() + "</h4>\n" + 
                       "<div class=\"article-faculty-member-page\">" + 
                       jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + 
                       "</div>\n";
+    } else if (section_value === "apply_faculty")  {
+      page_title = "입학시험&특강 신청 (APPLY FACULTY)";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html();
     }
 // console.log("not_index");
     article_data = {
