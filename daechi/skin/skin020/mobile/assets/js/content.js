@@ -427,6 +427,11 @@ function storeContentArticleMetadata () {
       section_value = "apply_faculty";
       run_index = false;
     break;
+
+    case "about1":
+      section_value = "about_us";
+      run_index = false;
+    break;
   } // END of SWITCH statement
 
 // console.log("section_value = " + section_value);
@@ -601,7 +606,10 @@ console.log("page_title = " + page_title);
     } else if (section_value === "apply_faculty")  {
       page_title = "입학시험&특강 신청 (APPLY FACULTY)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html();
-    }
+    } else if (section_value === "about_us")  {
+      page_title = "회사 소개 (ABOUT US)";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td").html();
+    } 
 // console.log("not_index");
     article_data = {
       title: page_title, 

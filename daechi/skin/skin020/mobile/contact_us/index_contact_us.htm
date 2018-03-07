@@ -12,14 +12,17 @@
 		</script>
 		<title>대치 리더스아카데미</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+
+		<link href="/skin/skin020/mobile/assets/css/mobile.css" rel="stylesheet" type="text/css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<!-- JavaScript script which handles general layout for 'index.htm'. -->
-		<script src="/skin/skin020/mobile/assets/js/mobile.js"></script>
+		<script src="/skin/skin020/mobile/assets/js/content.js"></script>
 		</head>
 		
-		<body style="opacity: 0;" onload="extractHtmlFromDesktopPage(); return true;">
-					<!-- 
+		<body onload="renderContentTopHeaderHTML('/'); renderContentMainNavigationHTML('/'); renderContentSectionNavigationHTML('/'); renderContentFooterHTML();">
+		<!-- 
     	START of Header 
     	Contains:
     	  + Logo
@@ -77,7 +80,7 @@
 								Phone Number
 							</td>
 							<td>
-								02-562-9799
+								031-609-9799
 							</td>
 						</tr>
 						<tr>

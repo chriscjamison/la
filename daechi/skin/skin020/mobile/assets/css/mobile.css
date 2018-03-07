@@ -995,8 +995,9 @@ th,
 #map + script + script + table > tbody > tr > td:nth-child(1), 
 #map + script + script + table + table > tbody > tr > td:nth-child(1), 
 .article-contact_us table > tbody > tr > td:nth-child(1), 
-.article-camps table > tbody > tr:nth-child(1) > td { 
-  width: 5em;
+.article-camps table > tbody > tr:nth-child(1) > td, 
+.table-location > tbody > tr > td.sj_title { 
+  width: 200px;
   background-color: #d5ccb2;
   color: #573214;
 }
