@@ -220,8 +220,9 @@ h4,
 nav > section > div span, 
 #nav-main_menu > section > div span, 
 #nav-section_menu a, 
-#footer-row_3, 
+#footer-row_3,
 #nav-section_menu, 
+.article-gpa, 
 .article-debate h4, 
 .article-debate h6,
 .article-debate table + span, 
@@ -236,6 +237,7 @@ nav > section > div span,
 #button input, 
 .article-apply_students h4, 
 .article-media h4, 
+.location_tx11, 
 .media-item a:nth-child(2), 
 .media-item-holder, 
 .article-events h4  {
@@ -1114,7 +1116,8 @@ th,
 /* PAGE: Announcements */
 
 .article-announcements, 
-.article-awards {
+.article-awards, 
+.article-about_us {
   min-height: 815px;
 }
 
@@ -1226,7 +1229,7 @@ input[name="testDate"] {
 
 .article-media-row {
   width: 100%;
-  margin: 0.5em;
+  margin: 50px 25px;
 }
 
 .media-item {
@@ -1239,13 +1242,6 @@ input[name="testDate"] {
 .media-item img {
   width: 425px;
   height: 425px;
-}
-
-/* .media-item img { 
-  border: 5px solid #485081;
-} */
-
-.media-item img { 
   border: 5px solid #fff;
 }
 
@@ -1258,16 +1254,22 @@ input[name="testDate"] {
   color: #e76200;
 }
 
+.media-item .location_tx11 {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.media-item > img + span + img {
+  display: none;
+}
+
 .media-item-holder {
   min-height: 805px;
 }
 
 
 /* *** ABOUT US *** */
-
-.article-about_us {
-  height: 779px;
-}
 
 .article-about_us img {
   margin: 0 auto;

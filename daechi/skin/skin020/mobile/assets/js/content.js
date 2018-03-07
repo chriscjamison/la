@@ -432,9 +432,12 @@ function storeContentArticleMetadata () {
       section_value = "about_us";
       run_index = false;
     break;
-  } // END of SWITCH statement
 
-// console.log("section_value = " + section_value);
+    case "community4":
+      section_value = "media";
+      run_index = true;
+    break;
+  } // END of SWITCH statement
 
   // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
   // within the file name. 
@@ -447,8 +450,8 @@ function storeContentArticleMetadata () {
     // Initializes String which contains the selector for the <a> tags within the webpage's 
     // content.
     var links_selector;
-// console.log("index");
-     // Initializes Object which holds the jQuery object for <a> tags using the selector, 
+
+    // Initializes Object which holds the jQuery object for <a> tags using the selector, 
     // ".bbs_link".
     var links_elements = {};
 
@@ -458,14 +461,14 @@ function storeContentArticleMetadata () {
       links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
     } else if (section_value === "debate")  {
       links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr"; 
-    } else if (section_value === "awards" || section_value === "events" || section_value === "announcements")  {
+    } else if (section_value === "awards" || section_value === "events" || section_value === "announcements" || section_value === "media")  {
       links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr";
     } else if (section_value === "faculty") {
       links_selector = "table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > form > table:nth-child(4) > tbody > tr > td > table > tbody > tr";
-    }
+    } 
     
     links_elements = jq(links_selector);
-console.log("jq(\"links_elements\").length = " + jq(links_elements).length);
+
     var links_html;
 
     links_html = ""
@@ -488,6 +491,10 @@ console.log("jq(\"links_elements\").length = " + jq(links_elements).length);
     var page_contents;
 
     var row_id;
+
+    var media_item_id;
+
+    var inc;
 
     if (section_value === "faculty")  {
       row_id = 1;
@@ -515,8 +522,35 @@ console.log("jq(\"links_elements\").length = " + jq(links_elements).length);
       );
 
       page_title = "강사소개 (FACULTY)";
-console.log("links_html = " + links_html);
-console.log("page_title = " + page_title);
+    } else if (section_value === "media") {
+      row_id = 1;
+      media_item_id = 0;
+
+      links_html = "<div class=\"article-media\" id=\"article-content\">\n";
+      
+      jq.each(links_elements, 
+        function (link_index, links) {
+          if (link_index < (jq(links_elements).length - 1)) {
+            link_id = (link_index + 1).toString();
+          
+            links_html = links_html + "<div class=\"article-media-row\" id=\"article-media-row_" + link_id + "\">\n";
+            
+            for (inc = 1; inc <= 2; inc++) {
+              media_item_id++;
+
+              links_html = links_html + "  <div class=\"media-item\" id=\"media-item_" + (media_item_id).toString() + "\">\n" +
+                                        jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(" + (inc).toString() + ") > table > tbody > tr > td > table > tbody > tr > td").html() + 
+                                        jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(" + link_id + ") > td:nth-child(" + (inc).toString() + ") > table > tbody > tr:nth-child(2) > td").html() + 
+                                        "  </div>\n";
+            }
+    
+            links_html = links_html + "</div>\n";
+          }
+        }
+      );
+
+      page_title = "포토갤러리 (MEDIA)";
+    
     } else {
       jq.each(links_elements, 
         function (link_index, links)  {
@@ -548,17 +582,12 @@ console.log("page_title = " + page_title);
             page_title = "학원소식 (ANNOUNCEMENTS)";
           }
   
-  
-  
-  // console.log("page_title = " + page_title);
-          
           link_element = jq(link_selector);
   
           link_href = jq(link_element).attr("href");
           link_text = jq(link_element).text();
           links_html = links_html + "<div class=\"article-" + section_value + "-listing\" id=\"" + section_value + "-listing-" + link_id + "\">\n" + 
                                     "  <a href=\"" + link_href + "\" title=\"" + link_text + "\">" + link_text + "</a>\n";
-  
           
           date_element = jq(date_selector);
           
@@ -568,7 +597,6 @@ console.log("page_title = " + page_title);
                                     "</div>\n";
         }
       );
-  // console.log("page_title = " + page_title);
     }
 
     article_data = {
@@ -576,9 +604,12 @@ console.log("page_title = " + page_title);
       contents: links_html, 
     }
   } else {
-    if (section_value === "english") {
+    if (section_value === "gpa") {
+      page_title = "(테스트) GPA/TESTING";
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td").html();
+    } else if (section_value === "english") {
       page_title = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(2) > strong").html();
-      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html()
+      page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html();
     } else if (section_value === "camps") {
       page_title = "캠프 (CAMPS)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(5) > td > table > tbody > tr > td").html();
@@ -609,8 +640,14 @@ console.log("page_title = " + page_title);
     } else if (section_value === "about_us")  {
       page_title = "회사 소개 (ABOUT US)";
       page_contents = jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td").html();
+    } else if (section_value === "media")  {
+      page_title = "포토갤러리 (MEDIA)";
+      page_contents = "<h4>" + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td").html() + "</h4>\n" + 
+                      "<div class=\"media-item-holder\">" + 
+                      jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + 
+                      "</div>\n";
     } 
-// console.log("not_index");
+    
     article_data = {
       title: page_title, 
       contents: page_contents
@@ -862,76 +899,38 @@ function renderContentSectionNavigationHTML (base_path) {
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
-  // Initialize String which acts as the selector for page numbers referencing the number 
-  // of pages of links for a given section.
-  var pages_selector;
 
-  // Initialize Object which contains the jQuery object referencing the selector,
-  // '.page-number'.
-  var pages_elements = {};
+  // Initialize String which contains the pathname, sans filename, to a unique page of links.
+  var section_path;
 
-  pages_selector = ".page-number";
-  pages_elements = jq(pages_selector);
+  // The value of 'window.location.pathname' is passed to 'section_path'.
+  section_path = window.location.pathname;
 
-  if (jq(pages_elements).length >= 1)  {
-    // Initialize Number which contains the number of pages which contains links leading to 
-    // content.
-    //
-    // 'num_of_pages' will equal the number of links within the Section navigation.
-    var num_of_pages;
+  // Initialize String which contains the path to 'static' mobile pages, 
+  // '/skin/skin020/mobile/'.
+  var section_search_string;
 
-    num_of_pages = jq(pages_elements).length;
+  // Initialize Number which contains the index number within 'section_path' that the final 
+  // '/' character within the pathname is locted.
+  var section_search_index_num;
 
-    // Initialize Number which contains a loop incrementer.
-    var inc;
-
-    // Initialize String which contains the value of 1 plus the value of the loop incrementer 
-    // converted into a String.
-    // 
-    // The variable is used in an HTML tag to uniquely identify the link under processing 
-    // by the loop.
-    var inc_string;
-
-    // Initialize String which contains the pathname, sans filename, to a unique page of links.
-    var section_path;
-
-    // The value of 'window.location.pathname' is passed to 'section_path'.
-    section_path = window.location.pathname;
-
-    // Initialize String which contains the "/" character which will seperate the pathname 
-    // from the filename.
-    var section_search_string;
-
-    // Initialize Number which contains the index number within 'section_path' that the final 
-    // '/' character within the pathname is locted.
-    var section_search_index_num;
-
-    section_search_string = "/";
-
-    // Search 'section_path' for the location within the string that the last "/" character 
-    // appears.
-    section_search_index_num = section_path.lastIndexOf(section_search_string);
-
-    // Extract the path from the old pathname which included the filename.
-    section_path = section_path.slice(0, section_search_index_num);
-    
-    // Add a new filename, without the suffix, to 'section_path' which serves as the 
-    // unique location for links to content within the Section.
-    section_path = section_path + "/page_";
-
-    // Initialize String which contains the HTML links which make up the Section navigation.
-    var nav_html;
-
-    // Generate the links which make up the Section navigation.
-    for (inc = 0; inc < num_of_pages; inc++)  {
-      inc_string = (inc + 1).toString();
-
-      nav_html = nav_html + "<a href=\"" + base_path + section_path + inc_string + ".htm\" title=\"Page " + inc_string + "\" id=\"link-section_nav" + inc_string + "\"> Page #" + inc_string + "</a>\n";
-    }
-  } else {
-    nav_html = "<span>There is no menu for this section.</span>\n";
-  }
   
+  section_search_string = "/skin/skin020/mobile/";
+  
+  // Search 'section_path' for the location within the string contained 
+  // within 'section_search_string'.
+  section_search_index_num = section_path.lastIndexOf(section_search_string);
+
+  if (section_search_index_num > -1 || 
+      section_path === "/about/about1" || 
+      section_path === "/admission/admission1" || 
+      section_path === "/admission/admission3" || 
+      section_path === "/admission/admission4") {
+    nav_html = "<span>There is no menu for this section.</span>\n";
+  } else {
+    nav_html = "<a href=\"" + section_path + "\" title=\"Page #1\" id=\"link-page_1\">Page #1</a>\n"
+  }
+
   // Initialize String which holds the selector identifying the <section> tag that contains 
   // the Section navigation.
   var section_menu_selector;

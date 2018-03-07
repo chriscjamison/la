@@ -1,4 +1,4 @@
-var jq = jQuery.noConflict();
+﻿var jq = jQuery.noConflict();
 
 /* jq(window).load(
   function () {
@@ -167,11 +167,7 @@ function extractHtmlFromDesktopPage()  {
         'camp_9.htm', // index = 130
         'camp_10.htm', 
         'lessons.htm', 
-        'business.htm', 
-				'announcement_21.htm', 
-				'announcement_22.htm', //index = 135
-				'announcement_23.htm', 
-				'announcement_24.htm'
+        'business.htm'
       ];
 
       // Pass on the URL string of the loading page.
@@ -186,7 +182,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page.
               case 0: 
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>?????? (FACULTY)</h2>\n" + 
+                                    "          <h2>강사소개 (FACULTY)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div id=\"article-content\">\n";
 
@@ -196,9 +192,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771667908700.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/park_sooyoung.htm\">Park Sooyoung</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/park_sooyoung.htm\">Park Sooyoung</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  Yonsei University Humanities, Arts and Social Science Justice and Civil Leadership President of...\n" + 
@@ -210,9 +206,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771057387850.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/kim_hyerin.htm\">Kim Hyerin</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/kim_hyerin.htm\">Kim Hyerin</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  Ewha Womans University- Major in Bachelor of International Studies; concentration in Law and Diplo...\n" + 
@@ -227,12 +223,12 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771049407960.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/lee_hanyo.htm\">Lee Hanho</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/lee_hanyo.htm\">Lee Hanho</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
-                                    "                  Hankuk Academy of Foreign Studies ???????????? ??????????????????eoul National Universit...\n" + 
+                                    "                  Hankuk Academy of Foreign Studies 한국외국어대학교 부속 용인외국어고등학교Seoul National Universit...\n" + 
                                     "                </p>\n" + 
                                     "              </div>\n" +
                                     "            </div>\n";
@@ -241,9 +237,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771041038790.jpg\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/park_sungryul.htm\">Park Sungryul</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/park_sungryul.htm\">Park Sungryul</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  	in Seoul National University Law School Yonsei University B.A. Political Science and Internatio...\n" + 
@@ -258,9 +254,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150771024769050.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/abhisheka_dubey.htm\">Abhisheka Dubey</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/abhisheka_dubey.htm\">Abhisheka Dubey</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  RSIS, Singapore M.Sc. International Political\n" + 
@@ -272,9 +268,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_144810310775620.jpeg\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/kevin_han.htm\">Kevin Han</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE) &amp; ??????(MUN)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/kevin_han.htm\">Kevin Han</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE) &amp; 모의유엔(MUN)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  	Education: Osnabruck University (Germany) - Business Management and Social Sciences Kyunghee Uni...\n" + 
@@ -289,9 +285,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_150313760797340.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/reece_randall.htm\">Reece Randall</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE) &amp; ??????(ENGLISH)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/reece_randall.htm\">Reece Randall</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE) &amp; 정규영어(ENGLISH)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  Reece Randall University of Cape Town | 2017 Teaching English as a Foreign Language (TEFL) Vars...\n" + 
@@ -303,9 +299,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086887973460.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/lee_eunhye.htm\">Lee Eunhye</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE) &amp; ??????(MUN)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/lee_eunhye.htm\">Lee Eunhye</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE) &amp; 모의유엔(MUN)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  	KDI School of Public Policy and Management Candidate for Master of Public Policy College of In...\n" + 
@@ -320,12 +316,12 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086687233400.jpg\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/you_ge_heon.htm\">You Ge Heon</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/you_ge_heon.htm\">You Ge Heon</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
-                                    "                  Yonsei University UIC Political Science &amp; International Relations[?????? ???]2016??..\n" + 
+                                    "                  Yonsei University UIC Political Science &amp; International Relations[심사위원 경력]2016년...\n" + 
                                     "                </p>\n" + 
                                     "              </div>\n" +
                                     "            </div>\n";
@@ -334,9 +330,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_149086514026660.jpg\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/kim_gyumin.htm\">Kim Gyumin</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/kim_gyumin.htm\">Kim Gyumin</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  	Yonsei University UIC International Studies&nbsp;&nbsp;&nbsp;- Korean Minjok Leadership Aca...\n" + 
@@ -351,9 +347,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_147279951758880.bmp\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/brian_moon.htm\">Brian Moon</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/brian_moon.htm\">Brian Moon</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  Hanyang University Division of International Studies Division of Chemical Engineer...\n" + 
@@ -365,12 +361,12 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_146857135048140.jpg\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/chan_keun_kim.htm\">Chan Keun Kim</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/chan_keun_kim.htm\">Chan Keun Kim</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
-                                    "                  	???????? ?????? 1. Highschool Level 2010 NSDC Champion 2010 KHSDC Gran...\n" + 
+                                    "                  	고려대학교 경영학과 1. Highschool Level 2010 NSDC Champion 2010 KHSDC Gran...\n" + 
                                     "                </p>\n" + 
                                     "              </div>\n" +
                                     "            </div>\n";
@@ -382,9 +378,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_146857124556520.jpg\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/joonpyo_sohn.htm\">Joonpyo Sohn</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/joonpyo_sohn.htm\">Joonpyo Sohn</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  Brown University A.B.: Economics &amp; Applied Math Daewon Foreign Language HS English-...\n" + 
@@ -396,12 +392,12 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_144490127135610.JPG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/matthew_owen.htm\">Matthew Owen</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(ENGLISH)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/matthew_owen.htm\">Matthew Owen</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규영어(ENGLISH)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
-                                    "                  	??? l Language Institutes &amp; Academies 2011-2015: S...\n" + 
+                                    "                  	경력 l Language Institutes &amp; Academies 2011-2015: S...\n" + 
                                     "                </p>\n" + 
                                     "              </div>\n" +
                                     "            </div>\n";
@@ -413,9 +409,9 @@ function extractHtmlFromDesktopPage()  {
                                     "              <img src=\"http://daechi.leadersacademy.com/skin/_data/board/about6/_140273568736030.PNG\" width=\"78\" height=\"107\" />\n" + 
                                     "              <div class=\"article-faculty-info\">\n" + 
                                     "                <ul>\n" + 
-                                    "                  <li><strong>???</strong> : <a href=\"guide/faculty/roger_hatridge.htm\">Roger Hatridge</a></li>\n" + 
-                                    "                  <li><strong>???</strong> : ??????(DEBATE)</li>\n" + 
-                                    "                  <li><strong>?????? </strong></li>\n" + 
+                                    "                  <li><strong>이름</strong> : <a href=\"guide/faculty/roger_hatridge.htm\">Roger Hatridge</a></li>\n" + 
+                                    "                  <li><strong>담당</strong> : 정규토론(DEBATE)</li>\n" + 
+                                    "                  <li><strong>자기소개 </strong></li>\n" + 
                                     "                </ul>\n" + 
                                     "                <p>\n" + 
                                     "                  2012 l Professor at Sogang University; teaching &ldquo;Humanities Debate&rdquo;...\n" + 
@@ -433,8 +429,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Park Sooyoung.
               case 1:
                 extracted_html[0] = "          <h4>Park Sooyoung</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????</span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>관리자</span>\n";
 
                 extracted_html[1] = "            Yonsei University\n" + 
                                     "            <br/>\n" + 
@@ -481,8 +477,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Kim Hyerin.
               case 2:
                 extracted_html[0] = "          <h4>Kim Hyerin</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            Ewha Womans University\n" + 
                                     "            <br/>\n" + 
@@ -493,25 +489,25 @@ function extractHtmlFromDesktopPage()  {
                                     "            Minor in International Development Cooperation\n";
 
                 extracted_html[2] = "          <h7>EDiS (Ewha Debate Society)</h7>\n" + 
-                                    "          <h6>?????? ???</h6>\n" + 
+                                    "          <h6>심사위원 경력</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>2014 YTN-?????? ???????????????(?????) ??????</li>\n" + 
-                                    "            <li>2014 YTN-?????? ???????????????(?????) ??????</li>\n" + 
-                                    "            <li>2015 ?????? High-On ?????? ??? ???????????</li>\n" + 
-                                    "            <li>2015 YTN-?????? ???????????????(?????) ??????</li>\n" + 
-                                    "            <li>2015 YTN-?????? ???????????????(?????) ??????</li>\n" + 
-                                    "            <li>2015 GFN ?????? ??<???????? ???????????????2?????????????</li>\n" + 
-                                    "            <li>2015 ??? ??? ???????(KDO) ??????</li>\n" + 
-                                    "            <li>2016 ???-??? ???????? 4?????????????</li>\n" + 
-                                    "            <li>2016 YTN-?????? ???????????????(?????) ??????</li>\n" + 
+                                    "            <li>2014 YTN-한국외대 청소년 영어토론대회 (초등부) 심사위원</li>\n" + 
+                                    "            <li>2014 YTN-한국외대 청소년 영어토론대회 (중등부) 심사위원</li>\n" + 
+                                    "            <li>2015 이화여대 High-On 디베이트 캠프 결승전 심사위원</li>\n" + 
+                                    "            <li>2015 YTN-한국외대 청소년 영어토론대회 (초등부) 심사위원</li>\n" + 
+                                    "            <li>2015 YTN-한국외대 청소년 영어토론대회 (중등부) 심사위원</li>\n" + 
+                                    "            <li>2015 GFN 영어방송 광주광역시 전국 청소년 영어토론대회 2위 심사위원상 수상</li>\n" + 
+                                    "            <li>2015 한국 국제 토론대회 (KDO) 심사위원</li>\n" + 
+                                    "            <li>2016 코넬-연세 고교대항전 4위 심사위원상 수상</li>\n" + 
+                                    "            <li>2016 YTN-한국외대 청소년 영어토론대회 (중등부) 심사위원</li>\n" + 
                                     "          </ul>\n" + 
-                                    "          <h6>?????? ???</h6>\n" + 
+                                    "          <h6>디베이트 경력</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>2014 ???????? ??? ?????? (SRT) ??????????</li>\n" + 
-                                    "            <li>2014 ??6?????????? ??????????(KNC) ??? ????????????</li>\n" + 
-                                    "            <li>2015 ?????????????????????(ICUT) ????????????</li>\n" + 
-                                    "            <li>2015 ??? ??? ???????(KWDO) ????????</li>\n" + 
-                                    "            <li>2016 ??? ??? ???????(KWDO) ????????</li>\n" + 
+                                    "            <li>2014 서강대학교 루키 토너먼트 (SRT) 준결승전 진출</li>\n" + 
+                                    "            <li>2014 제16회 전국대학생 영어토론대회 (KNC) 루키 준준결승전 진출</li>\n" + 
+                                    "            <li>2015 일본기독교대학 국제토론대회 (ICUT) 준준결승전 진출</li>\n" + 
+                                    "            <li>2015 한국 여성 토론대회 (KWDO) 결승전 진출</li>\n" + 
+                                    "            <li>2016 한국 여성 토론대회 (KWDO) 결승전 진출</li>\n" + 
                                     "          </ul>\n";
 
                 webpage_index = 2;
@@ -520,12 +516,12 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Lee Hanyo.
               case 3:
                 extracted_html[0] = "          <h4>Lee Hanyo</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
-                extracted_html[1] = "            Hankuk Academy of Foreign Studies ???????????? ??????????????????n" + 
+                extracted_html[1] = "            Hankuk Academy of Foreign Studies 한국외국어대학교 부속 용인외국어고등학교\n" + 
                                     "            <br/>\n" + 
-                                    "            Seoul National University ????????\n";
+                                    "            Seoul National University 서울대학교\n";
 
                 extracted_html[2] = "          <ul>\n" + 
                                     "            <li>2009 KYUMUN Outstanding Delegate | Delegate, ECOSOC</li>\n" + 
@@ -563,8 +559,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Park Sungryul.
               case 4:
                 extracted_html[0] = "          <h4>Park Sungryul</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????</span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>관리자</span>\n";
 
                 extracted_html[1] = "            In Seoul National University Law School\n" + 
                                     "            <br/>\n" + 
@@ -610,8 +606,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Abhisheka Dubey.
               case 5:
                 extracted_html[0] = "          <h4>Abhisheka Dubey</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            RSIS, Singapore\n" + 
                                     "            <br/>\n" + 
@@ -664,8 +660,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Kevin Han.
               case 6:
                 extracted_html[0] = "          <h4>Kevin Han</h4>\n" + 
-                                    "          <span>[??????(DEBATE) &amp; ??????(MUN)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE) &amp; 모의유엔(MUN)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            Osnabruck University (Germany) - Business Management and Social Sciences\n" + 
                                     "            <br/>\n" + 
@@ -729,8 +725,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Reece Randall.
               case 7:
                 extracted_html[0] = "          <h4>Reece Randall</h4>\n" + 
-                                    "          <span>[??????(DEBATE) &amp; ??????(ENGLISH)]</span>\n" + 
-                                    "          <span>?????</span>\n";
+                                    "          <span>[정규토론(DEBATE) &amp; 정규영어(ENGLISH)]</span>\n" + 
+                                    "          <span>관리자</span>\n";
 
                 extracted_html[1] = "            University of Cape Town\n" + 
                                     "            <br/>\n" + 
@@ -743,17 +739,17 @@ function extractHtmlFromDesktopPage()  {
                                     "            GEMS World Academy, Dubai\n" + 
                                     "            <br/>\n" + 
                                     "            2011-2013 International Baccalaureate Diploma\n";
-                extracted_html[2] = "          <h6>????/h6>\n" + 
+                extracted_html[2] = "          <h6>경 력</h6>\n" + 
                                     "          <ul>\n" + 
                                     "            <li>English Teacher | University of Cape Town - English Language Center | 2017</li>\n" + 
-                                    "            <li>Co-Founder & Tutor | GEMS World Academy - The Writing Center | 2011 ??2013</li>\n" + 
-                                    "            <li>Committee Chair | GEMS World Academy - Student Council | 2012 ??2013</li>\n" + 
+                                    "            <li>Co-Founder & Tutor | GEMS World Academy - The Writing Center | 2011 – 2013</li>\n" + 
+                                    "            <li>Committee Chair | GEMS World Academy - Student Council | 2012 – 2013</li>\n" + 
                                     "            <li>Top 3 National Speaker | Murdoch University Business Cup Challenge | 2012</li>\n" + 
                                     "            <li>Student Leader & Volunteer Teacher | World Challenge China Expedition | 2012</li>\n" + 
                                     "            <li>Top 3 Senior Debater | World Scholar's Cup | 2012</li>\n" + 
                                     "            <li>Ambassador, Speaker & Fundraiser | Room to Read | 2012</li>\n" + 
-                                    "            <li>Award-Winning Delegate | Model United Nations | 2011 ??2012</li>\n" + 
-                                    "            <li>Member & Speaker | Toastmasters Society International | 2009 ??2010</li>\n" + 
+                                    "            <li>Award-Winning Delegate | Model United Nations | 2011 – 2012</li>\n" + 
+                                    "            <li>Member & Speaker | Toastmasters Society International | 2009 – 2010</li>\n" + 
                                     "          </ul>\n";
 
                 webpage_index = 7;
@@ -762,8 +758,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Lee Eunhye.
               case 8:
                 extracted_html[0] = "          <h4>Lee Eunhye</h4>\n" + 
-                                    "          <span>[??????(DEBATE) &amp; ??????(MUN)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE) &amp; 모의유엔(MUN)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            KDI School of Public Policy and Management\n" + 
                                     "            <br/>\n" + 
@@ -836,40 +832,40 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for You Ge Heon.
               case 9:
                 extracted_html[0] = "          <h4>You Ge Heon</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            Yonsei University\n" + 
                                     "            <br/>\n" + 
                                     "            UIC Political Science & International Relations\n";
 
-                extracted_html[2] = "          <h6>?????? ???</h6>\n" +
+                extracted_html[2] = "          <h6>심사위원 경력</h6>\n" +
                                     "          <ul>\n" + 
-                                    "            <li>2016??YTN-?????? ????????????????????): ??????</li>\n" + 
-                                    "            <li>2016???????? ??????????????? ???????????</li>\n" + 
-                                    "            <li>2016?????-??? ???????? ???????????</li>\n" + 
-                                    "            <li>2016????8?????????? ???????????????/li>\n" + 
-                                    "            <li>2016?????????? ??? ???????(SRT) ??????</li>\n" + 
-                                    "            <li>2015??YTN-?????? ????????????????????): ??????</li>\n" + 
-                                    "            <li>2015??YTN-?????? ????????????????????): ??????</li>\n" + 
-                                    "            <li>2015?????????? ??? ???????????? (SRT) ??????</li>\n" + 
-                                    "            <li>2016??2016 ??????????????? ?????????????????(DCA)</li>\n" + 
-                                    "            <li>GFN?????? ??<???????? ?????????????????????????(DCA)</li>\n" + 
+                                    "            <li>2016년 YTN-한국외대 청소년 영어토론대회(초등부): 심사위원</li>\n" + 
+                                    "            <li>2016년 매일경제 영어토론대회 고등부 결승전 심사위원</li>\n" + 
+                                    "            <li>2016년 코넬-연세 고교대항전 결승전 심사위원</li>\n" + 
+                                    "            <li>2016년 제 8회 연세대학교 토론대회 심사위원장</li>\n" + 
+                                    "            <li>2016년 서강대학교 루키 토론대회 (SRT) 심사위원</li>\n" + 
+                                    "            <li>2015년 YTN-한국외대 청소년 영어토론대회(중등부): 심사위원</li>\n" + 
+                                    "            <li>2015년 YTN-한국외대 청소년 영어토론대회(고등부): 심사위원</li>\n" + 
+                                    "            <li>2015년 서강대학교 루키 토론대회(하반기) (SRT) 심사위원</li>\n" + 
+                                    "            <li>2016년 2016 제2회 오산시 전국학생 토론대회 부심사위원장 (DCA)</li>\n" + 
+                                    "            <li>GFN영어방송 광주광역시 전국 청소년 영어토론대회 부심사위원장 (DCA)</li>\n" + 
                                     "          </ul>\n" + 
-                                    "          <h6>?????? ???</h6>\n" + 
+                                    "          <h6>디베이트 경력</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>2015????????????????????(NEAO): ????????????</li>\n" + 
-                                    "            <li>2015?????????? ??? ???????SRT) ??????????</li>\n" + 
-                                    "            <li>2016????8?????????? ??????????(KNC): ????????????</li>\n" + 
-                                    "            <li>2016????9?????????? ??????????(KNC): ????????????</li>\n" + 
-                                    "            <li>2016????1??????????-???????? ??? ?????????? ???, 2????????</li>\n" + 
-                                    "            <li>2016????? ????? ??? ??? ?????????(KIDA Open): Pre-Semi Finalist</li>\n" + 
-                                    "            <li>2016????????????????????(NEAO): ????????????, 4????????</li>\n" + 
+                                    "            <li>2015년 동북아시아 영어토론대회 (NEAO): 준준결승전 진출</li>\n" + 
+                                    "            <li>2015년 서강대학교 루키 토론대회(SRT) 준결승전 진출</li>\n" + 
+                                    "            <li>2016년 제18회 전국대학생 영어토론대회 (KNC): 준준결승전 진출</li>\n" + 
+                                    "            <li>2016년 제19회 전국대학생 영어토론대회 (KNC): 준준결승전 진출</li>\n" + 
+                                    "            <li>2016년 제 1회 한양대학교-연세대학교 영어 토론대회 결승 진출, 2등 스피커상</li>\n" + 
+                                    "            <li>2016년 전국 대학생 영어 토론 총연합 대회 (KIDA Open): Pre-Semi Finalist</li>\n" + 
+                                    "            <li>2016년 동북아시아 영어토론대회 (NEAO): 준준결승전 진출, 4등 스피커상</li>\n" + 
                                     "          </ul>\n" + 
-                                    "          <h6>??? ???</h6>\n" + 
+                                    "          <h6>강의 경력</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>?? ??? ?????? ??? ???</li>\n" + 
-                                    "            <li>?? ????????? ?????? ??? (2016.7??2016.12??8??</li>\n" + 
+                                    "            <li>전) 한국 디베이트 리그 강사</li>\n" + 
+                                    "            <li>전) 디베이트포올 열린교실 강사 (2016.7월-2016.12월18일)</li>\n" + 
                                     "          </ul>\n";
 
                 webpage_index = 9;
@@ -878,8 +874,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Kim Gyumin.
               case 10:
                 extracted_html[0] = "          <h4>Kim Gyumin</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            Yonsei University\n" + 
                                     "            <br/>\n" + 
@@ -887,37 +883,37 @@ function extractHtmlFromDesktopPage()  {
                                     "            <br/>\n" + 
                                     "            Korean Minjok Leadership Academy\n";
 
-                extracted_html[2] = "          <h6>?????? ????? ???</h6>\n" +
+                extracted_html[2] = "          <h6>심사위원 및 인턴 경력</h6>\n" +
                                     "          <ul>\n" + 
-                                    "            <li>2016-??? KIDA National Championship ????????/li>\n" + 
-                                    "            <li>2016 YTN-HUFS ????????????????????????/li>\n" + 
-                                    "            <li>2015 ??<?????????????????????????????/li>\n" + 
-                                    "            <li>2016????8?????????? ???????????????/li>\n" + 
-                                    "            <li>2015 Global Korea Debate Championship ??????????/li>\n" + 
-                                    "            <li>2013 KEDC ????????????????????? 3??/li>\n" + 
-                                    "            <li>2012 ????? ????????? ??? ??????????????????</li>\n" + 
-                                    "            <li>2015?????????? ??? ???????????? (SRT) ??????</li>\n" + 
-                                    "            <li>2014 ????? ????????????????? ??????????</li>\n" + 
-                                    "            <li>2013 ??????????? ????????FTA????????Research Associate???</li>\n" + 
+                                    "            <li>2016-현재 KIDA National Championship 심사위원장</li>\n" + 
+                                    "            <li>2016 YTN-HUFS 청소년영어토론대회 부심사위원장</li>\n" + 
+                                    "            <li>2015 광주광역시 청소년영어토론대회 부심사위원장</li>\n" + 
+                                    "            <li>2016년 제 8회 연세대학교 토론대회 심사위원장</li>\n" + 
+                                    "            <li>2015 Global Korea Debate Championship 부심사위원장</li>\n" + 
+                                    "            <li>2013 KEDC 영어토론대회 최우수 심사위원 3위</li>\n" + 
+                                    "            <li>2012 필리핀 인트라무로스 국제 토론대회 최우수 심사위원</li>\n" + 
+                                    "            <li>2015년 서강대학교 루키 토론대회(하반기) (SRT) 심사위원</li>\n" + 
+                                    "            <li>2014 청와대 대통령비서실 대변인실 외신대변인턴</li>\n" + 
+                                    "            <li>2013 산업통상자원부 통상교섭실 FTA정책기획과 Research Associate인턴</li>\n" + 
                                     "          </ul>\n" + 
-                                    "          <h6>?????? ???</h6>\n" + 
+                                    "          <h6>디베이트 경력</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>2015. 11 ???????????? ???????????????, 3???????/li>\n" + 
-                                    "            <li>2015. 08 ??<-??????????????????????????EFL?? ???</li>\n" + 
-                                    "            <li>2015. 08 ???????? ???????????????</li>\n" + 
-                                    "            <li>2015. 08 ???????? ???????????????</li>\n" + 
-                                    "            <li>2016????1??????????-???????? ??? ?????????? ???, 2????????</li>\n" + 
-                                    "            <li>2014. 04 National Model United Nations-New York, Outstanding Delegation ?????????</li>\n" + 
-                                    "            <li>Best Position Paper ???????? ?????/li>\n" + 
+                                    "            <li>2015. 11 한국디베이트오픈 영어토론대회 준우승, 3등 스피커</li>\n" + 
+                                    "            <li>2015. 08 호주-오세아니아 국제대학생영어토론대회 EFL부 우승</li>\n" + 
+                                    "            <li>2015. 08 서강대학교 영어토론대회 준결승</li>\n" + 
+                                    "            <li>2015. 08 서울대학교 영어토론대회 준결승</li>\n" + 
+                                    "            <li>2016년 제 1회 한양대학교-연세대학교 영어 토론대회 결승 진출, 2등 스피커상</li>\n" + 
+                                    "            <li>2014. 04 National Model United Nations-New York, Outstanding Delegation 최우등대표상</li>\n" + 
+                                    "            <li>Best Position Paper 최우수 국가 보고서</li>\n" + 
                                     "          </ul>\n" + 
-                                    "          <h6>??? ???</h6>\n" + 
+                                    "          <h6>강의 경력</h6>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>RealPREP, SAT Reading ???</li>\n" + 
-                                    "            <li>Debate For All ?????????????/ ?????????, ?????? ???</li>\n" + 
-                                    "            <li>????????? ???????? ?????? ???</li>\n" + 
-                                    "            <li>????????????????, ?????? ???</li>\n" + 
-                                    "            <li>EnKo????? ????????</li>\n" + 
-                                    "            <li>?????E-Class, ????????????????</li>\n" + 
+                                    "            <li>RealPREP, SAT Reading 강사</li>\n" + 
+                                    "            <li>Debate For All 글로벌리더의 자격/ 열린토론교실, 영어토론 강사</li>\n" + 
+                                    "            <li>세계유엔연맹 청소년캠프, 모의유엔 강사</li>\n" + 
+                                    "            <li>삼육중학교 방과후 교실, 영어토론 강사</li>\n" + 
+                                    "            <li>EnKo어학원, 특별반 강사</li>\n" + 
+                                    "            <li>닥터정 E-Class, 외국인학교 특별반 강사</li>\n" + 
                                     "          </ul>\n";
 
                 webpage_index = 10;
@@ -926,8 +922,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Brian Moon.
               case 11:
                 extracted_html[0] = "          <h4>Brian Moon</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            Hanyang University\n" + 
                                     "            <br/>\n" + 
@@ -954,12 +950,12 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Chan Keun Kim.
               case 12:
                 extracted_html[0] = "          <h4>Chan Keun Kim</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "\n";
 
-                extracted_html[2] = "          <h6>???????? ??????</h6>\n" +
+                extracted_html[2] = "          <h6>고려대학교 경영학과</h6>\n" +
                                     "          <span>Highschool Level</span>\n" + 
                                     "          <ul>\n" + 
                                     "            <li>2010 NSDC Champion</li>\n" + 
@@ -980,8 +976,8 @@ function extractHtmlFromDesktopPage()  {
                                     "            <li>2012 Fall KNC Semi Finalist</li>\n" + 
                                     "            <li>2012 NEAO Semi Finalist</li>\n" + 
                                     "            <li>2013 IOC Quarter Finalist</li>\n" + 
-                                    "            <li>2015. 08 ???????? ???????????????</li>\n" + 
-                                    "            <li>2016????1??????????-???????? ??? ?????????? ???, 2????????</li>\n" + 
+                                    "            <li>2015. 08 서울대학교 영어토론대회 준결승</li>\n" + 
+                                    "            <li>2016년 제 1회 한양대학교-연세대학교 영어 토론대회 결승 진출, 2등 스피커상</li>\n" + 
                                     "            <li>2013 Spring KNC Grand Finalist / 4th Best Spea</li>\n" + 
                                     "          </ul>\n";
 
@@ -991,8 +987,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Joonpyo Sohn.
               case 13:
                 extracted_html[0] = "          <h4>Joonpyo Sohn</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "            Brown University\n" + 
                                     "            <br/>\n" + 
@@ -1002,7 +998,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            <br/>\n" + 
                                     "            English-Spanish Major\n";
 
-                extracted_html[2] = "          <h6>???</h6>\n" +
+                extracted_html[2] = "          <h6>경력</h6>\n" +
                                     "          <ul>\n" + 
                                     "            <li>Worlds Universities Debate Championship 2015, Open Octo-Finalist, ESL 5<sup>th</sup> Best Speaker</li>\n" + 
                                     "            <li>North American Universities Debate Championship 2014, Semi-Finalist</li>\n" + 
@@ -1035,12 +1031,12 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Matthew Owen.
               case 14:
                 extracted_html[0] = "          <h4>Matthew Owen</h4>\n" + 
-                                    "          <span>[??????(ENGLISH)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규영어(ENGLISH)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "\n";
 
-                extracted_html[2] = "          <h6>???</h6>\n" +
+                extracted_html[2] = "          <h6>경력</h6>\n" +
                                     "          <ul>\n" + 
                                     "            <li>Language Institutes & Academies 2011-2015: Social Science & Debate<br/><br/>Course focused on public forum, N.F.L, debate of current events, world history, introduction to world politics & rhetoric essay and script writing</li>\n" + 
                                     "            <li>Hankuk University of Foreign Studies 2009-2011: E.S.L & TOEFL Instructor<br/><br/>Developed semester courses including critical thinking, public speaking & confidence building activities / TOEFL to all grade levels</li>\n" + 
@@ -1055,8 +1051,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Faculty' page for Roger Hatridge.
               case 15:
                 extracted_html[0] = "          <h4>Roger Hatridge</h4>\n" + 
-                                    "          <span>[??????(DEBATE)]</span>\n" + 
-                                    "          <span>?????/span>\n";
+                                    "          <span>[정규토론(DEBATE)]</span>\n" + 
+                                    "          <span>작성자</span>\n";
 
                 extracted_html[1] = "";
                 extracted_html[2] = "          <h6>2012</h6>\n" +
@@ -1124,10 +1120,10 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is for the 'About Us' section.
               case 16:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>??? ??? (ABOUT US)</h2>\n" + 
+                                    "          <h2>회사 소개 (ABOUT US)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-about_us\" id=\"article-content\">\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/about/images/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"?????HISTORY)\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/about/images/cont01-01s.png\" width=\"680\" height=\"768\" alt=\"인사말(HISTORY)\" />\n" + 
                                     "        </div>\n";
 
                 webpage_index = 16;
@@ -1136,7 +1132,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is for the 'Contact Us' section.
               case 17:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>?????(CONTACT US)</h2>\n" + 
+                                    "          <h2>연락처 (CONTACT US)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-contact_us\" id=\"article-content\">\n" + 
                                     "          <h4>Leaders Academy (Daechi)</h4>\n" + 
@@ -1189,10 +1185,10 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is for the 'GPA/Testing' section.
               case 18:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>?????(GPA/TESTING)</h2>\n" + 
+                                    "          <h2>테스트 (GPA/TESTING)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-gpa\" id=\"article-content\">\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/admission/images/cont03-01.png\" alt=\"??????\">\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/admission/images/cont03-01.png\" alt=\"입학안내\">\n" + 
                                     "        </div>\n";
 
                 webpage_index = 18;
@@ -1202,7 +1198,7 @@ function extractHtmlFromDesktopPage()  {
               case 19: 
                 // Pass on the HTML of the Section header and map.
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2 lang=\"ko\">?????(LOCATION)</h2>\n" + 
+                                    "          <h2 lang=\"ko\">치안내 (LOCATION)</h2>\n" + 
                                     "        </div>\n"+ 
                                     "        <div id=\"map\" style=\"width:85%;height:500px;margin: 0 auto;\"></div>\n" + 
                                     "\n" + 
@@ -1226,7 +1222,7 @@ function extractHtmlFromDesktopPage()  {
                                     "\n" + 
                                     "          marker.setMap(map);\n" + 
                                     "\n" + 
-                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">????????/a> <a href=\"http://map.daum.net/link/to/Hello World!,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">?????/a></div>', \n" + 
+                                    "          var iwContent = '<div style=\"padding:5px;\">Leaders Academy<br><a href=\"http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">큰지도보기</a> <a href=\"http://map.daum.net/link/to/Hello World!,37.500521,127.051424\" style=\"color:blue\" target=\"_blank\">길찾기</a></div>', \n" + 
                                     "            iwPosition = new daum.maps.LatLng(37.500521, 127.051424);\n" + 
                                     "\n" + 
                                     "          var infowindow = new daum.maps.InfoWindow({ \n" + 
@@ -1311,7 +1307,7 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[13]= jq("table table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td table > tbody > tr:nth-child(4) > td table > tbody > tr:nth-child(8) > td").html();
                 extracted_html[14]= "        <h4>The nearest bus stops and bus numbers:</h4>\n" + 
                                     "        <ul>\n" + 
-                                    "          <li>Tell the taxi driver Dosung Elementary Intersection-Dosung Chogyo Sagori - ?????? ?????/li>\n" + 
+                                    "          <li>Tell the taxi driver Dosung Elementary Intersection-Dosung Chogyo Sagori - 도성초교 사거리</li>\n" + 
                                     "        </ul>\n";
 
                 webpage_index = 19;
@@ -1320,13 +1316,13 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Debate' page.
               case 20:
                 extracted_html[0] = "        <div class=\"article-debate-links\" id=\"article-content\">\n" + 
-                                    "          <a href=\"debate_schedule_2017.htm\" title=\"2017???????? ??? ??? ??????\">2017???????? ??? ??? ??????</a>\n" + 
-                                    "          <a href=\"debate_schedule_2016.htm\" title=\"2016 ????????? ??? ??????\">2016 ????????? ??? ??????</a>\n" + 
-                                    "          <a href=\"debate_discussion_english.htm\" title=\"??? ??????????????\">??? ??????????????</a>\n" +
-                                    "          <a href=\"debate_schedule_2018.htm\" title=\"2018 ?????????\">2018 ?????????</a>\n" +  
-                                    "          <a href=\"recruitment.htm\" title=\"??? ????? ?????? ????????\">??? ????? ?????? ????????</a>\n" + 
-                                    "          <a href=\"debate_discussion_2015.htm\" title=\"?????? 2015??2??? ??????\">?????? 2015??2??? ??????</a>\n" + 
-                                    "          <a href=\"debate_debate_2014.htm\" title=\"?????? 2014??4??? ???\">?????? 2014??4??? ???</a>\n" + 
+                                    "          <a href=\"debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\">2017년 정규토론 수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\">2016 정규토론수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\">주중 영어토론반 일정안내</a>\n" +
+                                    "          <a href=\"debate_schedule_2018.htm\" title=\"2018 토론수업일정\">2018 토론수업일정</a>\n" +  
+                                    "          <a href=\"recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\">초등 저학년 토론반을 모집합니다.</a>\n" + 
+                                    "          <a href=\"debate_discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\">정규토론 2015년 2분기 수업일정</a>\n" + 
+                                    "          <a href=\"debate_debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\">정규토론 2014년 4분기 일정</a>\n" + 
                                     "        </div>\n";  
                                     
                 webpage_index = 20;
@@ -1336,7 +1332,7 @@ function extractHtmlFromDesktopPage()  {
               case 21:
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>Updated regular meeting<br/>class schedule for 2017</h4>\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/0_2017??20???%20?????jpg\" width=\"680\" height=\"837\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/0_2017년%20정규%20일정표.jpg\" width=\"680\" height=\"837\" />\n" + 
                                     "        </div>\n";  
                                     
                 webpage_index = 21;
@@ -1353,176 +1349,176 @@ function extractHtmlFromDesktopPage()  {
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ?????????\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ?????n" + 
+                                    "                  수업료\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ?????????\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ?????n" + 
+                                    "                  수업료\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"4\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  초등토론\n" + 
                                     "                  <br/>\n" + 
                                     "                  (3,4/5,6)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4-7 (5,6)\n" + 
+                                    "                  수요일, 4-7 (5,6)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  (2/3????? ?????\n" + 
+                                    "                  (2/3일개강, 접수중)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"5\">\n" + 
-                                    "                  4?????n" + 
+                                    "                  4주만원\n" + 
                                     "                  <br/>\n" + 
-                                    "                  5??5???\n" + 
+                                    "                  5주45만원\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"4\">\n" + 
-                                    "                  ??????(1,2)\n" + 
+                                    "                  중등토론(1,2)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 7-10 (??,2)\n" + 
+                                    "                  수요일, 7-10 (중1,2)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  (1/6????? ?????\n" + 
+                                    "                  (1/6일개강, 접수중)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"5\">\n" + 
-                                    "                  4?? 36???\n" + 
+                                    "                  4주: 36만원\n" + 
                                     "                  <br/>\n" + 
-                                    "                  5??5???\n" + 
+                                    "                  5주45만원\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4-7 (??,4)(1/7?????, ?????" + 
+                                    "                  목요일, 4-7 (초3,4)(1/7일 개강, 접수중)" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 7-10 (??,3)\n" + 
+                                    "                  수요일, 7-10 (중2,3)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  (1/6????? ?????\n" + 
-                                    "                </td>\n" + 
-                                    "              </tr>\n" + 
-                                    "              <tr>\n" + 
-                                    "                <td>\n" + 
-                                    "                  ????? 12-3PM\n" + 
-                                    "                  <br/>\n" + 
-                                    "                  (??,4/5,6)\n" + 
-                                    "                  <br/>\n" + 
-                                    "                  4-7 (??,6)\n" + 
-                                    "                </td>\n" + 
-                                    "                <td>\n" + 
-                                    "                  ?????12-3 (??" + 
-                                    "                  <br/>\n" + 
-                                    "                  4-7 (??,2)\n" + 
-                                    "                  <br/>\n" + 
-                                    "                  7-10 (??,3)\n" + 
+                                    "                  (1/6일개강, 접수중)\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 1-4 (5,6)" + 
+                                    "                  토요일, 12-3PM\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  (초3,4/5,6)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  4-7 (초5,6)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4-7 (2)" + 
+                                    "                  토요일,12-3 (중)" + 
+                                    "                  <br/>\n" + 
+                                    "                  4-7 (중1,2)\n" + 
+                                    "                  <br/>\n" + 
+                                    "                  7-10 (중2,3)\n" + 
+                                    "                </td>\n" + 
+                                    "              </tr>\n" + 
+                                    "              <tr>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일, 1-4 (5,6)" + 
+                                    "                </td>\n" + 
+                                    "                <td>\n" + 
+                                    "                  일요일, 4-7 (2)" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" +
                                     "              <tr>\n" +  
                                     "                <td>\n" +
-                                    "                  ??????(?????\n" + 
+                                    "                  고등토론(중이상)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 1-4 (1,3)" + 
+                                    "                  일요일, 1-4 (1,3)" + 
                                     "                  <br/>\n" + 
-                                    "                  4-7 (?????)\n" + 
+                                    "                  4-7 (중3이상)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????(?????)\n" + 
+                                    "                  중등토론(중3이상)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4-7 (??)" + 
+                                    "                  일요일, 4-7 (중3)" + 
                                     "                </td>\n" + 
                                     "             </tr>\n" + 
                                     "            </tbody>\n" + 
                                     "          </table>\n" + 
                                     "          <span>\n" + 
-                                    "            *??? ?????? <em>(2????????????/em>: ??< ????????????? ??????: ??< ?????7-9:30????? Only)\n" + 
+                                    "            *초등 렉쳐일정 <em>(2월부터 수강가능</em>: 매주 금요일 시 중등이상 렉쳐일정: 매주 금요일 7-9:30재(학생 Only)\n" + 
                                     "          </span>\n";
 
-                extracted_html[2] = "          <h4>????????????? (???3?????????2.5???)</h4>\n" + 
+                extracted_html[2] = "          <h4>대회프렙 최상위반 (토론3시간렉쳐강의2.5시간)</h4>\n" + 
                                     "          <table>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
                                     "                <td scope=\"col\" rowspan=\"4\">\n" + 
                                     "                  KAIROS\n" + 
                                     "                  <br/>\n" + 
-                                    "                  (?????????????\n" + 
+                                    "                  (대회프렙최상위반)\n" + 
                                     "                </td>\n" + 
                                     "                <td scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </td>\n" + 
                                     "                <td scope=\"col\">\n" + 
-                                    "                  ?????????\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </td>\n" + 
                                     "                <td scope=\"col\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  렉쳐일정\n" + 
                                     "                </td>\n" + 
                                     "                <td scope=\"col\">\n" + 
-                                    "                  ?????n" + 
+                                    "                  수업료\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" +
                                     "              <tr>\n" + 
                                     "               <td>\n" + 
-                                    "                  KAIROS-ED (???)\n" + 
+                                    "                  KAIROS-ED (초등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 12-3PM\n" + 
+                                    "                  토요일, 12-3PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4:30-7PM\n" + 
+                                    "                  금요일, 4:30-7PM\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"3\">\n" + 
-                                    "                  4?? 36???\n" + 
+                                    "                  4주: 36만원\n" + 
                                     "                  <br/>\n" + 
-                                    "                  5??45???\n" + 
+                                    "                  5주 45만원\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" +
                                     "              <tr>\n" +  
                                     "                <td>\n" + 
-                                    "                  KAIROS-PD (???)\n" + 
+                                    "                  KAIROS-PD (중등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????4-7PM\n" + 
+                                    "                  토요일 4-7PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 7-9:30PM\n" + 
+                                    "                  금요일, 7-9:30PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" +
                                     "              <tr>\n" +  
                                     "                <td>\n" + 
-                                    "                  KAIROS-LD (???)\n" + 
+                                    "                  KAIROS-LD (고등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????7-10PM\n" + 
+                                    "                  토요일 7-10PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 7-9:30PM\n" + 
+                                    "                  금요일, 7-9:30PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "            </tbody>\n" + 
                                     "          </table>\n" + 
                                     "          <span>\n" + 
-                                    "            *????????? ??????? ????????(1??????????????? 2??????:1???????? ???)\n" + 
+                                    "            *응시일정년에 번 상반기, 하반기진행 (1차:싸이트 온라인접수, 2차오디션:1차 합격자에 한함)\n" + 
                                     "          </span>\n" + 
                                     "        </div>\n";
 
@@ -1534,29 +1530,29 @@ function extractHtmlFromDesktopPage()  {
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>Weekly English Discussion Class Schedule</h4>\n" + 
                                     "          <p>\n" + 
-                                    "            ??? ????? ???????????? ?????? ????????n" + 
+                                    "            주중 가능한 토론수업일정안내 드리오니 확인하시고\n" + 
                                     "            <br/>\n" + 
-                                    "            ??? ????????????????.\n" + 
+                                    "            많이 참여해 주시기 바랍니다.\n" + 
                                     "          </p>\n" + 
                                     "          <ul>\n" +
-                                    "            <li>??? 5?????- ??< ?????4-7??/li>\n" + 
-                                    "            <li>??? 6?????- ??< </li>\n" + 
+                                    "            <li>초등 5학년반 - 매주 수요일 4-7시</li>\n" + 
+                                    "            <li>초등 6학년반 - 매주 </li>\n" + 
                                     "          </ul>\n" + 
                                     "          <ul>\n" +
-                                    "            <li>??? 1?????- ??< ?????7-10??/li>\n" + 
-                                    "            <li>??? 2?????- ??< ?????7-10??/li>\n" + 
+                                    "            <li>중등 1학년반 - 매주 수요일 7-10시</li>\n" + 
+                                    "            <li>중등 2학년반 - 매주 목요일 7-10시</li>\n" + 
                                     "          </ul>\n" + 
                                     "          <p>\n" + 
-                                    "            => ????3??? ????????????????? ??????\n" +  
+                                    "            => 주1회 3시간 정규영어토론을 수강하는 학생들은\n" +  
                                     "            <br/>\n" + 
-                                    "            ??< ?????4:30-7?????), 7:30-10?????)????????\n" + 
+                                    "            매주 금요일 4:30-7시(초등), 7:30-10시(중등)에 진행하는\n" + 
                                     "            <br/>\n" + 
-                                    "            ??? ??? & ?????? ??? ?????????????.\n" + 
+                                    "            토론 렉쳐 & 클리닉을 추가 수강할 수 있습니다.\n" + 
                                     "            <br/>\n" + 
-                                    "            (?????? -???????????1???,????????????????????????\n" + 
+                                    "            (수업내용 -해당주 토픽강의1시간,개별스피치 클리닉으로구성,예약제)\n" + 
                                     "          </p>\n" + 
                                     "          <p>\n" + 
-                                    "            ???????? 02-562-9799\n" + 
+                                    "            감사합니다. 02-562-9799\n" + 
                                     "          </p>\n"
                                     "        </div>\n";  
 
@@ -1567,7 +1563,7 @@ function extractHtmlFromDesktopPage()  {
               case 24:
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>2018 Lesson Schedule</h4>\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20??????%20???.png\" width=\"714\" height=\"920\" />\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20토론수업%20일정.png\" width=\"714\" height=\"920\" />\n" + 
                                     "        </div>\n";  
 
                 webpage_index = 24;
@@ -1577,27 +1573,27 @@ function extractHtmlFromDesktopPage()  {
               case 25:
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>We raise recruitment class for elementary school lower grades</h4>\n" + 
-                                    "          <h6>??????</h6>\n" + 
+                                    "          <h6>수업일정</h6>\n" + 
                                     "          <p>\n" + 
-                                    "            ??< ?????6-9??n" + 
+                                    "            매주 화요일 6-9시\n" + 
                                     "            <br/>\n" + 
-                                    "            ??< ?????6-9??n" + 
+                                    "            매주 수요일 6-9시\n" + 
                                     "          </p>\n" + 
-                                    "          <h6>??????</h6>\n" + 
+                                    "          <h6>해당학년</h6>\n" + 
                                     "          <ol>\n" +
-                                    "            <li>????????2,3???</li>\n" + 
-                                    "            <li>??????, 3,4???</li>\n" + 
+                                    "            <li>외국인학교 2,3학년</li>\n" + 
+                                    "            <li>한국학교, 3,4학년</li>\n" + 
                                     "          </ol>\n" + 
                                     "          <span>\n" + 
-                                    "            (2016??5??????????\n" + 
+                                    "            (2016년 5월 기준입니다)\n" + 
                                     "          </span>\n" + 
                                     "          <p>\n" + 
-                                    "            ????????????? ????????n" +  
+                                    "            관심있는 학생들은 입학시험을\n" +  
                                     "            <br/>\n" + 
-                                    "            ??????????\n" + 
+                                    "            예약해 주세요.\n" + 
                                     "          </p>\n" + 
                                     "          <p>\n" + 
-                                    "            ????????\n" + 
+                                    "            감사합니다.\n" + 
                                     "          </p>\n"
                                     "        </div>\n";  
 
@@ -1608,48 +1604,48 @@ function extractHtmlFromDesktopPage()  {
               case 26:
                 extracted_html[0] = "        <div class=\"article-debate\" id=\"article-content\">\n" + 
                                     "          <h4>Regular discussions Q2 of 2015</h4>\n" + 
-                                    "          <h6>??? ?????? ?????/h6>\n" + 
-                                    "          <span>(???????? ???)</span>\n";
+                                    "          <h6>토론 정규수업 일정표</h6>\n" + 
+                                    "          <span>(팀수업별도 문의)</span>\n";
 
                 extracted_html[1] = "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  요일\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  시간\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  요일\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  시간\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  초등오픈\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ???\n" + 
+                                    "                  화수\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4PM ~ 7PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  중등오픈\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ???\n" + 
+                                    "                  화수\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 10PM\n" + 
@@ -1657,20 +1653,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" +
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????\n" + 
+                                    "                  초5학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
-
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????\n" + 
+                                    "                  중1학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4PM ~ 7PM\n" + 
@@ -1678,19 +1673,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????\n" + 
+                                    "                  초6학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" +
                                     "                </td>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????\n" + 
+                                    "                  중2학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4PM ~ 7PM\n" + 
@@ -1698,13 +1693,13 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  일요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                 ?????n" +
+                                    "                 토요일\n" +
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 10PM\n" + 
@@ -1712,19 +1707,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????? (LOGOS / KAIROS)\n" + 
+                                    "                  최상위반 (LOGOS / KAIROS)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" +
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????\n" + 
+                                    "                  중3학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 10PM\n" + 
@@ -1735,10 +1730,10 @@ function extractHtmlFromDesktopPage()  {
                                     "                  7PM ~ 10PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  고등오픈\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" +
+                                    "                  일요일\n" +
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" + 
@@ -1746,19 +1741,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  Ethos Debate Lecture & Clinic (???)\n" + 
+                                    "                  Ethos Debate Lecture & Clinic (초등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  수요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4:30PM ~ 6PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  Pathos Debate Lecture & Clinic (???)\n" + 
+                                    "                  Pathos Debate Lecture & Clinic (중등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  수요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 8:30PM\n" + 
@@ -1787,15 +1782,15 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page.
               case 28:
                 extracted_html[0] = "        <div class=\"article-english-links\" id=\"article-content\">\n" + 
-                                    "          <a href=\"booklist_2016.htm\" title=\"2016???????? Booklist\">2016???????? Booklist</a>\n" + 
-                                    "          <a href=\"admissions_2017.htm\" title=\"2017???????? ??? ??? ??????\">2017???????? ??? ??? ??????</a>\n" + 
-                                    "          <a href=\"application_2016.htm\" title=\"2016??1,2??? ??????\">2016??1,2??? ??????</a>\n" +
-                                    "          <a href=\"application_2018.htm\" title=\"2018 ?????? ??????\">2018 ?????? ??????</a>\n" + 
-                                    "          <a href=\"application_2016_update.htm\" title=\"2016 ?????? ??? ??? ??????\">2016 ?????? ??? ??? ??????</a>\n" + 
-                                    "          <a href=\"talk_2016.htm\" title=\"2016 ?????? ??? ??????\">2016 ?????? ??? ??????</a>\n" + 
-                                    "          <a href=\"english_schedule_english.htm\" title=\"??? ?????????????????\">??? ?????????????????</a>\n" + 
-                                    "          <a href=\"english_advanced.htm\" title=\"?????? 2015??2??? ??????\">?????? 2015??2??? ??????</a>\n" + 
-                                    "          <a href=\"schedule_2014.htm\" title=\"?????? 2014??4??? ???\">?????? 2014??4??? ???</a>\n" + 
+                                    "          <a href=\"booklist_2016.htm\" title=\"2016년 원서강독 Booklist\">2016년 원서강독 Booklist</a>\n" + 
+                                    "          <a href=\"admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\">2017년 원서강독 수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"application_2016.htm\" title=\"2016년 1,2분기 원서안내\">2016년 1,2분기 원서안내</a>\n" +
+                                    "          <a href=\"application_2018.htm\" title=\"2018 원서강독 수업일정\">2018 원서강독 수업일정</a>\n" + 
+                                    "          <a href=\"application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\">2016 원서강독 수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\">2016 토론수업 일정 업데이트</a>\n" + 
+                                    "          <a href=\"english_schedule_english.htm\" title=\"주중 영어원서강독반 일정안내\">주중 영어원서강독반 일정안내</a>\n" + 
+                                    "          <a href=\"english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\">고급영어 2015년 2분기 수업일정</a>\n" + 
+                                    "          <a href=\"schedule_2014.htm\" title=\"정규영어 2014년 4분기 일정\">정규영어 2014년 4분기 일정</a>\n" + 
                                     "        </div>\n";  
                                     
                 webpage_index = 28;
@@ -1804,7 +1799,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the booklist of 2016.
               case 29:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>2016???????? Booklist</h4>\n" + 
+                                    "          <h4>2016년 원서강독 Booklist</h4>\n" + 
                                     "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
@@ -1939,8 +1934,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the schedule for 2017.
               case 30:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>2017???????? ??? ??? ??????</h4>\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/3_2017??20???%20?????.jpg\" width=\"674\" height=\"836\" />\n" + 
+                                    "          <h4>2017년 원서강독 수업 일정 업데이트</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1705/3_2017년%20정규%20일정표1.jpg\" width=\"674\" height=\"836\" />\n" + 
                                     "        </div>\n";  
                                     
                webpage_index = 30;
@@ -1949,8 +1944,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the 2016 application form.
               case 31:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>2016??1,2??? ??????</h4>\n" + 
-                                    "          <h6>2016??Book List</h6>\n" + 
+                                    "          <h4>2016년 1,2분기 원서안내</h4>\n" + 
+                                    "          <h6>2016년 Book List</h6>\n" + 
                                     "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
@@ -1967,19 +1962,19 @@ function extractHtmlFromDesktopPage()  {
                                     "                  Lexis\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  Book Title (?????\n" + 
+                                    "                  Book Title (도서명)\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
                                     "                  Mythos\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  Book Title (?????\n" + 
+                                    "                  Book Title (도서명)\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
                                     "                  Opsis\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  Book Title (?????\n" + 
+                                    "                  Book Title (도서명)\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
@@ -2075,7 +2070,6 @@ function extractHtmlFromDesktopPage()  {
                                     "                <td>\n" + 
                                     "                  B1\n" + 
                                     "                </td>\n" + 
-
                                     "                <td>\n" + 
                                     "                  Apr\n" + 
                                     "                </td>\n" + 
@@ -2135,7 +2129,7 @@ function extractHtmlFromDesktopPage()  {
                                     "                  B3\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  Jun (6??\n" + 
+                                    "                  Jun (6월)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  Adventure\n" + 
@@ -2198,68 +2192,68 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the schedule for 2016.
               case 32:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>2016??????????? ??? ??????</h4>\n" + 
-                                    "          <span>??????????? (??? ?????????<br/><strong>*2016??2???????(?????</strong></span>\n" + 
+                                    "          <h4>2016년 원서강독수업 일정 업데이트</h4>\n" + 
+                                    "          <span>원서강독반 일정 (리딩 라이팅 주1회)<br/><strong>*2016년 2월3일 개강(접수중)</strong></span>\n" + 
                                     "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  클래스명\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  수업내용\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ?????n" + 
+                                    "                  수업료\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  LEXIS (??????3,4)\n" + 
+                                    "                  LEXIS (렉서스초3,4)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????? (???&amp;?????\n" + 
+                                    "                  원서강독 (리딩&amp;라이팅)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4-6:30??(Rick ???)\n" + 
+                                    "                  수요일, 4-6:30분 (Rick 강사)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  ????? 4-6:30??(Rick ???)\n" + 
+                                    "                  금요일, 4-6:30분 (Rick 강사)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"3\">\n" + 
-                                    "                  4(????: 20?????\n" + 
+                                    "                  4(주1회): 20만6천원\n" + 
                                     "                  <br/>\n" + 
-                                    "                  5(????: 25?????\n" + 
+                                    "                  5(주1회): 25만6천원\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  MYTHOS (????? ??,6\n" + 
+                                    "                  MYTHOS (미토스) 초5,6\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????? (???&amp;?????\n" + 
+                                    "                  원서강독 (리딩&amp;라이팅)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 4-7??(Matthew ???)\n" + 
+                                    "                  수요일, 4-7시 (Matthew 강사)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  ????? 4-7??(Matthew ???)\n" + 
+                                    "                  금요일, 4-7시 (Matthew 강사)\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  OPSIS (????? ??,2\n" + 
+                                    "                  OPSIS (옵시스) 중1,2\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????? (???&amp;?????\n" + 
+                                    "                  원서강독 (리딩&amp;라이팅)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 7-10??(Matthew ???)\n" + 
+                                    "                  수요일, 7-10시 (Matthew 강사)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  ????? 7-10??(Matthew ???)\n" + 
+                                    "                  금요일, 7-10시 (Matthew 강사)\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "            </tbody>\n" + 
@@ -2272,8 +2266,8 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the schedule for 2017.
               case 33:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>2018 ?????? ??????</h4>\n" + 
-                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20??????%20???.png\" width=\"674\" height=\"868\" />\n" + 
+                                    "          <h4>2018 원서강독 수업일정</h4>\n" + 
+                                    "          <img src=\"http://daechi.leadersacademy.com/data/editor/1711/2018%20토론수업%20일정.png\" width=\"674\" height=\"868\" />\n" + 
                                     "        </div>\n";  
 
                 webpage_index = 33;
@@ -2282,47 +2276,47 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the 2016 application.
               case 34:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>2016 ?????? ??? ??? ??????</h4>\n" + 
-                                    "          <span>?????? ??? ??? ????????br/><strong>* 2016?????????????</strong></span>\n" + 
+                                    "          <h4>2016 원서강독 수업 일정 업데이트</h4>\n" + 
+                                    "          <span>원서강독 수업 일정 안내합니다<br/><strong>* 2016년 학년기준입니다)</strong></span>\n" + 
                                     "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  요일\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  시간\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  요일\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" +  
-                                    "                  ???\n" + 
+                                    "                  시간\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  초등오픈\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ???\n" + 
+                                    "                  화수\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4PM ~ 7PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  중등오픈\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ???\n" + 
+                                    "                  화수\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 10PM\n" + 
@@ -2330,19 +2324,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" +
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????\n" + 
+                                    "                  초5학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????\n" + 
+                                    "                  중1학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4PM ~ 7PM\n" + 
@@ -2350,19 +2344,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????\n" + 
+                                    "                  초6학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" +
                                     "                </td>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????\n" + 
+                                    "                  중2학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4PM ~ 7PM\n" + 
@@ -2370,13 +2364,13 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  일요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                 ?????n" +
+                                    "                 토요일\n" +
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 10PM\n" + 
@@ -2384,19 +2378,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????? (LOGOS / KAIROS)\n" + 
+                                    "                  최상위반 (LOGOS / KAIROS)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" +
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????\n" + 
+                                    "                  중3학년\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  토요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 10PM\n" + 
@@ -2407,10 +2401,10 @@ function extractHtmlFromDesktopPage()  {
                                     "                  7PM ~ 10PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  고등오픈\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" +
+                                    "                  일요일\n" +
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  1PM ~ 4PM\n" + 
@@ -2418,19 +2412,19 @@ function extractHtmlFromDesktopPage()  {
                                     "              </tr>" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  Ethos Debate Lecture & Clinic (???)\n" + 
+                                    "                  Ethos Debate Lecture & Clinic (초등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  수요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4:30PM ~ 6PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  Pathos Debate Lecture & Clinic (???)\n" + 
+                                    "                  Pathos Debate Lecture & Clinic (중등)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  수요일\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  7PM ~ 8:30PM\n" + 
@@ -2447,108 +2441,108 @@ function extractHtmlFromDesktopPage()  {
               case 35:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
                                     "          <h4>2016 Talk Updated class schedule</h4>\n" + 
-                                    "          <h6>?????? ???(???????????????)</h6>\n" + 
-                                    "          <span>(???????? ???)</span>\n";
+                                    "          <h6>토론수업 일정(토론시간렉쳐강의시간)</h6>\n" + 
+                                    "          <span>(팀수업별도 문의)</span>\n";
 
                 extracted_html[1] = "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ?????????\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ?????????\n" + 
+                                    "                  토론수업일정\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ?????n" + 
+                                    "                  수업료\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
                                     "            <tbody>\n" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"4\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  초등토론\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????4-7PM(??,4)\n" + 
+                                    "                  화요일 4-7PM(초3,4)\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"3\">\n" + 
-                                    "                  ??????\n" + 
+                                    "                  중등토론\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????7-10PM\n" + 
+                                    "                  수요일 7-10PM\n" + 
                                     "                </td>\n" + 
                                     "                <td rowspan=\"5\">\n" + 
-                                    "                  4?? 36???\n" + 
+                                    "                  4주: 36만원\n" + 
                                     "                  <br/>\n" + 
-                                    "                  5?? 45???\n" + 
+                                    "                  5주: 45만원\n" + 
                                     "                </td>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????4-7PM(??,6)\n" + 
+                                    "                  수요일 4-7PM(초5,6)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????7-10PM\n" + 
+                                    "                  목요일 7-10PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td rowspan=\"2\">\n" + 
-                                    "                 ?????12-3PM(3,4/5,6)\n" + 
+                                    "                 토요일 12-3PM(3,4/5,6)\n" + 
                                     "                 <br/>\n" + 
                                     "                 4-7PM(5,6)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ????? 12-3PM(??\n" + 
+                                    "                  토요일, 12-3PM(중)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  4-7PM(??)\n" + 
+                                    "                  4-7PM(중1)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  7-10PM(??,3)\n" + 
+                                    "                  7-10PM(중2,3)\n" + 
                                     "                  <br/>\n" + 
-                                    "                  ?????1-4PM(??)\n" + 
+                                    "                  일요일 1-4PM(중3)\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??????\n" + 
+                                    "                  고등토론\n" + 
                                     "                 <br/>\n" + 
-                                    "                 (?????)\n" + 
+                                    "                 (중3이상)\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????7-10PM\n" + 
+                                    "                  목요일 7-10PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "              <tr>\n" + 
                                     "                <td>\n" + 
-                                    "                 ??? Speech & Debate\n" + 
+                                    "                 초등 Speech & Debate\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????4-7PM\n" + 
+                                    "                  화요일 4-7PM\n" + 
                                     "                  <br/>\n" + 
-                                    "                  ?????1-4PM\n" + 
+                                    "                  일요일 1-4PM\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??? Speech & Debate\n" + 
+                                    "                  초등 Speech & Debate\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??? ??? 7-10PM\n" + 
+                                    "                  맑은 고딕 7-10PM\n" + 
                                     "                  <br/>\n" + 
-                                    "                  ?????4-7PM\n" + 
+                                    "                  일요일 4-7PM\n" + 
                                     "                </td>\n" + 
                                     "              </tr>\n" + 
                                     "            </tbody>\n" + 
                                     "          </table>\n" + 
-                                    "          <span>*??? ????????<: ?????4:30-7??/span>\n" + 
-                                    "          <span>*?????? ??????: ??< ?????7-9:30(?????? ???????</span>\n" + 
+                                    "          <span>*초등 렉쳐일정매주: 금요일 4:30-7시</span>\n" + 
+                                    "          <span>*중등이상 렉쳐일정: 매주 금요일 7-9:30(재학생만 수강가능)</span>\n" + 
                                     "          <ul>\n" + 
-                                    "            <li>???: ?????? ??? ???????? ??? ??? ??? ???(10%??? ???)</li>\n" + 
-                                    "            <li>?????? ???: ??< ??6-7:20PM), (2-3:20PM) / Reading, Essay & Impromptu Speech ???????(??( ?????,???)</li>\n" + 
-                                    "            <li>?????? 02-562-9799, 010-4773-9799</li>\n" + 
+                                    "            <li>등록: 매월등록 또는 분기별 등록 할인 적용 할인 적용(10%할인 적용)</li>\n" + 
+                                    "            <li>입학시험 일정: 매주 수(6-7:20PM), (2-3:20PM) / Reading, Essay & Impromptu Speech 부문 평가(하루 전 예약,무료)</li>\n" + 
+                                    "            <li>상담문의 02-562-9799, 010-4773-9799</li>\n" + 
                                     "          </ul>\n" + 
                                     "        </div>\n";  
 
@@ -2558,21 +2552,21 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the schedule for English classes.
               case 36:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>??? ?????????????????</h4>\n" + 
-                                    "          <h6>???????? ??????????????????</h6>\n" + 
+                                    "          <h4>주중 영어원서강독반 일정안내</h4>\n" + 
+                                    "          <h6>안녕하세요? 리더스대치 관리자입니다.</h6>\n" + 
                                     "          <p>\n" + 
-                                    "            ?????? ?????? ?????? ???????????? ??????????? ??? ???, ??????????n" + 
+                                    "            학생들이 비문학을 공부하는 영어토론수업외에 문학원서를 통해 고급 리딩, 라이팅 수준을\n" + 
                                     "            <br/>\n" + 
-                                    "            ?�???? ????? ????????? ?????????.\n" + 
+                                    "            향상시킬 수 있는 영어수업반을 안내드립니다.\n" + 
                                     "          </p>\n" + 
                                     "          <ul>\n" +
-                                    "            <li>*??? 6?????- ??< ?????7-10????? & ????????(??????? 4????? 206000??</li>\n" + 
-                                    "            <li>*??? 1?????- ??< ?????7-10????? & ????????(??????? 4????? 206000??</li>\n" + 
+                                    "            <li>*초등 6학년반 - 매주 수요일 7-10시 리딩 & 라이팅수업 (주1회3시간 4주기준 206000원)</li>\n" + 
+                                    "            <li>*중등 1학년반 - 매주 금요일 7-10시 리딩 & 라이팅수업 (주1회3시간 4주기준 206000원)</li>\n" + 
                                     "          </ul>\n" + 
                                     "          <p>\n" + 
-                                    "            ??? 6?????? ??? 2??? ????????? ??????. ???????????? ?????????????????n" +  
+                                    "            초등 6학년반은 현재 2명만 추가등록받고 있습니다. 리더스입학시험을 본 학생들 중 우선신청을\n" +  
                                     "            <br/>\n" + 
-                                    "            ??? ???????????????????. ???????? 02-562-9799\n" + 
+                                    "            받고 있으니 연락주시기 바랍니다. 감사합니다. 02-562-9799\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";  
 
@@ -2582,25 +2576,25 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the Advanced English class.
               case 37:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? 2015??2??? ??????</h4>\n" + 
-                                    "          <h6>?????? (Writing ??? &amp; ??9???????</h6>\n" + 
+                                    "          <h4>고급영어 2015년 2분기 수업일정</h4>\n" + 
+                                    "          <h6>고급영어 (Writing 개인 &amp; 그룹수업가능)</h6>\n" + 
                                     "          <table>\n" + 
                                     "            <thead>\n" + 
                                     "              <tr>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ?????n" + 
+                                    "                  클래스\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  학년\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  내용\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  요일\n" + 
                                     "                </th>\n" + 
                                     "                <th scope=\"col\">\n" + 
-                                    "                  ???\n" + 
+                                    "                  시간\n" + 
                                     "                </th>\n" + 
                                     "              </tr>\n" + 
                                     "            </thead>\n" + 
@@ -2610,13 +2604,13 @@ function extractHtmlFromDesktopPage()  {
                                     "                  LEXIS\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??,4\n" + 
+                                    "                  초3,4\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  Reading & Writing / Lecture & Clinic\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?? ??n" + 
+                                    "                  화, 목\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  4-6PM\n" + 
@@ -2627,13 +2621,13 @@ function extractHtmlFromDesktopPage()  {
                                     "                  MYTHOS\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??,6\n" + 
+                                    "                  초5,6\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  Reading & Writing / Lecture & Clinic\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?? ??n" + 
+                                    "                  화, 목\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  6-8PM\n" + 
@@ -2644,13 +2638,13 @@ function extractHtmlFromDesktopPage()  {
                                     "                  OPSIS\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??, 2n" + 
+                                    "                  초1, 2n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  Reading & Writing / Lecture & Clinic\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?? ??n" + 
+                                    "                  화, 목\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  8-10PM\n" + 
@@ -2661,13 +2655,13 @@ function extractHtmlFromDesktopPage()  {
                                     "                  LEXIS &amp; MYTHOS\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ?????n" + 
+                                    "                  학년별\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  Reading & Writing / Lecture & Clinic\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
-                                    "                  ??< ??????????n" + 
+                                    "                  매주 토요일 주말반\n" + 
                                     "                </td>\n" + 
                                     "                <td>\n" + 
                                     "                  12-3PM / 3:30-6:30PM\n" + 
@@ -2717,7 +2711,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'English' page for the schedule for 2014.
               case 38:
                 extracted_html[0] = "        <div class=\"article-english\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? 2014??4??? ???</h4>\n" + 
+                                    "          <h4>정규영어 2014년 4분기 일정</h4>\n" + 
                                     "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/2_Books.jpg\" width=\"500\" height=\"300\" />\n" + 
                                     "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/1_Fourth%20Quarter%20English.jpg\" width=\"500\" height=\"300\" />\n" + 
                                     "          <img src=\"http://daechi.leadersacademy.com/data/editor/1411/%EC%98%81%EC%96%B4%EC%A0%95%EA%B7%9C%EC%88%98%EC%97%85.jpg\" width=\"500\" height=\"100\" />\n" + 
@@ -2731,7 +2725,7 @@ function extractHtmlFromDesktopPage()  {
               case 39:
                 extracted_html[0] = "        <div class=\"article-login\" id=\"article-content\">\n" + 
                                     "          <div class=\"article-header-login\" id=\"article-header\">\n" + 
-                                    "            <h4>?????/h4>\n" + 
+                                    "            <h4>로그인</h4>\n" + 
                                     "            <div id=\"article-form-login\">\n" + 
                                     "              <form id=\"loginForm\" name=\"loginForm\" method=\"post\" action=\"http://daechi.leadersacademy.com/lib/member/process.php\" onsubmit=\"return checkLoginForm(this);\">\n" + 
                                     "                <input type=\"hidden\" name=\"cmd\" value=\"login\">\n" + 
@@ -2750,8 +2744,8 @@ function extractHtmlFromDesktopPage()  {
                                     "                  <input type=\"image\" src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/btn_login.gif\" tabindex=\"13\">\n" +
                                     "                </div>\n" + 
                                     "                <div class=\"form-row\" id=\"form-row-3\">\n" + 
-                                    "                  <input type=\"checkbox\" id=\"save_member_id\" name=\"save_member_id\" value=\"1\"><label for=\"save_member_id\">?????????/label>\n" +
-                                    "                  <input type=\"checkbox\" name=\"ssl\" id=\"ssl\" value=\"ssl\" checked><label for=\"ssl\">??????</label>\n" + 
+                                    "                  <input type=\"checkbox\" id=\"save_member_id\" name=\"save_member_id\" value=\"1\"><label for=\"save_member_id\">아이디 저장</label>\n" +
+                                    "                  <input type=\"checkbox\" name=\"ssl\" id=\"ssl\" value=\"ssl\" checked><label for=\"ssl\">보안접속</label>\n" + 
                                     "                </div>\n" + 
                                     "              </form>\n" + 
                                     "            </div>\n" +  
@@ -2764,76 +2758,65 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Announcements' page.
               case 40:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-																		"          <div class=\"article-announcements-listing\" id=\"announcements-listing-21\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_24.htm\" title=\"*2018 ??? ???*\">	*2018 ??? ???*</a><span> - 2018-01-31</span>\n" + 
-																		"          <div class=\"article-announcements-listing\" id=\"announcements-listing-22\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_23.htm\" title=\"??? ?????!(2017? 12?~2018? 1? ??)\">	??? ?????!(2017? 12?~2018? 1? ??)</a><span> - 2018-01-30</span>\n" + 
-                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-23\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_22.htm\" title=\"???? ? ?????? ??????.\">???? ? ?????? ??????.</a><span> - 2018-01-26</span>\n" + 
-                                    "          <div class=\"article-announcements-listing\" id=\"announcements-listing-24\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_21.htm\" title=\"??? ?? ?????? ????\">??? ?? ?????? ????</a><span> - 2018-01-25</span>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-1\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_1.htm\" title=\"???? ? ???\">???? ? ???</a><span> - 2017-11-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_1.htm\" title=\"학원친구 앱 사용법\">학원친구 앱 사용법</a><span> - 2017-11-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-2\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_2.htm\" title=\"2017-18 ???? ?? ??\">2017-18 ???? ?? ??</a><span> - 2017-10-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_2.htm\" title=\"2017-18 겨울방학 특강 안내\">2017-18 겨울방학 특강 안내</a><span> - 2017-10-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-3\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_3.htm\" title=\"2017? ??????? 4?? ???\">2017? ??????? 4?? ???</a><span> - 2017-09-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_3.htm\" title=\"2017년 리더스아카데미 4분기 설명회\">2017년 리더스아카데미 4분기 설명회</a><span> - 2017-09-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-4\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_4.htm\" title=\"2017? ???? ???? ???\">2017? ???? ???? ???</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_4.htm\" title=\"2017년 가을학기 정규수업 일정표\">2017년 가을학기 정규수업 일정표</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-5\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_5.htm\" title=\"2017? ????(????) ???\">2017? ????(????) ???</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_5.htm\" title=\"2017년 카이로스(최상위반) 오디션\">2017년 카이로스(최상위반) 오디션</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-6\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_6.htm\" title=\"2017? ???? ???\">2017? ???? ???</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_6.htm\" title=\"2017년 가을학기 설명회\">2017년 가을학기 설명회</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-7\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_7.htm\" title=\"2017? ??? ????\">2017? ??? ????</a><span> - 2017-08-24</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_7.htm\" title=\"2017년 상반기 수상실적\">2017년 상반기 수상실적</a><span> - 2017-08-24</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-8\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_8.htm\" title=\"2017? ??? ?????? ???\">2017? ??? ?????? ???</a><span> - 2017-03-25</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_8.htm\" title=\"2017년 리더스 여름방학특강 설명회\">2017년 리더스 여름방학특강 설명회</a><span> - 2017-03-25</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-9\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_9.htm\" title=\"2017? ??? ??? ???\">	2017? ??? ??? ???</a><span> - 2017-02-09</span>\n" + 
-                                    "          </div>\n" + 
-																		"          <div class=\"article-announcements-listing\" id=\"announcements-listing-25\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_25.htm\" title=\"2018? ???? ?? ? ????\">2018? ???? ?? ? ????</a><span> - 2017-02-09</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_9.htm\" title=\"2017년 리더스 봄학기 설명회\">2017년 리더스 봄학기 설명회 </a><span> - 2017-02-09</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-10\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_10.htm\" title=\"??? ?????~(????:2017.9.21~12.21)\">??? ?????~(????:2017.9.21~12.21)</a><span> - 2017-09-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_10.htm\" title=\"분실물 찾아가세요~(보관기간:2017.9.21~12.21)\">분실물 찾아가세요~(보관기간:2017.9.21~12.21)</a><span> - 2017-09-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-11\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_11.htm\" title=\"2017 ???? ?? ???\">2017 ???? ?? ???</a><span> - 2017-06-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_11.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-12\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_12.htm\" title=\"2017? ???? ?? ????\">	2017? ???? ?? ????</a><span> - 2017-05-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_12.htm\" title=\"2017년 정규수업 일정 업데이트\">2017년 정규수업 일정 업데이트</a><span> - 2017-05-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-13\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_13.htm\" title=\"2017? ???? ?????\">2017? ???? ?????</a><span> - 2017-05-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_13.htm\" title=\"2017년 여름방학 특강일정표\">2017년 여름방학 특강일정표</a><span> - 2017-05-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-14\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_14.htm\" title=\"?????? ?? (CSIAMUN)\">	?????? ?? (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_14.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-15\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_15.htm\" title=\"???????? ??,??? ?? (17.2.11-12???)\">???????? ??,??? ?? (17.2.11-12???)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_15.htm\" title=\"매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)\">매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-16\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_16.htm\" title=\"???? ???? 1-3???!! (17.2.11-12???)\">???? ???? 1-3???!! (17.2.11-12???)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_16.htm\" title=\"용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)\">용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-17\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_17.htm\" title=\"2017 NSDA??????, YUMN, GC????\">2017 NSDA??????, YUMN, GC????</a><span> - 2017-01-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_17.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-18\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_18.htm\" title=\"2017? ?? ???? ????\">	2017? ?? ???? ????</a><span> - 2016-12-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_18.htm\" title=\"2017년 국내 모의법정 대회준비\">2017년 국내 모의법정 대회준비</a><span> - 2016-12-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-19\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_19.htm\" title=\"< 12?, 1? ?? ?? ?? >\">< 12?, 1? ?? ?? ?? ></a><span> - 2016-11-29</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_19.htm\" title=\"< 12월, 1월 휴원 일정 공지 >\">< 12월, 1월 휴원 일정 공지 ></a><span> - 2016-11-29</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-announcements-listing\" id=\"announcements-listing-20\">\n" + 
-                                    "            <a href=\"" + base_path + "announcements/announcement_20.htm\" title=\"*???? ???? ???! -???????*\">	*???? ???? ???! -???????*</a><span> - 2016-11-28</span>\n" + 
+                                    "            <a href=\"" + base_path + "announcements/announcement_20.htm\" title=\"*토론대회 파트너를 찾아라! -토론명문리더스*\">*토론대회 파트너를 찾아라! -토론명문리더스*</a><span> - 2016-11-28</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
                                     
@@ -2843,7 +2826,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 1st announcement in the Announcements section.
               case 41:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>???? ? ???</h4>\n" + 
+                                    "          <h4>학원친구 앱 사용법</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2853,7 +2836,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 2nd announcement in the Announcements section.
               case 42:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017-18 ???? ?? ??</h4>\n" + 
+                                    "          <h4>2017-18 겨울방학 특강 안내</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2863,7 +2846,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 3rd announcement in the Announcements section.
               case 43:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ??????? 4?? ???</h4>\n" + 
+                                    "          <h4>2017년 리더스아카데미 4분기 설명회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2873,7 +2856,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 4th announcement in the Announcements section.
               case 44:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ???? ???? ???</h4>\n" + 
+                                    "          <h4>2017년 가을학기 정규수업 일정표</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2883,7 +2866,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 5th announcement in the Announcements section.
               case 45:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ????(????) ???</h4>\n" + 
+                                    "          <h4>2017년 카이로스(최상위반) 오디션</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2893,7 +2876,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 6th announcement in the Announcements section.
               case 46:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ???? ???</h4>\n" + 
+                                    "          <h4>2017년 가을학기 설명회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2903,7 +2886,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 7th announcement in the Announcements section.
               case 47:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ??? ????</h4>\n" + 
+                                    "          <h4>2017년 상반기 수상실적</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2913,7 +2896,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 8th announcement in the Announcements section.
               case 48:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ??? ?????? ???</h4>\n" + 
+                                    "          <h4>2017년 리더스 여름방학특강 설명회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2923,7 +2906,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 9th announcement in the Announcements section.
               case 49:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ??? ??? ???</h4>\n" + 
+                                    "          <h4>2017년 리더스 봄학기 설명회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2933,7 +2916,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 10th announcement in the Announcements section.
               case 50:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>??? ?????~(????:2017.9.21~12.21)</h4>\n" + 
+                                    "          <h4>2017 여름방학 특강 일정표</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2943,7 +2926,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 11th announcement in the Announcements section.
               case 51:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017 ???? ?? ???</h4>\n" + 
+                                    "          <h4>2017 여름방학 특강 일정표</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2953,7 +2936,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 12th announcement in the Announcements section.
               case 52:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ???? ?? ????</h4>\n" + 
+                                    "          <h4>2017년 정규수업 일정 업데이트</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2963,7 +2946,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 13th announcement in the Announcements section.
               case 53:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ???? ?????</h4>\n" + 
+                                    "          <h4>2017년 여름방학 특강일정표</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -2973,7 +2956,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 14th announcement in the Announcements section.
               case 54:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? ?? (CSIAMUN)</h4>\n" + 
+                                    "          <h4>청심모의유엔 대회 (CSIAMUN)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2983,7 +2966,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 15th announcement in the Announcements section.
               case 55:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>???????? ??,??? ?? (17.2.11-12???)</h4>\n" + 
+                                    "          <h4>매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -2993,7 +2976,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 16th announcement in the Announcements section.
               case 56:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>???? ???? 1-3???!! (17.2.11-12???)</h4>\n" + 
+                                    "          <h4>용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3003,7 +2986,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 17th announcement in the Announcements section.
               case 57:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017 NSDA??????, YUMN, GC????</h4>\n" + 
+                                    "          <h4>2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3013,7 +2996,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 18th announcement in the Announcements section.
               case 58:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ?? ???? ????</h4>\n" + 
+                                    "          <h4>2017년 국내 모의법정 대회준비</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3023,7 +3006,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 19th announcement in the Announcements section.
               case 59:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>< 12?, 1? ?? ?? ?? ></h4>\n" + 
+                                    "          <h4>< 12월, 1월 휴원 일정 공지 ></h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3033,7 +3016,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 20th announcement in the Announcements section.
               case 60:
                 extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>*???? ???? ???! -???????*</h4>\n" + 
+                                    "          <h4>*토론대회 파트너를 찾아라! -토론명문리더스*</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3043,66 +3026,66 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Awards' page.
               case 61:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>??????</h4>\n" + 
+                                    "          <h4>수상실적</h4>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-1\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_1.htm\" title=\"????????? ????(CSIAMUN)\">????????? ????(CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_1.htm\" title=\"청심모의유엔 대회 (CSIAMUN)\">청심모의유엔 대회 (CSIAMUN)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-2\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_2.htm\" title=\"???????????????? ???????(17.2-11-12?????)\">???????????????? ???????(17.2-11-12?????)</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_2.htm\" title=\"매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)\">매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-3\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_3.htm\" title=\"?????? ?????? 1-3?????!! (17.2.11-12?????\">?????? ?????? 1-3?????!! (17.2.11-12?????</a><span> - 2017-02-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_3.htm\" title=\"용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)\">용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</a><span> - 2017-02-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-4\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_4.htm\" title=\"November 2015 Invitational ???????!\">November 2015 Invitational ???????!</a><span> - 2015-12-04</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_4.htm\" title=\"November 2015 Invitational 대회 우승!\">November 2015 Invitational 대회 우승!</a><span> - 2015-12-04</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-5\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_5.htm\" title=\"2016????????????????????!\">2016????????????????????!</a><span> - 2016-02-06</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_5.htm\" title=\"2016년 상반기 수상을 축하합니다!!\">2016년 상반기 수상을 축하합니다!!</a><span> - 2016-02-06</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-6\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_6.htm\" title=\"2016 SUMMER ?????? ??? ?????~\">2016 SUMMER ?????? ??? ?????~</a><span> - 2016-08-20</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_6.htm\" title=\"2016 SUMMER 리더스를 빛낸 학생들 ~\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2016-08-20</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-7\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_7.htm\" title=\"2017 NSDA?????????, YUMN, GC??????\">2017 NSDA?????????, YUMN, GC??????</a><span> - 2017-01-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_7.htm\" title=\"2017 NSDA겨울챔피언쉽, YUMN, GC수상결과\">2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</a><span> - 2017-01-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-8\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_8.htm\" title=\"IET ??? ??? ???????\">IET ??? ??? ???????</a><span> - 2016-11-30</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_8.htm\" title=\"IET 영어 독서 대회 수상\">IET 영어 독서 대회 수상</a><span> - 2016-11-30</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-9\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_9.htm\" title=\"SEOMUN ?????">SEOMUN ?????/a><span> - 2016-11-27</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_9.htm\" title=\"SEOMUN 수상자\">SEOMUN 수상자</a><span> - 2016-11-27</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-10\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_10.htm\" title=\"NSDA 2016 November Invitational ?????">NSDA 2016 November Invitational ?????/a><span> - 2016-11-23</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_10.htm\" title=\"NSDA 2016 November Invitational 수상자\">NSDA 2016 November Invitational 수상자</a><span> - 2016-11-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-11\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_11.htm\" title=\"?????MUN ???\">?????MUN ???</a><span> - 2016-11-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_11.htm\" title=\"브라운 MUN 수상\">브라운 MUN 수상</a><span> - 2016-11-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-12\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_12.htm\" title=\"2016 SUMMER ?????????????!\">2016 SUMMER ?????????????!</a><span> - 2016-08-11</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_12.htm\" title=\"2016 SUMMER 수상을 축하합니다!!\">2016 SUMMER 수상을 축하합니다!!</a><span> - 2016-08-11</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-13\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_13.htm\" title=\"[2016 ???????? ??? ????KMLA)] ?????????????">[2016 ???????? ??? ????KMLA)] ?????????????/a><span> - 2016-07-27</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_13.htm\" title=\"[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다\">[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다</a><span> - 2016-07-27</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-14\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_14.htm\" title=\"NSDA Korea ???! (2016.4.9)\">NSDA Korea ???! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_14.htm\" title=\"NSDA Korea 수상! (2016.4.9)\">NSDA Korea 수상! (2016.4.9)</a><span> - 2016-04-23</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-15\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_15.htm\" title=\"?????????????? ???????1??????????\">?????????????? ???????1??????????</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_15.htm\" title=\"제1회 한.중 리더스컵 토론대회 1등 축하합니다.\">제1회 한.중 리더스컵 토론대회 1등 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-16\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_16.htm\" title=\"United Nations(?????UN Speech Contest)?????????????\">United Nations(?????UN Speech Contest)?????????????</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_16.htm\" title=\"United Nations(반기문 UN Speech Contest)수상을 축하합니다.\">United Nations(반기문 UN Speech Contest)수상을 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-17\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_17.htm\" title=\"????????? ?????? ???!! ????????\">????????? ?????? ???!! ????????</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_17.htm\" title=\"브라운대학교 모의유엔 수상!! 축하합니다~\">브라운대학교 모의유엔 수상!! 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-18\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_18.htm\" title=\"UN ???????????MUN) ??? ????????\">UN ???????????MUN) ??? ????????</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_18.htm\" title=\"UN 청소년환경총회(MUN) 수상 축하합니다.\">UN 청소년환경총회(MUN) 수상 축하합니다.</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-19\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_19.htm\" title=\"2015 KAIAC Speech 1??????????????! (November 22-23)\">2015 KAIAC Speech 1??????????????! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_19.htm\" title=\"2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)\">2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-awards-listing\" id=\"awards-listing-20\">\n" + 
-                                    "            <a href=\"" + base_path + "awards/award_20.htm\" title=\"??8????????????????????(KPSC) 1??????????\">??8????????????????????(KPSC) 1??????????</a><span> - 2015-11-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "awards/award_20.htm\" title=\"제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~\">제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</a><span> - 2015-11-22</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
 
@@ -3112,7 +3095,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 1st award in the Award section.
               case 62:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>????????? ????(CSIAMUN)</h4>\n" + 
+                                    "          <h4>청심모의유엔 대회 (CSIAMUN)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3122,7 +3105,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 2nd award in the Award section.
               case 63:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>???????????????? ???????(17.2-11-12?????)</h4>\n" + 
+                                    "          <h4>매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3132,7 +3115,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 3rd award in the Award section.
               case 64:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? ?????? 1-3?????!! (17.2.11-12?????</h4>\n" + 
+                                    "          <h4>용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3142,7 +3125,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 4th award in the Award section.
               case 65:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>November 2015 Invitational ???????!</h4>\n" + 
+                                    "          <h4>November 2015 Invitational 대회 우승!</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3152,7 +3135,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 5th award in the Award section.
               case 66:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>2016????????????????????!</h4>\n" + 
+                                    "          <h4>2016년 상반기 수상을 축하합니다!!</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3162,7 +3145,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 6th award in the Award section.
               case 67:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>2016 SUMMER ?????? ??? ?????~</h4>\n" + 
+                                    "          <h4>2016 SUMMER 리더스를 빛낸 학생들 ~</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3172,18 +3155,17 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 7th award in the Award section.
               case 68:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>2017 NSDA?????????, YUMN, GC??????</h4>\n" + 
+                                    "          <h4>2017 NSDA겨울챔피언쉽, YUMN, GC수상결과</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
                 webpage_index = 68;
               break;
 
-
               // Runs if the loading page is the 8th award in the Award section.
               case 69:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>IET ??? ??? ???????</h4>\n" + 
+                                    "          <h4>IET 영어 독서 대회 수상</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3193,7 +3175,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 9th award in the Award section.
               case 70:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>SEOMUN ?????/h4>\n" + 
+                                    "          <h4>SEOMUN 수상자</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3203,7 +3185,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 9th award in the Award section.
               case 71:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>NSDA 2016 November Invitational ?????/h4>\n" + 
+                                    "          <h4>NSDA 2016 November Invitational 수상자</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3213,7 +3195,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 10th award in the Award section.
               case 72:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>?????MUN ???</h4>\n" + 
+                                    "          <h4>브라운 MUN 수상</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3223,7 +3205,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 11th award in the Award section.
               case 73:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>2016 SUMMER ?????????????!</h4>\n" + 
+                                    "          <h4>2016 SUMMER 수상을 축하합니다!!</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3233,7 +3215,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 12th award in the Award section.
               case 74:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>[2016 ???????? ??? ????KMLA)] ?????????????</h4>\n" + 
+                                    "          <h4>[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다.</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3243,7 +3225,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 13th award in the Award section.
               case 75:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>NSDA Korea ???! (2016.4.9)</h4>\n" + 
+                                    "          <h4>NSDA Korea 수상! (2016.4.9)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3253,7 +3235,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 14th award in the Award section.
               case 76:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>?????????????? ???????1??????????</h4>\n" + 
+                                    "          <h4>제1회 한.중 리더스컵 토론대회 1등 축하합니다.</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3263,7 +3245,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 15th award in the Award section.
               case 77:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>United Nations(?????UN Speech Contest)?????????????</h4>\n" + 
+                                    "          <h4>United Nations(반기문 UN Speech Contest)수상을 축하합니다.</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3273,7 +3255,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 16th award in the Award section.
               case 78:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>????????? ?????? ???!! ????????</h4>\n" + 
+                                    "          <h4>브라운대학교 모의유엔 수상!! 축하합니다~</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3283,7 +3265,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 17th award in the Award section.
               case 79:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>UN ???????????MUN) ??? ????????</h4>\n" + 
+                                    "          <h4>UN 청소년환경총회(MUN) 수상 축하합니다.</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3293,7 +3275,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 18th award in the Award section.
               case 80:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>2015 KAIAC Speech 1??????????????! (November 22-23)</h4>\n" + 
+                                    "          <h4>2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3303,7 +3285,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 19th award in the Award section.
               case 81:
                 extracted_html[0] = "        <div class=\"article-awards\" id=\"article-content\">\n" + 
-                                    "          <h4>??8????????????????????(KPSC) 1??????????</h4>\n" + 
+                                    "          <h4>제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3313,7 +3295,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is 'Apply (Faculty)'.
               case 82:
                 extracted_html[0] = "        <div class=\"article-apply_faculty\" id=\"article-content\">\n" + 
-                                    "          <h4>??????&??? ???</h4>\n" + 
+                                    "          <h4>입학시험&특강 신청</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td form").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3323,7 +3305,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is 'Apply (Students)'.
               case 83:
                 extracted_html[0] = "        <div class=\"article-apply_students\" id=\"article-content\">\n" + 
-                                    "          <h4>??? ?????? ???</h4>\n" + 
+                                    "          <h4>토론 최상위반 접수</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3389,7 +3371,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 1st item of Media.
               case 85:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>?????????/h4>\n" + 
+                                    "          <h4>대치 리더스</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3401,7 +3383,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 2nd item of Media.
               case 86:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>??????????? ???</h4>\n" + 
+                                    "          <h4>젬마샘 디베이팅 모습</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3413,7 +3395,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 3rd item of Media.
               case 87:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? ????????~</h4>\n" + 
+                                    "          <h4>유럽피안 파이널 모습~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3425,7 +3407,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 4th item of Media.
               case 88:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>ESDC ?????</h4>\n" + 
+                                    "          <h4>ESDC 쥬니어~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3437,7 +3419,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 5th item of Media.
               case 89:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? ??????~</h4>\n" + 
+                                    "          <h4>토너먼트 현장에서~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3461,7 +3443,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 7th item of Media.
               case 91:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>?????? ??? (MUN)</h4>\n" + 
+                                    "          <h4>모의유엔 수업 (MUN)</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3473,7 +3455,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 8th item of Media.
               case 92:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>???~</h4>\n" + 
+                                    "          <h4>회식~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3485,7 +3467,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 9th item of Media.
               case 93:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>Dekker ?????</h4>\n" + 
+                                    "          <h4>Dekker 영어샘~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3497,7 +3479,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 10th item of Media.
               case 94:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>Joshua??</h4>\n" + 
+                                    "          <h4>Joshua샘~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3509,7 +3491,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 11th item of Media.
               case 95:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>Gemma ??</h4>\n" + 
+                                    "          <h4>Gemma 샘~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3521,7 +3503,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 12th item of Media.
               case 96:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>Roger Hatridge ??</h4>\n" + 
+                                    "          <h4>Roger Hatridge 샘~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3545,7 +3527,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 14th item of Media.
               case 98:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>Joshua??</h4>\n" + 
+                                    "          <h4>Joshua샘~</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3557,7 +3539,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 15th item of Media.
               case 99:
                 extracted_html[0] = "        <div class=\"article-media\" id=\"article-content\">\n" + 
-                                    "          <h4>?????????/h4>\n" + 
+                                    "          <h4>대치 리더스</h4>\n" + 
                                     "          <div class=\"media-item-holder\">\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td p").html() + "\n" + 
                                     "          </div>\n" + 
@@ -3569,9 +3551,9 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Awards' page.
               case 100:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>?????/h4>\n" + 
+                                    "          <h4>이벤트</h4>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-1\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_1.htm\" title=\"??5??ESU KOREA ???????????">??5??ESU KOREA ???????????/a><span> - 2017-12-07</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_1.htm\" title=\"제15회 ESU KOREA 영어말하기대회\">제15회 ESU KOREA 영어말하기대회</a><span> - 2017-12-07</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-2\">\n" + 
                                     "            <a href=\"" + base_path + "events/event_2.htm\" title=\"Winter 2018 NSDA\">Winter 2018 NSDA</a><span> - 2017-11-23</span>\n" + 
@@ -3586,7 +3568,7 @@ function extractHtmlFromDesktopPage()  {
                                     "            <a href=\"" + base_path + "events/event_5.htm\" title=\"CSIA MUN 2018\">CSIA MUN 2018</a><span> - 2017-10-12</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-6\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_6.htm\" title=\"Yale MUN 2018\">2016 SUMMER ?????? ??? ?????~</a><span> - 2017-09-15</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_6.htm\" title=\"Yale MUN 2018\">2016 SUMMER 리더스를 빛낸 학생들 ~</a><span> - 2017-09-15</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-7\">\n" + 
                                     "            <a href=\"" + base_path + "events/event_7.htm\" title=\"KMUN 2018\">KMUN 2018</a><span> - 2017-09-14</span>\n" + 
@@ -3595,40 +3577,40 @@ function extractHtmlFromDesktopPage()  {
                                     "            <a href=\"" + base_path + "events/event_8.htm\" title=\"GC Seoul 2018\">GC Seoul 2018</a><span> - 2017-09-06</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-9\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_9.htm\" title=\"2017(23?? ?????????? ????????????">2017(23?? ?????????? ????????????/a><span> - 2017-08-13</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_9.htm\" title=\"2017(23회) 대한민국 학생 영어말하기 대회\">2017(23회) 대한민국 학생 영어말하기 대회</a><span> - 2017-08-13</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-10\">\n" + 
                                     "            <a href=\"" + base_path + "events/event_10.htm\" title=\"2017 Model United Nations of Seoul YMCA\">2017 Model United Nations of Seoul YMCA</a><span> - 2017-06-14</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-11\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_11.htm\" title=\"2017????4??ESU KOREA ???????????">2017????4??ESU KOREA ???????????/a><span> - 2017-06-13</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_11.htm\" title=\"2017년 제14회 ESU KOREA 영어말하기대회\">2017년 제14회 ESU KOREA 영어말하기대회</a><span> - 2017-06-13</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-12\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_12.htm\" title=\"2017??9th HAFS MIMUN\">	2017??9th HAFS MIMUN</a><span> - 2017-05-31</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_12.htm\" title=\"2017년 9th HAFS MIMUN\">	2017년 9th HAFS MIMUN</a><span> - 2017-05-31</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-13\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_13.htm\" title=\"2017?? 7th HAFS Debate Championship\">2017?? 7th HAFS Debate Championship</a><span> - 2017-05-31</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_13.htm\" title=\"2017년, 7th HAFS Debate Championship\">2017년, 7th HAFS Debate Championship</a><span> - 2017-05-31</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-14\">\n" + 
                                     "            <a href=\"" + base_path + "events/event_14.htm\" title=\"2017 NSDA Summer Championships\">2017 NSDA Summer Championships</a><span> - 2017-05-31</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-15\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_15.htm\" title=\"2017?????????? ??????????">2017?????????? ??????????/a><span> - 2017-05-17</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_15.htm\" title=\"2017년 하반기 매경 영어토론대회\">2017년 하반기 매경 영어토론대회</a><span> - 2017-05-17</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-16\">\n" + 
                                     "            <a href=\"" + base_path + "events/event_16.htm\" title=\"2017 MUN101\">2017 MUN101</a><span> - 2017-05-12</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-17\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_17.htm\" title=\"	2017???????Korea Mock Trial Association\">2017???????Korea Mock Trial Association</a><span> - 2017-05-07</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_17.htm\" title=\"	2017년 하반기 Korea Mock Trial Association\">2017년 하반기 Korea Mock Trial Association</a><span> - 2017-05-07</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-18\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_18.htm\" title=\"2017???????YTN.HUFS ??????????">2017???????YTN.HUFS ??????????/a><span> - 2017-04-29</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_18.htm\" title=\"2017년 하반기 YTN.HUFS 영어토론대회\">2017년 하반기 YTN.HUFS 영어토론대회</a><span> - 2017-04-29</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-19\">\n" + 
                                     "            <a href=\"" + base_path + "events/event_19.htm\" title=\"2017(4th) Cornell-Yonsei Debate Invitational\">2017(4th) Cornell-Yonsei Debate Invitational</a><span> - 2017-04-29</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-events-listing\" id=\"events-listing-20\">\n" + 
-                                    "            <a href=\"" + base_path + "events/event_20.htm\" title=\"??????????????????????Global Leadership Excellence Challenge)\">??????????????????????Global Leadership Excellence Challenge)</a><span> - 2017-04-13</span>\n" + 
+                                    "            <a href=\"" + base_path + "events/event_20.htm\" title=\"글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)\">글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</a><span> - 2017-04-13</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
 
@@ -3638,7 +3620,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 1st event in the Events section.
               case 101:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>??5??ESU KOREA ???????????/h4>\n" + 
+                                    "          <h4>제15회 ESU KOREA 영어말하기대회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3718,7 +3700,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 9th event in the Events section.
               case 109:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017(23?? ?????????? ????????????/h4>\n" + 
+                                    "          <h4>2017(23회) 대한민국 학생 영어말하기 대회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3738,7 +3720,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 11th event in the Events section.
               case 111:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017????4??ESU KOREA ???????????/h4>\n" + 
+                                    "          <h4>2017년 제14회 ESU KOREA 영어말하기대회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3748,7 +3730,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 12th event in the Events section.
               case 112:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017??9th  HAFS MIMUN</h4>\n" + 
+                                    "          <h4>2017년 9th  HAFS MIMUN</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3758,7 +3740,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 13th event in the Events section.
               case 113:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017?? 7th HAFS Debate Championship</h4>\n" + 
+                                    "          <h4>2017년, 7th HAFS Debate Championship</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3778,7 +3760,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 15th event in the Events section.
               case 115:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017?????????? ??????????/h4>\n" + 
+                                    "          <h4>2017년 하반기 매경 영어토론대회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3798,7 +3780,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 17th event in the Events section.
               case 117:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017???????Korea Mock Trial Association</h4>\n" + 
+                                    "          <h4>2017년 하반기 Korea Mock Trial Association</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3808,7 +3790,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 18th event in the Events section.
               case 118:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>2017???????YTN.HUFS ??????????/h4>\n" + 
+                                    "          <h4>2017년 하반기 YTN.HUFS 영어토론대회</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3828,7 +3810,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 20th event in the Events section.
               case 120:
                 extracted_html[0] = "        <div class=\"article-events\" id=\"article-content\">\n" + 
-                                    "          <h4>??????????????????????Global Leadership Excellence Challenge)</h4>\n" + 
+                                    "          <h4>글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";
               
@@ -3838,36 +3820,36 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 'Camps' page.
               case 121:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>?????/h4>\n" + 
+                                    "          <h4>이벤트</h4>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-1\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_1.htm\" title=\"2017-18 ?????? ??????\">2017-18 ?????? ??????</a><span> - 2017-10-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_1.htm\" title=\"2017-18 겨울방학 특강안내\">2017-18 겨울방학 특강안내</a><span> - 2017-10-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-2\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_2.htm\" title=\"2016-2017 ??????????????\">2016-2017 ??????????????</a><span> - 2016-12-30</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_2.htm\" title=\"2016-2017 리더스 겨울방학특강\">2016-2017 리더스 겨울방학특강</a><span> - 2016-12-30</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-3\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_3.htm\" title=\"2015 ?????? ??????\">2015 ?????? ??????</a><span> - 2015-11-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_3.htm\" title=\"2015 여름방학 특강안내\">2015 여름방학 특강안내</a><span> - 2015-11-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-4\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_4.htm\" title=\"2018 ?????? ??????\">2018 ?????? ??????</a><span> - 2017-11-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_4.htm\" title=\"2018 겨울방학 특강일정\">2018 겨울방학 특강일정</a><span> - 2017-11-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-5\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_5.htm\" title=\"2017 ?????? ??? ?????">2017 ?????? ??? ?????/a><span> - 2017-06-22</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_5.htm\" title=\"2017 여름방학 특강 일정표\">2017 여름방학 특강 일정표</a><span> - 2017-06-22</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-6\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_6.htm\" title=\"2016 ????????? ???\">2016 ????????? ???</a><span> - 2016-05-01</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_6.htm\" title=\"2016 여름방학특강 안내\">2016 여름방학특강 안내</a><span> - 2016-05-01</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-7\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_7.htm\" title=\"2016????????????? (Mock Trial) ??? (1???????\">2016????????????? (Mock Trial) ??? (1???????</a><span> - 2015-12-21</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_7.htm\" title=\"2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)\">2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)</a><span> - 2015-12-21</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-8\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_8.htm\" title=\"2015??????????? ??? [142]\">2015??????????? ??? [142]</a><span> - 2015-06-01</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_8.htm\" title=\"2015년 여름방학특강 일정 [142]\">2015년 여름방학특강 일정 [142]</a><span> - 2015-06-01</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-9\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_9.htm\" title=\"2014???????? ?????? ?????\">2014???????? ?????? ?????</a><span> - 2014-11-26</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_9.htm\" title=\"2014년 겨울방학 특강안내 및 일정\">2014년 겨울방학 특강안내 및 일정</a><span> - 2014-11-26</span>\n" + 
                                     "          </div>\n" + 
                                     "          <div class=\"article-camps-listing\" id=\"camps-listing-10\">\n" + 
-                                    "            <a href=\"" + base_path + "camps/camp_10.htm\" title=\"2014 ???????????? ??? [1]\">2017 Model United Nations of Seoul YMCA</a><span> - 2014-11-09</span>\n" + 
+                                    "            <a href=\"" + base_path + "camps/camp_10.htm\" title=\"2014 겨울방학특강일정 안내 [1]\">2017 Model United Nations of Seoul YMCA</a><span> - 2014-11-09</span>\n" + 
                                     "          </div>\n" + 
                                     "        </div>\n";  
 
@@ -3877,7 +3859,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 1st camp in the Camps section.
               case 122:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2017-18 ?????? ??????</h4>\n" + 
+                                    "          <h4>2017-18 겨울방학 특강안내</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3887,7 +3869,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 2nd camp in the Camps section.
               case 123:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2016-2017 ??????????????</h4>\n" + 
+                                    "          <h4>2016-2017 리더스 겨울방학특강</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3897,7 +3879,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 3rd camp in the Camps section.
               case 124:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2015 ?????? ??????</h4>\n" + 
+                                    "          <h4>2015 여름방학 특강안내</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3907,7 +3889,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 4th camp in the Camps section.
               case 125:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2018 ?????? ??????</h4>\n" + 
+                                    "          <h4>2018 겨울방학 특강일정</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3917,7 +3899,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 5th camp in the Camps section.
               case 126:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2017 ?????? ??? ?????/h4>\n" + 
+                                    "          <h4>2017 여름방학 특강 일정표</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3927,7 +3909,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 6th camp in the Camps section.
               case 127:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2016 ????????? ???</h4>\n" + 
+                                    "          <h4>2016 여름방학특강 안내</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3937,7 +3919,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 7th camp in the Camps section.
               case 128:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2016????????????? (Mock Trial) ??? (1???????</h4>\n" + 
+                                    "          <h4>2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3947,7 +3929,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 8th camp in the Camps section.
               case 129:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2015??????????? ??? [142]</h4>\n" + 
+                                    "          <h4>2015년 여름방학특강 일정 [142]</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3957,7 +3939,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 9th camp in the Camps section.
               case 130:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2014???????? ?????? ?????</h4>\n" + 
+                                    "          <h4>2014년 겨울방학 특강안내 및 일정</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
                                     
@@ -3967,7 +3949,7 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is the 10th camp in the Camps section.
               case 131:
                 extracted_html[0] = "        <div class=\"article-camps\" id=\"article-content\">\n" + 
-                                    "          <h4>2014 ???????????? ??? [1]</h4>\n" + 
+                                    "          <h4>2014 겨울방학특강일정 안내 [1]</h4>\n" + 
                                     "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr > td > table > tbody table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
                                     "        </div>\n";  
 
@@ -3977,11 +3959,11 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is for the 'Lessons' section.
               case 132:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>??? (LESSONS)</h2>\n" + 
+                                    "          <h2>수업 (LESSONS)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-lessons\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Leaders Academy????? ????????????? ?????????? ?????????????? ?????? ??? ??02-562-9799\n" + 
+                                    "            Leaders Academy는 개인 교습을 제공합니다. 저희 서비스에 대해 더 자세히 알고 싶으시면 전화 나 02-562-9799\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 
@@ -3991,65 +3973,15 @@ function extractHtmlFromDesktopPage()  {
               // Runs if the loading page is for the 'Business' section.
               case 133:
                 extracted_html[0] = "        <div id=\"article-header\">\n" + 
-                                    "          <h2>??? (BUSINESS)</h2>\n" + 
+                                    "          <h2>사업 (BUSINESS)</h2>\n" + 
                                     "        </div>\n" + 
                                     "        <div class=\"article-business\" id=\"article-content\">\n" + 
                                     "          <p>\n" + 
-                                    "            Leaders Academy?????????? ?????????? ?????????????????????? ?????? ????? ????????? ??????. 02-562-9799?????????? ??????????????????????031-609-9799 9?????????? ??? ??????????????????????.\n" + 
+                                    "            Leaders Academy와의 비즈니스 관계에서 얻을 수있는 잠재적 이익에 대해 문의 하시려면 귀하와 상담하게되어 기쁩니다. 02-562-9799로 전화를 걸어 대치 캠퍼스 직원과 통화하거나 031-609-9799 9로 전화를 걸어 분당 캠퍼스 담당자에게 문의하십시오.\n" + 
                                     "          </p>\n" + 
                                     "        </div>\n";
 
                 webpage_index = 133;
-              break;
-								
-							// Runs if the loading page is the 24th announcement in the Announcements section.
-              case 134:
-                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2017? ??? ??? ???</h4>\n" + 
-                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                    "        </div>\n";  
-
-                webpage_index = 134;
-              break;
-								
-							// Runs if the loading page is the 23rd announcement in the Announcements section.
-              case 135:
-                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>??? ?? ?????? ????</h4>\n" + 
-                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                    "        </div>\n";  
-
-                webpage_index = 135;
-              break;
-								
-							// Runs if the loading page is the 22nd announcement in the Announcements section.
-              case 136:
-                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>???? ? ?????? ??????.</h4>\n" + 
-                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                    "        </div>\n";  
-
-                webpage_index = 136;
-              break;
-								
-							// Runs if the loading page is the 22nd announcement in the Announcements section.
-              case 137:
-                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>*2018 ??? ???*</h4>\n" + 
-                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                    "        </div>\n";  
-
-                webpage_index = 137;
-              break;
-								
-							// Runs if the loading page is the 25th announcement in the Announcements section.
-              case 138:
-                extracted_html[0] = "        <div class=\"article-announcements\" id=\"article-content\">\n" + 
-                                    "          <h4>2018? ???? ?? ? ????</h4>\n" + 
-                                    "            " + jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td table > tbody > tr:nth-child(5) > td table > tbody > tr > td").html() + "\n" + 
-                                    "        </div>\n";  
-
-                webpage_index = 138;
               break;
             }
           }	 
@@ -4109,21 +4041,21 @@ function renderHeader(webpage_index) {
   title_html = "Leaders Academy - ";
 
   if (webpage_index <= 15) {
-    section_html = "?? (FACULTY) - ";
+    section_html = "강사소개 (FACULTY) - ";
   } else if ((webpage_index > 19) && (webpage_index <= 27)) {
-    section_html = "?? (DEBATE) - ";
+    section_html = "정규토론 (DEBATE) - ";
   } else if ((webpage_index > 27) && (webpage_index <= 38)) {
-    section_html = "?? (ENGLISH) - ";
+    section_html = "정규영어 (ENGLISH) - ";
   } else if ((webpage_index > 40) && (webpage_index <= 60)) {
-    section_html = "?? ?? (ANNOUNCEMENTS) - ";
+    section_html = "공지 사항 (ANNOUNCEMENTS) - ";
   } else if ((webpage_index > 61) && (webpage_index <= 81)) {
-    section_html = "?? ?? (AWARDS) - ";
+    section_html = "공지 사항 (AWARDS) - ";
   } else if ((webpage_index > 84) && (webpage_index <= 99)) {
-    section_html = "??? (MEDIA) - ";
+    section_html = "대치 리더스 (MEDIA) - ";
   } else if ((webpage_index > 99) && (webpage_index <= 120)) {
-    section_html = "??? (EVENTS) - ";
+    section_html = "이벤트 (EVENTS) - ";
   } else if ((webpage_index > 120) && (webpage_index <= 131)) {
-    section_html = "?? (CAMPS) - ";
+    section_html = "캠프 (CAMPS) - ";
   }
   
   
@@ -4131,7 +4063,7 @@ function renderHeader(webpage_index) {
     
     // Runs if the loading page is the Faculty page.
     case 0: 
-      title_html = title_html + "?? (FACULTY)";
+      title_html = title_html + "강사소개 (FACULTY)";
     break;
 
     // Runs if the loading page is the Faculty page for Park Sooyoung.
@@ -4211,27 +4143,27 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the History page.
     case 16: 
-      title_html = title_html + "?? ?? (ABOUT US)";
+      title_html = title_html + "회사 소개 (ABOUT US)";
     break;
 
     // Runs if the loading page is the Contact Us page.
     case 17: 
-      title_html = title_html + "??? (CONTACT US)";
+      title_html = title_html + "연락처 (CONTACT US)";
     break;
 
     // Runs if the loading page is the GPA/Testing page.
     case 18: 
-      title_html = title_html + "?? / ??? (GPA/TESTING)";
+      title_html = title_html + "테스트 (GPA/TESTING)";
     break;
 
     // Runs if the loading page is the Location page.
     case 19:
-      title_html = title_html + "?? (LOCATION)";
+      title_html = title_html + "치안내 (LOCATION)";
     break;
 
     // Runs if the loading page is the Debate page.
     case 20:
-      title_html = title_html + "?? (DEBATE)";
+      title_html = title_html + "정규토론 (DEBATE)";
     break;
 
     // Runs if the loading page is the Debate page for the 2017 schedule.
@@ -4269,314 +4201,314 @@ function renderHeader(webpage_index) {
       title_html = title_html + section_html + "Regular debate Q4 2014";
     break;
 
-    // Runs if the loading page is the English page.
+    // Runs if the loading page is the Englksh page.
     case 28: 
-      title_html = title_html + "?? (ENGLISH)";
+      title_html = title_html + "정규영어 (ENGLISH)";
     break;
 
     // Runs if the loading page is the English page for the booklist of 2016.
     case 29: 
-      title_html = title_html + section_html + "2016???????? Booklist";
+      title_html = title_html + section_html + "2016년 원서강독 Booklist";
     break;
 
     // Runs if the loading page is the English page for the class schedule for 2017 admissions.
     case 30: 
-      title_html = title_html + section_html + "2017???????? ??? ??? ??????";
+      title_html = title_html + section_html + "2017년 원서강독 수업 일정 업데이트";
     break;
 
     // Runs if the loading page is the English page for the application form of 2016.
     case 31: 
-      title_html = title_html + section_html + "2016??1,2??? ??????";
+      title_html = title_html + section_html + "2016년 1,2분기 원서안내";
     break;
 
     // Runs if the loading page is the English page for the class schedule for 2016.
     case 32: 
-      title_html = title_html + section_html + "2016??????????? ??? ??????";
+      title_html = title_html + section_html + "2016년 원서강독수업 일정 업데이트";
     break;
 
     // Runs if the loading page is the English page for the reading schedule for 2018 applications.
     case 33: 
-      title_html = title_html + section_html + "2018 ?????? ??????";
+      title_html = title_html + section_html + "2018 원서강독 수업일정";
     break;
 
     // Runs if the loading page is the English page for the updated class schedule of 2016.
     case 34: 
-      title_html = title_html + section_html + "2016 ?????? ??? ??? ??????";
+      title_html = title_html + section_html + "2016 원서강독 수업 일정 업데이트";
     break;
 
     // Runs if the loading page is the English page for the talk list of 2016.
     case 35: 
-      title_html = title_html + section_html + "2016 ?????? ??? ??????";
+      title_html = title_html + section_html + "2016 토론수업 일정 업데이트";
     break;
 
     // Runs if the loading page is the English page for the class schedule for English classes.
     case 36: 
-      title_html = title_html + section_html + "??? ?????????????????";
+      title_html = title_html + section_html + "주중 영어원서강독반 일정안내";
     break;
 
     // Runs if the loading page is the English page for advanced English courses of 2015.
     case 37: 
-      title_html = title_html + section_html + "?????? 2015??2??? ??????";
+      title_html = title_html + section_html + "고급영어 2015년 2분기 수업일정";
     break;
 
     // Runs if the loading page is the English page for the regular English schedule of 2014.
     case 38: 
-      title_html = title_html + section_html + "?????? 2014??4??? ???";
+      title_html = title_html + section_html + "정규영어 2014년 4분기 일정";
     break;
 
     // Runs if the loading page is the Login page
     case 39: 
-      title_html = title_html + "??? (LOGIN)";
+      title_html = title_html + "로그인 (LOGIN)";
     break;
 
     // Runs if the loading page is the Announcements page
     case 40: 
-      title_html = title_html + "?? ?? (ANNOUNCEMENTS)";
+      title_html = title_html + "공지 사항 (ANNOUNCEMENTS)";
     break;
 
     // Runs if the loading page is the 1st announcement.
     case 41: 
-      title_html = title_html + section_html + "?????? ???????;
+      title_html = title_html + section_html + "학원친구 앱 사용법";
     break;
 
     // Runs if the loading page is the 2nd announcement.
     case 42: 
-      title_html = title_html + section_html + "2017-18 ?????? ??? ???";
+      title_html = title_html + section_html + "2017-18 겨울방학 특강 안내";
     break;
 
     // Runs if the loading page is the 3rd announcement.
     case 43: 
-      title_html = title_html + section_html + "2017?????????????4??? ?????;
+      title_html = title_html + section_html + "2017년 리더스아카데미 4분기 설명회";
     break;
 
     // Runs if the loading page is the 4th announcement.
     case 44: 
-      title_html = title_html + section_html + "2017??????????????? ?????;
+      title_html = title_html + section_html + "2017년 가을학기 정규수업 일정표";
     break;
     
     // Runs if the loading page is the 5th announcement.
     case 45: 
-      title_html = title_html + section_html + "2017????????(??????) ?????;
+      title_html = title_html + section_html + "2017년 카이로스(최상위반) 오디션";
     break;
 
     // Runs if the loading page is the 6th announcement.
     case 46: 
-      title_html = title_html + section_html + "2017??????????????;
+      title_html = title_html + section_html + "2017년 가을학기 설명회";
     break;
     
     // Runs if the loading page is the 7th announcement.
     case 47: 
-      title_html = title_html + section_html + "2017?????????????";
+      title_html = title_html + section_html + "2017년 상반기 수상실적";
     break;
 
     // Runs if the loading page is the 8th announcement.
     case 48: 
-      title_html = title_html + section_html + "2017???????????????? ?????;
+      title_html = title_html + section_html + "2017년 리더스 여름방학특강 설명회";
     break;
 
     // Runs if the loading page is the 9th announcement.
     case 49: 
-      title_html = title_html + section_html + "2017?????????????????;
+      title_html = title_html + section_html + "2017년 리더스 봄학기 설명회";
     break;
 
     // Runs if the loading page is the 10th announcement.
     case 50: 
-      title_html = title_html + section_html + "?????????????~(??????:2017.9.21~12.21)";
+      title_html = title_html + section_html + "분실물 찾아가세요~(보관기간:2017.9.21~12.21)";
     break;
 
     // Runs if the loading page is the 11th announcement.
     case 51: 
-      title_html = title_html + section_html + "2017 ?????? ??? ?????;
+      title_html = title_html + section_html + "2017 여름방학 특강 일정표";
     break;
 
     // Runs if the loading page is the 12th announcement.
     case 52: 
-      title_html = title_html + section_html + "2017???????? ??? ??????";
+      title_html = title_html + section_html + "2017년 정규수업 일정 업데이트";
     break;
 
     // Runs if the loading page is the 13th announcement.
     case 53: 
-      title_html = title_html + section_html + "2017???????? ????????;
+      title_html = title_html + section_html + "2017년 여름방학 특강일정표";
     break;
 
     // Runs if the loading page is the 14th announcement.
     case 54: 
-      title_html = title_html + section_html + "????????? ????(CSIAMUN)";
+      title_html = title_html + section_html + "청심모의유엔 대회 (CSIAMUN)";
     break;
 
     // Runs if the loading page is the 15th announcement.
     case 55: 
-      title_html = title_html + section_html + "????????????????,????? ????(17.2.11-12?????";
+      title_html = title_html + section_html + "매일경제토론대회 초등,고등부 부문 (17.2.11-12일개최)";
     break;
 
     // Runs if the loading page is the 16th announcement.
     case 56: 
-      title_html = title_html + section_html + "?????? ?????? 1-3?????! (17.2.11-12?????";
+      title_html = title_html + section_html + "용인괴고 모의법정 1-3위석권!! (17.2.11-12일개최)";
     break;
 
     // Runs if the loading page is the 17th announcement.
     case 57: 
-      title_html = title_html + section_html + "2017 NSDA?????????, YUMN, GC??????";
+      title_html = title_html + section_html + "2017 NSDA겨울챔피언쉽, YUMN, GC수상결과";
     break;
 
     // Runs if the loading page is the 18th announcement.
     case 58: 
-      title_html = title_html + section_html + "2017????? ?????? ???????;
+      title_html = title_html + section_html + "2017년 국내 모의법정 대회준비";
     break;
 
     // Runs if the loading page is the 19th announcement.
     case 59: 
-      title_html = title_html + section_html + "< 12?? 1????? ??? ??? >";
+      title_html = title_html + section_html + "< 12월, 1월 휴원 일정 공지 >";
     break;
 
     // Runs if the loading page is the 20th announcement.
     case 60: 
-      title_html = title_html + section_html + "*????????????? ????? -???????????";
+      title_html = title_html + section_html + "*토론대회 파트너를 찾아라! -토론명문리더스*";
     break;
 
     // Runs if the loading page is the Awards page
     case 61: 
-      title_html = title_html + "?? ?? (AWARDS)";
+      title_html = title_html + "수상실적 (AWARDS)";
     break;
 
     // Runs if the loading page is the 1st award.
     case 62: 
-      title_html = title_html + section_html + "????????? ????(CSIAMUN)";
+      title_html = title_html + section_html + "청심모의유엔 대회 (CSIAMUN)";
     break;
 
     // Runs if the loading page is the 2nd award.
     case 63: 
-      title_html = title_html + section_html + "???????????????? ???????(17.2-11-12?????)";
+      title_html = title_html + section_html + "매일경제토론대회 초등 고등부문 (17.2-11-12일 개최)";
     break;
 
     // Runs if the loading page is the 3rd award.
     case 64: 
-      title_html = title_html + section_html + "?????? ?????? 1-3?????!! (17.2.11-12?????";
+      title_html = title_html + section_html + "용인외고 모의법정 1-3위 석권!! (17.2.11-12일개최)";
     break;
 
     // Runs if the loading page is the 4th award.
     case 65: 
-      title_html = title_html + section_html + "November 2015 Invitational ???????!";
+      title_html = title_html + section_html + "November 2015 Invitational 대회 우승!";
     break;
 
     // Runs if the loading page is the 5th award.
     case 66: 
-      title_html = title_html + section_html + "2016????????????????????!";
+      title_html = title_html + section_html + "2016년 상반기 수상을 축하합니다!!";
     break;
 
     // Runs if the loading page is the 6th award.
     case 67: 
-      title_html = title_html + section_html + "2016 SUMMER ?????? ??? ?????~";
+      title_html = title_html + section_html + "2016 SUMMER 리더스를 빛낸 학생들 ~";
     break;
 
     // Runs if the loading page is the 7th award.
     case 68: 
-      title_html = title_html + section_html + "2017 NSDA?????????, YUMN, GC??????";
+      title_html = title_html + section_html + "2017 NSDA겨울챔피언쉽, YUMN, GC수상결과";
     break;
 
     // Runs if the loading page is the 8th award.
     case 69: 
-      title_html = title_html + section_html + "IET ??? ??? ???????";
+      title_html = title_html + section_html + "IET 영어 독서 대회 수상";
     break;
 
     // Runs if the loading page is the 9th award.
     case 70: 
-      title_html = title_html + section_html + "SEOMUN ?????;
+      title_html = title_html + section_html + "SEOMUN 수상자";
     break;
 
     // Runs if the loading page is the 10th award.
     case 71: 
-      title_html = title_html + section_html + "NSDA 2016 November Invitational ?????;
+      title_html = title_html + section_html + "NSDA 2016 November Invitational 수상자";
     break;
 
     // Runs if the loading page is the 11th award.
     case 72: 
-      title_html = title_html + section_html + "?????MUN ???";
+      title_html = title_html + section_html + "브라운 MUN 수상";
     break;
 
     // Runs if the loading page is the 12th award.
     case 73: 
-      title_html = title_html + section_html + "2016 SUMMER  ?????????????!";
+      title_html = title_html + section_html + "2016 SUMMER  수상을 축하합니다!!";
     break;
 
     // Runs if the loading page is the 13th award.
     case 74: 
-      title_html = title_html + section_html + "[2016 ???????? ??? ????KMLA)] ?????????????";
+      title_html = title_html + section_html + "[2016 민사고 영어 토론 대회(KMLA)] 수상을 축하합니다.";
     break;
 
     // Runs if the loading page is the 14th award.
     case 75: 
-      title_html = title_html + section_html + "NSDA Korea ???! (2016.4.9)";
+      title_html = title_html + section_html + "NSDA Korea 수상! (2016.4.9)";
     break;
 
     // Runs if the loading page is the 15th award.
     case 76: 
-      title_html = title_html + section_html + "?????????????? ???????1??????????";
+      title_html = title_html + section_html + "제1회 한.중 리더스컵 토론대회 1등 축하합니다.";
     break;
 
     // Runs if the loading page is the 16th award.
     case 77: 
-      title_html = title_html + section_html + "United Nations(?????UN Speech Contest)?????????????";
+      title_html = title_html + section_html + "United Nations(반기문 UN Speech Contest)수상을 축하합니다.";
     break;
 
     // Runs if the loading page is the 17th award.
     case 78: 
-      title_html = title_html + section_html + "????????? ?????? ???!! ????????U";
+      title_html = title_html + section_html + "브라운대학교 모의유엔 수상!! 축하합니다~U";
     break;
 
     // Runs if the loading page is the 18th award.
     case 79: 
-      title_html = title_html + section_html + "N ???????????MUN) ??? ????????";
+      title_html = title_html + section_html + "N 청소년환경총회(MUN) 수상 축하합니다.";
     break;
 
     // Runs if the loading page is the 19th award.
     case 80: 
-      title_html = title_html + section_html + "2015 KAIAC Speech 1??????????????! (November 22-23)";
+      title_html = title_html + section_html + "2015 KAIAC Speech 1등 수상을축하합니다! (November 22-23)";
     break;
 
     // Runs if the loading page is the 20th award.
     case 81: 
-      title_html = title_html + section_html + "??8????????????????????(KPSC) 1??????????";
+      title_html = title_html + section_html + "제 8회 한국퍼블릭스피킹챔피언쉽(KPSC) 1등 축하합니다~";
     break;
 
     // Runs if the loading page is Apply (Faculty).
     case 82: 
-      title_html = title_html + "?? (??) (APPLY FACULTY)";
+      title_html = title_html + "입학시험&특강 신청 (APPLY FACULTY)";
     break;
 
     // Runs if the loading page is Apply (Students).
     case 83: 
-      title_html = title_html + "?? (??) (APPLY STUDENTS)";
+      title_html = title_html + "토론 최상위반 접수 (APPLY STUDENTS)";
     break;
 
     // Runs if the loading page is Media.
     case 84: 
-      title_html = title_html + "??? (MEDIA)";
+      title_html = title_html + "포토갤러리 (MEDIA)";
     break;
 
     // Runs if the loading page is Item #1 of Media.
     case 85: 
-      title_html = title_html + section_html + "?????????;
+      title_html = title_html + section_html + "대치 리더스";
     break;
 
     // Runs if the loading page is Item #2 of Media.
     case 86: 
-      title_html = title_html + section_html + "??????????? ???";
+      title_html = title_html + section_html + "젬마샘 디베이팅 모습";
     break;
 
     // Runs if the loading page is Item #3 of Media.
     case 87: 
-      title_html = title_html + section_html + "?????? ????????~";
+      title_html = title_html + section_html + "유럽피안 파이널 모습~";
     break;
 
     // Runs if the loading page is Item #4 of Media.
     case 88: 
-      title_html = title_html + section_html + "ESDC ?????";
+      title_html = title_html + section_html + "ESDC 쥬니어~";
     break;
     
     // Runs if the loading page is Item #5 of Media.
     case 89: 
-      title_html = title_html + section_html + "?????? ??????~";
+      title_html = title_html + section_html + "토너먼트 현장에서~";
     break;
     
     // Runs if the loading page is Item #6 of Media.
@@ -4586,32 +4518,32 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is Item #7 of Media.
     case 91: 
-      title_html = title_html + section_html + "?????? ??? (MUN)";
+      title_html = title_html + section_html + "모의유엔 수업 (MUN)";
     break;
     
     // Runs if the loading page is Item #8 of Media.
     case 92: 
-      title_html = title_html + section_html + "???~";
+      title_html = title_html + section_html + "회식~";
     break;
 
     // Runs if the loading page is Item #9 of Media.
     case 93: 
-      title_html = title_html + section_html + "Dekker ?????";
+      title_html = title_html + section_html + "Dekker 영어샘~";
     break;
 
     // Runs if the loading page is Item #10 of Media.
     case 94: 
-      title_html = title_html + section_html + "Joshua??";
+      title_html = title_html + section_html + "Joshua샘~";
     break;
 
     // Runs if the loading page is Item #11 of Media.
     case 95: 
-      title_html = title_html + section_html + "Gemma ??";
+      title_html = title_html + section_html + "Gemma 샘~";
     break;
 
     // Runs if the loading page is Item #12 of Media.
     case 96: 
-      title_html = title_html + section_html + "Roger Hatridge ??";
+      title_html = title_html + section_html + "Roger Hatridge 샘~";
     break;
 
     // Runs if the loading page is Item #13 of Media.
@@ -4621,22 +4553,22 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is Item #14 of Media.
     case 98: 
-      title_html = title_html + section_html + "Joshua??";
+      title_html = title_html + section_html + "Joshua샘~";
     break;
 
     // Runs if the loading page is Item #15 of Media.
     case 99: 
-      title_html = title_html + section_html + "?????????;
+      title_html = title_html + section_html + "대치 리더스";
     break;
 
     // Runs if the loading page is Events.
     case 100: 
-      title_html = title_html + "??? (EVENTS)";
+      title_html = title_html + "이벤트 (EVENTS)";
     break;
     
     // Runs if the loading page is the 1st event.
     case 101: 
-      title_html = title_html + section_html + "??5??ESU KOREA ???????????;
+      title_html = title_html + section_html + "제15회 ESU KOREA 영어말하기대회";
     break;
 
     // Runs if the loading page is the 2nd event.
@@ -4676,7 +4608,7 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 9th event.
     case 109: 
-      title_html = title_html + section_html + "2017(23?? ?????????? ????????????;
+      title_html = title_html + section_html + "2017(23회) 대한민국 학생 영어말하기 대회";
     break;
 
     // Runs if the loading page is the 10th event.
@@ -4686,17 +4618,17 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 11th event.
     case 111: 
-      title_html = title_html + section_html + "2017????4??ESU KOREA ???????????;
+      title_html = title_html + section_html + "2017년 제14회 ESU KOREA 영어말하기대회";
     break;
 
     // Runs if the loading page is the 12th event.
     case 112: 
-      title_html = title_html + section_html + "2017??9th HAFS MIMUN";
+      title_html = title_html + section_html + "2017년 9th HAFS MIMUN";
     break;
 
     // Runs if the loading page is the 13th event.
     case 113: 
-      title_html = title_html + section_html + "2017?? 7th HAFS Debate Championship";
+      title_html = title_html + section_html + "2017년, 7th HAFS Debate Championship";
     break;
 
     // Runs if the loading page is the 14th event.
@@ -4706,7 +4638,7 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 15th event.
     case 115: 
-      title_html = title_html + section_html + "2017?????????? ??????????;
+      title_html = title_html + section_html + "2017년 하반기 매경 영어토론대회";
     break;
 
     // Runs if the loading page is the 16th event.
@@ -4716,12 +4648,12 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 17th event.
     case 117: 
-      title_html = title_html + section_html + "2017???????Korea Mock Trial Association";
+      title_html = title_html + section_html + "2017년 하반기 Korea Mock Trial Association";
     break;
 
     // Runs if the loading page is the 18th event.
     case 118: 
-      title_html = title_html + section_html + "2017???????YTN.HUFS ??????????;
+      title_html = title_html + section_html + "2017년 하반기 YTN.HUFS 영어토론대회";
     break;
 
     // Runs if the loading page is the 19th event.
@@ -4731,72 +4663,72 @@ function renderHeader(webpage_index) {
 
     // Runs if the loading page is the 20th event.
     case 120: 
-      title_html = title_html + section_html + "??????????????????????Global Leadership Excellence Challenge)";
+      title_html = title_html + section_html + "글로벌리더십 외국어 경연대회(Global Leadership Excellence Challenge)";
     break;
 
     // Runs if the loading page is Camps.
     case 121: 
-      title_html = title_html + "?? (CAMPS)";
+      title_html = title_html + "캠프 (CAMPS)";
     break;
     
     // Runs if the loading page is the 1st camp.
     case 122: 
-      title_html = title_html + section_html + "2017-18 ?????? ??????";
+      title_html = title_html + section_html + "2017-18 겨울방학 특강안내";
     break;
 
     // Runs if the loading page is the 2nd camp.
     case 123: 
-      title_html = title_html + section_html + "2016-2017 ??????????????";
+      title_html = title_html + section_html + "2016-2017 리더스 겨울방학특강";
     break;
 
     // Runs if the loading page is the 3rd camp.
     case 124:
-      title_html = title_html + section_html + "2015 ?????? ??????";
+      title_html = title_html + section_html + "2015 여름방학 특강안내";
     break;
 
     // Runs if the loading page is the 4th camp.
     case 125: 
-      title_html = title_html + section_html + "2018 ?????? ??????";
+      title_html = title_html + section_html + "2018 겨울방학 특강일정";
     break;
 
     // Runs if the loading page is the 5th camp.
     case 126: 
-      title_html = title_html + section_html + "2017 ?????? ??? ?????;
+      title_html = title_html + section_html + "2017 여름방학 특강 일정표";
     break;
 
     // Runs if the loading page is the 6th camp.
     case 127: 
-      title_html = title_html + section_html + "2016 ????????? ???";
+      title_html = title_html + section_html + "2016 여름방학특강 안내";
     break;
 
     // Runs if the loading page is the 7th camp.
     case 128: 
-      title_html = title_html + section_html + "2016????????????? (Mock Trial) ??? (1???????";
+      title_html = title_html + section_html + "2016년 상반기 모의법정 (Mock Trial) 특강 (1년2회진행)";
     break;
 
     // Runs if the loading page is the 8th camp.
     case 129: 
-      title_html = title_html + section_html + "2015??????????? ??? [142]";
+      title_html = title_html + section_html + "2015년 여름방학특강 일정 [142]";
     break;
 
     // Runs if the loading page is the 9th camp.
     case 130: 
-      title_html = title_html + section_html + "2014???????? ?????? ?????";
+      title_html = title_html + section_html + "2014년 겨울방학 특강안내 및 일정";
     break;
 
     // Runs if the loading page is the 10th camp.
     case 131: 
-      title_html = title_html + section_html + "2014 ???????????? ??? [1]";
+      title_html = title_html + section_html + "2014 겨울방학특강일정 안내 [1]";
     break;
 
     // Runs if the loading page is the Lessons page.
     case 132: 
-      title_html = title_html + "?? (LESSONS)";
+      title_html = title_html + "수업 (LESSONS)";
     break;
 
     // Runs if the loading page is the Business page.
     case 133: 
-      title_html = title_html + "?? (BUSINESS)";
+      title_html = title_html + "사업 (BUSINESS)";
     break;
     
   
@@ -4896,7 +4828,7 @@ function renderLogoAndSearch() {
     "        <div id=\"header-links\">\n" + 
     "          <div id=\"header-links-level_1\">\n" + 
     "            <a href=\"" + base_path + "login/login.htm\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
-    "            <a href=\"" + base_path + "ko/\" lang=\"ko\" title=\"?????" id=\"link-korean\">?????/a>\n" + 
+    "            <a href=\"" + base_path + "ko/\" lang=\"ko\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
     "          </div>\n" + 
     "          <div id=\"header-links-level_2\">\n" + 
     "            <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
@@ -5000,34 +4932,34 @@ function renderSectionMenu(webpage_index) {
 
     if (webpage_index <= 15)  {
       jq(menu_selector).html(
-/*         "        <a href=\"guide/history.htm\" title=\"?????(HISTORY)\" id=\"link-section_1-history\">?????(HISTORY)</a>\n" + 
-        "        <a href=\"guide/faculty.htm\" title=\"?????? (FACULTY)\" id=\"link-section_1-faculty\">?????? (FACULTY)</a>\n" + 
-        "        <a href=\"guide/rules.htm\" title=\"?????? (RULES)\" id=\"link-section_1-history\">?????? (RULES)</a>\n" + 
-        "        <a href=\"guide/system.htm\" title=\"??????(SYSTEM)\" id=\"link-section_1-system\">??????(SYSTEM)</a>\n" + 
-        "        <a href=\"guide/recruiting.htm\" title=\"?????? (RECRUTING)\" id=\"link-section_1-recruiting\">?????? (RECRUTING)</a>\n" + 
-        "        <a href=\"guide/location.htm\" title=\"?????(LOCATION)\" id=\"link-section_1-location\">?????(LOCATION)</a>"
+/*         "        <a href=\"guide/history.htm\" title=\"인사말 (HISTORY)\" id=\"link-section_1-history\">인사말 (HISTORY)</a>\n" + 
+        "        <a href=\"guide/faculty.htm\" title=\"강사소개 (FACULTY)\" id=\"link-section_1-faculty\">강사소개 (FACULTY)</a>\n" + 
+        "        <a href=\"guide/rules.htm\" title=\"학원규정 (RULES)\" id=\"link-section_1-history\">학원규정 (RULES)</a>\n" + 
+        "        <a href=\"guide/system.htm\" title=\"학원제도(SYSTEM)\" id=\"link-section_1-system\">학원제도(SYSTEM)</a>\n" + 
+        "        <a href=\"guide/recruiting.htm\" title=\"강사채용 (RECRUTING)\" id=\"link-section_1-recruiting\">강사채용 (RECRUTING)</a>\n" + 
+        "        <a href=\"guide/location.htm\" title=\"치안내 (LOCATION)\" id=\"link-section_1-location\">치안내 (LOCATION)</a>"
  */   
         "      <span>There is no menu for this section.</span>\n"
       );
     } else if ((webpage_index > 19) && webpage_index <= 27) {
       jq(menu_selector).html(
-        "        <a href=\"" + base_path + "debate/debate_schedule_2017.htm\" title=\"2017???????? ??? ??? ??????\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
-        "        <a href=\"" + base_path + "debate/debate_schedule_2016.htm\" title=\"2016 ????????? ??? ??????\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
-        "        <a href=\"" + base_path + "debate/debate_discussion_english.htm\" title=\"??? ??????????????\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
-        "        <a href=\"" + base_path + "debate/debate_schedule_2018.htm\" title=\"2018 ?????????\" id=\"link-section_1-debate\">Schedule (2018)</a>\n" + 
-        "        <a href=\"" + base_path + "debate/recruitment.htm\" title=\"??? ????? ?????? ????????\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
-        "        <a href=\"" + base_path + "debate/debate_discussion_2015.htm\" title=\"?????? 2015??2??? ??????\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
-        "        <a href=\"" + base_path + "debate/debate_2014.htm\" title=\"?????? 2014??4??? ???\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
+        "        <a href=\"" + base_path + "debate/debate_schedule_2017.htm\" title=\"2017년 정규토론 수업 일정 업데이트\" id=\"link-debate-schedule_2017\">Schedule (2017)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_schedule_2016.htm\" title=\"2016 정규토론수업 일정 업데이트\" id=\"link-debate-schedule_2016\">Schedule (2016)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_discussion_english.htm\" title=\"주중 영어토론반 일정안내\" id=\"link-debate-history\">Discussion (ENG)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_schedule_2018.htm\" title=\"2018 토론수업일정\" id=\"link-section_1-debate\">Schedule (2018)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/recruitment.htm\" title=\"초등 저학년 토론반을 모집합니다.\" id=\"link-debate-recruitment\">Recruitment</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_discussion_2015.htm\" title=\"정규토론 2015년 2분기 수업일정\" id=\"link-debate-discussion_2015\">Discussion (2015)</a>\n" + 
+        "        <a href=\"" + base_path + "debate/debate_2014.htm\" title=\"정규토론 2014년 4분기 일정\" id=\"link-debate-debate_2014\">Debate (2014)</a>"
       );
     } else if ((webpage_index > 27) && webpage_index <= 38) {
       jq(menu_selector).html(
-        "      <a href=\"" + base_path + "debate/booklist_2016.htm\" title=\"2016???????? Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/admissions_2017.htm\" title=\"2017???????? ??? ??? ??????\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/application_2016.htm\" title=\"2016??1,2??? ??????\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
-        "      <a href=\"" + base_path + "debate/application_2018.htm\" title=\"2018 ?????? ??????\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/application_2016_update.htm\" title=\"2016 ?????? ??? ??? ??????\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/talk_2016.htm\" title=\"2016 ?????? ??? ??????\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
-        "      <a href=\"" + base_path + "debate/english_advanced.htm\" title=\"?????? 2015??2??? ??????\" id=\"link-english-english_advanced\">Adv. English</a>\n"
+        "      <a href=\"" + base_path + "debate/booklist_2016.htm\" title=\"2016년 원서강독 Booklist\" id=\"link-english-booklist_2016\">Booklist (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/admissions_2017.htm\" title=\"2017년 원서강독 수업 일정 업데이트\" id=\"link-english-admissions_2017\">Admissions (2017)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/application_2016.htm\" title=\"2016년 1,2분기 원서안내\" id=\"link-english-application_2016\">Application I (2016)</a>\n" +
+        "      <a href=\"" + base_path + "debate/application_2018.htm\" title=\"2018 원서강독 수업일정\" id=\"link-english-application_2018\">Application (2018)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/application_2016_update.htm\" title=\"2016 원서강독 수업 일정 업데이트\" id=\"link-english-application_2016_updated\">Application II (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/talk_2016.htm\" title=\"2016 토론수업 일정 업데이트\" id=\"link-english-talk_2016\">Talk (2016)</a>\n" + 
+        "      <a href=\"" + base_path + "debate/english_advanced.htm\" title=\"고급영어 2015년 2분기 수업일정\" id=\"link-english-english_advanced\">Adv. English</a>\n"
       );
     } else if ((webpage_index === 39) || 
                (webpage_index === 82) || 
@@ -5199,7 +5131,7 @@ function renderArticle(extracted_html, webpage_index) {
   if ((webpage_index > 0) && (webpage_index <= 15))  {
     jq("article").html(
       "        <div id=\"article-header\">\n" + 
-      "          <h2>?????? (FACULTY)</h2>\n" + 
+      "          <h2>강사소개 (FACULTY)</h2>\n" + 
       "        </div>\n" + 
       "        <div class=\"article-faculty-member-page\" id=\"article-content\">\n" + 
       extracted_html[0] + 
@@ -5207,7 +5139,7 @@ function renderArticle(extracted_html, webpage_index) {
       extracted_html[1] + 
       "          </p>\n" + 
       extracted_html[2] + 
-      "          <a href=\"faculty/index_faculty.htm\" title=\"???\">???</a>\n" + 
+      "          <a href=\"faculty/index_faculty.htm\" title=\"목록\">목록</a>\n" + 
       "        </div>\n"
     );
   } // END of if STATEMENT
@@ -5224,7 +5156,7 @@ function renderArticle(extracted_html, webpage_index) {
     
     jq("article").html(
       "        <div class=\"article-header-debate\" id=\"article-header\">\n" + 
-      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01Top.png\" alt=\"??????(DEBATE)\" />\n" + 
+      "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01Top.png\" alt=\"정규토론(DEBATE)\" />\n" + 
       "          <img src=\"http://daechi.leadersacademy.com/skin/skin020/program/images/cont02-01.png\" />\n" + 
       "        </div>\n" + 
       updated_html 
@@ -5268,7 +5200,7 @@ function renderArticle(extracted_html, webpage_index) {
     
     jq("article").html(
       "        <div class=\"article-header-announcements\" id=\"article-header\">\n" + 
-      "          <h4>??? ???</h4>\n" + 
+      "          <h4>공지 사항</h4>\n" + 
       "        </div>\n" + 
       updated_html 
     );
@@ -5281,13 +5213,13 @@ function renderArticle(extracted_html, webpage_index) {
 
     if (webpage_index === 82) {
       jq("#button").html(
-        "          <input type=\"submit\" id=\"form-apply_faculty-submit\" value=\"????">\n" + 
-        "          <input type=\"reset\" id=\"form-apply_faculty-reset\" value=\"????????\">\n"
+        "          <input type=\"submit\" id=\"form-apply_faculty-submit\" value=\"대다\">\n" + 
+        "          <input type=\"reset\" id=\"form-apply_faculty-reset\" value=\"명확한 형식\">\n"
        );
     } else  {
       jq("#button").html(
-        "          <input type=\"submit\" id=\"form-apply_students-submit\" value=\"????">\n" + 
-        "          <input type=\"reset\" id=\"form-apply_students-reset\" value=\"????????\">\n"
+        "          <input type=\"submit\" id=\"form-apply_students-submit\" value=\"대다\">\n" + 
+        "          <input type=\"reset\" id=\"form-apply_students-reset\" value=\"명확한 형식\">\n"
        );
     }
        
@@ -5296,7 +5228,7 @@ function renderArticle(extracted_html, webpage_index) {
   if (webpage_index === 84) {
     jq("article").html(
       "        <div class=\"article-media\" id=\"article-content\">\n" + 
-      "          <h4>????????/h4>\n" + 
+      "          <h4>포토갤러리</h4>\n" + 
       "          <div class=\"article-media-row\" id=\"media-row_1\">\n" + 
       "            <div class=\"media-item\" id=\"media-item_1\">\n" + 
       "              <a href=\"" + base_path + "media/item_1.htm\">" + extracted_html[0] + "</a>\n" + 
