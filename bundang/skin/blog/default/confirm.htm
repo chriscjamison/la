@@ -1,0 +1,129 @@
+<!-- 게시판 스타일시트 -->
+
+<link rel="stylesheet" type="text/css" href="board.css">
+
+<script type="text/javascript" src="/js/validate.js"></script>
+<form name="confirmForm" id="confirmForm" method="post" action="{link.process}" onsubmit="return checkForm(this)">
+<input type="hidden" name="cmd" value="confirm">
+<input type="hidden" name="act" value="">
+<input type="hidden" name="mode" value="{mode}">
+<input type="hidden" id="bbs_id" name="bbs_id" value="{bbs_id}">
+<input type="hidden" id="bbs_seq" name="bbs_seq" value="{bbs_seq}">
+<input type="hidden" id="page" name="page" value="{page}">
+<input type="hidden" id="nexturl" name="nexturl" value="{link.path}">
+
+<!-- 헤더 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_header ">
+	<tr>
+		<td class="bold">
+			 <!--{ ? mode=="delete" }-->
+			정말 삭제하시겠습니까? <br />
+			<!--{ / }-->
+			<!--{? !_isadmin}-->		
+			비밀번호를 입력하세요.
+			<!--{ / }-->
+		</td>
+	</tr>
+</table>
+<!--// 헤더 -->
+
+<!-- 비밀번호 입력창 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_confirm">
+	<tr>
+		<td>			
+			<!--{ ? !_iscurrent && ! _isadmin }-->
+			비밀번호 <input type="password" id="mpasswd" name="mpasswd" class="bbs_input">
+			<!--{ / }-->
+			<div class="board_error"></div>
+		</td>
+	</tr>
+</table>
+<!--// 비밀번호 입력창 -->
+
+
+<!-- 버튼 -->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_tools">
+	<tr>
+		<td>
+			<input type="image" src="./img/bt_confirm.gif" alt="확인" class="img">
+			<img src="./img/bt_cancel.gif"  alt="취소" onclick="history.back();" class="hand img"></a>
+		</td>
+	</tr>
+</table>
+<!--// 버튼 -->
+
+
+
+</form>
+</div>
+<script type="text/javascript">
+<!--
+jq(document).ready(function() {
+	var f = document.forms['bbsForm'];
+});
+
+function checkForm(f)
+{
+	var v = new validator(f);
+	v.add("mpasswd", {label:"비밀번호",required:true});
+
+	var result = v.validate();
+	if (!result) {
+		alert(v.getErrorMessage());
+		v.getErrorElement().focus();
+		return false;
+	}
+
+	<!--{ ? c._AGENT_ == "O" }-->
+	var frameTag = '<iframe id="board_process_frame" name="board_process_frame" src="about:blank" width="0" height="0" frameborder="0"></iframe>';
+	jq('#board_process_frame').remove();
+	jq('body').append(frameTag);
+	jq('#confirmForm input[name=act]').val('write');
+	jq('#confirmForm').attr('action','{link.process}');
+	jq('#confirmForm').attr('target','board_process_frame');
+	jq('#confirmForm').submit();
+	<!--{ : }-->
+	jq('#confirmForm').ajaxSubmit({
+		type : 'post',
+		data:{act:'{mode}'},
+		dataType:'json',
+		success : function(data) {	
+			if (data.result=="success") {
+				<!--{ ? mode=="modify" }-->
+				jq('#confirmForm').attr("action", "{link.write}");
+				<!--{ : }-->
+				jq('#confirmForm').attr("action", "{link.process}");
+				jq('#confirmForm > input[name=cmd]').val("delete");
+				<!--{ / }-->
+				jq('#confirmForm').submit();
+			} else {
+				jq('.board_error').html('<img src="./img/icon_warning.gif" align="absmiddle"> '+data.msg);
+			}
+		}
+	});
+	<!--{ / }-->
+	return false;
+}
+
+function confirm_result(mode, rst)
+{
+	if (rst!="ok") {
+		alert("비밀번호가 맞지 않습니다.");
+		return false;
+	} else {
+		switch (mode) {
+		case "delete":
+			jq('#confirmForm').attr("action", "{link.process}");
+			jq('#confirmForm > input[name=cmd]').val("delete");
+			break;
+		default:
+			jq('#confirmForm').attr("action", "{link.write}");
+			break;
+		}
+		jq('#confirmForm').attr('target','_self');
+		jq('#confirmForm input[name=act]').val('');
+		jq('#confirmForm').submit();
+	}
+}
+//-->
+</script>

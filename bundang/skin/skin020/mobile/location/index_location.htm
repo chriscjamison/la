@@ -50,20 +50,20 @@
 			<div id="article-header">
 				<h2 lang="ko">치안내 (LOCATION)</h2>
 			</div>
-			<div id="map" style="width:85%;height:500px;margin: 0 auto;"></div>
+			<div id="map" style="width:85%;height:240px;margin: 0 auto;"></div>
 				<!-- Source library for Daum Maps -->
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=83636625893c769b461dd3298dd45bba"></script>
 				<script>
 					var mapContainer = document.getElementById('map'), 
-					mapCenter = new daum.maps.LatLng(37.500521, 127.051424), 
+					mapCenter = new daum.maps.LatLng(37.3680458, 127.1062733), 
 					mapOption = { 
 						center: mapCenter, 
-						level: 3
+						level: 4
 				  };
 				
 					var map = new daum.maps.Map(mapContainer, mapOption);
 				
-					var markerPosition  = new daum.maps.LatLng(37.500521, 127.051424);
+					var markerPosition  = new daum.maps.LatLng(37.3680458, 127.1062733);
 				
 					var marker = new daum.maps.Marker({ 
 									position: markerPosition
@@ -72,9 +72,9 @@
 							
 					marker.setMap(map);
 				
-					var iwContent = '<div style="padding:5px;">Leaders Academy<br><a href="http://map.daum.net/link/map/Leaders Academy,37.500521,127.051424" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/Hello World!,37.500521,127.051424" style="color:blue" target="_blank">길찾기</a></div>', 
+					var iwContent = '<div style="padding:5px;">Leaders Academy<br><a href="http://map.daum.net/link/map/Leaders Academy,37.3680458,127.1062733" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/Leaders Academy!,37.3680458,127.1062733" style="color:blue" target="_blank">길찾기</a></div>', 
 					
-					iwPosition = new daum.maps.LatLng(37.500521, 127.051424);
+					iwPosition = new daum.maps.LatLng(37.3680458, 127.1062733);
 				
 					var infowindow = new daum.maps.InfoWindow({ 
 									position : iwPosition, 
@@ -84,71 +84,36 @@
 				
 							infowindow.open(map, marker);
 				</script>
-        
+				
 				<table width="680" border="0" cellspacing="0" cellpadding="0" class="table-location">
-					<tr>
-						<td width="100" class="sj_title">ㆍ주소</td>
-						<td width="580" class="sj_contents">서울 강남구 대치동 908-1 재석빌딩 4층</td>
-					</tr>
-					<tr>
-						<td class="sj_title">ㆍ전화번호</td>
-						<td class="sj_contents">02-562-9799 (대표전화)</td>
-					</tr>
-					<tr>
-						<td class="sj_title">ㆍ근무시간</td>
-						<td class="sj_contents">오후 1:00 ~ 오후 10:00 (화~일)</td>
+					<tbody>
+						<tr>
+							<td class="sj_title">ㆍ주소</td>
+							<td class="sj_contents">경기도 성남시 분당구 정자동 17-1 젤존타워1, 605호</td>
 						</tr>
+						<tr>
+							<td class="sj_title">ㆍ전화번호</td>
+							<td class="sj_contents">031-609-9799 (대표전화)</td>
+						</tr>
+						<tr>
+							<td class="sj_title">ㆍ근무시간</td>
+							<td class="sj_contents" style="letter-spacing:-0.2pt">오후 1:00 ~ 오후 10:00 ( 화~토)<br />테스트는 매주 화 7:00, 수 6:00, 금 4:30, 토 3:00 (1시간 30분 소요)</td>
+							</tr>
+					</tbody>
 				</table>
-							
+											
 				<table width="680" border="0" cellspacing="0" cellpadding="0" class="table-location">
-					<tr>
-						<td width="100" class="sj_title">ㆍADDRESS</td>
-						<td width="580" class="sj_contents">3,4F Jaesuk B/D, Daeching-dong 908-1, Gangnam-gu, Seoul, Korea (135-280)</td>
-					</tr>
-					<tr>
-						<td class="sj_title">ㆍSUBWAY</td>
-						<td class="sj_contents">
-							<b>Seolleung Station exit two</b>
-							<br /><br />
-							Step out of exit two and go straight for five minutes.
-							<br /><br />
-							At the second stoplight, you will see Leaders Academy across the street and slightly to the left. 
-							After you cross the street, walk 20 meters to Leaders Academy. Come to the fourth floor.
-							<br /><br />
-							<b>Hanti Station exit one</b>
-							<br /><br />
-							Step out of exit one and go straight for five minutes until you see Baskin Robbins across the 
-							street and Seokwang Eye Glasses shop to your right. Do not cross the street. Go right.
-							<br /><br />
-							You will see Leaders Academy in the second building on your right. Come to the fourth floor.
-							<br />
-						</td>
-					</tr>
-					<tr>
-						<td class="sj_title">ㆍBUS</td>
-						<td class="sj_contents">
-							<b>The nearest bus stops and bus numbers:</b>
-							<br /><br />
-							Dogok Sagori 363
-							<br /><br />
-							Dosung Cho Sagori 472, 6211, 3420, 330, 3219, 4312, 4412, 9414, 8443
-							<br /><br />
-							Daechi Dong Hanguk Hagwon 4428
-							<br /><br />
-							Young dong Apt 8443, 147, 472, 6411, 3420, 3219, 4312, 4412, 9414
-							<br />
-						</td>
-					</tr>
-					<tr>
-						<td class="sj_title">ㆍTAXI</td>
-						<td class="sj_contents">
-							<b>The nearest bus stops and bus numbers:</b>
-							<br /><br />
-							Tell the taxi driver “Dosung Elementary Intersection-Dosung Chogyo Sagori -도성초교 사거리
-						</td>
-					</tr>
-				</tbody>
-			</table>
+					<tbody>
+						<tr>
+							<td class="sj_title">ㆍADDRESS</td>
+							<td class="sj_contents">605 Jel zone Tower1, Jeongja-dong 17-1, Bundang-gu, Seongnam-si, Gyeonggi-do</td>
+						</tr>
+						<tr>
+							<td class="sj_title">ㆍPhone number</td>
+							<td class="sj_contents">*82-31-609-9799</td>
+						</tr>
+					</tbody>
+				</table>
 		</article>
 
 		<!-- 

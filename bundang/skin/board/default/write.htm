@@ -1,0 +1,345 @@
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="board.css">
+
+<script type="text/javascript" src="/js/validate.js"></script>
+<form name="form1" id="form1" method="post" action="{link.process}" enctype="multipart/form-data" onsubmit="return checkForm(this)">
+<input type="hidden" name="cmd" value="{cmd}">
+<input type="hidden" name="bbs_id" value="{bbs_id}">
+<input type="hidden" name="bbs_seq" id="bbs_seq" value="{bbs_seq}">
+<input type="hidden" name="page" id="page" value="{page}">
+<input type="hidden" name="upload" id="upload" value="{upload}">
+<input type="hidden" name="upload_cnt" id="upload_cnt" value="{bbs.bbs_upload_count}">
+<input type="hidden" id="upload_seq" name="upload_seq" value="">
+<input type="hidden" name="rand" value="{rand_id}">
+<input type="hidden" id="nexturl" name="nexturl" value="{link.path}">
+<input type="hidden" id="PHPSESSID" name="PHPSESSID" value="{_COOKIE.PHPSESSID}">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="bbs_tbl_form">
+	<colgroup>
+		<col width="110px"/>
+		<col width=""/>
+	</colgroup>
+	<tbody>
+	<!--{ ? bbs.bbs_category }-->
+	<!--카테고리 사용할 경우-->
+	<tr>
+		<th>분류 *</th>
+		<td>
+			<select id="mcategory" name="mcategory">
+				<option value="">분류를 선택하세요.</option>
+				<!--{ @ category }-->
+				<option value="{.cate_name}" {.chk_category}>{.cate_name}</option>
+				<!--{ / }-->
+			</select>
+		</td>
+	</tr>
+	<!--{ / }-->
+	<tr>
+		<th>이름 *{mpasswd}</th>
+		<td><input type="text" id="mname" name="mname" value="{mname}" class="bbs_input"></td>
+	</tr>
+	<!--{ ? !_ismember }-->
+	<tr>
+		<th>비밀번호 *</th>
+		<td>
+			<!--{ ? ispasswd }-->
+			<input type="password" name="mpasswd" class="bbs_input">
+			<!--{ : }-->
+			**********<input type="hidden" name="mpasswd" value="{mpasswd}">
+			<!--{ / }-->
+		</td>
+	</tr>
+	<!--{ : }-->
+	<!--{ / }-->
+	<!--{ ? bbs.bbs_email }-->
+	<!-- 이메일을 입력받을 경우 -->
+	<tr>
+		<th>이메일</th>
+		<td><input type="text" id="memail" name="memail" size="50" value="{memail}" class="bbs_input"></td>
+	</tr>
+	<!--{ / }-->
+	<!-- 비밀글 사용할 경우 출력 -->
+	<!--{ ? bbs.bbs_secret }-->
+	<tr>
+		<th>비밀글</th>
+		<td>
+			<input type="checkbox" id="secret" name="secret" value="1" {chk_secret} OnClick="passCheck()"> <label for="secret">비밀글</label>
+	<!--{ ? chk_secret}-->
+			<div id="passdiv"><input type="password" name="mpasswd" class="bbs_input" value="{mpasswd}"></div>
+	<!--{ : }-->
+			<div id="passdiv" style="display:none"><input type="password" name="mpasswd" class="bbs_input" value="{mpasswd}"></div>
+	<!--{ / }-->
+		</td>
+	</tr>
+	<!--{ / }-->
+	<!--{ ? bbs.bbs_comment }-->
+	<tr>
+		<th>댓글허용</th>
+		<td>
+			<input type="checkbox" id="allow_comment" name="allow_comment" value="1" {chk_allow_comment}> <label for="allow_comment">댓글허용</label>
+		</td>
+	</tr>
+	<!--{ / }-->
+	<tr>
+		<th>제목 *</th>
+		<td><input type="text" id="title" name="title" value="{title}" style="width:80%" class="bbs_input">
+			<!--{ ? _isadmin }-->
+			<input type="checkbox" id="notice" name="notice" value="1" {chk_notice}> <label for="notice">공지</label>
+			<!--{ / }-->
+			</td>
+	</tr>
+	<tr>
+		<th>내용 *</th>
+		<td>
+			<textarea name="contents" id="contents" style="width:100%;height:240px;" class="bbs_text bbs_contents" editor img path="board/{bbs_id}">
+{contents}
+<!--{ ? cmd=='reply' }-->
+<br><br><br>-- [원본글] --------------------------------------------<br>
+{ori_contents}
+<!--{ / }-->
+</textarea>
+		</td>
+	</tr>
+	<!-- 첨부파일 사용시 출력 -->
+	<!--{ ? bbs.bbs_upload }-->
+	<tr>
+		<th>파일첨부</th>
+		<td><img src="img/btn_file.gif" id="button_upload" title="찾아보기" align="absmiddle"><span id="uploading"></span>
+			<ul style="list-style:none;margin:0;"><ol class="upfile_list" id="upfile_list">
+			<!--{ @ upfiles }-->
+			<li id={.seq}>{.fname}&nbsp;&nbsp;</li>
+			<!--{ / }-->
+			</ol></ul>
+		</td>
+	</tr>
+	<!--{ / }-->
+
+	<!-- 추가항목을 루프로 출력 -->
+	<!--{ @ addform }-->
+	<tr>
+		<th>{.colname} {.reqicon}</th>
+		<td>
+			<!-- 추가항목 입력폼 -->
+			{.addition}
+
+			<!-- 안내글 출력 -->
+			<span class="comment">{.coldesc}</span>
+		</td>
+	</tr>
+	<!--{ / }-->
+	</body>
+</table>
+
+<div style="text-align:center;padding:10px;">
+	<input type="image" src="img/btn_ok.gif" title="확인" onfocus=this.blur();>
+	<img src="img/btn_cancel.gif" title="취소" onclick="history.back();" class="hand"></a>
+</div>
+</form>
+
+<!-- 에디터를 사용하는 경우 에디터 lib 삽입-->
+<!--{ ? bbs.bbs_editor }-->
+
+<!--{ / }-->
+<script type="text/javascript" src="/js/editor/gs_editor.js"></script>
+<script type="text/javascript" src="/js/jquery.upload.js"></script>
+<script type="text/javascript">
+<!--
+
+function passCheck()
+{
+	if (document.all.secret.checked == true){
+		document.all.passdiv.style.display = "";
+	}else{
+		document.all.passdiv.style.display = "none";
+	}
+	
+}
+jq(function() {
+	var f = document.forms['theForm'];
+	
+	var upbutton = jq('#button_upload').css('cursor','pointer'), interval;
+	var uptext = jq('#uploading');
+	 
+	<!--{ ? bbs.bbs_upload }-->
+	var uploadmax = '{bbs.bbs_upsize}';
+	var btn = new AjaxUpload(upbutton,{
+		action: '{link.process}',
+		data: {cmd:'upload',mode:'add',bbs_id:'{bbs_id}',maxsize:uploadmax,'rand_id':'{rand_id}'}, 
+		name: 'upfile',
+		responseType: 'json',
+		onChange:function(){
+			var uploaded = jq("#upload").val();
+			var upload_limit = jq("#upload_cnt").val();
+			if (uploaded >= upload_limit)
+			{
+				alert('파일 업로드는 최대'+upload_limit+'까지 가능합니다.');
+				return false;
+			}
+			
+		},
+		onSubmit : function(file, ext) {
+			uptext.text('Uploading');
+			this.disable();
+			interval = window.setInterval(function(){
+				var text = uptext.text();
+				if (text.length < 13){
+					uptext.text(text + '.');					
+				} else {
+					uptext.text('Uploading');				
+				}
+			}, 200);
+		},
+		onComplete: function(file, response){
+
+			uptext.text('');
+			window.clearInterval(interval);
+			if (response.result=='success') {
+				
+				var cnt = parseInt(jq('#upload').val()) + 1;
+				jq('#upload').val(cnt);
+				jq('#upload_seq').val(jq('#upload_seq').val() + '^' + response.upload_seq);
+				
+				var btn_del = jq(' <img src="img/btn_file_del.gif" align="absmiddle">').css('cursor','pointer').click(function(){delFile(response.upload_seq,'tmp')}); //파일삭제버튼
+				var el_li = jq('<li></li>').html(file+'&nbsp;&nbsp;').attr('id',response.upload_seq);
+				btn_del.appendTo(el_li);
+				el_li.appendTo('.upfile_list');
+
+				//업로드 갯수 제한	
+				checkFileUpload();
+
+			} else {
+				alert(response.msg);
+				this.enable();
+				return false;
+			}
+		}
+	});
+
+	//파일 업로드 가능 여부체크
+	function checkFileUpload() {
+		var uploaded = jq("#upload").val();
+		var upload_limit = jq("#upload_cnt").val();
+
+		if (uploaded >= upload_limit)
+		{
+			uptext.text('파일 업로드는 최대'+upload_limit+'까지 가능합니다.');
+			upbutton.css('cursor','not-allowed');
+			btn.disable();
+		}
+		else {
+			uptext.text('');
+			upbutton.css('cursor','pointer');
+			btn.enable();
+		}
+		var cnt =parseInt(jq('#upload').val());
+	}
+
+		 
+	//파일삭제
+	function delFile(seq, mode) {	
+		jq.ajax({
+			type: 'POST',
+			url: '{link.process}',
+			dataType: 'json',
+			data:{cmd:'upload',mode:'delete_'+mode,bbs_id:'{bbs_id}',file_seq:seq},
+			success:function (){
+				jq('.upfile_list li[id='+seq+']').remove();
+				var cnt = parseInt(jq('#upload').val()) - 1;
+				jq('#upload').val(cnt);
+				//삭제후 업로드 가능 수 체크
+				checkFileUpload();				
+			},
+			error:function() {
+				alert('잠시 후에 다시 시도해 주십시오.');
+			}
+		});				
+	}
+	
+	jq.each(jq('#upfile_list li'), function(i,e){
+		var el = jq(this);
+		var btn_del = jq(' <img src="img/btn_file_del.gif" /align="absmiddle">').css('cursor','pointer').click(function(){delFile(el.attr('id'),'real')}); //파일삭제버튼
+		btn_del.appendTo(el);
+	});
+
+
+	<!--{ / }-->
+});
+
+
+function checkForm()
+{
+	var f = document.forms['form1'];
+	var v = new validator(f);
+
+	var contentsValue = document.all.contents.value;
+
+	contentsValue = contentsValue.replace("¡¤","");
+	contentsValue = contentsValue.replace(/\r/g,"");
+	document.all.contents.value = contentsValue;
+
+	<!--{ ? bbs.bbs_category }-->
+	v.add("mcategory", {label:"분류",required:true});
+	<!--{ / }-->
+	v.add("mname", {label:"이름",required:true});
+//	v.add("mpasswd", {label:"비밀번호",required:true});
+	v.add("memail", {label:"이메일",option:"email",delim:"@"});
+	v.add("title", {label:"제목",required:true});
+	v.add("contents", {label:"내용",required:true});
+	
+	//추가항목 입력값출력
+	<!--{ @ addform }-->
+	v.add("{.colid}", {label:"{.colname}",required:{.colreq}});
+	<!--{ / }-->
+
+	var result = v.validate();
+	if (!result) {
+		alert(v.getErrorMessage());
+		//에디터 포커스
+		if (v.getErrorElement().name == 'contents'){ document.getElementById('editor_contents_frame').contentWindow.focus(); }
+		else {v.getErrorElement().focus();}
+		
+		return false;
+	}
+	else {
+
+		var reCon = submitForm();
+		if (reCon == "2") {
+			return false;
+		} else {
+			return true;
+		}
+	}
+}
+
+
+function submitForm() {
+
+        editor_contents.update();
+        var contentsValue = trim(document.all.contents.value);
+		
+		if (contentsValue != "") {
+			
+			contentsValue = contentsValue.replace("¡¤","*");
+			document.all.contents.value = contentsValue;
+
+			return "1";
+
+		} else {
+			alert("내용을 입력해 주세요");
+			return "2";
+
+		}
+}
+
+function trim(str) {
+   str = str.replace(/^\s+/, '');
+   for (var i = str.length - 1; i > 0; i--) {
+      if (/\S/.test(str.charAt(i))) {
+          str = str.substring(0, i + 1);
+          break;
+       }
+    }
+    return str;
+} 
+
+//-->
+</script>

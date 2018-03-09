@@ -1073,6 +1073,8 @@ function renderContent () {
   // Extract content from desktop version of webpage.
   article_data = storeContentArticleMetadata();
 
+  jq("table").css("opacity", "1");
+
   // Add mobile-friendly HTML into the browser.
   renderContentFrameHTML();
 
