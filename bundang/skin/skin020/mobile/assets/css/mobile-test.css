@@ -366,7 +366,6 @@ input#gsc-i-id1 {
 }
 
 table.gsc-search-box td {
-  /* width: 100% !important; */
   margin-top: 14px;
   padding: 0;
 }
@@ -423,32 +422,6 @@ nav > section > div > a,
   border: 5px solid #e76200;
 }
 
-/* #header-links a, 
-nav > section > div > a, 
-#nav-sub_menu a, 
-#nav-main_menu > section > div > a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  background-color: #d8ccc3;
-  box-shadow: 4px 4px 1px #a2a2a2;
-  border: 5px solid #485081;
-} */
-
-/* #header-links a, 
-nav > section > div > a, 
-#nav-sub_menu a, 
-#nav-main_menu > section > div > a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  background-color: #485081;
-  box-shadow: 4px 4px 1px #a2a2a2;
-  border: 5px solid #d8ccc3;
-} */
-
 #header-links a:active,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
@@ -460,50 +433,6 @@ nav > section > div > a:active,
   border-color: #fff;
 }
 
-
-/* #header-links a:active,
-nav > section > div > a:active, 
-#nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  background-color: #e76200;
-  border-color: #485081;
-}
- */
-
-/*  #header-links a:active,
-nav > section > div > a:active, 
-#nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  background-color: #485081;
-  border-color: #e76200;
-} */
-
-/* #header-links a:active, 
-#nav-menu-links a:active, 
-#nav-section_menu a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  color: #fff;
-} */
-/* 
-#header-links a:active, 
-#nav-menu-links a:active, 
-#nav-section_menu a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  color: #485081;
-} */
-
 .article-faculty-info ul li a:active, 
 .article-debate-listing a:active, 
 .article-english-listing a:active, 
@@ -511,19 +440,6 @@ nav > section > div > a:active,
 .article-camps-listing a:active {
   color: #fff;
 }
-
-/* #header-links a, 
-nav > section > div span, 
-#nav-main_menu > section > div span,
-#nav-section_menu a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  text-decoration: none;
-  text-shadow: 2px 2px 1px #a2a2a2;
-  color: #d8ccc3;
-} */
 
 #header-links a, 
 nav > section > div span, 
@@ -537,8 +453,6 @@ nav > section > div span,
   color: #485081;
 }
 
-/* nav > section > div span, 
-#nav-main_menu > section > div span, */
 .article-faculty-member .title a, 
 .article-faculty-info ul li a, 
 .article-english-listing a, 
@@ -921,10 +835,6 @@ tr > td:nth-child(2)  {
   color: #4f4f4f;
 }
 
-/* h4 {
-  margin: 1em 0 0.25em 0;
-}
- */
 li {
   margin: 0.5em 0;
 }
@@ -945,7 +855,6 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-camps, 
 .article-lessons, 
 .article-business {
-  /* width: 75%; */
   height: auto;
   min-height: 1px;
   max-height: 999999px;
@@ -955,15 +864,33 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 /* PAGE: Debate */
 
 .article-header-debate, 
-.article-debate-listing, 
 .article-header-english, 
-.article-english-listing, 
+.article-header-announcements, 
+.article-header-awards, 
 .article-header-events, 
-.article-events-listing, 
-.article-header-camps, 
-.article-camps-listing {
-  width: 740px;
+.article-header-camps {
+  width: 940px;
   margin: 0 auto;
+}
+
+.article-debate, 
+.article-debate-listing, 
+.article-english, 
+.article-english-listing, 
+.article-announcements, 
+.article-announcements-listing, 
+.article-awards, 
+.article-awards-listing, 
+.article-events, 
+.article-events-listing, 
+.article-camps, 
+.article-camps-listing, 
+.article-about_us, 
+.article-contact_us, 
+.article-lessons, 
+.article-business {
+  width: 910px;
+  margin: 0 30px;
 }
 
 .article-debate-listing, 
@@ -972,9 +899,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-awards-listing, 
 .article-events-listing, 
 .article-camps-listing {
-  width: 545px;
   margin: 1em auto;
-  display: inline-block;
 }
 
 .article-debate h6, 
@@ -984,6 +909,18 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-events h6, 
 .article-camps h6 {
   margin: 0.75em 0;
+}
+
+.article-debate a, 
+.article-debate table + a, 
+.article-english-listing a, 
+.article-events-listing a, 
+.article-announcements-listing a, 
+.article-awards-listing a, 
+.article-events-listing a, 
+.article-camps-listing a {
+  width: 700px;
+  display: inline-block;
 }
 
 .article-debate span, 
@@ -1137,22 +1074,6 @@ th,
 .article-events-listing, 
 .article-camps-listing {
   margin: 30px 0;
-}
-
-.article-announcements-listing, 
-.article-awards-listing, 
-.article-events-listing, 
-.article-camps-listing {
-  margin: 30px 0;
-}
-
-.article-announcements a, 
-.article-awards a, 
-.article-events a,
-.article-debate a,  
-.article-camps a {
-  width: 725px;
-  display: inline-block;
 }
 
 .article-announcements > div > span,

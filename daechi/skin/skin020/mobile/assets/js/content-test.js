@@ -437,6 +437,11 @@ function storeContentArticleMetadata () {
       section_value = "media";
       run_index = true;
     break;
+
+    case "login":
+      section_value = "login";
+      run_index = false;
+    break;
   } // END of SWITCH statement
 
   // IF/ELSE statement which runs 'parseIndexLinks' if the string, 'index' is contained 
@@ -646,7 +651,36 @@ function storeContentArticleMetadata () {
                       "<div class=\"media-item-holder\">" + 
                       jq("table > tbody > tr > td > table:nth-child(2) > tbody > tr > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td").html() + 
                       "</div>\n";
-    } 
+    } else if (section_value === "login") {
+      page_title = "로그인 (LOGIN)";
+      page_contents = "<div class=\"article-login\" id=\"article-content\">\n" + 
+                      " <div class=\"article-header-login\" id=\"article-header\">\n" + 
+                      "   <h4>로그인</h4>\n" + 
+                      "   <div id=\"article-form-login\">\n" + 
+                      "     <form id=\"loginForm\" name=\"loginForm\" method=\"post\" action=\"http://daechi.leadersacademy.com/lib/member/process.php\" onsubmit=\"return checkLoginForm(this);\">\n" + 
+                      "       <input type=\"hidden\" name=\"cmd\" value=\"login\">\n" + 
+                      "       <input type=\"hidden\" name=\"logintype\" value=\"member\">\n" + 
+                      "       <input type=\"hidden\" name=\"aca_number\" value=\"73176\">\n" + 
+                      "       <input type=\"hidden\" name=\"nexturl\" value=\"\">\n" + 
+                      "       <input type=\"hidden\" name=\"domain\" value=\"daechi.leadersacademy.com\">\n" + 
+                      "       <input type=\"hidden\" id=\"PHPSESSID\" name=\"PHPSESSID\" value=\"1dd57c3654430939e5da10ade0f2fc13\">\n" + 
+                      "       <div class=\"form-row\" id=\"form-row-1\">\n" + 
+                      "         <img src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/login_id.gif\"><input type=\"text\" id=\"member_id\" name=\"member_id\" value=\"\" class=\"input_login\" tabindex=\"11\">\n" +
+                      "       </div>\n" + 
+                      "       <div class=\"form-row\" id=\"form-row-2\">\n" + 
+                      "         <img src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/login_pw.gif\"><input type=\"password\" id=\"member_passwd\" name=\"member_passwd\" class=\"input_login\" tabindex=\"12\">\n" +
+                      "       </div>\n" + 
+                      "       <div id=\"form-button\">\n" + 
+                      "         <input type=\"image\" src=\"http://daechi.leadersacademy.com/skin/_modules/member/default/img/btn_login.gif\" tabindex=\"13\">\n" +
+                      "       </div>\n" + 
+                      "       <div class=\"form-row\" id=\"form-row-3\">\n" + 
+                      "         <input type=\"checkbox\" id=\"save_member_id\" name=\"save_member_id\" value=\"1\"><label for=\"save_member_id\">아이디 저장</label>\n" +
+                      "         <input type=\"checkbox\" name=\"ssl\" id=\"ssl\" value=\"ssl\" checked><label for=\"ssl\">보안접속</label>\n" + 
+                      "       </div>\n" + 
+                      "     </form>\n" + 
+                      "   </div>\n" +  
+                      " </div>\n";  
+    }
     
     article_data = {
       title: page_title, 

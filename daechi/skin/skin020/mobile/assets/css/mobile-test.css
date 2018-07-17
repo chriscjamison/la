@@ -48,7 +48,7 @@ h4,
 .article-faculty-member .content, 
 .article-faculty-member .title,  
 .article-faculty-member-page, 
-.article-debate-links,
+.article-debate-listing,
 .article-debate, 
 .article-debate a, 
 .article-english-listing, 
@@ -91,7 +91,7 @@ h6,
 .article-faculty-member-page h7, 
 .article-faculty-member-page a, 
 .article-faculty-member-page ul li, 
-.article-debate-links a, 
+.article-debate-listing a, 
 .article-debate > span, 
 .article-debate ul li, 
 .article-debate ol li,
@@ -115,10 +115,10 @@ th,
 .article-awards ol, 
 .article-media a, 
 .media-item-holder, 
-.article-events a, 
-.article-events span, 
-.article-camps a, 
-.article-camps span, 
+.article-events-listing a, 
+.article-events-listing span, 
+.article-camps-listing a, 
+.article-camps-listing span, 
 .article-lessons p, 
 .article-business p {
   font-size: 32px;
@@ -366,7 +366,6 @@ input#gsc-i-id1 {
 }
 
 table.gsc-search-box td {
-  /* width: 100% !important; */
   margin-top: 14px;
   padding: 0;
 }
@@ -423,106 +422,24 @@ nav > section > div > a,
   border: 5px solid #e76200;
 }
 
-/* #header-links a, 
-nav > section > div > a, 
-#nav-sub_menu a, 
-#nav-main_menu > section > div > a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  background-color: #d8ccc3;
-  box-shadow: 4px 4px 1px #a2a2a2;
-  border: 5px solid #485081;
-} */
-
-/* #header-links a, 
-nav > section > div > a, 
-#nav-sub_menu a, 
-#nav-main_menu > section > div > a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  background-color: #485081;
-  box-shadow: 4px 4px 1px #a2a2a2;
-  border: 5px solid #d8ccc3;
-} */
-
 #header-links a:active,
 nav > section > div > a:active, 
 #nav-sub_menu a:active, 
 #nav-main_menu > section > div > a:active, 
 .article-faculty-member-page a:active, 
-.article-debate a:active, 
 .article-english img:nth-child(4) + a:active, 
 #button input:click {
   background-color: #e76200;
   border-color: #fff;
 }
 
-
-/* #header-links a:active,
-nav > section > div > a:active, 
-#nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  background-color: #e76200;
-  border-color: #485081;
-}
- */
-
-/*  #header-links a:active,
-nav > section > div > a:active, 
-#nav-sub_menu a:active, 
-#nav-main_menu > section > div > a:active, 
-.article-faculty-member-page a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  background-color: #485081;
-  border-color: #e76200;
-} */
-
-/* #header-links a:active, 
-#nav-menu-links a:active, 
-#nav-section_menu a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  color: #fff;
-} */
-/* 
-#header-links a:active, 
-#nav-menu-links a:active, 
-#nav-section_menu a:active, 
-.article-debate a:active, 
-.article-english img:nth-child(4) + a:active, 
-#button input:click {
-  color: #485081;
-} */
-
 .article-faculty-info ul li a:active, 
-.article-debate-links a:active, 
-.article-english-listing a:active {
+.article-debate-listing a:active, 
+.article-english-listing a:active, 
+.article-events-listing a:active, 
+.article-camps-listing a:active {
   color: #fff;
 }
-
-/* #header-links a, 
-nav > section > div span, 
-#nav-main_menu > section > div span,
-#nav-section_menu a, 
-.article-faculty-member-page a, 
-.article-debate a, 
-.article-english img:nth-child(4) + a, 
-#button input {
-  text-decoration: none;
-  text-shadow: 2px 2px 1px #a2a2a2;
-  color: #d8ccc3;
-} */
 
 #header-links a, 
 nav > section > div span, 
@@ -536,17 +453,15 @@ nav > section > div span,
   color: #485081;
 }
 
-/* nav > section > div span, 
-#nav-main_menu > section > div span, */
 .article-faculty-member .title a, 
 .article-faculty-info ul li a, 
 .article-english-listing a, 
 .article-announcements a, 
 .article-awards a, 
-.article-debate a, 
+.article-debate-listing a, 
 .article-media a, 
-.article-events a, 
-.article-camps a {
+.article-events-listing a, 
+.article-camps-listing a {
   color: #e76200;
 }
 
@@ -920,10 +835,6 @@ tr > td:nth-child(2)  {
   color: #4f4f4f;
 }
 
-/* h4 {
-  margin: 1em 0 0.25em 0;
-}
- */
 li {
   margin: 0.5em 0;
 }
@@ -944,7 +855,6 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-camps, 
 .article-lessons, 
 .article-business {
-  /* width: 75%; */
   height: auto;
   min-height: 1px;
   max-height: 999999px;
@@ -954,44 +864,77 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 /* PAGE: Debate */
 
 .article-header-debate, 
-.article-debate-links, 
 .article-header-english, 
-.article-english-listing {
-  width: 740px;
+.article-header-announcements, 
+.article-header-awards, 
+.article-header-events, 
+.article-header-camps {
+  width: 940px;
   margin: 0 auto;
 }
 
-.article-debate-links a, 
-.article-english-listing a {
-  width: 545px;
-  margin: 1em auto;
-  display: inline-block;
+.article-debate, 
+.article-debate-listing, 
+.article-english, 
+.article-english-listing, 
+.article-announcements, 
+.article-announcements-listing, 
+.article-awards, 
+.article-awards-listing, 
+.article-events, 
+.article-events-listing, 
+.article-camps, 
+.article-camps-listing, 
+.article-about_us, 
+.article-contact_us, 
+.article-lessons, 
+.article-business {
+  width: 910px;
+  margin: 0 30px;
 }
 
-/* .article-debate-links a:nth-child(1), 
-.article-english-listing a:nth-child(1), 
-.article-awards-links a:nth-child(1), 
-.article-events-links a:nth-child(1) {
-  margin-top: 0;
+.article-debate-listing, 
+.article-english-listing, 
+.article-announcements-listing, 
+.article-awards-listing, 
+.article-events-listing, 
+.article-camps-listing {
+  margin: 1em auto;
 }
- */
+
 .article-debate h6, 
-.article-english h6 {
+.article-english h6, 
+.article-announcements h6, 
+.article-awards h6,  
+.article-events h6, 
+.article-camps h6 {
   margin: 0.75em 0;
+}
+
+.article-debate a, 
+.article-debate table + a, 
+.article-english-listing a, 
+.article-events-listing a, 
+.article-announcements-listing a, 
+.article-awards-listing a, 
+.article-events-listing a, 
+.article-camps-listing a {
+  width: 700px;
+  display: inline-block;
 }
 
 .article-debate span, 
 .article-debate table + span, 
-.article-english-listing span {
+.article-english-listing span, 
+.article-events-listing span, 
+.article-announcements-listing span, 
+.article-awards-listing span, 
+.article-events-listing span, 
+.article-camps-listing span {
   width: 185px;
   display: inline-block;
+  vertical-align: top;
 }
-
-/* .article-debate table, 
-.article-english table {
-  width: 960px;
-  margin: 2em auto;
-} */
 
 th, 
 .article-debate table:nth-child(7) tr:nth-child(1) td, 
@@ -1031,7 +974,6 @@ th,
   margin: 1em 1em 1em 5.5em;
 }
 
-.article-debate a, 
 .article-english img:nth-child(4) + a, 
 #button input {
   display: block;
@@ -1132,15 +1074,6 @@ th,
 .article-events-listing, 
 .article-camps-listing {
   margin: 30px 0;
-}
-
-.article-announcements a, 
-.article-awards a, 
-.article-events a,
-.article-debate a,  
-.article-camps a {
-  width: 725px;
-  display: inline-block;
 }
 
 .article-announcements > div > span,
@@ -1344,7 +1277,8 @@ input[name="testDate"] {
   p, 
   .form-row input, 
   .form-row label, 
-  .article-debate-links a, 
+  .article-debate, 
+  .article-debate-listing a, 
   .article-debate p, 
   .article-debate ul li, 
   .article-debate span, 
@@ -1370,35 +1304,42 @@ input[name="testDate"] {
   .article-apply_students table .form_input_text, 
   .article-apply_students table .form_comment, 
   #button input, 
-  .article-apply_faculty table, 
-  .article-apply_faculty input[type="text"], 
-  .article-apply_faculty table .form_comment, 
-  .article-apply_faculty select, 
   .article-english, 
   .article-english-listing a, 
   h6, 
   .article-english-listing span, 
   .article-english ul li, 
+  .article-faculty-member .title, 
+  .article-faculty-member .content, 
   .article-faculty-member ul li, 
   .article-faculty-member p, 
   .article-faculty-member-page ul li, 
   .article-faculty-member-page a, 
   .article-faculty-member-page span, 
   .media-item a:nth-child(2), 
-  .article-events a, 
-  .article-events span, 
-  .article-camps a, 
-  .article-camps span, 
+  .article-events-listing a, 
+  .article-events-listing span, 
+  .article-camps-listing a, 
+  .article-camps-listing span, 
   .article-lessons p, 
-  .article-business p {
+  .article-business p, 
+  .article-media a {
     font-size: 12px;
+  }
+
+  .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1), 
+  .article-apply_faculty table, 
+  .article-apply_faculty input[type="text"], 
+  .article-apply_faculty table .form_comment, 
+  .article-apply_faculty select { 
+    font-size: 12px !important;
   }
 
   .article-debate h6, 
   .article-faculty-member-page span:nth-child(1),
   .article-faculty-member-page span:nth-child(2),  
   .article-faculty-member-page h7 {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 
   h4 {
@@ -1409,6 +1350,16 @@ input[name="testDate"] {
   .article-awards p, 
   .article-apply_students .form_comment {
     line-height: 14px;
+  }
+
+  th, 
+  .article-debate table:nth-child(7) tr:nth-child(1) td, 
+  #map + script + script + table > tbody > tr > td:nth-child(1), 
+  #map + script + script + table + table > tbody > tr > td:nth-child(1), 
+  .article-contact_us table > tbody > tr > td:nth-child(1), 
+  .article-camps table > tbody > tr:nth-child(1) > td, 
+  .table-location > tbody > tr > td.sj_title {
+    width: 105px;
   }
 
 
@@ -1495,23 +1446,10 @@ input[name="testDate"] {
     margin-top: 5px;
   }
 
-  /* #header-links a, 
-  nav > section > div > a, 
-  #nav-main_menu > section > div > a, 
-  #nav-section_menu > a, 
-  .article-debate a, 
-  #button input, 
-  .article-faculty-member-page a {
-    box-shadow: 2px 2px 1px #a2a2a2;
-    border: 2px solid #485081;
-  }
- */
-
   #header-links a, 
   nav > section > div > a, 
   #nav-main_menu > section > div > a, 
   #nav-section_menu > a, 
-  .article-debate a, 
   #button input, 
   .article-faculty-member-page a {
     box-shadow: 2px 2px 1px #2c314e;
@@ -1522,7 +1460,6 @@ input[name="testDate"] {
   nav > section > div span, 
   #nav-menu_menu > section > div span, 
   #nav-section_menu > a, 
-  .article-debate a, 
   #button input, 
   .article-faculty-member-page a {
     text-shadow: 1px 1px 1px #a2a2a2;
@@ -1535,7 +1472,6 @@ input[name="testDate"] {
 
   #header-links a, 
   #nav-section_menu a, 
-  .article-debate a, 
   #button input, 
   .article-faculty-member-page a {
     width: 83px;
@@ -1778,22 +1714,48 @@ input[name="testDate"] {
 
   /* *** DEBATE *** */
 
+  .article-debate, 
+  .article-announcements, 
+  .article-awards,
+  .article-english, 
+  .article-events, 
+  .article-camps, 
+  .article-about_us {
+    margin: 0 15px;
+  }
+  
   .article-debate p {
     margin: 15px 25px;
   }
+  
+  .article-debate-listing, 
+  .article-english-listing, 
+  .article-announcements-listing, 
+  .article-awards-listing, 
+  .article-events-listing, 
+  .article-camps-listing {
+    margin: 10px 0;
+  }
 
-  .article-debate-links a, 
-  .article-english-listing a {
-    width: 260px;
-    margin: 1em auto;
+  .article-debate-listing a, 
+  .article-english-listing a, 
+  .article-announcements-listing a, 
+  .article-awards-listing a, 
+  .article-events-listing a, 
+  .article-camps-listing a {
     display: inline-block;
   }
  
-  .article-debate span, 
+  .article-debate-listing span, 
   .article-debate table + span, 
-  .article-english-listing span {
+  .article-english-listing span, 
+  .article-announcements-listing span, 
+  .article-awards-listing span, 
+  .article-events-listing span, 
+  .article-camps-listing span {
     width: 75px;
     display: inline-block;
+    vertical-align: top;
 }
   
   /* *** AWARDS *** */
@@ -1834,7 +1796,7 @@ input[name="testDate"] {
     margin-left: 48px;
   }
 
-
+ 
   /* *** APPLY (STUDENTS) *** */
 
   .article-apply_students .form_input_text, 
@@ -1845,6 +1807,17 @@ input[name="testDate"] {
     padding: 8px;
   }
 
+  .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1), 
+  .article-apply_students th, 
+  .article-apply_students td, 
+  .form_tbl_form tbody th, 
+  .article-apply_students .form_comment { 
+    font-size: 9px !important;
+  }
+
+  .article-apply_students .form_input_text {
+    font-size: 12px !important;
+  }
   
   /* *** APPLY (FACULTY) *** */
 
@@ -1856,7 +1829,7 @@ input[name="testDate"] {
   input#fmname, 
   input#fmemail, 
   input#fmtitle {
-    width: 220px;
+    width: 220px !important;
   }
 
   input#fmemail, 
@@ -1895,17 +1868,23 @@ input[name="testDate"] {
 
   /* *** FACULTY *** */
 
+  .article-faculty-member .title, 
+  .article-faculty-member .content {
+    margin: 0;
+  }
+
+  .article-faculty-row {
+    height: 285px;
+  }
+
   .article-faculty-member-page ul {
     padding-left: 18px;
   }
 
-
-  /* *** GPA/TESTING *** */
-
-  .article-gpa {
-    min-height: auto;
+  #editor_contents_outline {
+    width: 270px !important;
   }
-
+ 
   /* *** MEDIA *** */
 
   .article-media-row {
@@ -1916,14 +1895,14 @@ input[name="testDate"] {
     margin: 15px 0;
   }
 
-  /* .media-item img {
-    border: 2px solid #485081;
-  } */
-
   .media-item img {
     border: 2px solid #485081;
   }
 
+  .media-item .location_tx11 {
+    margin: 10px 0;
+  }
+  
   .media-item a:nth-child(2) {
     margin: 8px 0 0 0;
     line-height: 12px;
@@ -1957,7 +1936,9 @@ input[name="testDate"] {
 
   .article-camps, 
   .article-lessons, 
-  .article-business {
+  .article-business, 
+  .article-contact_us, 
+  .article-gpa {
     min-height: auto;
   }
 
@@ -1979,23 +1960,23 @@ input[name="testDate"] {
   #footer-row_1, 
   #footer-row_2, 
   .article-header-debate, 
-  #article-header.article-header-debate img, 
-  .article-awards, 
+  .article-header-debate img, 
+  .article-header-english, 
+  .article-header-announcements, 
+  .article-header-awards, 
+  .article-header-events, 
+  .article-header-camps, 
+  .article-header-about_us, 
+  .article-header-faculty, 
+  .article-header-lessons, 
+  .article-header-business, 
   .article-apply_students table, 
   .article-apply_students table > tbody > tr:nth-child(1) > td:nth-child(1), 
   .article-apply_faculty table, 
-  #article-content.article-debate-links, 
+  .article-debate-listing, 
   .article-debate img, 
   .article-announcements img, 
-  .article-header-english, 
-  .article-about_us, 
-  .article-gpa, 
-  .article-events, 
-  .article-events img, 
-  .article-camps, 
-  .article-camps img, 
-  .article-lessons, 
-  .article-business {
+  .article-header-english {
     width: 320px;
   }
 
@@ -2073,20 +2054,38 @@ input[name="testDate"] {
   .article-header-login, 
   #article-form-login, 
   .form-row, 
-  #article-content.article-debate-links, 
+  .article-debate, 
+  .article-debate-listing, 
   .article-debate img, 
   .article-announcements img, 
+  .article-english, 
   .article-header-english img, 
   .article-english-listing, 
   .article-english img, 
   .article-english ul, 
+  .article-announcements, 
+  .article-announcements-listing, 
+  .article-announcements img, 
+  .article-awards, 
+  .article-awards-listing, 
+  .article-awards img, 
+  .article-events, 
+  .article-events-listing, 
+  .article-events img, 
+  .article-camps, 
+  .article-camps-listing, 
+  .article-camps img, 
   .article-faculty-member-page, 
+  .article-about_us, 
   .article-about_us img, 
   .article-media-row, 
   .media-item-holder, 
   .media-item-holder img, 
   .article-gpa img, 
-  .article-camps img {
+  .article-camps img,  
+  .article-about_us, 
+  .article-lessons, 
+  .article-business {
     width: 290px;
   }
 
@@ -2122,6 +2121,15 @@ input[name="testDate"] {
   
   /* *** DEBATE *** */
 
+  .article-debate-listing a, 
+  .article-english-listing a, 
+  .article-announcements-listing a, 
+  .article-awards-listing a, 
+  .article-events-listing a, 
+  .article-camps-listing a {
+    width: 210px;
+  }
+
   .article-debate img[height="837"] {
     height: 356px;
   }
@@ -2149,14 +2157,6 @@ input[name="testDate"] {
   .article-events, 
   .article-camps {
     min-height: 202px;
-  }
-  
-  .article-awards a, 
-  .article-debate a, 
-  .article-announcements a, 
-  .article-events a, 
-  .article-camps a {
-    width: 245px;
   }
 
 
@@ -2330,23 +2330,6 @@ input[name="testDate"] {
     margin: 0 auto 10px auto;
   }
 
-  #article-faculty-row_1, 
-  #article-faculty-row_2, 
-  #article-faculty-row_5 {
-    height: 378px;
-  }
-
-  #article-faculty-row_3, 
-  #article-faculty-row_4 {
-    height: 397px;
-  }
-
-  #article-faculty-row_6, 
-  #article-faculty-row_7, 
-  #article-faculty-row_8 { 
-    height: 364px;
-  }
-
   .article-faculty-member-page ul {
     padding-left: 18px;
   }
@@ -2355,7 +2338,7 @@ input[name="testDate"] {
   /* *** ABOUT US *** */
 
   .article-about_us {
-    height: auto;
+    min-height: auto;
   }
 
   .article-about_us img {
@@ -2394,10 +2377,6 @@ input[name="testDate"] {
 
 
   /* *** GPA/TESTING *** */
-
-  .article-gpa {
-    min-height: auto;
-  }
 
   .article-gpa img {
     height: 175px;
@@ -2586,7 +2565,7 @@ input[name="testDate"] {
 
   .article-lessons, 
   .article-business {
-    min-height: 168px;
+    min-height: 171px;
   }
 
 }
@@ -2602,19 +2581,22 @@ input[name="testDate"] {
   article, 
   #footer-row_1, 
   #footer-row_2, 
-  #article-header.article-header-debate, 
+  .article-header-debate, 
   .article-header-debate img, 
   .article-header-login, 
   .article-awards.article-apply_students table, 
   .article-apply_students table, 
   .article-apply_students tr > td:nth-child(1), 
   .article-header-english, 
-  .article-about_us, 
-  .article-gpa, 
-  .article-events, 
-  .article-camps, 
-  .article-lessons, 
-  .article-business {
+  .article-header-announcements, 
+  .article-header-awards, 
+  .article-header-about_us, 
+  .article-header-gpa, 
+  .article-header-awards,
+  .article-header-events,  
+  .article-header-camps, 
+  .article-header-lessons, 
+  .article-header-business {
     width: 345px;
   } 
     
@@ -2641,15 +2623,6 @@ input[name="testDate"] {
 
   /* *** SECTION NAVIGATION *** */
 
- /*  #nav-section_menu #link-debate-recruitment, 
-  #nav-section_menu #link-debate-debate_2014, 
-  #nav-section_menu #link-announcements-page_1, 
-  #nav-section_menu #link-english-talk_2016, 
-  #nav-section_menu #link-english-english_advanced, 
-  #nav-section_menu #link-media-page_1 {
-    line-height: 28px;
-  } */
-
   #nav-section_menu #link-awards-page_1 {
     line-height: 30px;
   }
@@ -2657,23 +2630,46 @@ input[name="testDate"] {
 
   /* *** DEBATE *** */
 
-  #article-content.article-debate-links, 
+  .article-debate, 
+  .article-debate-listing, 
   .article-debate img, 
   #article-form-login, 
   .form-row, 
+  .article-announcements, 
+  .article-announcements-listing, 
   .article-announcements img, 
+  .article-awards, 
+  .article-awards-listing, 
+  .article-awards img, 
   .article-header-english img, 
   .article-english-listing, 
   .article-english img, 
   .article-english ul, 
   .article-faculty-member-page, 
+  .article-about_us, 
   .article-about_us img, 
   .article-media-row, 
   .media-item-holder, 
   .article-gpa img, 
+  .article-events, 
+  .article-events-listing, 
   .article-events img, 
-  .article-camps img {
+  .article-camps, 
+  .article-camps-listing, 
+  .article-camps img, 
+  .article-location, 
+  .article-lessons, 
+  .article-business {
     width: 315px;
+  }
+
+  .article-debate-listing a, 
+  .article-english-listing a, 
+  .article-announcements-listing a, 
+  .article-awards-listing a, 
+  .article-events-listing a, 
+  .article-camps-listing a {
+    width: 235px;
   }
 
   .article-debate img[height="837"] {
@@ -2716,14 +2712,6 @@ input[name="testDate"] {
 
   .article-awards {
     min-height: 229px;  
-  }
-
-  .article-awards a, 
-  .article-debate a, 
-  .article-announcements a, 
-  .article-events a, 
-  .article-camps a {
-    width: 260px;
   }
 
 
@@ -2858,26 +2846,10 @@ input[name="testDate"] {
   }
 
   .article-faculty-row {
+    height: 270px;
     margin: 0 auto 10px auto;
   }
-
-  #article-faculty-row_1, 
-  #article-faculty-row_2 {
-    height: 378px;
-  }
-
-  #article-faculty-row_3, 
-  #article-faculty-row_4 {
-    height: 397px;
-  }
-
-  #article-faculty-row_5, 
-  #article-faculty-row_6, 
-  #article-faculty-row_7, 
-  #article-faculty-row_8 { 
-    height: 364px;
-  }
-
+  
 
   /* *** ABOUT US *** */
 
@@ -2913,10 +2885,6 @@ input[name="testDate"] {
 
 
   /* *** GPA/TESTING *** */
-
-  .article-gpa {
-    min-height: 195px;
-  }
 
   .article-gpa img {
     height: 195px;
@@ -3104,8 +3072,9 @@ input[name="testDate"] {
   /* *** LESSONS *** */
 
   .article-lessons, 
-  .article-business {
-    min-height: 195px;
+  .article-business, 
+  .article-gpa { 
+    min-height: 198px;
   }
 }
 
@@ -3122,10 +3091,12 @@ input[name="testDate"] {
   #nav-section_menu,  
   #footer-row_1, 
   #footer-row_2, 
+  .article-header-debate, 
   .article-header-debate img, 
+  .article-header-announcements, 
   .article-login, 
   .article-header-login, 
-  .article-awards, 
+  .article-header-awards, 
   .article-announcements, 
   .article-apply_students table, 
   .article-apply_students tr > td:nth-child(1), 
@@ -3134,8 +3105,8 @@ input[name="testDate"] {
   .article-media, 
   .article-media-row, 
   .article-gpa, 
-  .article-events, 
-  .article-camps, 
+  .article-header-events, 
+  .article-header-camps, 
   .article-lessons, 
   .article-business {
     width: 370px;
@@ -3248,21 +3219,41 @@ input[name="testDate"] {
 
   /* *** DEBATE *** */
 
-  #article-content.article-debate-links, 
+  .article-debate, 
+  .article-debate-listing, 
   .article-debate img, 
+  .article-announcements, 
+  .article-announcements-listing, 
   .article-announcements img, 
+  .article-awards, 
+  .article-awards-listing, 
+  .article-awards img, 
   .article-header-english img, 
+  .article-english, 
   .article-english-listing, 
   .article-english img, 
   .article-faculty-member-page,  
   .article-about_us img, 
   .article-media-holder, 
   .article-gpa img, 
+  .article-events,
+  .article-events-listing,  
   .article-events img, 
+  .article-camps, 
+  .article-camps-listing, 
   .article-camps img {
     width: 340px;
   }
 
+  .article-debate-listing a, 
+  .article-english-listing a, 
+  .article-announcements-listing a, 
+  .article-awards-listing a, 
+  .article-events-listing a, 
+  .article-camps-listing a {
+    width: 260px;
+  }
+  
   .article-debate img[height="837"] {
     height: 412px;
   }
@@ -3284,14 +3275,6 @@ input[name="testDate"] {
 
   .article-awards {
     min-height: 298px;
-  }
-
-  .article-awards a, 
-  .article-debate a, 
-  .article-announcements a, 
-  .article-events a, 
-  .article-camps a {
-    width: 288px;
   }
 
 
@@ -3446,29 +3429,6 @@ input[name="testDate"] {
 
   .article-faculty-row {
     margin: 0 auto 10px auto;
-  }
-
-  #article-faculty-row_1 {
-    height: 235px;
-  }
-
-  #article-faculty-row_3 {
-    height: 408px;
-  }
-
-  #article-faculty-row_4 { 
-    height: 397px;
-  }
-
-  #article-faculty-row_2, 
-  #article-faculty-row_5, 
-  #article-faculty-row_6, 
-  #article-faculty-row_7 { 
-    height: 378px;
-  }
-
-  #article-faculty-row_8 {
-    height: 364px;
   }
 
 
