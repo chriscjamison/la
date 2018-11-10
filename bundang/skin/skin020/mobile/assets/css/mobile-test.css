@@ -370,17 +370,17 @@ table.gsc-search-box td {
   padding: 0;
 }
 
-input.gsc-search-button-v2 {
-  width: 40px !important;
-  height: 40px !important;
-  padding: 9px 40px !important;
+button.gsc-search-button-v2 {
+  width: 153px !important;
+  height: 68px !important;
+  padding: 6px 27px;
   border: 5px solid #e76200 !important;
 }
 
-input.gsc-search-button, 
-input.gsc-search-button:hover, 
-input.gsc-search-button:focus {
-  box-shadow: 4px 4px 1px #2c314e;
+button.gsc-search-button, 
+button.gsc-search-button:hover, 
+button.gsc-search-button:focus {
+  box-shadow: 3px 3px 1px #2c314e;
 }
 
 #header-links, 
