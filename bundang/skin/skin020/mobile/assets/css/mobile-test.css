@@ -331,7 +331,7 @@ div#gsc-iw-id1 {
 }
 
 table.gsc-search-box:nth-child(1), 
-input.gsc-search-button-v2 {
+button.gsc-search-button-v2 {
   margin-top: 0 !important;
 }
 
@@ -345,7 +345,7 @@ td#gs_tti50 {
 }
 
 table.gsc-search-box:nth-child(1), 
-input.gsc-search-button-v2 {
+button.gsc-search-button-v2 {
   margin-top: 0 !important;
 }
 
@@ -1397,6 +1397,10 @@ input[name="testDate"] {
     background-position: -2100px -26px;
   }
 
+  .gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding-right: 4px !important;
+  }
+
   #header-search, 
   #___gcse_0, 
   div.gsc-input-box, 
@@ -1425,16 +1429,18 @@ input[name="testDate"] {
     font-size: 12px !important;
   }
 
-  input.gsc-search-button-v2 {
-    width: 13px !important;
-    height: 13px !important;
-    padding: 6px 27px !important;
+  button.gsc-search-button-v2 {
+    width: 50px !important;
+    height: 28px !important;
+    padding: 0 !important;
     border: 2px solid #e76200 !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
   }
 
-  input.gsc-search-button, 
-  input.gsc-search-button:hover, 
-  input.gsc-search-button:focus {
+  button.gsc-search-button, 
+  button.gsc-search-button:hover, 
+  button.gsc-search-button:focus {
     box-shadow: 2px 2px 1px #2c314e;
   }
 
@@ -1488,7 +1494,7 @@ input[name="testDate"] {
 
   nav, 
   #nav-sub_menu {
-    margin: 25px 15px 15px 15px;
+    margin: 25px 15px 15px 12px;
   }
 
   #nav-main_menu {
@@ -2016,6 +2022,11 @@ input[name="testDate"] {
 
   
   /* *** NAV MENUS *** */
+
+  nav, 
+  #nav-sub_menu {
+    margin: 25px 15px 15px 17px;
+  }
 
 	nav > section > div, 
   #nav-main_menu > section > div {
@@ -2600,8 +2611,20 @@ input[name="testDate"] {
     width: 345px;
   } 
     
+
+  /* *** HEADER *** */
+
+  table.gsc-search-box {
+    width: 99.3% !important;
+  }
+
   
   /* *** MAIN NAVIGATION *** */
+
+  nav, 
+  #nav-sub_menu {
+    margin: 25px 15px 15px 9px;
+  }
 
   nav > section > div, 
   #nav-main_menu > section > div {
@@ -3658,5 +3681,33 @@ input[name="testDate"] {
   .article-lessons, 
   .article-business {
     min-height: 264px;
+  }
+}
+
+
+@media screen and (width: 414px) {
+
+  /* *** HEADER *** */
+
+  table.gsc-search-box {
+    width: 99.6% !important;
+  }
+
+
+  /* *** MAIN NAVIGATION *** */
+
+  nav, 
+  #nav-sub_menu {
+    margin: 25px 15px 15px 15px;
+  }
+}
+
+@media screen and (width: 375px) and (height: 812px) {
+  
+  /* *** FOOTER *** */
+
+  footer {
+    position: absolute;
+    bottom: 0;
   }
 }
