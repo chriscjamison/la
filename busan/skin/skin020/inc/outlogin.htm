@@ -1,0 +1,133 @@
+<!--login contents 출력 start--->
+<div id="module_outlogin" style="margin:0;">
+	
+<!-- 로그인상태가 아닌경우 -->
+<!--{ ? !_ismember }-->
+<form id="loginForm" name="loginForm" method="post" action="/lib/member/process.php" onsubmit="return OutLoginProc(this);">
+<input type="hidden" name="cmd" value="login">
+<input type="hidden" name="logintype" value="member">
+<input type="hidden" name="aca_number" value="{_cfg.site.acanum}">
+<input type="hidden" name="nexturl" value="{nexturl}">
+<input type="hidden" name="domain" value="{_cfg.site.domain}">
+<input type="hidden" id="PHPSESSID" name="PHPSESSID" value="{_COOKIE.PHPSESSID}">
+<table width="200" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="22">
+						<img src="../images/title_main_login.gif" width="200" height="22" />
+					</td>
+				</tr>
+
+				<tr>
+					<td valign="top">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#ffffff;">
+							<tr>
+								<td width="200" height="22" valign="top" colspan="2" align="left"><input type="checkbox" name="ssl" id="ssl" value="ssl" checked>보안접속</label></td>
+							</tr>
+							<tr>
+								<td width="135" height="24" valign="top"><input type="text" id="member_id" name="member_id" value="{_member_id}" style="width:125px; height:20px; border: 1px solid #c5c5c5;" tabindex="1" title="로그인 아이디" /></td>
+								<td width="65" height="54"  rowspan="3" align="right" valign="top"><input type="image" src="../images/btn_main_login.gif" border="0" width="65" height="54" tabindex="3" title="로그인 버튼" /></td>
+							</tr>
+							<tr>
+								<td height="2"></td>
+							</tr>
+							<tr>
+								<td width="135" height="30" valign="top"><input type="password" id="member_passwd" name="member_passwd" class="input_month" style="width:125px; height:20px; border: 1px solid #c5c5c5;" tabindex="2"  title="로그인 패스워드" /></td>
+							</tr>
+							<tr>
+								<td width="200" height="28" valign="bottom" colspan="2">
+								<a href="javascript:winscroll('/frame?fr=memjoin','member_info_window','635','700');"><img src="../images/btn_main_join.png" alt="회원가입" border="0" style="margin-right:2px;"/></a><a href="javascript:win('/frame?fr=findid','member_find_id','383','280');"><img src="../images/btn_main_search_id_pw.png" alt="ID/PW찾기" border="0" /></a>
+								</td>
+							</tr>
+							<tr>
+								<td height="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2"><a href="../mypage/index"><img src="../images/banner_left_middle.gif" border="0"></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</form>
+<!--{ : }-->
+<!-- 로그인 상태인 경우 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+				<tr>
+					<td>
+						<img src="../images/title_main_login.gif" width="200" height="22" />
+					</td>
+				</tr>
+				<tr>
+					<td height="107" valign="top">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="200" height="69" >
+								<span class="style9"> {member_name}님, 어서오세요!</span><br/>
+								<div class="style9"><a href="javascript:winscroll('/frame?fr=meminfo','member_info_window','635','700');"><span class="style14">회원정보변경</span></a>
+								<span class="fontsiz8 style10">|</span>
+								<span class="style10"><a href="/member/logout"><span class="style14">로그아웃</span></a></span>
+								</div>
+								</td>
+								</tr>
+								<tr>
+									<td width="200" height="37" valign="bottom">
+									<a href="/mypage/"><img src="../images/btn_main_mypage.gif" alt="마이피이지" border="0" /></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<!--{ / }-->
+
+<script type="text/javascript">
+<!--
+jq(document).ready(function(){
+	if (jq('#outlogin_id').val()) {
+		jq('#outlogin_passwd').focus();
+	}
+	else {
+		if (jq('#outlogin_id'))
+			jq('#outlogin_id').focus();
+	}
+});
+
+function OutLoginProc(f)
+{
+	var v = new validator(f);
+	v.add("member_id", {label: "회원아이디",required: true,minlength: 2,maxlength: 16});
+	v.add("member_passwd", {label: "비밀번호",required: true,maxlength: 16});
+	v.add("ssl","");
+	var result = v.validate();
+	if (!result) {
+		alert(v.getErrorMessage());
+		v.getErrorElement().focus();
+		return false;
+	} else {
+	
+		if (jq("#ssl").is(":checked")){
+			if(tmpDomain==""){
+				jq("#loginForm").attr("action","/lib/member/process.php")
+			} else {
+				jq("#loginForm").attr("action","https://"+"{_cfg.site.domain}"+":448"+"{link.process}")
+			}
+		} else {
+			jq("#loginForm").attr("action","/lib/member/process.php")
+		}
+	}
+}
+//-->
+</script>
+</div>

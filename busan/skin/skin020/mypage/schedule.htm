@@ -1,0 +1,255 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					<!--{ = inc('inc/left_mypage.htm') }-->
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="images/title3.png" alt="학원생활"></td>
+								<td width="352" class="category"><img src="../images/common/ico_home.png" > HOME &gt; MYPAGE &gt; 학원생활 &gt; <strong>시간표</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="../images/sub_main.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="../images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('../images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+ <!-- S : Contents -->
+								<table width="680" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                             <td style="padding-bottom:10px;" align="left"><img src="images/title2_st8.png" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <!-- S : Contents -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#c8bd9d">
+                                <tr>
+                                  <td width="15%" align="center" bgcolor="#dbd3ba"><strong>수강반</strong></td>
+                                  <td bgcolor="#e4ddc8">
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                      <tbody id="mypage_schedule_classname"></tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="14"><img src="images/mymain_bar_l.gif"/></td>
+                                  <td width="33%" background="images/mymain_bar_bg.gif" class="style8"><strong><font color="#000">{nowdate}</font></strong></td>
+                                  <td background="images/mymain_bar_bg.gif">&nbsp;
+                                    <input type="hidden" name="c_year" id="c_year" value="{nyear}">
+                                    <input type="hidden" name="c_month" id="c_month" value="{nmonth}">
+                                  </td>
+                                  <td width="15"><img src="images/mymain_bar_r.gif"  /></td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                          <tr>
+                            <td height="20" align="right"> </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td width="13%" valign="top">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border:solid 1px #e3e3e3;">
+                                      <tbody id="mypage_schedule_timetable"></tbody>
+                                    </table>
+                                  </td>
+                                  <td width="87%" valign="top">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border:solid 1px #e3e3e3;">
+                                      <tbody id="mypage_schedule_contents"></tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                        </table>
+
+                              <!-- E : Contents -->
+                            </td>
+                          </tr>
+                        </table></td>
+			  </tr>
+			</table>
+		<!-- E : Contents -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="../images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><!--{ = inc('inc/bottom.htm') }--></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_schedule_list();
+});
+
+// 상담현황 List GET
+function get_schedule_list(classname)
+{
+	if (!classname) classname = '';
+	jq.ajax({
+		type: 'POST',
+		url: '/lib/segero/mypage_academy.php',
+		data: 'type=timetable&classname=' + classname + '&c_year=' + jq('#c_year').val() + '&c_month=' + jq('#c_month').val(),
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vtime = "<tr><td height=\"28\" align=\"center\" bgcolor=\"#dbb27d\" style=\"border:solid 1px #d0a25f;color:#5d3c1e; font-weight:bold;\">구분</td></tr>";
+			var vhead = "<tr>";
+			var vhtml = "";
+			var vweek = "";
+
+			jq('#mypage_schedule_timetable').html('');
+			jq('#mypage_schedule_contents').html('');
+
+			if (jq.isArray(response.cn)) {
+				jq(response.cn).each(function(el, vclassname) {
+					vhead += "<td align=\"center\" bgcolor=\"#FFFFFF\" class=\"" + (vclassname == classname || (vclassname == '전체' && !classname) ? "b" : "") + "\"><a href=\"javascript:get_schedule_list('" + vclassname + "');\">" + vclassname + "</a></td>";
+				});
+			} else {
+				vhead =+ "<td align=\"center\" bgcolor=\"#FFFFFF\">수강과목이 없습니다.</td>";
+			}
+			vhead += "</tr>";
+			jq("#mypage_schedule_classname").html(vhead);
+
+			if (response.cnt > 0) {
+				for (var i=0; i < response.cnt; i++) {
+					vtime += "<tr><td height=\"112\" bgcolor=\"#ffffff\">"
+						  +  "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"1\" bgcolor=\"#ccc3a9\">"
+						  +  "<tr><td height=\"112\" rowspan=\"4\" bgcolor=\"#d5ccb2\" align=\"center\" style=\"border-bottom:solid 1px #ccc3a9;\">" + parseInt(i + 1) + "<br>교<br>시</td><td height=\"28\" bgcolor=\"#f9f6ef\" align=\"center\"><strong>과목명</strong></td></tr>"
+						  +  "<tr><td height=\"28\" bgcolor=\"#f9f6ef\" align=\"center\"><strong>담당교사</strong></td></tr>"
+						  +  "<tr><td height=\"28\" bgcolor=\"#f9f6ef\" align=\"center\"><strong>수업시간</strong></td></tr>"
+						  +  "<tr><td height=\"28\" bgcolor=\"#f9f6ef\" align=\"center\"><strong>강의실</strong></td></tr>"
+						  +  "</table></td></tr>";
+				}
+			} else {
+				vtime += "";
+			}
+			jq('#mypage_schedule_timetable').append(vtime);
+
+			// 일~월까지 loop
+			var weekname = new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일");
+			vweek += "<tr>";
+			for (var i=0; i < weekname.length; i++) {
+				vweek += "<td width=\"14%\" height=\"112\" bgcolor=\"#ffffff\" valign=\"top\">"
+					  +  "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"
+					  +  "<tr><td height=\"28\" align=\"center\" bgcolor=\"#dbb27d\" style=\"border:solid 1px #d0a25f; color:#5d3c1e; font-weight:bold;\">" + weekname[i] + "</td></tr>"
+					  +  "<tr><td height=\"112\" bgcolor=\"#ffffff\" align=\"center\" valign=\"top\">"
+					  +  "<table width=\"100%\" height=\"112\" border=\"0\" cellpadding=\"0\" cellspacing=\"1\" bgcolor=\"#e3e3e3\">";
+				if (jq.isArray(response.rc)) {
+					jq(response.rc).each(function(el, data) {
+						if (weekname[i] == data.week) {
+							if (jq.isArray(data.table)) {
+								jq(data.table).each(function(el2, data2) {
+									vweek += "<tr><td height=\"28\" bgcolor=\"#ffffff\" align=\"center\">" + (data2.subject!=null ? data2.subject : "&nbsp;") + "</td></tr>";
+									vweek += "<tr><td height=\"28\" bgcolor=\"#ffffff\" align=\"center\">" + (data2.teacher!=null ? data2.teacher : "&nbsp;") + "</td></tr>";
+									vweek += "<tr><td height=\"28\" bgcolor=\"#ffffff\" align=\"center\">" + (data2.rtime!=null ? data2.rtime : "&nbsp;") + "</td></tr>";
+									vweek += "<tr><td height=\"28\" bgcolor=\"#ffffff\" align=\"center\">" + (data2.classroom!=null ? data2.classroom : "&nbsp;") + "</td></tr>";
+								});
+							} else {
+
+							}
+						}
+					});
+				} else {
+
+				}
+				vweek += "</table>"
+					  +  "</td></tr>"
+					  +  "</table>"
+					  +  "</td>";
+			}
+			vweek += "</tr>";
+			jq('#mypage_schedule_contents').append(vweek);
+
+			if (jq.isArray(response.rc)) {
+				jq(response.rc).each(function(el, data) {
+					vhtml += "<tr align=\"center\">"
+						   + "<td height=\"28\">" + data.seq + "</td>"
+						   + "<td>" + data.rdate + "</td>"
+						   + "<td>" + data.classname + "</td>"
+						   + "<td>" + (data.subject ? data.subject : "-") + "</td>"
+						   + "<td align=\"left\"><a href=\"javascript:winscroll('/mypage/progress_view?seq=" + data.series + "','mypage_chart_detail','468','400')\">" + data.task + "</a></td>"
+						   + "</tr>"
+						   + "<tr><td height=\"1\" colspan=\"3\" bgcolor=\"#eaeaea\"></td></tr>";
+				});
+			} else {
+				vhtml += "<tr><td height=\"28\" colspan=\"3\" align=\"center\">등록된 글이 없습니다.</td></tr>"
+					   + "<tr><td height=\"1\" colspan=\"3\" bgcolor=\"#eaeaea\"></td></tr>";
+			}
+
+			jq("#mypage_schedule").html(vhtml);
+		}
+	});
+}
+</script>
+
+{ # footer }

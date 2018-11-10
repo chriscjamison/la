@@ -1,0 +1,216 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					<!--{ = inc('inc/left_mypage.htm') }-->
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="images/title4.png" alt="학원생활"></td>
+								<td width="352" class="category"><img src="../images/common/ico_home.png" > HOME &gt; MYPAGE &gt; 성적조회 &gt; <strong>평가분석</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="../images/sub_main.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="../images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('../images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+ <!-- S : Contents -->
+								<table width="680" border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+									<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+											  <tr>
+											   <td style="padding-bottom:20px;" align="left"><img src="images/title2_st20.png" /></td>
+											  </tr>
+											  <tr>
+												<td>
+												<!-- S : Contents -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="14">
+                                                                            <img src="images/mymain_bar_l.gif" />
+                                                                        </td>
+                                                                        <td width="33%" background="images/mymain_bar_bg.gif" class="">
+                                                                          <strong><font color="#000">{nowdate}</font></strong>
+                                                                        </td>
+                                                                        <td width="80%" align="right" background="images/mymain_bar_bg.gif" class="">
+                                                                            	 기간 :
+<input name="s_date" type="text" id="s_date" size="15" value="{s_date}" class="{minDate: new Date()} picdate" /> ~ <input name="e_date" type="text" id="e_date" size="15" value="{e_date}" class="picdate" />
+																				 <img src="../images/common/btn_search.gif" align="absmiddle"  class="hand" onclick="get_grade_estimate_list(1);"/>
+                                                                        </td>
+                                                                        <td width="15">
+                                                                            <img src="images/mymain_bar_r.gif"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="20" align="right">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td height="2" colspan="4" bgcolor="#bda979">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td width="10%" align="center" bgcolor="#dbd3ba" class="style5">
+                                                                            <strong>번호</strong>
+                                                                        </td>
+                                                                        <td width="28%" align="center" bgcolor="#dbd3ba" class="style5">
+                                                                            <strong>반명</strong>
+                                                                      </td>
+                                                                        <td width="28%" height="28" align="center" bgcolor="#dbd3ba" class="style5">
+                                                                            <strong>날짜</strong>
+                                                                      </td>
+                                                                        <td width="28%" align="center" bgcolor="#dbd3ba" class="style5">
+                                                                            <strong>담임명</strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                      <tr>
+                                                                        <td height="1" colspan="4" bgcolor="#bda979">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tbody id="grade_estimate">
+                                                                    </tbody>
+                                                                    <tr>
+                                                                        <td height="40" colspan="4" align="center">
+                                                                            <div id="pager">
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                              <!-- E : Contents -->
+												</td>
+											  </tr>
+											</table>
+
+                            </td>
+			  </tr>
+			</table>
+		<!-- E : Contents -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="../images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><!--{ = inc('inc/bottom.htm') }--></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+
+<input type="hidden" id="page" />
+<input type="hidden" id="pagetotal" />
+<input type="hidden" id="pagecount" />
+
+<script type="text/javascript">
+jq(document).ready(function() {
+	jq('.picdate').datepick({showOn: 'focus', buttonImageOnly: false, duration:'fast', buttonImage: '/skin/img/calendar.gif',showMonthAfterYear: true});
+	get_grade_estimate_list(1);
+	set_pager(1);
+});
+
+// 상담현황 List GET
+function get_grade_estimate_list(page)
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_grade.php",
+		data: 'type=estimate&s_date=' + jq('#s_date').val() + '&e_date=' + jq('#e_date').val() + '&page=' + page,
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vhtml = "";
+			jq('#pagetotal').val(parseInt(response.total));
+			if (jq.isArray(response.rc)) {
+				jq(response.rc).each(function(el, data) {
+					vhtml += "<tr align=\"center\">"
+						   + "<td height=\"28\">" + data.seq + "</td>"
+						   + "<td>" + data.classname + "</td>"
+						   + "<td><a href=\"javascript:winscroll('/mypage/grade_estimate_view?seq=" + data.series + "&teacher=" + data.teacher + "&classid=" + data.classid + "&classname=" + data.classname + "&rdate=" + data.rdate +"','grade_estimate_detail','668','600')\">" + data.rdate + "</a></td>"
+						   + "<td>" + data.teacher + "</td>";
+						   + "</tr>"
+						   + "<tr><td height=\"1\" colspan=\"4\" bgcolor=\"#cac0a9\"></td></tr>";
+				});
+			} else {
+				vhtml += "<tr><td height=\"28\" colspan=\"4\" align=\"center\">등록된 글이 없습니다.</td></tr>"
+					   + "<tr><td height=\"1\" colspan=\"4\" bgcolor=\"#cac0a9\"></td></tr>";
+			}
+
+			jq("#grade_estimate").html(vhtml);
+			set_pager(page, response.total);
+		}
+	});
+}
+
+function set_pager(page, total)
+{
+	var pagecount = getPageCount(total, 10);
+	jq('#pagecount').val(pagecount);
+	jq("#pager").pager({ pagenumber: page, pagecount: pagecount, buttonClickCallback: get_grade_estimate_list });
+}
+</script>
+
+{ # footer }

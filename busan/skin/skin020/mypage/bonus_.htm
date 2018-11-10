@@ -1,0 +1,148 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" background="../images/common/bg_sub.gif" valign="top"><!--TopMenu-->
+		<table width="1024" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="center" class="topmenu"><!--S:상단메뉴-->
+		  <!--{ = inc('inc/top.htm') }-->
+		  <!--E:상단메뉴--></td>
+		  </tr>
+		</table>
+    <!--TopMenu-->
+    <!--Contents-->
+	<table width="1024" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="250" valign="top" style="padding-left:15px;"> <!-- S:LEFT AREA-->
+            <!--{ = inc('inc/left_mypage.htm') }-->
+            <!-- E:LEFT AREA--></td>
+        <td width="759" valign="top" style="padding-bottom:40px;">
+		<!--소타이틀-->
+			<table width="735" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td width="414" height="35" valign="top"><img src="images/title3.png" alt="학원생활"></td>
+				<td width="321" class="category">ㆍHOME &gt; MYPAGE &gt; 학원생활 &gt; <strong>보너스랭킹</strong></td>
+			  </tr>
+			  <tr>
+				<td height="2" colspan="2" background="../images/common/bg_titline.gif"></td>
+			  </tr>
+			</table>
+		<!--소타이틀-->
+        <!--내용시작-->
+			<table width="735" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                           <td style="padding-bottom:20px;"><img src="images/title2_st16.gif" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <!-- S : Contents -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td height="2" colspan="5" bgcolor="#1668b4">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="10%" align="center" bgcolor="#f4f4f4">
+                                                                <span class="style5">번호</span>
+                                                            </td>
+                                                            <td width="55%" align="center" bgcolor="#f4f4f4" class="style5">
+                                                                <strong>보너스항목</strong>
+                                                            </td>
+                                                            <td width="15%" align="center" bgcolor="#f4f4f4" class="style5">
+                                                                <strong>받은일자</strong>
+                                                            </td>
+                                                            <td width="10%" height="28" align="center" bgcolor="#f4f4f4" class="style5">
+                                                                <strong>보너스점수</strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tbody id="mypage_bonus">
+                                                        </tbody>
+                                                        <tr>
+                                                            <td height="40" colspan="4" align="center">
+                                                                <div id="pager">
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                              <!-- E : Contents -->
+                            </td>
+                          </tr>
+                        </table></td>
+			  </tr>
+			</table>
+		<!--내용끝-->
+		</td>
+	</tr>
+</table>    
+<!--Contents-->
+
+ <!----S: FOOTER ----->
+      <!--{ = inc('inc/bottom.htm') }-->
+      <!----E: FOOTER ----->
+   </td>
+  </tr>
+</table>
+
+  </td>
+  </tr>
+</table>
+<input type="hidden" id="page" />
+<input type="hidden" id="pagetotal" />
+<input type="hidden" id="pagecount" />
+
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_bonus_list(1);
+	set_pager(1);
+});
+
+// 상담현황 List GET
+function get_bonus_list(page)
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_service.php",
+		data: 'type=bonus&page=' + page,
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vhtml = "";
+			jq('#pagetotal').val(parseInt(response.total));
+			jq('#mypage_month_total').text(number_format(parseInt(response.month_point)));
+			jq('#mypage_bonus_total').text(number_format(parseInt(response.total_point)));
+			if (response.rc.length > 1) {
+				jq(response.rc).each(function(el, data) {
+					vhtml += "<tr align=\"center\">"
+						   + "<td height=\"28\">" + data.seq + "</td>"
+						   + "<td align=\"left\">" + data.subject + "</td>"
+						   + "<td>" + data.rdate+ "</td>"
+						   + "<td>" + data.point + "</td>"
+						   + "</tr>"
+						   + "<tr><td height=\"1\" colspan=\"5\" bgcolor=\"#eaeaea\"></td></tr>";
+				});
+			} else {
+				vhtml += "<tr><td height=\"28\" colspan=\"5\" align=\"center\">등록된 글이 없습니다.</td></tr>"
+					   + "<tr><td height=\"1\" colspan=\"5\" bgcolor=\"#eaeaea\"></td></tr>";
+			}
+
+			jq("#mypage_bonus").html(vhtml);
+			set_pager(page, response.total);
+		}
+	});
+}
+
+function set_pager(page, total)
+{
+	var pagecount = getPageCount(total, 10);
+	jq('#pagecount').val(pagecount);
+	jq("#pager").pager({ pagenumber: page, pagecount: pagecount, buttonClickCallback: get_bonus_list });
+}
+</script>
+
+{ # footer }

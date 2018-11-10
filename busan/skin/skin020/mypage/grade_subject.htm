@@ -1,0 +1,233 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					<!--{ = inc('inc/left_mypage.htm') }-->
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="images/title3.png" alt="학원생활"></td>
+								<td width="352" class="category"><img src="../images/common/ico_home.png" > HOME &gt; MYPAGE &gt; 학원생활 &gt; <strong>Quarterly Report</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="../images/sub_main.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="../images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('../images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+ <!-- S : Contents -->
+								<table width="680" border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+									<td style="padding:20px 0 ;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+											  <tr>
+											   <td style="padding-bottom:20px;" align="left"><img src="images/title2_st19.png" /></td>
+											  </tr>
+											  <tr>
+												<td>
+												<!-- S : Contents -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" border="0" cellpadding="10" cellspacing="1" bgcolor="#ccc3a9">
+                                                                    <tr>
+                                                                        <td bgcolor="#ebe6d9">
+                                                                            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#d4cdb9">
+                                                                                <tr>
+                                                                                    <td align="center" bgcolor="#faf7ef" class="style5">
+                                                                                        <span class="style9"><strong>기간</strong></span>
+                                                                                    </td>
+                                                                                    <td bgcolor="#FFFFFF">
+                                                                                        <input type="text" name="s_date" id="s_date" size="10" class="{minDate: new Date()} picdate" />
+												                                          ~
+												                                          <input type="text" name="e_date" id="e_date" size="10" class="{minDate: new Date()} picdate" />
+																						  <span class="left5px">
+												                                            <select id="s_category" name="s_category" class="selbox" style="width:200px;"></select>
+																							<a href="#"><img src="../images/common/btn_search.gif" align="absmiddle" class="hand" onclick="get_grade_subject_list();" /></a>
+																					      </span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="15%" align="center" bgcolor="#faf7ef" class="style5">
+                                                                                        <span class="style9"><strong>과목</strong></span>
+                                                                                    </td>
+                                                                                    <td width="75%" bgcolor="#FFFFFF">
+                                                                                        <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                                                            <tr>
+                                                                                                <td id="grade_subject">
+                                                                                                </td>
+
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">
+                                                                <div id="grade_graph"></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                              <!-- E : Contents -->
+												</td>
+											  </tr>
+											</table>
+
+                            </td>
+			  </tr>
+			</table>
+		<!-- E : Contents -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="../images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><!--{ = inc('inc/bottom.htm') }--></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+
+<input type="hidden" name="sel_category" id="sel_category">
+<script type="text/javascript" src="/js/FusionCharts.js"></script>
+<script type="text/javascript">
+jq(document).ready(function() {
+	jq('.picdate').datepick({showOn: 'focus', buttonImageOnly: false, duration:'fast', buttonImage: '/skin/img/calendar.gif',showMonthAfterYear: true});
+	get_grade_subject_list();
+});
+
+var xmlData;
+function get_grade_subject_list(sn){
+	if(sn){
+		sn= escape(sn);
+	}
+
+	var chart1 = new FusionCharts("/lib/chart/MSColumn2D.swf", "CapacityChart", "100%", "200", "0", "1");
+	jq('#sel_category').val(jq('#s_category').val());
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_grade.php",
+		data:{
+			type:'subject',
+			s_date:jq('#s_date').val(),
+			e_date:jq('#e_date').val(),
+			category:(jq('#s_category').val()!=null ? jq('#s_category').val() : ""),
+			subject:sn
+		},
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vhtml = "";
+			jq('#s_category').html('');
+			if (jq.isArray(response.ct)) {
+				jq(response.ct).each(function(el, category) {
+					jq('#s_category').append("<option value=\"" + category + "\" " + (jq('#sel_category').val() && jq('#sel_category').val()==category ? "selected" : "") + ">" + category.replace("[space]"," ") + "</option>");
+				});
+			}
+
+			if (jq.isArray(response.sb)) {
+				jq('#grade_subject').html('');
+				jq(response.sb).each(function(el2, subject) {
+					jq('#grade_subject').append("<div class=\"hand divblock " + (response.rc.subject==subject?"b":"") + "\" onclick=\"get_grade_subject_list('" + subject + "');select_subject(this);\">" + subject + "</div>");
+				});
+			} else {
+				jq('#grade_subject').html('');
+				jq('#grade_subject').append("<div class=\"hand divblock " + (response.rc.subject==response.sb?"b":"") + "\" onclick=\"get_grade_subject_list('" + response.sb + "');select_subject(this);\">" + response.sb + "</div>");
+			}
+
+			xmlData = "<chart palette='2'  shownames='1' showvalues='1' decimals='0'><categories>";
+			if (jq.isArray(response.rc.label)) {
+				jq(response.rc.label).each(function(el3, labels) {
+					xmlData += "<category label='" + labels + "' />";
+				});
+			} else {
+				xmlData += "<category label='" + response.rc.label + "' />";
+			}
+			xmlData += "</categories>";
+			xmlData += "<dataset seriesName='" + response.rc.subject + "' color='#AFD8F8' showValues='1'>";
+			if (jq.isArray(response.rc.point)) {
+				jq(response.rc.point).each(function(el4, points) {
+					xmlData += "<set value=\""+ points +"\" />";
+				});
+			} else {
+				xmlData += "<set value=\""+ response.rc.point +"\" />";
+			}
+			xmlData += "</dataset>";
+			xmlData += "<styles><definition><style name='CaptionFont' type='FONT' face='Verdana' size='12' color='#7D8892' bold='0' />"
+					+ "<style name='LabelFont' type='FONT' face='돋움' size='12' color='#7D8892' bold='0'/></definition>"
+					+ "<application><apply toObject='DATALABELS' styles='LabelFont' /><apply toObject='CAPTION' styles='CaptionFont' /></application></styles>"
+					+ "</chart>";
+			chart1.setTransparent();
+			chart1.setDataXML(xmlData);
+			chart1.render("grade_graph");
+		}
+	});
+}
+
+function select_subject(obj)
+{
+	jq('.divblock').removeClass('b');
+	jq(obj).addClass("hand divblock b");
+}
+</script>
+
+{ # footer }

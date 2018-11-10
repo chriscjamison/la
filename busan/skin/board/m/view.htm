@@ -1,0 +1,306 @@
+<!-- 게시판 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="board.css">
+<script type="text/javascript" src="/js/validate.js"></script>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<!-- 게시글 제목출력 -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bbs_tbl_title">
+				<tr>
+					<td>
+						<!--{ ? mcategory }--><span class="bbs_small">[{mcategory}]</span><!--{ / }-->
+						{title}
+					</td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="100" height="28" align="center"  class="bbs_small_b">작성자</td>
+					<td width="21" align="center"><img src="img/spot_gray.gif" width="1" height="10"></td>
+					<td class="bbs_small_gray">
+						{mname}
+						<!-- 이메일 출력시 -->
+						<!--{ ? bbs.email_view }--> (<a href="mailto:{memail}">{memail}</a>)<!--{ / }-->
+					</td>
+
+					<!-- 조회수 출력시 -->
+					<!--{ ? bbs.hit_view }-->
+					<td width="100" align="center"  class="bbs_small_b">조회수</td>
+					<td width="21" align="center"><img src="img/spot_gray.gif" width="1" height="10"></td>
+					<td width="100" class="bbs_small_gray">{hit}</td>
+					<!--{ / }-->
+
+					<!-- 작성일 출력시 -->
+					<!--{ ? bbs.date_view }-->
+					<td width="100" align="center" class="bbs_small_b">작성일</td>
+					<td width="21" align="center"><img src="img/spot_gray.gif" width="1" height="10"></td>
+					<td width="120" class="bbs_small_gray">{regdate}</td>
+					<!--{ / }-->
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0" height="1"></td>
+	</tr>
+	<style>
+	.nodrag{
+		-ms-user-select: none; 
+		-moz-user-select: -moz-none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;	
+	}
+	</style>
+	<tr>
+		<td>
+			<!-- 본문 출력 -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td style="word-wrap:break-word;word-break:break-all;padding:10px;" class="nodrag">
+						{contents}
+
+						<!-- 아이피 출력시 -->
+						<!--{ ? bbs.ip_view }--><div class="bbs_right bbs_small_gray">IP : {ip}</div><!--{ / }-->
+					</td>
+				</tr>
+			</table>
+
+			<!-- 첨부파일 출력 -->
+			<!--{ ? upload }-->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td style="padding-left:25px;" bgcolor="#F5F5F5" height="35">
+						<span class="bbs_small_b">첨부파일</span> : {upload}개
+						<!--{ @ upfiles }-->
+						<div class="bbs_small">- <a href="{link.download}?p={.flink}">{.fname}</a></div>
+						<!--{ / }-->
+					</td>
+				</tr>
+			</table>
+			<!--{ / }-->
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e0e0e0" height="1"></td>
+	</tr>
+	<!--{ ? extra }-->
+	<!--추가입력항목이 있는경우-->
+	<tr>
+		<td>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" class="bbs_tbl_form">
+				<colgroup>
+					<col width="130px"/>
+					<col width=""/>
+				</colgroup>
+				<tbody>
+				<!--{ @ addform }-->
+				<tr>
+					<th>{.addname}</th>
+					<td>{.addvalue}</td>
+				</tr>
+				<!--{ / }-->
+				</tbody>
+			</table>
+		</td>
+	</tr>
+	<!--{ / }-->
+</table>
+<br>
+
+<!-- 댓글 -->
+<!--{ ? bbs.bbs_comment && allow_comment }-->
+<table width="100%" cellpadding=0 cellspacing=0 class="board_comment">
+	<tr>
+		<td style="padding:10px">
+		<a onClick="setCommentDisplay()" style="cursor:pointer"><img src="/skin/img/icon_open.gif" class="img" id='img_comment'> 댓글 <span class="count">{comment}</span></a>
+		</td>
+	</tr>
+	<tr>
+		<td><div id="comment_area" class="comment_area" style="display:none">{#tpl_comment}</div></td>
+	</tr>
+</table>
+<!--{ / }-->
+<!--// 댓글 -->
+
+<!-- 버튼 출력 -->
+<div class="bbs_button" style="float:left;">
+        <a href="{link.list}"><img src="img/btn_list.gif" alt="목록" /></a>
+</div>
+<div class="bbs_button" style="text-align:right;">
+        <a href="{link.modify}"><img src="img/btn_modify.gif" title="수정"></a>
+        <!-- 답변 권한이 있는 경우에만 답변 버튼 출력 -->
+        <!--{ ? priv_reply }-->
+        <a href="{link.reply}"><img src="img/btn_reply.gif" title="답변"></a>
+        <!--{ / }-->
+        <!-- 삭제 권한이 있는 경우에만 삭제 버튼 출력 -->
+        <!--{ ? priv_delete }-->
+        <a href="{link.delete}"><img src="img/btn_delete.gif" title="삭제"></a>	
+		<!--{ : }-->
+		<?if({member_name}=={mname}){?>
+        <a href="{link.delete}"><img src="img/btn_delete.gif" title="삭제"></a>
+		<?}?>
+        <!--{ / }-->
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+jq(document).ready(function() {
+	loadComment();
+});
+
+//코멘트 리스트 로드
+function loadComment() {
+	jq('#comment_area').load('{link.comment}',{bbs_id:'{bbs_id}',bbs_seq:'{bbs_seq}'}, function(e) {
+		jq('#loading_container').remove();
+	});	
+}
+
+//코멘트 수정창 세팅
+function setModify(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+
+	jq('input[name=cname]').val(jq('#cname_val_'+seq).html());
+	jq('textarea[name=comment]').val(jq('#comment_val_'+seq).val());
+	jq('input[name=mode]').val('modify');
+	jq('input[name=cseq]').val(seq);
+
+	//폼출력
+	tpl_write.show();
+	tpl_delete.hide();
+	place.append(tpl_write);	
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 삭제창 세팅
+function setDelete(seq, cur) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#write_'+seq);
+	var btn = jq('#btn_cancel_'+seq);
+	if (cur==1) {
+		jq('#tpl_delete_input').hide();	
+		jq('input[name=delete_passwd]').removeAttr('blankText');
+	}
+	else {
+		jq('#tpl_delete_input').show();	
+		jq('input[name=delete_passwd]').attr('blankText','비밀번호를 입력하세요.');
+		jq('input[name=delete_passwd]').focus();
+	}
+
+	tpl_delete.show();
+	tpl_write.hide();
+	place.append(tpl_delete);		
+	jq('input[name=mode]').val('delete');
+	jq('input[name=cseq]').val(seq);
+	jq('#btn_cancel_'+_NOW_SEQ).hide();
+	_NOW_SEQ=seq;
+	btn.show();	
+}
+
+//코멘트 수정,삭제 취소
+function setCancel(seq) {
+	var tpl_delete = jq('#tpl_delete');
+	var tpl_write = jq('#tpl_write');
+
+	var place = jq('#area_write');
+	var btn = jq('#btn_cancel_'+seq);
+	place.append(tpl_write);
+	tpl_delete.hide();
+	tpl_write.show();
+	btn.hide();
+
+	//데이터 리셋
+	jq('#commentForm').resetForm();
+}
+
+
+//코멘트 저장(등록,수정)처리
+function exeSave() {
+	var frm = jq('#tpl_write [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크	
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'{link.process}',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+//코멘트삭제처리
+function exeDelete(seq) {
+	var frm = jq('#tpl_delete [blankText]');
+	var el;
+	var valid=(frm.length>0)?false:true;
+
+	//폼체크
+	frm.each(function(i,e){		
+		el = jq(e);
+		if (!el.val()) {
+			alert(el.attr('blankText'));
+			el.focus();
+			valid=false
+			return false;
+		}	
+		valid=true;
+	});
+
+	if (valid) {
+		var data = {
+			'delete_passwd':jq('input[name=delete_passwd]').val()
+		}
+		jq('#commentForm').ajaxSubmit({
+			type:'POST',
+			dataType:'json',
+			url:'{link.process}',
+			data: data,
+			success : function(rs,status) {
+				if (rs.result == 'error') {
+					alert(rs.msg);
+				}
+				else {
+					loadComment();
+				}								
+			}
+		});
+	}
+}
+
+
+//-->
+</script>

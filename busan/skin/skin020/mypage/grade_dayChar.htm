@@ -1,0 +1,92 @@
+{=inc('inc/popup_top.htm') } <!-- 팝업용 header -->
+<table width="650" height="500" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding:15px;" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td height="29"><img src="images/title2_st18.gif" width="116" height="15" /></td>
+       </tr>
+       <tr>
+    <td height="2" bgcolor="8a1839"></td>
+      </tr>
+       <tr>
+    <td height="10"></td>
+       </tr>  
+ 
+        <tr>
+          <td height="25"><span class="Orange11px style1 style3" id="chartitle"></span></td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="dedede">
+            <tr>
+              <td width="20%" align="center" bgcolor="f7f7f7"><strong class="style1">반명</strong></td>
+              <td width="30%" bgcolor="#FFFFFF" class="style2" id="grade_classname"></td>
+            <td width="20%" align="center" bgcolor="f7f7f7"><strong class="style1">이름</strong></td>
+              <td width="30%" bgcolor="#FFFFFF" class="style2" id="grade_name"></td>
+            </tr>
+
+          </table></td>
+        </tr> 
+         <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="dedede">
+            <tr>
+              <td width="25%" align="center" bgcolor="f7f7f7" class="style1"><strong>Date</strong></td>
+              <td width="25%" align="center" bgcolor="f7f7f7" class="style1"><strong>과목명</strong></td>
+              <td width="25%" align="center" bgcolor="f7f7f7" class="style1"><strong>점수</strong></td>
+            </tr>
+			<tbody id="grade_dailyChar_info">
+
+			</tbody>           
+
+          </table></td>
+        </tr> 
+        <tr>
+            <td height="20"></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="eaeaea" align="right" style="padding-right:10px;"><a href="javascript:window.close();"><img src="../images/common/btn_close.gif" width="50" height="23"  border="0"/></a></td>
+  </tr>
+</table>
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_grade_detail();
+});
+
+function get_grade_detail()
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_grade.php",
+		data: 'type=dailyChar&seq={_GET.seq}',
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(response) {
+			var vhtml = "";
+			var vopinion = "";
+			var tepinion = "";
+			jq('#chartitle').text(response.info.rtitle);
+			jq('#grade_classname').text(response.info.classname);
+			jq('#grade_name').text(response.info.rname);
+
+			if (jq.isArray(response.rc)) {
+				jq(response.rc).each(function(el, data) {
+					vhtml += "<tr align=\"center\">"
+						   + "<td height=\"28\" bgcolor=\"#FFFFFF\">" + data.rDate + "</td>"
+						   + "<td bgcolor=\"#FFFFFF\">" + data.Seriesname + "</td>"
+						   + "<td bgcolor=\"#FFFFFF\">" + data.Point + "</td>"
+						   + "</tr>";
+					vtitle = data.Ctitle;
+				});
+			}
+			jq("#grade_dailyChar_info").html(vhtml);
+		}
+	});
+}
+</script>
+</body>
+</html>
+

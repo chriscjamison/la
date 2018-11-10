@@ -1,0 +1,244 @@
+{ # header }
+
+<!-- 회원인증:삭제금지 -->
+{ = checklogin() }
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" class="bg_tops" height="81">
+
+			<!--TopMenu-->
+			<table width="1024" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center" valign="top"><!--S:상단메뉴--><!--{ = inc('inc/top.htm') }--><!--E:상단메뉴--></td>
+				</tr>
+			</table>
+			<!--TopMenu-->
+
+			<!--Contents-->
+			<table width="960" border="0" cellspacing="0" cellpadding="0" class="aleft">
+				<tr>
+					<td width="208" valign="top">
+					<!-- S:LEFT AREA-->
+					<!--{ = inc('inc/left_mypage.htm') }-->
+					<!-- E:LEFT AREA-->
+					</td>
+					<td width="752" valign="top" style="padding-bottom:40px;">
+						<!--소타이틀-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="16" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="400" height="30"><img src="images/title1_1.png" alt="마이페이지"></td>
+								<td width="352" class="category"><img src="../images/common/ico_home.png" > HOME >  <strong>마이페이지</strong></td>
+							</tr>
+							<tr>
+								<td height="8" colspan="2"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="1" colspan="2" bgcolor="#d9d9d9"></td>
+							</tr>
+							<tr>
+								<td height="19" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding-bottom:10px"><img src="../images/sub_main.png"></td>
+							</tr>
+						</table>
+						<!--소타이틀-->
+						<!--내용시작-->
+						<table width="752" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="../images/contents_bg_top.png"></td>
+							</tr>
+							<tr>
+								<td style="background:url('../images/contents_bg.png') repeat-y 0 0; padding-right:20px;" align="center">
+ <!-- S : Contents -->
+			<table width="680" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td colspan="2" style="padding:20px 0 10px 0;" align="left"><img src="images/title1_st4.png" /></td>
+		      </tr>
+              <tr>
+				<td style="padding:10px 0;" width="70%" align="left"> <span class="style17">ㆍ기본정보 수정을 원하시면, "정보수정"버튼을 눌러 주세요.</span></td>
+				<td align="right"><a href="javascript:winscroll('/frame?fr=meminfo','member_info','635','700')"><img src="../images/common/btn_modify.png" hspace="6" border="0" align="absmiddle" /></a></td>
+			  </tr>
+              <tr>
+                <td colspan="2" ><table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#d0a25f">
+                                                                                            <tr>
+                                                                                                <td width="30%" align="center"  bgcolor="#dbb27d" class="style5">
+                                                                                                    <span class="style19">아이디</span>
+                                                                                                </td>
+                                                                                                <td width="30%" align="center" b bgcolor="#dbb27d" class="style5">
+                                                                                                    <span class="style19">이름</span>
+                                                                                              </td>
+                                                                                                <td align="center"  bgcolor="#dbb27d" class="style5">
+                                                                                                    <span class="style19">이메일</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                                                    {member_id}
+                                                                                                </td>
+                                                                                                <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                                                    {member_name}
+                                                                                              </td>
+                                                                                                <td align="center" bgcolor="#FFFFFF" class="style17">
+                                                                                                    {member_email}
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table></td>
+              </tr>
+              <tr>
+			    <td colspan="2" style="padding:20px 0 20px 0;" align="left"><img src="images/title1_st5.png" /></td>
+		      </tr>
+              <tr>
+				<td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="14">
+                                                                            <img src="images/mymain_bar_l.gif"/>
+                                                                        </td>
+                                                                        <td width="33%" background="images/mymain_bar_bg.gif" class="style13">
+                                                                            <strong>{nowdate}</strong>
+                                                                        </td>
+                                                                        <td width="33%" align="center" background="images/mymain_bar_bg.gif" class="style13">
+                                                                            <strong>학원생활 요약</strong>
+                                                                        </td>
+                                                                        <td width="33%" background="images/mymain_bar_bg.gif">&nbsp;
+
+                                                                        </td>
+                                                                        <td width="15">
+                                                                            <img src="images/mymain_bar_r.gif"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table></td>
+			  </tr>
+              <tr>
+				<td colspan="2" style="padding:10px 0;"><table width="100%" border="0" cellpadding="5" cellspacing="1"  bgcolor="#ccc3a9">
+
+                                                                    <tr>
+                                                                        <td width="25%" align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">출결현황</span>
+                                                                        </td>
+                                                                        <td width="25%" align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">출입현황</span>
+                                                                        </td>
+                                                                        <td width="25%" align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">상담현황</span>
+                                                                        </td>
+                                                                        <td width="25%" align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">보강현황</span>                                                                  </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="attend_info"></span>
+                                                                        </td>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="inout_info"></span>
+                                                                      </td>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="counsel_info"></span>
+                                                                      </td>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                        <span id="supple_info"></span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">읽지않은메일</span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">미납/납입내역</span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">총보너스</span>
+                                                                        </td>
+                                                                        <td align="center" bgcolor="#f9f6ef" style="font-weight:bold;">
+                                                                            <span class="style20">과제물</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="mail_info"></span>
+                                                                        </td>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="onlinetest_info"></span>
+                                                                        </td>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="bonus_info"></span> 점
+                                                                        </td>
+                                                                        <td height="28" align="center" bgcolor="#FFFFFF" class="style17">
+                                                                            <span id="homework_info"></span>
+                                                                        </td>
+                                                                    </tr>
+                </table></td>
+			  </tr>
+
+			</table>
+		<!-- E : Contents -->
+								</td>
+							</tr>
+							<tr>
+								<td><img src="../images/contents_bg_bottom.png"></td>
+							</tr>
+						</table>
+						<!--내용끝-->
+					</td>
+				</tr>
+			</table>
+			<!--Contents-->
+
+			<!----S: FOOTER ----->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="copy">
+				<tr>
+					<td align="center" valign="top"><!--{ = inc('inc/bottom.htm') }--></td>
+				</tr>
+			</table>
+			<!----E: FOOTER ----->
+
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+    jq(document).ready(function(){
+        jq.ajax({
+            type: 'POST',
+            url: "/lib/segero/mypage_summary.php",
+            data: 'type=summary',
+            dataType: 'json',
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                alert("통신 중 에러가 발생했습니다.");
+            },
+            success: function(data){
+                jq("#attend_info").text(data.attend_info);
+                jq("#inout_info").text(data.inout_info);
+                jq("#counsel_info").text(data.counsel_info);
+                jq("#supple_info").text(data.supple_info);
+                jq("#mail_info").text(data.mail_info);
+                jq("#onlinetest_info").text(data.onlinetest_info);
+                jq("#bonus_info").text(data.bonus_info);
+                jq("#homework_info").text(data.homework_info);
+            }
+        });
+        /*
+         jq.ajax({
+         type: 'POST',
+         url: "/lib/segero/mypage_summary.php",
+         data: 'type=notice',
+         dataType: 'json',
+         error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+         success: function(response) {
+         var vhtml = "<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"";
+         jq(response).each(function (el, data) {
+         vhtml += "<tr>"
+         + "<td>" + data.title + "</td>"
+         + "<td>" + data.regdate + "</td>"
+         + "</tr>";
+         });
+         vhtml += "</table>";
+         jq("#segero_notice").html(vhtml);
+         }
+         });
+         */
+    });
+</script>
+{ # footer }

@@ -1,0 +1,83 @@
+{ + header }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112766766-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-112766766-3');
+</script>
+<title>{_cfg.logo.hometitle}</title>
+<meta http-equiv="Content-Type" content="text/html; charset={ _cfg.encoding }">
+<meta name="description" content="{ _cfg.site.description }">
+<meta name="keywords" content="{ _cfg.site.keyword }">
+
+
+<!--{ _cfg.common.headtag }-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script language="javascript" src="css/common.js"></script>
+
+<script language="javascript" src="/skin/skin020/mobile/assets/js/index.js"></script>
+<script language="javascript" src="/skin/skin020/mobile/assets/js/content.js?v=1"></script>
+<script language="javascript">
+
+// 아래 스크립트는 절대 삭제하시면 안됩니다.
+{ _cfg.common.script }
+//-->
+</script>
+<script>
+  // <!-- 
+    var window_width = jq(window).width();
+
+    if (window_width <= 980) {
+      if (window.location.pathname === "/")  {
+        window.stop();
+
+        renderLandingPage();
+      } else {
+        jq(window).on("load", 
+          function () {
+            renderContent();
+          } 
+        );
+      }
+    } 
+
+  // -->
+
+</script>
+</head>
+
+<body { _cfg.common.bodytag } style="background:url('images/common/bg_sub.gif');" >
+{ + footer }
+<!-- 하단 공통 footer 생성영역 -->
+
+{ pageinfo }  <!--각종처리를 위한 히든 템플릿변수입니다. 삭제하시면 절대! 안됩니다.-->
+{ # updater }  <!--업데이트를 위한 히든 템플릿변수입니다. 삭제하시면 절대! 안됩니다.-->
+
+<map name="footer_map" id="footer_map">
+  <area shape="rect" coords="62,42,200,80" href="/" />
+  <area shape="rect" coords="258,9,300,29" href="/about/message" />
+  <area shape="rect" coords="323,9,400,28" href="/member/privacy" />
+  <area shape="rect" coords="424,10,463,30" href="/member/agreement" />
+  <area shape="rect" coords="484,8,570,28" href="/member/noemail" />
+  <area shape="rect" coords="659,8,717,29" href="/about/map01" />
+  <area shape="rect" coords="595,8,637,27" href="/etc/sitemap" />
+</map>
+
+<map name="footer_map2" id="footer_map2">
+  <area shape="rect" coords="40,43,178,81" href="/" />
+  <area shape="rect" coords="214,7,256,27" href="/about/message" />
+  <area shape="rect" coords="281,8,358,27" href="/member/privacy" />
+  <area shape="rect" coords="378,8,417,28" href="/member/agreement" />
+  <area shape="rect" coords="440,8,526,28" href="/member/noemail" />
+  <area shape="rect" coords="610,8,668,29" href="/about/map01" />
+  <area shape="rect" coords="546,8,588,27" href="/etc/sitemap" />
+</map>
+
+</body>
+</html>

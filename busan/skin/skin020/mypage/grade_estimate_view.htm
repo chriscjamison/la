@@ -1,0 +1,182 @@
+{ = inc('inc/popup_top.htm') } <!-- 팝업용 header -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+      <td style="background:#c33434; border-bottom:1px solid #c33434; height:60px; padding-left:10px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="aleft">
+      <tr>
+        <td width="90%"><img src="images/title2_st24-3.png"></td>
+        <td width="10%" align="center"><a href="javascript:window.close();"><img src="images/btn_close.gif" border="0"></a></td>
+      </tr>
+    </table></td>
+    </tr>
+  <tr>
+    <td style="padding:15px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        
+        <tr>
+          <td height="43">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="14">
+                  <img src="images/mymain_bar_l.gif" />
+                </td>
+                <td width="100" background="images/mymain_bar_bg.gif" ><strong class="style1">
+                  2010.01.18
+                </strong></td>
+                <td background="images/mymain_bar_bg.gif">
+                  <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="e7e7e7">
+                    <tr>
+                      <td width="10%" align="center" bgcolor="#e1d6bc"><strong class="style1 style2">성명</strong></td>
+                      <td width="15%" bgcolor="ffffff" class="style4"><span id="estimate_name"></span></td>
+                      <td width="10%" align="center" bgcolor="#e1d6bc"><strong class="style1 style2">교사</strong></td>
+                      <td width="15%" bgcolor="ffffff" class="style4"><span id="estimate_teacher"></span></td>
+                      <td width="10%" align="center" bgcolor="#e1d6bc"><strong class="style1 style2">반명</strong></td>
+                      <td width="15%" bgcolor="ffffff" class="style4"><span id="estimate_classname"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="15">
+                  <img src="images/mymain_bar_r.gif" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;
+            
+          </td>
+        </tr>
+        <tr>
+          <td height="30">
+            <img src="images/title3_st3_pop1.gif"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="dedede">
+              <tr>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>구분</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>E</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>VG</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>G</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>S</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>FD</strong></td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#FFFFFF" class="style4">Ability</td>
+                <td bgcolor="#FFFFFF" class="pl10" id="ability_E"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="ability_VG"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="ability_G"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="ability_S"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="ability_FD"></td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#FFFFFF" class="style4">Phonics</td>
+                <td bgcolor="#FFFFFF" class="pl10" id="phonics_E"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="phonics_VG"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="phonics_G"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="phonics_S"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="phonics_FD"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30"><img src="images/title3_st3_pop2.gif"/></td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="dedede">
+              <tr>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>구분</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>A</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>B</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>C</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>D</strong></td>
+                <td width="16%" align="center" bgcolor="f7f7f7" class="style1"><strong>E</strong></td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#FFFFFF" class="style4">출결</td>
+                <td bgcolor="#FFFFFF" class="pl10" id="attend_A"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="attend_B"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="attend_C"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="attend_D"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="attend_E"></td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#FFFFFF" class="style4">과제물</td>
+                <td bgcolor="#FFFFFF" class="pl10" id="hworks_A"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="hworks_B"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="hworks_C"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="hworks_D"></td>
+                <td bgcolor="#FFFFFF" class="pl10" id="hworks_E"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;
+            
+          </td>
+        </tr>
+        <tr>
+          <td height="30">
+            <img src="images/title3_st3_pop3.gif"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="10" cellspacing="1" bgcolor="e3e3e3">
+              <tr>
+                <td height="130" valign="top" bgcolor="f9f9f9" class="style4">
+                  <span id="estimate_comments"></span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <img src="images/btn_print.gif" vspace="15"  border="0" class="hand" onclick="window.print();" />
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+        <td height="5" bgcolor="#c33434">
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+jq(document).ready(function() {
+	get_grade_estimate_detail();
+});
+
+// 출입현황 List GET
+function get_grade_estimate_detail()
+{
+	jq.ajax({
+		type: 'POST',
+		url: "/lib/segero/mypage_grade.php",
+		data: 'type=estimate_detail&seq={_GET.seq}&teacher={_GET.teacher}&classid={_GET.classid}&classname={_GET.classname}&rdate={_GET.rdate}',
+		dataType: 'json',
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert ("통신 중 에러가 발생했습니다.");},
+		success: function(data) {
+			jq('#estimate_name').text(data.rname);
+			jq('#estimate_teacher').text(data.teacher);
+			jq('#estimate_classname').text(data.classname);
+			jq('#ability_' + data.ability).text("●");
+			jq('#phonics_' + data.phonics).text("●");
+			jq('#attend_' + data.attend).text("●");
+			jq('#hworks_' + data.hworks).text("●");
+			jq('#estimate_comments').text(data.comments);
+		}
+	});
+}
+</script>
+</body>
+</html>
