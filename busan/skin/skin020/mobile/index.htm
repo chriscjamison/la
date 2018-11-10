@@ -3,16 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112766766-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112766766-1');
-    </script>
-    
     <!-- *** Page Title *** -->
     <title>Leaders Academy</title>
 
@@ -169,7 +159,15 @@
         <a href="https://whatsapp.com" title="WhatsApp" target="_blank" id="link-whatsapp"></a>
       </section>
       <section id="footer-row_3">
-        <span>Leaders Academy &copy; 2017</span>
+        <script language="javascript">
+          var jq = jQuery.noConflict();
+
+          var date = new Date;
+
+          year = date.getFullYear();
+
+          jq("#footer-row_3").append("<span>Leaders Academy &copy; " + year.toString() + "</span>");
+        </script>
       </section>
     </footer>
   </body>
