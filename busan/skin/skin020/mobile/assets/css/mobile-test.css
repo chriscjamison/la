@@ -3129,9 +3129,7 @@ input[name="testDate"] {
   .article-media-row, 
   .article-gpa, 
   .article-header-events, 
-  .article-header-camps, 
-  .article-lessons, 
-  .article-business {
+  .article-header-camps {
     width: 370px;
   }
 
@@ -3264,7 +3262,9 @@ input[name="testDate"] {
   .article-events img, 
   .article-camps, 
   .article-camps-listing, 
-  .article-camps img {
+  .article-camps img, 
+  .article-lessons, 
+  .article-business {
     width: 340px;
   }
 
