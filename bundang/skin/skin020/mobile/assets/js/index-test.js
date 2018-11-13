@@ -93,7 +93,7 @@ function renderTopHeaderHTML (base_path) {
                 "  <div id=\"header-search\">\n" + 
                 "    <script>\n" + 
                 "      (function() {\n" + 
-                "        var cx = '000407554329404627304:kdmju1gpq6w';\n" + 
+                "        var cx = '000407554329404627304:ru4rjgitzi8';\n" + 
                 "        var gcse = document.createElement('script');\n" + 
                 "        gcse.type = 'text/javascript';\n" + 
                 "        gcse.async = true;\n" + 

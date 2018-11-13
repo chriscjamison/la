@@ -62,7 +62,7 @@ function buildContentHeadHTML () {
     javascript: "<script src=\"/skin/skin020/mobile/assets/js/content.js\"></script>"
   };
 
-  head_html.google_analytics = "<!-- Global site tag (gtag.js) - Google Analytics -->\n" + 
+/*   head_html.google_analytics = "<!-- Global site tag (gtag.js) - Google Analytics -->\n" + 
                                "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-112766766-1\"></script>\n" + 
                                "<script>\n" + 
                                "  window.dataLayer = window.dataLayer || [];\n" + 
@@ -70,7 +70,7 @@ function buildContentHeadHTML () {
                                "    gtag('js', new Date());\n" + 
                                "    gtag('config', 'UA-112766766-1');\n" + 
                                "</script>\n";
-
+ */
   // Send the HTML out to be processed by another function
   return head_html;
 
@@ -810,7 +810,7 @@ function renderContentTopHeaderHTML (base_path) {
                 "  <div id=\"header-search\">\n" + 
                 "    <script>\n" + 
                 "      (function() {\n" + 
-                "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
+                "        var cx = '000407554329404627304:kdmju1gpq6w';\n" + 
                 "        var gcse = document.createElement('script');\n" + 
                 "        gcse.type = 'text/javascript';\n" + 
                 "        gcse.async = true;\n" + 
@@ -1106,8 +1106,6 @@ function renderContent () {
 
   // Extract content from desktop version of webpage.
   article_data = storeContentArticleMetadata();
-
-  jq("table").css("opacity", "1");
 
   // Add mobile-friendly HTML into the browser.
   renderContentFrameHTML();
