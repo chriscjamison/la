@@ -299,7 +299,7 @@ header > a > img {
 
 #mobile-search {
   padding: 0.5em 0.5em 0.5em 1.75em;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
+  background-image: url('/la/busan/assets/img/sprites/main_nav.png');
   background-position: -2100px -10px;
   background-repeat: no-repeat;
   font-size: 2.5em;
@@ -499,13 +499,21 @@ nav {
 nav > section > div, 
 #nav-main_menu > section > div {
   width: 190px;
-  margin: 0 22px;
+  margin: 0 61px;
   display: block;
   float: left;
 }
 
+#nav-row_6 > div {
+  margin: 0 140px;
+}
+
+#nav-main_menu > #nav-row_6 > div {
+  margin: 0 130px;
+}
+
 #nav-main_menu > section > div {
-  margin: 0 15px; 
+  margin: 0 54px; 
 }
 
 nav > section, 
@@ -532,7 +540,8 @@ nav > section > div > a,
   height: 155px;
   margin: 0 0 0 27px;
   display: block;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
+  background-image: url('/la/busan/assets/img/sprites/main_nav.png');
+  background-position-y: 2px;
   background-repeat: no-repeat;
 }
 
@@ -546,24 +555,28 @@ nav > section > div span,
   margin: 15px 0 0 27px;
 }
 
-#link-gpa a {
+#link-leaders_jr a {
   background-position-x: 30px;
 }
 
+#link-gpa a {
+  background-position-x: -110px;
+}
+
 #link-gpa a:active {
-  background-position-x: -2760px;
+  background-position-x: -2767px;
 }
 
 #link-english a {
-  background-position-x: -102px;
+  background-position-x: -250px;
 }
 
 #link-camps a {
-  background-position-x: -241px;
+  background-position-x: -384px;
 }
 
 #link-lessons a {
-  background-position-x: -373px;
+  background-position-x: -515px;
 }
 
 #link-lessons a:active {
@@ -571,59 +584,56 @@ nav > section > div span,
 }
 
 #link-awards a {
-  background-position-x: -503px;
+  background-position-x: -643px;
 }
 
 #link-debate a {
-  background-position-x: -634px;
+  background-position-x: -773px;
 }
 
 #link-events a {
-  background-position-x: -760px;
+  background-position-x: -902px;
 }
 
-#link-announcements a {
-  background-position-x: -888px;
-}
-
+#link-announcements a, 
 #link-announcements-korean a {
-  background-position-x: -888px;
+  background-position-x: -1029px;
 }
 
 #link-apply_students a {
-  background-position-x: -1005px;
+  background-position-x: -1147px;
 }
 
 #link-faculty a {
-  background-position-x: -1133px;
+  background-position-x: -1273px;
 }
 
 #link-apply_faculty a {
-  background-position-x: -1274px;
+  background-position-x: -1416px;
+}
+
+#link-about_us a {
+  background-position-x: -1538px;
+}
+
+#link-contact_us a {
+  background-position-x: -1658px;
+}
+
+#link-location a {
+  background-position-x: -1792px;
 }
 
 #link-business a {
-  background-position-x: -1416px;
+  background-position-x: -1940px;
 }
 
 #link-business a:active {
   background-position-x: -3041px;
 }
 
-#link-about_us a {
-  background-position-x: -1554px;
-}
-
-#link-contact_us a {
-  background-position-x: -1674px;
-}
-
-#link-location a {
-  background-position-x: -1808px;
-}
-
 #link-media a {
-  background-position-x: -1940px;
+  background-position-x: -2084px;
 }
 
 #link-announcements span, 
@@ -668,7 +678,7 @@ footer > #footer-border {
   margin: 0 4.4% 0 4.4%;
   display: block;
   float: left;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media.png');
+  background-image: url('/la/busan/assets/img/sprites/social_media.png');
   background-repeat: no-repeat;
 }
 
@@ -808,6 +818,10 @@ footer > #footer-border {
 
 /* PAGE: Location */
 
+#map {
+  height: 497px !important;
+}
+
 table {
   width: 100%;
   margin-top: 2em;
@@ -858,6 +872,14 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   height: auto;
   min-height: 1px;
   max-height: 999999px;
+}
+
+
+/* *** LESSONS *** */
+
+.article-lessons, 
+.article-business {
+  text-align: center;
 }
 
 
@@ -1242,11 +1264,6 @@ input[name="testDate"] {
 
 /* *** CAMPS *** */
 
-.article-camps img[height="900"] {
-  width: 680px;
-  height: 510px;
-}
-
 .article-camps table, 
 .article-camps table[width="500"] tr td, 
 .article-camps table[width="580"] tr td {
@@ -1508,7 +1525,7 @@ input[name="testDate"] {
   }
 
   nav > section > div, 
-  #nav-main_menu >  section > div {
+  #nav-main_menu > section > div {
     width: 66px;
     height: 88px;
     margin: 0 10px;
@@ -1517,7 +1534,8 @@ input[name="testDate"] {
   nav > section > div > a, 
   #nav-main_menu > section > div > a {
     height: 60px;
-    background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav-med.png')
+    background-image: url('/la/busan/assets/img/sprites/main_nav-med.png');
+    background-position-y: -2px;
   }
 
   nav > section > div span, 
@@ -1525,88 +1543,88 @@ input[name="testDate"] {
     font-size: 11px;
   }
   
+  #link-leaders_jr a {
+    background-position-x: 11px;
+  }
+
   #link-gpa a {
-    background-position-x: 8px;
+    background-position-x: -51px;
   }
 
   #link-gpa a:active {
-    background-position-x: -1388px;
+    background-position-x: -1219px;
   }
 
   #link-english a {
-    background-position-x: -61px;
+    background-position-x: -113px;
   }
 
   #link-camps a {
-    background-position-x: -130px;
+    background-position-x: -173px;
   }
 
   #link-lessons a {
-    background-position-x: -195px;
+    background-position-x: -231px;
   }
 
   #link-lessons a:active {
-    background-position-x: -1458px;
+    background-position-x: -1281px;
   }
 
   #link-awards a {
-    background-position-x: -260px;
+    background-position-x: -287px;
   }
 
   #link-debate a {
-    background-position-x: -325px;
+    background-position-x: -345px;
   }
 
   #link-events a {
-    background-position-x: -388px;
+    background-position-x: -401px;
   }
 
   #link-announcements a {
-    background-position-x: -452px;
+    background-position-x: -457px;
   }
 
   #link-announcements-korean a {
-    background-position-x: -452px;
+    background-position-x: -457px;
   }
   
   #link-apply_students a {
-    background-position-x: -511px;
-  }
-
-  #link-awards a {
-    background-position-x: -260px;
+    background-position-x: -509px;
   }
 
   #link-faculty a {
-    background-position-x: -575px;
+    background-position-x: -566px;
   }
 
   #link-apply_faculty a {
-    background-position-x: -645px;
-  }
-
-  #link-business a {
-    background-position-x: -716px;
-  }
-
-  #link-business a:active {
-    background-position: -1529px;
+    background-position-x: -627px;
   }
 
   #link-about_us a {
-    background-position-x: -786px;
+    background-position-x: -681px;
   }
 
   #link-contact_us a {
-    background-position-x: -845px;
+    background-position-x: -734px;
   }
 
   #link-location a {
-    background-position-x: -912px;
+    background-position-x: -793px;
+  }
+
+  #link-business a {
+    background-position-x: -857px;
+  }
+
+  #link-business a:active {
+    background-position-x: -1343px;
   }
 
   #link-media a {
-    background-position-x: -978px;
+    background-position-x: -921px;
   }
 
   #link-announcements span, 
@@ -1658,7 +1676,7 @@ input[name="testDate"] {
     width: 50px;
     height: 50px;
     margin: 0 9px 0 9px;
-    background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media-med.png');
+    background-image: url('/la/busan/assets/img/sprites/social_media-med.png');
   }
 
   #footer-row_3 {
@@ -1920,6 +1938,13 @@ input[name="testDate"] {
   }
 
 
+  /* *** LOCATION *** */
+
+  #map {
+    height: 240px !important;
+  }
+
+
   /* *** CONTACT US *** */
 
   .article-contact_us table {
@@ -1947,13 +1972,6 @@ input[name="testDate"] {
   .article-gpa {
     min-height: auto;
   }
-
-  .article-camps img[height="53"] {
-    width: 121px;
-    height: 53px;
-  }
-
-   
 }
 
 @media screen and (min-width: 360px) and (max-width: 365px) { 
@@ -2031,7 +2049,12 @@ input[name="testDate"] {
 	nav > section > div, 
   #nav-main_menu > section > div {
     width: 76px;
-    margin: 0;
+    margin: 0 15px;
+  }
+
+  nav > #nav-row_6 > div, 
+  #nav-main_menu > #nav-row_6 > div {
+    margin: 0 41px;
   }
 
   nav > section > div > a, 
@@ -2141,26 +2164,6 @@ input[name="testDate"] {
     width: 210px;
   }
 
-  .article-debate img[height="837"] {
-    height: 356px;
-  }
-
-  .article-debate img[height="920"] {
-    height: 412px;
-  }
-
-  .article-debate img[height="300"] {
-    height: 174px;
-  }
-
-  .article-debate img[height="200"] {
-    height: 116px;
-  }
-	
-	.article-debate img[height="809"] {
-		height: 419px;
-	}
-
   
   /* *** AWARDS *** */
 
@@ -2175,70 +2178,6 @@ input[name="testDate"] {
 
   .article-announcements {
     min-height: 172px;
-  }
-
-  .article-announcements img[height="882"] {
-    height: 418px;
-  }
-
-  .article-announcements img[height="707"] {
-    height: 296px;
-  }
-
-  .article-announcements img[height="260"] {
-    height: 108px;
-  }
-
-  .article-announcements img[height="596"] {
-    height: 248px;
-  }
-
-  .article-announcements img[height="671"] {
-    height: 430px;
-  }
-
-  .article-announcements img[height="757"] {
-    height: 439px;
-  }
-
-  .article-announcements img[height="502"] {
-    height: 364px;
-  }
-
-  .article-announcements img[height="524"] {
-    height: 374px;
-  }
-
-  .article-announcements img[height="671"] {
-    height: 430px;
-  }
-
-  .article-announcements img[height="496"] {
-    height: 207px;
-  }
-
-  .article-announcements img[height="737"] {
-    height: 386px;
-  }
-
-  .article-announcements img[height="734"] {
-    height: 422px;
-  }
-
-  .article-announcements img[height="1000"] {
-    height: 382px;
-  }
-
-  .article-announcements img[height="837"] {
-    height: 353px;
-  }
-
-  .article-announcements img[height="836"] {
-    height: 360px;
-  }
-
-  .article-announcements img[width="590"] {
-    height: 411px;
   }
 
 
@@ -2295,14 +2234,6 @@ input[name="testDate"] {
   .article-english > h4 + h6 + table th, 
   .article-english > h4 + h6 + table td {
     font-size: 8px;
-  }
-
-  .article-english img[height="836"] {
-    height: 360px;
-  }
-
-  .article-english img[height="868"] {
-    height: 373px;
   }
 
   .article-english ul {
@@ -2387,188 +2318,10 @@ input[name="testDate"] {
   }
 
 
-  /* *** GPA/TESTING *** */
-
-  .article-gpa img {
-    height: 175px;
-  }
-
-
-  /* *** EVENTS *** */
-
-  .article-events img[height="579"] {
-    height: 341px;
-  }
-
-  .article-events img[height="723"] {
-    height: 437px;
-  }
-  
-  .article-events img[height="750"] {
-    height: 453px;
-  }
-
-  .article-events img[height="692"] {
-    height: 425px;
-  }
-
-  .article-events img[width="855"] {
-    height: 228px;
-  }
-
-  .article-events img[height="268"] {
-    height: 148px;
-  }
-
-  .article-events img[height="840"] {
-    height: 377px;
-  }
-
-  .article-events img[height="436"] {
-    height: 235px;
-  }
-
-  .article-events img[height="253"] {
-    height: 101px;
-  }
-
-  .article-events img[height="802"] {
-    height: 409px;
-  }
-
-  .article-events img[height="581"] {
-    height: 352px;
-  }
-
-  .article-events img[height="464"] {
-    height: 234px;
-  }
-  
-  .article-events img[height="625"] {
-    height: 390px;
-  }
-
-  .article-events img[height="308"] {
-    height: 109px;
-  }
-
-  .article-events img[height="544"] {
-    height: 222px;
-  }
-
-  .article-events img[height="580"] {
-    height: 218px;
-  }
-
-  .article-events img[height="763"] {
-    height: 315px;
-  }
-
-  .article-events img[height="596"] {
-    height: 257px;
-  }
-
-  .article-events img[height="668"] {
-    height: 348px;
-  }
-
-  .article-events img[height="245"] {
-    height: 79px;
-  }
-
-  .article-events img[height="847"] {
-    height: 399px;
-  }
-
-  .article-events img[height="698"] {
-    height: 363px;
-  }
-
-  .article-events img[height="632"] {
-    height: 412px;
-  }
-
-  .article-events img[height="80"] {
-    height: 65px;
-  }
-
-  .article-events img[height="604"] {
-    height: 199px;
-  }
-
-  .article-events img[height="375"] {
-    height: 163px;
-  }
-
-  .article-events img[height="685"] {
-    height: 190px;
-  }
-
-  .article-events img[height="308"] {
-    height: 109px;
-  }
-
-  .article-events img[height="225"] {
-    height: 89px;
-  }
-
-  .article-events img[height="324"] {
-    height: 141px;
-  }
-
-  .article-events img[height="292"] {
-    height: 115px;
-  }
-
-  .article-events img[height="244"] {
-    height: 108px;
-  }
-
-
   /* *** CAMPS *** */
 
-  .article-camps img[height="882"] {
-    height: 497px;
-  }
-  
-  .article-camps img[height="900"] {
-    height: 218px;
-  }
-
-  .article-camps img[height="815"] {
-    height: 313px;
-  }
-  
-  .article-camps img[height="945"] {
-    height: 436px;
-  }
-  
-  .article-camps img[height="1000"] {
-    height: 382px;
-  }
-  
-  .article-camps img[height="871"] {
-    height: 333px;
-  }
-
-  .article-camps img[height="300"] {
-    height: 174px;
-  }
-
-  .article-camps img[height="100"] {
-    height: 58px;
-  }
-
-  .article-camps img[height="150"] {
-    height: 87px;
-  }
-  
   .article-camps table > tbody > tr > td {
     font-size: 9px;
-  }
-
-  .article-camps img[height="679"] {
-    height: 340px;
   }
 
   
@@ -2576,7 +2329,7 @@ input[name="testDate"] {
 
   .article-lessons, 
   .article-business {
-    min-height: 171px;
+    min-height: 269px;
   }
 
 }
@@ -2630,7 +2383,12 @@ input[name="testDate"] {
   #nav-main_menu > section > div {
     width: 75px;
     height: 88px;
-    margin: 0 5px;
+    margin: 0 20px;
+  }
+
+  nav > #nav-row_6 > div, 
+  #nav-main_menu > #nav-row_6 > div {
+    margin: 0 48px;
   }
 
   nav > section > div > a, 
@@ -2695,22 +2453,6 @@ input[name="testDate"] {
     width: 235px;
   }
 
-  .article-debate img[height="837"] {
-    height: 387px;
-  }
-  
-  .article-debate img[height="920"] {
-    height: 441px;
-  }
-  
-  .article-debate img[height="300"] {
-    height: 189px;
-  }
-
-  .article-debate img[height="200"] {
-    height: 126px;
-  }
-
 
   /* *** LOGIN *** */
 
@@ -2744,66 +2486,6 @@ input[name="testDate"] {
     min-height: 199px;
   }
 
-  .article-announcements img[height="882"] {
-    height: 453px;
-  }
-
-  .article-announcements img[height="707"] {
-    height: 321px;
-  }
-
-  .article-announcements img[height="260"] {
-    height: 117px;
-  }
-
-  .article-announcements img[height="596"] {
-    height: 270px;
-  }
-  
-  .article-announcements img[height="671"] {
-    height: 468px;
-  }
-
-  .article-announcements img[height="757"] {
-    height: 478px;
-  }
-
-  .article-announcements img[height="502"] {
-    height: 395px;
-  }
-
-  .article-announcements img[height="524"] {
-    height: 407px;
-  }
-
-  .article-announcements img[height="496"] {
-    height: 225px;
-  }
-
-  .article-announcements img[height="737"] {
-    height: 419px;
-  }
-
-  .article-announcements img[height="734"] {
-    height: 458px;
-  }
-
-  .article-announcements img[height="1000"] {
-    height: 414px;
-  }
-
-  .article-announcements img[height="837"] {
-    height: 383px;
-  }
-
-  .article-announcements img[height="836"] {
-    height: 391px;
-  }
-
-  .article-announcements img[width="590"] {
-    height: 446px;
-  }
-
   
   /* *** APPLY (STUDENTS) *** */
 
@@ -2826,14 +2508,6 @@ input[name="testDate"] {
   .article-english > h4 + h6 + table th, 
   .article-english > h4 + h6 + table td {
     font-size: 8px;
-  }
-
-  .article-english img[height="836"] {
-    height: 391px;
-  }
-
-  .article-english img[height="868"] {
-    height: 406px;
   }
 
   .article-english ul {
@@ -2907,185 +2581,7 @@ input[name="testDate"] {
   }
 
 
-  /* *** GPA/TESTING *** */
-
-  .article-gpa img {
-    height: 195px;
-  }
-  
-
-  /* *** EVENTS *** */
-
-  .article-events img[height="579"] {
-    height: 341px;
-  }
-
-  .article-events img[height="723"] {
-    height: 437px;
-  }
-  
-  .article-events img[height="750"] {
-    height: 453px;
-  }
-
-  .article-events img[height="692"] {
-    height: 425px;
-  }
-
-  .article-events img[width="855"] {
-    height: 228px;
-  }
-
-  .article-events img[height="268"] {
-    height: 148px;
-  }
-
-  .article-events img[height="840"] {
-    height: 377px;
-  }
-
-  .article-events img[height="436"] {
-    height: 235px;
-  }
-
-  .article-events img[height="253"] {
-    height: 109px;
-  }
-
-  .article-events img[height="802"] {
-    height: 445px;
-  }
-
-  .article-events img[height="581"] {
-    height: 382px;
-  }
-
-  .article-events img[height="464"] {
-    height: 255px;
-  }
-  
-  .article-events img[height="625"] {
-    height: 423px;
-  }
-
-  .article-events img[height="308"] {
-    height: 119px;
-  }
-
-  .article-events img[height="544"] {
-    height: 241px;
-  }
-
-  .article-events img[height="580"] {
-    height: 236px;
-  }
-
-  .article-events img[height="763"] {
-    height: 342px;
-  }
-
-  .article-events img[height="596"] {
-    height: 280px;
-  }
-
-  .article-events img[height="668"] {
-    height: 378px;
-  }
-
-  .article-events img[height="245"] {
-    height: 86px;
-  }
-
-  .article-events img[height="847"] {
-    height: 433px;
-  }
-
-  .article-events img[height="698"] {
-    height: 395px;
-  }
-
-  .article-events img[height="632"] {
-    height: 447px;
-  }
-
-  .article-events img[height="80"] {
-    height: 71px;
-  }
-
-  .article-events img[height="604"] {
-    height: 215px;
-  }
-
-  .article-events img[height="375"] {
-    height: 177px;
-  }
-
-  .article-events img[height="685"] {
-    height: 206px;
-  }
-
-  .article-events img[height="308"] {
-    height: 119px;
-  }
-
-  .article-events img[height="225"] {
-    height: 97px;
-  }
-
-  .article-events img[height="324"] {
-    height: 153px;
-  }
-
-  .article-events img[height="292"] {
-    height: 125px;
-  }
-
-  .article-events img[height="244"] {
-    height: 118px;
-  }
-
-
   /* *** CAMPS *** */
-
-  .article-camps img[height="882"] {
-    height: 454px;
-  }
-
-  .article-camps img[height="900"] {
-    height: 236px;
-  }
-  
-  .article-camps img[height="815"] {
-    height: 340px;
-  }
-  
-  .article-camps img[height="945"] {
-    height: 474px;
-  }
-  
-  .article-camps img[height="1000"] {
-    height: 414px;
-  }
-  
-  .article-camps img[height="871"] {
-    height: 362px;
-  }
-
-  .article-camps img[height="300"] {
-    height: 189px;
-  }
-
-  .article-camps img[height="100"] {
-    height: 63px;
-  }
-
-  .article-camps img[height="150"] {
-    height: 95px;
-  }
-
-  .article-camps img[height="679"] {
-    height: 369px;
-  }
 
   .article-camps table > tbody > tr > td {
     font-size: 9px;
@@ -3173,7 +2669,12 @@ input[name="testDate"] {
   nav > section > div, 
   #nav-main_menu > section > div {
     width: 78px;
-    margin: 0 7px;
+    margin: 0 22px;
+  }
+  
+  nav > #nav-row_6 > div, 
+  #nav-main_menu > #nav-row_6 > div {
+    margin: 0 52px;
   }
 
   nav > section > div a, 
@@ -3276,22 +2777,6 @@ input[name="testDate"] {
   .article-camps-listing a {
     width: 260px;
   }
-  
-  .article-debate img[height="837"] {
-    height: 412px;
-  }
-  
-  .article-debate img[height="920"] {
-    height: 431px;
-  }
-
-  .article-debate > h4 img[height="300"] {
-    height: 200px;
-  }
-
-  .article-debate > h4 img[height="200"] {
-    height: 134px;
-  }
 
 
   /* *** AWARDS *** */
@@ -3305,66 +2790,6 @@ input[name="testDate"] {
 
   .article-announcements {
     min-height: 268px;
-  }
-  
-  .article-announcements img[height="882"] {
-    height: 482px;
-  }
-
-  .article-announcements img[height="707"] {
-    height: 341px;
-  }
-
-  .article-announcements img[height="260"] {
-    height: 125px;
-  }
-
-  .article-announcements img[height="596"] {
-    height: 287px;
-  }
-
-  .article-announcements img[height="671"] {
-    height: 497px;
-  }
-
-  .article-announcements img[height="757"] {
-    height: 508px;
-  }
-
-  .article-announcements img[height="502"] {
-    height: 420px;
-  }
-
-  .article-announcements img[height="524"] {
-    height: 432px;
-  }
-
-  .article-announcements img[height="496"] {
-    height: 239px;
-  }
-
-  .article-announcements img[height="737"] {
-    height: 446px;
-  }
-
-  .article-announcements img[height="734"] {
-    height: 487px;
-  }
-
-  .article-announcements img[height="1000"] {
-    height: 441px;
-  }
-
-  .article-announcements img[height="837"] {
-    height: 408px;
-  }
-
-  .article-announcements img[height="836"] {
-    height: 416px;
-  }
-
-  .article-announcements img[width="590"] {
-    height: 475px;
   }
 
 
@@ -3408,14 +2833,6 @@ input[name="testDate"] {
   .article-english > h4 + h6 + table th, 
   .article-english > h4 + h6 + table td {
     font-size: 9px;
-  }
-
-  .article-english img[height="836"] {
-    height: 415px;
-  }
-
-  .article-english img[height="868"] {
-    height: 431px;
   }
 
   .article-english ul {
@@ -3498,178 +2915,8 @@ input[name="testDate"] {
     min-height: 264px;
   }
 
-  .article-gpa img {
-    height: 208px;
-  }
-  
-  /* *** EVENTS *** */
-
-  .article-events img[height="579"] {
-    height: 341px;
-  }
-
-  .article-events img[height="723"] {
-    height: 437px;
-  }
-  
-  .article-events img[height="750"] {
-    height: 453px;
-  }
-
-  .article-events img[height="692"] {
-    height: 425px;
-  }
-
-  .article-events img[width="855"] {
-    height: 228px;
-  }
-
-  .article-events img[height="268"] {
-    height: 148px;
-  }
-
-  .article-events img[height="840"] {
-    height: 377px;
-  }
-
-  .article-events img[height="436"] {
-    height: 235px;
-  }
-
-  .article-events img[height="253"] {
-    height: 118px;
-  }
-
-  .article-events img[height="802"] {
-    height: 480px;
-  }
-
-  .article-events img[height="581"] {
-    height: 412px;
-  }
-
-  .article-events img[height="464"] {
-    height: 275px;
-  }
-  
-  .article-events img[height="625"] {
-    height: 457px;
-  }
-
-  .article-events img[height="308"] {
-    height: 128px;
-  }
-
-  .article-events img[height="544"] {
-    height: 261px;
-  }
-
-  .article-events img[height="580"] {
-    height: 255px;
-  }
-
-  .article-events img[height="763"] {
-    height: 370px;
-  }
-
-  .article-events img[height="596"] {
-    height: 301px;
-  }
-
-  .article-events img[height="668"] {
-    height: 408px;
-  }
-
-  .article-events img[height="245"] {
-    height: 93px;
-  }
-
-  .article-events img[height="847"] {
-    height: 468px;
-  }
-
-  .article-events img[height="698"] {
-    height: 426px;
-  }
-
-  .article-events img[height="632"] {
-    height: 483px;
-  }
-
-  .article-events img[height="604"] {
-    height: 232px;
-  }
-
-  .article-events img[height="375"] {
-    height: 191px;
-  }
-
-  .article-events img[height="685"] {
-    height: 223px;
-  }
-
-  .article-events img[height="308"] {
-    height: 129px;
-  }
-
-  .article-events img[height="225"] {
-    height: 104px;
-  }
-
-  .article-events img[height="324"] {
-    height: 166px;
-  }
-
-  .article-events img[height="292"] {
-    height: 135px;
-  }
-
-  .article-events img[height="244"] {
-    height: 116px;
-  }
-
 
   /* *** CAMPS *** */
-
-  .article-camps img[height="882"] {
-    height: 490px;
-  }
-
-  .article-camps img[height="900"] {
-    height: 255px;
-  }
-  
-  .article-camps img[height="815"] {
-    height: 368px;
-  }
-  
-  .article-camps img[height="945"] {
-    height: 512px;
-  }
-  
-  .article-camps img[height="1000"] {
-    height: 447px;
-  }
-  
-  .article-camps img[height="871"] {
-    height: 391px;
-  }
-
-  .article-camps img[height="300"] {
-    height: 204px;
-  }
-
-  .article-camps img[height="100"] {
-    height: 68px;
-  }
-
-  .article-camps img[height="150"] {
-    height: 102px;
-  }
-
-  .article-camps img[height="679"] {
-    height: 398px;
-  }
   
   .article-camps table > tbody > tr > td {
     font-size: 10px;

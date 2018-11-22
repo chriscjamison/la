@@ -177,7 +177,7 @@ function storeNavigationMetadata () {
         debate_data : { 
           id: "debate", 
           title: "Debate", 
-          href: "/program/program1"
+          href: "program/program1"
         }, 
         events_data : { 
           id: "events", 
