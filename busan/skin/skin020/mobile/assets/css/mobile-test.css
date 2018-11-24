@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  height: 300px;
+  height: 170px;
   display: block;
   margin: 1em;
 }
@@ -107,6 +107,8 @@ th,
 .article-english-listing span, 
 .article-english ul li, 
 .article-english img:nth-child(4) + a, 
+.article-lessons span, 
+.article-lessons ul li, 
 .article-announcements a, 
 .article-announcements span, 
 .article-announcements div, 
@@ -211,6 +213,7 @@ p,
 .article-camps a, 
 .article-camps span, 
 .article-lessons p, 
+.article-lessons ul li, 
 .article-business p {
   font-weight: 400;
 }
@@ -822,14 +825,15 @@ footer > #footer-border {
   height: 497px !important;
 }
 
-table {
+article table {
   width: 100%;
   margin-top: 2em;
   border: 2px solid #cec2b4;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-td {
+article td {
+  border-right: 2px dashed #cec2b4;
   border-bottom: 2px dashed #cec2b4;
   padding: 0.5em;
 }
@@ -838,16 +842,20 @@ table > tbody > tr:last-of-type td {
   border-bottom: none;
 }
 
-tr > td:nth-child(1)  {
+article tr > td:nth-child(1) {
   width: 6.5em;
   background-color: transparent;
-  vertical-align: top;
   color: #573214;
 }
 
-tr > td:nth-child(2)  {
+article tr > td {
   color: #4f4f4f;
 }
+
+article tr > td:nth-child(4)  {
+  border-right: none;
+}
+
 
 li {
   margin: 0.5em 0;
@@ -880,6 +888,15 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-lessons, 
 .article-business {
   text-align: center;
+}
+
+.article-lessons span {
+  margin: 2em 0;
+  display: block;
+}
+
+.article-lessons ul li {
+  text-align: left;
 }
 
 
@@ -1258,7 +1275,7 @@ input[name="testDate"] {
  .article-contact_us, 
  .article-lessons, 
  .article-business {
-  min-height: 805px;
+  min-height: 928px;
 }
 
 
@@ -1355,7 +1372,9 @@ input[name="testDate"] {
   .article-debate h6, 
   .article-faculty-member-page span:nth-child(1),
   .article-faculty-member-page span:nth-child(2),  
-  .article-faculty-member-page h7 {
+  .article-faculty-member-page h7, 
+  .article-lessons span, 
+  .article-lessons ul li {
     font-size: 14px !important;
   }
 
