@@ -244,7 +244,7 @@ function storeContentFooterMetadata () {
         youtube : {
           href: "https://youtube.com/", 
           title: "YouTube", 
-          id: "youtube"
+          id: "you_tube"
         }, 
         kakao : {
           href: "https://kakao.com/", 
