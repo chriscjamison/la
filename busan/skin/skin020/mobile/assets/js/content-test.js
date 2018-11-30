@@ -57,9 +57,9 @@ function buildContentHeadHTML () {
   head_html = {
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
-    stylesheet: "<link rel=\"stylesheet\" href=\"/la/busan/assets/css/mobile.css\">", 
+    stylesheet: "<link rel=\"stylesheet\" href=\"/assets/css/mobile.css\">", 
     jquery: "<script src=\"https://code.jquery.com/jquery-migrate-1.4.1.min.js\"></script>\n<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
-    javascript: "<script src=\"/la/busan/assets/js/content.js\"></script>"
+    javascript: "<script src=\"/assets/js/content.js\"></script>"
   };
 
 /*   head_html.google_analytics = "<!-- Global site tag (gtag.js) - Google Analytics -->\n" + 
@@ -566,7 +566,7 @@ function renderContent () {
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
-  var base_path = "/la/busan/";
+  var base_path = "/";
   
   // Initialize Object which contains the HTML which renders the content within the desktop 
   // page.
