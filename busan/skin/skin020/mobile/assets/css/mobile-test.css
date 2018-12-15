@@ -2967,13 +2967,3 @@ input[name="testDate"] {
     margin: 25px 15px 15px 15px;
   }
 }
-
-@media screen and (width: 375px) and (height: 812px) {
-  
-  /* *** FOOTER *** */
-
-  footer {
-    position: absolute;
-    bottom: 0;
-  }
-}
