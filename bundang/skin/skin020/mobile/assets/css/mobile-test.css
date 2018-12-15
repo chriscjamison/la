@@ -299,7 +299,7 @@ header > a > img {
 
 #mobile-search {
   padding: 0.5em 0.5em 0.5em 1.75em;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
+  background-image: url('../img/sprites/main_nav.png');
   background-position: -2100px -10px;
   background-repeat: no-repeat;
   font-size: 2.5em;
@@ -375,7 +375,7 @@ button.gsc-search-button-v2 {
   height: 68px !important;
   padding: 6px 27px;
   border: 5px solid #e76200 !important;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/search.png');
+  background-image: url('../img/sprites/search.png');
   background-position: 54px 11px;
   background-repeat: no-repeat;
 
@@ -540,7 +540,7 @@ nav > section > div > a,
   height: 155px;
   margin: 0 0 0 27px;
   display: block;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
+  background-image: url('../img/sprites/main_nav.png');
   background-repeat: no-repeat;
 }
 
@@ -647,6 +647,42 @@ nav > section > div span,
   vertical-align: top;
 }
 
+#nav-landing_page {
+  height: 991px;
+}
+
+.nav-campuses-a {
+  width: 11.75em;
+  height: 14.15em; 
+  margin: 5em auto;
+  display: block;
+  background-image: url('../img/sprites/campuses.png');
+}
+
+#campuses-a-daechi {
+  margin-top: 0;
+}
+
+#campuses-a-daechi:active {
+  background-position-y: -230px;
+}
+
+#campuses-a-bundang {
+  background-position-y: -459px;
+}
+
+#campuses-a-bundang:active {
+  background-position-y: -689px;
+}
+
+#campuses-a-busan {
+  background-position-y: -919px;
+}
+
+#campuses-a-busan:active {
+  background-position-y: -1147px;
+}
+
 /* *** FOOTER *** */
 
 footer {
@@ -676,7 +712,7 @@ footer > #footer-border {
   margin: 0 4.4% 0 4.4%;
   display: block;
   float: left;
-  background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media.png');
+  background-image: url('../img/sprites/social_media.png');
   background-repeat: no-repeat;
 }
 
@@ -1462,6 +1498,7 @@ input[name="testDate"] {
   }
 
   button.gsc-search-button-v2 svg {
+    margin-left: 16px;
     display: block;
   }
 
@@ -1544,7 +1581,7 @@ input[name="testDate"] {
   nav > section > div > a, 
   #nav-main_menu > section > div > a {
     height: 60px;
-    background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav-med.png')
+    background-image: url('../img/sprites/main_nav-med.png')
   }
 
   nav > section > div span, 
@@ -1641,11 +1678,42 @@ input[name="testDate"] {
     margin-left: 0;
   }
 
-  #link
   #nav-section_menu #link-english-talk_2016, 
   #nav-section_menu #link-english-english_advanced {
     vertical-align: top;
   }
+
+  #nav-landing_page {
+    height: 552px;
+  }
+
+  .nav-campuses-a {
+    width: 7.75em;
+    height: 9.38em; 
+    margin: 3em auto;
+    background-image: url('../img/sprites/campuses-med.png');
+  }
+  
+  #campuses-a-daechi:active {
+    background-position-y: -151px;
+  }
+  
+  #campuses-a-bundang {
+    background-position-y: -301px;
+  }
+  
+  #campuses-a-bundang:active {
+    background-position-y: -453px;
+  }
+  
+  #campuses-a-busan {
+    background-position-y: -605px;
+  }
+  
+  #campuses-a-busan:active {
+    background-position-y: -756px;
+  }
+  
 
   /* *** SECTION NAVIGATION *** */
 
@@ -1685,7 +1753,7 @@ input[name="testDate"] {
     width: 50px;
     height: 50px;
     margin: 0 9px 0 9px;
-    background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media-med.png');
+    background-image: url('../img/sprites/social_media-med.png');
   }
 
   #footer-row_3 {
@@ -1998,7 +2066,6 @@ input[name="testDate"] {
   header, 
   nav, 
   article, 
-  nav, 
   #nav-sub_menu, 
   #nav-main_menu, 
   #footer-row_1, 
@@ -2667,7 +2734,6 @@ input[name="testDate"] {
   header, 
   nav, 
   article, 
-  nav, 
   #nav-sub_menu, 
   #nav-main_menu, 
   #nav-section_menu,  

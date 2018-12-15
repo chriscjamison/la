@@ -1,0 +1,105 @@
+<!-- index.htm ~ Index file for mobile site for Leaders Academy -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- *** Page Title *** -->
+    <title>Leaders Academy</title>
+
+    <!-- HTML Reference to display Korean characters -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- *** CSS Stylesheet References *** -->
+
+    <!-- Stylesheet which contains general layout CSS rules for 'index.htm'. -->
+    <link rel="stylesheet" href="../mobile/assets/css/mobile.css">
+
+    <!-- *** JavaScript file references *** -->
+
+    <!-- Source library for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JavaScript script which handles general layout for 'index.htm'. -->
+    <script src="../mobile/assets/js/mobile.js"></script>
+  </head>
+  <body>
+<!-- 
+  START of header 
+        Contains:
+        + Logo
+        + Search box
+        + Links to:
+            - Login
+            - Korean language mobile page
+-->
+    <header class="header-index">
+      <a href="../" title="Leaders Academy - Home">
+        <img src="../mobile/assets/img/logo/logo.png" width="230" height="170" alt="Leaders Academy" />
+      </a>
+      <section id="header-right">
+        <div id="header-search">
+					<script>
+						(function() {
+							var cx = '000407554329404627304:ru4rjgitzi8';
+							var gcse = document.createElement('script');
+							gcse.type = 'text/javascript';
+							gcse.async = true;
+							gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+							var s = document.getElementsByTagName('script')[0];
+							s.parentNode.insertBefore(gcse, s);
+						})();
+					</script>
+					<gcse:search></gcse:search>
+        </div>
+        <div id="header-links">
+          <a href="../login/login.htm" title="Login" id="link-login">Login</a>
+          <a href="../ko/" title="한국어" id="link-korean">한국어</a>
+        </div>
+      </section>
+    </header>
+<!-- 
+  START of main navigation 
+-->
+    <nav id="nav-landing_page">
+      <a href="http://daechi.leadersacademy.com" title="Leaders Academy - Daechi" class="nav-campuses-a" id="campuses-a-daechi"></a>
+      <a href="http://bundang.leadersacademy.com" title="Leaders Academy - Bundang" class="nav-campuses-a" id="campuses-a-bundang"></a>
+      <a href="http://leadersbusan.com" title="Leaders Academy - Busan" class="nav-campuses-a" id="campuses-a-busan"></a>      
+    </nav>
+<!-- 
+  START of Footer 
+    Contains:
+      + Links to social media platforms
+      + Copyright information
+-->
+    <footer>
+      <section id="footer-border">
+        <div></div>
+      </section>
+      <section id="footer-row_1">
+        <a href="https://blog.naver.com/leadersacademtybd/" title="Naver" target="_blank" id="link-naver"></a>
+        <a href="https://www.facebook.com/JoinLeadersAcademy/" title="Facebook" target="_blank" id="link-facebook"></a>
+        <a href="https://twitter.com" title="Twitter" target="_blank" id="link-twitter"></a>
+        <a href="https://youtube.com" title="YouTube" target="_blank" id="link-you_tube"></a>
+        <a href="https://kakao.com" title="Kakao" target="_blank" id="link-kakao"></a>
+      </section>
+      <section id="footer-row_2">
+        <a href="https://instagram.com" title="Instagram" target="_blank" id="link-instagram"></a>
+        <a href="https://wechat.com" title="WeChat" target="_blank" id="link-wechat"></a>
+        <a href="https://plus.google.com" title="Google+" target="_blank" id="link-google"></a>
+        <a href="https://line.com" title="Line" target="_blank" id="link-line"></a>
+        <a href="https://whatsapp.com" title="WhatsApp" target="_blank" id="link-whatsapp"></a>
+      </section>
+      <section id="footer-row_3">
+        <script language="javascript">
+          var jq = jQuery.noConflict();
+
+          var date = new Date;
+
+          year = date.getFullYear();
+
+          jq("#footer-row_3").append("<span>Leaders Academy &copy; " + year.toString() + "</span>");
+        </script>
+      </section>
+    </footer>
+  </body>
+</html>
