@@ -302,7 +302,7 @@ header > a > img {
 
 #mobile-search {
   padding: 0.5em 0.5em 0.5em 1.75em;
-  background-image: url('/assets/img/sprites/main_nav.png');
+  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
   background-position: -2100px -10px;
   background-repeat: no-repeat;
   font-size: 2.5em;
@@ -543,7 +543,7 @@ nav > section > div > a,
   height: 155px;
   margin: 0 0 0 27px;
   display: block;
-  background-image: url('/assets/img/sprites/main_nav.png');
+  background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav.png');
   background-position-y: 2px;
   background-repeat: no-repeat;
 }
@@ -681,7 +681,7 @@ footer > #footer-border {
   margin: 0 4.4% 0 4.4%;
   display: block;
   float: left;
-  background-image: url('/assets/img/sprites/social_media.png');
+  background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media.png');
   background-repeat: no-repeat;
 }
 
@@ -1199,50 +1199,50 @@ input[name="testDate"] {
 }
 
 
-/* PAGE: Media */
+/* PAGE: Awards */
 
-.article-media-row {
+.article-awards-row {
   width: 100%;
 }
 
-.article-media-row {
+.article-awards-row {
   width: 100%;
   margin: 50px 25px;
 }
 
-.media-item {
+.award-item {
   width: 49%;
   margin: 0;
   display: inline-block;
   vertical-align: top;
 }
 
-.media-item img {
+.award-item img {
   width: 425px;
   height: 425px;
   border: 5px solid #fff;
 }
 
-.media-item a:nth-child(2) {
+.award-item a:nth-child(2) {
   margin: 1em auto;
   display: block;
 }
 
-.media-item a:nth-child(2):active { 
+.award-item a:nth-child(2):active { 
   color: #e76200;
 }
 
-.media-item .location_tx11 {
+.award-item .location_tx11 {
   display: block;
   margin: 20px 0;
   text-align: center;
 }
 
-.media-item > img + span + img {
+.award-item > img + span + img {
   display: none;
 }
 
-.media-item-holder {
+.award-item-holder {
   min-height: 805px;
 }
 
@@ -1350,7 +1350,7 @@ input[name="testDate"] {
   .article-faculty-member-page ul li, 
   .article-faculty-member-page a, 
   .article-faculty-member-page span, 
-  .media-item a:nth-child(2), 
+  .award-item a:nth-child(2), 
   .article-events-listing a, 
   .article-events-listing span, 
   .article-camps-listing a, 
@@ -1553,7 +1553,7 @@ input[name="testDate"] {
   nav > section > div > a, 
   #nav-main_menu > section > div > a {
     height: 60px;
-    background-image: url('/assets/img/sprites/main_nav-med.png');
+    background-image: url('/skin/skin020/mobile/assets/img/sprites/main_nav-med.png');
     background-position-y: -2px;
   }
 
@@ -1695,7 +1695,7 @@ input[name="testDate"] {
     width: 50px;
     height: 50px;
     margin: 0 9px 0 9px;
-    background-image: url('/assets/img/sprites/social_media-med.png');
+    background-image: url('/skin/skin020/mobile/assets/img/sprites/social_media-med.png');
   }
 
   #footer-row_3 {
@@ -1928,30 +1928,30 @@ input[name="testDate"] {
     width: 270px !important;
   }
  
-  /* *** MEDIA *** */
+  /* *** AWARDS *** */
 
-  .article-media-row {
+  .article-award-row {
     margin: 15px;
   }
 
-  .article-media h4 {
+  .article-award h4 {
     margin: 15px 0;
   }
 
-  .media-item img {
+  .award-item img {
     border: 2px solid #485081;
   }
 
-  .media-item .location_tx11 {
+  .award-item .location_tx11 {
     margin: 10px 0;
   }
   
-  .media-item a:nth-child(2) {
+  .award-item a:nth-child(2) {
     margin: 8px 0 0 0;
     line-height: 12px;
   }
 
-  .media-item-holder {
+  .award-item-holder {
     margin: 0 auto;
     min-height: auto;
   }
@@ -2131,9 +2131,9 @@ input[name="testDate"] {
   .article-faculty-member-page, 
   .article-about_us, 
   .article-about_us img, 
-  .article-media-row, 
-  .media-item-holder, 
-  .media-item-holder img, 
+  .article-award-row, 
+  .award-item-holder, 
+  .award-item-holder img, 
   .article-gpa img, 
   .article-camps img,  
   .article-about_us, 
@@ -2307,31 +2307,31 @@ input[name="testDate"] {
   }
 
 
-  /* *** MEDIA *** */
+  /* *** AWARDS *** */
 
-  .media-item {
+  .award-item {
     width: 140px;
     height: 161px;
   }
 
-  .article-media-row .media-item:nth-child(1) {
+  .article-award-row .award-item:nth-child(1) {
     margin-right: 2px;
   }
 
-  .article-media-row .media-item:nth-child(2) {
+  .article-award-row .award-item:nth-child(2) {
     margin-left: 3px;
   }
 
-  .media-item img {
+  .award-item img {
     width: 135px;
     height: 135px;
   }
 
- .media-item-holder {
+ .award-item-holder {
     margin: 0 auto;
   }
 
-  .media-item-holder img {
+  .award-item-holder img {
     width: 290px;
     height: 290px;
   }
@@ -2448,8 +2448,8 @@ input[name="testDate"] {
   .article-faculty-member-page, 
   .article-about_us, 
   .article-about_us img, 
-  .article-media-row, 
-  .media-item-holder, 
+  .article-award-row, 
+  .award-item-holder, 
   .article-gpa img, 
   .article-events, 
   .article-events-listing, 
@@ -2578,23 +2578,23 @@ input[name="testDate"] {
   }
   
 
-  /* *** MEDIA *** */
+  /* *** AWARDS *** */
 
-  .media-item {
+  .award-item {
     width: 155px;
     height: 178px;
   }
 
-  .media-item img {
+  .award-item img {
     width: 150px;
     height: 150px;
   }
 
-  .media-item-holder {
+  .award-item-holder {
     margin: 0 auto;
   }
 
-  .media-item-holder img {
+  .award-item-holder img {
     width: 315px;
     height: 315px;
   }
@@ -2640,8 +2640,8 @@ input[name="testDate"] {
   .article-apply_students tr > td:nth-child(1), 
   .article-header-english, 
   .article-about_us, 
-  .article-media, 
-  .article-media-row, 
+  .article-award, 
+  .article-award-row, 
   .article-gpa, 
   .article-header-events, 
   .article-header-camps {
@@ -2775,7 +2775,7 @@ input[name="testDate"] {
   .article-english img, 
   .article-faculty-member-page,  
   .article-about_us img, 
-  .article-media-holder, 
+  .article-award-holder, 
   .article-gpa img, 
   .article-events,
   .article-events-listing,  
@@ -2902,27 +2902,27 @@ input[name="testDate"] {
   }
 
 
-  /* *** MEDIA *** */
+  /* *** AWARDS *** */
 
-  .media-item {
+  .award-item {
     width: 155px;
     height: 178px;
   }
 
-  .article-media-row .media-item:nth-child(1) {
+  .article-award-row .award-item:nth-child(1) {
     margin-right: 12px;
   }
 
-  .article-media-row .media-item:nth-child(2) {
+  .article-award-row .award-item:nth-child(2) {
     margin-left: 13px;
   }
 
-  .media-item img {
+  .award-item img {
     width: 150px;
     height: 150px;
   }
 
-  .media-item-holder img {
+  .award-item-holder img {
     width: 340px;
     height: 340px;
   }
