@@ -1105,7 +1105,7 @@ th,
 .article-announcements, 
 .article-awards, 
 .article-about_us {
-  min-height: 815px;
+  min-height: 909px;
 }
 
 .article-announcements-listing, 
@@ -1216,7 +1216,7 @@ input[name="testDate"] {
 .awards-item img {
   width: 425px;
   height: 425px;
-  border: 5px solid #fff;
+  border: 5px solid #e76200;
 }
 
 .awards-item a:nth-child(2) {
