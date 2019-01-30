@@ -1272,7 +1272,7 @@ input[name="testDate"] {
 
 .article-events, 
 .article-camps {
-  min-height: 885px;
+  min-height: 909px;
 }
 
 
@@ -1287,12 +1287,11 @@ input[name="testDate"] {
 
 /* *** CAMPS *** */
 
-.article-camps table, 
-.article-camps table[width="500"] tr td, 
-.article-camps table[width="580"] tr td {
-  border: none !important;
-  background-color: transparent !important;
+.article-camps img {
+  margin: 50px auto !important;
+  display: block;
 }
+
 
 @media screen and (min-width: 360px) and (max-width: 414px) {
 
