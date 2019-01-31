@@ -54,6 +54,7 @@ h4,
 .article-english-listing, 
 .article-english, 
 .article-english img:nth-child(4) + a,  
+.article-events a, 
 #footer-row_3 span, 
 .article-login, 
 .article-header-announcements, 
@@ -107,6 +108,7 @@ th,
 .article-english-listing span, 
 .article-english ul li, 
 .article-english img:nth-child(4) + a, 
+.article-events a, 
 .article-lessons span, 
 .article-lessons ul li, 
 .article-announcements a, 
@@ -463,6 +465,7 @@ nav > section > div span,
 .article-awards a, 
 .article-debate-listing a, 
 .article-media a, 
+.article-events a, 
 .article-events-listing a, 
 .article-camps-listing a {
   color: #e76200;
@@ -958,7 +961,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-awards-listing a, 
 .article-events-listing a, 
 .article-camps-listing a {
-  width: 700px;
+  width: 695px;
   display: inline-block;
 }
 
@@ -970,9 +973,16 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-awards-listing span, 
 .article-events-listing span, 
 .article-camps-listing span {
-  width: 185px;
+  width: 210px;
   display: inline-block;
   vertical-align: top;
+}
+
+.article-debate img, 
+.article-english img, 
+.article-camps img {
+  margin: 50px auto !important;
+  display: block;
 }
 
 th, 
@@ -1104,7 +1114,11 @@ th,
 
 .article-announcements, 
 .article-awards, 
-.article-about_us {
+.article-about_us, 
+.article-debate, 
+.article-english, 
+.article-events, 
+.article-camps {
   min-height: 909px;
 }
 
@@ -1119,7 +1133,7 @@ th,
 .article-awards > div > span, 
 .article-events > div > span, 
 .article-camps > div > span {
-  width: 185px;
+  width: 210px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1268,14 +1282,6 @@ input[name="testDate"] {
 }
 
 
-/* *** EVENTS *** */
-
-.article-events, 
-.article-camps {
-  min-height: 909px;
-}
-
-
  /* *** CONTACT US *** */
 
  .article-contact_us, 
@@ -1287,10 +1293,6 @@ input[name="testDate"] {
 
 /* *** CAMPS *** */
 
-.article-camps img {
-  margin: 50px auto !important;
-  display: block;
-}
 
 
 @media screen and (min-width: 360px) and (max-width: 414px) {
@@ -1356,6 +1358,7 @@ input[name="testDate"] {
   .article-faculty-member-page a, 
   .article-faculty-member-page span, 
   .awards-item a:nth-child(2), 
+  .article-events a, 
   .article-events-listing a, 
   .article-events-listing span, 
   .article-camps-listing a, 
