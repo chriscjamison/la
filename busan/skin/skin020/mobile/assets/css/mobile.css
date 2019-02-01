@@ -45,12 +45,11 @@ nav,
 #button input, 
 h2, 
 h4, 
-
+.article-about_us, 
 .article-announcements, 
 .article-header-announcements, 
 .article-apply_faculty, 
 .article-apply_students, 
-.article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1),  
 .article-awards, 
 .article-business, 
 .article-camps, 
@@ -66,7 +65,9 @@ h4,
 .article-leaders_jr, 
 .article-lessons, 
 .article-login, 
-.article-media {
+.article-media, 
+.article-gpa, 
+.article-contact_us {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.6;
@@ -120,15 +121,13 @@ th,
 .article-camps-listing span, 
 .article-lessons p, 
 .article-business p, 
-.article-leaders_jr p {
+.article-leaders_jr p, 
+.article-gpa p, 
+.article-contact_us {
   font-size: 32px;
 }
 
-.article-faculty-member-page span, 
-.article-apply_faculty input[type="text"], 
-.article-apply_faculty select, 
-.article-apply_faculty textarea, 
-.article-apply_faculty .form_comment, 
+.article-apply_faculty a, 
 .form_tbl_form tbody th, 
 .article-apply_students, 
 .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1), 
@@ -197,6 +196,7 @@ li,
 .article-faculty a, 
 .article-camps a, 
 .article-camps span, 
+.article-contact_us, 
 .article-debate h6, 
 .article-debate a, 
 .article-debate span, 
@@ -214,7 +214,8 @@ li,
 .article-leaders_jr p, 
 .article-lessons p, 
 .article-lessons ul li, 
-.article-media a {
+.article-media a, 
+.article-apply_faculty a {
   font-weight: 400;
 }
 
@@ -458,7 +459,10 @@ nav > section > div span,
 .article-media a, 
 .article-events a, 
 .article-events-listing a, 
-.article-camps-listing a {
+.article-camps-listing a, 
+.article-apply_faculty a, 
+.article-contact_us a, 
+.article-business a {
   color: #e76200;
 }
 
@@ -832,17 +836,13 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   max-height: 999999px;
 }
 
-.article-leaders_jr {
-  min-height: 934px;
+.article-leaders_jr, 
+.article-apply_students {
+  min-height: 916px;
 }
 
 
 /* *** LESSONS *** */
-
-.article-lessons, 
-.article-business {
-  text-align: center;
-}
 
 .article-lessons span {
   margin: 2em 0;
@@ -866,6 +866,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
   margin: 0 auto;
 }
 
+.article-apply_students, 
 .article-debate, 
 .article-debate-listing, 
 .article-english, 
@@ -883,7 +884,8 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-contact_us, 
 .article-lessons, 
 .article-business, 
-.article-leaders_jr {
+.article-leaders_jr, 
+.article-media {
   width: 910px;
   margin: 0 30px;
 }
@@ -934,7 +936,7 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 .article-debate img, 
 .article-english img, 
 .article-camps img {
-  margin: 50px auto !important;
+  margin: 30px auto !important;
   display: block;
 }
 
@@ -1072,7 +1074,7 @@ th,
 .article-english, 
 .article-events, 
 .article-camps {
-  min-height: 909px;
+  min-height: 919px;
 }
 
 .article-announcements-listing, 
@@ -1239,26 +1241,34 @@ input[name="testDate"] {
 
  .article-contact_us, 
  .article-lessons, 
- .article-business {
-  min-height: 928px;
+ .article-business, 
+ .article-media {
+  min-height: 924px;
 }
 
 
-/* *** CAMPS *** */
+/* *** MEDIA *** */
 
-
+.article-media p {
+  text-align: center;
+}
 
 @media screen and (min-width: 360px) and (max-width: 414px) {
 
   /* *** COMMONLY USED VALUES *** */
-  h4 {
-    font-size: 18px;
-  }
 
   h2 {
     font-size: 21px;
   }
-   
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
   #mobile-search {
     font-size: 16px;
   }
@@ -1272,19 +1282,11 @@ input[name="testDate"] {
   .form-row input, 
   .form-row label, 
   .article-debate, 
-  .article-debate-listing a, 
   .article-debate p, 
-  .article-debate ul li, 
   .article-debate span, 
-  .article-debate table:nth-child(7) tr:nth-child(1) td, 
-  .article-debate ol, 
-  .article-debate ol li, 
   .article-debate a, 
-  .article-debate div, 
-  .article-debate font, 
   .article-awards a, 
   .article-awards span, 
-  .article-awards ol, 
   .article-announcements a, 
   .article-announcements span, 
   .article-announcements ol, 
@@ -1303,13 +1305,6 @@ input[name="testDate"] {
   h6, 
   .article-english-listing span, 
   .article-english ul li, 
-  .article-faculty-member .title, 
-  .article-faculty-member .content, 
-  .article-faculty-member ul li, 
-  .article-faculty-member p, 
-  .article-faculty-member-page ul li, 
-  .article-faculty-member-page a, 
-  .article-faculty-member-page span, 
   .awards-item a:nth-child(2), 
   .article-events a, 
   .article-events-listing a, 
@@ -1318,15 +1313,16 @@ input[name="testDate"] {
   .article-camps-listing span, 
   .article-lessons p, 
   .article-business p, 
-  .article-media a {
-    font-size: 12px;
-  }
-
-  .article-apply_students > table > tbody > tr:nth-child(1) > td:nth-child(1), 
-  .article-apply_faculty table, 
-  .article-apply_faculty input[type="text"], 
-  .article-apply_faculty table .form_comment, 
-  .article-apply_faculty select { 
+  .article-media a, 
+  .article-leaders_jr, 
+  .article-gpa p, 
+  .div-faculty-info, 
+  .div-faculty-info a, 
+  .article-apply_faculty, 
+  .article-apply_faculty a, 
+  .article-about_us, 
+  .article-contact_us, 
+  .article-contact_us a {
     font-size: 12px !important;
   }
 
@@ -1346,7 +1342,7 @@ input[name="testDate"] {
   p, 
   .article-awards p, 
   .article-apply_students .form_comment {
-    line-height: 14px;
+    line-height: 1.6;
   }
 
   th, 
@@ -1363,7 +1359,7 @@ input[name="testDate"] {
   /* *** HEADER *** */
 
   header {
-    height: 120px;
+    height: 85px;
   }
   
   .header-index {
@@ -1491,7 +1487,7 @@ input[name="testDate"] {
 
   nav, 
   #nav-sub_menu {
-    margin: 25px 15px 15px 12px;
+    margin: 0 15px 0 12px;
   }
 
   #nav-main_menu {
@@ -1612,12 +1608,7 @@ input[name="testDate"] {
     margin-left: 0;
   }
 
-  #link
-  #nav-section_menu #link-english-talk_2016, 
-  #nav-section_menu #link-english-english_advanced {
-    vertical-align: top;
-  }
-
+  
   /* *** SECTION NAVIGATION *** */
 
   #nav-section_menu a {
@@ -1708,7 +1699,7 @@ input[name="testDate"] {
   /* *** ARTICLE *** */
 
   article {
-    margin: 15px;
+    margin: 0 15px;
   }
 
   .article-login {
@@ -1718,16 +1709,22 @@ input[name="testDate"] {
 
   /* *** DEBATE *** */
 
-  /* .article-debate, 
+  .article-debate, 
   .article-announcements, 
   .article-awards,
   .article-english, 
   .article-events, 
   .article-faculty, 
   .article-camps, 
-  .article-about_us {
+  .article-about_us, 
+  .article-leaders_jr, 
+  .article-lessons, 
+  .article-apply_students, 
+  .article-business, 
+  .article-media, 
+  .article-gpa {
     margin: 0 15px;
-  } */
+  }
   
   .article-debate p {
     margin: 15px 25px;
@@ -1769,7 +1766,7 @@ input[name="testDate"] {
   .article-announcements > div > span, 
   .article-events > div > span, 
   .article-camps > div > span {
-    width: 75px;
+    width: 80px;
   }
   
   
@@ -1895,27 +1892,31 @@ input[name="testDate"] {
   .article-awards-row {
     margin: 15px;
   }
-
-  .article-awards h4 {
-    margin: 15px 0;
-  }
-
-  .awards-item img {
-    border: 2px solid #485081;
-  }
-
-  .awards-item .location_tx11 {
-    margin: 10px 0;
-  }
   
   .awards-item a:nth-child(2) {
     margin: 8px 0 0 0;
     line-height: 12px;
   }
 
+  .awards-item img {
+    border: 2px solid #e76200;
+  }
+
   .awards-item-holder {
     margin: 0 auto;
     min-height: auto;
+  }
+
+  .a-awards-link {
+    width: 7em;
+    margin: 15px auto;
+  }
+
+
+  /* *** GPA **** */
+
+  .article-gpa p {
+    text-align: center;
   }
 
 
@@ -1975,13 +1976,14 @@ input[name="testDate"] {
   .article-header-faculty, 
   .article-header-lessons, 
   .article-header-business, 
+  .article-header-contact_us, 
   .article-apply_students table, 
   .article-apply_students table > tbody > tr:nth-child(1) > td:nth-child(1), 
   .article-apply_faculty table, 
-  .article-debate-listing, 
   .article-debate img, 
   .article-announcements img, 
-  .article-header-english {
+  .article-header-english, 
+  .article-header-media {
     width: 320px;
   }
 
@@ -2024,7 +2026,7 @@ input[name="testDate"] {
 
   nav, 
   #nav-sub_menu {
-    margin: 25px 15px 15px 17px;
+    margin: 0 15px 0 17px;
   }
 
 	nav > section > div, 
@@ -2101,7 +2103,15 @@ input[name="testDate"] {
   .article-about_us, 
   .article-lessons, 
   .article-business, 
-  .article-leaders_jr {
+  .article-leaders_jr, 
+  .article-leaders_jr img, 
+  .article-apply_students, 
+  .article-faculty, 
+  .article-faculty img, 
+  .article-contact_us, 
+  .article-business, 
+  .article-gpa, 
+  .article-media {
     width: 290px;
   }
 
@@ -2143,16 +2153,21 @@ input[name="testDate"] {
   .article-awards-listing a, 
   .article-events-listing a, 
   .article-camps-listing a {
-    width: 210px;
+    width: 205px;
+  }
+
+  .article-debate {
+    min-height: auto;
   }
 
   
   /* *** AWARDS *** */
 
   .article-awards, 
-  .article-events, 
+  .article-camps, 
+  .article-english, 
   .article-camps {
-    min-height: 202px;
+    min-height: 291px;
   }
 
 
@@ -2165,46 +2180,11 @@ input[name="testDate"] {
 
   /* *** APPLY (STUDENTS) *** */
 
-  .article-apply_students .form_input_text {
-    width: 200px;
-  }
-  
-  .article-apply_students textarea {
-    width: 200px !important;
+  .article-apply_students, 
+  .article-apply_faculty {
+    min-height: 273px;
   }
 
-
-  /* *** APPLY (FACULTY) *** */
-
-  .article-apply_faculty table th {
-    width: 75px;
-  }
-
-  .article-apply_faculty .form_input_text, 
-  input#fmname, 
-  input#fmemail, 
-  input#fmtitle {
-    width: 220px;
-  }
-
-  input#fmemail, 
-  input#fmtitle, 
-  .article-apply_faculty textarea {
-    width: 220px !important;
-  }
-
-  input#fmphone1, 
-  input#fmphone2, 
-  input#fmmobile1, 
-  input#fmmobile2 {
-    width: 35px;
-  }
-
-  input#fmphone3, 
-  input#fmmobile3 {
-    width: 94px;
-  }
-  
 
   /* *** ENGLISH *** */
 
@@ -2225,40 +2205,19 @@ input[name="testDate"] {
 
   /* *** FACULTY *** */
 
-  .article-faculty-member, 
-  .article-faculty-member img, 
-  .article-faculty-info, 
-  .article-faculty-info ul, 
-  .article-faculty-info p {
-    width: 135px;
-  }
-
-  .article-faculty-member {
-    margin: 5px 2px;
-  }
-
-  .article-faculty-member img {
-    height: 185px;
+  .article-faculty #img-faculty-main {
+    margin: 30px auto 40px auto;
   }
   
-  .article-faculty-info ul {
-    margin: 0 0 0 8px;
-    padding: 0;
+  .article-faculty #img-faculty-portrait {
+    width: 5.5em;
+    margin: 15px auto;
   }
 
-  .article-faculty-info p {
-    margin: 10px 10px 10px 0;
+  #div-faculty-header {
+    width: 15.25em;
   }
 
-  .article-faculty-row {
-    margin: 0 auto 10px auto;
-  }
-
-  .article-faculty-member-page ul {
-    padding-left: 18px;
-  }
-
-  
   /* *** ABOUT US *** */
 
   .article-about_us {
@@ -2281,6 +2240,10 @@ input[name="testDate"] {
     margin: 50px 0;
   }
 
+  #article-awards-row_1 {
+    margin: 30px 0;
+  }
+
   .article-awards-row .awards-item:nth-child(1) {
     margin-right: 2px;
   }
@@ -2294,7 +2257,7 @@ input[name="testDate"] {
     height: 135px;
   }
 
- .awards-item-holder {
+  .awards-item-holder {
     margin: 0 auto;
   }
 
@@ -2311,13 +2274,17 @@ input[name="testDate"] {
   }
 
   
-  /* *** LESSONS *** */
+  /* **** GPA/TESTING **** */
 
+  .article-gpa, 
   .article-lessons, 
-  .article-business {
-    min-height: 269px;
+  .article-events, 
+  .article-contact_us, 
+  .article-business, 
+  .article-media, 
+  .article-awards-img {
+    min-height: 306px;
   }
-
 }
 
 @media screen and (min-width: 370px) and (max-width: 375px) {
@@ -2362,7 +2329,7 @@ input[name="testDate"] {
 
   nav, 
   #nav-sub_menu {
-    margin: 25px 15px 15px 9px;
+    margin: 0 15px 0 9px;
   }
 
   nav > section > div, 
@@ -2932,6 +2899,6 @@ input[name="testDate"] {
 
   nav, 
   #nav-sub_menu {
-    margin: 25px 15px 15px 15px;
+    margin: 0 15px 0 15px;
   }
 }
