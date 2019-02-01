@@ -737,12 +737,12 @@ footer > #footer-border {
 
 /* PAGE: Faculty */
 
-.article-faculty #img-faculty-main {
+#img-faculty-main {
   margin: 50px auto 100px auto;
   display: block;
 }
 
-.article-faculty #img-faculty-portrait {
+#img-faculty-portrait {
   width: 17.25em;
   margin: 50px auto;
   display: block;
@@ -1870,23 +1870,23 @@ input[name="testDate"] {
 
   /* *** FACULTY *** */
 
-  .article-faculty-member .title, 
-  .article-faculty-member .content {
-    margin: 0;
+  #img-faculty-main {
+    margin: 30px auto 40px auto;
+  }
+  
+  #img-faculty-portrait {
+    margin: 15px auto !important;
+  }
+  
+  #div-faculty-header {
+    width: 15.25em;
   }
 
-  .article-faculty-row {
-    height: 285px;
+  .div-faculty-info ul {
+    padding-left: 20px;
   }
 
-  .article-faculty-member-page ul {
-    padding-left: 18px;
-  }
 
-  #editor_contents_outline {
-    width: 270px !important;
-  }
- 
   /* *** AWARDS *** */
 
   .article-awards-row {
@@ -1953,6 +1953,13 @@ input[name="testDate"] {
   .article-contact_us, 
   .article-gpa {
     min-height: auto;
+  }
+
+
+  /* **** LEADERS JR **** */
+
+  .article-leaders_jr img {
+    margin: 30px auto;
   }
 }
 
@@ -2147,12 +2154,7 @@ input[name="testDate"] {
   
   /* *** DEBATE *** */
 
-  .article-debate-listing a, 
-  .article-english-listing a, 
-  .article-announcements-listing a, 
-  .article-awards-listing a, 
-  .article-events-listing a, 
-  .article-camps-listing a {
+  .article-events-listing a {
     width: 205px;
   }
 
@@ -2168,13 +2170,6 @@ input[name="testDate"] {
   .article-english, 
   .article-camps {
     min-height: 291px;
-  }
-
-
-  /* *** ANNOUNCEMENTS *** */
-
-  .article-announcements {
-    min-height: 172px;
   }
 
 
@@ -2205,18 +2200,10 @@ input[name="testDate"] {
 
   /* *** FACULTY *** */
 
-  .article-faculty #img-faculty-main {
-    margin: 30px auto 40px auto;
-  }
-  
-  .article-faculty #img-faculty-portrait {
+  #img-faculty-portrait {
     width: 5.5em;
-    margin: 15px auto;
   }
 
-  #div-faculty-header {
-    width: 15.25em;
-  }
 
   /* *** ABOUT US *** */
 
@@ -2299,12 +2286,7 @@ input[name="testDate"] {
   #footer-row_1, 
   #footer-row_2, 
   .article-header-debate, 
-  .article-header-debate img, 
-  .article-header-login, 
-  .article-awards.article-apply_students table, 
-  .article-apply_students table, 
-  .article-apply_students tr > td:nth-child(1), 
-  .article-header-english, 
+  .article-apply_students, 
   .article-header-announcements, 
   .article-header-awards, 
   .article-header-about_us, 
@@ -2313,7 +2295,11 @@ input[name="testDate"] {
   .article-header-events,  
   .article-header-camps, 
   .article-header-lessons, 
-  .article-header-business {
+  .article-header-business, 
+  .article-header-leaders_jr, 
+  .article-contact_us,
+  .article-media, 
+  .article-apply_faculty {
     width: 345px;
   } 
     
@@ -2375,7 +2361,7 @@ input[name="testDate"] {
   .article-awards, 
   .article-awards-listing, 
   .article-awards img, 
-  .article-header-english img, 
+  .article-english, 
   .article-english-listing, 
   .article-english img, 
   .article-english ul, 
@@ -2393,18 +2379,18 @@ input[name="testDate"] {
   .article-camps img, 
   .article-location, 
   .article-lessons, 
-  .article-business, 
-  .article-leaders_jr {
+  .article-business,
+  .article-leaders_jr,  
+  .article-leaders_jr img, 
+  .article-faculty #img-faculty-main, 
+  .article-contact_us, 
+  .article-media, 
+  .article-apply_students {
     width: 315px;
   }
 
-  .article-debate-listing a, 
-  .article-english-listing a, 
-  .article-announcements-listing a, 
-  .article-awards-listing a, 
-  .article-events-listing a, 
-  .article-camps-listing a {
-    width: 235px;
+  .article-events-listing a {
+    width: 230px;
   }
 
 
@@ -2429,26 +2415,22 @@ input[name="testDate"] {
 
   /* *** AWARDS *** */
 
-  .article-awards {
-    min-height: 229px;  
-  }
-
-
-  /* *** ANNOUNCEMENTS *** */
-
-  .article-announcements {
-    min-height: 199px;
-  }
+  .article-awards, 
+  .article-lessons, 
+  .article-business, 
+  .article-gpa, 
+  .article-contact_us, 
+  .article-media { 
+    min-height: 233px;
+  } 
 
   
   /* *** APPLY (STUDENTS) *** */
 
-  .article-apply_students .form_input_text {
-    width: 220px;
-  }
-
-  .article-apply_students textarea {
-    width: 220px !important;
+  .article-announcements, 
+  .article-apply_students, 
+  .article-apply_faculty {
+    min-height: 200px;
   }
 
 
@@ -2471,42 +2453,13 @@ input[name="testDate"] {
 
   /* *** FACULTY *** */
 
-  .article-faculty-member, 
-  .article-faculty-member img, 
-  .article-faculty-info, 
-  .article-faculty-info ul, 
-  .article-faculty-info p {
-    width: 145px;
+  #img-faculty-portrait {
+    width: 6.1em;
   }
 
-  .article-faculty-member {
-    margin: 5px 3px;
-  }
-
-  .article-faculty-member img {
-    height: 198px;
-  }
-  
-  .article-faculty-info ul {
-    margin: 0 0 0 8px;
-    padding: 0;
-  }
-
-  .article-faculty-info p {
-    margin: 10px 10px 10px 0;
-  }
-
-  .article-faculty-row {
-    height: 270px;
-    margin: 0 auto 10px auto;
-  }
   
 
   /* *** ABOUT US *** */
-
-  .article-about_us {
-    height: auto;
-  }
 
   .article-about_us img {
     height: 356px;
@@ -2514,6 +2467,10 @@ input[name="testDate"] {
   
 
   /* *** AWARDS *** */
+
+  .article-awards-row {
+    margin: 15px 0;
+  }
 
   .awards-item {
     width: 155px;
@@ -2541,13 +2498,14 @@ input[name="testDate"] {
     font-size: 9px;
   }
 
-  
-  /* *** LESSONS *** */
 
-  .article-lessons, 
-  .article-business, 
-  .article-gpa { 
-    min-height: 198px;
+  /* **** LEADERS JR **** */
+
+  .article-english, 
+  .article-leaders_jr, 
+  .article-debate, 
+  .article-about_us {
+    min-height: auto;
   }
 }
 
@@ -2567,19 +2525,12 @@ input[name="testDate"] {
   .article-header-debate, 
   .article-header-debate img, 
   .article-header-announcements, 
-  .article-login, 
-  .article-header-login, 
   .article-header-awards, 
-  .article-announcements, 
-  .article-apply_students table, 
-  .article-apply_students tr > td:nth-child(1), 
-  .article-header-english, 
-  .article-about_us, 
-  .article-award, 
-  .article-awards-row, 
-  .article-gpa, 
   .article-header-events, 
-  .article-header-camps {
+  .article-header-camps, 
+  .article-header-apply_students, 
+  .article-header-contact_us, 
+  .article-header-media {
     width: 370px;
   }
 
@@ -2669,29 +2620,6 @@ input[name="testDate"] {
     margin: 0 12px 0 12px;
   }
   
-  
-  /* *** LOGIN PAGE *** */
-
-  .article-login {
-    height: 308px;
-  }
-
-  .form-row {
-    width: 370px;
-  }
-
-  .form-row img {
-    margin-top: 11px !important;
-  }
-
-  .form-row input {
-    width: 269px;
-  }
-
-  #form-row-3 {
-    width: 237px;
-  }
-
 
   /* *** DEBATE *** */
 
@@ -2719,30 +2647,35 @@ input[name="testDate"] {
   .article-camps-listing, 
   .article-camps img, 
   .article-lessons, 
-  .article-business {
+  .article-business, 
+  .article-leaders_jr, 
+  .article-leaders_jr img, 
+  .article-announcements, 
+  .article-apply_students table, 
+  .article-apply_students tr > td:nth-child(1), 
+  .article-header-english, 
+  .article-about_us, 
+  .article-award, 
+  .article-awards-row, 
+  .article-gpa, 
+  .article-faculty, 
+  .article-faculty img, 
+  .article-apply_students, 
+  .article-contact_us, 
+  .article-media {
     width: 340px;
   }
-
-  .article-debate-listing a, 
-  .article-english-listing a, 
-  .article-announcements-listing a, 
-  .article-awards-listing a, 
-  .article-events-listing a, 
-  .article-camps-listing a {
-    width: 260px;
-  }
-
-
-  /* *** AWARDS *** */
-
-  .article-awards {
-    min-height: 298px;
+  
+  .article-events-listing a {
+    width: 255px;
   }
 
 
   /* *** ANNOUCEMENTS *** */
 
-  .article-announcements {
+  .article-announcements, 
+  .article-apply_students, 
+  .article-apply_faculty {
     min-height: 268px;
   }
 
@@ -2754,39 +2687,10 @@ input[name="testDate"] {
   }
 
 
-  /* *** APPLY (FACULTY) *** */
-
-  .article-apply_faculty .form_input_text, 
-  input#fmname, 
-  input#fmemail, 
-  input#fmtitle {
-    width: 227px;
-  }
-
-  input#fmemail, 
-  input#fmtitle, 
-  .article-apply_faculty textarea {
-    width: 227px !important;
-  }
-
-  input#fmphone1, 
-  input#fmphone2, 
-  input#fmmobile1, 
-  input#fmmobile2 {
-    width: 35px;
-  }
-
-  input#fmphone3, 
-  input#fmmobile3 {
-    width: 101px;
-  }  
-
-
   /* *** ENGLISH *** */
 
-  .article-english > h4 + h6 + table th, 
-  .article-english > h4 + h6 + table td {
-    font-size: 9px;
+  .article-english {
+    min-height: 287px;
   }
 
   .article-english ul {
@@ -2796,41 +2700,12 @@ input[name="testDate"] {
 
   /* *** FACULTY *** */
 
-  .article-faculty-member, 
-  .article-faculty-member img, 
-  .article-faculty-info, 
-  .article-faculty-info ul, 
-  .article-faculty-info p {
-    width: 155px;
-  }
-
-  .article-faculty-member {
-    margin: 5px;
-  }
-
-  .article-faculty-member img {
-    height: 213px;
-  }
-  
-  .article-faculty-info ul {
-    margin: 0 0 0 8px;
-    padding: 0;
-  }
-
-  .article-faculty-info p {
-    margin: 10px 10px 10px 0;
-  }
-
-  .article-faculty-row {
-    margin: 0 auto 10px auto;
+  #img-faculty-portrait {
+    width: 6.6em;
   }
 
 
   /* *** ABOUT US *** */
-
-  .article-about_us {
-    height: auto;
-  }
 
   .article-about_us img {
     height: 378px;
@@ -2838,10 +2713,9 @@ input[name="testDate"] {
 
 
   /* *** AWARDS *** */
-
-  .awards-item {
-    width: 155px;
-    height: 178px;
+  
+  .article-awards-row {
+    margin: 15px 0;
   }
 
   .article-awards-row .awards-item:nth-child(1) {
@@ -2850,6 +2724,11 @@ input[name="testDate"] {
 
   .article-awards-row .awards-item:nth-child(2) {
     margin-left: 13px;
+  }
+
+  .awards-item {
+    width: 155px;
+    height: 178px;
   }
 
   .awards-item img {
@@ -2865,8 +2744,14 @@ input[name="testDate"] {
 
   /* *** GPA/TESTING *** */
 
-  .article-gpa {
-    min-height: 264px;
+  .article-awards,
+  .article-gpa, 
+  .article-lessons, 
+  .article-events, 
+  .article-contact_us, 
+  .article-business, 
+  .article-media {
+    min-height: 302px;
   }
 
 
@@ -2877,11 +2762,12 @@ input[name="testDate"] {
   }
 
 
-  /* *** LESSONS *** */
+  /* **** LEADERS JR **** */
 
-  .article-lessons, 
-  .article-business {
-    min-height: 264px;
+  .article-leaders_jr, 
+  .article-debate, 
+  .article-about_us {
+    min-height: auto;
   }
 }
 
@@ -2900,5 +2786,29 @@ input[name="testDate"] {
   nav, 
   #nav-sub_menu {
     margin: 0 15px 0 15px;
+  }
+}
+
+
+@media screen and (width: 375px) and (height: 812px)  {
+
+  .article-gpa, 
+  .article-lessons, 
+  .article-events, 
+  .article-contact_us, 
+  .article-business, 
+  .article-media, 
+  .article-awards-img {
+    min-height: 378px;
+  }
+
+  .article-english, 
+  .article-camps {
+    min-height: 363px;
+  }
+
+  .article-apply_students, 
+  .article-apply_faculty {
+    min-height: 345px;
   }
 }
