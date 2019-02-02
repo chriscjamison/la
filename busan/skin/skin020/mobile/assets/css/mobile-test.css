@@ -837,7 +837,10 @@ article > table + table > tbody > tr:nth-child(4) > td:nth-child(2),
 }
 
 .article-leaders_jr, 
-.article-apply_students {
+.article-apply_students, 
+.article-apply_students, 
+.article-apply_faculty, 
+.article-gpa {
   min-height: 916px;
 }
 
@@ -1230,14 +1233,7 @@ input[name="testDate"] {
 }
 
 
-/* *** GPA/TESTING *** */
-
-.article-gpa {
-  min-height: 829px;
-}
-
-
- /* *** CONTACT US *** */
+/* *** CONTACT US *** */
 
  .article-contact_us, 
  .article-lessons, 
@@ -2207,7 +2203,8 @@ input[name="testDate"] {
 
   /* *** ABOUT US *** */
 
-  .article-about_us {
+  .article-about_us, 
+  .article-leaders_jr {
     min-height: auto;
   }
 
