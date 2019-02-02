@@ -57,9 +57,9 @@ function buildContentHeadHTML () {
   head_html = {
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
-    stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
+    stylesheet: "<link rel=\"stylesheet\" href=\"/assets/css/mobile.css\">", 
     jquery: "<script src=\"https://code.jquery.com/jquery-migrate-1.4.1.min.js\"></script>\n<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
-    javascript: "<script src=\"/skin/skin020/mobile/assets/js/content.js\"></script>"
+    javascript: "<script src=\"/assets/js/content.js\"></script>"
   };
 
 /*   head_html.google_analytics = "<!-- Global site tag (gtag.js) - Google Analytics -->\n" + 
@@ -162,7 +162,7 @@ function storeContentMainNavigationMetadata () {
         apply_students_data : { 
           id: "apply_students", 
           title: "Apply (Students)", 
-          href: "apply_students/apply_students.htm"
+          href: "apply_students/index_apply_students.htm"
         }, 
         faculty_data : { 
           id: "faculty", 
@@ -172,7 +172,7 @@ function storeContentMainNavigationMetadata () {
         apply_faculty_data : { 
           id: "apply_faculty", 
           title: "Apply (Faculty)", 
-          href: "apply_faculty/apply_faculty.htm"
+          href: "apply_faculty/index_apply_faculty.htm"
         }
       }
     }, 
@@ -182,17 +182,17 @@ function storeContentMainNavigationMetadata () {
         about_us_data : { 
           id: "about_us", 
           title: "About Us", 
-          href: "about_us/about_us.htm"
+          href: "about_us/index_about_us.htm"
         }, 
         contact_us_data : { 
           id: "contact_us", 
           title: "Contact Us", 
-          href: "contact_us/contact_us.htm"
+          href: "contact_us/index_contact_us.htm"
         }, 
         location_data : { 
           id: "location", 
           title: "Location", 
-          href: "location/location.htm"
+          href: "location/index_location.htm"
         }    
       }
     }, 
@@ -252,7 +252,7 @@ function storeContentFooterMetadata () {
           id: "facebook"
         }, 
         twitter : {
-          href: "https://twitter.com/", 
+          href: "https://twitter.com/busanleaders", 
           title: "Twitter", 
           id: "twitter"
         },
@@ -272,7 +272,7 @@ function storeContentFooterMetadata () {
       row_number: 2, 
       link_data : {
         instagram : {
-          href: "https://instagram.com/leaders_academy_busan", 
+          href: "https://instagram.com/leaders_academy_busan/", 
           title: "Instagram",
           id: "instagram"
         }, 
