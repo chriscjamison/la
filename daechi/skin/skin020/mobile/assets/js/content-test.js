@@ -37,7 +37,6 @@ function buildContentTemplateHTML () {
 } // END of FUNCTION 'buildContentTemplateHTML'
 
 
-
 function buildContentHeadHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
@@ -1084,7 +1083,6 @@ function renderContentArticleHTML (article_data)  {
 } // END of FUNCTION 'renderContentArticleHTML'
 
 
-
 function renderContent () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
@@ -1185,17 +1183,12 @@ function displayMenu(section_value) {
   // which holds the main menu.
   menu_css_value = jq(menu_selector).css("display");
 
-/*   jq(document).ready(
-    function () { */
-      // IF/ELSE statement which displays the menu if it is currently hidden and 
-      // hides the menu if it is currently visible.
-      if (menu_css_value === "none")  {
-        jq(menu_element).css(menu_visible_css);
-        // jq(menu_element).fadeTo(400, 1);
-      } else {
-        // jq(menu_element).fadeTo(400, 0);
-        jq(menu_element).css(menu_not_visible_css);
-      } // END of 'if' STATEMENT
- /*    }
-  ); */
+  // IF/ELSE statement which displays the menu if it is currently hidden and 
+  // hides the menu if it is currently visible.
+  if (menu_css_value === "none")  {
+    jq(menu_element).css(menu_visible_css);
+  } else {
+    jq(menu_element).css(menu_not_visible_css);
+  } // END of IF statement
+  
 } // END of FUNCTION 'displayMainMenu'

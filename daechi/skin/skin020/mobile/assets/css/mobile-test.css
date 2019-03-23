@@ -42,6 +42,7 @@ article {
 
 header, 
 nav, 
+aside, 
 #main-sub_menu, 
 h2, 
 h4, 
@@ -1614,6 +1615,12 @@ input[name="testDate"] {
     vertical-align: top;
   }
 
+  /* *** MAIN NAV *** */
+
+  aside {
+    margin: 25px 15px 15px 15px;
+  }
+
   /* *** SECTION NAVIGATION *** */
 
   #nav-section_menu a {
@@ -3083,7 +3090,6 @@ input[name="testDate"] {
   /* *** COMMONLY USED VALUES *** */
 
   header, 
-  nav, 
   article, 
   nav, 
   #nav-sub_menu, 
