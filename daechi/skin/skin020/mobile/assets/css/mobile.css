@@ -75,7 +75,10 @@ h4,
   color: #fff;
 }
 
-h1, 
+h1 {
+  font-size: 48px;
+}
+
 h2, 
 h4 {
   font-size: 42px;
@@ -742,7 +745,7 @@ footer > #footer-border {
 
 aside {
   margin: 25px 15px 15px 15px;
-  height: 1021px !important;
+  height: 1029px !important;
 }
 
 #div-cookie-buttons {
@@ -1285,12 +1288,14 @@ input[name="testDate"] {
 @media screen and (min-width: 360px) and (max-width: 414px) {
 
   /* *** COMMONLY USED VALUES *** */
-  h4 {
-    font-size: 18px;
-  }
-
+  
+  h1, 
   h2 {
     font-size: 21px;
+  }
+
+  h4 {
+    font-size: 18px;
   }
    
   #mobile-search {
@@ -1648,7 +1653,12 @@ input[name="testDate"] {
     vertical-align: top;
   }
 
+  
   /* *** COOKIE WARNING *** */
+  
+  #div-cookie-buttons {
+    margin: 16px auto;
+  }
 
   /* *** SECTION NAVIGATION *** */
 
@@ -2083,6 +2093,16 @@ input[name="testDate"] {
   #nav-section_menu #link-media-page_1, 
   #nav-section_menu #link-events-page_1 {
     line-height: 28px;
+  }
+  
+  /* *** COOKIE WARNING *** */
+
+  aside {
+    height: 360px !important;
+  }
+
+  #div-cookie-buttons {
+    width: 218px;
   }
   
   /* *** LOGIN PAGE *** */
@@ -2656,6 +2676,17 @@ input[name="testDate"] {
     margin: 8px 0 0 11px;
   }
   
+    
+  /* *** COOKIE WARNING *** */
+
+  aside {
+    height: 287px !important;
+  }
+
+  #div-cookie-buttons {
+    width: 238px;
+  }
+
 
   /* *** SECTION NAVIGATION *** */
 
@@ -3114,6 +3145,16 @@ input[name="testDate"] {
   }
 }
 
+@media screen and (width: 375px) and (height: 812px) {
+
+  /* *** COOKIE WARNING *** */
+
+  nav, 
+  aside {
+    height: 432px !important;
+  }
+}
+
 @media screen and (min-width: 380px) and (max-width: 414px) {
   
   /* *** COMMONLY USED VALUES *** */
@@ -3219,6 +3260,17 @@ input[name="testDate"] {
 
   #nav-section_menu #link-english-application_2016_updated {
     height: 28px;
+  }
+  
+   
+  /* *** COOKIE WARNING *** */
+
+  aside {
+    height: 356px !important;
+  }
+
+  #div-cookie-buttons {
+    width: 254px;
   }
 
   

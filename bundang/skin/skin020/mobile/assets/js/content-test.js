@@ -1038,7 +1038,7 @@ function renderContentFooterHTML () {
 
   // Add row that contains the copyright information.
   footer_html = footer_html + "<section id=\"footer-row_3\">\n" + 
-                              "  <span>Leaders Academy &copy; 2018</span>\n" + 
+                              "  <span>Leaders Academy &copy; " + year.toString() + "</span>\n" + 
                               "</section>\n";
 
   // Insert the HTML within the <footer> tag within the browser.
