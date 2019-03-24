@@ -55,9 +55,9 @@ function buildHeadHTML () {
     // google_analytics: "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-112766766-1\"></script>\n<script>\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'UA-112766766-1');\n</script>\n", 
     title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
-    stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
-    jquery: "<script src=\"/https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
-    javascript: "<script src=\"/skin/skin020/mobile/assets/js/index.js\"></script>"
+    stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile-test.css\">", 
+    jquery: "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
+    javascript: "<script src=\"/skin/skin020/mobile/assets/js/index-test.js\"></script>"
   };
 
   // Send the HTML out to be processed by another function
@@ -86,29 +86,52 @@ function renderTopHeaderHTML (base_path) {
   // links, and Search field.
   var header_html;
 
+  // A String variable which will hold a value which reflects the visitor's acceptance 
+  // of the cookie agreement.
+  var has_visitor_agreed = "";
+
+  // The current state of visitor's acceptance of the cookie agreement, 'approve', 'declined', 
+  // or 'tbd' is determined by calling the function 'determineCookieAgreement'.
+  has_visitor_agreed = determineCookieArrangement();
+
   header_html = "<a href=\"" + base_path + "\" title=\"Leaders Academy - Home\">\n" + 
                 "  <img src=\"" + base_path + "skin/skin020/mobile/assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy - Home\" />\n" + 
-                "</a>\n" + 
-                "<section id=\"header-right\">\n" + 
-                "  <div id=\"header-search\">\n" + 
-                "    <script>\n" + 
-                "      (function() {\n" + 
-                "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
-                "        var gcse = document.createElement('script');\n" + 
-                "        gcse.type = 'text/javascript';\n" + 
-                "        gcse.async = true;\n" + 
-                "        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
-                "        var s = document.getElementsByTagName('script')[0];\n" + 
-                "        s.parentNode.insertBefore(gcse, s);\n" + 
-                "      })();\n" + 
-                "    </script>\n" + 
-                "    <gcse:searchbox-only></gcse:search>\n" + 
-                "  </div>\n" + 
-                "  <div id=\"header-links\">\n" + 
-                "    <a href=\"" + base_path + "member/login?n=%2Fmypage%2Findex\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
-                "    <a href=\"" + base_path + "/mobile/ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
-                "  </div>\n" + 
-                "</section>\n";
+                "</a>\n";
+
+
+  // IF/ELSE statement which includes the search box if the visitor has approved the cookie 
+  // agreement or has made a decision either way. Otherwise, the search box is not added.
+  if (has_visitor_agreed === "decline")  {
+    header_html = header_html + 
+                  "<section id=\"header-right\">\n" + 
+                  "  <div id=\"header-links\">\n" + 
+                  "    <a href=\"" + base_path + "member/login?n=%2Fmypage%2Findex\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+                  "    <a href=\"" + base_path + "/mobile/ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+                  "  </div>\n";
+  } else {
+    header_html = header_html + 
+                  "<section id=\"header-right\">\n" + 
+                  "  <div id=\"header-search\">\n" + 
+                  "    <script>\n" + 
+                  "      (function() {\n" + 
+                  "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
+                  "        var gcse = document.createElement('script');\n" + 
+                  "        gcse.type = 'text/javascript';\n" + 
+                  "        gcse.async = true;\n" + 
+                  "        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
+                  "        var s = document.getElementsByTagName('script')[0];\n" + 
+                  "        s.parentNode.insertBefore(gcse, s);\n" + 
+                  "      })();\n" + 
+                  "    </script>\n" + 
+                  "    <gcse:searchbox-only></gcse:search>\n" + 
+                  "  </div>\n" + 
+                  "  <div id=\"header-links\">\n" + 
+                  "    <a href=\"" + base_path + "member/login?n=%2Fmypage%2Findex\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+                  "    <a href=\"" + base_path + "/mobile/ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+                  "  </div>\n"
+  }
+
+  header_html = header_html + "</section>\n";
 
   var header_selector;
   var header_element = {};
@@ -132,13 +155,13 @@ function storeNavigationMetadata () {
    *   which makes up the Main Navigation of the Landing Page.
    *   
    * FUNCTIONS WHICH USE 'storeNavigationMetadata'
-   *   + renderNavigationHTML
+   *   + renderMainContentHTML
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
   // Initialize Object which contains the metadata for the various sections.
   var nav_data = {};
-
+  
   // Store the HTML attributes, "id", "title", & "href" for the various sections within 'nav_data'.
   nav_data = {
     row_1_data : {
@@ -177,7 +200,7 @@ function storeNavigationMetadata () {
         debate_data : { 
           id: "debate", 
           title: "Debate", 
-          href: "/program/program1"
+          href: "program/program1"
         }, 
         events_data : { 
           id: "events", 
@@ -353,24 +376,24 @@ function renderFrameHTML () {
 
    // Initialize String which holds the selector for the HTML tag, <html>.
    var html_selector;
-
+  
    // Initialize Object which contains the jQuery object for the HTML tag, "html".
    var html_element = {};
-
+ 
    html_selector = "html";
    html_element = jq(html_selector);
-
+ 
    // Initialize variable which holds the Object which contains the HTML used for the 'frame' 
    // of the mobile-friendly template.
    var html_data;
-
+ 
    // Initialize String which contains the raw HTML used for the 'frame' of the mobile-friendly 
    // template.
    var html_html;
-
+ 
    // Pull the HTML for the 'frame' by calling the Function, 'buildTemplateHTML'.
    html_data = buildTemplateHTML();
-
+ 
    // Extract the HTML from the Object variable.
    html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.footer + html_data.section;
   // html_html = html_data.head + html_data.body;
@@ -379,6 +402,57 @@ function renderFrameHTML () {
    jq(html_element).html(html_html);
 
 } // END of FUNCTION 'renderFrame'
+
+
+function renderCookieWarningHTML()  {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Displays a message, warning visitors based in Europe that the search feature 
+   *   uses cookies. If the visitor does not want cookies to be placed within the browser 
+   *   a Boolean will be passed on to 'buildContentHeadHTML' which will remove HTML 
+   *   referring to the Google Search feature within the website.
+   *   
+   * FUNCTIONS WHICH USE 'renderCookieWarningHTML'
+   *   + renderMainContentHTML
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/ 
+    
+  // A String variable which will hold the HTML which contains the content of the 
+  // cookie warning is initialized.
+  var warning_html = "";
+
+  // The HTML which contains the content of the cookie is passed on.
+  warning_html = "<aside>\n" + 
+                  "  <h1>GDPR Cookie Law Compliance</h1>\n" + 
+                  "  <p>\n" + 
+                  "    This website collects browing data during searches \n" + 
+                  "    for content located on leadersacademy.com.\n" + 
+                  "  </p>\n" + 
+                  "  <p>\n" + 
+                  "    If you do not want your browsing data sent to \n" + 
+                  "    third-party companies, please press the 'Opt Out' \n" + 
+                  "    button below. The search box will no longer appear \n" + 
+                  "    as you use leadersacademy.com.\n" + 
+                  "  </p>\n" + 
+                  "  <p>\n" + 
+                  "    Otherwise, press the 'Okay' button. The search feature \n" + 
+                  "    will continue to be available.\n" + 
+                  "  </p>" + 
+                  "  <p>\n" + 
+                  "    <a href=\"http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm\" target=\"_blank\">For more information, please press here.</a>\n" + 
+                  "  </p>\n" +
+                  "  <div id=\"div-cookie-buttons\">\n" + 
+                  "    <a href=\"javascript:setCookie('decline');\" id=\"link-opt_out\"\">Opt Out</a>\n" + 
+                  "    <a href=\"javascript:setCookie('approve');\">Okay</a>\n" + 
+                  "  </div>\n" + 
+                  "</aside>";
+
+  return warning_html;
+} // END of FUNCTION 'renderCookieWarningHTML'
+
+
 
 function renderHeadHTML ()  {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
@@ -396,7 +470,7 @@ function renderHeadHTML ()  {
 
   // Initialize String which holds the selector for the HTML tag, "<head>".
   var head_selector;
-
+   
   // Initialize Object which contains the jQuery object for the HTML tag, "<head>".
   var head_element = {};
 
@@ -423,21 +497,190 @@ function renderHeadHTML ()  {
 
 } // END of FUNCTION 'renderHeadHTML'
 
-function renderNavigationHTML (base_path)  {
-    /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - NONE
-   *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
-   *                         <a> tags.
-   * 
-   * PURPOSE OF FUNCTION 
-   *   Assembles the links and HTML elements used within the <nav> tag. Also inserts the HTML 
-   *   within the browser into the HTML tag <nav>
-   *   
-   * FUNCTIONS WHICH USE 'renderLandingPage'
-   *   + renderLandingPage
-   * 
-    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
+function setCookie(acceptance_state)  {
+/**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+ * @params 
+ *   acceptance_state - Holds a string which causes the function to set the value of 
+ *                      the cookie to note the visitor has accepted the cookie agreement 
+ *                      or declined the agreement.
+ * 
+ * PURPOSE OF FUNCTION 
+ *   Sets the value of the cookie to reflect the visitor has accepted the terms of the 
+ *   cookie agreement or declined the agreement.
+ *   
+ * FUNCTIONS WHICH USE 'setCookie'
+ *   + Triggered while the 'button' within the cookie warning content is clicked.
+ * 
+  *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // A Date variable which will hold the current date is initialized.
+  var current_time = new Date();
+
+  // The time which will determine the length of time the cookie is valid is passed on.
+  current_time.setTime(current_time.getTime() + (365 * 24 * 60 * 60 * 1000));
+
+  // A String variable which will hold the date the cookie will expire is passed on.
+  var expiration_date = "";
+
+  // The date the cookie will expire is passed on.
+  expiration_date = "expires=" + current_time.toUTCString();
+
+  document.cookie = "warning_agreement=" + acceptance_state + ";" + expiration_date + ";path=/";
+
+  setTimeout(
+    function () {
+      window.location.href = "http://daechi.leadersacademy.com/skin/skin020/mobile/index_1.htm";
+    }, 250
+  );
+
+} // END of FUNCTION 'setCookie'
+
+
+function isVisitorInEurope()  {
+/**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+ * @params - NONE
+ * 
+ * PURPOSE OF FUNCTION 
+ *   Determines if the time zone of the visitor's browser lies in Europe. 
+ *   within the browser into the HTML tag <nav>
+ *   
+ * FUNCTIONS WHICH USE 'isVisitorInEurope'
+ *   + renderMainContentHTML
+ * 
+  *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+  
+  // A Date variable which will hold the UTC Date value for the visitors browser is initialzed.
+  var current_time = new Date();
+
+  // A String variable which will hold the string referring to the current date is initialized.
+  var time_string = "";
+
+  // The string which refers to the visitor's browser's date is passed on.
+  time_string = current_time.toTimeString();
+
+  // An Array variable which will hold time zone related data to search for within 'time_string' 
+  // is initialized.
+  time_zone_search_values_Array = [];
+
+  // The search values which will be searched for within the value of 'time_string' are passed on.
+  time_zone_search_values_Array = [
+    "GMT+0000", 
+    "GMT+0100", 
+    "GMT+0200"
+  ];
+
+  // A Number variable which will hold the location within the value of 'time_string' searched 
+  // for strings lie.
+  var time_zone_search_result;
+  
+  var is_visitor_in_europe;
+
+  // The values held by 'time_zone_search_values_Array' are searched for within 'time_string'.
+  time_zone_search_values_Array.forEach(
+    function (value, index) {
+      time_zone_search_result = time_string.indexOf(value);
+
+      // IF statement which sets 'is_visitor_in_europe' to true if one of the values held 
+      // within 'time_zone_search_values_Array' is found within 'time_string'.
+      if (time_zone_search_result >= 0) {
+        is_visitor_in_europe = true;
+      } else {
+        is_visitor_in_europe = false;
+      }
+    }
+  );
+
+  return true;
+
+} // END of FUNCTION 'isVisitorInEurope'
+
+
+function determineCookieArrangement()  {
+/**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+ * @params - NONE
+ * 
+ * PURPOSE OF FUNCTION 
+ *   Determines if the visitor has agreed to the cookie policy.
+ *   
+ * FUNCTIONS WHICH USE 'determineCookieArrangement'
+ *   + renderMainContentHTML
+ * 
+  *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // A String variable which will hold the data stored in 'document.cookie' is initialized.
+  var cookie_data = "";
+
+  // The value of the cookie is passed on.
+  cookie_data = document.cookie;
+
+  // An Array variable which will hold data to be searched for within 'cookie_data' 
+  // is initialized.
+  var cookie_search_string_Array = [];
+
+  // The value of strings which will be searched for within 'cookie_data' are passed on.
+  cookie_search_string_Array = [
+    "warning_agreement=approve", 
+    "warning_agreement=decline"
+  ];
+  
+  // A Number variable which will hold the location within 'cookie_data' the value 
+  // of 'cookie_search_string' is initialized.
+  var cookie_search_result;
+
+  // A String variable which will hold 'true' if the cookie data reflects the visitor 
+  // has accepted the cookie agreeement is initialized.
+  var has_visitor_agreed = "";
+
+  // The data of the cookie is searched within to determine if the visitor has previously 
+  // approved of the cookie agreement.
+  cookie_search_string_Array.forEach(
+    function (value, index) {
+      cookie_search_result = cookie_data.indexOf(value);
+      
+      // IF/ELSE statement which passes on the value of 'true' to 'has_visitor_agreed' 
+      // if the cookie data reflects a visitor's agreement. Otherwise the value 
+      // of 'false' will be passed on to 'has_visitor_agreed'.
+      if (cookie_search_result >= 0 && index === 0) {
+        has_visitor_agreed = "approve";      
+      } else if (cookie_search_result >= 0 && index === 1) {
+        has_visitor_agreed = "decline";
+      }
+    }
+  );
+console.log("has_visitor_agreed = " + has_visitor_agreed);
+  // IF statement which will set the value of 'has_visitor_agreed' to 'tbd' 
+  // the the value of the cookie shows the agreement has been neither 
+  // approved or declined.
+  if (has_visitor_agreed === "")  {
+    has_visitor_agreed = "tbd";
+  }
+
+  // The findings of the script - that the visitor has accepted the agreement, declined 
+  // the agreement, or has yet to see the document is passed on.
+  return has_visitor_agreed;
+
+} // END of FUNCTION 'determineCookieArrangement'
+
+
+function renderMainContentHTML (base_path)  {
+/**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+ * @params
+ *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
+ *                         <a> tags.
+ * 
+ * PURPOSE OF FUNCTION 
+ *   Assembles the links and HTML elements used within the <nav> tag. Also inserts the HTML 
+ *   within the browser into the HTML tag <nav>
+ *   
+ * FUNCTIONS WHICH USE 'renderMainContentHTML'
+ *   + renderLandingPage
+ * 
+  *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+    
+  var is_visitor_in_europe;
+
+  is_visitor_in_europe = isVisitorInEurope();
 
   // Initialize String which holds the selector for the HTML tag, "<nav>".
   var nav_selector;
@@ -448,40 +691,66 @@ function renderNavigationHTML (base_path)  {
   nav_selector = "nav";
   nav_element = jq(nav_selector);
 
-  // Initialize variable which holds the Object which contains the HTML references contained 
-  // within the <nav> tag.
-  var nav_data;
+  // A String variable which will hold a flag which refers to the visitor's agreement 
+  // to allow cookies is initalized.
+  var does_visitor_allow_cookies = "";
 
-  // Initialize String which contains the raw HTML used contained within the <nav> tag.
-  var nav_html;
+  // The function calls 'determineCookieArrangement' which parses the cookie data and 
+  // passes on if the visitor has accepted the cookie agreement, declined the agreement 
+  // or has yet to see the agreement. That value is passed on.
+  does_visitor_allow_cookies = determineCookieArrangement();
 
-  // Pull the HTML contained within the <nav> tag by calling the Function, 'storeNavigationMetadata'.
-  nav_data = storeNavigationMetadata();
+  // IF statement which creates HTML which will hold the content of the cookie warning.
+  if (does_visitor_allow_cookies === "tbd" && is_visitor_in_europe === true) {
+    nav_html = renderCookieWarningHTML();
+  } else {
+    // Initialize variable which holds the Object which contains the HTML references contained 
+    // within the <nav> tag.
+    var nav_data;
 
-  nav_html = "";
+    // Initialize String which contains the raw HTML used contained within the <nav> tag.
+    var nav_html;
 
-  // Extract the HTML from the Object variable.
-  jq.each(nav_data, 
-    function (row_index, rows) {
-      nav_html = nav_html + "<section id=\"nav-row_" + rows.row_number + "\">\n";
+    // Pull the HTML contained within the <nav> tag by calling the Function, 'storeNavigationMetadata'.
+    nav_data = storeNavigationMetadata();
 
-      jq.each(rows.link_data,
-        function (link_index, link_metadata) {
-          nav_html = nav_html + "<div id=\"link-" + link_metadata.id + "\">\n";
-          nav_html = nav_html + "  <a href=\"" + base_path + link_metadata.href + "\" title=\"" + link_metadata.title + "\"></a>\n"; 
-          nav_html = nav_html + "  <span>" + link_metadata.title + "</span>\n";
-          nav_html = nav_html + "</div>\n";
-        }
-      );
+    nav_html = "";
 
-      nav_html = nav_html + "</section>\n";
-    } 
-  );
+    // Extract the HTML from the Object variable.
+    jq.each(nav_data, 
+      function (row_index, rows) {
+        nav_html = nav_html + "<section id=\"nav-row_" + rows.row_number + "\">\n";
+        
+        jq.each(rows.link_data,
+          function (link_index, link_metadata) {
+            nav_html = nav_html + "<div id=\"link-" + link_metadata.id + "\">\n";
+            nav_html = nav_html + "  <a href=\"" + base_path + link_metadata.href + "\" title=\"" + link_metadata.title + "\"></a>\n"; 
+            nav_html = nav_html + "  <span>" + link_metadata.title + "</span>\n";
+            nav_html = nav_html + "</div>\n";
+          }
+        );
 
-  // Insert the HTML within the <nav> tag within the browser.
-  jq(nav_element).html(nav_html);
-}
+        nav_html = nav_html + "</section>\n";
+      } 
+    );
+  }
 
+  // IF/ELSE statement which replaces the <nav> tag with the content needed for the 
+  // cookie warning or allows the HTML needed for the main navigation to be placed 
+  // within the webpage's HTML.
+  if (does_visitor_allow_cookies) {
+
+    // IF statement which replaces the <nav> tag with the content needed for the 
+    // cookie warning if the value of 'does_visitor_allow_cookies' is 'tbd'.
+    if (does_visitor_allow_cookies === "tbd") {
+      jq(nav_element).replaceWith(nav_html);
+    } else {
+      jq(nav_element).html(nav_html);
+    }
+  } else {
+    jq(nav_element).html(nav_html);
+  }  
+} // END of FUNCTION 
 
 
 function renderFooterHTML () {
@@ -499,7 +768,7 @@ function renderFooterHTML () {
 
   // Initialize String which holds the selector for the HTML tag, "<footer>".
   var nav_selector;
-
+  
   // Initialize Object which contains the jQuery object for the HTML tag, "<footer>".
   var footer_element = {};
 
@@ -521,7 +790,7 @@ function renderFooterHTML () {
   footer_html = "  <section id=\"footer-border\">\n" + 
                 "    <div></div>\n" + 
                 "  </section>\n";
-
+  
   // Extract the HTML from the Object variable.
   jq.each(footer_data, 
     function (row_index, rows) {
@@ -574,8 +843,8 @@ function renderLandingPage () {
 
   renderTopHeaderHTML(base_path);
 
-  renderNavigationHTML(base_path);
-
+  renderMainContentHTML(base_path);
+  
   renderFooterHTML();
-
-} // END of FUNCTION 'renderLandingPage' 
+  
+} // END of FUNCTION 'renderLandingPage'
