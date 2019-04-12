@@ -53,7 +53,7 @@ function buildHeadHTML () {
   // Store the HTML references within 'header_html'.
   head_html = {
     // google_analytics: "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-112766766-1\"></script>\n<script>\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'UA-112766766-1');\n</script>\n", 
-    title: "<title>Leaders Academy</title>", 
+    title: "<title>Leaders Academy - Busan</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
     stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
     jquery: "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 

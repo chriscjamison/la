@@ -1,10 +1,8 @@
-﻿/* content.js ~ Renders mobile-friendly HTML of the content pages. This file also handles *
- *              animations and other types of HTML DOM manipulation based upon            *
- *              commands issued by a user.                                                *
- * *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ** */
+﻿/* index.js ~ Renders the mobile landing page after the desktop landing page has loaded. */
+
 var jq = jQuery.noConflict();
 
-function buildContentTemplateHTML () {
+function buildTemplateHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -12,8 +10,8 @@ function buildContentTemplateHTML () {
    *   Returns the HTML which contains the basic 'sections' of the Landing Page such as 
    *   the <DOCTYPE>, <html>, <head> tags along with others.
    *   
-   * FUNCTIONS WHICH USE 'buildContentTemplateHTML'
-   *   + renderContent
+   * FUNCTIONS WHICH USE 'buildTemplateHTML'
+   *   + renderLandingPage
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -26,7 +24,6 @@ function buildContentTemplateHTML () {
     body: "<body></body>", 
     header: "<header></header>", 
     nav: "<nav></nav>", 
-    article: "<article></article>", 
     footer: "<footer></footer>", 
     section: "<section></section>"
   };
@@ -34,18 +31,18 @@ function buildContentTemplateHTML () {
   // Send 'template_html' for processing by another function.
   return template_html;
 
-} // END of FUNCTION 'buildContentTemplateHTML'
+} // END of FUNCTION 'buildTemplateHTML'
 
 
 
-function buildContentHeadHTML () {
+function buildHeadHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
    * PURPOSE OF FUNCTION 
    *   Returns the HTML which is contained within the <head> tag of the Landing Page.
    *   
-   * FUNCTIONS WHICH USE 'buildContentHeadHTML'
+   * FUNCTIONS WHICH USE 'buildHeadHTML'
    *   + renderHeadHTML
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
@@ -55,22 +52,14 @@ function buildContentHeadHTML () {
 
   // Store the HTML references within 'header_html'.
   head_html = {
-    title: "<title>리더스아카데미</title>", 
+    // google_analytics: "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-112766766-1\"></script>\n<script>\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'UA-112766766-1');\n</script>\n", 
+    title: "<title>Leaders Academy</title>", 
     meta_http: "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />", 
-    stylesheet: "<link rel=\"stylesheet\" href=\"/assets/css/mobile.css\">", 
-    jquery: "<script src=\"https://code.jquery.com/jquery-migrate-1.4.1.min.js\"></script>\n<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
-    javascript: "<script src=\"/assets/js/content.js\"></script>"
+    stylesheet: "<link rel=\"stylesheet\" href=\"/skin/skin020/mobile/assets/css/mobile.css\">", 
+    jquery: "<script src=\"/https://code.jquery.com/jquery-3.2.1.min.js\"></script>", 
+    javascript: "<script src=\"/skin/skin020/mobile/assets/js/index.js\"></script>"
   };
 
-/*   head_html.google_analytics = "<!-- Global site tag (gtag.js) - Google Analytics -->\n" + 
-                               "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-112766766-1\"></script>\n" + 
-                               "<script>\n" + 
-                               "  window.dataLayer = window.dataLayer || [];\n" + 
-                               "  function gtag(){dataLayer.push(arguments);}\n" + 
-                               "    gtag('js', new Date());\n" + 
-                               "    gtag('config', 'UA-112766766-1');\n" + 
-                               "</script>\n";
- */
   // Send the HTML out to be processed by another function
   return head_html;
 
@@ -78,7 +67,63 @@ function buildContentHeadHTML () {
 
 
 
-function storeContentMainNavigationMetadata () {
+function renderTopHeaderHTML (base_path) {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - 
+   *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
+   *                         <a> tags.
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Returns the HTML for the logo, links, and search field which is contained within the 
+   *   <header> tag of the Landing Page.
+   *   
+   * FUNCTIONS WHICH USE 'buildHeadHTML'
+   *   + renderLandingPage
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+  // Initializes String which contains the HTML which displays the logo, Login & Language 
+  // links, and Search field.
+  var header_html;
+
+  header_html = "<a href=\"" + base_path + "\" title=\"Leaders Academy - Home\">\n" + 
+                "  <img src=\"" + base_path + "skin/skin020/mobile/assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy - Home\" />\n" + 
+                "</a>\n" + 
+                "<section id=\"header-right\">\n" + 
+                "  <div id=\"header-search\">\n" + 
+                "    <script>\n" + 
+                "      (function() {\n" + 
+                "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
+                "        var gcse = document.createElement('script');\n" + 
+                "        gcse.type = 'text/javascript';\n" + 
+                "        gcse.async = true;\n" + 
+                "        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
+                "        var s = document.getElementsByTagName('script')[0];\n" + 
+                "        s.parentNode.insertBefore(gcse, s);\n" + 
+                "      })();\n" + 
+                "    </script>\n" + 
+                "    <gcse:searchbox-only></gcse:search>\n" + 
+                "  </div>\n" + 
+                "  <div id=\"header-links\">\n" + 
+                "    <a href=\"" + base_path + "member/login?n=%2Fmypage%2Findex\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
+                "    <a href=\"" + base_path + "/mobile/ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
+                "  </div>\n" + 
+                "</section>\n";
+
+  var header_selector;
+  var header_element = {};
+
+  header_selector = "header";
+  header_element = jq(header_selector);
+
+  jq(header_element).html(header_html);
+
+  jq(header_element).attr("class", "header-index");
+} // END of FUNCTION 'renderTopHeaderHTML'
+
+
+
+function storeNavigationMetadata () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -86,8 +131,8 @@ function storeContentMainNavigationMetadata () {
    *   Returns the metadata such as the HTML attributes, "id", "title", & "href" 
    *   which makes up the Main Navigation of the Landing Page.
    *   
-   * FUNCTIONS WHICH USE 'storeContentMainNavigationMetadata'
-   *   + renderContentNavigationHTML
+   * FUNCTIONS WHICH USE 'storeNavigationMetadata'
+   *   + renderNavigationHTML
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -99,115 +144,100 @@ function storeContentMainNavigationMetadata () {
     row_1_data : {
       row_number: 1, 
       link_data : {  
-        leaders_jr_data : {
-          id: "leaders_jr", 
-          title: "Leaders Jr.", 
-          href: "leaders_jr/index_leaders_jr.htm"
-        },
-        gpa_data : {
+        gap_data : {
           id: "gpa",  
           title: "GPA/Testing", 
-          href: "gpa/index_gpa.htm"
+          href: "admission/admission1"
         }, 
         english_data : {
           id: "english", 
           title: "English", 
-          href: "english/index_english.htm"
+          href: "program/program2"
+        }, 
+        camps_data : {
+          id: "camps", 
+          title: "Camps", 
+          href: "program/program3"
+        }, 
+        lessons_data : { 
+          id: "lessons", 
+          title: "Lessons", 
+          href: "skin/skin020/mobile/lessons/index_lessons.htm"
         }
       }
     }, 
     row_2_data : { 
       row_number: 2, 
       link_data : { 
-        camps_data : {
-          id: "camps", 
-          title: "Camps", 
-          href: "camps/index_camps.htm"
-        }, 
-        lessons_data : { 
-          id: "lessons", 
-          title: "Lessons", 
-          href: "lessons/index_lessons.htm"
-        }, 
         awards_data : { 
           id: "awards", 
           title: "Awards", 
-          href: "awards/index_awards.htm"
+          href: "community/community2"
+        }, 
+        debate_data : { 
+          id: "debate", 
+          title: "Debate", 
+          href: "/program/program1"
+        }, 
+        events_data : { 
+          id: "events", 
+          title: "Events", 
+          href: "community/community3"
+        }, 
+        announcements_data : { 
+          id: "announcements", 
+          title: "Announcements", 
+          href: "community/community1"
         }
       }
     }, 
     row_3_data : {
       row_number: 3,
       link_data : {    
-        debate_data : { 
-          id: "debate", 
-          title: "Debate", 
-          href: "debate/index_debate.htm"
+        apply_students_data : { 
+          id: "apply_students", 
+          title: "Apply (Students)", 
+          href: "admission/admission4"
         }, 
-        events_data : { 
-          id: "events", 
-          title: "Events", 
-          href: "events/index_events.htm"
+        faculty_data : { 
+          id: "faculty", 
+          title: "Faculty", 
+          href: "about/about6"
         }, 
-        announcements_data : { 
-          id: "announcements", 
-          title: "Announcements", 
-          href: "announcements/index_announcements.htm"
+        apply_faculty_data : { 
+          id: "apply_faculty", 
+          title: "Apply (Faculty)", 
+          href: "admission/admission3"
+        }, 
+        business_data : { 
+          id: "business", 
+          title: "Business", 
+          href: "skin/skin020/mobile/business/index_business.htm"
         }
       }
     }, 
     row_4_data : {
       row_number: 4, 
       link_data : { 
-        apply_students_data : { 
-          id: "apply_students", 
-          title: "Apply (Students)", 
-          href: "apply_students/index_apply_students.htm"
-        }, 
-        faculty_data : { 
-          id: "faculty", 
-          title: "Faculty", 
-          href: "faculty/index_faculty.htm"
-        }, 
-        apply_faculty_data : { 
-          id: "apply_faculty", 
-          title: "Apply (Faculty)", 
-          href: "apply_faculty/index_apply_faculty.htm"
-        }
-      }
-    }, 
-    row_5_data : {
-      row_number: 5, 
-      link_data : { 
         about_us_data : { 
           id: "about_us", 
           title: "About Us", 
-          href: "about_us/index_about_us.htm"
+          href: "about/about1"
         }, 
         contact_us_data : { 
           id: "contact_us", 
           title: "Contact Us", 
-          href: "contact_us/index_contact_us.htm"
+          href: "skin/skin020/mobile/contact_us/index_contact_us.htm"
         }, 
         location_data : { 
           id: "location", 
           title: "Location", 
-          href: "location/index_location.htm"
-        }    
-      }
-    }, 
-    row_6_data : {
-      row_number: 6, 
-      link_data : { 
-        business_data : { 
-          id: "business", 
-          title: "Business", 
-          href: "business/index_business.htm"
+          href: "skin/skin020/mobile/location/index_location.htm"
         }, 
         media_data : { 
           id: "media", 
           title: "Media", 
-          href: "media/index_media.htm"
+          href: "community/community4"
         }
       }
     }
@@ -216,11 +246,11 @@ function storeContentMainNavigationMetadata () {
   // Send the metadata out for processing by another function.
   return nav_data;
 
-} // END of FUNCTION 'storeContentMainNavigationMetadata'
+} // END of FUNCTION 'buildNavigationHTML'
 
 
 
-function storeContentFooterMetadata () {
+function storeFooterMetadata () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -228,8 +258,8 @@ function storeContentFooterMetadata () {
    *   Returns the metadata such as the HTML attributes, "href", "title", & "id" 
    *   which makes up the Footer of the Landing Page.
    *   
-   * FUNCTIONS WHICH USE 'storeContentFooterMetadata'
-   *   + renderContentFooterHTML
+   * FUNCTIONS WHICH USE 'storeFooterMetadata'
+   *   + renderFooterHTML
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -242,7 +272,7 @@ function storeContentFooterMetadata () {
       row_number: 1, 
       link_data : {
         naver : {
-          href: "https://www.naver.com/", 
+          href: "https://blog.naver.com/leadersacademtybd/", 
           title: "Naver",
           id: "naver"
         }, 
@@ -252,7 +282,7 @@ function storeContentFooterMetadata () {
           id: "facebook"
         }, 
         twitter : {
-          href: "https://twitter.com/busanleaders", 
+          href: "https://twitter.com/", 
           title: "Twitter", 
           id: "twitter"
         },
@@ -272,7 +302,7 @@ function storeContentFooterMetadata () {
       row_number: 2, 
       link_data : {
         instagram : {
-          href: "https://instagram.com/leaders_academy_busan/", 
+          href: "https://instagram.com/", 
           title: "Instagram",
           id: "instagram"
         }, 
@@ -303,11 +333,54 @@ function storeContentFooterMetadata () {
   // Send the HTML out to be processed by another function
   return footer_data;
 
-} // END of FUNCTION 'storeContentFooterMetadata'
+} // END of FUNCTION 'buildFooterHTML'
 
 
 
-function renderContentHeadHTML ()  {
+function renderFrameHTML () {
+  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+   * @params - NONE
+   * 
+   * PURPOSE OF FUNCTION 
+   *   Assembles the HTML for the 'frame' of the template used for the mobile-friendly 
+   *   site. The function also adds the HTML within the browser by inserting the HTML 
+   *   into the <html> tag.
+   *   
+   * FUNCTIONS WHICH USE 'renderLandingPage'
+   *   + renderLandingPage
+   * 
+    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
+
+   // Initialize String which holds the selector for the HTML tag, <html>.
+   var html_selector;
+  
+   // Initialize Object which contains the jQuery object for the HTML tag, "html".
+   var html_element = {};
+ 
+   html_selector = "html";
+   html_element = jq(html_selector);
+ 
+   // Initialize variable which holds the Object which contains the HTML used for the 'frame' 
+   // of the mobile-friendly template.
+   var html_data;
+ 
+   // Initialize String which contains the raw HTML used for the 'frame' of the mobile-friendly 
+   // template.
+   var html_html;
+ 
+   // Pull the HTML for the 'frame' by calling the Function, 'buildTemplateHTML'.
+   html_data = buildTemplateHTML();
+ 
+   // Extract the HTML from the Object variable.
+   html_html = html_data.head + html_data.body + html_data.header + html_data.nav + html_data.footer + html_data.section;
+  // html_html = html_data.head + html_data.body;
+   // Insert the HTML within the current <html> tag within the browser.
+   jq(html_element).html("");
+   jq(html_element).html(html_html);
+
+} // END of FUNCTION 'renderFrame'
+
+function renderHeadHTML ()  {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -315,8 +388,8 @@ function renderContentHeadHTML ()  {
    *   Assembles the HTML references used within the <head> tag. Also inserts the HTML 
    *   within the browser into the HTML tag <head>
    *   
-   * FUNCTIONS WHICH USE 'renderContentHeadHTML'
-   *   + renderContent
+   * FUNCTIONS WHICH USE 'renderLandingPage'
+   *   + renderLandingPage
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -338,82 +411,21 @@ function renderContentHeadHTML ()  {
   var head_html;
 
   // Pull the HTML contained within the <head> tag by calling the Function, 'buildHeadHTML'.
-  head_data = buildContentHeadHTML();
+  head_data = buildHeadHTML();
 
   // Extract the HTML from the Object variable.
+  // head_html = head_data.google_analytics + head_data.title + head_data.meta_http + head_data.stylesheet + head_data.jquery + head_data.javascript;
   head_html = head_data.title + head_data.meta_http + head_data.stylesheet + head_data.jquery + head_data.javascript;
 
+  // jq(head_element).html("");
   // Insert the HTML within the <head> tag within the browser.
   jq(head_element).html(head_html);
 
-} // END of FUNCTION 'renderContentHeadHTML'
+} // END of FUNCTION 'renderHeadHTML'
 
-
-
-function renderContentTopHeaderHTML (base_path) {
-  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - 
-   *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
-   *                         <a> tags.
-   * 
-   * PURPOSE OF FUNCTION 
-   *   Returns the HTML for the logo, links, and search field which is contained within the 
-   *   <header> tag of the Landing Page.
-   *   
-   * FUNCTIONS WHICH USE 'renderContentTopHeaderHTML'
-   *   + renderContent
-   * 
-    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
-
-  // Initializes String which contains the HTML which displays the logo, Login & Language 
-  // links, and Search field.
-  var header_html;
-
-  header_html = "<a href=\"" + base_path + "\" title=\"Leaders Academy - Home\">\n" + 
-                "  <img src=\"" + base_path + "assets/img/logo/logo.png\" width=\"230\" height=\"170\" alt=\"Leaders Academy - Home\" />\n" + 
-                "</a>\n" + 
-                "<section id=\"header-right\">\n" + 
-                "  <div id=\"header-search\">\n" + 
-                "    <script>\n" + 
-                "      (function() {\n" + 
-                "        var cx = '006315930114800819546:bz06kk34ffi';\n" + 
-                "        var gcse = document.createElement('script');\n" + 
-                "        gcse.type = 'text/javascript';\n" + 
-                "        gcse.async = true;\n" + 
-                "        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;\n" + 
-                "        var s = document.getElementsByTagName('script')[0];\n" + 
-                "        s.parentNode.insertBefore(gcse, s);\n" + 
-                "      })();\n" + 
-                "    </script>\n" + 
-                "    <gcse:searchbox-only></gcse:search>\n" + 
-                "  </div>\n" + 
-                "  <div id=\"header-links\">\n" + 
-/*                "    <div id=\"header-links-level_1\">\n" + 
-                "      <a href=\"" + base_path + "member/login?n=%2Fmypage%2Findex\" title=\"Login\" id=\"link-login\">Login</a>\n" + 
-                "      <a href=\"" + base_path + "ko/\" title=\"한국어\" id=\"link-korean\">한국어</a>\n" + 
-                "    </div>\n" + 
- */                "    <div id=\"header-links-level_2\">\n" + 
-                "      <a href=\"javascript: displayMenu('main');\" title=\"Main Menu\" id=\"link-main_menu\">Main Menu</a>\n" + 
-                // "      <a href=\"javascript: displayMenu('section');\" title=\"Section Menu\" id=\"link-section_menu\">Section Menu</a>\n" + 
-                "    </div>\n" +
-                "  </div>\n" + 
-                "</section>\n";
-
-  var header_selector;
-  var header_element = {};
-
-  header_selector = "header";
-  header_element = jq(header_selector);
-
-  jq(header_element).html(header_html);
-
-} // END of FUNCTION 'renderContentTopHeaderHTML'
-
-
-
-function renderContentMainNavigationHTML (base_path)  {
+function renderNavigationHTML (base_path)  {
     /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - 
+   * @params - NONE
    *   'base_path - String - Contains the filepath referenced in 'href' attributes within 
    *                         <a> tags.
    * 
@@ -421,8 +433,8 @@ function renderContentMainNavigationHTML (base_path)  {
    *   Assembles the links and HTML elements used within the <nav> tag. Also inserts the HTML 
    *   within the browser into the HTML tag <nav>
    *   
-   * FUNCTIONS WHICH USE 'renderContentMainNavigationHTML'
-   *   + renderContent
+   * FUNCTIONS WHICH USE 'renderLandingPage'
+   *   + renderLandingPage
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -443,13 +455,10 @@ function renderContentMainNavigationHTML (base_path)  {
   // Initialize String which contains the raw HTML used contained within the <nav> tag.
   var nav_html;
 
-  // Pull the HTML contained within the <nav> tag by calling the Function, 'storeContentMainNavigationMetadata'.
-  nav_data = storeContentMainNavigationMetadata();
+  // Pull the HTML contained within the <nav> tag by calling the Function, 'storeNavigationMetadata'.
+  nav_data = storeNavigationMetadata();
 
   nav_html = "";
-
-  // Add the <section> tag which contains the main navigation HTML references
-  nav_html = "<section id=\"nav-main_menu\">\n";
 
   // Extract the HTML from the Object variable.
   jq.each(nav_data, 
@@ -469,22 +478,13 @@ function renderContentMainNavigationHTML (base_path)  {
     } 
   );
 
-  // Close the <section> tag which contains the main navigation HTML references
-  nav_html = nav_html + "</section>\n" + 
-                        "<section id=\"nav-section_menu\">\n" + 
-                        "</section>\n";
-
   // Insert the HTML within the <nav> tag within the browser.
   jq(nav_element).html(nav_html);
-
-  // Add the "id" attribute, 'nav-sub_menu' to the <nav> tag.
-  jq(nav_element).attr("id", "nav-sub_menu");
-
-} // END of FUNCTION renderContentMainNavigationHTML
+}
 
 
 
-function renderContentFooterHTML () {
+function renderFooterHTML () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -492,8 +492,8 @@ function renderContentFooterHTML () {
    *   Returns the HTML for the icons and links contained within the <footer> tag of the 
    *   Landing Page.
    *   
-   * FUNCTIONS WHICH USE 'renderContentFooterHTML'
-   *   + renderContent
+   * FUNCTIONS WHICH USE 'renderFooterHTML'
+   *   + renderLandingPage
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
@@ -513,8 +513,8 @@ function renderContentFooterHTML () {
   // Initialize String which contains the raw HTML used contained within the <footer> tag.
   var footer_html;
 
-  // Pull the HTML contained within the <footer> tag by calling the Function, 'storeContentFooterMetadata'.
-  footer_data = storeContentFooterMetadata();
+  // Pull the HTML contained within the <footer> tag by calling the Function, 'storeFooterMetadata'.
+  footer_data = storeFooterMetadata();
 
   footer_html = "";
 
@@ -536,7 +536,7 @@ function renderContentFooterHTML () {
       footer_html = footer_html + "</section>\n";
     } 
   );
-
+  
   var date = new Date;
 
   year = date.getFullYear();
@@ -549,11 +549,10 @@ function renderContentFooterHTML () {
   // Insert the HTML within the <footer> tag within the browser.
   jq(footer_element).html(footer_html);
 
-} // END of FUNCTION 'renderContentFooterHTML'
+} // END of FUNCTION 'renderTopHeaderHTML'
 
 
-
-function renderContent () {
+function renderLandingPage () {
   /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
    * @params - NONE
    * 
@@ -561,105 +560,22 @@ function renderContent () {
    *   Using the jQuery Method, '.html()', the HTML of the desktop landing page is swapped 
    *   out for a mobile-friendly HTML template.
    *   
-   * FUNCTIONS WHICH USE 'renderContent'
+   * FUNCTIONS WHICH USE 'renderLandingPage'
    *   + document.ready()
    * 
     *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
 
-  var base_path = "/";
-  
-  // Initialize Object which contains the HTML which renders the content within the desktop 
-  // page.
-  // var article_data = {};
-
-  // Extract content from desktop version of webpage.
-  // article_data = storeContentArticleMetadata();
-
-  jq("table").css("opacity", "1");
+  base_path = "/";
 
   // Add mobile-friendly HTML into the browser.
-  // renderContentFrameHTML();
+  renderFrameHTML();
 
-  // renderContentHeadHTML();
+  renderHeadHTML();
 
-  renderContentTopHeaderHTML(base_path);
+  renderTopHeaderHTML(base_path);
 
-  renderContentMainNavigationHTML(base_path);
-
-  renderContentFooterHTML();
-
-} // END of FUNCTION 'renderContent'
-
-
-
-function displayMenu(section_value) {
-  /**** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-   * @params - 
-   *   'section_value' - String - String which describes the type of menu the user 
-   *                              wishes to display, the Main Sub menu or the Section menu.
-   * 
-   * PURPOSE OF FUNCTION 
-   *   Displays either the Main Sub menu or the Section menu within the mobile-friendly 
-   *   template.
-   *   
-   * FUNCTIONS WHICH USE 'renderDebateSectionHTML'
-   *   + User activated
-   * 
-    *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ****/
-
-  // Initialize variable to hold the HTML selector of the <section> element 
-  // which holds the main menu.
-  var menu_selector
-
-  var menu_element = {};
-
-  // Initialize variable to hold the value of the CSS property, 'display', 
-  // of the <section> element which holds the main menu.
-  var menu_css_value;
-
-  // Initialize variables to hold CSS values which will be used to show/hide 
-  // the main menu.
-  var menu_visible_css = {};
-  var menu_not_visible_css = {};
-
-  // IF/ELSE statment which determines the value of the selector for the menu 
-  // under processing.
-  if (section_value === "main") {
-    menu_selector = "#nav-main_menu";
-  } else if (section_value === "section") {
-    menu_selector = "#nav-section_menu";
-  } // END of IF statement
-
-  menu_element = jq(menu_selector);
-
-  // Pass on the value of "block" to the CSS variable which will be used 
-  // to show the main menu.
-  menu_visible_css = {
-    display: "block"
-  };
+  renderNavigationHTML(base_path);
   
-  // Pass on the value of "none" to the CSS variable which will be used 
-  // to hide the main menu.
-  menu_not_visible_css = {
-    display: "none", 
-    margin: "0"
-  };
-
-  // Store the value of the CSS property, 'display' of the <section> element 
-  // which holds the main menu.
-  menu_css_value = jq(menu_selector).css("display");
-
-/*   jq(document).ready(
-    function () { */
-      // IF/ELSE statement which displays the menu if it is currently hidden and 
-      // hides the menu if it is currently visible.
-      if (menu_css_value === "none")  {
-        jq(menu_element).css(menu_visible_css);
-        // jq(menu_element).fadeTo(400, 1);
-      } else {
-        // jq(menu_element).fadeTo(400, 0);
-        jq(menu_element).css(menu_not_visible_css);
-      } // END of 'if' STATEMENT
- /*    }
-  ); */
-} // END of FUNCTION 'displayMainMenu'
+  renderFooterHTML();
+  
+} // END of FUNCTION 'renderLandingPage'
